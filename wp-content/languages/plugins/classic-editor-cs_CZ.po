@@ -1,0 +1,128 @@
+# Translation of Plugins - Classic Editor - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Classic Editor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-29 19:12:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Classic Editor - Stable (latest release)\n"
+
+#: classic-editor.php:413 classic-editor.php:490 classic-editor.php:888
+msgctxt "Editor Name"
+msgid "Block editor"
+msgstr "Blokový editor"
+
+#: classic-editor.php:409 classic-editor.php:486 classic-editor.php:888
+msgctxt "Editor Name"
+msgid "Classic editor"
+msgstr "Klasický editor"
+
+#: classic-editor.php:841
+msgctxt "Editor Name"
+msgid "Edit (classic editor)"
+msgstr "Upravit (klasický editor)"
+
+#: classic-editor.php:834
+msgctxt "Editor Name"
+msgid "Edit (block editor)"
+msgstr "Upravit (blokový editor)"
+
+#: classic-editor.php:495
+msgid "Change settings"
+msgstr "Změny nastavení"
+
+#: classic-editor.php:482
+msgid "Default editor for all sites"
+msgstr "Výchozí editor pro všechny weby"
+
+#: classic-editor.php:478
+msgid "Editor Settings"
+msgstr "Nastavení editoru"
+
+#: classic-editor.php:462
+msgid "Default Editor"
+msgstr "Výchozí editor"
+
+#: classic-editor.php:875
+msgctxt "Editor Name"
+msgid "block editor"
+msgstr "Blokový editor"
+
+#: classic-editor.php:872
+msgctxt "Editor Name"
+msgid "classic editor"
+msgstr "Klasický editor"
+
+#. translators: %s: post title
+#: classic-editor.php:836
+msgid "Edit &#8220;%s&#8221; in the block editor"
+msgstr "Upravit &#8222;%s&#8220; v blokovém editoru"
+
+#: classic-editor.php:671
+msgid "Switch to block editor"
+msgstr "Přepnout na blokový editor"
+
+#: classic-editor.php:700
+msgid "Switch to classic editor"
+msgstr "Přepnout na klasický editor"
+
+#: classic-editor.php:499
+msgid "By default the block editor is replaced with the classic editor and users cannot switch editors."
+msgstr "Ve výchozím nastavení je blokový editor nahrazený klasickým editorem a uživatelé si je nemohou sami změnit."
+
+#: classic-editor.php:498
+msgid "Allow site admins to change settings"
+msgstr "Povolit administrátorům webů měnit nastavení"
+
+#: classic-editor.php:652
+msgid "Editor"
+msgstr "Editor"
+
+#: classic-editor.php:437
+msgid "No"
+msgstr "Ne"
+
+#: classic-editor.php:433
+msgid "Yes"
+msgstr "Ano"
+
+#: classic-editor.php:360
+msgid "Allow users to switch editors"
+msgstr "Povolit uživatelům přepínat mezi editory."
+
+#: classic-editor.php:359
+msgid "Default editor for all users"
+msgstr "Výchozí editor pro  všechny uživatele."
+
+#. Author URI of the plugin
+msgid "https://github.com/WordPress/classic-editor/"
+msgstr "https://github.com/WordPress/classic-editor/"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/classic-editor/"
+msgstr "https://cs.wordpress.org/plugins/classic-editor/"
+
+#. Author of the plugin
+msgid "WordPress Contributors"
+msgstr "WordPress Contributors"
+
+#. Description of the plugin
+msgid "Enables the WordPress classic editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports the older plugins that extend this screen."
+msgstr "Aktivuje klasický editor WordPressu a původní styl stránky úprav příspěvků (TinyMCE, prvky strukturovaných informací, atd.). Podporuje starší pluginy, které rozšiřují funkce původního editoru."
+
+#. Plugin Name of the plugin
+msgid "Classic Editor"
+msgstr "Klasický editor"
+
+#. translators: %s: post title
+#: classic-editor.php:843
+msgid "Edit &#8220;%s&#8221; in the classic editor"
+msgstr "Upravit &#8222;%s&#8220; v klasickém editoru"
+
+#: classic-editor.php:719
+msgid "Settings"
+msgstr "Nastavení"

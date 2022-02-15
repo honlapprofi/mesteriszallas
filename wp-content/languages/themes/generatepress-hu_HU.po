@@ -1,0 +1,1005 @@
+# Translation of Themes - GeneratePress in Hungarian
+# This file is distributed under the same license as the Themes - GeneratePress package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-16 19:06:58+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: hu\n"
+"Project-Id-Version: Themes - GeneratePress\n"
+
+#. Description of the theme
+msgid "GeneratePress is a lightweight WordPress theme built with a focus on speed and usability. Performance is important to us, which is why a fresh GeneratePress install adds less than 10kb (gzipped) to your page size. We take full advantage of the new block editor (Gutenberg), which gives you more control over creating your content. If you use page builders, GeneratePress is the right theme for you. It is completely compatible with all major page builders, including Beaver Builder and Elementor. Thanks to our emphasis on WordPress coding standards, we can boast full compatibility with all well-coded plugins, including WooCommerce. GeneratePress is fully responsive, uses valid HTML/CSS and is translated into over 25 languages by our amazing community of users. A few of our many features include microdata integration, 9 widget areas, 5 navigation locations, 5 sidebar layouts, dropdown menus (click or hover) and navigation color presets. Learn more and check out our powerful premium version at https://generatepress.com"
+msgstr "A GeneratePress egy könnyű WordPress téma, amely a sebességre és a használhatóságra összpontosít. A teljesítmény fontos számunkra, ezért egy új GeneratePress telepítés kevesebb, mint 15 kb-t (gzipped) ad hozzá az oldal méretéhez. Teljes mértékben kihasználjuk az új blokkszerkesztő (Gutenberg) előnyeit, ami nagyobb ellenőrzést nyújt a tartalom létrehozásában. Ha oldalépítőket használ, a GeneratePress az Ön számára megfelelő téma. Teljesen kompatibilis az összes főbb oldalépítővel, beleértve a Beaver Buildert és az Elementort is. A WordPress kódolási szabványok hangsúlyozásának köszönhetően teljes kompatibilitást tudunk biztosítani minden jól kódolt pluginnel, beleértve a WooCommerce-t is. A GeneratePress teljes mértékben rugalmas, érvényes HTML / CSS-t használ, és elképesztő felhasználói közössége több mint 25 nyelvre fordítja le. Számos funkciónk közé tartozik a mikrodata-integráció, 9 widget-terület, 5 navigációs hely, 5 oldalsáv-elrendezés, legördülő menü (kattintás vagy lebeg) és navigációs színbeállítások. Tudjon meg többet és nézze meg a hatékony prémium verzióját a https://generatepress.com címen."
+
+#. Theme Name of the theme
+#: inc/dashboard.php:20 inc/structure/footer.php:93
+msgid "GeneratePress"
+msgstr "GeneratePress"
+
+#: inc/meta-box.php:176
+msgid "Choose your content container type."
+msgstr "Válassza ki a tartalomtároló típusát."
+
+#: inc/meta-box.php:105 inc/meta-box.php:173
+msgid "Content Container"
+msgstr "Tartalomtároló"
+
+#: inc/general.php:91
+msgid "Close Sub-Menu"
+msgstr "Almenü bezárása"
+
+#: inc/general.php:90
+msgid "Open Sub-Menu"
+msgstr "Almenü megnyitása"
+
+#: inc/block-editor.php:141
+msgid "Show Content Title"
+msgstr "Tartalom címének mutatása"
+
+#: inc/block-editor.php:140
+msgid "Disable Content Title"
+msgstr "Tartalom címének letiltása"
+
+#: inc/structure/footer.php:92
+msgctxt "GeneratePress"
+msgid "Built with"
+msgstr "Készült"
+
+#. translators: Aria-label describing the read more button
+#: inc/structure/post-meta.php:459 inc/structure/post-meta.php:487
+msgctxt "more on post title"
+msgid "More on %s"
+msgstr "Továbbiak %s"
+
+#: inc/structure/post-meta.php:116
+msgctxt "prepends the pagination page number for screen readers"
+msgid "Page"
+msgstr "Oldal"
+
+#. translators: right arrow
+#: inc/structure/post-meta.php:110
+msgid "Next %s"
+msgstr "Következő %s"
+
+#. translators: left arrow
+#: inc/structure/post-meta.php:102
+msgid "%s Previous"
+msgstr "%s Előző"
+
+#: inc/customizer.php:1490
+msgid "here"
+msgstr "itt"
+
+#. translators: Learn more here
+#: inc/customizer.php:1489
+msgid "Switching your structure can change how your website displays. Review your website thoroughly before publishing this change, or use a staging site to review the potential changes. Learn more %s."
+msgstr "A struktúra megváltoztatása megváltoztathatja a webhely megjelenítését. A változás közzététele előtt alaposan ellenőrizze webhelyét, vagy egy átmeneti webhely segítségével tekintse át a lehetséges változásokat. További információ %s."
+
+#: inc/customizer.php:1486
+msgid "Caution:"
+msgstr "Figyelem:"
+
+#: inc/customizer.php:1482
+msgid "Floats"
+msgstr "Beúszások"
+
+#: inc/customizer.php:1481
+msgid "Flexbox"
+msgstr "Flexbox"
+
+#: inc/customizer.php:1478
+msgid "Structure"
+msgstr "Struktúra"
+
+#: inc/customizer.php:1396
+msgid "Full Content"
+msgstr "Teljes tartalom"
+
+#: inc/customizer.php:742
+msgid "Navigation After"
+msgstr "Navigáció után"
+
+#: inc/customizer.php:741
+msgid "Navigation Before"
+msgstr "Navigáció előtt"
+
+#: inc/customizer.php:418 inc/customizer.php:740
+msgid "Classic"
+msgstr "Klasszikus"
+
+#: inc/general.php:108
+msgid "Close Search Bar"
+msgstr "Keresősáv bezárása"
+
+#: inc/structure/navigation.php:194 inc/structure/navigation.php:513
+#: inc/structure/navigation.php:554 inc/structure/navigation.php:595
+#: inc/general.php:107
+msgid "Open Search Bar"
+msgstr "Keresősáv megnyitása"
+
+#: inc/customizer.php:1535
+msgid "Reduce the number of CSS file requests and use a lite version of our grid system."
+msgstr "Csökkentse a CSS fájlkérések számát, és használja rácsos rendszerünk lite verzióját."
+
+#: inc/customizer.php:1534
+msgid "Combine CSS"
+msgstr "CSS egyesítése"
+
+#: inc/customizer.php:1515
+msgid "Font"
+msgstr "Betűtípus"
+
+#: inc/customizer.php:1514
+msgid "SVG"
+msgstr "SVG"
+
+#: inc/customizer.php:1511
+msgid "Icon Type"
+msgstr "Ikon típus"
+
+#: inc/customizer.php:1133
+msgid "Text"
+msgstr "Szöveg"
+
+#: inc/customizer.php:1132
+msgid "Boxes"
+msgstr "Dobozok"
+
+#: inc/customizer.php:1129
+msgid "Container Alignment"
+msgstr "Tartalom igazítás"
+
+#: inc/customizer.php:222
+msgid "Place logo next to title"
+msgstr "Logó elhelyezése a cím mellett"
+
+#: inc/typography.php:644
+msgid "Heading 3 (H3)"
+msgstr "Fejléc 3 (H3)"
+
+#: inc/typography.php:497
+msgid "Heading 2 (H2)"
+msgstr "Fejléc 2 (H2)"
+
+#: inc/typography.php:350
+msgid "Heading 1 (H1)"
+msgstr "Fejléc 1 (H1)"
+
+#: inc/dashboard.php:261
+msgid "Reset Settings"
+msgstr "Beállítások visszaállítása"
+
+#: inc/dashboard.php:247
+msgid "Visit documentation &rarr;"
+msgstr "Dokumentáció megtekintése &rarr;"
+
+#: inc/dashboard.php:246
+msgid "Want to learn more about the theme? Check out our extensive documentation."
+msgstr "Szeretne többet megtudni a sablonról? Tekintse át a részletes dokumentációnkat."
+
+#: inc/dashboard.php:231
+msgid "Start Customizing"
+msgstr "Testreszabás kezdése"
+
+#: inc/dashboard.php:221
+msgid "All Options"
+msgstr "Összes beállítás"
+
+#: inc/dashboard.php:216
+msgid "Layout Options"
+msgstr "Elrendezés beállítások"
+
+#: inc/dashboard.php:211
+msgid "Customize Colors"
+msgstr "Színek testreszabása"
+
+#: inc/dashboard.php:206
+msgid "Customize Fonts"
+msgstr "Betűkészletek testreszabása"
+
+#: inc/dashboard.php:201
+msgid "Upload Logo"
+msgstr "Logo feltőltés"
+
+#: inc/customizer.php:1057
+msgid "Dropdown Direction"
+msgstr "Lenyíló irány"
+
+#: inc/customizer.php:1000
+msgid "The width when the navigation ceases to float and drops below your logo."
+msgstr "A szélesség, abban az esetben amikor a navigáció lebeg, és a logó alá ugrik."
+
+#: inc/customizer.php:999
+msgid "Navigation Drop Point"
+msgstr "Navigáció ledobási pont"
+
+#: inc/customizer.php:745
+msgid "Navigation Left"
+msgstr "Navigáció balra"
+
+#: inc/customizer.php:744
+msgid "Navigation After - Centered"
+msgstr "Navigáció utólag - Középen"
+
+#: inc/customizer.php:743
+msgid "Navigation Before - Centered"
+msgstr "Navigáció elsőnek - Középen"
+
+#: inc/customizer.php:735
+msgid "Header Presets"
+msgstr "Fejrész előbeállítások"
+
+#: inc/customizer.php:422
+msgid "Blue"
+msgstr "Kék"
+
+#: inc/customizer.php:421
+msgid "Green"
+msgstr "Zöld"
+
+#: inc/customizer.php:420
+msgid "Red"
+msgstr "Vörös"
+
+#: inc/customizer.php:419
+msgid "Grey"
+msgstr "Szürke"
+
+#: inc/customizer.php:416 inc/customizer.php:738
+msgid "Current"
+msgstr "Jelenlegi"
+
+#: inc/customizer.php:412
+msgid "Navigation Color Presets"
+msgstr "Navigáció Színsémák"
+
+#: inc/customizer.php:390
+msgid "Blog Post Title Hover"
+msgstr "Bejegyzés címe egérkurzor alatt"
+
+#: inc/customizer.php:368
+msgid "Blog Post Title"
+msgstr "Bejegyzés címe"
+
+#: inc/customizer.php:190
+msgid "Logo Width"
+msgstr "Logó szélessége"
+
+#: inc/structure/navigation.php:625
+msgid "Mobile Menu"
+msgstr "Mobil Menü"
+
+#: inc/meta-box.php:196
+msgid "Premium module available"
+msgstr "Prémium modul elérhető"
+
+#: inc/dashboard.php:263
+msgid "Deleting your settings can not be undone."
+msgstr "A beállítások törlését nem lehet visszavonni."
+
+#: inc/dashboard.php:157
+msgid "Premium Modules"
+msgstr "Prémium modulok"
+
+#: inc/customizer.php:1555
+msgid "Cache CSS generated by your options to boost performance."
+msgstr "Gyorsítótár CSS generálódott a beállításokhoz a teljesítmény növelés érdekében."
+
+#: inc/customizer.php:1554
+msgid "Cache dynamic CSS"
+msgstr "Dinamikus gyorsítótár CSS"
+
+#: inc/customizer.php:1445
+msgid "Load essential Font Awesome icons instead of the full library."
+msgstr "Az alapvető Font Awesome ikonok betöltése a teljes könyvtár helyett."
+
+#: inc/customizer.php:1444
+msgid "Load essential icons only"
+msgstr "Csak az alapvető ikonok betöltése."
+
+#: inc/customizer.php:1425
+msgid "General"
+msgstr "Általános"
+
+#: inc/customizer.php:1397
+msgid "Excerpt"
+msgstr "Részlet"
+
+#: inc/customizer.php:1393
+msgid "Content Type"
+msgstr "Tartalom típusa"
+
+#: inc/typography.php:732 inc/customizer.php:559 inc/customizer.php:1413
+msgid "More options are available for this section in our premium version."
+msgstr "További lehetőségek állnak rendelkezésre a prémium verzióban."
+
+#: inc/customizer.php:558
+msgid "Learn More"
+msgstr "Tudj meg többet"
+
+#: inc/customizer.php:167
+msgid "Retina Logo"
+msgstr "Retina Logó"
+
+#: inc/customizer.php:82
+msgid "Premium Modules Available"
+msgstr "Prémium Modulok Elérhetők"
+
+#: inc/customizer/controls/class-typography-control.php:80
+msgid "Variants"
+msgstr "Változatok"
+
+#: inc/customizer/controls/class-typography-control.php:73
+msgid "System fonts"
+msgstr "Rendszer betűtípusok "
+
+#: inc/structure/comments.php:129
+msgid "Comment"
+msgstr "Hozzászólás"
+
+#: inc/customizer/controls/class-range-control.php:71
+msgid "Mobile"
+msgstr "Mobil"
+
+#: inc/customizer/controls/class-range-control.php:70
+msgid "Tablet"
+msgstr "Tablet"
+
+#: inc/customizer/controls/class-range-control.php:69
+msgid "Desktop"
+msgstr "Asztali"
+
+#: inc/meta-box.php:181
+msgid "Full Width"
+msgstr "Teljes szélesség"
+
+#: inc/customizer.php:699
+msgid "Top Bar Alignment"
+msgstr "Felső Sáv Igazítás"
+
+#: inc/customizer.php:673
+msgid "Top Bar Inner Width"
+msgstr "Felső Sáv Belső Szélessége"
+
+#: inc/customizer.php:647
+msgid "Top Bar Width"
+msgstr "Felső Sáv Szélessége"
+
+#: inc/customizer.php:627 inc/general.php:139
+msgid "Top Bar"
+msgstr "Felső Sáv"
+
+#: inc/typography.php:731 inc/dashboard.php:168 inc/customizer.php:1412
+msgid "Learn more"
+msgstr "Tudjunk meg többet"
+
+#: inc/dashboard.php:56
+msgid "Documentation"
+msgstr "Dokumentáció"
+
+#: inc/dashboard.php:53
+msgid "Premium"
+msgstr "Prémium"
+
+#: inc/customizer.php:1334
+msgid "Footer Bar Alignment"
+msgstr "Lábléc sáv igazítása"
+
+#: inc/general.php:138
+msgid "Footer Bar"
+msgstr "Lábléc sáv"
+
+#: inc/customizer.php:1281
+msgid "Inner Footer Width"
+msgstr "Lábléc belső szélesség"
+
+#: inc/customizer.php:918
+msgid "Inner Navigation Width"
+msgstr "Navigáció belső szélesség"
+
+#: inc/customizer.php:833
+msgid "Inner Header Width"
+msgstr "Fejrész belső szélesség"
+
+#: inc/typography.php:282
+msgid "Paragraph margin"
+msgstr "Bekezdésszegély"
+
+#: inc/typography.php:248 inc/typography.php:429 inc/typography.php:576
+#: inc/typography.php:705
+msgid "Line height"
+msgstr "Sormagasság"
+
+#: inc/dashboard.php:272 inc/customizer/controls/class-range-control.php:72
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#: inc/customizer.php:1236
+msgid "Footer"
+msgstr "Lábléc"
+
+#: inc/customizer.php:1143 inc/meta-box.php:90
+msgid "Sidebars"
+msgstr "Oldalsávok"
+
+#: inc/customizer.php:873
+msgid "Primary Navigation"
+msgstr "Elsődleges navigáció"
+
+#: inc/customizer.php:583
+msgid "Container"
+msgstr "Tartalom"
+
+#: inc/structure/footer.php:237
+msgid "Scroll back to top"
+msgstr "Ugrás a tetejére"
+
+#: inc/customizer.php:1360
+msgid "Back to Top Button"
+msgstr "Ugrás a tetejére"
+
+#: inc/customizer.php:1256
+msgid "Footer Width"
+msgstr "Lábléc szélesség"
+
+#: inc/customizer.php:1037
+msgid "Click - Arrow"
+msgstr "Click - Nyíl"
+
+#: inc/customizer.php:1036
+msgid "Click - Menu Item"
+msgstr "Click - Menü elem"
+
+#: inc/customizer.php:1035
+msgid "Hover"
+msgstr "Egér fölé húzva"
+
+#: inc/customizer.php:1032
+msgid "Navigation Dropdown"
+msgstr "Lenyíló navigáció"
+
+#: inc/customizer.php:893
+msgid "Navigation Width"
+msgstr "Navigáció szélessége"
+
+#: inc/customizer.php:650 inc/customizer.php:676 inc/customizer.php:811
+#: inc/customizer.php:837 inc/customizer.php:896 inc/customizer.php:922
+#: inc/customizer.php:1259 inc/customizer.php:1285
+msgid "Full"
+msgstr "Teljes méretű"
+
+#: inc/customizer.php:808
+msgid "Header Width"
+msgstr "Fejléc szélessége"
+
+#. translators: %s: Heart icon
+#: inc/dashboard.php:302
+msgctxt "made with love"
+msgid "Made with %s by Tom Usborne"
+msgstr "Készítette %s Tom Usborne"
+
+#: inc/customizer.php:975
+msgid "Float Left"
+msgstr "Lebegtetés balra"
+
+#: inc/dashboard.php:55
+msgid "Support"
+msgstr "Segítség"
+
+#: inc/meta-box.php:189 inc/meta-box.php:191
+msgid "Content Title"
+msgstr "Tartalom címe"
+
+#: content-404.php:51
+msgid "It looks like nothing was found at this location. Maybe try searching?"
+msgstr "Úgy tűnik nem található semmi ezen a helyen. Talán próbáljunk meg egy keresést?"
+
+#: searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Keresés &hellip;"
+
+#: searchform.php:14 searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "Keresés:"
+
+#. translators: 1: Search query name
+#: search.php:33
+msgid "Search Results for: %s"
+msgstr "%s kifejezésre történő keresés eredménye:"
+
+#: no-results.php:62
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Úgy tűnik, nem található az, amire gondoltunk. Talán, egy újabb keresés segíthet."
+
+#: no-results.php:57
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Elnézést, nem találunk a keresési feltételeknek megfelelő eredményt. Másik kulcsszóval, kifejezéssel újra kellene kezdeni egy keresést."
+
+#. translators: 1: Admin URL
+#: no-results.php:49
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Készen állunk az első bejegyzés közzétételére? <a href=\"%1$s\">Kezdőlépések</a>."
+
+#: no-results.php:27
+msgid "Nothing Found"
+msgstr "Nincs találat!"
+
+#: inc/structure/post-meta.php:278
+msgid "% Comments"
+msgstr "% hozzászólás"
+
+#: inc/structure/post-meta.php:278
+msgid "1 Comment"
+msgstr "1 hozzászólás"
+
+#: inc/structure/post-meta.php:278
+msgid "Leave a comment"
+msgstr "Hozzászólás"
+
+#: inc/structure/post-meta.php:262
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "Címkék"
+
+#: inc/structure/post-meta.php:245
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr "Kategória"
+
+#: inc/structure/post-meta.php:237 inc/structure/post-meta.php:254
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: inc/structure/navigation.php:454
+msgctxt "label"
+msgid "Search"
+msgstr "Keresés"
+
+#: inc/structure/post-meta.php:456 inc/structure/post-meta.php:484
+msgid "Read more"
+msgstr "Olvass tovább"
+
+#. translators: 1: Author name
+#: inc/structure/post-meta.php:226
+msgid "View all posts by %s"
+msgstr "%s bejegyzései"
+
+#: inc/structure/post-meta.php:305
+msgid "by"
+msgstr "Szerző:"
+
+#: inc/structure/comments.php:64
+msgid "Your comment is awaiting moderation."
+msgstr "A hozzászólás rendszer-moderációra várakozik."
+
+#. translators: 1: date, 2: time
+#: inc/structure/comments.php:52
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s - %2$s"
+
+#: inc/structure/comments.php:28
+msgid "Pingback:"
+msgstr "Visszajelzés:"
+
+#: inc/structure/post-meta.php:89
+msgid "Newer posts"
+msgstr "Újabb bejegyzések"
+
+#: inc/structure/post-meta.php:80
+msgid "Older posts"
+msgstr "Régebbi bejegyzések"
+
+#: inc/structure/post-meta.php:50 inc/structure/post-meta.php:89
+msgid "Next"
+msgstr "Következő "
+
+#: inc/structure/post-meta.php:49 inc/structure/post-meta.php:80
+msgid "Previous"
+msgstr "Előző"
+
+#: inc/structure/post-meta.php:41
+msgid "Post navigation"
+msgstr "Bejegyzés navigáció"
+
+#: inc/deprecated.php:31
+msgid "Next &rarr;"
+msgstr "Következő &rarr;"
+
+#: inc/deprecated.php:30
+msgid "&larr; Previous"
+msgstr "&larr; Előző"
+
+#: inc/dashboard.php:373
+msgid "Settings removed."
+msgstr "Beállítások eltávolítása."
+
+#: inc/dashboard.php:368
+msgid "Import successful."
+msgstr "Importálás sikerült."
+
+#: inc/dashboard.php:363
+msgid "Settings saved."
+msgstr "Beállítások elmentve."
+
+#: inc/meta-box.php:100 inc/meta-box.php:186
+msgid "Disable Elements"
+msgstr "Elemek letiltása"
+
+#: inc/dashboard.php:268
+msgid "Warning: This will delete your settings."
+msgstr "Figyelmeztetés: Beállítások törölve lesznek."
+
+#: inc/dashboard.php:93
+msgid "Customize"
+msgstr "Testreszabás"
+
+#: searchform.php:21 searchform.php:27
+msgctxt "submit button"
+msgid "Search"
+msgstr "Keresés"
+
+#: inc/structure/header.php:401 inc/structure/header.php:402
+msgid "Skip to content"
+msgstr "Kilépés a tartalomba"
+
+#: inc/structure/navigation.php:50 inc/structure/navigation.php:60
+#: inc/structure/navigation.php:139 inc/structure/navigation.php:155
+msgid "Menu"
+msgstr "Menü"
+
+#: inc/meta-box.php:168
+msgid "5 Widgets"
+msgstr "5 Widget"
+
+#: inc/meta-box.php:167
+msgid "4 Widgets"
+msgstr "4 Widget"
+
+#: inc/meta-box.php:166
+msgid "3 Widgets"
+msgstr "3 Widget"
+
+#: inc/meta-box.php:165
+msgid "2 Widgets"
+msgstr "2 Widget"
+
+#: inc/meta-box.php:164
+msgid "1 Widgets"
+msgstr "1 Widget"
+
+#: inc/meta-box.php:163
+msgid "0 Widgets"
+msgstr "0 Widget"
+
+#: inc/meta-box.php:152
+msgid "Both Sidebars on Right"
+msgstr "Oldalsáv a jobb oldalon"
+
+#: inc/meta-box.php:151
+msgid "Both Sidebars on Left"
+msgstr "Oldalsáv a bal oldalon"
+
+#: inc/meta-box.php:150
+msgid "Both Sidebars"
+msgstr "Oldalsáv két oldalon"
+
+#: inc/meta-box.php:149
+msgid "No Sidebars"
+msgstr "Nincs oldalsáv"
+
+#: inc/customizer.php:417 inc/customizer.php:739 inc/meta-box.php:146
+#: inc/meta-box.php:162 inc/meta-box.php:180
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: inc/customizer.php:1374
+msgid "Blog"
+msgstr "Honlap"
+
+#: inc/customizer.php:1305 inc/meta-box.php:95 inc/meta-box.php:159
+msgid "Footer Widgets"
+msgstr "Lábléc Widgetek"
+
+#: inc/customizer.php:1218
+msgid "Single Post Sidebar Layout"
+msgstr "Bejegyzés oldalsáv elrendezése"
+
+#: inc/customizer.php:1190
+msgid "Blog Sidebar Layout"
+msgstr "Blog oldalsáv elrendezés"
+
+#: inc/customizer.php:1170 inc/customizer.php:1198 inc/customizer.php:1226
+msgid "Content / Sidebar / Sidebar"
+msgstr "Tartalom /Oldalsáv / Oldalsáv"
+
+#: inc/customizer.php:1169 inc/customizer.php:1197 inc/customizer.php:1225
+msgid "Sidebar / Sidebar / Content"
+msgstr "Oldalsáv / Oldalsáv / Tartalom"
+
+#: inc/customizer.php:1168 inc/customizer.php:1196 inc/customizer.php:1224
+msgid "Sidebar / Content / Sidebar"
+msgstr "Oldalsáv / Tartalom / Oldalsáv"
+
+#: inc/customizer.php:1167 inc/customizer.php:1195 inc/customizer.php:1223
+msgid "Content (no sidebars)"
+msgstr "Tartalom (nincs oldalsáv)"
+
+#: inc/customizer.php:1166 inc/customizer.php:1194 inc/customizer.php:1222
+msgid "Content / Sidebar"
+msgstr "Tartalom / Oldalsáv"
+
+#: inc/customizer.php:1165 inc/customizer.php:1193 inc/customizer.php:1221
+msgid "Sidebar / Content"
+msgstr "Oldalsáv / Tartalom"
+
+#: inc/customizer.php:1162 inc/meta-box.php:143
+msgid "Sidebar Layout"
+msgstr "Oldalsáv elrendezés"
+
+#: inc/customizer.php:1109
+msgid "One Container"
+msgstr "Elemek egyben"
+
+#: inc/customizer.php:1108
+msgid "Separate Containers"
+msgstr "Elemek külön"
+
+#: inc/customizer.php:1105
+msgid "Content Layout"
+msgstr "Tartalom elrendezése"
+
+#: inc/customizer.php:1085 inc/customizer.php:1364
+msgid "Disable"
+msgstr "Kikapcsolva"
+
+#: inc/customizer.php:1084 inc/customizer.php:1363
+msgid "Enable"
+msgstr "Bekapcsolva"
+
+#: inc/customizer.php:1081
+msgid "Navigation Search"
+msgstr "Keresés a navigációban"
+
+#: inc/customizer.php:943
+msgid "Navigation Alignment"
+msgstr "Navigáció igazítása"
+
+#: inc/customizer.php:978
+msgid "No Navigation"
+msgstr "Nincs navigáció"
+
+#: inc/customizer.php:974
+msgid "Float Right"
+msgstr "Lebegtetés jobbra"
+
+#: inc/customizer.php:973
+msgid "Above Header"
+msgstr "Fejléc felett"
+
+#: inc/customizer.php:972
+msgid "Below Header"
+msgstr "Fejléc alatt"
+
+#: inc/customizer.php:969
+msgid "Navigation Location"
+msgstr "Navigáció helyzete"
+
+#: inc/customizer.php:704 inc/customizer.php:863 inc/customizer.php:948
+#: inc/customizer.php:1060 inc/customizer.php:1339
+msgid "Right"
+msgstr "Jobb"
+
+#: inc/customizer.php:703 inc/customizer.php:862 inc/customizer.php:947
+#: inc/customizer.php:1338
+msgid "Center"
+msgstr "Közép"
+
+#: inc/customizer.php:702 inc/customizer.php:861 inc/customizer.php:946
+#: inc/customizer.php:1061 inc/customizer.php:1337
+msgid "Left"
+msgstr "Bal"
+
+#: inc/customizer.php:858
+msgid "Header Alignment"
+msgstr "Fejléc igazítás"
+
+#: inc/customizer.php:651 inc/customizer.php:677 inc/customizer.php:812
+#: inc/customizer.php:836 inc/customizer.php:897 inc/customizer.php:921
+#: inc/customizer.php:1260 inc/customizer.php:1284 inc/meta-box.php:182
+msgid "Contained"
+msgstr "Keretben"
+
+#: inc/customizer.php:605
+msgid "Container Width"
+msgstr "Befogadó terület szélessége"
+
+#: inc/customizer.php:574 inc/meta-box.php:62
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: inc/customizer.php:342
+msgid "Link Color Visited"
+msgstr "Hivatkozás színe látogatása után"
+
+#: inc/customizer.php:319
+msgid "Link Color Hover"
+msgstr "Hivatkozás színe ráhúzáskor"
+
+#: inc/customizer.php:297
+msgid "Link Color"
+msgstr "Link színe"
+
+#: inc/customizer.php:275
+msgid "Text Color"
+msgstr "Szöveg színe"
+
+#: inc/customizer.php:253
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: inc/customizer.php:231
+msgid "Colors"
+msgstr "Színek"
+
+#: inc/customizer.php:145
+msgid "Logo"
+msgstr "Logó"
+
+#: inc/customizer.php:124
+msgid "Hide site tagline"
+msgstr "Honlap egysoros leírásának elrejtése"
+
+#: inc/customizer.php:105
+msgid "Hide site title"
+msgstr "Honlap nevének elrejtése"
+
+#: inc/typography.php:214 inc/typography.php:388 inc/typography.php:535
+#: inc/typography.php:672
+msgid "Font size"
+msgstr "Betűméret"
+
+#: inc/customizer/controls/class-typography-control.php:78
+msgid "Text transform"
+msgstr "Szöveg átalakítása"
+
+#: inc/customizer/controls/class-typography-control.php:77
+msgid "Font weight"
+msgstr "Betűtípus vastagsága"
+
+#: inc/typography.php:184 inc/customizer.php:231
+msgid "Body"
+msgstr "Szövegtörzs"
+
+#: inc/typography.php:127
+msgid "Typography"
+msgstr "Betűkészlet"
+
+#: inc/customizer/controls/class-typography-control.php:76
+#: inc/customizer/controls/class-deprecated.php:72
+msgid "Font family"
+msgstr "Betűcsalád"
+
+#: inc/customizer/controls/class-typography-control.php:74
+#: inc/customizer/controls/class-deprecated.php:71
+msgid "Google fonts"
+msgstr "Google betűtípusok"
+
+#: inc/customizer/controls/class-deprecated.php:70
+msgid "Default fonts"
+msgstr "Alapértelmezett betűtípusok"
+
+#: inc/customizer.php:715 inc/general.php:132
+msgid "Header"
+msgstr "Fejrész"
+
+#: inc/customizer.php:976 inc/general.php:131 inc/meta-box.php:148
+msgid "Left Sidebar"
+msgstr "Bal oldalsáv"
+
+#: inc/customizer.php:977 inc/general.php:130 inc/meta-box.php:147
+msgid "Right Sidebar"
+msgstr "Jobb oldalsáv"
+
+#: functions.php:52
+msgid "Primary Menu"
+msgstr "Elsődleges menü"
+
+#: inc/general.php:137
+msgid "Footer Widget 5"
+msgstr "Footer Widget 5"
+
+#: inc/general.php:136
+msgid "Footer Widget 4"
+msgstr "Footer Widget 4"
+
+#: inc/general.php:135
+msgid "Footer Widget 3"
+msgstr "Footer Widget 3"
+
+#: inc/general.php:134
+msgid "Footer Widget 2"
+msgstr "Footer Widget 2"
+
+#: inc/general.php:133
+msgid "Footer Widget 1"
+msgstr "Footer Widget 1"
+
+#: inc/structure/comments.php:28 inc/structure/comments.php:59
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: content-single.php:77 content.php:84 content-page.php:77 content-link.php:84
+msgid "Pages:"
+msgstr "Oldalak:"
+
+#: inc/structure/comments.php:137
+msgid "Post Comment"
+msgstr "Hozzászólás küldése"
+
+#: inc/structure/comments.php:136
+msgid "Leave a Comment"
+msgstr "Szólj hozzá!"
+
+#: inc/structure/comments.php:170
+msgid "Website"
+msgstr "Honlap"
+
+#: inc/structure/comments.php:163
+msgid "Email"
+msgstr "Email"
+
+#: inc/structure/comments.php:156
+msgid "Name"
+msgstr "Név"
+
+#: comments.php:123
+msgid "Comments are closed."
+msgstr "Hozzászólások lehetősége itt nem engedélyezett."
+
+#: comments.php:86 comments.php:113
+msgid "Newer Comments &rarr;"
+msgstr "Újabb hozzászólások &rarr;"
+
+#: comments.php:85 comments.php:112
+msgid "&larr; Older Comments"
+msgstr "&larr; Korábbi hozzászólások"
+
+#: comments.php:84 comments.php:111
+msgid "Comment navigation"
+msgstr "Hozzászólás navigáció"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:50
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; bejegyzéshez %1$s hozzászólás"
+msgstr[1] "&ldquo;%2$s&rdquo; bejegyzéshez %1$s hozzászólás"
+
+#: inc/structure/sidebars.php:77
+msgid "Archives"
+msgstr "Archívumok"
+
+#: content-404.php:27
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "A keresett oldal nem található."
+
+#. Author of the theme
+msgid "Tom Usborne"
+msgstr "Tom Usborne"
+
+#. Author URI of the theme
+msgid "https://tomusborne.com"
+msgstr "https://tomusborne.com"
+
+#. Theme URI of the theme
+msgid "https://generatepress.com"
+msgstr "https://generatepress.com"

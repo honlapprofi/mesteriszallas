@@ -1,0 +1,229 @@
+/*
+Theme Name:   Termal
+Description:  Termal subtheme
+Author:       Honlap-profi
+Author URL:   http://termalpont.local
+Template:     generatepress
+Version:      1.0
+Text Domain:  Termal
+*/
+
+/* -   HEADER   - */
+select#lang_choice_wp-widget-polylang {
+  font-family: "Poppins", Sans-serif;
+  font-size: 13px;  
+  border: none;
+  color: #777777;
+  background-color: #fff;
+}
+.elementor-element-3659037 p,
+.elementor-element-c2a81d5 p {
+  margin-bottom: 0;
+}
+.menu-item-419 a {
+  background-color: #118ACB;
+  color: #fff !important;
+}
+/* -   FRONT FOGLALAS FORM   - */
+.elementor-element-7ea5014 .mphb-required-fields-tip {
+  display: none;
+}
+@media only screen
+and (min-width: 768px) {
+  .mphb_sc_search-form label {
+    font-size: 11px;
+  }
+  .mphb_sc_search-form input {
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+  }
+  .mphb_sc_search-check-in-date {
+    width: 20%;
+    margin-right: 1%;
+    display: block;
+    float: left;
+  }
+  .mphb_sc_search-check-in-date input {
+    width: 100%;
+  }
+  .mphb_sc_search-check-out-date {
+    width: 20%;
+    margin-right: 1%;
+    display: block;
+    float: left;
+  }
+  .mphb_sc_search-check-out-date input {
+    width: 100%;
+  }  
+  .mphb_sc_search-adults {
+    width: 20%;
+    margin-right: 1%;
+    float: left;
+    display: block;
+  }
+  .mphb_sc_search-adults select {
+    background-color: #fff;  
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000; 
+  }
+  .mphb_sc_search-children {
+    width: 20%;
+    margin-right: 1%;
+    float: left;
+    display: block;
+  }
+  .mphb_sc_search-children select {
+    background-color: #fff;  
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000; 
+  }
+  .mphb_sc_search-submit-button-wrapper .button {
+    width: 16%;
+    background-color: #118acb;
+    color: #fff;
+    margin-top: 24px;
+  }
+  .mphb_sc_search-submit-button-wrapper .button:hover {
+    background-color: #22a6ed;
+  }
+}
+@media only screen
+and (max-width: 767px) {
+  .mphb_sc_search-check-in-date input {width: 100%;}
+  .mphb_sc_search-check-out-date input {width: 100%;}
+  .mphb_sc_search-adults {width: 100%;}
+  .mphb_sc_search-adults select {width: 100%;}
+  .mphb_sc_search-children {width: 100%;}
+  .mphb_sc_search-children select {width: 100%;}
+  .mphb_sc_search-submit-button-wrapper .button {
+    width: 100%; background-color: #118acb; color: #fff;}
+}
+/* -   FRONT KINALO   - */
+.elementor-element-0d7b1b0 .elementor-icon-box-description a,
+.elementor-element-0d7b1b0 .elementor-icon-box-description a:hover {
+  color: #fff;
+}
+/* -   KERESESI EREDMENYEK   - */
+ul.mphb-recommendation-details-list li {
+  border-bottom: 1px solid #dedede;
+  display: block;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+ul.mphb-recommendation-details-list li a {
+  color: #72305F;
+}
+.mphb-empty-cart-message {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+/* -   FOGLALHATO APARTMANOK OLDAL   - */
+.elementor-element-41e8658 .mphb-room-type,
+.elementor-element-239af40 .mphb-room-type,
+.elementor-element-70e6da9 .mphb-room-type {
+  text-align: center;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 2px 2px 2px 2px #F5F5F5;
+  box-shadow: 2px 2px 2px 2px #F5F5F5;
+}
+.elementor-element-41e8658 .mphb-room-type-title,
+.elementor-element-239af40 .mphb-room-type-title,
+.elementor-element-70e6da9 .mphb-room-type-title {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #E1BB5A;
+  padding: 5px 0;
+  display: block;
+}
+
+/* -   CALENDAR DATEPICKER   - */
+.datepick-popup .mphb-datepicker-minimal.mphb-datepick-popup .datepick-month td .mphb-booked-date:not(.mphb-selectable-date) {
+  color: #ff0000 !important;
+}	
+.datepick-popup .mphb-datepicker-minimal .datepick-month a {
+  color: #48b001 !important;
+}	
+
+/* -   APARTMANOK OLDAL   - */
+.mphb-details-title,
+.mphb-single-room-type-attributes,
+.mphb-regular-price,
+.mphb-calendar-title {
+  display: none;
+}
+.mphb-required-fields-tip {
+  display: none;
+}
+.elementor-element-09e2c76 input,
+.elementor-element-abd0ba6 input,
+.elementor-element-2e333edf input {
+  width: 100%;
+}
+.elementor-element-09e2c76 label,
+.elementor-element-abd0ba6 label,
+.elementor-element-2e333edf label {
+  font-size: 11px;
+}
+#booking-form-678 .mphb-reserve-btn.button,
+#booking-form-681 .mphb-reserve-btn.button,
+#booking-form-684 .mphb-reserve-btn.button {
+  background-color: #E1BB5A;
+}
+#booking-form-678 .mphb-confirm-reservation.button,
+#booking-form-681 .mphb-confirm-reservation.button,
+#booking-form-684 .mphb-confirm-reservation.button {
+  background-color: #72305F;
+}
+.mphb-calendar.mphb-datepick .mphb-datepicker-minimal .datepick-month td .mphb-booked-date {
+  color: #ff0000;
+  text-decoration: line-through;
+}
+
+/* -   FOGLALAS LEADASA  - */
+.mphb-booking-details-title {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  background-color: #E1BB5A;  
+}
+#mphb-price-details .mphb-price-breakdown-title {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 0; 
+}
+.mphb-price-breakdown .mphb-price-breakdown-services.mphb-room-type,
+.mphb-price-breakdown .mphb-price-breakdown-group {
+  background-color: #dedede;
+}
+@media only screen
+and (min-width: 768px) {
+#mphb-customer-details input#mphb_first_name,
+#mphb-customer-details input#mphb_last_name,
+#mphb-customer-details input#mphb_email,
+#mphb-customer-details input#mphb_phone {width: 99%;}
+#mphb-customer-details .mphb-customer-name,
+#mphb-customer-details .mphb-customer-last-name,
+#mphb-customer-details .mphb-customer-email,
+#mphb-customer-details .mphb-customer-phone {width: 50%; float: left;}
+}
+.mphb_sc_checkout-submit-wrapper .button {
+  color: #fff;
+  background-color: #00d269;
+}

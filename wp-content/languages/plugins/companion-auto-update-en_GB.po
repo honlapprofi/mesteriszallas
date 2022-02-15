@@ -1,0 +1,240 @@
+# Translation of Plugins - Companion Auto Update - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Companion Auto Update - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-04-04 20:42:56+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Companion Auto Update - Stable (latest release)\n"
+
+#: admin/dashboard.php:503
+msgid "Developer?"
+msgstr "Developer?"
+
+#: admin/dashboard.php:491
+msgid "Frequently Asked Questions"
+msgstr "Frequently Asked Questions"
+
+#: admin/status.php:443 admin/status.php:467
+msgid "Contact for support"
+msgstr "Contact for support"
+
+#: admin/status.php:587
+msgid "Possible plugin issues"
+msgstr "Possible plugin issues"
+
+#: admin/dashboard.php:393
+msgid "At what time should the updater run? Only works when set to <u>daily</u>."
+msgstr "At what time should the updater run? Only works when set to <u>daily</u>."
+
+#: cau_functions.php:877
+msgid "Last updated on"
+msgstr "Last updated on"
+
+#: admin/pluginlist.php:199 cau_functions.php:874
+msgid "Name"
+msgstr "Name"
+
+#: admin/pluginlist.php:201 admin/status.php:99 admin/status.php:217
+#: admin/status.php:329 companion-auto-update.php:271
+msgid "Status"
+msgstr "Status"
+
+#: cau_functions.php:910
+msgid "Theme"
+msgstr "Theme"
+
+#: cau_functions.php:876
+msgid "Type"
+msgstr "Type"
+
+#: companion-auto-update.php:270 companion-auto-update.php:311
+msgid "Update log"
+msgstr "Update log"
+
+#: admin/log.php:19 companion-auto-update.php:321
+msgid "View full changelog"
+msgstr "View full change log"
+
+#: companion-auto-update.php:318
+msgid "Below are the last 7 updates ran on this site. Includes plugins and themes, both automatically updated and manually updated."
+msgstr "Below are the last seven updates ran on this site. Includes plugins and themes, both automatically updated and manually updated."
+
+#: admin/dashboard.php:393
+msgid "Time notation: 24H"
+msgstr "Time notation: 24hr"
+
+#. Author of the plugin
+msgid "Papin Schipper"
+msgstr "Papin Schipper"
+
+#: admin/dashboard.php:526 companion-auto-update.php:362
+msgid "Donate to help development"
+msgstr "Donate to help development"
+
+#: admin/dashboard.php:210 admin/dashboard.php:497
+msgid "Give feedback"
+msgstr "Give feedback"
+
+#: admin/dashboard.php:210 admin/dashboard.php:499
+#: companion-auto-update.php:361
+msgid "Help us translate"
+msgstr "Help us translate"
+
+#: admin/dashboard.php:342
+msgid "By default WordPress sends an email when a core update has occurred. Uncheck this box to disable these emails."
+msgstr "By default WordPress sends an e-mail when a core update has occurred. Uncheck this box to disable these e-mails."
+
+#: admin/dashboard.php:419
+msgid "Core update interval"
+msgstr "Core update interval"
+
+#: admin/dashboard.php:405
+msgid "Plugin update interval"
+msgstr "Plugin update interval"
+
+#: admin/dashboard.php:412
+msgid "Theme update interval"
+msgstr "Theme update interval"
+
+#. Author URI of the plugin
+msgid "http://codeermeneer.nl/"
+msgstr "http://codeermeneer.nl/"
+
+#. Plugin URI of the plugin
+msgid "http://codeermeneer.nl/portfolio/companion-auto-update/"
+msgstr "http://codeermeneer.nl/portfolio/companion-auto-update/"
+
+#: admin/pluginlist.php:203
+msgid "Description"
+msgstr "Description"
+
+#: cau_functions.php:908
+msgid "Plugin"
+msgstr "Plugin"
+
+#: admin/pluginlist.php:185 admin/pluginlist.php:363
+msgid "Reset list"
+msgstr "Reset list"
+
+#: admin/pluginlist.php:145 admin/pluginlist.php:165
+msgid "Succes"
+msgstr "Success"
+
+#: admin/status.php:241
+msgid "Core notifications"
+msgstr "Core notifications"
+
+#: admin/dashboard.php:254
+msgid "Auto update translation files?"
+msgstr "Auto update translation files?"
+
+#: companion-auto-update.php:268
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: admin/dashboard.php:280
+msgid "Send me emails when something has been updated."
+msgstr "Send me emails when something has been updated."
+
+#: admin/dashboard.php:267 admin/status.php:215
+msgid "Email Notifications"
+msgstr "Email Notifications"
+
+#: cau_emails.php:458
+msgid "One or more plugins have been updated."
+msgstr "One or more plugins have been updated."
+
+#: admin/status.php:239
+msgid "Successful update"
+msgstr "Successful update "
+
+#: admin/status.php:237
+msgid "Update available"
+msgstr "Update available "
+
+#: cau_emails.php:206
+msgid "Theme update available."
+msgstr "Theme update available."
+
+#: cau_emails.php:207
+msgid "theme"
+msgstr "theme"
+
+#: cau_emails.php:208 cau_emails.php:477
+msgid "themes"
+msgstr "themes"
+
+#: cau_emails.php:250
+msgid "Plugin update available."
+msgstr "Plugin update available."
+
+#: cau_emails.php:171 cau_emails.php:251
+msgid "plugin"
+msgstr "plugin"
+
+#: cau_emails.php:172 cau_emails.php:252 cau_emails.php:459
+msgid "plugins"
+msgstr "plugins"
+
+#: admin/dashboard.php:238
+msgid "Auto update plugins?"
+msgstr "Auto update plugins?"
+
+#: admin/dashboard.php:242
+msgid "Auto update themes?"
+msgstr "Auto update themes?"
+
+#: admin/dashboard.php:246
+msgid "Auto update minor core updates?"
+msgstr "Auto update minor core updates?"
+
+#: admin/dashboard.php:250
+msgid "Auto update major core updates?"
+msgstr "Auto update major core updates?"
+
+#: admin/dashboard.php:284
+msgid "Send me emails when an update is available."
+msgstr "Send me emails when an update is available."
+
+#: admin/dashboard.php:301
+msgid "To"
+msgstr "To"
+
+#: admin/dashboard.php:5
+msgid "Companion Auto Update was not able to set the event for sending you emails, please re-activate the plugin in order to set the event"
+msgstr "Companion Auto Update was not able to set the event for sending you emails, please re-activate the plugin in order to set the event"
+
+#: admin/dashboard.php:305
+msgid "Seperate email addresses using commas."
+msgstr "Separate email addresses using commas."
+
+#: admin/dashboard.php:298
+msgid "Email Address"
+msgstr "E-mail address"
+
+#: companion-auto-update.php:323 companion-auto-update.php:360
+msgid "Settings"
+msgstr "Settings"
+
+#: admin/dashboard.php:227 admin/pluginlist.php:325 admin/status.php:97
+#: companion-auto-update.php:248
+msgid "Auto Updater"
+msgstr "Auto Updater"
+
+#: admin/dashboard.php:194
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#. Plugin Name of the plugin
+#: cau_functions.php:1266 companion-auto-update.php:257
+msgid "Companion Auto Update"
+msgstr "Companion Auto Update"
+
+#. Description of the plugin
+msgid "This plugin auto updates all plugins, all themes and the wordpress core."
+msgstr "This plugin auto updates all plugins, all themes and the wordpress core."

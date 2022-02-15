@@ -1,0 +1,1000 @@
+# Translation of Themes - GeneratePress in Czech
+# This file is distributed under the same license as the Themes - GeneratePress package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-26 14:11:20+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Themes - GeneratePress\n"
+
+#. Description of the theme
+msgid "GeneratePress is a lightweight WordPress theme built with a focus on speed and usability. Performance is important to us, which is why a fresh GeneratePress install adds less than 10kb (gzipped) to your page size. We take full advantage of the block editor (Gutenberg), which gives you more control over creating your content. If you use page builders, GeneratePress is the right theme for you. It is completely compatible with all major page builders, including Beaver Builder and Elementor. Thanks to our emphasis on WordPress coding standards, we can boast full compatibility with all well-coded plugins, including WooCommerce. GeneratePress is fully responsive, uses valid HTML/CSS, and is translated into over 25 languages by our amazing community of users. A few of our many features include 60+ color controls, powerful dynamic typography, 5 navigation locations, 5 sidebar layouts, dropdown menus (click or hover), and 9 widget areas. Learn more and check out our powerful premium version at https://generatepress.com"
+msgstr "GeneratePress je lehká WordPress šablona postavená se zaměřením na rychlost a použitelnost. Výkonnost je pro nás důležitý, a proto nová instalace GeneratePress přidá na velikost stránky méně než 15kb (gzipped). Využíváme úplně nového editoru bloků (Gutenberg), který vám dává větší kontrolu nad tvorbou obsahu. Pokud používáte page builder, GeneratePress je pro vás ta správná šablona. Je plně kompatibilní se všemi hlavními page buildery, včetně Beaver Builder a Elementor. Díky našemu důrazu na standardy kódování WordPress se můžeme pochlubit plnou kompatibilitou se všemi dobře zakódovanými pluginy, včetně WooCommerce. GeneratePress je plně vnímavý, používá platný kód HTML / CSS a překládá se do více než 25 jazyků naší úžasné komunity uživatelů. Mezi naše četné funkce patří integrace mikrodat, 9 oblastí widgetů, 5 navigačních umístění, 5 rozvržení postranních panelů, rozbalovací nabídky (kliknutí nebo podržení) a přednastavení navigačních barev. Přečtěte si další informace a podívejte se na naši výkonnou prémiovou verzi na adrese https://generatepress.com"
+
+#. Theme Name of the theme
+#: inc/class-dashboard.php:59 inc/class-dashboard.php:60 inc/dashboard.php:20
+#: inc/structure/footer.php:84
+msgid "GeneratePress"
+msgstr "GeneratePress"
+
+#: inc/meta-box.php:176
+msgid "Choose your content container type."
+msgstr "Zvolit typ kontejneru pro obsah."
+
+#: inc/structure/post-meta.php:114
+msgctxt "prepends the pagination page number for screen readers"
+msgid "Page"
+msgstr "Stránka"
+
+#. translators: right arrow
+#: inc/structure/post-meta.php:108
+msgid "Next %s"
+msgstr "Další %s"
+
+#. translators: left arrow
+#: inc/structure/post-meta.php:100
+msgid "%s Previous"
+msgstr "%s Předchozí"
+
+#: inc/customizer.php:1411 inc/customizer.php:1537
+msgid "here"
+msgstr "tady"
+
+#: inc/customizer.php:1407
+msgid "Caution:"
+msgstr "Varování:"
+
+#: inc/customizer.php:661
+msgid "Classic"
+msgstr "Klasický"
+
+#: inc/customizer.php:663
+msgid "Navigation After"
+msgstr "Navigace po"
+
+#: inc/customizer.php:662
+msgid "Navigation Before"
+msgstr "Navigace před"
+
+#: inc/customizer.php:1317
+msgid "Full Content"
+msgstr "Celý obsah"
+
+#: inc/customizer.php:1399
+msgid "Structure"
+msgstr "Struktura"
+
+#: inc/structure/footer.php:83
+msgctxt "GeneratePress"
+msgid "Built with"
+msgstr "Postaveno s"
+
+#: inc/block-editor.php:153
+msgid "Disable Content Title"
+msgstr "Zakázat název obsahu"
+
+#: inc/block-editor.php:154
+msgid "Show Content Title"
+msgstr "Zobrazit název obsahu"
+
+#: inc/meta-box.php:105 inc/meta-box.php:173
+msgid "Content Container"
+msgstr "Kontejner obsahu"
+
+#: inc/general.php:87
+msgid "Close Sub-Menu"
+msgstr "Zavřít dílčí menu"
+
+#: inc/general.php:86
+msgid "Open Sub-Menu"
+msgstr "Otevřít dílčí menu"
+
+#. translators: Aria-label describing the read more button
+#: inc/structure/post-meta.php:457 inc/structure/post-meta.php:485
+msgctxt "more on post title"
+msgid "More on %s"
+msgstr "Více na %s"
+
+#: inc/customizer.php:1403
+msgid "Floats"
+msgstr "Floats"
+
+#: inc/customizer.php:1402
+msgid "Flexbox"
+msgstr "Flexbox"
+
+#. translators: Learn more here
+#: inc/customizer.php:1410
+msgid "Switching your structure can change how your website displays. Review your website thoroughly before publishing this change, or use a staging site to review the potential changes. Learn more %s."
+msgstr "Přepnutí struktury může způsobit změnu zobrazení webu. Před publikováním této změny proveďte pořádnou kontrolu webu nebo použijte testovací web pro zkontrolování případných změn. Dozvědět se více %s."
+
+#: inc/general.php:104
+msgid "Close Search Bar"
+msgstr "Zavřít vyhledávání"
+
+#: inc/general.php:103 inc/structure/navigation.php:194
+#: inc/structure/navigation.php:513 inc/structure/navigation.php:554
+#: inc/structure/navigation.php:595
+msgid "Open Search Bar"
+msgstr "Otevřít vyhledávání"
+
+#: inc/customizer.php:1436
+msgid "Font"
+msgstr "Písmo"
+
+#: inc/customizer.php:1435
+msgid "SVG"
+msgstr "SVG"
+
+#: inc/customizer.php:1432
+msgid "Icon Type"
+msgstr "Typ ikony"
+
+#: inc/customizer.php:1054 inc/customizer/fields/back-to-top.php:122
+#: inc/customizer/fields/body.php:55 inc/customizer/fields/buttons.php:118
+#: inc/customizer/fields/content.php:58 inc/customizer/fields/footer-bar.php:58
+#: inc/customizer/fields/footer-widgets.php:58
+#: inc/customizer/fields/forms.php:118 inc/customizer/fields/header.php:56
+#: inc/customizer/fields/primary-navigation.php:207
+#: inc/customizer/fields/sidebar-widgets.php:58
+#: inc/customizer/fields/top-bar.php:59
+msgid "Text"
+msgstr "Text"
+
+#: inc/customizer.php:1481
+msgid "Combine CSS"
+msgstr "Kombinujte CSS"
+
+#: inc/customizer.php:1053
+msgid "Boxes"
+msgstr "Boxy"
+
+#: inc/customizer.php:1050
+msgid "Container Alignment"
+msgstr "Zarovnání sekcí"
+
+#: inc/customizer.php:226
+msgid "Place logo next to title"
+msgstr "Umístěte logo vedle názvu"
+
+#: inc/customizer.php:1482
+msgid "Reduce the number of CSS file requests and use a lite version of our grid system."
+msgstr "Snižte počet požadavků na soubor CSS a použijte lite verzi našeho mřížkového systému."
+
+#: inc/typography.php:659 assets/dist/customizer.js:1
+msgid "Heading 3 (H3)"
+msgstr "Nadpis 3 (H3)"
+
+#: inc/typography.php:512 assets/dist/customizer.js:1
+msgid "Heading 2 (H2)"
+msgstr "Nadpis 2 (H2)"
+
+#: inc/typography.php:365 assets/dist/customizer.js:1
+msgid "Heading 1 (H1)"
+msgstr "Nadpis 1 (H1)"
+
+#: inc/dashboard.php:261
+msgid "Reset Settings"
+msgstr "Reset nastavení"
+
+#: inc/dashboard.php:231 assets/dist/dashboard.js:1
+msgid "Start Customizing"
+msgstr "Spustit přizpůsobení"
+
+#: inc/dashboard.php:221
+msgid "All Options"
+msgstr "Všechno nastavení"
+
+#: inc/dashboard.php:216 assets/dist/dashboard.js:1
+msgid "Layout Options"
+msgstr "Možnosti rozvržení"
+
+#: inc/dashboard.php:211
+msgid "Customize Colors"
+msgstr "Přizpůsobení barev"
+
+#: inc/dashboard.php:206
+msgid "Customize Fonts"
+msgstr "Přizpůsobení fontů"
+
+#: inc/dashboard.php:201
+msgid "Upload Logo"
+msgstr "Nahrát logo"
+
+#: inc/customizer.php:194
+msgid "Logo Width"
+msgstr "Šířka loga"
+
+#: inc/customizer.php:666
+msgid "Navigation Left"
+msgstr "Navigace doleva"
+
+#: inc/dashboard.php:247
+msgid "Visit documentation &rarr;"
+msgstr "Navštívit dokumentaci &rarr;"
+
+#: inc/dashboard.php:246
+msgid "Want to learn more about the theme? Check out our extensive documentation."
+msgstr "Chcete se dozvědět více o šabloně? Podívejte se na naši rozsáhlou dokumentaci."
+
+#: inc/customizer.php:978
+msgid "Dropdown Direction"
+msgstr "Směr rozložení"
+
+#: inc/customizer.php:921
+msgid "The width when the navigation ceases to float and drops below your logo."
+msgstr "Šířka, kdy navigace přestane plavat a zobrazí se pod logem."
+
+#: inc/customizer.php:920
+msgid "Navigation Drop Point"
+msgstr "Bod spuštění navigace"
+
+#: inc/customizer.php:665
+msgid "Navigation After - Centered"
+msgstr "Navigace po - centrování"
+
+#: inc/customizer.php:664
+msgid "Navigation Before - Centered"
+msgstr "Navigace před - centrováním"
+
+#: inc/customizer.php:656
+msgid "Header Presets"
+msgstr "Předvolby záhlaví"
+
+#: inc/customizer.php:659
+msgid "Current"
+msgstr "Proud"
+
+#: inc/structure/navigation.php:625
+msgid "Mobile Menu"
+msgstr "Mobilní menu"
+
+#: inc/dashboard.php:263
+msgid "Deleting your settings can not be undone."
+msgstr "Smazání nastavení nelze vrátit zpět."
+
+#: inc/meta-box.php:196
+msgid "Premium module available"
+msgstr "Prémiový plugin je k dispozici"
+
+#: inc/dashboard.php:157
+msgid "Premium Modules"
+msgstr "Prémiový plugin"
+
+#: inc/customizer.php:171
+msgid "Retina Logo"
+msgstr "Logo ve vysokém rozlišení"
+
+#: inc/customizer.php:1346
+msgid "General"
+msgstr "Hlavní"
+
+#: inc/customizer.php:1318
+msgid "Excerpt"
+msgstr "Část textu"
+
+#: inc/customizer/controls/class-typography-control.php:80
+#: assets/dist/customizer.js:5
+msgid "Variants"
+msgstr "Varianty"
+
+#: inc/customizer/controls/class-typography-control.php:73
+#: assets/dist/customizer.js:5
+msgid "System fonts"
+msgstr "Systémová písma"
+
+#: inc/structure/comments.php:142
+msgid "Comment"
+msgstr "Komentář"
+
+#: inc/customizer.php:86
+msgid "Premium Modules Available"
+msgstr "Jsou dostupné prémiové moduly"
+
+#: inc/customizer.php:1502
+msgid "Cache CSS generated by your options to boost performance."
+msgstr "Aktivuje cache CSS generovanou podle vámi zvolených možností a zrychlí tím váš web."
+
+#: inc/customizer.php:1501
+msgid "Cache dynamic CSS"
+msgstr "Ukládat dynamickou cache pro CSS"
+
+#: inc/customizer.php:1314
+msgid "Content Type"
+msgstr "Typ obsahu"
+
+#: inc/customizer.php:1366
+msgid "Load essential Font Awesome icons instead of the full library."
+msgstr "Načte jen důležité ikony místo celé knihovny Font Awesome."
+
+#: inc/customizer.php:1365
+msgid "Load essential icons only"
+msgstr "Načítat jen nezbytné ikony"
+
+#: inc/customizer.php:1334 inc/typography.php:747
+msgid "More options are available for this section in our premium version."
+msgstr "Více možností této sekce je dostupných v prémiové verzi."
+
+#: inc/customizer/controls/class-range-control.php:71
+#: assets/dist/customizer.js:1
+msgid "Mobile"
+msgstr "Mobil"
+
+#: inc/customizer/controls/class-range-control.php:70
+#: assets/dist/customizer.js:1
+msgid "Tablet"
+msgstr "Tablet"
+
+#: inc/customizer/controls/class-range-control.php:69
+#: assets/dist/customizer.js:1
+msgid "Desktop"
+msgstr "Počítač"
+
+#: inc/meta-box.php:181
+msgid "Full Width"
+msgstr "Plná šířka"
+
+#: inc/customizer.php:548 inc/customizer/fields/top-bar.php:16
+#: inc/general.php:146 assets/dist/customizer.js:1
+msgid "Top Bar"
+msgstr "Horní pruh"
+
+#: inc/customizer.php:620
+msgid "Top Bar Alignment"
+msgstr "Zarovnání horního pruhu"
+
+#: inc/customizer.php:594
+msgid "Top Bar Inner Width"
+msgstr "Vnitřní šířka horního pruhu"
+
+#: inc/customizer.php:568
+msgid "Top Bar Width"
+msgstr "Šířka horního pruhu"
+
+#: inc/class-dashboard.php:147 inc/dashboard.php:56
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: inc/class-dashboard.php:132 inc/dashboard.php:53
+msgid "Premium"
+msgstr "Prémium"
+
+#: inc/customizer.php:1333 inc/dashboard.php:168 inc/typography.php:746
+msgid "Learn more"
+msgstr "Přečtěte si více"
+
+#: inc/customizer/fields/footer-bar.php:16 inc/general.php:145
+#: assets/dist/customizer.js:1
+msgid "Footer Bar"
+msgstr "Spodní pruh"
+
+#: inc/customizer.php:1255
+msgid "Footer Bar Alignment"
+msgstr "Zarovnání spodního pruhu"
+
+#: inc/customizer/controls/class-range-control.php:72 inc/dashboard.php:272
+#: assets/dist/dashboard.js:1
+msgid "Reset"
+msgstr "Resetovat"
+
+#: inc/customizer.php:1202
+msgid "Inner Footer Width"
+msgstr "Vnitřní šířka zápatí"
+
+#: inc/customizer.php:839
+msgid "Inner Navigation Width"
+msgstr "Vnitřní šířka navigace"
+
+#: inc/customizer.php:754
+msgid "Inner Header Width"
+msgstr "Vnitřní šířka hlavičky"
+
+#: inc/typography.php:297
+msgid "Paragraph margin"
+msgstr "Okraj odstavce"
+
+#: inc/typography.php:263 inc/typography.php:444 inc/typography.php:591
+#: inc/typography.php:720
+msgid "Line height"
+msgstr "Výška řádku"
+
+#: inc/customizer.php:794 inc/customizer/fields/primary-navigation.php:23
+#: assets/dist/customizer.js:1
+msgid "Primary Navigation"
+msgstr "Primární navigace"
+
+#: inc/customizer.php:1064 inc/meta-box.php:90
+msgid "Sidebars"
+msgstr "Postranní panely"
+
+#: inc/customizer.php:1157 assets/dist/customizer.js:1
+msgid "Footer"
+msgstr "Patička"
+
+#: inc/customizer.php:504
+msgid "Container"
+msgstr "Prostor"
+
+#: inc/customizer.php:814
+msgid "Navigation Width"
+msgstr "Šířka navigace"
+
+#: inc/customizer.php:953
+msgid "Navigation Dropdown"
+msgstr "Rozbalovací navigace"
+
+#: inc/customizer.php:956
+msgid "Hover"
+msgstr "Přejetí myší"
+
+#: inc/customizer.php:957
+msgid "Click - Menu Item"
+msgstr "Kliknutí - položka menu"
+
+#: inc/customizer.php:958
+msgid "Click - Arrow"
+msgstr "Kliknutí - šipka"
+
+#: inc/customizer.php:1177
+msgid "Footer Width"
+msgstr "Šířka patičky"
+
+#: inc/customizer.php:1281
+msgid "Back to Top Button"
+msgstr "Tlačítko Zpět na začátek"
+
+#: inc/structure/footer.php:228
+msgid "Scroll back to top"
+msgstr "Posunout zpět na začátek"
+
+#: inc/customizer.php:729
+msgid "Header Width"
+msgstr "Šířka hlavičky"
+
+#: inc/customizer.php:571 inc/customizer.php:597 inc/customizer.php:732
+#: inc/customizer.php:758 inc/customizer.php:817 inc/customizer.php:843
+#: inc/customizer.php:1180 inc/customizer.php:1206
+msgid "Full"
+msgstr "Plná"
+
+#: inc/customizer.php:896
+msgid "Float Left"
+msgstr "Plovoucí vlevo"
+
+#. translators: %s: Heart icon
+#: inc/dashboard.php:302
+msgctxt "made with love"
+msgid "Made with %s by Tom Usborne"
+msgstr "Vytvořil s %s Tom Usborne"
+
+#: inc/class-dashboard.php:140 inc/dashboard.php:55
+msgid "Support"
+msgstr "Podpora"
+
+#: inc/customizer/fields/content.php:147 inc/meta-box.php:189
+#: inc/meta-box.php:191
+msgid "Content Title"
+msgstr "Název obsahu"
+
+#: content-404.php:51
+msgid "It looks like nothing was found at this location. Maybe try searching?"
+msgstr "Vypadá to, že zde nebylo nic nalezeno. Zkuste vyhledávání."
+
+#: searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Hledat &hellip;"
+
+#: searchform.php:14 searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "Hledat:"
+
+#. translators: 1: Search query name
+#: inc/structure/archives.php:136
+msgid "Search Results for: %s"
+msgstr "Výsledky vyhledávání pro: %s"
+
+#: no-results.php:62
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Vypadá to, že nemůžeme najít to, co hledáte. Možná pomůže vyhledávání."
+
+#: no-results.php:57
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Omlouváme se, ale hledaný výraz nebyl bohužel nalezen. Zkuste to prosím znovu s nějakými jinými klíčovými slovy."
+
+#. translators: 1: Admin URL
+#: no-results.php:49
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Jste připraveni publikovat váš první příspěvek? <a href=\"%1$s\">Začněte zde</a>."
+
+#: no-results.php:27
+msgid "Nothing Found"
+msgstr "Nenalezeno"
+
+#: inc/structure/post-meta.php:276
+msgid "% Comments"
+msgstr "% komentářů"
+
+#: inc/structure/post-meta.php:276
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: inc/structure/post-meta.php:276
+msgid "Leave a comment"
+msgstr "Napsat komentář"
+
+#: inc/structure/post-meta.php:260
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "Štítky"
+
+#: inc/structure/post-meta.php:243
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr "Rubriky"
+
+#: inc/structure/post-meta.php:235 inc/structure/post-meta.php:252
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: inc/structure/navigation.php:454
+msgctxt "label"
+msgid "Search"
+msgstr "Hledat"
+
+#: inc/structure/post-meta.php:454 inc/structure/post-meta.php:482
+msgid "Read more"
+msgstr "Číst dál"
+
+#. translators: 1: Author name
+#: inc/structure/post-meta.php:224
+msgid "View all posts by %s"
+msgstr "Zobrazit všechny příspěvky od %s"
+
+#: inc/structure/post-meta.php:303
+msgid "by"
+msgstr "autor:"
+
+#: inc/structure/comments.php:77
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na schválení."
+
+#. translators: 1: date, 2: time
+#: inc/structure/comments.php:62
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s v %2$s"
+
+#: inc/structure/comments.php:28
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/structure/post-meta.php:87
+msgid "Newer posts"
+msgstr "Novější příspěvky"
+
+#: inc/structure/post-meta.php:78
+msgid "Older posts"
+msgstr "Starší příspěvky"
+
+#: inc/structure/post-meta.php:48 inc/structure/post-meta.php:87
+msgid "Next"
+msgstr "Další"
+
+#: inc/structure/post-meta.php:47 inc/structure/post-meta.php:78
+msgid "Previous"
+msgstr "Předchozí"
+
+#: inc/structure/post-meta.php:39
+msgid "Post navigation"
+msgstr "Navigace příspěvků"
+
+#: inc/deprecated.php:31
+msgid "Next &rarr;"
+msgstr "Další &rarr;"
+
+#: inc/deprecated.php:30
+msgid "&larr; Previous"
+msgstr "&larr; Předchozí"
+
+#: inc/dashboard.php:368
+msgid "Import successful."
+msgstr "Import úspěšný."
+
+#: inc/dashboard.php:373
+msgid "Settings removed."
+msgstr "Nastavení odstraněno."
+
+#: inc/customizer/fields/back-to-top.php:54 inc/customizer/fields/body.php:32
+#: inc/customizer/fields/buttons.php:50 inc/customizer/fields/content.php:34
+#: inc/customizer/fields/footer-bar.php:32
+#: inc/customizer/fields/footer-widgets.php:32
+#: inc/customizer/fields/forms.php:50 inc/customizer/fields/header.php:32
+#: inc/customizer/fields/primary-navigation.php:189
+#: inc/customizer/fields/sidebar-widgets.php:32
+#: inc/customizer/fields/top-bar.php:33
+msgid "Background"
+msgstr "Pozadí"
+
+#: inc/meta-box.php:100 inc/meta-box.php:186
+msgid "Disable Elements"
+msgstr "Zakázat prvky"
+
+#: inc/dashboard.php:268
+msgid "Warning: This will delete your settings."
+msgstr "Varování: Toto smaže vaše nastavení."
+
+#: inc/dashboard.php:363
+msgid "Settings saved."
+msgstr "Nastavení uloženo."
+
+#: inc/dashboard.php:93
+msgid "Customize"
+msgstr "Přizpůsobit"
+
+#: searchform.php:21 searchform.php:27
+msgctxt "submit button"
+msgid "Search"
+msgstr "Hledat"
+
+#: inc/structure/header.php:391 inc/structure/header.php:392
+msgid "Skip to content"
+msgstr "Přeskočit na obsah"
+
+#: inc/structure/navigation.php:50 inc/structure/navigation.php:60
+#: inc/structure/navigation.php:139 inc/structure/navigation.php:155
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/meta-box.php:149
+msgid "No Sidebars"
+msgstr "Bez postranních panelů"
+
+#: inc/meta-box.php:150
+msgid "Both Sidebars"
+msgstr "Oba postranní panely"
+
+#: inc/meta-box.php:151
+msgid "Both Sidebars on Left"
+msgstr "Oba postranní panely vlevo"
+
+#: inc/meta-box.php:152
+msgid "Both Sidebars on Right"
+msgstr "Oba postranní panely vpravo"
+
+#: inc/meta-box.php:163
+msgid "0 Widgets"
+msgstr "0 widgetů"
+
+#: inc/meta-box.php:165
+msgid "2 Widgets"
+msgstr "2 widgety"
+
+#: inc/meta-box.php:166
+msgid "3 Widgets"
+msgstr "3 widgety"
+
+#: inc/meta-box.php:167
+msgid "4 Widgets"
+msgstr "4 widgety"
+
+#: inc/meta-box.php:168
+msgid "5 Widgets"
+msgstr "5 widgetů"
+
+#: inc/meta-box.php:164
+msgid "1 Widgets"
+msgstr "1 widget"
+
+#: inc/class-html-attributes.php:287 inc/customizer/fields/content.php:16
+#: assets/dist/customizer.js:1
+msgid "Content"
+msgstr "Obsah"
+
+#: inc/customizer.php:660 inc/meta-box.php:146 inc/meta-box.php:162
+#: inc/meta-box.php:180 assets/dist/customizer.js:1
+msgid "Default"
+msgstr "Výchozí"
+
+#: inc/customizer.php:1295
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/customizer.php:1226 inc/customizer/fields/footer-widgets.php:16
+#: inc/meta-box.php:95 inc/meta-box.php:159
+msgid "Footer Widgets"
+msgstr "Widgety patičky"
+
+#: inc/customizer.php:1111
+msgid "Blog Sidebar Layout"
+msgstr "Rozvržení postranních panelů blogu"
+
+#: inc/customizer.php:1139
+msgid "Single Post Sidebar Layout"
+msgstr "Rozvržení postranních panelů příspěvku"
+
+#: inc/customizer.php:1091 inc/customizer.php:1119 inc/customizer.php:1147
+msgid "Content / Sidebar / Sidebar"
+msgstr "Obsah / Postranní panel / Postranní panel"
+
+#: inc/customizer.php:1090 inc/customizer.php:1118 inc/customizer.php:1146
+msgid "Sidebar / Sidebar / Content"
+msgstr "Postranní panel / Postranní panel / Obsah"
+
+#: inc/customizer.php:1089 inc/customizer.php:1117 inc/customizer.php:1145
+msgid "Sidebar / Content / Sidebar"
+msgstr "Postranní panel / Obsah / Postranní panel"
+
+#: inc/customizer.php:1088 inc/customizer.php:1116 inc/customizer.php:1144
+msgid "Content (no sidebars)"
+msgstr "Obsah (bez postranních panelů)"
+
+#: inc/customizer.php:1087 inc/customizer.php:1115 inc/customizer.php:1143
+msgid "Content / Sidebar"
+msgstr "Obsah / Postranní panel"
+
+#: inc/customizer.php:1029
+msgid "Separate Containers"
+msgstr "Oddělené prostory"
+
+#: inc/customizer.php:1030
+msgid "One Container"
+msgstr "Jeden prostor"
+
+#: inc/customizer.php:1026
+msgid "Content Layout"
+msgstr "Rozvržení obsahu"
+
+#: inc/customizer.php:1083 inc/meta-box.php:143
+msgid "Sidebar Layout"
+msgstr "Rozvržení postranních panelů stránky"
+
+#: inc/customizer.php:1086 inc/customizer.php:1114 inc/customizer.php:1142
+msgid "Sidebar / Content"
+msgstr "Postranní panel / Obsah"
+
+#: inc/customizer.php:1006 inc/customizer.php:1285
+msgid "Disable"
+msgstr "Zakázáno"
+
+#: inc/customizer.php:1005 inc/customizer.php:1284
+msgid "Enable"
+msgstr "Povoleno"
+
+#: inc/customizer.php:893
+msgid "Below Header"
+msgstr "Pod hlavičkou"
+
+#: inc/customizer.php:894
+msgid "Above Header"
+msgstr "Nad hlavičkou"
+
+#: inc/customizer.php:899
+msgid "No Navigation"
+msgstr "Bez navigace"
+
+#: inc/customizer.php:864
+msgid "Navigation Alignment"
+msgstr "Zarovnání navigace"
+
+#: inc/customizer.php:890
+msgid "Navigation Location"
+msgstr "Umístění navigace"
+
+#: inc/customizer.php:895
+msgid "Float Right"
+msgstr "Plovoucí vpravo"
+
+#: inc/customizer.php:1002 inc/customizer/fields/primary-navigation.php:166
+msgid "Navigation Search"
+msgstr "Navigační vyhledávání"
+
+#: inc/customizer.php:625 inc/customizer.php:784 inc/customizer.php:869
+#: inc/customizer.php:981 inc/customizer.php:1260
+msgid "Right"
+msgstr "Doprava"
+
+#: inc/customizer.php:624 inc/customizer.php:783 inc/customizer.php:868
+#: inc/customizer.php:1259
+msgid "Center"
+msgstr "Doprostřed"
+
+#: inc/customizer.php:623 inc/customizer.php:782 inc/customizer.php:867
+#: inc/customizer.php:982 inc/customizer.php:1258
+msgid "Left"
+msgstr "Doleva"
+
+#: inc/customizer.php:779
+msgid "Header Alignment"
+msgstr "Zarovnání hlavičky"
+
+#: inc/customizer.php:526
+msgid "Container Width"
+msgstr "Šířka stránky"
+
+#: inc/customizer.php:572 inc/customizer.php:598 inc/customizer.php:733
+#: inc/customizer.php:757 inc/customizer.php:818 inc/customizer.php:842
+#: inc/customizer.php:1181 inc/customizer.php:1205 inc/meta-box.php:182
+msgid "Contained"
+msgstr "Omezená"
+
+#: inc/customizer/fields/body.php:146
+msgid "Link Color Visited"
+msgstr "Barva navštívaného odkazu"
+
+#: inc/customizer.php:496 inc/meta-box.php:62
+msgid "Layout"
+msgstr "Rozvržení"
+
+#: inc/customizer/fields/back-to-top.php:80
+#: inc/customizer/fields/buttons.php:76
+msgid "Background Hover"
+msgstr "Barva pozadí"
+
+#: inc/customizer.php:235
+msgid "Colors"
+msgstr "Barvy"
+
+#: inc/customizer.php:149
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:109
+msgid "Hide site title"
+msgstr "Skrýt název webu"
+
+#: inc/customizer.php:128
+msgid "Hide site tagline"
+msgstr "Skrýt popis webu"
+
+#: inc/typography.php:229 inc/typography.php:403 inc/typography.php:550
+#: inc/typography.php:687 assets/dist/customizer.js:5
+msgid "Font size"
+msgstr "Velikost písma"
+
+#: inc/customizer/fields/body.php:16 inc/typography.php:199
+#: assets/dist/customizer.js:1
+msgid "Body"
+msgstr "Tělo"
+
+#: inc/customizer/controls/class-typography-control.php:78
+msgid "Text transform"
+msgstr "Transformace textu"
+
+#: inc/customizer/controls/class-typography-control.php:77
+msgid "Font weight"
+msgstr "Tloušťka písma"
+
+#: inc/customizer.php:313 inc/typography.php:135
+msgid "Typography"
+msgstr "Typografie"
+
+#: inc/customizer/controls/class-deprecated.php:70
+msgid "Default fonts"
+msgstr "Výchozí písma"
+
+#: inc/customizer/controls/class-deprecated.php:71
+#: inc/customizer/controls/class-typography-control.php:74
+msgid "Google fonts"
+msgstr "Google písma"
+
+#: inc/customizer/controls/class-deprecated.php:72
+#: inc/customizer/controls/class-typography-control.php:76
+msgid "Font family"
+msgstr "Rodina písma"
+
+#: inc/customizer.php:636 inc/customizer/fields/header.php:16
+#: inc/general.php:139 assets/dist/customizer.js:1
+msgid "Header"
+msgstr "Záhlaví"
+
+#: inc/customizer.php:897 inc/general.php:138 inc/meta-box.php:148
+msgid "Left Sidebar"
+msgstr "Levý postranní panel"
+
+#: inc/customizer.php:898 inc/general.php:137 inc/meta-box.php:147
+msgid "Right Sidebar"
+msgstr "Pravý postranní panel"
+
+#: inc/general.php:140
+msgid "Footer Widget 1"
+msgstr "Widget patičky 1"
+
+#: inc/general.php:141
+msgid "Footer Widget 2"
+msgstr "Widget patičky 2"
+
+#: inc/general.php:142
+msgid "Footer Widget 3"
+msgstr "Widget patičky 3"
+
+#: inc/general.php:144
+msgid "Footer Widget 5"
+msgstr "Widget patičky 5"
+
+#: inc/general.php:143
+msgid "Footer Widget 4"
+msgstr "Widget patičky 4"
+
+#: functions.php:58
+msgid "Primary Menu"
+msgstr "Primární menu"
+
+#: inc/structure/comments.php:28 inc/structure/comments.php:69
+msgid "Edit"
+msgstr "Upravit"
+
+#: content-link.php:84 content-page.php:77 content-single.php:77 content.php:84
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: inc/structure/comments.php:150
+msgid "Post Comment"
+msgstr "Odeslat komentář"
+
+#: inc/structure/comments.php:149
+msgid "Leave a Comment"
+msgstr "Napsat komentář"
+
+#: inc/structure/comments.php:185
+msgid "Website"
+msgstr "Web"
+
+#: inc/structure/comments.php:177
+msgid "Email"
+msgstr "E-mail"
+
+#: inc/structure/comments.php:169
+msgid "Name"
+msgstr "Jméno"
+
+#: comments.php:123
+msgid "Comments are closed."
+msgstr "Komentáře nejsou povoleny."
+
+#: comments.php:86 comments.php:113
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: comments.php:85 comments.php:112
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: comments.php:84 comments.php:111
+msgid "Comment navigation"
+msgstr "Navigace pro komentáře"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:50
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s komentář u &bdquo;%2$s&ldquo;"
+msgstr[1] "%1$s komentáře u &bdquo;%2$s&ldquo;"
+msgstr[2] "%1$s komentářů u &bdquo;%2$s&ldquo;"
+
+#: inc/structure/sidebars.php:77
+msgid "Archives"
+msgstr "Archivy"
+
+#: content-404.php:27
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Jejda! Tuto stránku nelze nalézt."
+
+#. Author of the theme
+msgid "Tom Usborne"
+msgstr "Tom Usborne"
+
+#. Author URI of the theme
+msgid "https://tomusborne.com"
+msgstr "https://tomusborne.com"
+
+#. Theme URI of the theme
+msgid "https://generatepress.com"
+msgstr "https://generatepress.com"

@@ -1,0 +1,5560 @@
+# Translation of Plugins - Elementor Website Builder - Stable (latest release) in Hungarian
+# This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-12-08 13:46:23+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: hu\n"
+"Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
+
+#: includes/settings/tools.php:134
+msgid "Not allowed to rollback versions"
+msgstr "Nem engedélyezett a verziók visszaállítása"
+
+#: modules/page-templates/module.php:311
+msgid "The default page template as defined in Elementor Panel → Hamburger Menu → Site Settings."
+msgstr "Az alapértelmezett oldalsablon az Elementor Panel → Hamburger Menü → Oldal beállítások menüpontban meghatározottak szerint"
+
+#. translators: 1: Link open tag, 2: Link close tag.
+#: modules/shapes/widgets/text-path.php:131
+msgid "Want to create custom text paths with SVG? %1$sLearn More%2$s"
+msgstr "Egyéni szöveges útvonalakat szeretnél létrehozni az SVG segítségével? %1$sTovábbi információ%2$s"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/safe-mode/module.php:323
+msgid "Please note! We couldn't deactivate all of your plugins on Safe Mode. Please %1$sread more%2$s about this issue"
+msgstr "Kérlek, vedd figyelembe! Nem tudtuk deaktiválni az összes bővítményt csökkentett módban. Kérlek, %1$solvass tovább%2$s erről a problémáról"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/safe-mode/module.php:294 modules/safe-mode/module.php:307
+msgid "%1$sClick here%2$s to troubleshoot"
+msgstr "%1$sKattints ide%2$s a hibaelhárításhoz"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/landing-pages/module.php:197
+msgid "Or view %1$sTrashed Items%1$s"
+msgstr "Vagy tekintsd meg a %1$sLomtárban lévő elemeket%1$s"
+
+#: includes/settings/settings.php:496
+msgid "You can use the Site Settings to make changes and see them live!"
+msgstr "A Webhelybeállítások segítségével módosíthatod vizuálisan a weboldaladat!"
+
+#. translators: 1: Bold open tag, 2: Bold close tag
+#: includes/settings/settings.php:491
+msgid "The Style settings changed its location and can now be found within Elementor Editor's %1$sPanel > Hamburger Menu > Site Settings%2$s."
+msgstr "A stílus beállítások elérési útvonala megváltozott, most már az %1$sElementor szerkesztő panel > Hamburger menü > Webhelybeállítások%2$s -nál érhető el."
+
+#: includes/elements/column.php:416 includes/elements/section.php:707
+msgid "Saturation"
+msgstr "Telítettség"
+
+#: includes/elements/column.php:412 includes/elements/section.php:703
+msgid "Overlay"
+msgstr "Átfedés"
+
+#: core/kits/documents/tabs/settings-page-transitions.php:19
+#: includes/managers/controls.php:935
+msgid "Page Transitions"
+msgstr "Oldal animáció"
+
+#: core/app/modules/import-export/module.php:105
+msgid "Invalid URL"
+msgstr "Érvénytelen URL"
+
+#: modules/library/documents/section.php:46
+msgid "Sections"
+msgstr "Szakaszok"
+
+#: includes/settings/settings.php:359
+msgid "Collect Your Form Submissions"
+msgstr "Tárolja a kitöltött űrlap adatait"
+
+#: includes/settings/settings.php:135 includes/settings/settings.php:136
+msgid "Submissions"
+msgstr "Űrlapok"
+
+#: includes/editor-templates/panel.php:260
+#: modules/elements-color-picker/module.php:31 assets/js/editor.js:8634
+msgid "Color Sampler"
+msgstr "Színválasztó"
+
+#: core/settings/editor-preferences/model.php:128
+msgid "Default Device View "
+msgstr "Alapértelmezett eszköz nézet"
+
+#: core/settings/editor-preferences/model.php:117
+msgid "Hidden Elements"
+msgstr "Rejtett elemek"
+
+#: core/settings/editor-preferences/model.php:108
+msgid "Responsive Preview"
+msgstr "Reszponzív előnézet"
+
+#: core/experiments/manager.php:241
+msgid "Improved CSS Loading"
+msgstr "Továbbfejlesztett CSS betöltés"
+
+#: core/app/modules/kit-library/data/repository.php:131
+#: core/app/modules/kit-library/data/repository.php:154
+msgid "Kit not found"
+msgstr "Készlet nem található"
+
+#: includes/settings/settings.php:519
+msgid "API Key"
+msgstr "API kulcs"
+
+#: includes/settings/settings.php:508
+msgid "Google Maps Embed API"
+msgstr "Google térkép beágyazó API"
+
+#: modules/compatibility-tag/compatibility-tag-report.php:150
+msgid "Incompatible"
+msgstr "Nem összeillő"
+
+#: modules/compatibility-tag/compatibility-tag-report.php:149
+msgid "Compatible"
+msgstr "Összeillő"
+
+#: includes/widgets/common.php:716
+msgid "Round"
+msgstr "Kerek"
+
+#: includes/widgets/common.php:715
+msgid "Repeat-Y"
+msgstr "Függőleges ismétlés"
+
+#: includes/widgets/common.php:714
+msgid "Repeat-X"
+msgstr "Vízszintes ismétlés"
+
+#: includes/widgets/common.php:712
+msgid "No-Repeat"
+msgstr "Nincs ismétlés"
+
+#: includes/widgets/common.php:709 includes/widgets/common.php:713
+msgid "Repeat"
+msgstr "Ismétlés"
+
+#: includes/widgets/common.php:673
+msgid "Y Position"
+msgstr "Y pozíció"
+
+#: includes/widgets/common.php:637
+msgid "X Position"
+msgstr "X pozíció"
+
+#: includes/widgets/common.php:623
+msgid "Bottom Right"
+msgstr "Lent jobbra"
+
+#: includes/widgets/common.php:622
+msgid "Bottom Left"
+msgstr "Lent balra"
+
+#: includes/widgets/common.php:621
+msgid "Bottom Center"
+msgstr "Lent középre"
+
+#: includes/widgets/common.php:620
+msgid "Top Right"
+msgstr "Fent jobbra"
+
+#: includes/widgets/common.php:619
+msgid "Top Left"
+msgstr "Fent balra"
+
+#: includes/widgets/common.php:618
+msgid "Top Center"
+msgstr "Fent középre"
+
+#: includes/widgets/common.php:617
+msgid "Center Right"
+msgstr "Középen jobbra"
+
+#: includes/widgets/common.php:616
+msgid "Center Left"
+msgstr "Középen balra "
+
+#: includes/widgets/common.php:615
+msgid "Center Center"
+msgstr "Középen középre"
+
+#: includes/widgets/common.php:540
+msgid "Need More Shapes?"
+msgstr "Több alakzatra van szükséged?"
+
+#: includes/widgets/common.php:487 includes/widgets/common.php:495
+msgid "Mask"
+msgstr "Maszk"
+
+#: includes/widgets/common.php:130
+msgid "Hexagon"
+msgstr "Hatszög"
+
+#: includes/widgets/common.php:129
+msgid "Blob"
+msgstr "Folt"
+
+#: includes/widgets/common.php:128
+msgid "Triangle"
+msgstr "Háromszög"
+
+#: includes/settings/settings.php:583
+msgid "Set the way Google Fonts are being loaded by selecting the font-display property (Default: Auto)."
+msgstr "A betűtípus-megjelenés tulajdonság kiválasztásával állítsd be a Google Betűtípusok betöltésének módját (Alapértelmezett: Automatikus). "
+
+#: includes/settings/settings.php:583
+msgid "Font-display property defines how font files are loaded and displayed by the browser."
+msgstr "A Betűtípus-megjelenítés tulajdonság határozza meg, hogy a betűtípusfájlokat hogyan tölti be és jeleníti meg a böngésző. "
+
+#: includes/settings/settings.php:581
+msgid "Optional"
+msgstr "Opcionális"
+
+#: includes/settings/settings.php:579
+msgid "Swap"
+msgstr "Kicserélés"
+
+#: includes/settings/settings.php:578
+msgid "Blocking"
+msgstr "Letiltás"
+
+#: includes/settings/settings.php:572
+msgid "Google Fonts Load"
+msgstr "Google betűtípus betöltése"
+
+#: includes/editor-templates/responsive-bar.php:60
+msgid "Manage Breakpoints"
+msgstr "Töréspontok kezelése"
+
+#: core/experiments/manager.php:276
+msgid "You can import a kit and apply it to your site, or export the elements from this site to be used anywhere else."
+msgstr "Importálhatsz egy készletet, és alkalmazhatod azt a webhelyeden, vagy exportálhatod az elemeket a webhelyről, hogy bárhol másutt használhasd őket."
+
+#: core/breakpoints/manager.php:313
+msgid "Widescreen"
+msgstr "Szélesvásznú"
+
+#: core/breakpoints/manager.php:303
+msgid "Tablet Extra"
+msgstr "Tablet extra"
+
+#: core/breakpoints/manager.php:293
+msgid "Mobile Extra"
+msgstr "Mobil extra"
+
+#: core/base/db-upgrades-manager.php:110
+msgid "Database update process is running in the background. Taking a while?"
+msgstr "Az adatbázis frissítési folyamata a háttérben fut. Időbe telik?"
+
+#: core/admin/admin-notices.php:445
+msgid "Using popups on your site?"
+msgstr "Használsz felugró ablakokat a webhelyeden?"
+
+#: core/admin/admin-notices.php:363
+msgid "Try out Elementor Pro and design your forms visually with one powerful tool."
+msgstr "Próbálja ki az Elementor Pro alkalmazást, és egy hatékony eszközzel, vizuálisan tervezze meg űrlapjait. "
+
+#: core/admin/admin-notices.php:232
+msgid "Love using Elementor?"
+msgstr "Szereted használni az Elementort?"
+
+#: core/app/modules/import-export/module.php:234
+msgid "Start Import"
+msgstr "Importálás indítása"
+
+#: core/app/modules/import-export/module.php:222
+msgid "Start Export"
+msgstr "Exportálás indítása"
+
+#: core/app/modules/import-export/module.php:208
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3147
+msgid "Learn more"
+msgstr "Tudj meg többet"
+
+#: core/utils/import-export/wp-import.php:1190
+msgid "The uploaded file could not be moved"
+msgstr "A feltöltött fájlt nem sikerült áthelyezni"
+
+#: core/utils/import-export/wp-import.php:1174
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr "Sajnáljuk, ez a fájltípus biztonsági okokból nem engedélyezett."
+
+#. translators: %s: Max file size.
+#: core/utils/import-export/wp-import.php:1142
+msgid "Remote file is too large, limit is %s"
+msgstr "Távoli fájl túl nagy, a korlát %s"
+
+#: core/utils/import-export/wp-import.php:1134
+msgid "Downloaded file has incorrect size"
+msgstr "A letöltött fájl mérete nem megfelelő"
+
+#: core/utils/import-export/wp-import.php:1128
+msgid "Zero size file downloaded"
+msgstr "Zéró méretű fájl letöltve"
+
+#: core/utils/import-export/wp-import.php:1120
+msgid "Remote server did not respond"
+msgstr "A távoli szerver nem válaszol"
+
+#. translators: 1: HTTP error message, 2: HTTP error code.
+#: core/utils/import-export/wp-import.php:1111
+msgid "Remote server returned the following unexpected result: %1$s (%2$s)"
+msgstr "A távoli szerver a következő váratlan eredményt adta vissza: %1$s (%2$s)"
+
+#. translators: 1: WordPress error message, 2: WordPress error code.
+#: core/utils/import-export/wp-import.php:1102
+msgid "Request failed due to an error: %1$s (%2$s)"
+msgstr "A kérés hiba miatt nem sikerült: %1$s (%2$s)"
+
+#: core/utils/import-export/wp-import.php:1086
+msgid "Could not create temporary file."
+msgstr "Nem sikerült létrehozni az ideiglenes fájlt."
+
+#: core/utils/import-export/wp-import.php:1045
+msgid "Invalid file type"
+msgstr "Érvénytelen fájltípus"
+
+#: core/utils/import-export/wp-import.php:1028
+msgid "Fetching attachments is not enabled"
+msgstr "Melléklet letöltése nem engedélyezett."
+
+#. translators: 1: Term taxonomy, 2: Term name.
+#. translators: 1: Post type singular label, 2: Post title.
+#. translators: 1: Taxonomy name, 2: Term name.
+#: core/utils/import-export/wp-import.php:566
+#: core/utils/import-export/wp-import.php:753
+#: core/utils/import-export/wp-import.php:800
+msgid "Failed to import %1$s %2$s"
+msgstr "Nem sikerült importálni %1$s %2$s"
+
+#. translators: %s: Tag name.
+#: core/utils/import-export/wp-import.php:495
+msgid "Failed to import post tag %s"
+msgstr "%s bejegyzés címke importálása sikertelen"
+
+#. translators: %s: Category name.
+#: core/utils/import-export/wp-import.php:434
+msgid "Failed to import category %s"
+msgstr "%s kategória importálása sikertelen"
+
+#. translators: %s: Author display name.
+#: core/utils/import-export/wp-import.php:367
+msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
+msgstr "%s új felhasználó létrehozása sikertelen. Bejegyzései a jelenlegi felhasználóhoz lesznek hozzárendelve."
+
+#. translators: %s: Post author.
+#: core/utils/import-export/wp-import.php:305
+msgid "Failed to import author %s. Their posts will be attributed to the current user."
+msgstr "Szerző importálása nem sikerült %s. A bejegyzéseit átruháztuk a jelenlegi felhasználónak."
+
+#: core/utils/import-export/wp-import.php:238
+msgid "The file does not exist, please try again."
+msgstr "A fájl nem létezik, próbálkozz újra. "
+
+#: core/utils/import-export/parsers/wxr-parser-simple-xml.php:56
+#: core/utils/import-export/parsers/wxr-parser-simple-xml.php:64
+msgid "There was an error when reading this WXR file"
+msgstr "Egy hiba történt a WXR fájl olvasása közben"
+
+#: core/kits/documents/tabs/settings-layout.php:177
+msgid "Mobile and Tablet options cannot be deleted."
+msgstr "A Mobil és Táblagép beállításokat nem lehet törölni. "
+
+#: core/kits/documents/tabs/settings-layout.php:175
+msgid "Active Breakpoints"
+msgstr "Aktív töréspontok"
+
+#: modules/shapes/widgets/text-path.php:476
+msgid "Path"
+msgstr "Útvonal"
+
+#: modules/shapes/widgets/text-path.php:367
+msgid "Starting Point"
+msgstr "Kezdőpont"
+
+#: modules/shapes/widgets/text-path.php:336
+msgid "Word Spacing"
+msgstr "Szó távolság"
+
+#: modules/shapes/widgets/text-path.php:200
+msgid "Show Path"
+msgstr "Útvonal megjelenítése"
+
+#: modules/shapes/widgets/text-path.php:188
+msgid "LTR"
+msgstr "LTR"
+
+#: modules/shapes/widgets/text-path.php:187
+msgid "RTL"
+msgstr "RTL"
+
+#: modules/shapes/widgets/text-path.php:182
+msgid "Text Direction"
+msgstr "Szöveg irány"
+
+#: modules/shapes/widgets/text-path.php:118
+msgid "SVG"
+msgstr "SVG"
+
+#: modules/shapes/widgets/text-path.php:108
+msgid "Path Type"
+msgstr "Útvonal típusa"
+
+#: modules/shapes/widgets/text-path.php:49
+#: modules/shapes/widgets/text-path.php:85
+#: modules/shapes/widgets/text-path.php:226
+msgid "Text Path"
+msgstr "Szöveg útvonala"
+
+#: modules/shapes/module.php:25
+msgid "Spiral"
+msgstr "Spirál"
+
+#: modules/shapes/module.php:24
+msgid "Oval"
+msgstr "Ovális"
+
+#: modules/shapes/module.php:20
+msgid "Wave"
+msgstr "Hullám"
+
+#: includes/controls/groups/background.php:625
+msgid "Only works for YouTube videos."
+msgstr "Csak a YouTube videóknál működik."
+
+#: includes/controls/groups/background.php:623
+msgid "Privacy mode"
+msgstr "Adatvédelmi mód"
+
+#: core/admin/notices/elementor-dev-notice.php:83
+msgid "Install & Activate"
+msgstr "Telepítés és aktiválás"
+
+#: core/admin/notices/elementor-dev-notice.php:77
+msgid "Elementor Developer Edition"
+msgstr "Elementor fejlesztői kiadás"
+
+#: core/admin/admin.php:488
+msgid "Find an Expert"
+msgstr "Keressen egy szakértőt"
+
+#: core/experiments/manager.php:478
+msgid "Inactive by default"
+msgstr "Alapértelmezés szerint inaktív"
+
+#: core/experiments/manager.php:478
+msgid "Active by default"
+msgstr "Alapértelmezés szerint aktív "
+
+#: core/experiments/manager.php:451
+msgid "Status: %s"
+msgstr "Állapot: %s"
+
+#: core/experiments/manager.php:322
+msgid "Stable"
+msgstr "Stabil"
+
+#: core/experiments/manager.php:321
+msgid "Release Candidate"
+msgstr "Kiadásra jelölt"
+
+#: core/experiments/manager.php:320
+msgid "Beta"
+msgstr "Béta"
+
+#: core/experiments/manager.php:319
+msgid "Alpha"
+msgstr "Alfa"
+
+#: core/experiments/manager.php:318
+msgid "Development"
+msgstr "Fejlesztés"
+
+#: core/experiments/manager.php:260
+msgid "An array of accessibility enhancements in Elementor pages."
+msgstr "Az Elementor oldalak kisegítő lehetőségeinek tömbje."
+
+#: core/experiments/manager.php:259
+msgid "Accessibility Improvements"
+msgstr "Hozzáférhetőségi fejlesztések"
+
+#: modules/landing-pages/module.php:265
+msgid "No landing pages found in trash"
+msgstr "Nincs Landing oldal a lomtárban"
+
+#: modules/landing-pages/module.php:264
+msgid "No landing pages found"
+msgstr "Nem található Landing oldal"
+
+#: modules/landing-pages/module.php:263
+msgid "Search Landing Pages"
+msgstr "Landing oldal keresés"
+
+#: modules/landing-pages/module.php:262
+msgid "View Landing Page"
+msgstr "Landing oldal megtekintése"
+
+#: modules/landing-pages/module.php:261
+msgid "All Landing Pages"
+msgstr "Összes Landing oldal"
+
+#: modules/landing-pages/module.php:260
+msgid "New Landing Page"
+msgstr "Új Landing oldal"
+
+#: modules/landing-pages/module.php:259
+msgid "Edit Landing Page"
+msgstr "Landing oldal szerkesztése"
+
+#: modules/landing-pages/module.php:258
+msgid "Add New Landing Page"
+msgstr "Új Landing oldal hozzáadás"
+
+#: modules/landing-pages/documents/landing-page.php:50
+#: modules/landing-pages/module.php:44 modules/landing-pages/module.php:143
+#: modules/landing-pages/module.php:255 modules/landing-pages/module.php:267
+#: assets/js/app-packages.js:9386 assets/js/app.js:8698
+#: assets/js/editor.js:35626
+msgid "Landing Pages"
+msgstr "Landing oldalak"
+
+#: modules/landing-pages/documents/landing-page.php:42
+#: modules/landing-pages/module.php:190 modules/landing-pages/module.php:256
+msgid "Landing Page"
+msgstr "Landing oldal"
+
+#: modules/compatibility-tag/compatibility-tag-report.php:103
+#: modules/compatibility-tag/views/plugin-update-message-compatibility.php:57
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#. translators: %s: Elementor plugin name.
+#: modules/compatibility-tag/views/plugin-update-message-compatibility.php:45
+msgid "Tested up to %s version"
+msgstr "%s verzióig tesztelve"
+
+#: modules/compatibility-tag/views/plugin-update-message-compatibility.php:42
+msgid "Plugin"
+msgstr "Plugin"
+
+#: modules/compatibility-tag/views/plugin-update-message-compatibility.php:28
+msgid "Compatibility Alert"
+msgstr "Kompatibilitási figyelmeztetés "
+
+#: includes/elements/section.php:298
+msgid "Custom Columns Gap"
+msgstr "Egyedi oszlop rés"
+
+#: core/kits/views/trash-kit-confirmation.php:33
+msgid "Keep my settings"
+msgstr "Tartsa meg a beállításokat"
+
+#: core/kits/views/trash-kit-confirmation.php:17
+msgid "Are you sure you want to delete your Site Settings?"
+msgstr "Biztosan törlöd a Webhelybeállításokat?"
+
+#: modules/page-templates/module.php:159
+msgctxt "Page Template"
+msgid "Theme"
+msgstr "Sablon"
+
+#: core/editor/data/globals/endpoints/base.php:31
+msgid "The Global value you are trying to use is not available."
+msgstr "A használni kívánt globális érték nem érhető el."
+
+#: includes/controls/media.php:197
+msgid "Choose SVG"
+msgstr "SVG kiválasztás"
+
+#: core/upgrade/elementor-3-re-migrate-globals.php:58
+msgid "Warning: This will reset your current Global Fonts and Colors, and will migrate your previous settings from v2.x versions."
+msgstr "Figyelem! Ez visszaállítja a jelenlegi globális betűkészleteket és színeket, és áttelepíti a korábbi beállításokat a 2.x verziókból."
+
+#: core/upgrade/elementor-3-re-migrate-globals.php:50
+msgid "Rerun Update Script"
+msgstr "Frissítési script újrafuttatása"
+
+#: core/upgrade/elementor-3-re-migrate-globals.php:56 assets/js/admin.js:5370
+msgid "Migrate to v3.0"
+msgstr "Áttérés a 3.0 verzióra"
+
+#: core/kits/documents/tabs/global-colors.php:24
+#: core/kits/documents/tabs/global-colors.php:43 assets/js/app-packages.js:9394
+#: assets/js/app.js:8706 assets/js/editor.js:31653
+msgid "Global Colors"
+msgstr "Globális színek"
+
+#: core/kits/documents/tabs/settings-layout.php:297
+msgid "Breakpoint"
+msgstr "Töréspont"
+
+#: modules/compatibility-tag/compatibility-tag-report.php:153
+msgid "Error"
+msgstr "Hiba"
+
+#: includes/widgets/social-icons.php:448
+msgid "Rows Gap"
+msgstr "Sorok közti rés"
+
+#: includes/widgets/icon-list.php:192
+msgid "Apply Link On"
+msgstr "Hivatkozás alkalmazása erre"
+
+#: includes/widgets/icon-list.php:159
+msgid "Items"
+msgstr "Tételek"
+
+#: includes/widgets/common.php:562 includes/widgets/image.php:363
+msgid "Fill"
+msgstr "Kitöltés"
+
+#: includes/widgets/image.php:356
+msgid "Object Fit"
+msgstr "Objektum illeszkedése"
+
+#: includes/frontend.php:1263
+msgid "Download"
+msgstr "Letöltés"
+
+#: core/experiments/manager.php:219
+msgid "Optimized DOM Output"
+msgstr "Optimalizált DOM kimenet"
+
+#: includes/settings/settings.php:486
+msgid "Looking for the Style settings?"
+msgstr "A Stílus beállításokat keresed?"
+
+#: core/admin/admin-notices.php:216 includes/settings/settings-page.php:374
+msgid "Become a super contributor by opting in to share non-sensitive plugin data and to receive periodic email updates from us."
+msgstr "Legyen szuperközreműködő azáltal, hogy megosztja a nem érzékeny bővítményadatokat, és időnként e-mailes frissítéseket kap tőlünk."
+
+#: core/upgrade/upgrades.php:822
+msgid "Saved Color"
+msgstr "Mentett szín"
+
+#: core/document-types/page-base.php:89
+msgid "Not working? You can set a different selector for the title in Site Settings > Layout"
+msgstr "Nem működik? A címhez beállíthat egy másik választót a webhelybeállítások > elrendezés menüpontban"
+
+#: core/settings/editor-preferences/model.php:73
+msgid "Panel Width"
+msgstr "Panel szélessége"
+
+#: core/admin/admin.php:642
+msgid "Heads up, Please backup before upgrade!"
+msgstr "Figyelem, készítsen biztonsági másolatot a frissítés előtt!"
+
+#: core/settings/editor-preferences/model.php:38 assets/js/editor.js:20709
+msgid "User Preferences"
+msgstr "Felhasználói beállítások"
+
+#: core/kits/manager.php:366 assets/js/app-packages.js:9392
+#: assets/js/app.js:8704 assets/js/editor.js:31600 assets/js/editor.js:31604
+#: assets/js/editor.js:31614
+msgid "Site Settings"
+msgstr "Webhelybeállítások"
+
+#: core/kits/documents/tabs/global-typography.php:175
+msgid "Fallback Font Family"
+msgstr "Tartalék betűtípus-család"
+
+#: core/kits/documents/tabs/settings-background.php:67
+msgid "The `theme-color` meta tag will only be available in supported browsers and devices."
+msgstr "A „theme-color” metacímke csak támogatott böngészőkben és eszközökben lesz elérhető."
+
+#: core/kits/documents/tabs/settings-background.php:65
+msgid "Mobile Browser Background"
+msgstr "Mobil böngésző háttér"
+
+#: core/kits/documents/tabs/settings-site-identity.php:109
+msgid "Suggested favicon dimensions: 512 × 512 pixels."
+msgstr "Javasolt favicon-méret: 512×512 képpont."
+
+#: core/kits/documents/tabs/settings-site-identity.php:102
+msgid "Site Favicon"
+msgstr "Oldal favicon"
+
+#: core/kits/documents/tabs/settings-site-identity.php:94
+msgid "Suggested image dimensions: 350 × 100 pixels."
+msgstr "Javasolt képméret: 350×100 képpont."
+
+#: core/kits/documents/tabs/settings-site-identity.php:87
+msgid "Site Logo"
+msgstr "Oldal logó"
+
+#: core/kits/documents/tabs/settings-site-identity.php:78
+msgid "Choose description"
+msgstr "Leírás kiválasztása"
+
+#: core/kits/documents/tabs/settings-site-identity.php:76
+msgid "Site Description"
+msgstr "Honlap leírása"
+
+#: core/kits/documents/tabs/settings-site-identity.php:67
+msgid "Choose name"
+msgstr "Válassz nevet"
+
+#: core/kits/documents/tabs/settings-site-identity.php:65
+msgid "Site Name"
+msgstr "Honlap neve"
+
+#: core/kits/documents/tabs/settings-site-identity.php:20
+msgid "Site Identity"
+msgstr "Honlap azonosítás"
+
+#: core/kits/documents/tabs/settings-layout.php:154
+msgid "Breakpoints"
+msgstr "Töréspontok"
+
+#: core/kits/documents/tabs/settings-layout.php:143
+msgid "Theme"
+msgstr "Téma"
+
+#: core/kits/documents/tabs/settings-layout.php:140
+msgid "Default Page Layout"
+msgstr "Alapértelmezett oldalelrendezés"
+
+#: core/kits/documents/tabs/settings-layout.php:47
+#: assets/js/app-packages.js:9394 assets/js/app.js:8706
+msgid "Layout Settings"
+msgstr "Elrendezés beállításai"
+
+#: core/kits/documents/tabs/settings-site-identity.php:57
+#: modules/page-templates/module.php:360
+msgid "Changes will be reflected in the preview only after the page reloads."
+msgstr "A változások az előnézetben csak az oldal újratöltése után látszanak."
+
+#: core/common/modules/connect/apps/base-app.php:103
+msgid "Reset Data"
+msgstr "Adatok visszaállítása"
+
+#: includes/controls/media.php:254
+msgid "Click the media icon to upload file"
+msgstr "A fájl feltöltéséhez kattints a média ikonra"
+
+#: includes/settings/settings.php:278
+msgid "Watch the Full Guide"
+msgstr "Nézd meg a teljes útmutatót"
+
+#: includes/settings/settings.php:266
+msgid "Get introduced to Elementor by watching our \"Getting Started\" video series. It will guide you through the steps needed to create your website. Then click to create your first page."
+msgstr "Ismerkedj meg az Elementorral az „Első lépések” videó sorozatunk megtekintésével. Ez a videó végigvezeti a weboldalad létrehozásához szükséges lépéseken. A videó megtekintése után kattints az első oldal létrehozása gombra."
+
+#: includes/settings/settings.php:560 assets/js/editor.js:22550
+msgid "Enable Unfiltered File Uploads"
+msgstr "Szűretlen fájl feltöltésének engedélyezése"
+
+#: modules/safe-mode/module.php:400
+msgid "If you are experiencing a loading issue, contact your site administrator to troubleshoot the problem using Safe Mode."
+msgstr "Ha betöltési hibát tapasztalsz, vedd fel a kapcsolatot az oldal adminisztrátorával, hogy megoldja a problémát a Biztonságos üzemmód használatával."
+
+#: includes/frontend.php:1264
+msgid "Download image"
+msgstr "Kép letöltése"
+
+#: includes/frontend.php:1262
+msgid "Pin it"
+msgstr "Tűzd ki"
+
+#: includes/frontend.php:1261
+msgid "Share on Twitter"
+msgstr "Oszd meg Twitteren"
+
+#: includes/frontend.php:1260
+msgid "Share on Facebook"
+msgstr "Oszd meg Facebookon"
+
+#: includes/controls/url.php:113
+msgid "Custom Attributes"
+msgstr "Egyéni attribútumok"
+
+#: includes/controls/url.php:75
+msgid "Set custom attributes for the link element. Separate attribute keys from values using the | (pipe) character. Separate key-value pairs with a comma."
+msgstr "Állíts be egyéni attribútumokat a hivatkozásokhoz. Az attribútum kulcs és az értéke elválasztásához használd a | (függőleges vonal) karaktert. A kulcs-értékpárokat vesszővel válaszd el."
+
+#: includes/editor-templates/panel.php:286
+msgid "See it in action"
+msgstr "Nézd meg működés közben"
+
+#: includes/editor-templates/panel.php:284
+msgid "Get more dynamic capabilities by incorporating dozens of Elementor's native dynamic tags."
+msgstr "Juss hozzá még több dinamikus lehetőséghez, tucatnyi dinamikus Elementor címke beépítésével."
+
+#: includes/editor-templates/panel.php:283
+msgid "You’re missing out!"
+msgstr "Valamit kihagytál!"
+
+#: includes/editor-templates/panel.php:280
+msgid "Elementor Dynamic Content"
+msgstr "Elementor dinamikus tartalom"
+
+#: includes/editor-templates/panel.php:255
+msgid "Dynamic Tags"
+msgstr "Dinamikus címkék"
+
+#: includes/managers/icons.php:502
+msgid "We highly recommend backing up your database before performing this upgrade."
+msgstr "Erősen javasoljuk, hogy készítsd biztonsági mentést az adatbázisodról, mielőtt frissítesz."
+
+#: includes/managers/icons.php:501
+msgid "The upgrade process includes a database update"
+msgstr "A frissítési folyamat tartalmazza az adatbázis frissítését"
+
+#: includes/managers/controls.php:1013
+msgid "Attributes lets you add custom HTML attributes to any element."
+msgstr "Az attribútumok lehetővé teszik, hogy egyéni HTML attribútumokat adj hozzá bármely elemhez."
+
+#: includes/managers/controls.php:1011
+msgid "Meet Our Attributes"
+msgstr "Ismerkedj meg az attribútumokkal"
+
+#: includes/managers/controls.php:1001
+msgid "Attributes"
+msgstr "Attribútumok"
+
+#: core/base/db-upgrades-manager.php:114
+msgid "Click here to run it now"
+msgstr "Kattints ide a futtatáshoz"
+
+#: core/kits/documents/tabs/settings-lightbox.php:186
+msgid "Navigation Icons Size"
+msgstr "Navigációs ikon mérete"
+
+#: core/kits/documents/tabs/settings-lightbox.php:174
+msgid "Toolbar Icons Size"
+msgstr "Eszköztár ikon mérete"
+
+#: core/kits/documents/tabs/settings-lightbox.php:102
+#: core/kits/documents/tabs/settings-lightbox.php:119
+msgid "Alt"
+msgstr "Alt"
+
+#: core/kits/documents/tabs/settings-lightbox.php:86 includes/frontend.php:1267
+msgid "Share"
+msgstr "Megosztás"
+
+#: core/kits/documents/tabs/settings-lightbox.php:66 includes/frontend.php:1265
+msgid "Fullscreen"
+msgstr "Teljes képernyő"
+
+#: core/admin/admin-notices.php:322
+msgid "With Elementor Pro’s WooCommerce Builder, you’ll be able to design your store without coding!"
+msgstr "Az Elementor Pro WooCommerce Builder segítségével kódolás nélkül tervezheted meg az üzleted!"
+
+#: core/kits/manager.php:124 core/kits/manager.php:142
+msgid "Default Kit"
+msgstr "Alapértelmezett készlet"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:130
+msgid "Focus"
+msgstr "Fókusz"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:100
+msgid "Field"
+msgstr "Mező"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:71
+msgid "Label"
+msgstr "Címke"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:21
+#: core/kits/documents/tabs/theme-style-form-fields.php:60
+msgid "Form Fields"
+msgstr "Űrlap mezők"
+
+#: core/kits/documents/tabs/theme-style-typography.php:77
+msgid "Paragraph Spacing"
+msgstr "Bekezdések közötti távolság"
+
+#: core/kits/documents/tabs/theme-style-typography.php:49
+msgid "Body"
+msgstr "Body"
+
+#: core/kits/documents/tabs/theme-style-buttons.php:23
+#: core/kits/documents/tabs/theme-style-buttons.php:63
+msgid "Buttons"
+msgstr "Gombok"
+
+#: core/kits/documents/kit.php:168
+msgid "Draft"
+msgstr "Piszkozat"
+
+#: core/kits/documents/kit.php:44
+msgid "Kit"
+msgstr "Készlet"
+
+#: core/common/modules/connect/apps/base-app.php:155
+msgid "Already connected."
+msgstr "Már csatlakoztál."
+
+#: includes/widgets/image-carousel.php:289
+msgid "Pause on Interaction"
+msgstr "Szünet interakciónál"
+
+#: includes/widgets/common.php:733
+msgid "Positioning"
+msgstr "Pozícionálás"
+
+#. translators: %s: Video provider
+#: includes/embed.php:175
+msgid "%s Video Player"
+msgstr "%s videó lejátszó"
+
+#: includes/controls/groups/background.php:729
+msgid "Background Position"
+msgstr "Háttér pozíciója"
+
+#: includes/controls/groups/background.php:718 includes/widgets/image.php:365
+msgid "Contain"
+msgstr "Tartalmaz"
+
+#: includes/controls/groups/background.php:717 includes/widgets/image.php:364
+msgid "Cover"
+msgstr "Borító"
+
+#: includes/controls/groups/background.php:716
+#: includes/widgets/social-icons.php:276
+msgid "Auto"
+msgstr "Auto"
+
+#: includes/controls/groups/background.php:710
+msgid "Background Size"
+msgstr "Háttér mérete"
+
+#: includes/settings/settings-page.php:369
+msgid "Usage Data Sharing"
+msgstr "Adatmegosztás használata"
+
+#: core/common/modules/connect/apps/library.php:27
+#: core/common/modules/connect/apps/library.php:54
+msgid "Connecting to the Library failed. Please try reloading the page and try again"
+msgstr "A könyvtárhoz való csatlakozás nem sikerült. Kérlek frissíts rá az oldalra és próbáld meg újra"
+
+#. translators: %s: Remote user.
+#: core/common/modules/connect/apps/base-app.php:80
+msgid "Connected as %s"
+msgstr "Csatlakozva, mint %s"
+
+#: core/settings/editor-preferences/model.php:99
+msgid "Enable Lightbox In Editor"
+msgstr "Lightbox szerkesztő engedélyezése"
+
+#: core/settings/editor-preferences/model.php:65
+msgid "Dark"
+msgstr "Esti"
+
+#: core/settings/editor-preferences/model.php:64
+msgid "Light"
+msgstr "Nappali"
+
+#: core/settings/editor-preferences/model.php:63
+msgid "Auto Detect"
+msgstr "Automatikus felismerés"
+
+#: core/settings/editor-preferences/model.php:60
+msgid "Set light or dark mode, or use Auto Detect to sync it with your OS setting."
+msgstr "Állítsd be a nappali vagy az esti módot, vagy használj Automatikus Felismerést, hogy szinkronizálódjon az operációs rendszered beállításaival."
+
+#: core/settings/editor-preferences/model.php:58
+msgid "UI Theme"
+msgstr "Kezelőfelület témája"
+
+#: core/settings/editor-preferences/model.php:51
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: includes/settings/settings.php:324
+msgid "Don't rely solely on the FontAwesome icons everyone else is using! Differentiate your website and your style with custom icons you can upload from your favorite icons source."
+msgstr "Ne hagyatkozz kizárólag a FontAwesome ikonokra, amelyeket mindenki más is használ! Különböztesd meg a weboldalad és a saját stílusodat, egyéni ikonokkal, amiket feltölthetsz kedvenc ikon forrásodból."
+
+#: includes/settings/settings.php:323
+msgid "Add Your Custom Icons"
+msgstr "Add hozzá egyéni ikonjaidat"
+
+#: includes/settings/settings.php:155 includes/settings/settings.php:156
+msgid "Custom Icons"
+msgstr "Egyéni ikonok"
+
+#: includes/controls/groups/background.php:682
+msgid "Transition"
+msgstr "Átmenet"
+
+#: includes/controls/groups/background.php:672
+msgid "Duration"
+msgstr "Időtartam"
+
+#: includes/controls/groups/background.php:650
+msgctxt "Background Control"
+msgid "Images"
+msgstr "Képek"
+
+#: includes/controls/groups/background.php:107
+msgctxt "Background Control"
+msgid "Slideshow"
+msgstr "Diavetítés"
+
+#: includes/controls/groups/background.php:103
+msgctxt "Background Control"
+msgid "Video"
+msgstr "Videó"
+
+#: core/logger/log-reporter.php:33
+msgid "Clear Log"
+msgstr "Napló törlése"
+
+#: includes/frontend.php:1270 includes/widgets/image-carousel.php:794
+#: assets/js/app-packages.js:7966 assets/js/app-packages.js:8670
+#: assets/js/app.js:7278 assets/js/app.js:7982
+msgid "Next"
+msgstr "Következő"
+
+#: includes/frontend.php:1269 includes/widgets/image-carousel.php:790
+#: assets/js/app-packages.js:8038 assets/js/app-packages.js:8664
+#: assets/js/app.js:7350 assets/js/app.js:7976
+msgid "Previous"
+msgstr "Előző"
+
+#: includes/widgets/divider.php:645
+msgid "Amount"
+msgstr "Mennyiség"
+
+#: includes/widgets/divider.php:474
+msgid "Add Element"
+msgstr "Elem hozzáadása"
+
+#: includes/widgets/divider.php:318 modules/shapes/module.php:23
+msgid "Line"
+msgstr "Vonal"
+
+#: includes/widgets/divider.php:288
+msgctxt "shapes"
+msgid "X"
+msgstr "X"
+
+#: includes/widgets/divider.php:279
+msgctxt "shapes"
+msgid "Tribal"
+msgstr "Törzsi"
+
+#: includes/widgets/divider.php:270
+msgctxt "shapes"
+msgid "Trees"
+msgstr "Fák"
+
+#: includes/widgets/divider.php:261
+msgctxt "shapes"
+msgid "Squares"
+msgstr "Négyzetek"
+
+#: includes/widgets/divider.php:252
+msgctxt "shapes"
+msgid "Stripes"
+msgstr "Csíkok"
+
+#: includes/widgets/divider.php:243
+msgctxt "shapes"
+msgid "Leaves"
+msgstr "Levelek"
+
+#: includes/widgets/divider.php:234
+msgctxt "shapes"
+msgid "Half Rounds"
+msgstr "Félkörök"
+
+#: includes/widgets/divider.php:225
+msgctxt "shapes"
+msgid "Fir Tree"
+msgstr "Fenyőfa"
+
+#: includes/widgets/divider.php:216
+msgctxt "shapes"
+msgid "Dots"
+msgstr "Pontok"
+
+#: includes/widgets/divider.php:207
+msgctxt "shapes"
+msgid "Rectangles"
+msgstr "Téglalapok"
+
+#: includes/widgets/divider.php:199
+msgctxt "shapes"
+msgid "Parallelogram"
+msgstr "Paralelogramma"
+
+#: includes/widgets/divider.php:191
+msgctxt "shapes"
+msgid "Rhombus"
+msgstr "Rombusz"
+
+#: includes/widgets/divider.php:183
+msgctxt "shapes"
+msgid "Pluses"
+msgstr "Plusszok"
+
+#: includes/widgets/divider.php:175
+msgctxt "shapes"
+msgid "Arrows"
+msgstr "Nyilak"
+
+#: includes/widgets/divider.php:167 includes/widgets/divider.php:297
+msgctxt "shapes"
+msgid "Zigzag"
+msgstr "Cikcakk"
+
+#: includes/widgets/divider.php:159
+msgctxt "shapes"
+msgid "Wavy"
+msgstr "Hullámos"
+
+#: includes/widgets/divider.php:151
+msgctxt "shapes"
+msgid "Squared"
+msgstr "Négyzetes"
+
+#: includes/widgets/divider.php:142
+msgctxt "shapes"
+msgid "Slashes"
+msgstr "Perjelek"
+
+#: includes/widgets/divider.php:134
+msgctxt "shapes"
+msgid "Multiple"
+msgstr "Többszörös"
+
+#: includes/widgets/divider.php:126
+msgctxt "shapes"
+msgid "Curved"
+msgstr "Ívelt"
+
+#: includes/widgets/divider.php:118
+msgctxt "shapes"
+msgid "Curly"
+msgstr "Göndör"
+
+#: includes/widgets/image-gallery.php:44
+msgid "Basic Gallery"
+msgstr "Alap galéria"
+
+#: includes/controls/groups/background.php:770
+msgid "Out"
+msgstr "Ki"
+
+#: includes/controls/groups/background.php:769
+msgid "In"
+msgstr "Be"
+
+#: includes/controls/groups/background.php:754
+msgid "Ken Burns Effect"
+msgstr "Ken Burns hatás"
+
+#: includes/controls/groups/background.php:635
+msgid "This cover image will replace the background video in case that the video could not be loaded."
+msgstr "Ez a borítókép lecseréli a háttér videót arra az esetre, ha a videó nem töltene be."
+
+#: includes/controls/groups/background.php:609 includes/widgets/video.php:299
+msgid "Play On Mobile"
+msgstr "Lejátszás mobilon"
+
+#: includes/controls/groups/background.php:557
+msgid "YouTube/Vimeo link, or link to video file (mp4 is recommended)."
+msgstr "YouTube/Vimeo hivatkozás vagy hivatkozás a videó fájlodhoz (mp4 formátum ajánlott)."
+
+#: includes/settings/tools.php:337 includes/settings/tools.php:339
+msgid "Reinstall"
+msgstr "Újratelepítés"
+
+#: includes/settings/tools.php:139
+msgid "Error occurred, The version selected is invalid. Try selecting different version."
+msgstr "Hiba történt. A kiválasztott verzió érvénytelen. Válassz másik verziót."
+
+#: core/document-types/post.php:27
+msgid "Post"
+msgstr "Közzététel"
+
+#. translators: %s: Path to .htaccess file.
+#: core/debug/classes/htaccess.php:30
+msgid "File Path: %s"
+msgstr "Fájl elérési útvonala: %s"
+
+#: core/kits/views/panel.php:12 includes/editor-templates/panel.php:27
+#: includes/editor-templates/panel.php:159
+msgid "Need Help"
+msgstr "Segítségre van szükséged?"
+
+#: includes/controls/groups/background.php:599
+msgid "Play Once"
+msgstr "Lejátszás egyszer"
+
+#: includes/controls/icons.php:89 includes/controls/icons.php:114
+#: includes/controls/icons.php:116
+msgid "Upload SVG"
+msgstr "SVG feltöltése"
+
+#: includes/controls/media.php:194
+msgid "Choose Video"
+msgstr "Válassz videót"
+
+#: includes/admin-templates/beta-tester.php:42
+msgid "By clicking Sign Up, you agree to Elementor's <a href=\"%1$s\">Terms of Service</a> and <a href=\"%2$s\">Privacy Policy</a>"
+msgstr "A Feliratkozásra kattintva elfogadod az Elementor <a href=\"%1$s\">felhasználási feltételeit</a> és az <a href=\"%2$s\">adatvédelmi nyilatkozatát</a>"
+
+#: includes/admin-templates/beta-tester.php:32
+msgid "Your Email"
+msgstr "Email címed"
+
+#: includes/admin-templates/beta-tester.php:30
+msgid "As a beta tester, you’ll receive an update that includes a testing version of Elementor and its content directly to your Email"
+msgstr "Béta tesztelőként kapsz egy frissítést Elementor teszt verziójáról, amit közvetlenül az e-mail címedre küldünk"
+
+#: includes/admin-templates/beta-tester.php:29
+msgid "Get Beta Updates"
+msgstr "Beta frissítések beszerzése"
+
+#: includes/settings/settings.php:568
+msgid "We recommend you only enable this feature if you understand the security risks involved."
+msgstr "Javasoljuk, hogy csak akkor engedélyezd ezt a funkciót, ha megértetted a kapcsolódó biztonsági kockázatokat."
+
+#: includes/settings/settings.php:568
+msgid "Elementor will try to sanitize the unfiltered files, removing potential malicious code and scripts."
+msgstr "Az Elementor megpróbálja megtisztítani az szűretlen fájlokat, eltávolítva a lehetséges rosszindulatú kódot és a szkripteket."
+
+#: includes/settings/settings.php:568
+msgid "Please note! Allowing uploads of any files (SVG & JSON included) is a potential security risk."
+msgstr "Kérjük, vedd figyelembe! Bármely fájl feltöltésének engedélyezése (beleértve az SVG-t és a JSON-t is) potenciális biztonsági kockázatot jelent."
+
+#: includes/template-library/sources/local.php:549
+msgid "Template not exist."
+msgstr "A sablon nem létezik."
+
+#: includes/elements/column.php:876 includes/elements/section.php:1351
+#: includes/widgets/common.php:1067
+msgid "Responsive visibility will take effect only on preview or live page, and not while editing in Elementor."
+msgstr "A reszponzív láthatóság csak az előnézeti oldalon vagy az élő oldalon lesz érvényben, és nem az Elementor szerkesztése közben."
+
+#: includes/base/widget-base.php:981
+msgid "Deprecated"
+msgstr "Elavult"
+
+#: includes/managers/icons.php:531
+msgid "Hurray! The upgrade process to Font Awesome 5 was completed successfully."
+msgstr "Hurrá! Sikeresen befejeződött a Font Awesome 5 verzióra való frissítés."
+
+#: includes/managers/icons.php:515
+msgid "Upgrade To Font Awesome 5"
+msgstr "Frissítés Font Awesome 5-re"
+
+#: includes/managers/icons.php:504
+msgid "This action is not reversible and cannot be undone by rolling back to previous versions."
+msgstr "Ez a művelet nem visszafordítható és nem állítható vissza az előző verzió visszaállításával."
+
+#: includes/managers/icons.php:499
+msgid "Please note that the upgrade process may cause some of the previously used Font Awesome 4 icons to look a bit different due to minor design changes made by Font Awesome."
+msgstr "Kérlek vedd figyelembe, hogy a frissítési folyamat hatására, néhány korábban használt Font Awesome 4 ikon egy kicsit máshogy néz majd ki, a Font Awesome-nál történt apróbb dizájn változtatások miatt."
+
+#: includes/managers/icons.php:497
+msgid "By upgrading, whenever you edit a page containing a Font Awesome 4 icon, Elementor will convert it to the new Font Awesome 5 icon."
+msgstr "A frissítés hatására, amikor egy oldalt szerkesztesz, ami Font Awesome 4 ikont tartalmaz, az Elementor átalakítja azt az új Font Awesome 5-ös ikonra."
+
+#: includes/managers/icons.php:496
+msgid "Access 1,500+ amazing Font Awesome 5 icons and enjoy faster performance and design flexibility."
+msgstr "Férj hozzá több mint 1500 lenyűgöző Font Awesome 5 ikonhoz és élvezd a gyorsabb teljesítményt és a rugalmas tervezés előnyeit."
+
+#: includes/managers/icons.php:490 includes/managers/icons.php:494
+#: includes/managers/icons.php:509
+msgid "Font Awesome Upgrade"
+msgstr "Font Awesome frissítés"
+
+#: includes/managers/icons.php:483
+msgid "Font Awesome 4 support script (shim.js) is a script that makes sure all previously selected Font Awesome 4 icons are displayed correctly while using Font Awesome 5 library."
+msgstr "A Font Awesome 4-et támogató script (shim.js), egy olyan script, ami lehetővé teszi, hogy a korábban kiválasztott Font Awesome 4 ikonok is helyesen jelenjenek meg, miközben a Font Awesome 5 könyvtárat használod."
+
+#: includes/managers/icons.php:475
+msgid "Load Font Awesome 4 Support"
+msgstr "Font Awesome 4 támogatás betöltése"
+
+#: includes/managers/icons.php:212
+msgid "All Icons"
+msgstr "Minden ikon"
+
+#: includes/managers/icons.php:122
+msgid "Font Awesome - Brands"
+msgstr "Font Awesome - Márkák"
+
+#: includes/managers/icons.php:110
+msgid "Font Awesome - Solid"
+msgstr "Font Awesome - Egyszerű"
+
+#: includes/managers/icons.php:98
+msgid "Font Awesome - Regular"
+msgstr "Font Awesome - Normál"
+
+#: core/debug/classes/htaccess.php:11
+msgid "Your site's .htaccess file appears to be missing."
+msgstr "Úgy tűnik, az oldalad .htaccess fájlja hiányzik."
+
+#: core/debug/classes/theme-missing.php:22
+msgid "Some of your theme files are missing."
+msgstr "A témád néhány fájlja hiányzik."
+
+#. translators: %s: File type.
+#: core/files/assets/svg/svg-handler.php:713
+msgid "Invalid %1$s Format, file not uploaded for security reasons"
+msgstr "%1$s: érvénytelen formátum, a fájl biztonsági okokból nem lett feltöltve"
+
+#. translators: %s: File type.
+#: core/files/assets/files-upload-handler.php:86
+msgid "%1$s file is not allowed for security reasons"
+msgstr "A(z) %1$s fájl biztonsági okokból nem engedélyezett"
+
+#. translators: 1: File extension, 2: File type.
+#: core/files/assets/files-upload-handler.php:80
+msgid "The uploaded %1$s file is not supported. Please upload a valid %2$s file"
+msgstr "A feltöltött %1$s fájl nem támogatott. Kérlek érvényes %2$s fájlt tölts fel"
+
+#: includes/admin-templates/beta-tester.php:37 assets/js/beta-tester.js:424
+msgid "Sign Up"
+msgstr "Regisztráció"
+
+#: includes/controls/media.php:266 assets/js/editor.js:4015
+msgid "Upload"
+msgstr "Feltöltés"
+
+#: includes/controls/icons.php:88 includes/controls/icons.php:121
+#: includes/controls/icons.php:125 assets/js/editor.js:4747
+msgid "Icon Library"
+msgstr "Ikontár"
+
+#: core/editor/editor.php:205
+msgid "Document not found."
+msgstr "A dokumentum nem található."
+
+#: includes/widgets/common.php:957
+msgid "Vertical Orientation"
+msgstr "Függőleges tájolás"
+
+#: includes/widgets/common.php:879 includes/widgets/common.php:918
+#: includes/widgets/common.php:981 includes/widgets/common.php:1019
+msgid "Offset"
+msgstr "Eltolás"
+
+#: includes/widgets/common.php:854
+msgid "Horizontal Orientation"
+msgstr "Vízszintes tájolás"
+
+#: includes/widgets/common.php:841
+msgid "Fixed"
+msgstr "Fix"
+
+#: includes/widgets/common.php:840
+msgid "Absolute"
+msgstr "Abszolút"
+
+#: includes/widgets/common.php:822
+msgid "Custom positioning is not considered best practice for responsive web design and should not be used too frequently."
+msgstr "A tetszőleges pozicionálás nem tekinthető a legjobb megoldásnak reszponzív weboldal építésénél, ezért kérjük, ne használd túl gyakran."
+
+#: core/experiments/manager.php:261 includes/widgets/common.php:822
+msgid "Please note!"
+msgstr "Kérjük, vedd figyelembe!"
+
+#: includes/widgets/common.php:763
+msgid "Custom Width"
+msgstr "Tetszőleges szélesség"
+
+#: includes/settings/controls.php:236
+msgid "Super Admin"
+msgstr "Super Admin"
+
+#: includes/settings/settings.php:197
+msgid "Get Help"
+msgstr "Kérj segítséget"
+
+#: includes/elements/section.php:477
+msgid "Hidden"
+msgstr "Rejtett"
+
+#: includes/elements/section.php:472
+msgid "Overflow"
+msgstr "Túlcsordulás"
+
+#: includes/elements/column.php:815 includes/elements/section.php:1258
+#: includes/widgets/common.php:261
+msgid "Motion Effects"
+msgstr "Mozgási hatások"
+
+#: includes/elements/column.php:211
+msgid "Horizontal Align"
+msgstr "Vízszintes igazítás"
+
+#: includes/elements/column.php:193 includes/elements/column.php:221
+#: includes/elements/section.php:454
+msgid "Space Evenly"
+msgstr "Egyenletes tér"
+
+#: includes/elements/column.php:192 includes/elements/column.php:220
+#: includes/elements/section.php:453
+msgid "Space Around"
+msgstr "Tér körülötte"
+
+#: includes/elements/column.php:183 includes/elements/section.php:444
+#: includes/widgets/common.php:793 includes/widgets/image-carousel.php:525
+msgid "Vertical Align"
+msgstr "Függőleges igazítás"
+
+#: modules/safe-mode/module.php:391
+msgid "Having problems loading Elementor? Please enable Safe Mode to troubleshoot."
+msgstr "Probléma akadt az Elementor betöltése közben? Kérlek engedélyezd a Biztonságos üzemmódot a hibakereséshez."
+
+#: modules/safe-mode/module.php:289
+msgid "The issue was probably caused by one of your plugins or theme."
+msgstr "A problémát valószínűleg az egyik bővítmény vagy téma okozza."
+
+#. translators: %s: Accepted chars.
+#: includes/widgets/menu-anchor.php:107
+msgid "Note: The ID link ONLY accepts these chars: %s"
+msgstr "Megjegyzés: Az ID hivatkozás CSAK ezeket a karaktereket tartalmazhatja: %s"
+
+#: includes/controls/media.php:200 includes/widgets/video.php:201
+msgid "Choose File"
+msgstr "Fájl feltöltése"
+
+#: includes/widgets/video.php:190
+msgid "External URL"
+msgstr "Külső URL"
+
+#: includes/widgets/image-gallery.php:159
+msgid "Order By"
+msgstr "Rendezés, mint"
+
+#: includes/widgets/read-more.php:117
+msgid "Read More Text"
+msgstr "Tovább olvasom szövege"
+
+#. translators: %s: The `the_content` function.
+#: includes/widgets/read-more.php:107
+msgid "Note: This widget only affects themes that use `%s` in archive pages."
+msgstr "Megjegyzés: A widget csak azokat a témákat befolyásolja, amelyek a(z) `%s` használ az archívum oldalakon."
+
+#: includes/widgets/read-more.php:88
+msgid "Continue reading"
+msgstr "Tovább olvasom"
+
+#: includes/widgets/read-more.php:41 includes/widgets/read-more.php:84
+msgid "Read More"
+msgstr "Tovább olvasom"
+
+#: includes/widgets/google-maps.php:131
+msgid "Location"
+msgstr "Helyzet"
+
+#. translators: %s: Current post name.
+#: includes/frontend.php:1393
+msgid "Continue reading %s"
+msgstr "Tovább olvasom %s"
+
+#: includes/frontend.php:1386
+msgid "(more&hellip;)"
+msgstr "(more&hellip;)"
+
+#: includes/template-library/sources/local.php:1339
+msgctxt "Template Library"
+msgid "Filter by category"
+msgstr "Szűrés kategória szerint"
+
+#: includes/template-library/sources/local.php:312
+msgctxt "Template Library"
+msgid "All Categories"
+msgstr "Minden kategória"
+
+#: includes/template-library/sources/local.php:311
+msgctxt "Template Library"
+msgid "Category"
+msgstr "Kategória"
+
+#: includes/template-library/sources/local.php:310
+msgctxt "Template Library"
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: includes/template-library/sources/local.php:231
+msgctxt "Template Library"
+msgid "Templates"
+msgstr "Sablonok"
+
+#: includes/controls/groups/background.php:361
+msgctxt "Background Control"
+msgid "Y Position"
+msgstr "Y pozíció"
+
+#: includes/controls/groups/background.php:295
+msgctxt "Background Control"
+msgid "X Position"
+msgstr "X pozíció"
+
+#: includes/controls/groups/background.php:282
+#: includes/controls/groups/background.php:487
+msgctxt "Background Control"
+msgid "Custom"
+msgstr "Egyéni"
+
+#. translators: %d: Interval in minutes.
+#: core/base/background-process/wp-background-process.php:438
+msgid "Every %d Minutes"
+msgstr "Minden %d percben"
+
+#: includes/settings/settings.php:346
+msgid "Popup Builder lets you take advantage of all the amazing features in Elementor, so you can build beautiful & highly converting popups. Go pro and start designing your popups today."
+msgstr "A Popup Builder lehetővé teszi, hogy kihasználhasd az Elementor összes csodás funkcióját, így szép és rendkívüli popupokat hozhatsz létre. Szerezd be a Pro verziót és kezdd el tervezni a popupjaidat."
+
+#: includes/settings/settings.php:345
+msgid "Get Popup Builder"
+msgstr "Szerezd be a Popup Builder-t"
+
+#: includes/settings/settings.php:171
+#: includes/template-library/sources/local.php:1636
+#: assets/js/app-packages.js:9377 assets/js/app.js:8689
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:1815
+msgid "Popups"
+msgstr "Popupok"
+
+#: core/app/app.php:39 core/app/app.php:40
+#: core/app/modules/site-editor/module.php:31
+#: core/common/modules/finder/categories/general.php:68
+#: includes/template-library/sources/local.php:1635
+#: assets/js/app-packages.js:10981 assets/js/editor.js:31625
+msgid "Theme Builder"
+msgstr "Theme Builder"
+
+#: modules/safe-mode/module.php:387
+msgid "Enable Safe Mode"
+msgstr "Biztonságos üzemmód engedélyezése"
+
+#: modules/safe-mode/module.php:385 modules/safe-mode/module.php:397
+msgid "Can't Edit?"
+msgstr "Nem tudsz szerkeszteni?"
+
+#: modules/safe-mode/module.php:302
+msgid "Still experiencing issues?"
+msgstr "Még mindig problémák vannak?"
+
+#: modules/safe-mode/module.php:286
+msgid "Editor successfully loaded?"
+msgstr "Sikeresen betöltött a szerkesztő?"
+
+#: modules/safe-mode/module.php:279 modules/safe-mode/module.php:509
+msgid "Disable Safe Mode"
+msgstr "Biztonságos üzemmód letiltása"
+
+#: modules/safe-mode/module.php:277
+msgid "Safe Mode ON"
+msgstr "Biztonságos üzemmód BEKAPCSOLVA"
+
+#: modules/safe-mode/module.php:95
+msgid "Cannot enable Safe Mode"
+msgstr "Nem lehet engedélyezni a Biztonságos üzemmódot"
+
+#: modules/safe-mode/module.php:51
+msgid "Safe Mode allows you to troubleshoot issues by only loading the editor, without loading the theme or any other plugin."
+msgstr "A Biztonságos üzemmód lehetővé teszi, hogy kezelhesd a problémákat csak a szerkesztő betöltésével, a téma vagy más bővítmény betöltése nélkül."
+
+#: modules/safe-mode/module.php:42
+msgid "Safe Mode"
+msgstr "Biztonságos üzemmód"
+
+#: core/upgrade/manager.php:40
+msgid "Elementor Data Updater"
+msgstr "Elementor adat frissítő"
+
+#: core/common/modules/finder/categories/general.php:45
+msgctxt "Template Library"
+msgid "Saved Templates"
+msgstr "Elmentett sablonok"
+
+#. translators: %d: Interval in minutes.
+#: core/base/background-task.php:311
+msgid "Every %d minutes"
+msgstr "Minden %d percben"
+
+#: core/base/db-upgrades-manager.php:126
+msgid "The database update process is now complete. Thank you for updating to the latest version!"
+msgstr "Az adatbázis frissítési folyamat befejeződött. Köszönjük, hogy frissítettél a legújabb verzióra!"
+
+#: core/base/db-upgrades-manager.php:89
+msgid "Your site database needs to be updated to the latest version."
+msgstr "A webhely adatbázisát frissíteni kell a legújabb verzióra."
+
+#: modules/library/documents/not-supported.php:60
+msgid "Not Supported"
+msgstr "Nem támogatott"
+
+#: core/common/modules/finder/categories/site.php:78
+msgid "Users"
+msgstr "Felhasználók"
+
+#: core/common/modules/finder/categories/site.php:72
+msgid "Plugins"
+msgstr "Bővítmények"
+
+#: includes/widgets/video.php:440
+msgid "Any Video"
+msgstr "Bármilyen videó"
+
+#: includes/widgets/video.php:439
+msgid "Current Video Channel"
+msgstr "Jelenlegi videó csatorna"
+
+#: includes/widgets/star-rating.php:321
+msgid "Unmarked Color"
+msgstr "Jelöletlen szín"
+
+#: includes/widgets/star-rating.php:266
+msgid "Stars"
+msgstr "Csillagok"
+
+#: includes/widgets/star-rating.php:147
+msgid "Outline"
+msgstr "Körvonal"
+
+#: includes/widgets/star-rating.php:139
+msgid "Unmarked Style"
+msgstr "Jelöletlen stílus"
+
+#: includes/widgets/star-rating.php:95
+msgid "Rating Scale"
+msgstr "Értékelési skála"
+
+#: includes/widgets/star-rating.php:88 includes/widgets/star-rating.php:108
+msgid "Rating"
+msgstr "Értékelés"
+
+#: includes/widgets/star-rating.php:45
+msgid "Star Rating"
+msgstr "Csillag értékelés"
+
+#: includes/widgets/image.php:164 includes/widgets/image.php:173
+msgid "Custom Caption"
+msgstr "Egyéni felirat"
+
+#: includes/widgets/image.php:163
+msgid "Attachment Caption"
+msgstr "Csatolmány felirat"
+
+#: includes/editor-templates/hotkeys.php:151
+msgid "Quit"
+msgstr "Kilépés"
+
+#: includes/editor-templates/hotkeys.php:143 assets/js/editor.js:3174
+msgid "Keyboard Shortcuts"
+msgstr "Billentyűparancs"
+
+#: includes/editor-templates/hotkeys.php:100
+msgid "Show / Hide Panel"
+msgstr "Panel mutat / elrejt"
+
+#: includes/editor-templates/hotkeys.php:88
+msgid "Go To"
+msgstr "Menj ide"
+
+#: includes/editor-templates/hotkeys.php:26
+msgid "Redo"
+msgstr "Ismét"
+
+#: includes/editor-templates/hotkeys.php:18
+msgid "Undo"
+msgstr "Visszavonás"
+
+#: core/common/modules/finder/template.php:13
+msgid "Type to find anything in Elementor"
+msgstr "Írd be, amit keresel az Elementorban"
+
+#: includes/editor-templates/hotkeys.php:92 assets/js/admin-top-bar.js:477
+#: assets/js/common.js:10346 assets/js/editor.js:20721
+msgid "Finder"
+msgstr "Kereső (Finder)"
+
+#: core/common/modules/finder/categories/site.php:66
+msgid "Customizer"
+msgstr "Testreszabás"
+
+#: core/common/modules/finder/categories/site.php:54
+msgid "Menus"
+msgstr "Menük"
+
+#: core/common/modules/finder/categories/site.php:48
+msgid "Dashboard"
+msgstr "Vezérlőpult (Dashboard)"
+
+#: core/common/modules/finder/categories/site.php:42
+msgid "Homepage"
+msgstr "Kezdőlap"
+
+#: core/common/modules/finder/categories/create.php:28
+#: assets/js/editor.js:29903
+msgid "Create"
+msgstr "Létrehoz"
+
+#: core/common/modules/connect/apps/base-app.php:81
+msgid "Disconnect"
+msgstr "Leválasztás"
+
+#: core/common/modules/connect/apps/base-app.php:226
+msgid "Disconnected Successfully."
+msgstr "Sikeresen leválasztva."
+
+#: core/common/modules/connect/apps/base-app.php:214
+msgid "Connected Successfully."
+msgstr "Sikeresen kapcsolódva."
+
+#: core/common/modules/connect/admin.php:24
+#: core/common/modules/connect/admin.php:25
+#: core/common/modules/connect/apps/connect.php:11
+msgid "Connect"
+msgstr "Kapcsolódás"
+
+#: core/base/document.php:1549
+msgid "Future"
+msgstr "Jövő"
+
+#: includes/widgets/video.php:519
+msgid "Poster"
+msgstr "Plakát"
+
+#: includes/widgets/video.php:402
+msgid "Lazy Load"
+msgstr "Lusta betöltés"
+
+#: includes/widgets/video.php:135 includes/widgets/video.php:157
+#: includes/widgets/video.php:178 includes/widgets/video.php:234
+msgid "Enter your URL"
+msgstr "Írd be az URL címet"
+
+#: includes/widgets/accordion.php:126 includes/widgets/accordion.php:130
+#: includes/widgets/icon-box.php:160 includes/widgets/image-box.php:137
+#: includes/widgets/tabs.php:129 includes/widgets/tabs.php:133
+#: includes/widgets/testimonial.php:101 includes/widgets/text-editor.php:114
+#: includes/widgets/toggle.php:130 includes/widgets/toggle.php:134
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+
+#: core/settings/editor-preferences/model.php:92
+msgid "Show editing handles when hovering over the element edit button."
+msgstr "A szerkesztési kapcsolók megjelenítése az elem szerkesztő gombjának ráhúzásakor."
+
+#: core/settings/editor-preferences/model.php:90
+msgid "Editing Handles"
+msgstr "Kapcsolók szerkesztése"
+
+#: includes/settings/settings.php:265
+msgid "Welcome to Elementor"
+msgstr "Üdvözöl az Elementor"
+
+#: includes/settings/settings.php:243
+msgid "Create Your First Post"
+msgstr "Készítsd el az első bejegyzésed"
+
+#: includes/settings/settings.php:240
+msgid "Create Your First Page"
+msgstr "Készítsd el az első oldalad"
+
+#: includes/settings/settings.php:188 includes/settings/settings.php:256
+msgid "Getting Started"
+msgstr "Első lépések"
+
+#: includes/editor-templates/navigator.php:52
+msgid "Once you fill your page with content, this window will give you an overview display of all the page elements. This way, you can easily move around any section, column, or widget."
+msgstr "Miután feltöltötted az oldalad tartalommal, ez az ablak áttekintést nyújt az összes, oldalra elhelyezett elemről. Így könnyedén navigálhatsz bármely szakasz, oszlop vagy widget között."
+
+#: includes/editor-templates/navigator.php:51
+msgid "Easy Navigation is Here!"
+msgstr "Megérkezett a Könnyű Navigáció!"
+
+#: includes/editor-templates/navigator.php:46
+msgid "Empty"
+msgstr "Üres"
+
+#: includes/editor-templates/hotkeys.php:126
+#: includes/editor-templates/navigator.php:12
+#: includes/editor-templates/panel.php:69
+#: includes/editor-templates/panel.php:71 assets/js/editor-document.js:13174
+#: assets/js/editor.js:15103
+msgid "Navigator"
+msgstr "Navigátor"
+
+#: includes/editor-templates/library-layout.php:13
+#: includes/settings/settings.php:259 includes/settings/settings.php:260
+msgid "Skip"
+msgstr "Kihagyás"
+
+#: includes/controls/url.php:68 modules/shapes/widgets/text-path.php:147
+msgid "Paste URL or type"
+msgstr "URL beillesztése vagy típus"
+
+#: includes/controls/groups/css-filter.php:132
+msgctxt "Filter Control"
+msgid "Hue"
+msgstr "Színárnyalat"
+
+#: core/debug/inspector.php:49
+msgid "Debug Bar"
+msgstr "Hibakereső sáv"
+
+#: core/admin/admin-notices.php:284
+msgid "Hide Notification"
+msgstr "Értesítés elrejtése"
+
+#: core/admin/admin-notices.php:278
+msgid "Happy To Help"
+msgstr "Szívesen segítünk"
+
+#: core/admin/admin-notices.php:273
+msgid "Congrats!"
+msgstr "Gratulálok!"
+
+#: core/kits/documents/tabs/settings-lightbox.php:76 includes/frontend.php:1266
+#: includes/widgets/google-maps.php:148
+msgid "Zoom"
+msgstr "Nagyítás"
+
+#: core/debug/inspector.php:57
+msgid "Debug Bar adds an admin bar menu that lists all the templates that are used on a page that is being displayed."
+msgstr "A Hibakereső sáv az adminisztrátor sávon felsorolja az oldalon látható összes megjelenített sablont."
+
+#: core/document-types/page-base.php:41
+msgid "Single"
+msgstr "Bejegyzés"
+
+#: includes/widgets/video.php:374
+msgid "Logo"
+msgstr "Logó"
+
+#: includes/widgets/video.php:361
+msgid "Modest Branding"
+msgstr "Vízjel eltüntetése"
+
+#: includes/widgets/video.php:347
+msgid "Video Info"
+msgstr "Video info"
+
+#: includes/widgets/video.php:220
+msgid "URL"
+msgstr "URL"
+
+#: includes/widgets/video.php:117
+msgid "Self Hosted"
+msgstr "Önálló videó"
+
+#: includes/widgets/video.php:116
+msgid "Dailymotion"
+msgstr "Dailymotion"
+
+#: includes/widgets/video.php:110
+msgid "Source"
+msgstr "Forrás"
+
+#: includes/widgets/button.php:256
+msgid "Button ID"
+msgstr "Gomb ID"
+
+#: includes/widgets/audio.php:185
+msgid "Artwork"
+msgstr "Alkotás"
+
+#: includes/managers/elements.php:287
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: core/app/modules/site-editor/module.php:32
+#: core/common/modules/finder/categories/site.php:26 core/kits/manager.php:367
+#: includes/managers/elements.php:283
+msgid "Site"
+msgstr "Oldal"
+
+#: includes/managers/elements.php:276
+msgid "Pro"
+msgstr "Pro"
+
+#: includes/elements/column.php:406 includes/elements/section.php:697
+#: includes/widgets/heading.php:258
+msgid "Blend Mode"
+msgstr "Keverés"
+
+#: includes/editor-templates/hotkeys.php:35 assets/js/editor-document.js:12508
+#: assets/js/editor.js:14437
+msgid "Copy"
+msgstr "Másolás"
+
+#: includes/editor-templates/global.php:27
+msgid "Drag widget here"
+msgstr "Húzd ide a widgetet"
+
+#: includes/controls/groups/css-filter.php:166
+msgctxt "Filter Control"
+msgid "CSS Filters"
+msgstr "CSS szűrők"
+
+#: includes/controls/groups/css-filter.php:115
+msgctxt "Filter Control"
+msgid "Saturation"
+msgstr "Telítettség"
+
+#: includes/controls/groups/css-filter.php:98
+msgctxt "Filter Control"
+msgid "Contrast"
+msgstr "Kontraszt"
+
+#: includes/controls/groups/css-filter.php:81
+msgctxt "Filter Control"
+msgid "Brightness"
+msgstr "Fényesség"
+
+#: includes/controls/groups/css-filter.php:62
+msgctxt "Filter Control"
+msgid "Blur"
+msgstr "Homályosítás"
+
+#: includes/controls/groups/background.php:589 includes/widgets/video.php:257
+msgid "Specify an end time (in seconds)"
+msgstr "Add meg a befejezés idejét (másodpercben)"
+
+#: includes/controls/groups/background.php:587 includes/widgets/video.php:255
+msgid "End Time"
+msgstr "Befejezés ideje"
+
+#: includes/controls/groups/background.php:577 includes/widgets/video.php:247
+msgid "Specify a start time (in seconds)"
+msgstr "Add meg a kezdés idejét (másodpercben)"
+
+#: includes/controls/groups/background.php:575 includes/widgets/video.php:245
+msgid "Start Time"
+msgstr "Kezdés ideje"
+
+#: core/admin/feedback.php:114
+msgid "Wait! Don't deactivate Elementor. You have to activate both Elementor and Elementor Pro in order for the plugin to work."
+msgstr "Várj! Ne kapcsold ki az Elementort. Aktiválnod kell az Elementort és az Elementor Pro-t, hogy működjön a bővítmény."
+
+#: core/admin/feedback.php:112
+msgid "I have Elementor Pro"
+msgstr "Elementor Pro-m van"
+
+#: core/debug/inspector.php:115
+msgid "Elementor Debugger"
+msgstr "Elementor Hibakereső"
+
+#: core/admin/admin.php:151 assets/js/admin.js:5182 assets/js/gutenberg.js:796
+msgid "Back to WordPress Editor"
+msgstr "Vissza a WordPress szerkesztőbe"
+
+#. translators: %s: Document title.
+#: core/documents-manager.php:367
+msgid "Elementor %s"
+msgstr "Elementor %s"
+
+#. translators: %s: Post type singular label.
+#. translators: %s: Template type label.
+#: core/common/modules/finder/categories/create.php:62
+#: includes/template-library/sources/local.php:1313
+msgid "Add New %s"
+msgstr "Új %s hozzáadása"
+
+#. translators: %d: Number of rows.
+#: includes/utils.php:213
+msgid "%d row affected."
+msgid_plural "%d rows affected."
+msgstr[0] "%d sor érintett."
+msgstr[1] "%d sor érintett."
+
+#: modules/page-templates/module.php:158
+msgctxt "Page Template"
+msgid "Elementor Full Width"
+msgstr "Elementor teljes szélesség"
+
+#: modules/page-templates/module.php:157
+msgctxt "Page Template"
+msgid "Elementor Canvas"
+msgstr "Elementor vászon"
+
+#: core/kits/documents/tabs/theme-style-images.php:95
+#: core/kits/documents/tabs/theme-style-images.php:166
+#: includes/elements/column.php:375 includes/elements/column.php:446
+#: includes/elements/section.php:651 includes/elements/section.php:752
+#: includes/widgets/image-box.php:312 includes/widgets/image-box.php:366
+#: includes/widgets/image.php:393 includes/widgets/image.php:427
+msgid "Opacity"
+msgstr "Átlátszóság"
+
+#: core/app/modules/kit-library/data/kits/controller.php:24
+#: core/app/modules/kit-library/data/kits/controller.php:43
+#: core/app/modules/kit-library/data/kits/endpoints/download-link.php:45
+#: core/app/modules/kit-library/data/kits/endpoints/favorites.php:66
+#: core/app/modules/kit-library/data/kits/endpoints/favorites.php:88
+#: core/app/modules/kit-library/data/taxonomies/controller.php:39
+#: core/base/module.php:130 core/base/module.php:143 includes/plugin.php:615
+#: includes/plugin.php:628
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:885
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3498
+msgid "Something went wrong."
+msgstr "Valami hiba történt."
+
+#: includes/widgets/image.php:290
+msgid "Max Width"
+msgstr "Max. szélesség"
+
+#: includes/widgets/common.php:612 includes/widgets/common.php:835
+#: includes/widgets/divider.php:736 includes/widgets/divider.php:876
+#: includes/widgets/image-carousel.php:401
+#: includes/widgets/image-carousel.php:464 includes/widgets/tabs.php:152
+msgid "Position"
+msgstr "Pozíció"
+
+#. translators: 1: Elementor, 2: Link to plugin review
+#: core/admin/admin.php:335
+msgid "Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your support!"
+msgstr "Élvezi az %1$s-t? Kérjük adjon rá %2$s értékelést. Nagyra értékeljük a támogatását!"
+
+#: core/common/modules/finder/categories/general.php:63
+msgid "Knowledge Base"
+msgstr "Tudásbázis"
+
+#: modules/page-templates/module.php:347
+msgid "This template includes the header, full-width content and footer"
+msgstr "Ez a sablon tartalmaz fejlécet, teljes szélességű tartalmat és láblécet"
+
+#: modules/page-templates/module.php:335
+msgid "No header, no footer, just Elementor"
+msgstr "Nincs fejléc, nincs lábléc, csak Elementor"
+
+#: modules/page-templates/module.php:292
+msgid "Page Layout"
+msgstr "Oldal elrendezés"
+
+#: modules/history/views/revisions-panel-template.php:70
+msgid "Current"
+msgstr "Jelenlegi"
+
+#: includes/frontend.php:1268 includes/widgets/video.php:943
+msgid "Play Video"
+msgstr "Videó lejátszása"
+
+#: includes/widgets/common.php:747 includes/widgets/icon-list.php:104
+#: includes/widgets/icon-list.php:196
+msgid "Inline"
+msgstr "Sorban"
+
+#: includes/widgets/counter.php:181
+msgid "Separator"
+msgstr "Elválasztó"
+
+#: modules/landing-pages/module.php:257 assets/js/app-packages.js:6185
+msgid "Add New"
+msgstr "Új hozzáadása"
+
+#: includes/template-library/sources/local.php:1273
+msgid "Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow."
+msgstr "Adj hozzá sablonokat és használd fel újra bárhol a weboldaladon. Könnyen exportálhatod és importálhatod őket bármely más projekthez, egy optimalizált munkafolyamathoz."
+
+#. translators: %s: Template type label.
+#: includes/template-library/sources/local.php:1306
+msgid "Create Your First %s"
+msgstr "Hozd létre az első %s-t"
+
+#: includes/template-library/sources/local.php:1179
+msgid "All"
+msgstr "Mind"
+
+#: includes/template-library/sources/local.php:219
+msgctxt "Template Library"
+msgid "My Templates"
+msgstr "Sablonjaim"
+
+#: includes/admin-templates/new-template.php:97
+msgid "Create Template"
+msgstr "Sablon létrehozása"
+
+#: includes/admin-templates/new-template.php:94
+msgid "Enter template name (optional)"
+msgstr "Add meg a sablonod nevét (nem kötelező)"
+
+#: includes/admin-templates/new-template.php:91
+msgid "Name your template"
+msgstr "Nevezd el a sablonod"
+
+#: includes/admin-templates/new-template.php:66
+msgid "Select the type of template you want to work on"
+msgstr "Válaszd ki melyik sablonfajtán akarsz dolgozni"
+
+#: includes/admin-templates/new-template.php:64
+msgid "Choose Template Type"
+msgstr "Válaszd ki a Sablon típusát"
+
+#: includes/admin-templates/new-template.php:49
+msgid "Use templates to create the different pieces of your site, and reuse them with one click whenever needed."
+msgstr "Az oldalad különféle részeit készítsd el sablonok használatával, és egy kattintással használd őket újból, amikor csak szükséges."
+
+#: includes/settings/settings.php:302
+msgid "Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language."
+msgstr "Az Egyéni Betűtípusok (Custom Fonts) lehetőséget nyújt arra, hogy saját tárolású betűtípusokat használhass és adj hozzá az Elementor projekteidhez, hogy így egy egyedi arculati stílust alkothass."
+
+#: includes/settings/settings.php:301
+msgid "Add Your Custom Fonts"
+msgstr "Adj hozzá Egyéni Betűtípusokat"
+
+#: includes/settings/settings.php:146 includes/settings/settings.php:147
+msgid "Custom Fonts"
+msgstr "Egyéni Betűtípusok"
+
+#: includes/editor-templates/templates.php:180
+msgid "More actions"
+msgstr "Még több művelet"
+
+#: includes/editor-templates/templates.php:100
+msgid "Search Templates:"
+msgstr "Sablonok keresése:"
+
+#: core/document-types/page.php:41 modules/library/documents/page.php:60
+#: assets/js/editor.js:5615
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:1803
+msgid "Pages"
+msgstr "Oldalak"
+
+#: includes/editor-templates/global.php:48
+msgid "This tag has no settings."
+msgstr "Ez a cimke nem tartalmaz beállításokat."
+
+#: includes/controls/groups/border.php:68
+msgctxt "Border Control"
+msgid "Groove"
+msgstr "Barázdás"
+
+#. translators: %s: Document title.
+#. translators: %s: Document title.
+#: core/base/document.php:1013 core/settings/page/model.php:126
+#: includes/editor-templates/panel.php:67
+msgid "%s Settings"
+msgstr "%s Beállítások"
+
+#: core/role-manager/role-manager.php:169
+msgid "Want to give access only to content?"
+msgstr "Csak a tartalomhoz akarsz hozzáférést engedélyezni?"
+
+#: core/role-manager/role-manager.php:134
+msgid "No access to editor"
+msgstr "Nincs hozzáférés a szerkesztőhöz"
+
+#: core/role-manager/role-manager.php:127
+msgid "Role Excluded"
+msgstr "Kizárt szerepkör"
+
+#: core/role-manager/role-manager.php:91
+msgid "Manage What Your Users Can Edit In Elementor"
+msgstr "Határold be, hogy a felhasználóid mit szerkeszthetnek Elementorral"
+
+#: core/common/modules/finder/categories/general.php:57
+#: core/role-manager/role-manager.php:31
+msgid "Role Manager"
+msgstr "Szerepek menedzselése"
+
+#: core/dynamic-tags/tag.php:109 includes/settings/settings.php:580
+msgid "Fallback"
+msgstr "Tartalék"
+
+#: core/document-types/page-base.php:175
+msgid "Featured Image"
+msgstr "Kiemelt Kép"
+
+#: core/document-types/page-base.php:109
+msgid "Body Style"
+msgstr "Body Stílus"
+
+#: core/base/document.php:163
+msgid "Document"
+msgstr "Dokumentum"
+
+#: core/common/modules/ajax/module.php:161
+msgid "Action not found."
+msgstr "Művelet nem található."
+
+#: includes/template-library/manager.php:529
+msgid "Post not found."
+msgstr "Bejegyzés nem található."
+
+#: core/common/modules/ajax/module.php:130
+msgid "Token Expired."
+msgstr "A token lejárt."
+
+#: includes/widgets/image-carousel.php:137
+msgid "Set how many slides are scrolled per swipe."
+msgstr "Állítsd be, mennyi dia legyen csúsztatva, lapozásonként."
+
+#: includes/controls/groups/background.php:447
+msgid "Note: Attachment Fixed works only on desktop."
+msgstr "Megjegyzés: A rögzített háttér (Attachment Fixed) beállítás csak asztali nézetben működik."
+
+#: core/admin/admin.php:386
+msgid "Create New Post"
+msgstr "Hozz létre Új Bejegyzést"
+
+#: includes/fonts.php:69
+msgid "Google Early Access"
+msgstr "Google Korai Hozzáférés"
+
+#: modules/history/revisions-manager.php:157
+msgid "Current Version"
+msgstr "Jelenlegi verzió"
+
+#: includes/widgets/video.php:391
+msgid "When you turn on privacy mode, YouTube won't store information about visitors on your website unless they play the video."
+msgstr "Az Adatvédelmi mód bekapcsolásakor a YouTube nem tárol adatokat honlapod látogatóiról csak akkor, ha lejátsszák a videót."
+
+#: includes/widgets/video.php:389
+msgid "Privacy Mode"
+msgstr "Adatvédelmi mód"
+
+#: includes/widgets/shortcode.php:106
+msgid "Enter your shortcode"
+msgstr "Add meg a shortcodeot"
+
+#: includes/widgets/image.php:176
+msgid "Enter your image caption"
+msgstr "Add meg a képaláírás szövegét"
+
+#: includes/widgets/html.php:95
+msgid "Enter your code"
+msgstr "Add meg a kódot"
+
+#: includes/widgets/heading.php:117
+msgid "Add Your Heading Text Here"
+msgstr "Add meg itt a címsor szövegét"
+
+#: includes/widgets/alert.php:330 includes/widgets/alert.php:362
+msgid "Dismiss alert"
+msgstr "Figyelmeztetés elutasítása"
+
+#: includes/widgets/alert.php:127 includes/widgets/icon-box.php:161
+#: includes/widgets/image-box.php:138
+msgid "Enter your description"
+msgstr "Add meg a leírásod"
+
+#: includes/widgets/alert.php:114
+msgid "This is an Alert"
+msgstr "Ez egy Figyelmeztetés"
+
+#: includes/widgets/accordion.php:177 includes/widgets/toggle.php:181
+msgid "Active Icon"
+msgstr "Aktív ikon"
+
+#. translators: 1: Editing date, 2: Author display name.
+#: core/base/document.php:1262
+msgid "Last edited on %1$s by %2$s"
+msgstr "Utoljára módosítva ekkor: %1$s, %2$s által"
+
+#. translators: 1: Saving date, 2: Author display name.
+#: core/base/document.php:1259
+msgid "Draft saved on %1$s by %2$s"
+msgstr "Piszkozat mentve ekkor: %1$s, %2$s által"
+
+#: core/base/document.php:1254
+msgctxt "revision date format"
+msgid "M j, H:i"
+msgstr "M j, H:i"
+
+#: core/admin/admin-notices.php:529 assets/js/app-packages.js:8875
+#: assets/js/app.js:8187
+msgid "Dismiss"
+msgstr "Elvetés"
+
+#. translators: %s: Document title.
+#: core/base/document.php:146
+msgid "Hurray! Your %s is live."
+msgstr "Hurrá! A(z) %s közzé lett téve."
+
+#: core/kits/documents/kit.php:169
+msgid "Published"
+msgstr "Közzétéve"
+
+#: core/common/modules/finder/template.php:19 assets/js/editor.js:6708
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:1500
+msgid "No Results Found"
+msgstr "Nincs találat"
+
+#: includes/editor-templates/templates.php:246 assets/js/app-packages.js:3786
+#: assets/js/app.js:3744
+msgid "Select File"
+msgstr "Fájl kiválasztása"
+
+#: includes/editor-templates/templates.php:245
+msgid "or"
+msgstr "vagy"
+
+#: includes/editor-templates/templates.php:244
+msgid "Drag & drop your .JSON or .zip template file"
+msgstr "Húzd be a .JSON vagy a .zip sablonfájlaidat"
+
+#: includes/editor-templates/templates.php:243
+msgid "Import Template to Your Library"
+msgstr "Sablon importálása a sablontáradba"
+
+#: includes/editor-templates/templates.php:234
+#: includes/editor-templates/templates.php:250
+#: includes/editor-templates/templates.php:263 includes/widgets/button.php:141
+#: includes/widgets/button.php:142
+msgid "Click here"
+msgstr "Kattints ide"
+
+#: includes/editor-templates/templates.php:233
+#: includes/editor-templates/templates.php:249
+#: includes/editor-templates/templates.php:262
+msgid "Want to learn more about the Elementor library?"
+msgstr "Szeretnél többet megtudni az Elementor könyvtárról?"
+
+#: includes/editor-templates/templates.php:158
+msgid "Favorite"
+msgstr "Kedvenc"
+
+#: includes/editor-templates/templates.php:121
+msgid "Creation Date"
+msgstr "Létrehozás dátuma"
+
+#: includes/editor-templates/templates.php:117
+msgid "Created By"
+msgstr "Készítette:"
+
+#: includes/editor-templates/templates.php:101
+msgid "Search"
+msgstr "Keresés"
+
+#: includes/editor-templates/templates.php:92
+msgid "My Favorites"
+msgstr "Kedvenceim"
+
+#: includes/editor-templates/templates.php:70
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3481
+msgid "Popular"
+msgstr "Népszerű"
+
+#: includes/editor-templates/templates.php:68
+msgid "Trend"
+msgstr "Felkapott"
+
+#: includes/editor-templates/templates.php:66
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3478
+msgid "New"
+msgstr "Új"
+
+#: includes/editor-templates/templates.php:10
+#: includes/editor-templates/templates.php:11
+msgid "Import Template"
+msgstr "Sablon importálása"
+
+#: core/kits/views/panel.php:38 includes/controls/icons.php:82
+#: includes/controls/media.php:217 includes/controls/media.php:263
+#: includes/editor-templates/repeater.php:27
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:710
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: includes/editor-templates/hotkeys.php:67
+#: includes/editor-templates/repeater.php:21 assets/js/editor-document.js:12496
+#: assets/js/editor.js:14425 assets/js/editor.js:34099
+msgid "Duplicate"
+msgstr "Megkettőzés"
+
+#: includes/editor-templates/repeater.php:14
+msgid "Drag & Drop"
+msgstr "Drag & Drop"
+
+#: includes/editor-templates/panel.php:129
+#: includes/editor-templates/panel.php:130
+msgid "Hide Panel"
+msgstr "Panel elrejtése"
+
+#: includes/editor-templates/panel.php:119 assets/js/editor-document.js:13838
+#: assets/js/editor.js:16382
+msgid "Save as Template"
+msgstr "Mentés Sablonként"
+
+#: includes/editor-templates/panel.php:115
+msgid "Save Draft"
+msgstr "Piszkozat mentése"
+
+#: includes/editor-templates/panel.php:100
+#: includes/editor-templates/panel.php:102
+msgid "Save Options"
+msgstr "Beállítások mentése"
+
+#: includes/editor-templates/panel.php:95 assets/js/editor.js:12252
+msgid "Publish"
+msgstr "Közzététel"
+
+#: includes/editor-templates/panel.php:83
+#: includes/editor-templates/panel.php:86
+msgid "Preview Changes"
+msgstr "Változtatások megtekintése"
+
+#: includes/editor-templates/panel-elements.php:33
+msgid "Search Widget:"
+msgstr "Bővítmény keresése:"
+
+#: includes/controls/popover-toggle.php:71
+#: includes/controls/popover-toggle.php:73
+msgid "Back to default"
+msgstr "Vissza az alapértelmezetthez"
+
+#: includes/controls/groups/typography.php:179
+msgctxt "Typography Control"
+msgid "Line Through"
+msgstr "Áthúzott"
+
+#: includes/controls/groups/typography.php:178
+msgctxt "Typography Control"
+msgid "Overline"
+msgstr "Felső vonal"
+
+#: includes/controls/groups/typography.php:177
+msgctxt "Typography Control"
+msgid "Underline"
+msgstr "Aláhúzott"
+
+#: includes/controls/groups/typography.php:172
+msgctxt "Typography Control"
+msgid "Decoration"
+msgstr "Díszítés"
+
+#: includes/controls/dimensions.php:142
+msgid "Unlinked values"
+msgstr "Szétkapcsolt értékek"
+
+#: core/admin/admin.php:470
+msgid "Blog"
+msgstr "Blog"
+
+#: core/admin/admin.php:451
+msgid "(opens in a new window)"
+msgstr "(megnyitás új ablakban)"
+
+#: core/admin/admin.php:432
+msgid "News & Updates"
+msgstr "Hírek és frissítések"
+
+#: core/admin/admin.php:421
+msgctxt "Dashboard Overview Widget Recently Date"
+msgid "M jS"
+msgstr "M jS"
+
+#: core/admin/admin.php:414
+msgid "Recently Edited"
+msgstr "Mostanában szerkesztett"
+
+#: core/admin/admin.php:383
+msgid "Create New Page"
+msgstr "Új Oldal létrehozása"
+
+#: core/admin/admin.php:355
+msgid "Elementor Overview"
+msgstr "Elementor áttekintés"
+
+#: core/admin/admin-notices.php:141
+msgid "Update Elementor Now"
+msgstr "Frissítsd az Elementort most"
+
+#: core/document-types/page-base.php:164
+msgid "Excerpt"
+msgstr "Kivonat"
+
+#: includes/template-library/sources/local.php:464
+#: includes/template-library/sources/local.php:543
+#: includes/template-library/sources/local.php:685
+#: modules/history/revisions-manager.php:264
+msgid "Access denied."
+msgstr "Hozzáférés megtagadva."
+
+#: includes/settings/settings.php:465
+msgid "Disable Default Fonts"
+msgstr "Alapértelmezett betűtípusok kikapcsolása"
+
+#: includes/elements/column.php:218 includes/widgets/accordion.php:380
+#: includes/widgets/common.php:805 includes/widgets/image-carousel.php:537
+#: includes/widgets/tabs.php:179 includes/widgets/tabs.php:209
+#: includes/widgets/toggle.php:407
+msgid "End"
+msgstr "Vége"
+
+#: includes/elements/column.php:216 includes/widgets/accordion.php:376
+#: includes/widgets/common.php:797 includes/widgets/image-carousel.php:529
+#: includes/widgets/tabs.php:171 includes/widgets/tabs.php:201
+#: includes/widgets/toggle.php:403
+msgid "Start"
+msgstr "Kezdete"
+
+#: core/debug/loading-inspection-manager.php:36
+msgid "We're sorry, but something went wrong. Click on 'Learn more' and follow each of the steps to quickly solve it."
+msgstr "Sajnáljuk, de valami hiba történt. Kattints a 'Tudj meg többet' gombra, és kövesd az összes lépést a probléma gyors megoldásához."
+
+#: core/debug/classes/inspection-base.php:25
+#: core/debug/loading-inspection-manager.php:37
+msgid "The preview could not be loaded"
+msgstr "Az előnézet nem tölthető be"
+
+#: core/admin/admin-notices.php:145 core/admin/admin-notices.php:180
+msgid "Update Notification"
+msgstr "Frissítési értesítés"
+
+#. Author URI of the plugin
+msgid "https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash"
+msgstr "https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash"
+
+#. Plugin URI of the plugin
+msgid "https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash"
+msgstr "https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash"
+
+#: modules/history/views/history-panel-template.php:25
+msgid "Once you start working, you'll be able to redo / undo any action you make in the editor."
+msgstr "Amint elkezdesz dolgozni, lehetőséged van helyrehozni / visszavonni bármilyen műveletet, amit a szerkesztőben végzel."
+
+#: modules/history/views/history-panel-template.php:24
+msgid "No History Yet"
+msgstr "Még nincs előzmény"
+
+#: modules/history/views/history-panel-template.php:17
+msgid "Switch to Revisions tab for older versions"
+msgstr "Váltás a Változatok fülre a korábbi verziókért"
+
+#: modules/history/views/history-panel-template.php:10
+#: modules/history/views/revisions-panel-template.php:26
+#: assets/js/editor.js:33788
+msgid "Revisions"
+msgstr "Változatok"
+
+#: includes/editor-templates/hotkeys.php:14
+#: includes/editor-templates/templates.php:124
+#: modules/history/views/history-panel-template.php:9 assets/js/editor.js:33785
+msgid "Actions"
+msgstr "Műveletek"
+
+#: includes/editor-templates/hotkeys.php:117
+#: includes/editor-templates/panel.php:73
+#: includes/editor-templates/panel.php:75 assets/js/editor.js:34472
+msgid "History"
+msgstr "Előzmények"
+
+#: core/kits/documents/tabs/settings-lightbox.php:152
+#: includes/widgets/video.php:761
+msgid "UI Hover Color"
+msgstr "Felhasználói felület színe ráhúzáskor"
+
+#: core/kits/documents/tabs/settings-lightbox.php:141
+#: includes/widgets/video.php:750
+msgid "UI Color"
+msgstr "UI szín"
+
+#: includes/widgets/video.php:711
+msgctxt "Text Shadow Control"
+msgid "Shadow"
+msgstr "Árnyék"
+
+#: includes/widgets/video.php:311
+msgid "Mute"
+msgstr "Némít"
+
+#: includes/template-library/sources/local.php:912
+msgid "Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library."
+msgstr "Válassz egy Elementor sablon JSON fájlt vagy egy .zip archívumot az Elementor sablonokból, és add hozzá őket a könyvtáradban található sablonok listájához."
+
+#: includes/controls/groups/text-shadow.php:61
+#: includes/controls/groups/text-shadow.php:85
+msgctxt "Text Shadow Control"
+msgid "Text Shadow"
+msgstr "Szöveg árnyék"
+
+#: core/kits/documents/tabs/settings-lightbox.php:48
+msgid "Open all image links in a lightbox popup window. The lightbox will automatically work on any link that leads to an image file."
+msgstr "Minden kép hivatkozása lightbox popup ablakban nyíljon meg. A lightbox automatikusan működni fog minden olyan hivatkozással, amely egy képre mutat."
+
+#: core/kits/documents/tabs/settings-lightbox.php:45
+msgid "Image Lightbox"
+msgstr "Kép lightbox"
+
+#: includes/settings/tools.php:369
+msgid "Please Note: We do not recommend updating to a beta version on production sites."
+msgstr "Vedd figyelembe: Nem javasoljuk a béta verzióra történő frissítést publikus, használatban lévő weboldalakon."
+
+#: includes/settings/tools.php:361
+msgid "Beta Tester"
+msgstr "Béta tesztelő"
+
+#: includes/settings/tools.php:350
+msgid "Turn-on Beta Tester, to get notified when a new beta version of Elementor or Elementor Pro is available. The Beta version will not install automatically. You always have the option to ignore it."
+msgstr "Kapcsold be a Beta Tester alkalmazást, hogy értesítést kapj, amikor elérhető az Elementor vagy az E-Pro új béta verziója. A béta verzió nem települ automatikusan. Mindig lehetőséged van arra, hogy figyelmen kívül hagyja."
+
+#: includes/settings/tools.php:347
+msgid "Become a Beta Tester"
+msgstr "Legyél Te is Béta Tesztelő"
+
+#: includes/settings/tools.php:341
+msgid "Warning: Please backup your database before making the rollback."
+msgstr "Figyelem: Kérjük, készíts biztonsági másolatot az adatbázisáról, mielőtt visszaállítod."
+
+#: includes/settings/tools.php:333
+msgid "Rollback Version"
+msgstr "Verzió visszaállítása"
+
+#. translators: %s: Elementor version.
+#: includes/settings/tools.php:324
+msgid "Experiencing an issue with Elementor version %s? Rollback to a previous version before the issue appeared."
+msgstr "Problémát tapasztalsz az Elementor %s verziójával? Állítsd vissza az előző verziót."
+
+#: core/common/modules/finder/categories/tools.php:67
+#: includes/settings/tools.php:317
+msgid "Version Control"
+msgstr "Verzió kezelés"
+
+#: includes/settings/settings.php:548
+msgid "Switch Editor Loader Method"
+msgstr "Szerkesztő betöltési módszer váltása"
+
+#: includes/settings/settings.php:505
+msgid "Integrations"
+msgstr "Integrációk"
+
+#: core/kits/documents/tabs/settings-layout.php:95
+msgid "Sets the default space between widgets (Default: 20)"
+msgstr "Állítsd be az alapértelmezett térközt a widgetek között (Alapértelmezett: 20)"
+
+#: includes/rollback.php:165 includes/settings/tools.php:156
+#: includes/settings/tools.php:320 assets/js/admin.js:5354
+msgid "Rollback to Previous Version"
+msgstr "Előző verzió visszaállítása"
+
+#: includes/elements/column.php:850 includes/elements/section.php:1293
+#: includes/widgets/common.php:296
+msgid "Animation Delay"
+msgstr "Animáció késleltetés"
+
+#: includes/elements/column.php:751 includes/elements/section.php:1214
+#: includes/widgets/common.php:217
+msgid "Z-Index"
+msgstr "Z-index"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:139
+#: core/kits/documents/tabs/theme-style-images.php:203
+#: includes/controls/groups/background.php:700 includes/elements/column.php:321
+#: includes/elements/column.php:477 includes/elements/column.php:584
+#: includes/elements/section.php:600 includes/elements/section.php:783
+#: includes/elements/section.php:889 includes/widgets/common.php:356
+#: includes/widgets/common.php:463 includes/widgets/google-maps.php:239
+#: includes/widgets/image-box.php:330 includes/widgets/image.php:453
+#: modules/shapes/widgets/text-path.php:445
+#: modules/shapes/widgets/text-path.php:619
+msgid "Transition Duration"
+msgstr "Átmenet időtartama"
+
+#: core/kits/documents/tabs/settings-layout.php:83
+#: includes/elements/column.php:234
+msgid "Widgets Space"
+msgstr "Widget térköz"
+
+#: includes/controls/url.php:110
+msgid "Add nofollow"
+msgstr "Nofollow hozzáadása"
+
+#: includes/controls/url.php:106
+msgid "Open in new window"
+msgstr "Megnyitás új ablakban"
+
+#: includes/controls/url.php:99
+msgid "Link Options"
+msgstr "Hivatkozás opciók"
+
+#: includes/controls/groups/box-shadow.php:72
+msgctxt "Box Shadow Control"
+msgid "Outline"
+msgstr "Körvonal"
+
+#: includes/controls/groups/box-shadow.php:69
+msgctxt "Box Shadow Control"
+msgid "Position"
+msgstr "Pozíció"
+
+#. translators: %s: WordPress version.
+#: elementor.php:97
+msgid "Elementor requires WordPress version %s+. Because you are using an earlier version, the plugin is currently NOT RUNNING."
+msgstr "Az Elementor működéséhez %s+ WordPress vagy annál magasabb verzió szükséges. Mivel egy korábbi verziót használsz, ezért a bővítmény KI VAN KAPCSOLVA."
+
+#: includes/settings/settings.php:544
+msgid "Use internal CSS that is embedded in the head of the page. For troubleshooting server configuration conflicts and managing development environments."
+msgstr "Használj az oldal fejlécébe beágyazott belső CSS-t. A szerverkonfliktusok elhárítása és a fejlesztési környezetek kezelése miatt."
+
+#: includes/settings/settings.php:544
+msgid "Use external CSS files for all generated stylesheets. Choose this setting for better performance (recommended)."
+msgstr "Használj külső CSS fájlként minden elkészített stíluslapot. Válaszd ezt a beállítást a jobb teljesítményhez (ajánlott)."
+
+#: includes/settings/settings.php:542
+msgid "Internal Embedding"
+msgstr "Belső beágyazás"
+
+#: includes/settings/settings.php:541
+msgid "External File"
+msgstr "Külső fájl"
+
+#: includes/settings/settings.php:535
+msgid "CSS Print Method"
+msgstr "CSS nyomtatási mód"
+
+#: includes/settings/settings.php:556
+msgid "For troubleshooting server configuration conflicts."
+msgstr "A szerver konfigurációs konfliktusainak hibaelhárítására."
+
+#: core/debug/inspector.php:55 includes/settings/settings.php:554
+#: includes/settings/settings.php:566 includes/settings/tools.php:367
+#: modules/safe-mode/module.php:48 assets/js/editor.js:22550
+msgid "Enable"
+msgstr "Engedélyezés"
+
+#: core/debug/inspector.php:54 includes/settings/settings.php:553
+#: includes/settings/settings.php:565 includes/settings/tools.php:366
+#: modules/safe-mode/module.php:47
+msgid "Disable"
+msgstr "Letiltás"
+
+#: core/base/document.php:1555
+msgid "Status"
+msgstr "Állapot"
+
+#: includes/widgets/common.php:717 includes/widgets/spacer.php:108
+#: includes/widgets/text-editor.php:338
+msgid "Space"
+msgstr "Térköz"
+
+#: includes/widgets/text-editor.php:120 includes/widgets/text-editor.php:252
+msgid "Drop Cap"
+msgstr "Iniciálé"
+
+#: core/kits/documents/tabs/settings-layout.php:109
+msgid "Elementor lets you hide the page title. This works for themes that have \"h1.entry-title\" selector. If your theme's selector is different, please enter it above."
+msgstr "Az Elementor segítségével elrejtheted az oldal címét. Ez olyan témák esetében működik, amelyekben \"h1.entry-title\" választó van. Ha a témaválasztó eltér, kérjük, írd be feljebb."
+
+#: core/kits/documents/tabs/settings-layout.php:105
+msgid "Page Title Selector"
+msgstr "Oldal cím választó"
+
+#: includes/admin-templates/new-template.php:69
+#: includes/settings/controls.php:155
+msgid "Select"
+msgstr "Kiválasztás"
+
+#: includes/editor-templates/hotkeys.php:51 assets/js/editor-document.js:12529
+#: assets/js/editor.js:14458
+msgid "Paste Style"
+msgstr "Stílus beillesztése"
+
+#: core/common/modules/finder/categories/edit.php:113
+#: assets/js/editor-document.js:1838 assets/js/editor-document.js:3648
+msgid "Template"
+msgstr "Sablon"
+
+#: core/document-types/page-base.php:87
+msgid "Hide Title"
+msgstr "Cím elrejtése"
+
+#: includes/maintenance-mode.php:283
+msgid "Maintenance Mode ON"
+msgstr "Karbantartási mód BEKAPCSOLVA"
+
+#: includes/maintenance-mode.php:251
+msgid "Choose Template"
+msgstr "Válassz Sablont"
+
+#: includes/maintenance-mode.php:370
+msgid "To enable maintenance mode you have to set a template for the maintenance mode page."
+msgstr "A karbantartási mód engedélyezéséhez be kell állítanod egy sablont a karbantartási mód oldalához."
+
+#: includes/maintenance-mode.php:292 includes/maintenance-mode.php:369
+#: assets/js/app-packages.js:8532 assets/js/app.js:7844
+msgid "Edit Template"
+msgstr "Sablon szerkesztése"
+
+#: includes/maintenance-mode.php:243
+msgid "Roles"
+msgstr "Szerepek"
+
+#: includes/maintenance-mode.php:237
+msgid "Logged In"
+msgstr "Belépve"
+
+#: includes/maintenance-mode.php:231
+msgid "Who Can Access"
+msgstr "Ki férhet hozzá"
+
+#: includes/maintenance-mode.php:226
+msgid "Coming Soon returns HTTP 200 code, meaning the site is ready to be indexed."
+msgstr "A \"Hamarosan\" HTTP 200 kódot eredményez, azaz a webhely készen áll az indexelésre."
+
+#: includes/maintenance-mode.php:223
+msgid "Maintenance Mode returns HTTP 503 code, so search engines know to come back a short time later. It is not recommended to use this mode for more than a couple of days."
+msgstr "A \"Karbantartási mód\" HTTP 503 kódot eredményez, így a keresőmotorok tudni fogják, hogy később kell visszajönniük. Ezt az üzemmódot nem ajánlott pár napnál tovább használni."
+
+#: includes/maintenance-mode.php:220
+msgid "Choose between Coming Soon mode (returning HTTP 200 code) or Maintenance Mode (returning HTTP 503 code)."
+msgstr "Válassz a \"Hamarosan\" (HTTP 200 kód) vagy a \"Karbantartási mód\" (HTTP 503 kód) közül."
+
+#: includes/maintenance-mode.php:217
+msgid "Maintenance"
+msgstr "Karbantartás"
+
+#: includes/maintenance-mode.php:216
+msgid "Coming Soon"
+msgstr "Hamarosan"
+
+#: core/kits/documents/kit.php:168 includes/maintenance-mode.php:215
+#: assets/js/editor.js:34098
+msgid "Disabled"
+msgstr "Letiltott"
+
+#: includes/maintenance-mode.php:210
+msgid "Choose Mode"
+msgstr "Válassz módot"
+
+#: includes/maintenance-mode.php:206
+msgid "Set your entire website as MAINTENANCE MODE, meaning the site is offline temporarily for maintenance, or set it as COMING SOON mode, meaning the site is offline until it is ready to be launched."
+msgstr "Állítsd be az egész webhelyet KARBANTARTÁSI MÓDBA, így a webhely ideiglenesen nem lesz elérhető a karbantartás alatt, vagy állítsd be a HAMAROSAN INDUL módba, ami azt jelenti, hogy a webhely offline állapotban van, amíg készen áll az indításra."
+
+#: core/common/modules/finder/categories/tools.php:58
+#: includes/maintenance-mode.php:201 includes/maintenance-mode.php:205
+msgid "Maintenance Mode"
+msgstr "Karbantartási mód"
+
+#: includes/elements/section.php:1064
+msgid "Bring to Front"
+msgstr "Előrehoz"
+
+#: core/kits/documents/tabs/settings-lightbox.php:18
+#: includes/widgets/image-carousel.php:207
+#: includes/widgets/image-gallery.php:142 includes/widgets/image.php:219
+#: includes/widgets/video.php:605 includes/widgets/video.php:726
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: includes/elements/column.php:191 includes/elements/column.php:219
+#: includes/elements/section.php:452 includes/widgets/icon-list.php:217
+#: includes/widgets/toggle.php:279
+msgid "Space Between"
+msgstr "Köztes térköz"
+
+#: includes/widgets/icon-list.php:209
+msgid "List"
+msgstr "Lista"
+
+#: includes/shapes.php:209
+msgctxt "Shapes"
+msgid "Book"
+msgstr "Könyv"
+
+#: includes/shapes.php:205
+msgctxt "Shapes"
+msgid "Split"
+msgstr "Vágás"
+
+#: includes/shapes.php:201
+msgctxt "Shapes"
+msgid "Arrow"
+msgstr "Nyíl"
+
+#: includes/shapes.php:197
+msgctxt "Shapes"
+msgid "Waves Pattern"
+msgstr "Hullámos formák"
+
+#: includes/shapes.php:193
+msgctxt "Shapes"
+msgid "Waves Brush"
+msgstr "Hullámos ecset"
+
+#: includes/shapes.php:188
+msgctxt "Shapes"
+msgid "Waves"
+msgstr "Hullámok"
+
+#: includes/shapes.php:183
+msgctxt "Shapes"
+msgid "Curve Asymmetrical"
+msgstr "Asszimetrikus görbe"
+
+#: includes/shapes.php:179
+msgctxt "Shapes"
+msgid "Curve"
+msgstr "Görbe"
+
+#: includes/shapes.php:176
+msgctxt "Shapes"
+msgid "Fan Opacity"
+msgstr "Átlátszó legyező"
+
+#: includes/shapes.php:172
+msgctxt "Shapes"
+msgid "Tilt Opacity"
+msgstr "Átlátszó ferde vonal"
+
+#: includes/shapes.php:167
+msgctxt "Shapes"
+msgid "Tilt"
+msgstr "Ferde vonal"
+
+#: includes/shapes.php:162
+msgctxt "Shapes"
+msgid "Triangle Asymmetrical"
+msgstr "Asszimetrikus háromszög"
+
+#: includes/shapes.php:158
+msgctxt "Shapes"
+msgid "Triangle"
+msgstr "Háromszög"
+
+#: includes/shapes.php:153
+msgctxt "Shapes"
+msgid "Pyramids"
+msgstr "Piramis"
+
+#: includes/shapes.php:150
+msgctxt "Shapes"
+msgid "Zigzag"
+msgstr "Cikcakk"
+
+#: includes/shapes.php:144
+msgctxt "Shapes"
+msgid "Clouds"
+msgstr "Felhők"
+
+#: includes/shapes.php:138
+msgctxt "Shapes"
+msgid "Drops"
+msgstr "Cseppek"
+
+#: includes/shapes.php:134
+msgctxt "Shapes"
+msgid "Mountains"
+msgstr "Hegyek"
+
+#: includes/elements/section.php:1051
+msgid "Invert"
+msgstr "Megfordít"
+
+#: includes/elements/section.php:1037
+msgid "Flip"
+msgstr "Elforgat"
+
+#: includes/elements/section.php:933
+msgid "Shape Divider"
+msgstr "Alakzati elválasztó"
+
+#: includes/widgets/tabs.php:237
+msgid "Navigation Width"
+msgstr "Navigáció szélesség"
+
+#: core/kits/documents/tabs/theme-style-buttons.php:167
+#: core/kits/documents/tabs/theme-style-images.php:134
+#: core/kits/documents/tabs/theme-style-typography.php:156
+#: includes/elements/column.php:306 includes/elements/column.php:431
+#: includes/elements/column.php:549 includes/elements/section.php:585
+#: includes/elements/section.php:737 includes/elements/section.php:854
+#: includes/widgets/button.php:350 includes/widgets/common.php:341
+#: includes/widgets/common.php:428 includes/widgets/google-maps.php:224
+#: includes/widgets/icon-box.php:302 includes/widgets/icon-list.php:412
+#: includes/widgets/icon-list.php:505 includes/widgets/icon.php:248
+#: includes/widgets/image-box.php:351 includes/widgets/image.php:420
+#: modules/shapes/widgets/text-path.php:418
+#: modules/shapes/widgets/text-path.php:558
+msgid "Hover"
+msgstr "Egér ráhúzáskor"
+
+#: includes/elements/column.php:769 includes/elements/section.php:1232
+#: includes/widgets/button.php:262 includes/widgets/common.php:236
+msgid "Add your custom id WITHOUT the Pound key. e.g: my-id"
+msgstr "Adj hozzá egyéni azonosítót. Pl.: my-id"
+
+#: includes/elements/column.php:763 includes/elements/section.php:1226
+#: includes/widgets/common.php:230
+msgid "CSS ID"
+msgstr "CSS ID"
+
+#: includes/controls/groups/background.php:202
+msgctxt "Background Control"
+msgid "Angle"
+msgstr "Szög"
+
+#: includes/controls/groups/background.php:191
+msgctxt "Background Control"
+msgid "Radial"
+msgstr "Sugárirányú"
+
+#: includes/controls/groups/background.php:190
+msgctxt "Background Control"
+msgid "Linear"
+msgstr "Lineáris"
+
+#: includes/controls/groups/background.php:187
+msgctxt "Background Control"
+msgid "Type"
+msgstr "Típus"
+
+#: includes/controls/groups/background.php:161
+msgctxt "Background Control"
+msgid "Second Color"
+msgstr "Második szín"
+
+#: includes/controls/groups/background.php:146
+#: includes/controls/groups/background.php:172
+msgctxt "Background Control"
+msgid "Location"
+msgstr "Helyzet"
+
+#: includes/controls/groups/background.php:99
+msgctxt "Background Control"
+msgid "Gradient"
+msgstr "Átmenet"
+
+#: includes/settings/settings.php:469
+msgid "Checking this box will disable Elementor's Default Fonts, and make Elementor inherit the fonts from your theme."
+msgstr "Ha bejelöld ezt a négyzetet, akkor kikapcsolod az Elementor saját betűtípusait és a sablon betűtípusa kerül használatra."
+
+#: includes/settings/settings.php:461
+msgid "Checking this box will disable Elementor's Default Colors, and make Elementor inherit the colors from your theme."
+msgstr "Ennek a négyzetnek a bejelölésével letiltja az Elementor alapértelmezett színeit, és az Elementort a témából átvenni örökölni a színeket."
+
+#: core/admin/admin.php:305
+msgid "Video Tutorials"
+msgstr "Oktatóvideók"
+
+#: core/admin/admin.php:305
+msgid "View Elementor Video Tutorials"
+msgstr "Elementor oktatóvideók megtekintése"
+
+#: core/admin/admin.php:304
+msgid "Docs & FAQs"
+msgstr "Dokumentációk & GYIK"
+
+#: core/admin/admin.php:304
+msgid "View Elementor Documentation"
+msgstr "Elementor dokumentáció megtekintése"
+
+#: includes/utils.php:185
+msgid "The `from` and `to` URL's must be different"
+msgstr "A  `honnan` és `hová` URL-eknek különbözniük kell"
+
+#: includes/utils.php:190
+msgid "The `from` and `to` URL's must be valid URL's"
+msgstr "A  `honnan` és `hová` URL-eknek érvényes URL-eknek kell lenniük"
+
+#: includes/settings/tools.php:308
+msgid "Enter your old and new URLs for your WordPress installation, to update all Elementor data (Relevant for domain transfers or move to 'HTTPS')."
+msgstr "Add meg a régi és az új URL-t a WordPress telepítéséhez, hogy frissítsd az összes Elementor adatot (Releváns a domain átvitelhez vagy 'HTTPS'-re váltásnál)."
+
+#: includes/settings/tools.php:304
+msgid "Update Site Address (URL)"
+msgstr "Oldal címének frissítése (URL)"
+
+#. translators: %s: WordPress backups documentation.
+#: includes/settings/tools.php:294
+msgid "<strong>Important:</strong> It is strongly recommended that you <a target=\"_blank\" href=\"%s\">backup your database</a> before using Replace URL."
+msgstr "<strong>Fontos:</strong> erősen ajánlott <a target=\"_blank\" href=\"%s\">készíts biztonsági mentést készíteni az adatbázisodról</a> mielőtt kicseréled az URL-t."
+
+#: core/common/modules/finder/categories/tools.php:52
+#: includes/settings/tools.php:288 includes/settings/tools.php:299
+#: includes/settings/tools.php:307
+msgid "Replace URL"
+msgstr "URL cseréje"
+
+#. translators: 1: Minimum recommended_memory, 2: WordPress wp-config memory
+#. documentation.
+#: modules/system-info/reporters/wordpress.php:89
+msgctxt "System Info"
+msgid "We recommend setting memory to at least %1$s. For more information, read about <a href=\"%2$s\">how to Increase memory allocated to PHP</a>."
+msgstr "Javasoljuk, hogy a memóriát állítsa legalább %1$s értékre. További információkért olvassd el a <a href=\"%2$s\">Hogyan növelhető a PHP-hez hozzárendelt memória</a> című cikket."
+
+#. translators: 1: Human readable time difference, 2: Date.
+#: modules/history/revisions-manager.php:179
+msgid "%1$s ago (%2$s)"
+msgstr "%1$s ezelőtt (%2$s)"
+
+#: modules/history/revisions-manager.php:151
+msgctxt "revision date format"
+msgid "M j @ H:i"
+msgstr "M j @ H:i"
+
+#: modules/history/revisions-manager.php:160
+msgid "Autosave"
+msgstr "Automatikus mentés"
+
+#: modules/history/revisions-manager.php:163
+msgid "Revision"
+msgstr "Változat"
+
+#: modules/history/views/revisions-panel-template.php:36
+msgid "It looks like the post revision feature is unavailable in your website."
+msgstr "Úgy tűnik a bejegyzés változatok nem érhetők el ezen a weboldalon."
+
+#: modules/history/views/revisions-panel-template.php:35
+msgid "Start designing your page and you will be able to see the entire revision history here."
+msgstr "Kezd el megtervezni az oldalad és utána itt láthatod majd az összes változat előzményét."
+
+#: modules/history/views/revisions-panel-template.php:34
+msgid "Revision history lets you save your previous versions of your work, and restore them any time."
+msgstr "A változat előzmények segítségével elmentheted a munkád korábbi verzióit, és bármikor visszaállíthatod azokat."
+
+#: modules/history/views/revisions-panel-template.php:63
+msgid "By"
+msgstr "Ezzel"
+
+#: modules/history/views/revisions-panel-template.php:47
+msgid "No Revisions Saved Yet"
+msgstr "Még nincsenek mentett változatok"
+
+#: includes/widgets/counter.php:170
+msgid "Thousand Separator"
+msgstr "Ezres elválasztó"
+
+#: includes/controls/groups/background.php:272
+#: includes/controls/groups/background.php:431
+#: includes/controls/groups/background.php:462
+#: includes/controls/groups/background.php:483
+msgctxt "Background Control"
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: includes/managers/controls.php:896
+msgid "Custom CSS lets you add CSS code to any widget, and see it render live right in the editor."
+msgstr "Az egyéni CSS lehetővé teszi a CSS-kód hozzáadását bármilyen widgethez, és láthatod, hogy az élőben megjelenik a szerkesztőben."
+
+#: includes/managers/controls.php:908
+msgid "Meet Our Custom CSS"
+msgstr "Ismerkedj meg az egyéni CSS-ünkkel"
+
+#: core/kits/documents/tabs/settings-custom-css.php:17
+#: includes/managers/controls.php:890
+msgid "Custom CSS"
+msgstr "Egyéni CSS"
+
+#: includes/editor-templates/panel-elements.php:56
+msgid "With this feature, you can save a widget as global, then add it to multiple areas. All areas will be editable from one single place."
+msgstr "Ezzel a funkcióval elmentheted a widget globálisan, majd más oldalakon is felhasználhatod. Az összes változatot egy helyen lehet majd módosítani."
+
+#: includes/editor-templates/panel-elements.php:55
+msgid "Meet Our Global Widget"
+msgstr "Ismerd meg a Globális Widget-einket"
+
+#: core/admin/admin.php:279 core/admin/admin.php:481
+#: core/editor/notice-bar.php:29 core/role-manager/role-manager.php:170
+#: includes/editor-templates/panel-elements.php:23
+#: includes/editor-templates/panel-elements.php:57
+#: includes/managers/controls.php:976 includes/settings/settings.php:165
+#: includes/settings/settings.php:304 includes/settings/settings.php:326
+#: includes/settings/settings.php:348 includes/settings/settings.php:369
+#: assets/js/app-packages.js:3571 assets/js/app-packages.js:10613
+#: assets/js/app-packages.js:10903 assets/js/app-packages.js:10938
+#: assets/js/app.js:3529 assets/js/editor.js:4214
+msgid "Go Pro"
+msgstr "Váltson Pro-ra"
+
+#: includes/editor-templates/panel-elements.php:22
+msgid "Get more with Elementor Pro"
+msgstr "Hozz ki többet oldaladból az Elementor Pro használatával"
+
+#: includes/editor-templates/panel-elements.php:11
+#: assets/js/editor-document.js:4949 assets/js/editor.js:19954
+msgid "Global"
+msgstr "Globális"
+
+#: includes/widgets/common.php:498 includes/widgets/icon-list.php:263
+#: includes/widgets/text-editor.php:122 includes/widgets/video.php:608
+#: modules/shapes/widgets/text-path.php:203
+msgid "Off"
+msgstr "Ki"
+
+#: includes/widgets/common.php:497 includes/widgets/icon-list.php:264
+#: includes/widgets/text-editor.php:123 includes/widgets/video.php:609
+#: modules/shapes/widgets/text-path.php:202
+msgid "On"
+msgstr "Be"
+
+#: includes/widgets/button.php:96
+msgid "Extra Large"
+msgstr "Extra nagy"
+
+#: includes/widgets/button.php:92
+msgid "Extra Small"
+msgstr "Extra kicsi"
+
+#: includes/settings/settings.php:475
+msgid "Improve Elementor"
+msgstr "Elementor fejlesztése"
+
+#: includes/frontend.php:1111
+msgid "Invalid Data: The Template ID cannot be the same as the currently edited template. Please choose a different one."
+msgstr "Érvénytelen adatok: A sablon azonosítója nem lehet azonos a jelenleg szerkesztett sablonnal. Kérjük, válassz egy másikat."
+
+#: includes/base/widget-base.php:280 includes/base/widget-base.php:289
+msgid "Skin"
+msgstr "Kinézet"
+
+#: includes/editor-templates/panel.php:168
+msgid "%s are disabled"
+msgstr "%s letiltott"
+
+#: includes/editor-templates/panel.php:149
+msgid "Update changes to page"
+msgstr "Frissítse az oldal változásait"
+
+#: core/admin/admin-notices.php:240
+msgid "No thanks"
+msgstr "Köszönöm,nem"
+
+#: core/kits/documents/tabs/settings-layout.php:124
+msgid "Enter parent element selector to which stretched sections will fit to (e.g. #primary / .wrapper / main etc). Leave blank to fit to page width."
+msgstr "Add meg a szülő elemválasztót, amelybe az elnyújtott szakaszok illeszkednek (például #elsodleges / .csomagolo / fo stb.). Hagyd üresen, hogy illeszkedjen az oldalszélességhez."
+
+#: core/kits/documents/tabs/settings-layout.php:121
+msgid "Stretched Section Fit To"
+msgstr "Nyújtott szakasz töltse ki"
+
+#: core/kits/documents/tabs/settings-layout.php:73
+msgid "Sets the default width of the content area (Default: 1140)"
+msgstr "Beállítja a tartalom alapértelmezett szélességét (Alapértelmezett: 1140)"
+
+#: includes/elements/section.php:494
+msgid "Stretch the section to the full width of the page using JS."
+msgstr "Szakasz nyújtása teljes oldalszélességre, JS használatával."
+
+#: includes/elements/section.php:488
+msgid "Stretch Section"
+msgstr "Szakasz nyújtása"
+
+#: core/admin/admin-notices.php:229 includes/elements/section.php:494
+#: includes/settings/settings-page.php:374
+msgid "Learn more."
+msgstr "Tudj meg többet."
+
+#: includes/elements/section.php:1320 includes/elements/section.php:1331
+msgid "Reverse Columns"
+msgstr "Fordított oszlopok"
+
+#: core/breakpoints/manager.php:288
+#: core/settings/editor-preferences/model.php:133
+#: includes/elements/section.php:1331
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:4142
+msgid "Mobile"
+msgstr "Mobil"
+
+#: includes/controls/dimensions.php:135 includes/controls/dimensions.php:138
+msgid "Link values together"
+msgstr "Értékek összakapcsolása"
+
+#: includes/widgets/shortcode.php:42 includes/widgets/shortcode.php:99
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/template-library/sources/remote.php:46
+msgid "Remote"
+msgstr "Távoli"
+
+#: includes/template-library/sources/local.php:919
+msgid "Import Now"
+msgstr "Importálás most"
+
+#: includes/template-library/sources/local.php:910
+msgid "Import Templates"
+msgstr "Sablon importálása"
+
+#: includes/template-library/sources/local.php:882
+msgid "Export Template"
+msgstr "Sablon exportálása"
+
+#: includes/template-library/sources/local.php:468
+msgid "(no title)"
+msgstr "(nincs cím)"
+
+#: includes/template-library/sources/local.php:269
+msgctxt "Template Library"
+msgid "Type"
+msgstr "Típus"
+
+#: includes/template-library/sources/local.php:229
+msgctxt "Template Library"
+msgid "No Templates found in Trash"
+msgstr "Nem található sablon a Lomtárban"
+
+#: includes/template-library/sources/local.php:228
+msgctxt "Template Library"
+msgid "No Templates found"
+msgstr "Nem található sablon"
+
+#: includes/template-library/sources/local.php:227
+msgctxt "Template Library"
+msgid "Search Template"
+msgstr "Sablon keresése"
+
+#: includes/template-library/sources/local.php:226
+msgctxt "Template Library"
+msgid "View Template"
+msgstr "Sablon megtekintése"
+
+#: includes/template-library/sources/local.php:225
+msgctxt "Template Library"
+msgid "All Templates"
+msgstr "Összes sablon"
+
+#: includes/template-library/sources/local.php:224
+msgctxt "Template Library"
+msgid "New Template"
+msgstr "Új sablon"
+
+#: includes/template-library/sources/local.php:223
+msgctxt "Template Library"
+msgid "Edit Template"
+msgstr "Sablon szerkesztése"
+
+#: includes/template-library/sources/local.php:222
+msgctxt "Template Library"
+msgid "Add New Template"
+msgstr "Új sablon hozzáadása"
+
+#: includes/template-library/sources/local.php:221
+msgctxt "Template Library"
+msgid "Add New"
+msgstr "Új hozzáadása"
+
+#: includes/template-library/sources/local.php:220
+msgctxt "Template Library"
+msgid "Template"
+msgstr "Sablon"
+
+#: includes/template-library/sources/local.php:201
+msgid "Local"
+msgstr "Helyi"
+
+#: includes/settings/tools.php:280
+msgid "Elementor Library automatically updates on a daily basis. You can also manually update it by clicking on the sync button."
+msgstr "Az Elementor Könyvtár automatikusan frissül napi rendszerességgel. A szinkronizálás gombra kattintva manuálisan is frissítheted."
+
+#: includes/editor-templates/templates.php:14
+#: includes/editor-templates/templates.php:15 includes/settings/tools.php:276
+#: includes/settings/tools.php:279
+msgid "Sync Library"
+msgstr "Könyvtár szinkronizálása"
+
+#: core/common/modules/finder/categories/tools.php:28
+#: core/common/modules/finder/categories/tools.php:46
+#: includes/settings/tools.php:38 includes/settings/tools.php:39
+#: includes/settings/tools.php:402
+msgid "Tools"
+msgstr "Eszközök"
+
+#: core/document-types/page.php:37 modules/library/documents/page.php:56
+#: assets/js/editor.js:5904
+msgid "Page"
+msgstr "Oldal"
+
+#: includes/utils.php:203 assets/js/editor.js:6069
+msgid "An error occurred"
+msgstr "Hiba lépett fel"
+
+#: includes/editor-templates/templates.php:224
+msgid "Enter Template Name"
+msgstr "Írd be a sablon nevét"
+
+#: includes/editor-templates/templates.php:190
+#: includes/template-library/sources/local.php:1097
+#: assets/js/app-packages.js:7422 assets/js/app-packages.js:9745
+#: assets/js/app.js:6734 assets/js/app.js:9057
+msgid "Export"
+msgstr "Exportálás"
+
+#: includes/editor-templates/templates.php:134
+msgid "Stay tuned! More awesome templates coming real soon."
+msgstr "Maradj velünk! További fantasztikus sablonok jönnek hamarosan."
+
+#: includes/editor-templates/templates.php:37
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:1131
+msgid "Back to Library"
+msgstr "Vissza a könyvtárba"
+
+#: includes/editor-templates/templates.php:176
+#: includes/editor-templates/templates.php:200 assets/js/editor.js:4541
+msgid "Insert"
+msgstr "Beszúrás"
+
+#: core/common/modules/connect/apps/library.php:14 assets/js/editor.js:6276
+msgid "Library"
+msgstr "Könyvtár"
+
+#: includes/editor-templates/global.php:18
+#: includes/editor-templates/library-layout.php:15
+#: includes/editor-templates/library-layout.php:16
+#: includes/editor-templates/responsive-bar.php:65
+#: includes/editor-templates/responsive-bar.php:66 includes/frontend.php:1271
+#: assets/js/app-packages.js:3052 assets/js/app-packages.js:5471
+#: assets/js/app-packages.js:6089 assets/js/app.js:3010 assets/js/app.js:5160
+#: assets/js/app.js:5626 assets/js/editor.js:31936
+msgid "Close"
+msgstr "Bezár"
+
+#: includes/template-library/sources/local.php:377
+#: includes/template-library/sources/local.php:1634
+#: assets/js/app-packages.js:9376 assets/js/app.js:8688
+msgid "Saved Templates"
+msgstr "Elmentett sablonok"
+
+#: includes/editor-templates/hotkeys.php:134
+msgid "Template Library"
+msgstr "Sablon könyvtár"
+
+#: includes/editor-templates/global.php:30
+msgid "Select your Structure"
+msgstr "Válassz szerkezetet"
+
+#: includes/editor-templates/global.php:24
+msgid "Add Template"
+msgstr "Sablon hozzáadása"
+
+#. translators: %s: WordPress child themes documentation.
+#: modules/system-info/reporters/theme.php:207
+msgctxt "System Info"
+msgid "If you want to modify the source code of your theme, we recommend using a <a href=\"%s\">child theme</a>."
+msgstr "Ha módosítani szeretnéd a téma forráskódját, akkor javasoljuk a <a href=\"%s\">gyermek téma</a> használatát."
+
+#: core/admin/admin-notices.php:326 core/admin/admin-notices.php:367
+#: core/admin/admin-notices.php:409 core/admin/admin-notices.php:451
+#: core/admin/admin-notices.php:493
+#: core/app/modules/import-export/module.php:227
+#: core/app/modules/import-export/module.php:239
+#: core/experiments/manager.php:222 core/experiments/manager.php:235
+#: core/experiments/manager.php:244 core/experiments/manager.php:253
+#: core/experiments/manager.php:263 core/experiments/manager.php:287
+#: includes/controls/url.php:76 includes/settings/settings.php:364
+#: includes/settings/settings.php:497 modules/safe-mode/module.php:392
+#: modules/safe-mode/module.php:401
+#: modules/safe-mode/mu-plugin/elementor-safe-mode.php:104
+#: assets/js/app-packages.js:3968 assets/js/app-packages.js:7644
+#: assets/js/app-packages.js:8052 assets/js/app-packages.js:8159
+#: assets/js/app-packages.js:8682 assets/js/app-packages.js:8873
+#: assets/js/app-packages.js:8921 assets/js/app-packages.js:8962
+#: assets/js/app-packages.js:10701 assets/js/app-packages.js:10837
+#: assets/js/app.js:3926 assets/js/app.js:6956 assets/js/app.js:7364
+#: assets/js/app.js:7471 assets/js/app.js:7994 assets/js/app.js:8185
+#: assets/js/app.js:8233 assets/js/app.js:8274 assets/js/editor.js:9665
+#: assets/js/editor.js:13154 assets/js/editor.js:13186
+#: assets/js/editor.js:23150
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:905
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3501
+msgid "Learn More"
+msgstr "Tudj meg többet"
+
+#: core/kits/documents/tabs/global-typography.php:28
+#: core/kits/documents/tabs/global-typography.php:47
+#: assets/js/app-packages.js:9394 assets/js/app.js:8706
+#: assets/js/editor.js:31663
+msgid "Global Fonts"
+msgstr "Globális betűtípusok"
+
+#: includes/widgets/button.php:399 includes/widgets/icon-box.php:338
+#: includes/widgets/icon.php:286 includes/widgets/image-box.php:288
+#: includes/widgets/image.php:470 includes/widgets/social-icons.php:539
+#: modules/shapes/widgets/text-path.php:437
+msgid "Hover Animation"
+msgstr "Animáció az egérmutató ráhúzáskor"
+
+#: includes/controls/groups/background.php:486
+msgctxt "Background Control"
+msgid "Contain"
+msgstr "Tartalmaz"
+
+#: includes/elements/column.php:838 includes/elements/section.php:1281
+#: includes/widgets/common.php:284
+msgid "Fast"
+msgstr "Gyors"
+
+#: includes/elements/column.php:836 includes/elements/section.php:1279
+#: includes/widgets/common.php:282
+msgid "Slow"
+msgstr "Lassú"
+
+#: includes/settings/settings.php:457
+msgid "Disable Default Colors"
+msgstr "Alapértelmezett színek letiltása"
+
+#: core/schemes/typography.php:78
+msgid "Default Fonts"
+msgstr "Alapértelmezett betűtípusok"
+
+#: core/schemes/color.php:80
+msgid "Color Palettes"
+msgstr "Színpaletták"
+
+#: includes/elements/column.php:823 includes/elements/section.php:1266
+#: includes/widgets/common.php:269 includes/widgets/video.php:811
+msgid "Entrance Animation"
+msgstr "Belépési animáció"
+
+#: includes/controls/groups/box-shadow.php:73
+msgctxt "Box Shadow Control"
+msgid "Inset"
+msgstr "Belső"
+
+#: includes/controls/groups/box-shadow.php:61
+#: includes/controls/groups/box-shadow.php:96
+msgctxt "Box Shadow Control"
+msgid "Box Shadow"
+msgstr "Doboz árnyék"
+
+#: includes/controls/box-shadow.php:73 includes/controls/text-shadow.php:76
+#: includes/widgets/tabs.php:157
+msgid "Vertical"
+msgstr "Függőleges"
+
+#: includes/controls/box-shadow.php:68 includes/controls/text-shadow.php:71
+#: includes/widgets/tabs.php:156
+msgid "Horizontal"
+msgstr "Vízszintes"
+
+#: includes/controls/box-shadow.php:83
+msgid "Spread"
+msgstr "Terjedelem"
+
+#: includes/controls/box-shadow.php:78 includes/controls/text-shadow.php:66
+msgid "Blur"
+msgstr "Elhomályosítás"
+
+#: includes/widgets/testimonial.php:171
+msgid "Aside"
+msgstr "Mellette"
+
+#: includes/widgets/testimonial.php:45 includes/widgets/testimonial.php:88
+msgid "Testimonial"
+msgstr "Vélemény"
+
+#: includes/widgets/social-icons.php:189 includes/widgets/social-icons.php:347
+msgid "Official Color"
+msgstr "Hivatalos szín"
+
+#: includes/widgets/social-icons.php:261
+msgid "Rounded"
+msgstr "Lekerekített"
+
+#: includes/widgets/social-icons.php:42 includes/widgets/social-icons.php:85
+#: includes/widgets/social-icons.php:227
+msgid "Social Icons"
+msgstr "Közösségi ikonok"
+
+#: includes/widgets/progress.php:101
+msgid "My Skill"
+msgstr "Képességem"
+
+#: includes/widgets/audio.php:232
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: includes/widgets/audio.php:221
+msgid "Play Counts"
+msgstr "Lejátszások száma"
+
+#: includes/widgets/audio.php:210
+msgid "Comments"
+msgstr "Hozzászólások"
+
+#: includes/widgets/audio.php:199
+msgid "Share Button"
+msgstr "Megosztás gombok"
+
+#: includes/widgets/audio.php:174 includes/widgets/video.php:506
+msgid "Download Button"
+msgstr "Letöltés gomb"
+
+#: includes/widgets/audio.php:163
+msgid "Like Button"
+msgstr "Tetszik gomb"
+
+#: includes/widgets/audio.php:152
+msgid "Buy Button"
+msgstr "Vásárlás gomb"
+
+#: includes/widgets/audio.php:122
+msgid "Visual Player"
+msgstr "Vizuális lejátszó"
+
+#: includes/widgets/audio.php:53 includes/widgets/audio.php:96
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: includes/elements/column.php:347 includes/elements/section.php:626
+msgid "Background Overlay"
+msgstr "Háttér áttetszőség"
+
+#: includes/elements/section.php:287
+msgid "Extended"
+msgstr "Kiterjesztett"
+
+#: core/admin/feedback.php:134
+msgid "If you have a moment, please share why you are deactivating Elementor:"
+msgstr "Ha van egy kis időd, kérlek oszd meg velünk, miért kapcsolod ki az Elementort:"
+
+#: core/admin/feedback.php:126
+msgid "Quick Feedback"
+msgstr "Gyors visszajelzés"
+
+#: core/admin/feedback.php:118
+msgid "Please share the reason"
+msgstr "Kérlek, oszd meg velünk az okát"
+
+#: core/admin/feedback.php:117
+msgid "Other"
+msgstr "Egyéb"
+
+#: core/admin/feedback.php:108
+msgid "It's a temporary deactivation"
+msgstr "Ez egy ideiglenes kikapcsolás"
+
+#: core/admin/feedback.php:104
+msgid "I couldn't get the plugin to work"
+msgstr "Nem tudom működésre bírni a bővítményt"
+
+#: core/admin/feedback.php:101
+msgid "Please share which plugin"
+msgstr "Kérjük, oszd meg velünk, melyik bővítmény"
+
+#: core/admin/feedback.php:100
+msgid "I found a better plugin"
+msgstr "Találtam egy jobb bővítményt"
+
+#: core/admin/feedback.php:96
+msgid "I no longer need the plugin"
+msgstr "Többé nincs szükségem erre a bővítményre"
+
+#: core/admin/admin-notices.php:149 core/base/db-upgrades-manager.php:93
+msgid "Update Now"
+msgstr "Frissítés most"
+
+#. translators: %s: Elementor version.
+#: core/admin/admin-notices.php:136
+msgid "View Elementor version %s details"
+msgstr "Tekints meg az Elementor v%s részleteit"
+
+#. translators: 1: Details URL, 2: Accessibility text, 3: Version number, 4:
+#. Update URL, 5: Accessibility text.
+#: core/admin/admin-notices.php:132
+msgid "There is a new version of Elementor Page Builder available. <a href=\"%1$s\" class=\"thickbox open-plugin-details-modal\" aria-label=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\" class=\"update-link\" aria-label=\"%5$s\">update now</a>."
+msgstr "Elérhető az Elementor Page Builder új verziója. <a href=\"%1$s\" class=\"thickbox open-plugin-details-modal\" aria-label=\"%2$s\">A %3$s verzió részleteinek megtekintése</a> vagy <a href=\"%4$s\" class=\"update-link\" aria-label=\"%5$s\">frissítés most</a>."
+
+#: includes/widgets/image-carousel.php:186 includes/widgets/image.php:195
+msgid "Custom URL"
+msgstr "Egyéni URL"
+
+#: includes/editor-templates/hotkeys.php:43 assets/js/editor-document.js:12517
+#: assets/js/editor-document.js:13465 assets/js/editor-document.js:14899
+#: assets/js/editor.js:14446 assets/js/editor.js:16009
+#: assets/js/editor.js:25074 assets/js/editor.js:25946
+msgid "Paste"
+msgstr "Beillesztés"
+
+#: core/kits/documents/tabs/settings-background.php:18
+#: includes/elements/column.php:273 includes/elements/section.php:553
+#: includes/widgets/accordion.php:287 includes/widgets/accordion.php:444
+#: includes/widgets/button.php:328 includes/widgets/button.php:370
+#: includes/widgets/common.php:314 includes/widgets/toggle.php:314
+#: includes/widgets/toggle.php:471
+msgid "Background"
+msgstr "Háttér"
+
+#: includes/elements/section.php:289
+msgid "Wider"
+msgstr "Szélesebb"
+
+#: core/common/modules/finder/categories/general.php:29
+#: core/role-manager/role-manager.php:59 includes/managers/elements.php:279
+#: includes/settings/settings.php:436 includes/settings/tools.php:263
+msgid "General"
+msgstr "Általános"
+
+#: includes/widgets/video.php:480
+msgid "Intro Byline"
+msgstr "Byline bevezető"
+
+#: includes/widgets/accordion.php:416 includes/widgets/divider.php:760
+#: includes/widgets/divider.php:900 includes/widgets/icon-box.php:350
+#: includes/widgets/icon-box.php:517 includes/widgets/image-box.php:225
+#: includes/widgets/image-box.php:451 includes/widgets/image-carousel.php:553
+#: includes/widgets/image-gallery.php:191 includes/widgets/image.php:602
+#: includes/widgets/social-icons.php:428 includes/widgets/star-rating.php:291
+#: includes/widgets/toggle.php:443
+msgid "Spacing"
+msgstr "Térköz"
+
+#: includes/widgets/image-carousel.php:406
+#: includes/widgets/image-carousel.php:468
+msgid "Outside"
+msgstr "Kívül"
+
+#: includes/widgets/image-carousel.php:405
+#: includes/widgets/image-carousel.php:469
+msgid "Inside"
+msgstr "Belül"
+
+#: includes/controls/groups/background.php:765
+#: includes/widgets/image-carousel.php:363
+msgid "Direction"
+msgstr "Irány"
+
+#: includes/widgets/image-carousel.php:352
+msgid "Animation Speed"
+msgstr "Animáció sebessége"
+
+#: includes/widgets/audio.php:135 includes/widgets/image-carousel.php:250
+msgid "Additional Options"
+msgstr "További lehetőségek"
+
+#: includes/widgets/image-carousel.php:168
+msgid "Arrows and Dots"
+msgstr "Nyilak és pontok"
+
+#: includes/widgets/image-carousel.php:151
+msgid "Image Stretch"
+msgstr "Nyújtott kép"
+
+#: includes/widgets/image-carousel.php:45
+#: includes/widgets/image-carousel.php:88
+msgid "Image Carousel"
+msgstr "Kép körhinta"
+
+#: includes/elements/column.php:832 includes/elements/section.php:1275
+#: includes/widgets/common.php:278 includes/widgets/counter.php:159
+msgid "Animation Duration"
+msgstr "Animáció időtartama"
+
+#: includes/widgets/alert.php:194
+msgid "Left Border Width"
+msgstr "Bal szegély vastagsága"
+
+#: includes/controls/groups/image-size.php:297
+msgid "You can crop the original image size to any custom size. You can also set a single value for height or width in order to keep the original size ratio."
+msgstr "Az eredeti kép méretét bármilyen egyéni méretre vághatod. Az eredeti méretarány megtartása érdekében egyetlen magassági vagy szélességi értéket is beállíthatsz."
+
+#: includes/widgets/audio.php:243 includes/widgets/video.php:494
+msgid "Controls Color"
+msgstr "Kezelő színe"
+
+#: includes/widgets/video.php:466
+msgid "Intro Portrait"
+msgstr "Bevezető portré"
+
+#: includes/widgets/video.php:452
+msgid "Intro Title"
+msgstr "Bevezető cím"
+
+#: includes/widgets/video.php:320
+msgid "Loop"
+msgstr "Ismétlés"
+
+#: includes/widgets/video.php:268
+msgid "Video Options"
+msgstr "Videó beállítás"
+
+#: includes/widgets/video.php:115
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: includes/widgets/video.php:44 includes/widgets/video.php:103
+#: includes/widgets/video.php:623
+msgid "Video"
+msgstr "Video"
+
+#: includes/widgets/image-gallery.php:263
+msgid "Display"
+msgstr "Megjelenés"
+
+#: includes/controls/image-dimensions.php:81
+msgid "The server does not have ImageMagick or GD installed and/or enabled! Any of these libraries are required for WordPress to be able to resize images. Please contact your server administrator to enable this before continuing."
+msgstr "A kiszolgálón nincs ImageMagick vagy GD telepítve és/vagy engedélyezve! A WordPress képeinek átméretezéséhez ezen könyvtárak valamelyikére szükség van. Kérjük, lépj kapcsolatba a szerver rendszergazdájával, hogy engedélyezze azt."
+
+#: includes/controls/groups/image-size.php:295
+msgctxt "Image Size Control"
+msgid "Image Dimension"
+msgstr "Kép mérete"
+
+#: includes/controls/groups/image-size.php:378
+msgctxt "Image Size Control"
+msgid "Custom"
+msgstr "Egyéni"
+
+#: includes/controls/groups/border.php:67
+msgctxt "Border Control"
+msgid "Dashed"
+msgstr "Szaggatott"
+
+#: includes/controls/groups/border.php:66
+msgctxt "Border Control"
+msgid "Dotted"
+msgstr "Pontozott"
+
+#: includes/controls/groups/border.php:65
+msgctxt "Border Control"
+msgid "Double"
+msgstr "Dupla"
+
+#: includes/controls/groups/border.php:64
+msgctxt "Border Control"
+msgid "Solid"
+msgstr "Sima"
+
+#: includes/widgets/image-carousel.php:340
+msgid "Fade"
+msgstr "Áttűnés"
+
+#: includes/widgets/image-carousel.php:335
+msgid "Effect"
+msgstr "Hatás"
+
+#: includes/controls/groups/image-size.php:375
+msgctxt "Image Size Control"
+msgid "Full"
+msgstr "Teljes"
+
+#: includes/widgets/icon-box.php:493 includes/widgets/image-box.php:427
+msgid "Vertical Alignment"
+msgstr "Függőleges igazítás"
+
+#: includes/controls/groups/background.php:661
+#: includes/widgets/image-carousel.php:321
+msgid "Infinite Loop"
+msgstr "Végtelen ismétlés"
+
+#: includes/widgets/image-carousel.php:170
+#: includes/widgets/image-carousel.php:452
+msgid "Dots"
+msgstr "Pontok"
+
+#: includes/controls/groups/image-size.php:290
+msgctxt "Image Size Control"
+msgid "Image Size"
+msgstr "Kép méret"
+
+#: includes/controls/groups/typography.php:180
+msgctxt "Typography Control"
+msgid "None"
+msgstr "Egyik sem"
+
+#: includes/widgets/accordion.php:207 includes/widgets/icon-box.php:219
+#: includes/widgets/image-box.php:186 includes/widgets/toggle.php:211
+msgid "Title HTML Tag"
+msgstr "HTML címke címe"
+
+#: includes/widgets/icon-box.php:146 includes/widgets/image-box.php:123
+msgid "This is the heading"
+msgstr "Ez a címsor"
+
+#: includes/elements/column.php:785 includes/elements/section.php:1248
+#: includes/widgets/common.php:251
+msgid "Add your custom class WITHOUT the dot. e.g: my-class"
+msgstr "Add meg az egyéni CSS osztályod nevét a pont NÉLKÜL. pl: en-osztalyom"
+
+#: core/kits/documents/tabs/global-typography.php:178
+msgid "The list of fonts used if the chosen font is not available."
+msgstr "A használt betűkészletek listája, ha a választott betűkészlet nem érhető el."
+
+#: includes/managers/elements.php:308
+msgid "Pojo Themes"
+msgstr "Pojo téma"
+
+#: includes/widgets/wordpress.php:230
+msgid "Form"
+msgstr "Űrlap"
+
+#: modules/system-info/reporters/server.php:121
+msgctxt "System Info"
+msgid "We recommend to use php 5.4 or higher"
+msgstr "Javasoljuk a 5.4 vagy újabb PHP verzió használatát"
+
+#: includes/editor-templates/panel-elements.php:10
+#: assets/js/editor-document.js:4196 assets/js/editor-document.js:6138
+#: assets/js/editor-document.js:6669 assets/js/editor.js:19951
+msgid "Elements"
+msgstr "Elemek"
+
+#: core/admin/admin.php:275
+#: core/common/modules/finder/categories/settings.php:28
+#: core/dynamic-tags/base-tag.php:171 includes/editor-templates/panel.php:65
+#: includes/editor-templates/responsive-bar.php:61
+#: includes/managers/controls.php:304 includes/settings/settings.php:402
+#: assets/js/editor.js:5187 assets/js/editor.js:20705 assets/js/editor.js:32087
+msgid "Settings"
+msgstr "Beállítások"
+
+#: includes/controls/groups/typography.php:167
+msgctxt "Typography Control"
+msgid "Oblique"
+msgstr "Ferde"
+
+#: includes/controls/groups/typography.php:166
+msgctxt "Typography Control"
+msgid "Italic"
+msgstr "Dőlt"
+
+#: includes/controls/groups/typography.php:155
+#: includes/controls/groups/typography.php:165
+msgctxt "Typography Control"
+msgid "Normal"
+msgstr "Normál"
+
+#: includes/controls/groups/typography.php:154
+msgctxt "Typography Control"
+msgid "Capitalize"
+msgstr "Nagy kezdőbetűs"
+
+#: includes/controls/groups/typography.php:153
+msgctxt "Typography Control"
+msgid "Lowercase"
+msgstr "Kisbetűs"
+
+#: includes/controls/groups/typography.php:152
+msgctxt "Typography Control"
+msgid "Uppercase"
+msgstr "Nagybetűs"
+
+#. Author of the plugin
+msgid "Elementor.com"
+msgstr "Elementor.com"
+
+#: includes/widgets/video.php:592 includes/widgets/video.php:658
+msgid "Play Icon"
+msgstr "Lejátszás ikon"
+
+#: includes/widgets/video.php:544 includes/widgets/video.php:551
+msgid "Image Overlay"
+msgstr "Kép áttetszőség"
+
+#: includes/widgets/video.php:332
+msgid "Player Controls"
+msgstr "Lejátszó vezérlők"
+
+#: includes/widgets/video.php:436
+msgid "Suggested Videos"
+msgstr "Javasolt videók"
+
+#: includes/widgets/video.php:631
+msgid "Aspect Ratio"
+msgstr "Képarány"
+
+#: includes/widgets/video.php:114
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/widgets/toggle.php:113
+msgid "Toggle Content"
+msgstr "Toggle tartalom"
+
+#: includes/widgets/toggle.php:100
+msgid "Toggle Title"
+msgstr "Toggle cím"
+
+#: includes/widgets/toggle.php:133
+msgid "Toggle #2"
+msgstr "Toggle #2"
+
+#: includes/widgets/toggle.php:129
+msgid "Toggle #1"
+msgstr "Toggle #1"
+
+#: includes/widgets/toggle.php:124
+msgid "Toggle Items"
+msgstr "Toggle elemek"
+
+#: includes/widgets/toggle.php:46 includes/widgets/toggle.php:89
+#: includes/widgets/toggle.php:241
+msgid "Toggle"
+msgstr "Toggle"
+
+#: includes/widgets/text-editor.php:46 includes/widgets/text-editor.php:105
+#: includes/widgets/text-editor.php:180
+msgid "Text Editor"
+msgstr "Szöveg szerkesztő"
+
+#: includes/widgets/tabs.php:113 includes/widgets/tabs.php:114
+msgid "Tab Content"
+msgstr "Fül tartalma"
+
+#: includes/widgets/tabs.php:100 includes/widgets/tabs.php:101
+msgid "Tab Title"
+msgstr "Fül címe"
+
+#: includes/widgets/tabs.php:132
+msgid "Tab #2"
+msgstr "Fül #2"
+
+#: includes/widgets/tabs.php:128
+msgid "Tab #1"
+msgstr "Fül #1"
+
+#: includes/widgets/tabs.php:123
+msgid "Tabs Items"
+msgstr "Fül elemek"
+
+#: includes/widgets/tabs.php:46 includes/widgets/tabs.php:89
+#: includes/widgets/tabs.php:229
+msgid "Tabs"
+msgstr "Fülek"
+
+#: includes/widgets/image-carousel.php:271
+msgid "Pause on Hover"
+msgstr "Szünet ráhúzáskor"
+
+#: includes/widgets/image-carousel.php:306
+msgid "Autoplay Speed"
+msgstr "Automatikus lejátszás sebessége"
+
+#: includes/widgets/image-carousel.php:169
+#: includes/widgets/image-carousel.php:389
+msgid "Arrows"
+msgstr "Nyilak"
+
+#: includes/widgets/image-carousel.php:339
+msgid "Slide"
+msgstr "Csúszás"
+
+#: includes/widgets/sidebar.php:89 includes/widgets/sidebar.php:109
+msgid "Choose Sidebar"
+msgstr "Oldalsáv kiválasztása"
+
+#: includes/widgets/sidebar.php:87
+msgid "No sidebars were found"
+msgstr "Nem található oldalsáv"
+
+#: includes/widgets/sidebar.php:42 includes/widgets/sidebar.php:102
+msgid "Sidebar"
+msgstr "Oldalsáv"
+
+#: includes/widgets/progress.php:275
+msgid "Title Style"
+msgstr "Címsor stílusa"
+
+#: includes/widgets/progress.php:159
+msgid "Web Designer"
+msgstr "Web Designer"
+
+#: includes/widgets/progress.php:158
+msgid "e.g. Web Designer"
+msgstr "pl. Web Designer"
+
+#: includes/widgets/progress.php:153 includes/widgets/progress.php:234
+msgid "Inner Text"
+msgstr "Belső szöveg"
+
+#: includes/widgets/progress.php:140
+msgid "Display Percentage"
+msgstr "Százalék megjelenítése"
+
+#: includes/widgets/progress.php:125
+msgid "Percentage"
+msgstr "Százalék"
+
+#: includes/widgets/progress.php:45 includes/widgets/progress.php:88
+#: includes/widgets/progress.php:178
+msgid "Progress Bar"
+msgstr "Folyamatmutató"
+
+#: includes/widgets/menu-anchor.php:95
+msgid "For Example: About"
+msgstr "Például: Névjegy"
+
+#: includes/widgets/menu-anchor.php:93
+msgid "The ID of Menu Anchor."
+msgstr "A menühorgony azonosítója."
+
+#: includes/widgets/menu-anchor.php:96
+msgid "This ID will be the CSS ID you will have to use in your own page, Without #."
+msgstr "Ez az azonosító lesz a CSS-azonosító, amelyet a saját oldaladon kell használni, # nélkül."
+
+#: includes/widgets/menu-anchor.php:86
+msgid "Anchor"
+msgstr "Horgony"
+
+#: includes/widgets/menu-anchor.php:43
+msgid "Menu Anchor"
+msgstr "Horgony menü"
+
+#: includes/widgets/image-box.php:161 includes/widgets/testimonial.php:167
+msgid "Image Position"
+msgstr "Kép pozíció"
+
+#: includes/widgets/image-carousel.php:569
+#: includes/widgets/image-gallery.php:208
+msgid "Image Spacing"
+msgstr "Kép térköz"
+
+#: includes/widgets/testimonial.php:280
+msgid "Image Size"
+msgstr "Kép méret"
+
+#: includes/widgets/image-box.php:45 includes/widgets/image-box.php:88
+msgid "Image Box"
+msgstr "Kép doboz"
+
+#: includes/widgets/social-icons.php:485
+msgid "Icon Hover"
+msgstr "Ikon ráhúzás"
+
+#: includes/widgets/accordion.php:245 includes/widgets/divider.php:939
+#: includes/widgets/icon-box.php:425 includes/widgets/icon.php:358
+#: includes/widgets/tabs.php:260 includes/widgets/text-editor.php:377
+#: includes/widgets/toggle.php:249
+msgid "Border Width"
+msgstr "Keret szélessége"
+
+#: includes/widgets/divider.php:917 includes/widgets/icon-box.php:410
+#: includes/widgets/icon.php:336 modules/shapes/widgets/text-path.php:270
+msgid "Rotate"
+msgstr "Forgatás"
+
+#: includes/widgets/divider.php:859 includes/widgets/icon-box.php:284
+#: includes/widgets/icon-box.php:322 includes/widgets/icon.php:229
+#: includes/widgets/icon.php:269 includes/widgets/social-icons.php:212
+#: includes/widgets/social-icons.php:370 includes/widgets/social-icons.php:508
+#: includes/widgets/text-editor.php:293
+msgid "Secondary Color"
+msgstr "Másodlagos szín"
+
+#: includes/widgets/divider.php:842 includes/widgets/icon-box.php:268
+#: includes/widgets/icon-box.php:309 includes/widgets/icon.php:212
+#: includes/widgets/icon.php:255 includes/widgets/social-icons.php:198
+#: includes/widgets/social-icons.php:356 includes/widgets/social-icons.php:493
+#: includes/widgets/text-editor.php:278
+msgid "Primary Color"
+msgstr "Elsődleges szín"
+
+#: includes/widgets/icon-box.php:127 includes/widgets/icon.php:142
+#: includes/widgets/social-icons.php:262
+msgid "Square"
+msgstr "Négyzet"
+
+#: includes/widgets/common.php:125 includes/widgets/icon-box.php:126
+#: includes/widgets/icon.php:141 includes/widgets/social-icons.php:263
+#: modules/shapes/module.php:22
+msgid "Circle"
+msgstr "Kör"
+
+#: includes/widgets/common.php:506 includes/widgets/icon-box.php:123
+#: includes/widgets/icon.php:138 includes/widgets/social-icons.php:257
+msgid "Shape"
+msgstr "Forma"
+
+#: includes/widgets/divider.php:795 includes/widgets/icon-box.php:113
+#: includes/widgets/icon.php:128 includes/widgets/text-editor.php:268
+msgid "Framed"
+msgstr "Keretezett"
+
+#: includes/widgets/divider.php:794 includes/widgets/icon-box.php:112
+#: includes/widgets/icon.php:127 includes/widgets/text-editor.php:267
+msgid "Stacked"
+msgstr "Halmozott"
+
+#: includes/widgets/icon-list.php:517
+msgid "Text Indent"
+msgstr "Szöveg behúzás"
+
+#: includes/widgets/icon-list.php:123 includes/widgets/icon-list.php:124
+msgid "List Item"
+msgstr "Listaelem"
+
+#: includes/widgets/icon-list.php:178
+msgid "List Item #3"
+msgstr "Listaelem #3"
+
+#: includes/widgets/icon-list.php:171
+msgid "List Item #2"
+msgstr "Listaelem #2"
+
+#: includes/widgets/icon-list.php:164
+msgid "List Item #1"
+msgstr "Listaelem #1"
+
+#: includes/widgets/icon-list.php:45 includes/widgets/icon-list.php:88
+msgid "Icon List"
+msgstr "Ikon lista"
+
+#: includes/widgets/button.php:154 includes/widgets/icon-box.php:176
+#: includes/widgets/icon-list.php:152 includes/widgets/icon.php:160
+#: includes/widgets/image-box.php:153 includes/widgets/image-carousel.php:196
+#: includes/widgets/image.php:208 includes/widgets/social-icons.php:178
+#: includes/widgets/testimonial.php:160
+msgid "https://your-link.com"
+msgstr "https://sajat-linked.com"
+
+#: includes/widgets/button.php:230
+msgid "Icon Spacing"
+msgstr "Ikon térköz"
+
+#: includes/widgets/icon-box.php:45 includes/widgets/icon-box.php:88
+msgid "Icon Box"
+msgstr "Ikon doboz"
+
+#: includes/widgets/html.php:85
+msgid "HTML Code"
+msgstr "HTML kód"
+
+#: includes/widgets/html.php:42
+msgid "HTML"
+msgstr "HTML"
+
+#: core/kits/documents/tabs/theme-style-typography.php:191
+msgid "H6"
+msgstr "H6"
+
+#: core/kits/documents/tabs/theme-style-typography.php:190
+msgid "H5"
+msgstr "H5"
+
+#: core/kits/documents/tabs/theme-style-typography.php:189
+msgid "H4"
+msgstr "H4"
+
+#: core/kits/documents/tabs/theme-style-typography.php:188
+msgid "H3"
+msgstr "H3"
+
+#: core/kits/documents/tabs/theme-style-typography.php:187
+msgid "H2"
+msgstr "H2"
+
+#: core/kits/documents/tabs/theme-style-typography.php:186
+msgid "H1"
+msgstr "H1"
+
+#: includes/elements/column.php:261 includes/elements/section.php:518
+#: includes/widgets/divider.php:525 includes/widgets/heading.php:156
+msgid "HTML Tag"
+msgstr "HTML Címke"
+
+#: includes/widgets/alert.php:113 includes/widgets/heading.php:116
+#: includes/widgets/icon-box.php:147 includes/widgets/image-box.php:124
+#: includes/widgets/progress.php:100
+msgid "Enter your title"
+msgstr "Írd be a címsorod"
+
+#: includes/widgets/heading.php:45
+msgid "Heading"
+msgstr "Címsor"
+
+#: includes/widgets/google-maps.php:127
+msgid "London Eye, London, United Kingdom"
+msgstr "London Eye, London, United Kingdom"
+
+#: includes/widgets/google-maps.php:103 includes/widgets/google-maps.php:199
+msgid "Map"
+msgstr "Térkép"
+
+#: includes/widgets/google-maps.php:44
+msgid "Google Maps"
+msgstr "Google térkép"
+
+#: core/kits/documents/tabs/settings-lightbox.php:101
+#: core/kits/documents/tabs/settings-lightbox.php:118
+#: includes/widgets/image-carousel.php:224
+#: includes/widgets/image-carousel.php:230
+#: includes/widgets/image-carousel.php:615
+#: includes/widgets/image-gallery.php:255 includes/widgets/image.php:159
+#: includes/widgets/image.php:516
+msgid "Caption"
+msgstr "Felirat"
+
+#: core/kits/documents/tabs/theme-style-images.php:21
+#: core/kits/documents/tabs/theme-style-images.php:51
+#: includes/widgets/image-gallery.php:183
+msgid "Images"
+msgstr "Képek"
+
+#: includes/widgets/image-gallery.php:163
+msgid "Random"
+msgstr "Véletlen"
+
+#: includes/widgets/image-carousel.php:185
+#: includes/widgets/image-gallery.php:132 includes/widgets/image.php:194
+msgid "Media File"
+msgstr "Média fájl"
+
+#: includes/widgets/image-gallery.php:133
+msgid "Attachment Page"
+msgstr "Csatolmány oldal"
+
+#: includes/controls/gallery.php:88 includes/widgets/image-carousel.php:95
+#: includes/widgets/image-gallery.php:94
+msgid "Add Images"
+msgstr "Képek hozzáadása"
+
+#: includes/widgets/image-gallery.php:87
+msgid "Image Gallery"
+msgstr "Kép galéria"
+
+#: includes/widgets/divider.php:677 includes/widgets/star-rating.php:246
+msgid "Gap"
+msgstr "Rés"
+
+#: core/kits/documents/tabs/theme-style-form-fields.php:78
+#: core/kits/documents/tabs/theme-style-typography.php:133
+#: core/kits/documents/tabs/theme-style-typography.php:163
+#: core/kits/documents/tabs/theme-style-typography.php:209
+#: includes/controls/box-shadow.php:104 includes/controls/text-shadow.php:97
+#: includes/elements/column.php:417 includes/elements/section.php:708
+#: includes/elements/section.php:975 includes/widgets/accordion.php:298
+#: includes/widgets/accordion.php:392 includes/widgets/accordion.php:455
+#: includes/widgets/divider.php:576 includes/widgets/divider.php:711
+#: includes/widgets/icon-box.php:534 includes/widgets/icon-box.php:577
+#: includes/widgets/icon-list.php:368 includes/widgets/icon-list.php:396
+#: includes/widgets/image-box.php:468 includes/widgets/image-box.php:511
+#: includes/widgets/image-carousel.php:438
+#: includes/widgets/image-carousel.php:501 includes/widgets/progress.php:186
+#: includes/widgets/progress.php:243 includes/widgets/social-icons.php:185
+#: includes/widgets/social-icons.php:343 includes/widgets/star-rating.php:309
+#: includes/widgets/tabs.php:312 includes/widgets/tabs.php:397
+#: includes/widgets/toggle.php:326 includes/widgets/toggle.php:419
+#: includes/widgets/toggle.php:482 includes/widgets/video.php:671
+#: modules/shapes/widgets/text-path.php:401
+#: modules/shapes/widgets/text-path.php:425
+#: modules/shapes/widgets/text-path.php:499
+#: modules/shapes/widgets/text-path.php:519
+#: modules/shapes/widgets/text-path.php:565
+#: modules/shapes/widgets/text-path.php:585 assets/js/editor.js:32228
+#: assets/js/editor.js:32274
+msgid "Color"
+msgstr "Szín"
+
+#: includes/widgets/divider.php:592 includes/widgets/icon-list.php:297
+msgid "Weight"
+msgstr "Vastagság"
+
+#: includes/widgets/spacer.php:42 includes/widgets/spacer.php:101
+msgid "Spacer"
+msgstr "Térköz"
+
+#: includes/widgets/divider.php:46 includes/widgets/divider.php:356
+#: includes/widgets/divider.php:515 includes/widgets/divider.php:565
+#: includes/widgets/icon-list.php:261
+msgid "Divider"
+msgstr "Elválasztó"
+
+#: includes/widgets/counter.php:222
+msgid "Number"
+msgstr "Szám"
+
+#: includes/widgets/counter.php:203 includes/widgets/counter.php:204
+msgid "Cool Number"
+msgstr "Jó szám"
+
+#: includes/widgets/counter.php:152
+msgid "Plus"
+msgstr "Plusz"
+
+#: includes/widgets/counter.php:146
+msgid "Number Suffix"
+msgstr "Szám utótag"
+
+#: includes/widgets/counter.php:133
+msgid "Number Prefix"
+msgstr "Szám előtag"
+
+#: includes/widgets/counter.php:121
+msgid "Ending Number"
+msgstr "Befejező szám"
+
+#: includes/widgets/counter.php:109
+msgid "Starting Number"
+msgstr "Kezdőszám"
+
+#: core/kits/documents/tabs/settings-lightbox.php:56
+#: includes/widgets/counter.php:45 includes/widgets/counter.php:102
+msgid "Counter"
+msgstr "Számláló"
+
+#: includes/widgets/audio.php:144 includes/widgets/image-carousel.php:257
+#: includes/widgets/video.php:277
+msgid "Autoplay"
+msgstr "Automatikus lejátszás"
+
+#: includes/widgets/image-carousel.php:135
+msgid "Slides to Scroll"
+msgstr "Diák tekerése"
+
+#: includes/widgets/image-carousel.php:119
+msgid "Slides to Show"
+msgstr "Diák mutatása"
+
+#: includes/controls/media.php:191 includes/widgets/image-box.php:95
+#: includes/widgets/image.php:111 includes/widgets/testimonial.php:108
+#: includes/widgets/video.php:562
+msgid "Choose Image"
+msgstr "Kép kiválasztása"
+
+#: includes/widgets/common.php:520 includes/widgets/image-box.php:217
+#: includes/widgets/image-carousel.php:517 includes/widgets/image.php:45
+#: includes/widgets/image.php:104 includes/widgets/image.php:247
+#: includes/widgets/testimonial.php:269
+msgid "Image"
+msgstr "Kép"
+
+#: includes/elements/column.php:502 includes/elements/section.php:809
+#: includes/widgets/common.php:381
+msgid "Border"
+msgstr "Szegély"
+
+#: core/dynamic-tags/tag.php:102 includes/widgets/button.php:219
+msgid "After"
+msgstr "Utána"
+
+#: core/dynamic-tags/tag.php:95 includes/widgets/button.php:218
+msgid "Before"
+msgstr "Előtte"
+
+#: includes/widgets/button.php:214 includes/widgets/icon-box.php:184
+msgid "Icon Position"
+msgstr "Ikon pozíció"
+
+#: includes/widgets/accordion.php:149 includes/widgets/accordion.php:361
+#: includes/widgets/button.php:203 includes/widgets/divider.php:487
+#: includes/widgets/divider.php:548 includes/widgets/divider.php:779
+#: includes/widgets/icon-box.php:95 includes/widgets/icon-box.php:241
+#: includes/widgets/icon-list.php:134 includes/widgets/icon-list.php:388
+#: includes/widgets/icon.php:44 includes/widgets/icon.php:103
+#: includes/widgets/icon.php:110 includes/widgets/icon.php:195
+#: includes/widgets/social-icons.php:94 includes/widgets/social-icons.php:335
+#: includes/widgets/star-rating.php:123 includes/widgets/toggle.php:153
+#: includes/widgets/toggle.php:388
+msgid "Icon"
+msgstr "Ikon"
+
+#: includes/widgets/button.php:192 includes/widgets/common.php:558
+#: includes/widgets/divider.php:617 includes/widgets/divider.php:805
+#: includes/widgets/heading.php:139 includes/widgets/icon-box.php:373
+#: includes/widgets/icon-list.php:425 includes/widgets/icon.php:298
+#: includes/widgets/image-carousel.php:418
+#: includes/widgets/image-carousel.php:481
+#: includes/widgets/social-icons.php:385 includes/widgets/star-rating.php:274
+#: includes/widgets/text-editor.php:316 includes/widgets/video.php:686
+#: modules/shapes/widgets/text-path.php:234
+msgid "Size"
+msgstr "Méret"
+
+#: includes/elements/column.php:702 includes/elements/section.php:1159
+#: includes/widgets/button.php:180 includes/widgets/heading.php:192
+#: includes/widgets/icon-box.php:480 includes/widgets/image-box.php:414
+#: includes/widgets/image-carousel.php:642
+#: includes/widgets/image-gallery.php:295 includes/widgets/image.php:543
+#: includes/widgets/star-rating.php:186 includes/widgets/tabs.php:183
+#: includes/widgets/tabs.php:213 includes/widgets/text-editor.php:204
+msgid "Justified"
+msgstr "Sorkizárt"
+
+#: includes/widgets/accordion.php:372 includes/widgets/button.php:164
+#: includes/widgets/divider.php:448 includes/widgets/heading.php:176
+#: includes/widgets/icon-box.php:464 includes/widgets/icon-list.php:238
+#: includes/widgets/icon-list.php:449 includes/widgets/icon.php:167
+#: includes/widgets/image-box.php:398 includes/widgets/image-carousel.php:626
+#: includes/widgets/image-gallery.php:279 includes/widgets/image.php:134
+#: includes/widgets/image.php:527 includes/widgets/social-icons.php:297
+#: includes/widgets/star-rating.php:170 includes/widgets/tabs.php:167
+#: includes/widgets/tabs.php:197 includes/widgets/tabs.php:360
+#: includes/widgets/testimonial.php:185 includes/widgets/text-editor.php:188
+#: includes/widgets/toggle.php:399 modules/shapes/widgets/text-path.php:155
+msgid "Alignment"
+msgstr "Igazítás"
+
+#: includes/widgets/heading.php:148
+msgid "XXL"
+msgstr "XXL"
+
+#: includes/widgets/heading.php:147
+msgid "XL"
+msgstr "XL"
+
+#: includes/widgets/button.php:95 includes/widgets/heading.php:146
+msgid "Large"
+msgstr "Nagy"
+
+#: includes/widgets/button.php:94 includes/widgets/heading.php:145
+msgid "Medium"
+msgstr "Közepes"
+
+#: includes/widgets/button.php:93 includes/widgets/heading.php:144
+msgid "Small"
+msgstr "Kicsi"
+
+#: includes/widgets/button.php:46 includes/widgets/button.php:112
+#: includes/widgets/button.php:279
+msgid "Button"
+msgstr "Gomb"
+
+#: core/common/modules/finder/categories/edit.php:30
+#: includes/controls/popover-toggle.php:68
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: core/kits/documents/tabs/theme-style-buttons.php:153
+#: core/kits/documents/tabs/theme-style-buttons.php:228
+#: core/kits/documents/tabs/theme-style-form-fields.php:222
+#: core/kits/documents/tabs/theme-style-images.php:83
+#: core/kits/documents/tabs/theme-style-images.php:154
+#: includes/elements/column.php:527 includes/elements/column.php:564
+#: includes/elements/section.php:833 includes/elements/section.php:869
+#: includes/widgets/button.php:420 includes/widgets/common.php:406
+#: includes/widgets/common.php:443 includes/widgets/divider.php:953
+#: includes/widgets/icon-box.php:439 includes/widgets/icon.php:372
+#: includes/widgets/image-box.php:276 includes/widgets/image-carousel.php:601
+#: includes/widgets/image-gallery.php:241 includes/widgets/image.php:491
+#: includes/widgets/progress.php:222 includes/widgets/social-icons.php:471
+#: includes/widgets/testimonial.php:307 includes/widgets/text-editor.php:358
+msgid "Border Radius"
+msgstr "Szegély sugár"
+
+#: core/kits/documents/tabs/settings-lightbox.php:103
+#: core/kits/documents/tabs/settings-lightbox.php:113
+#: core/kits/documents/tabs/settings-lightbox.php:120
+#: includes/compatibility.php:176 includes/widgets/alert.php:253
+#: includes/widgets/icon-box.php:568 includes/widgets/image-box.php:502
+#: includes/widgets/image-carousel.php:231
+msgid "Description"
+msgstr "Leírás"
+
+#: core/base/document.php:1532
+#: core/kits/documents/tabs/settings-lightbox.php:96
+#: core/kits/documents/tabs/settings-lightbox.php:100
+#: core/kits/documents/tabs/settings-lightbox.php:117
+#: includes/elements/column.php:122 includes/elements/section.php:236
+#: includes/widgets/accordion.php:279 includes/widgets/alert.php:213
+#: includes/widgets/common.php:184 includes/widgets/counter.php:197
+#: includes/widgets/counter.php:265 includes/widgets/heading.php:104
+#: includes/widgets/heading.php:111 includes/widgets/heading.php:217
+#: includes/widgets/icon-box.php:508 includes/widgets/image-box.php:442
+#: includes/widgets/image-carousel.php:229 includes/widgets/progress.php:95
+#: includes/widgets/star-rating.php:158 includes/widgets/star-rating.php:202
+#: includes/widgets/tabs.php:303 includes/widgets/testimonial.php:143
+#: includes/widgets/testimonial.php:367 includes/widgets/toggle.php:306
+msgid "Title"
+msgstr "Cím"
+
+#: core/kits/documents/tabs/settings-lightbox.php:130
+#: core/kits/documents/tabs/theme-style-form-fields.php:189
+#: includes/widgets/alert.php:172 includes/widgets/image.php:572
+#: includes/widgets/progress.php:200 includes/widgets/tabs.php:291
+#: includes/widgets/video.php:739
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: includes/widgets/alert.php:145 includes/widgets/audio.php:154
+#: includes/widgets/audio.php:165 includes/widgets/audio.php:176
+#: includes/widgets/audio.php:187 includes/widgets/audio.php:201
+#: includes/widgets/audio.php:212 includes/widgets/audio.php:223
+#: includes/widgets/audio.php:234 includes/widgets/counter.php:174
+#: includes/widgets/image-gallery.php:268 includes/widgets/progress.php:145
+#: includes/widgets/video.php:334 includes/widgets/video.php:349
+#: includes/widgets/video.php:376 includes/widgets/video.php:454
+#: includes/widgets/video.php:468 includes/widgets/video.php:482
+#: includes/widgets/video.php:508 includes/widgets/video.php:553
+msgid "Hide"
+msgstr "Elrejt"
+
+#: includes/widgets/alert.php:144 includes/widgets/audio.php:155
+#: includes/widgets/audio.php:166 includes/widgets/audio.php:177
+#: includes/widgets/audio.php:188 includes/widgets/audio.php:202
+#: includes/widgets/audio.php:213 includes/widgets/audio.php:224
+#: includes/widgets/audio.php:235 includes/widgets/counter.php:173
+#: includes/widgets/image-gallery.php:267 includes/widgets/progress.php:144
+#: includes/widgets/video.php:335 includes/widgets/video.php:350
+#: includes/widgets/video.php:377 includes/widgets/video.php:455
+#: includes/widgets/video.php:469 includes/widgets/video.php:483
+#: includes/widgets/video.php:509 includes/widgets/video.php:554
+msgid "Show"
+msgstr "Mutat"
+
+#: includes/widgets/alert.php:140
+msgid "Dismiss Button"
+msgstr "Elvetés gomb"
+
+#: includes/widgets/alert.php:128
+msgid "I am a description. Click the edit button to change this text."
+msgstr "Ez egy leírás. Kattints a szerkesztés gombra és cseréld a szöveget."
+
+#: includes/widgets/accordion.php:97 includes/widgets/alert.php:111
+#: includes/widgets/icon-box.php:141 includes/widgets/image-box.php:118
+#: includes/widgets/tabs.php:98 includes/widgets/toggle.php:98
+msgid "Title & Description"
+msgstr "Cím & Leírás"
+
+#: includes/widgets/alert.php:102 includes/widgets/button.php:127
+#: includes/widgets/progress.php:117
+msgid "Danger"
+msgstr "Veszély"
+
+#: includes/widgets/alert.php:101 includes/widgets/button.php:126
+#: includes/widgets/progress.php:116
+msgid "Warning"
+msgstr "Figyelem"
+
+#: includes/widgets/alert.php:100 includes/widgets/button.php:125
+#: includes/widgets/progress.php:115
+msgid "Success"
+msgstr "Siker"
+
+#: includes/widgets/alert.php:99 includes/widgets/button.php:124
+#: includes/widgets/progress.php:114 assets/js/app-packages.js:10690
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:3102
+msgid "Info"
+msgstr "Információ"
+
+#: includes/editor-templates/templates.php:113
+#: includes/elements/section.php:964
+#: includes/template-library/sources/local.php:1605
+#: includes/widgets/alert.php:95 includes/widgets/button.php:119
+#: includes/widgets/progress.php:109
+msgid "Type"
+msgstr "Típus"
+
+#: includes/widgets/alert.php:45 includes/widgets/alert.php:88
+#: includes/widgets/alert.php:164
+msgid "Alert"
+msgstr "Riasztás"
+
+#: includes/widgets/accordion.php:313 includes/widgets/accordion.php:404
+#: includes/widgets/tabs.php:326 includes/widgets/toggle.php:341
+#: includes/widgets/toggle.php:431
+msgid "Active Color"
+msgstr "Aktív szín"
+
+#: includes/widgets/accordion.php:264 includes/widgets/alert.php:183
+#: includes/widgets/button.php:385 includes/widgets/social-icons.php:524
+#: includes/widgets/tabs.php:280 includes/widgets/toggle.php:267
+msgid "Border Color"
+msgstr "Szegélyszín"
+
+#: includes/widgets/accordion.php:140 includes/widgets/alert.php:153
+#: includes/widgets/audio.php:251 includes/widgets/button.php:247
+#: includes/widgets/counter.php:211 includes/widgets/divider.php:501
+#: includes/widgets/divider.php:790 includes/widgets/google-maps.php:188
+#: includes/widgets/heading.php:206 includes/widgets/icon-box.php:108
+#: includes/widgets/icon.php:123 includes/widgets/image-box.php:206
+#: includes/widgets/image-carousel.php:239
+#: includes/widgets/image-gallery.php:172 includes/widgets/image.php:236
+#: includes/widgets/progress.php:167 includes/widgets/social-icons.php:324
+#: includes/widgets/spacer.php:133 includes/widgets/tabs.php:143
+#: includes/widgets/testimonial.php:212 includes/widgets/text-editor.php:263
+#: includes/widgets/toggle.php:144 includes/widgets/video.php:533
+msgid "View"
+msgstr "Nézet"
+
+#: includes/widgets/accordion.php:112
+msgid "Accordion Content"
+msgstr "Harmonika tartalom"
+
+#: includes/widgets/accordion.php:99
+msgid "Accordion Title"
+msgstr "Harmonika cím"
+
+#: includes/widgets/accordion.php:129
+msgid "Accordion #2"
+msgstr "Harmonika #2"
+
+#: includes/widgets/accordion.php:125
+msgid "Accordion #1"
+msgstr "Harmonika #1"
+
+#: includes/widgets/accordion.php:120
+msgid "Accordion Items"
+msgstr "Harmonika elemek"
+
+#: includes/widgets/accordion.php:45 includes/widgets/accordion.php:88
+#: includes/widgets/accordion.php:237
+msgid "Accordion"
+msgstr "Harmonika"
+
+#: core/admin/admin-notices.php:235
+msgid "Sure! I'd love to help"
+msgstr "Persze! Szívesen segítek"
+
+#: modules/system-info/module.php:199
+msgid "You don't have permissions to download this file"
+msgstr "Nincs engedélye ennek a fájlnak a letöltésére"
+
+#: modules/system-info/module.php:181
+msgid "Download System Info"
+msgstr "Rendszer információ letöltése"
+
+#: modules/system-info/module.php:161
+msgid "You can copy the below info as simple text with Ctrl+C / Ctrl+V:"
+msgstr "Az alábbi információkat kimásolhatod egyszerű szövegként a Ctrl+C / Ctrl+V billentyűkombinációval:"
+
+#: modules/system-info/module.php:159
+msgid "Copy & Paste Info"
+msgstr "Információ Másolása & Beillesztése"
+
+#: core/common/modules/finder/categories/general.php:51
+#: modules/system-info/module.php:128 modules/system-info/module.php:157
+msgid "System Info"
+msgstr "Rendszer információ"
+
+#: core/experiments/manager.php:306 core/experiments/manager.php:480
+msgid "Inactive"
+msgstr "Inaktív"
+
+#: core/experiments/manager.php:305 core/experiments/manager.php:480
+msgid "Active"
+msgstr "Aktív"
+
+#: includes/editor-templates/templates.php:109
+#: includes/widgets/testimonial.php:131 includes/widgets/testimonial.php:322
+msgid "Name"
+msgstr "Név"
+
+#: core/common/modules/finder/categories/site.php:60
+msgid "Themes"
+msgstr "Témák"
+
+#: includes/controls/switcher.php:73 includes/managers/icons.php:480
+#: includes/widgets/audio.php:127 includes/widgets/image-carousel.php:155
+#: includes/widgets/image-carousel.php:213
+#: includes/widgets/image-carousel.php:262
+#: includes/widgets/image-carousel.php:276
+#: includes/widgets/image-carousel.php:294
+#: includes/widgets/image-carousel.php:326
+#: includes/widgets/image-gallery.php:148 includes/widgets/image.php:225
+#: assets/js/editor.js:5801
+msgid "No"
+msgstr "Nem"
+
+#: includes/controls/switcher.php:74 includes/managers/icons.php:481
+#: includes/widgets/audio.php:126 includes/widgets/image-carousel.php:156
+#: includes/widgets/image-carousel.php:212
+#: includes/widgets/image-carousel.php:261
+#: includes/widgets/image-carousel.php:275
+#: includes/widgets/image-carousel.php:293
+#: includes/widgets/image-carousel.php:325
+#: includes/widgets/image-gallery.php:147 includes/widgets/image.php:224
+#: assets/js/editor.js:5800
+msgid "Yes"
+msgstr "Igen"
+
+#: core/role-manager/role-manager.php:64
+msgid "Exclude Roles"
+msgstr "Szerepek kizárása"
+
+#: includes/settings/settings.php:448
+msgid "Post Types"
+msgstr "Bejegyzés típusok"
+
+#: core/base/document.php:1524
+#: core/common/modules/finder/categories/settings.php:46
+msgid "General Settings"
+msgstr "Általános beállítások"
+
+#: core/schemes/typography.php:96
+msgid "Accent Text"
+msgstr "Hangsúlyos szöveg"
+
+#: core/schemes/typography.php:95
+msgid "Body Text"
+msgstr "Szövegtörzs"
+
+#: core/schemes/typography.php:94
+msgid "Secondary Headline"
+msgstr "Másodlagos címsor"
+
+#: core/schemes/typography.php:93
+msgid "Primary Headline"
+msgstr "Elsődleges címsor"
+
+#: core/kits/documents/tabs/global-colors.php:93
+#: core/kits/documents/tabs/global-typography.php:144 core/schemes/color.php:98
+msgid "Accent"
+msgstr "Hangsúly"
+
+#: core/kits/documents/tabs/global-colors.php:88
+#: core/kits/documents/tabs/global-typography.php:137 core/schemes/color.php:97
+#: includes/widgets/button.php:136 includes/widgets/divider.php:483
+#: includes/widgets/divider.php:510 includes/widgets/divider.php:700
+#: includes/widgets/icon-list.php:120 includes/widgets/icon-list.php:482
+#: modules/shapes/widgets/text-path.php:93
+#: modules/shapes/widgets/text-path.php:301
+msgid "Text"
+msgstr "Szöveg"
+
+#: core/kits/documents/tabs/global-colors.php:83
+#: core/kits/documents/tabs/global-typography.php:130 core/schemes/color.php:96
+msgid "Secondary"
+msgstr "Másodlagos"
+
+#: core/kits/documents/tabs/global-colors.php:78
+#: core/kits/documents/tabs/global-typography.php:123 core/schemes/color.php:95
+msgid "Primary"
+msgstr "Elsődleges"
+
+#: includes/managers/elements.php:313
+msgid "WordPress"
+msgstr "WordPress"
+
+#: core/document-types/post.php:31
+msgid "Posts"
+msgstr "Bejegyzések"
+
+#: includes/widgets/image-carousel.php:164
+#: includes/widgets/image-carousel.php:378
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: includes/managers/elements.php:272
+msgid "Basic"
+msgstr "Alap"
+
+#: includes/elements/section.php:1342
+msgid "Visibility"
+msgstr "Láthatóság"
+
+#: includes/widgets/video.php:792
+msgid "Content Position"
+msgstr "Tartalom pozíció"
+
+#: includes/elements/column.php:189 includes/elements/section.php:427
+#: includes/elements/section.php:450 includes/widgets/icon-box.php:497
+#: includes/widgets/image-box.php:431
+msgid "Middle"
+msgstr "Középre"
+
+#: includes/elements/section.php:425
+msgid "Stretch"
+msgstr "Nyújtott"
+
+#: includes/elements/section.php:421
+msgid "Column Position"
+msgstr "Oszlop pozíció"
+
+#: includes/elements/section.php:347 includes/elements/section.php:396
+msgid "Minimum Height"
+msgstr "Minimum magasság"
+
+#: includes/elements/section.php:337 includes/elements/section.php:386
+msgid "Min Height"
+msgstr "Min magasság"
+
+#: includes/elements/section.php:336 includes/elements/section.php:385
+msgid "Fit To Screen"
+msgstr "Képernyő kitöltése"
+
+#: includes/controls/image-dimensions.php:100 includes/elements/section.php:331
+#: includes/elements/section.php:380 includes/elements/section.php:1018
+#: includes/widgets/google-maps.php:166 includes/widgets/icon-list.php:339
+#: includes/widgets/image.php:325 includes/widgets/progress.php:211
+msgid "Height"
+msgstr "Magasság"
+
+#: includes/elements/section.php:288
+msgid "Wide"
+msgstr "Széles"
+
+#: includes/elements/section.php:286
+msgid "Narrow"
+msgstr "Keskeny"
+
+#: includes/elements/section.php:285
+msgid "No Gap"
+msgstr "Nincs rés"
+
+#: includes/elements/section.php:280 includes/widgets/text-editor.php:149
+msgid "Columns Gap"
+msgstr "Oszlop rés"
+
+#: core/kits/documents/tabs/settings-layout.php:55
+#: includes/elements/section.php:245 includes/widgets/video.php:773
+msgid "Content Width"
+msgstr "Tartalom szélessége"
+
+#: includes/elements/section.php:250 includes/widgets/common.php:746
+#: includes/widgets/icon-list.php:195
+msgid "Full Width"
+msgstr "Teljes szélesség"
+
+#: includes/elements/section.php:249
+msgid "Boxed"
+msgstr "Doboz"
+
+#: includes/controls/image-dimensions.php:95 includes/elements/section.php:259
+#: includes/elements/section.php:989 includes/widgets/common.php:741
+#: includes/widgets/divider.php:421 includes/widgets/icon-list.php:321
+#: includes/widgets/image-box.php:248 includes/widgets/image.php:255
+#: modules/shapes/widgets/text-path.php:531
+#: modules/shapes/widgets/text-path.php:597
+msgid "Width"
+msgstr "Szélesség"
+
+#: core/kits/documents/tabs/settings-layout.php:24
+#: includes/elements/column.php:113 includes/elements/section.php:227
+#: includes/managers/controls.php:303 includes/widgets/icon-list.php:95
+#: assets/js/editor.js:19793
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: includes/elements/column.php:156
+msgid "Column Width"
+msgstr "Oszlop szélesség"
+
+#: includes/elements/column.php:778 includes/elements/section.php:1241
+#: includes/widgets/common.php:245
+msgid "CSS Classes"
+msgstr "CSS Osztály"
+
+#: core/document-types/page-base.php:132
+#: core/kits/documents/tabs/theme-style-buttons.php:244
+#: core/kits/documents/tabs/theme-style-form-fields.php:160
+#: includes/elements/column.php:739 includes/elements/section.php:1202
+#: includes/widgets/accordion.php:347 includes/widgets/accordion.php:488
+#: includes/widgets/button.php:440 includes/widgets/common.php:205
+#: includes/widgets/divider.php:822 includes/widgets/icon-box.php:390
+#: includes/widgets/icon.php:316 includes/widgets/social-icons.php:402
+#: includes/widgets/toggle.php:374 includes/widgets/toggle.php:515
+msgid "Padding"
+msgstr "Belső margó"
+
+#: includes/elements/column.php:727 includes/elements/section.php:1183
+#: includes/widgets/common.php:193
+msgid "Margin"
+msgstr "Margó"
+
+#: includes/elements/column.php:217 includes/elements/column.php:694
+#: includes/elements/section.php:1151 includes/widgets/button.php:172
+#: includes/widgets/common.php:801 includes/widgets/divider.php:456
+#: includes/widgets/divider.php:744 includes/widgets/divider.php:884
+#: includes/widgets/heading.php:184 includes/widgets/icon-box.php:472
+#: includes/widgets/icon-list.php:246 includes/widgets/icon-list.php:457
+#: includes/widgets/icon.php:175 includes/widgets/image-box.php:406
+#: includes/widgets/image-carousel.php:533
+#: includes/widgets/image-carousel.php:634
+#: includes/widgets/image-gallery.php:287 includes/widgets/image.php:142
+#: includes/widgets/image.php:535 includes/widgets/social-icons.php:305
+#: includes/widgets/star-rating.php:178 includes/widgets/tabs.php:175
+#: includes/widgets/tabs.php:205 includes/widgets/tabs.php:368
+#: includes/widgets/testimonial.php:194 includes/widgets/text-editor.php:196
+#: includes/widgets/video.php:796 modules/shapes/widgets/text-path.php:164
+msgid "Center"
+msgstr "Középre"
+
+#: includes/elements/column.php:686 includes/elements/section.php:1143
+msgid "Text Align"
+msgstr "Szöveg igazítása"
+
+#: includes/elements/column.php:674 includes/elements/section.php:1131
+msgid "Link Hover Color"
+msgstr "Hivatkozás színe ráhúzáskor"
+
+#: includes/elements/column.php:662 includes/elements/section.php:1119
+msgid "Link Color"
+msgstr "Hivatkozás színe"
+
+#: includes/elements/column.php:637 includes/elements/section.php:1094
+msgid "Heading Color"
+msgstr "Címsor színe"
+
+#: core/kits/documents/tabs/settings-lightbox.php:163
+#: core/kits/documents/tabs/theme-style-buttons.php:99
+#: core/kits/documents/tabs/theme-style-buttons.php:174
+#: core/kits/documents/tabs/theme-style-form-fields.php:177
+#: core/kits/documents/tabs/theme-style-typography.php:56
+#: includes/elements/column.php:650 includes/elements/section.php:1107
+#: includes/widgets/alert.php:221 includes/widgets/alert.php:261
+#: includes/widgets/button.php:315 includes/widgets/button.php:357
+#: includes/widgets/counter.php:230 includes/widgets/counter.php:273
+#: includes/widgets/heading.php:225 includes/widgets/icon-list.php:490
+#: includes/widgets/image-carousel.php:656
+#: includes/widgets/image-gallery.php:312 includes/widgets/image.php:557
+#: includes/widgets/progress.php:283 includes/widgets/star-rating.php:213
+#: includes/widgets/testimonial.php:232 includes/widgets/testimonial.php:330
+#: includes/widgets/testimonial.php:375 includes/widgets/text-editor.php:217
+msgid "Text Color"
+msgstr "Szöveg szín"
+
+#: core/kits/documents/tabs/theme-style-buttons.php:73
+#: core/kits/documents/tabs/theme-style-form-fields.php:90
+#: core/kits/documents/tabs/theme-style-form-fields.php:108
+#: core/kits/documents/tabs/theme-style-typography.php:19
+#: core/kits/documents/tabs/theme-style-typography.php:38
+#: core/kits/documents/tabs/theme-style-typography.php:68
+#: core/kits/documents/tabs/theme-style-typography.php:145
+#: core/kits/documents/tabs/theme-style-typography.php:175
+#: core/kits/documents/tabs/theme-style-typography.php:221
+#: core/schemes/typography.php:64 includes/elements/column.php:628
+#: includes/elements/section.php:1086 assets/js/editor-modules.js:2250
+#: assets/js/editor.js:25599
+msgid "Typography"
+msgstr "Tipográfia"
+
+#: includes/elements/column.php:60
+msgid "Column"
+msgstr "Oszlop"
+
+#: includes/elements/section.php:78 modules/library/documents/section.php:42
+#: assets/js/editor.js:5905
+msgid "Section"
+msgstr "Szakasz"
+
+#: includes/elements/section.php:531 includes/elements/section.php:539
+msgid "Structure"
+msgstr "Szerkezet"
+
+#: includes/elements/column.php:868 includes/elements/section.php:1312
+#: includes/managers/controls.php:302 includes/widgets/common.php:1059
+msgid "Responsive"
+msgstr "Reszponzív"
+
+#: core/common/modules/finder/categories/settings.php:51
+#: core/dynamic-tags/tag.php:88 includes/elements/column.php:718
+#: includes/elements/section.php:1175 includes/managers/controls.php:301
+#: includes/settings/settings.php:530 includes/widgets/common.php:175
+#: assets/js/editor.js:5193 assets/js/editor.js:19790
+msgid "Advanced"
+msgstr "Haladó"
+
+#: includes/managers/controls.php:300 includes/settings/settings.php:481
+#: includes/widgets/divider.php:363 includes/widgets/icon-list.php:275
+#: assets/js/editor.js:5190 assets/js/editor.js:19787
+msgid "Style"
+msgstr "Stílus"
+
+#: includes/managers/controls.php:299 includes/widgets/accordion.php:110
+#: includes/widgets/accordion.php:436 includes/widgets/alert.php:125
+#: includes/widgets/icon-box.php:456 includes/widgets/image-box.php:132
+#: includes/widgets/image-box.php:390 includes/widgets/tabs.php:112
+#: includes/widgets/tabs.php:388 includes/widgets/testimonial.php:95
+#: includes/widgets/testimonial.php:224 includes/widgets/toggle.php:111
+#: includes/widgets/toggle.php:463 assets/js/app-packages.js:9384
+#: assets/js/app.js:8696 assets/js/editor.js:19784
+msgid "Content"
+msgstr "Tartalom"
+
+#: includes/widgets/image-gallery.php:118 includes/widgets/social-icons.php:272
+#: includes/widgets/text-editor.php:136
+msgid "Columns"
+msgstr "Oszlopok"
+
+#: core/schemes/color.php:66
+msgid "Colors"
+msgstr "Színek"
+
+#: core/schemes/color.php:147
+msgid "More Palettes"
+msgstr "Több paletta"
+
+#: core/schemes/color.php:134 core/schemes/color.php:289
+msgid "Color Palette"
+msgstr "Szín paletta"
+
+#: core/schemes/base-ui.php:119 includes/controls/image-dimensions.php:102
+#: includes/editor-templates/panel.php:151
+#: modules/history/views/revisions-panel-template.php:18
+msgid "Apply"
+msgstr "Alkalmaz"
+
+#: core/schemes/base-ui.php:115
+#: modules/history/views/revisions-panel-template.php:13
+#: assets/js/editor.js:1292
+msgid "Discard"
+msgstr "Eldob"
+
+#: core/schemes/base-ui.php:109 includes/controls/structure.php:65
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#: includes/editor-templates/templates.php:172 assets/js/editor.js:19133
+msgid "Preview"
+msgstr "Előnézet"
+
+#: includes/editor-templates/hotkeys.php:75
+#: includes/editor-templates/templates.php:18
+#: includes/editor-templates/templates.php:19
+#: includes/editor-templates/templates.php:218
+#: includes/editor-templates/templates.php:229 assets/js/editor.js:1291
+msgid "Save"
+msgstr "Mentés"
+
+#: core/admin/admin.php:474
+msgid "Help"
+msgstr "Segítség"
+
+#: core/breakpoints/manager.php:298
+#: core/settings/editor-preferences/model.php:134
+#: includes/elements/section.php:1320
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:4133
+msgid "Tablet"
+msgstr "Tablet"
+
+#: core/breakpoints/manager.php:308
+msgid "Laptop"
+msgstr "Laptop"
+
+#: core/settings/editor-preferences/model.php:135
+#: includes/base/element-base.php:681 includes/editor-templates/panel.php:242
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:4126
+msgid "Desktop"
+msgstr "Asztali gép"
+
+#: includes/editor-templates/hotkeys.php:108
+#: includes/editor-templates/panel.php:78
+#: includes/editor-templates/panel.php:80
+msgid "Responsive Mode"
+msgstr "Reszponzív mód"
+
+#: includes/editor-templates/panel.php:59
+#: includes/editor-templates/panel.php:60
+msgid "Widgets Panel"
+msgstr "Widgets Panel"
+
+#: includes/editor-templates/panel.php:54
+#: includes/editor-templates/panel.php:55
+msgid "Menu"
+msgstr "Menü"
+
+#: includes/editor-templates/panel-elements.php:34
+msgid "Search Widget..."
+msgstr "Widget keresés..."
+
+#: includes/editor-templates/global.php:21
+msgid "Add New Section"
+msgstr "Új Szakasz hozzáadása"
+
+#: core/admin/admin.php:174 includes/editor-templates/editor-wrapper.php:50
+#: includes/editor-templates/templates.php:50 modules/gutenberg/module.php:121
+#: assets/js/app-packages.js:10249
+#: assets/js/kit-library.d3688acfaab28676a99c.bundle.js:488
+msgid "Loading"
+msgstr "Betöltés"
+
+#. Plugin Name of the plugin
+#: core/admin/admin.php:224 core/admin/admin.php:336 core/admin/admin.php:394
+#: core/app/view.php:23 core/documents-manager.php:363
+#: core/upgrade/manager.php:36 includes/editor-templates/editor-wrapper.php:30
+#: includes/plugin.php:905 includes/settings/settings.php:75
+#: includes/settings/settings.php:76 includes/settings/settings.php:604
+#: modules/compatibility-tag/module.php:36 assets/js/app-packages.js:2848
+#: assets/js/app.js:2806
+msgid "Elementor"
+msgstr "Elementor"
+
+#: includes/controls/repeater.php:172
+msgid "Add Item"
+msgstr "Elem hozzáadása"
+
+#: core/kits/views/trash-kit-confirmation.php:30
+#: includes/editor-templates/hotkeys.php:60
+#: includes/editor-templates/templates.php:185
+#: assets/js/editor-document.js:12553 assets/js/editor.js:6057
+#: assets/js/editor.js:9367 assets/js/editor.js:12847 assets/js/editor.js:14482
+#: assets/js/editor.js:32286
+msgid "Delete"
+msgstr "Törlés"
+
+#: includes/controls/icon.php:871 includes/controls/icon.php:872
+msgid "Select Icon"
+msgstr "Válassz ikont"
+
+#: includes/elements/section.php:290 includes/maintenance-mode.php:238
+#: includes/widgets/common.php:134 includes/widgets/common.php:563
+#: includes/widgets/common.php:624 includes/widgets/common.php:748
+#: includes/widgets/image-carousel.php:557
+#: includes/widgets/image-gallery.php:195 includes/widgets/social-icons.php:190
+#: includes/widgets/social-icons.php:348 modules/shapes/module.php:29
+#: assets/js/editor.js:29723
+msgid "Custom"
+msgstr "Egyéni"
+
+#: includes/controls/groups/typography.php:301
+msgctxt "Typography Control"
+msgid "Typography"
+msgstr "Tipográfia"
+
+#: includes/controls/groups/typography.php:207
+msgctxt "Typography Control"
+msgid "Letter Spacing"
+msgstr "Betűtávolság"
+
+#: includes/controls/groups/typography.php:185
+msgctxt "Typography Control"
+msgid "Line-Height"
+msgstr "Sor magasság"
+
+#: core/kits/documents/tabs/theme-style-buttons.php:92
+#: core/kits/documents/tabs/theme-style-form-fields.php:119
+#: core/kits/documents/tabs/theme-style-images.php:63
+#: core/kits/documents/tabs/theme-style-typography.php:126
+#: includes/elements/column.php:283 includes/elements/column.php:360
+#: includes/elements/column.php:409 includes/elements/column.php:512
+#: includes/elements/column.php:837 includes/elements/section.php:563
+#: includes/elements/section.php:636 includes/elements/section.php:700
+#: includes/elements/section.php:819 includes/elements/section.php:1280
+#: includes/widgets/button.php:308 includes/widgets/common.php:283
+#: includes/widgets/common.php:324 includes/widgets/common.php:391
+#: includes/widgets/google-maps.php:208 includes/widgets/heading.php:261
+#: includes/widgets/icon-box.php:261 includes/widgets/icon.php:205
+#: includes/widgets/image-box.php:297 includes/widgets/image.php:386
+#: modules/shapes/widgets/text-path.php:394
+#: modules/shapes/widgets/text-path.php:492
+msgid "Normal"
+msgstr "Normál"
+
+#: includes/controls/groups/typography.php:160
+msgctxt "Typography Control"
+msgid "Style"
+msgstr "Stílus"
+
+#: includes/controls/groups/typography.php:147
+msgctxt "Typography Control"
+msgid "Transform"
+msgstr "Átalakítás"
+
+#: includes/controls/groups/typography.php:140
+msgctxt "Typography Control"
+msgid "Weight"
+msgstr "Vastagság"
+
+#: includes/controls/groups/typography.php:106
+msgctxt "Typography Control"
+msgid "Family"
+msgstr "Betűtípus"
+
+#: includes/controls/groups/typography.php:113
+msgctxt "Typography Control"
+msgid "Size"
+msgstr "Méret"
+
+#: includes/controls/groups/border.php:88
+msgctxt "Border Control"
+msgid "Color"
+msgstr "Szín"
+
+#: includes/controls/groups/border.php:76
+msgctxt "Border Control"
+msgid "Width"
+msgstr "Szélesség"
+
+#: includes/widgets/divider.php:323 includes/widgets/icon-list.php:281
+msgid "Dashed"
+msgstr "Szaggatott"
+
+#: includes/widgets/divider.php:322 includes/widgets/icon-list.php:280
+msgid "Dotted"
+msgstr "Pontozott"
+
+#: includes/widgets/divider.php:321 includes/widgets/icon-list.php:279
+msgid "Double"
+msgstr "Dupla"
+
+#: includes/widgets/divider.php:320 includes/widgets/icon-list.php:278
+#: includes/widgets/star-rating.php:143
+msgid "Solid"
+msgstr "Sima"
+
+#: core/kits/documents/tabs/settings-lightbox.php:99
+#: core/kits/documents/tabs/settings-lightbox.php:116
+#: includes/controls/animation.php:153 includes/controls/groups/border.php:63
+#: includes/controls/hover-animation.php:125 includes/controls/icons.php:108
+#: includes/controls/icons.php:110 includes/elements/section.php:941
+#: includes/widgets/divider.php:479 includes/widgets/image-carousel.php:171
+#: includes/widgets/image-carousel.php:184
+#: includes/widgets/image-carousel.php:228
+#: includes/widgets/image-gallery.php:134 includes/widgets/image.php:162
+#: includes/widgets/image.php:193
+msgid "None"
+msgstr "Egyik sem"
+
+#: includes/controls/groups/border.php:60
+msgctxt "Border Control"
+msgid "Border Type"
+msgstr "Szegély típus"
+
+#: includes/controls/groups/background.php:634
+msgctxt "Background Control"
+msgid "Background Fallback"
+msgstr "Háttértartalék"
+
+#: includes/controls/groups/background.php:554
+msgctxt "Background Control"
+msgid "Video Link"
+msgstr "Videó hivatkozás"
+
+#: includes/controls/groups/background.php:485
+msgctxt "Background Control"
+msgid "Cover"
+msgstr "Borító"
+
+#: includes/controls/groups/background.php:484
+msgctxt "Background Control"
+msgid "Auto"
+msgstr "Auto"
+
+#: includes/controls/groups/background.php:478
+msgctxt "Background Control"
+msgid "Size"
+msgstr "Méret"
+
+#: includes/controls/groups/background.php:466
+msgctxt "Background Control"
+msgid "Repeat-y"
+msgstr "Függőleges ismétlés"
+
+#: includes/controls/groups/background.php:465
+msgctxt "Background Control"
+msgid "Repeat-x"
+msgstr "Vízszintes ismétlés"
+
+#: includes/controls/groups/background.php:463
+msgctxt "Background Control"
+msgid "No-repeat"
+msgstr "Nincs ismétlés"
+
+#: includes/controls/groups/background.php:457
+#: includes/controls/groups/background.php:464
+msgctxt "Background Control"
+msgid "Repeat"
+msgstr "Ismétlés"
+
+#: includes/controls/groups/background.php:433
+msgctxt "Background Control"
+msgid "Fixed"
+msgstr "Rögzített"
+
+#: includes/controls/groups/background.php:432
+msgctxt "Background Control"
+msgid "Scroll"
+msgstr "Görgetés"
+
+#: includes/controls/groups/background.php:427
+msgctxt "Background Control"
+msgid "Attachment"
+msgstr "Csatolmány"
+
+#: includes/controls/groups/background.php:236
+#: includes/controls/groups/background.php:281
+#: includes/controls/groups/background.php:743
+msgctxt "Background Control"
+msgid "Bottom Right"
+msgstr "Lent jobbra"
+
+#: includes/controls/groups/background.php:234
+#: includes/controls/groups/background.php:279
+#: includes/controls/groups/background.php:741
+msgctxt "Background Control"
+msgid "Bottom Center"
+msgstr "Lent középre"
+
+#: includes/controls/groups/background.php:235
+#: includes/controls/groups/background.php:280
+#: includes/controls/groups/background.php:742
+msgctxt "Background Control"
+msgid "Bottom Left"
+msgstr "Lent balra"
+
+#: includes/controls/groups/background.php:230
+#: includes/controls/groups/background.php:275
+#: includes/controls/groups/background.php:737
+msgctxt "Background Control"
+msgid "Center Right"
+msgstr "Középen jobbra"
+
+#: includes/controls/groups/background.php:228
+#: includes/controls/groups/background.php:273
+#: includes/controls/groups/background.php:735
+msgctxt "Background Control"
+msgid "Center Center"
+msgstr "Középen középre"
+
+#: includes/controls/groups/background.php:229
+#: includes/controls/groups/background.php:274
+#: includes/controls/groups/background.php:736
+msgctxt "Background Control"
+msgid "Center Left"
+msgstr "Középen balra "
+
+#: includes/controls/groups/background.php:233
+#: includes/controls/groups/background.php:278
+#: includes/controls/groups/background.php:740
+msgctxt "Background Control"
+msgid "Top Right"
+msgstr "Fent jobbra"
+
+#: includes/controls/groups/background.php:231
+#: includes/controls/groups/background.php:276
+#: includes/controls/groups/background.php:738
+msgctxt "Background Control"
+msgid "Top Center"
+msgstr "Fent középen"
+
+#: includes/controls/groups/background.php:232
+#: includes/controls/groups/background.php:277
+#: includes/controls/groups/background.php:739
+msgctxt "Background Control"
+msgid "Top Left"
+msgstr "Fent balra"
+
+#: includes/controls/groups/background.php:225
+#: includes/controls/groups/background.php:267
+msgctxt "Background Control"
+msgid "Position"
+msgstr "Pozíció"
+
+#: includes/controls/groups/background.php:256
+msgctxt "Background Control"
+msgid "Background Image"
+msgstr "Háttérkép"
+
+#: includes/controls/groups/background.php:250
+msgctxt "Background Control"
+msgid "Image"
+msgstr "Kép"
+
+#: includes/controls/groups/background.php:136
+msgctxt "Background Control"
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: includes/controls/groups/background.php:133
+msgctxt "Background Control"
+msgid "Color"
+msgstr "Szín"
+
+#: includes/controls/groups/background.php:127
+msgctxt "Background Control"
+msgid "Background Type"
+msgstr "Háttértípus"
+
+#: includes/controls/groups/background.php:499
+msgctxt "Background Control"
+msgid "Width"
+msgstr "Szélesség"
+
+#: includes/controls/groups/background.php:95
+msgctxt "Background Control"
+msgid "Classic"
+msgstr "Klasszikus"
+
+#: includes/fonts.php:68
+msgid "Google"
+msgstr "Google"
+
+#: includes/fonts.php:67
+msgid "System"
+msgstr "Rendszer"
+
+#: core/kits/documents/tabs/theme-style-typography.php:116
+#: includes/widgets/audio.php:103 includes/widgets/button.php:149
+#: includes/widgets/heading.php:124 includes/widgets/icon-box.php:171
+#: includes/widgets/icon-list.php:147 includes/widgets/icon.php:155
+#: includes/widgets/image-box.php:148 includes/widgets/image-carousel.php:180
+#: includes/widgets/image-carousel.php:194
+#: includes/widgets/image-gallery.php:128 includes/widgets/image.php:189
+#: includes/widgets/image.php:203 includes/widgets/social-icons.php:170
+#: includes/widgets/testimonial.php:155 includes/widgets/video.php:126
+#: includes/widgets/video.php:148 includes/widgets/video.php:169
+#: modules/shapes/widgets/text-path.php:141
+msgid "Link"
+msgstr "Hivatkozás"
+
+#: includes/controls/dimensions.php:91 includes/elements/column.php:690
+#: includes/elements/section.php:1147 includes/widgets/button.php:168
+#: includes/widgets/common.php:848 includes/widgets/common.php:849
+#: includes/widgets/divider.php:452 includes/widgets/divider.php:740
+#: includes/widgets/divider.php:880 includes/widgets/heading.php:180
+#: includes/widgets/icon-box.php:189 includes/widgets/icon-box.php:468
+#: includes/widgets/icon-list.php:242 includes/widgets/icon-list.php:453
+#: includes/widgets/icon.php:171 includes/widgets/image-box.php:166
+#: includes/widgets/image-box.php:402 includes/widgets/image-carousel.php:367
+#: includes/widgets/image-carousel.php:630
+#: includes/widgets/image-gallery.php:283 includes/widgets/image.php:138
+#: includes/widgets/image.php:531 includes/widgets/social-icons.php:301
+#: includes/widgets/star-rating.php:174 includes/widgets/tabs.php:364
+#: includes/widgets/testimonial.php:190 includes/widgets/text-editor.php:192
+#: modules/shapes/widgets/text-path.php:160
+msgid "Left"
+msgstr "Bal"
+
+#: includes/controls/dimensions.php:90 includes/elements/column.php:190
+#: includes/elements/section.php:428 includes/elements/section.php:451
+#: includes/elements/section.php:950 includes/widgets/common.php:967
+#: includes/widgets/icon-box.php:498 includes/widgets/image-box.php:432
+msgid "Bottom"
+msgstr "Lent"
+
+#: includes/controls/dimensions.php:89 includes/elements/column.php:698
+#: includes/elements/section.php:1155 includes/widgets/button.php:176
+#: includes/widgets/common.php:848 includes/widgets/common.php:849
+#: includes/widgets/divider.php:460 includes/widgets/divider.php:748
+#: includes/widgets/divider.php:888 includes/widgets/heading.php:188
+#: includes/widgets/icon-box.php:197 includes/widgets/icon-box.php:476
+#: includes/widgets/icon-list.php:250 includes/widgets/icon-list.php:461
+#: includes/widgets/icon.php:179 includes/widgets/image-box.php:174
+#: includes/widgets/image-box.php:410 includes/widgets/image-carousel.php:368
+#: includes/widgets/image-carousel.php:638
+#: includes/widgets/image-gallery.php:291 includes/widgets/image.php:146
+#: includes/widgets/image.php:539 includes/widgets/social-icons.php:309
+#: includes/widgets/star-rating.php:182 includes/widgets/tabs.php:372
+#: includes/widgets/testimonial.php:198 includes/widgets/text-editor.php:200
+#: modules/shapes/widgets/text-path.php:168
+msgid "Right"
+msgstr "Jobb"
+
+#: includes/controls/dimensions.php:88 includes/elements/column.php:188
+#: includes/elements/section.php:426 includes/elements/section.php:449
+#: includes/elements/section.php:949 includes/widgets/common.php:963
+#: includes/widgets/icon-box.php:193 includes/widgets/icon-box.php:496
+#: includes/widgets/image-box.php:170 includes/widgets/image-box.php:430
+#: includes/widgets/testimonial.php:172 includes/widgets/video.php:797
+msgid "Top"
+msgstr "Fent"
+
+#: core/experiments/manager.php:304
+#: core/settings/editor-preferences/model.php:132
+#: includes/base/widget-base.php:265 includes/controls/animation.php:152
+#: includes/controls/font.php:66 includes/controls/groups/background.php:715
+#: includes/controls/groups/background.php:734
+#: includes/controls/groups/typography.php:132
+#: includes/controls/groups/typography.php:151
+#: includes/controls/groups/typography.php:164
+#: includes/controls/groups/typography.php:176
+#: includes/editor-templates/panel.php:213 includes/elements/column.php:187
+#: includes/elements/column.php:215 includes/elements/column.php:255
+#: includes/elements/section.php:284 includes/elements/section.php:335
+#: includes/elements/section.php:384 includes/elements/section.php:448
+#: includes/elements/section.php:476 includes/elements/section.php:512
+#: includes/settings/settings.php:577 includes/widgets/button.php:123
+#: includes/widgets/common.php:745 includes/widgets/common.php:839
+#: includes/widgets/divider.php:793 includes/widgets/heading.php:143
+#: includes/widgets/icon-box.php:111 includes/widgets/icon-list.php:100
+#: includes/widgets/icon.php:126 includes/widgets/image-carousel.php:122
+#: includes/widgets/image-carousel.php:139
+#: includes/widgets/image-carousel.php:211
+#: includes/widgets/image-carousel.php:556
+#: includes/widgets/image-gallery.php:146
+#: includes/widgets/image-gallery.php:162
+#: includes/widgets/image-gallery.php:194 includes/widgets/image.php:223
+#: includes/widgets/image.php:362 includes/widgets/progress.php:113
+#: includes/widgets/text-editor.php:131 includes/widgets/text-editor.php:266
+#: modules/page-templates/module.php:296
+#: modules/shapes/widgets/text-path.php:186 assets/js/editor.js:29714
+#: assets/js/editor.js:29726
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: core/admin/admin.php:155 core/admin/admin.php:163 core/base/document.php:477
+#: modules/admin-bar/module.php:123 modules/gutenberg/module.php:100
+#: modules/gutenberg/module.php:110
+msgid "Edit with Elementor"
+msgstr "Szerkesztés Elementorral"
+
+#: modules/gutenberg/module.php:97
+msgid "&#8592; Back to WordPress Editor"
+msgstr "&#8592; Vissza a WordPress szerkesztőbe"
+
+#. translators: %s: PHP version.
+#: elementor.php:81
+msgid "Elementor requires PHP version %s+, plugin is currently NOT RUNNING."
+msgstr "Az Elementor %s+ PHP verziót igényel, a bővítmény jelenleg NEM FUT."

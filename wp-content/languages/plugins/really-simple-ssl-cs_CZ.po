@@ -1,0 +1,1954 @@
+# Translation of Plugins - Really Simple SSL - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-11-01 09:43:38+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: lets-encrypt/wizard/templates/content.php:18
+msgid "Reset Let's Encrypt"
+msgstr "Resetování služby Let's Encrypt"
+
+#: lets-encrypt/wizard/templates/content.php:18
+msgid "This will clear all settings for Really Simple SSL Let\\'s Encrypt, and will clear the order in the ssl/keys directory."
+msgstr "Vymažete všechna nastavení pro Really Simple SSL Let\\'s Encrypt a vymažete pořadí v adresáři ssl/keys."
+
+#: lets-encrypt/wizard/config/steps.php:129
+msgid "Checking if Terms & Conditions are accepted..."
+msgstr "Kontrola, zda jsou přijaty smluvní podmínky..."
+
+#: lets-encrypt/wizard/class-wizard.php:823
+msgid "Save and continue"
+msgstr "Uložit a pokračovat"
+
+#: lets-encrypt/class-letsencrypt-handler.php:941
+msgid "The Terms & Conditions were not accepted. Please accept in the general settings."
+msgstr "Podmínky užití odmítnuty. Přijměte je prosím v obecných nastaveních."
+
+#: lets-encrypt/class-letsencrypt-handler.php:937
+msgid "Terms & Conditions are accepted."
+msgstr "Podmínky užití byli akceptovány."
+
+#: class-admin.php:3322
+msgid "HttpOnly Secure cookies have been set automatically!"
+msgstr "HttpOnly Zabezpečené soubory cookie byly nastaveny automaticky!"
+
+#: lets-encrypt/wizard/templates/dns-verification.php:21
+msgid "Value"
+msgstr "Hodnota"
+
+#: lets-encrypt/wizard/templates/dns-verification.php:20
+msgid "domain"
+msgstr "doména"
+
+#: class-admin.php:3414
+msgid "As Really Simple SSL handles all the functionality this plugin provides, we recommend to disable this plugin to prevent unexpected behaviour."
+msgstr "Vzhledem k tomu, že Really Simple SSL zpracovává všechny funkce, které tento zásuvný modul poskytuje, doporučujeme tento zásuvný modul vypnout, abyste předešli neočekávanému chování."
+
+#: class-admin.php:3414
+msgid "We have detected the %s plugin on your website."
+msgstr "Na vašich webových stránkách jsme zjistili zásuvný modul %s."
+
+#: class-admin.php:590
+msgid "Please %srefresh detection%s if a certificate has been installed recently."
+msgstr "Prosím %sobnovte detekci%s, pokud byl certifikát nainstalován nedávno."
+
+#: class-admin.php:589
+msgid "No SSL certificate has been detected."
+msgstr "Nebyl zjištěn žádný certifikát SSL."
+
+#: lets-encrypt/wizard/notices.php:99
+msgid "Read more about this add on."
+msgstr "Další informace o tomto dodatku naleznete na."
+
+#: lets-encrypt/wizard/notices.php:96
+msgid "Your server provides shell functionality, which offers additional methods to install SSL. If installing SSL using the default methods is not possible, you can install the shell add on."
+msgstr "Váš server poskytuje funkci shellu, která nabízí další metody instalace protokolu SSL. Pokud není možné nainstalovat protokol SSL pomocí výchozích metod, můžete nainstalovat doplněk shellu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:450
+msgid "If you entered your DNS records before, they need to be changed."
+msgstr "Pokud jste záznamy DNS zadali dříve, je třeba je změnit."
+
+#: lets-encrypt/class-letsencrypt-handler.php:447
+msgid "Order ID mismatch, regenerate order."
+msgstr "Neshoda ID objednávky, přegenerujte objednávku."
+
+#: class-admin.php:4731 class-multisite.php:238
+msgid "Improve security - Upgrade to Pro"
+msgstr "Zlepšení zabezpečení - Upgrade na verzi Pro"
+
+#: class-admin.php:3543
+msgid "%sMore info%s"
+msgstr "%sDalší informace%s"
+
+#: class-admin.php:3091
+msgid "Really Simple SSL pro is not up to date. Update Really Simple SSL pro to ensure compatibility."
+msgstr "Really Simple SSL pro není aktuální. Aktualizujte Really Simple SSL pro, abyste zajistili kompatibilitu."
+
+#: lets-encrypt/wizard/templates/other-plugins.php:38
+msgid "Our Plugins"
+msgstr "Naše zásuvné moduly"
+
+#: lets-encrypt/wizard/templates/other-plugins.php:29
+msgid "Beautiful recipes optimized for Google."
+msgstr "Krásné recepty optimalizované pro Google."
+
+#: lets-encrypt/wizard/templates/other-plugins.php:21
+msgid "The Privacy Suite for WordPress"
+msgstr "Sada pro ochranu soukromí pro WordPress"
+
+#: lets-encrypt/wizard/templates/other-plugins.php:12
+msgid "Easily migrate your website to SSL."
+msgstr "Snadná migrace webových stránek na protokol SSL."
+
+#: lets-encrypt/wizard/templates/installation.php:42
+msgid "The CA Bundle will sometimes be automatically detected. If not, you can use this file."
+msgstr "Svazek CA bude někdy detekován automaticky. Pokud ne, můžete použít tento soubor."
+
+#: lets-encrypt/wizard/templates/installation.php:41
+msgid "Certificate Authority Bundle (CABUNDLE)"
+msgstr "Svazek certifikačních autorit (CABUNDLE)"
+
+#: lets-encrypt/wizard/templates/installation.php:35
+msgid "The private key can be uploaded or pasted in the appropriate field on your hosting dashboard."
+msgstr "Soukromý klíč lze nahrát nebo vložit do příslušného pole na ovládacím panelu hostingu."
+
+#: lets-encrypt/wizard/templates/installation.php:34
+msgid "Private Key (KEY)"
+msgstr "Soukromý klíč (KEY)"
+
+#: lets-encrypt/wizard/templates/installation.php:31
+#: lets-encrypt/wizard/templates/installation.php:39
+#: lets-encrypt/wizard/templates/installation.php:46
+msgid "Copy content"
+msgstr "Kopírování obsahu"
+
+#: lets-encrypt/wizard/templates/installation.php:30
+#: lets-encrypt/wizard/templates/installation.php:38
+#: lets-encrypt/wizard/templates/installation.php:45
+msgid "Download"
+msgstr "Stáhnout"
+
+#: lets-encrypt/wizard/templates/installation.php:26
+msgid "This is the certificate, which you need to install in your hosting dashboard."
+msgstr "Jedná se o certifikát, který je třeba nainstalovat do ovládacího panelu hostingu."
+
+#: lets-encrypt/wizard/templates/installation.php:25
+msgid "Certificate (CRT)"
+msgstr "Certifikát (CRT)"
+
+#: lets-encrypt/wizard/templates/installation.php:22
+msgid "Install your certificate."
+msgstr "Nainstalujte svůj certifikát."
+
+#: lets-encrypt/wizard/templates/installation.php:14
+msgid "copied!"
+msgstr "zkopírováno!"
+
+#: lets-encrypt/wizard/templates/generation.php:16
+msgid "Skip DNS check"
+msgstr "Přeskočení kontroly DNS"
+
+#: lets-encrypt/wizard/templates/generation.php:13
+msgid "If you're sure it's set correctly, you can click the button to skip the DNS check."
+msgstr "Pokud jste si jisti, že je nastaveno správně, můžete kliknutím na tlačítko kontrolu DNS přeskočit."
+
+#: lets-encrypt/wizard/templates/generation.php:12
+msgid "You can manually check the DNS records in an %sonline tool%s."
+msgstr "Záznamy DNS můžete ručně zkontrolovat v %sonline nástroji%s."
+
+#: lets-encrypt/wizard/templates/generation.php:11
+msgid "We could not check the DNS records. If you just added the record, please check in a few minutes."
+msgstr "Záznamy DNS se nám nepodařilo zkontrolovat. Pokud jste záznam právě přidali, zkontrolujte jej za několik minut."
+
+#: lets-encrypt/wizard/templates/dns-verification.php:8
+msgid "Add the following token as text record to your DNS records. We recommend to use a short TTL during installation, in case you need to change it."
+msgstr "Do záznamů DNS přidejte následující token jako textový záznam. Při instalaci doporučujeme použít krátký TTL pro případ, že byste jej potřebovali změnit."
+
+#: lets-encrypt/wizard/templates/directories.php:76
+msgid "Inside the folder called “ssl” create a new folder called “certs”, with 644 writing permissions."
+msgstr "Uvnitř složky s názvem \"ssl\" vytvořte novou složku s názvem \"certs\" s právy 644 pro zápis."
+
+#: lets-encrypt/wizard/templates/directories.php:66
+msgid "The certificate will get stored in this directory."
+msgstr "Certifikát se uloží do tohoto adresáře."
+
+#: lets-encrypt/wizard/templates/directories.php:65
+msgid "Create a certs directory"
+msgstr "Vytvoření adresáře certifikátů"
+
+#: lets-encrypt/wizard/templates/directories.php:57
+msgid "Inside the folder called “ssl” create a new folder called “keys”, with 644 writing permissions."
+msgstr "Uvnitř složky s názvem \"ssl\" vytvořte novou složku s názvem \"keys\" s oprávněním 644 pro zápis."
+
+#: lets-encrypt/wizard/templates/directories.php:54
+#: lets-encrypt/wizard/templates/directories.php:73
+msgid "Create a folder called “ssl”"
+msgstr "Vytvoření složky s názvem \"ssl\""
+
+#: lets-encrypt/wizard/templates/directories.php:50
+#: lets-encrypt/wizard/templates/directories.php:69
+msgid "Navigate in FTP or File Manager to one level above the root of your WordPress installation:"
+msgstr "Přejděte na FTP nebo ve Správci souborů na úroveň nad kořenovým adresářem instalace WordPressu:"
+
+#: lets-encrypt/wizard/templates/directories.php:47
+#: lets-encrypt/wizard/templates/directories.php:66
+msgid "By placing it outside the root folder, it is not accessible over the internet."
+msgstr "Umístěním mimo kořenovou složku není přístupný přes internet."
+
+#: lets-encrypt/wizard/templates/directories.php:47
+msgid "The key directory is needed to store the generated keys."
+msgstr "Adresář s klíči je potřeba k uložení vygenerovaných klíčů."
+
+#: lets-encrypt/wizard/templates/directories.php:46
+msgid "Create a key directory"
+msgstr "Vytvoření klíčového adresáře"
+
+#: lets-encrypt/wizard/templates/directories.php:41
+msgid "If the challenge directory cannot be created, you can either remove the server limitation, or change to DNS verification."
+msgstr "Pokud adresář výzev nelze vytvořit, můžete buď odstranit omezení serveru, nebo přejít na ověřování DNS."
+
+#: lets-encrypt/wizard/templates/directories.php:39
+msgid "Or you can switch to DNS verification"
+msgstr "Nebo můžete přepnout na ověřování DNS"
+
+#: lets-encrypt/wizard/templates/directories.php:35
+#: lets-encrypt/wizard/templates/directories.php:60
+#: lets-encrypt/wizard/templates/directories.php:79
+msgid "Click the refresh button."
+msgstr "Klikněte na tlačítko Obnovit."
+
+#: lets-encrypt/wizard/templates/directories.php:32
+msgid "Inside the folder called “.well-known” create a new folder called “acme-challenge”, with 644 writing permissions."
+msgstr "Uvnitř složky \".well-known\" vytvořte novou složku s názvem \"acme-challenge\" s oprávněním 644 pro zápis."
+
+#: lets-encrypt/wizard/templates/directories.php:29
+msgid "Create a folder called “.well-known”"
+msgstr "Vytvořte složku s názvem \".well-known\""
+
+#: lets-encrypt/wizard/templates/directories.php:25
+msgid "Navigate in FTP or File Manager to the root of your WordPress installation:"
+msgstr "Přejděte na FTP nebo ve Správci souborů do kořenového adresáře instalace WordPressu:"
+
+#: lets-encrypt/wizard/templates/directories.php:22
+msgid "The challenge directory is used to verify the domain ownership."
+msgstr "Adresář výzev se používá k ověření vlastnictví domény."
+
+#: lets-encrypt/wizard/templates/directories.php:21
+msgid "Create a challenge directory"
+msgstr "Vytvoření adresáře výzev"
+
+#: lets-encrypt/wizard/templates/directories.php:15
+msgid "If the challenge directory cannot be created, or is not reachable, you can either remove the server limitation, or change to DNS verification."
+msgstr "Pokud adresář výzvy nelze vytvořit nebo není dosažitelný, můžete buď odstranit omezení serveru, nebo přejít na ověření DNS."
+
+#: lets-encrypt/wizard/templates/directories.php:9
+#: lets-encrypt/wizard/templates/dns-verification.php:7
+#: lets-encrypt/wizard/templates/installation.php:18
+msgid "Next step"
+msgstr "Další krok"
+
+#: lets-encrypt/wizard/templates/content.php:22
+msgid "Notifications"
+msgstr "Oznámení"
+
+#: lets-encrypt/wizard/templates/activate.php:60
+msgid "No SSL certificate has been detected yet. In some cases this takes a few minutes."
+msgstr "Zatím nebyl zjištěn žádný certifikát SSL. V některých případech to trvá několik minut."
+
+#: lets-encrypt/wizard/templates/activate.php:42
+msgid "Almost ready to activate SSL!"
+msgstr "Téměř připraveno k aktivaci SSL!"
+
+#: lets-encrypt/wizard/templates/activate.php:21
+msgid "SSL was already activated on your website!"
+msgstr "SSL již bylo na vašich webových stránkách aktivováno!"
+
+#: lets-encrypt/wizard/templates/activate.php:16
+msgid "If you just activated SSL, please check for: "
+msgstr "Pokud jste právě aktivovali protokol SSL, zkontrolujte, zda: "
+
+#: lets-encrypt/wizard/templates/activate.php:13
+#: lets-encrypt/wizard/templates/activate.php:42
+msgid "In some cases it takes a few minutes for the certificate to get detected. In that case, check back in a few minutes."
+msgstr "V některých případech trvá několik minut, než se certifikát zjistí. V takovém případě se za několik minut znovu podívejte."
+
+#: lets-encrypt/wizard/templates/activate.php:13
+msgid "Your site is secured with a valid SSL certificate!"
+msgstr "Vaše stránky jsou zabezpečeny platným certifikátem SSL!"
+
+#: lets-encrypt/wizard/notices.php:155
+#: lets-encrypt/wizard/templates/directories.php:17
+#: lets-encrypt/wizard/templates/directories.php:42
+msgid "Switch to DNS verification"
+msgstr "Přepnutí na ověřování DNS"
+
+#: lets-encrypt/wizard/notices.php:154
+msgid "Please note that auto-renewal with a DNS challenge might not be possible."
+msgstr "Upozorňujeme, že automatické obnovení s výzvou DNS nemusí být možné."
+
+#: lets-encrypt/wizard/notices.php:153
+msgid "If you also want to secure subdomains like mail.domain.com, cpanel.domain.com, you have to use the %sDNS%s challenge."
+msgstr "Pokud chcete zabezpečit i subdomény, jako je mail.domain.com, cpanel.domain.com, musíte použít výzvu %sDNS%s."
+
+#: lets-encrypt/wizard/notices.php:150
+msgid "Switch to directory verification"
+msgstr "Přepnutí na ověření adresáře"
+
+#: lets-encrypt/wizard/notices.php:149
+msgid "You can switch back to directory verification here."
+msgstr "Zde můžete přepnout zpět na ověření adresáře."
+
+#: lets-encrypt/wizard/notices.php:148
+msgid "You have switched to DNS verification."
+msgstr "Přešli jste na ověřování pomocí DNS."
+
+#: lets-encrypt/wizard/notices.php:116
+msgid "Your Key and Certificate directories are not properly protected."
+msgstr "Adresáře klíčů a certifikátů nejsou řádně chráněny."
+
+#: lets-encrypt/wizard/notices.php:81
+msgid "Your certificate will be renewed and installed automatically."
+msgstr "Váš certifikát bude automaticky obnoven a nainstalován."
+
+#: lets-encrypt/wizard/notices.php:74
+msgid "Automatic renewal of your certificate was not possible. The SSL certificate should be %srenewed%s manually."
+msgstr "Automatické obnovení certifikátu nebylo možné. Certifikát SSL je třeba %srenewed%s obnovit ručně."
+
+#: lets-encrypt/wizard/notices.php:67
+msgid "The SSL certificate has been renewed, and requires manual %sinstallation%s in your hosting dashboard."
+msgstr "Certifikát SSL byl obnoven a vyžaduje ruční zadání %sinstallation%s v ovládacím panelu hostingu."
+
+#: lets-encrypt/wizard/notices.php:60
+msgid "The automatic installation of your certificate has failed. Please check your credentials, and retry the %sinstallation%s."
+msgstr "Automatická instalace certifikátu se nezdařila. Zkontrolujte prosím své údaje a zkuste %sinstallation%s znovu."
+
+#: lets-encrypt/wizard/notices.php:45
+msgid "Your certificate will expire on %s. You can renew it %shere%s."
+msgstr "Platnost vašeho certifikátu vyprší dne %s. Můžete jej obnovit za %shere%s."
+
+#: lets-encrypt/wizard/notices.php:41
+msgid "Your certificate is valid to: %s"
+msgstr "Váš certifikát je platný do: %s"
+
+#: lets-encrypt/wizard/notices.php:8
+msgid "The www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well."
+msgstr "Verze www vašeho webu neodkazuje na tento web. To se doporučuje, protože vám to umožní přidat ji i do certifikátu."
+
+#: lets-encrypt/wizard/notices.php:6
+msgid "The non-www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well."
+msgstr "Verze vašeho webu, která není www, neodkazuje na tento web. To se doporučuje, protože vám to umožní přidat ji i do certifikátu."
+
+#: lets-encrypt/wizard/config/steps.php:153
+msgid "Searching for link to SSL installation page on your server..."
+msgstr "Hledání odkazu na stránku pro instalaci SSL na vašem serveru..."
+
+#: lets-encrypt/wizard/config/steps.php:150
+#: lets-encrypt/wizard/templates/menu.php:2
+msgid "Installation"
+msgstr "Instalace"
+
+#: lets-encrypt/wizard/config/steps.php:126
+msgid "We will now generate your SSL Certificate"
+msgstr "Nyní vygenerujeme váš certifikát SSL"
+
+#: lets-encrypt/wizard/config/steps.php:125
+msgid "Generation"
+msgstr "Kadence - Téma nové generace"
+
+#: lets-encrypt/wizard/config/steps.php:116
+msgid "Retrieving DNS verification token..."
+msgstr "Získání ověřovacího tokenu DNS..."
+
+#: lets-encrypt/wizard/config/steps.php:110
+#: lets-encrypt/wizard/config/steps.php:135
+msgid "Creating account..."
+msgstr "Vytvááření účtu…"
+
+#: lets-encrypt/wizard/config/steps.php:107
+msgid "DNS Verification"
+msgstr "Ověřování DNS"
+
+#: lets-encrypt/wizard/config/steps.php:98
+msgid "Checking challenge directory reachable over http..."
+msgstr "Kontrola adresáře challenge dosažitelného přes http..."
+
+#: lets-encrypt/wizard/config/steps.php:91
+msgid "Checking permissions..."
+msgstr "Kontrola oprávnění..."
+
+#: lets-encrypt/wizard/config/steps.php:85
+msgid "Checking certs directory..."
+msgstr "Kontrola adresáře certifikátů..."
+
+#: lets-encrypt/wizard/config/steps.php:79
+msgid "Checking key directory..."
+msgstr "Kontrola klíčového adresáře..."
+
+#: lets-encrypt/wizard/config/steps.php:73
+msgid "Checking challenge directory..."
+msgstr "Kontrola adresáře výzev..."
+
+#: lets-encrypt/wizard/config/steps.php:64
+msgid "Directories"
+msgstr "Adresáře"
+
+#: lets-encrypt/wizard/config/steps.php:56
+msgid "Below you will find the instructions for different hosting environments and configurations. If you start the process with the necessary instructions and credentials the next view steps will be done in no time."
+msgstr "Níže najdete pokyny pro různá hostingová prostředí a konfigurace. Pokud zahájíte proces s potřebnými pokyny a pověřeními, další kroky zobrazení budou hotové během okamžiku."
+
+#: lets-encrypt/wizard/config/steps.php:55
+msgid "Hosting"
+msgstr "Hosting"
+
+#: lets-encrypt/wizard/config/steps.php:52
+msgid "Letʼs Encrypt is a free, automated and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG)."
+msgstr "Letʼs Encrypt je bezplatná, automatizovaná a otevřená certifikační autorita, kterou vám přináší nezisková organizace Internet Security Research Group (ISRG)."
+
+#: lets-encrypt/wizard/config/steps.php:48
+msgid " Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance."
+msgstr " Vezměte prosím na vědomí, že průvodce můžete kdykoli uložit a dokončit později, použít naše %sdocumentation%s dodatečné informace nebo v případě potřeby naší pomoci přihlásit %ssupport ticket%s."
+
+#: lets-encrypt/wizard/config/steps.php:47
+msgid "We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!"
+msgstr "Snažili jsme se, aby byl náš Průvodce co nejjednodušší a nejrychlejší. Přestože jsou všechny tyto otázky nezbytné, pokud si myslíte, že můžeme plugin nějak vylepšit, dejte nám prosím %sknow%s vědět!"
+
+#: lets-encrypt/wizard/config/steps.php:45
+msgid "General settings"
+msgstr "Obecná nastavení"
+
+#: lets-encrypt/wizard/config/steps.php:37
+msgid "Checking for website configuration..."
+msgstr "Kontrola konfigurace webových stránek..."
+
+#: lets-encrypt/wizard/config/steps.php:32
+msgid "Checking alias domain..."
+msgstr "Kontrola domény aliasu..."
+
+#: lets-encrypt/wizard/config/steps.php:27
+msgid "Checking server software..."
+msgstr "Kontrola softwaru serveru..."
+
+#: lets-encrypt/wizard/config/steps.php:22
+msgid "Checking if CURL is available..."
+msgstr "Kontrola dostupnosti CURL..."
+
+#: lets-encrypt/wizard/config/steps.php:17
+msgid "Checking SSL certificate..."
+msgstr "Kontrola certifikátu SSL..."
+
+#: lets-encrypt/wizard/config/steps.php:12
+msgid "Checking PHP version..."
+msgstr "Kontrola verze PHP..."
+
+#: lets-encrypt/wizard/config/steps.php:9
+msgid "Detected status of your setup."
+msgstr "Zjištěný stav nastavení."
+
+#: lets-encrypt/wizard/config/steps.php:8
+msgid "System Status"
+msgstr "Stav systému"
+
+#: lets-encrypt/wizard/config/questions.php:300
+msgid "Store for renewal purposes. If not stored, renewal may need to be done manually."
+msgstr "Uložit pro účely obnovy. Pokud není uloženo, může být nutné obnovení provést ručně."
+
+#: lets-encrypt/wizard/config/questions.php:299
+msgid "Credentials storage"
+msgstr "Uložení pověření"
+
+#: lets-encrypt/wizard/config/questions.php:282
+msgid "Plesk password"
+msgstr "Heslo systému Plesk"
+
+#: lets-encrypt/wizard/config/questions.php:265
+msgid "You can find your Plesk username and password in %s"
+msgstr "Uživatelské jméno a heslo k systému Plesk najdete v %s"
+
+#: lets-encrypt/wizard/config/questions.php:264
+msgid "Plesk username"
+msgstr "Uživatelské jméno systému Plesk"
+
+#: lets-encrypt/wizard/config/questions.php:248
+msgid "The URL you use to access your Plesk dashboard. Ends on :8443."
+msgstr "Adresa URL, kterou používáte pro přístup k ovládacímu panelu služby Plesk. Končí na :8443."
+
+#: lets-encrypt/wizard/config/questions.php:247
+msgid "Plesk host"
+msgstr "Hostitel systému Plesk"
+
+#: lets-encrypt/wizard/config/questions.php:235
+msgid "You can find your api key %shere%s (make sure you're logged in with your main account)."
+msgstr "Svůj klíč api najdete %shere%s (ujistěte se, že jste přihlášeni pod svým hlavním účtem)."
+
+#: lets-encrypt/wizard/config/questions.php:232
+msgid "CloudWays api key"
+msgstr "Klíč API CloudWays"
+
+#: lets-encrypt/wizard/config/questions.php:219
+msgid "CloudWays user email"
+msgstr "E-mail uživatele CloudWays"
+
+#: lets-encrypt/wizard/config/questions.php:201
+msgid "DirectAdmin password"
+msgstr "Heslo DirectAdmin"
+
+#: lets-encrypt/wizard/config/questions.php:184
+msgid "DirectAdmin username"
+msgstr "Uživatelské jméno DirectAdmin"
+
+#: lets-encrypt/wizard/config/questions.php:167
+msgid "The URL you use to access your DirectAdmin dashboard. Ends on :2222."
+msgstr "Adresa URL, kterou používáte pro přístup k ovládacímu panelu DirectAdmin. Končí na :2222."
+
+#: lets-encrypt/wizard/config/questions.php:166
+msgid "DirectAdmin host"
+msgstr "Hostitel DirectAdmin"
+
+#: lets-encrypt/wizard/config/questions.php:150
+msgid "CPanel password"
+msgstr "Heslo panelu CPanel"
+
+#: lets-encrypt/wizard/config/questions.php:133
+msgid "CPanel username"
+msgstr "Uživatelské jméno CPanel"
+
+#: lets-encrypt/wizard/config/questions.php:116
+msgid "The URL you use to access your cPanel dashboard. Ends on :2083."
+msgstr "Adresa URL, kterou používáte pro přístup k ovládacímu panelu cPanel. Končí na :2083."
+
+#: lets-encrypt/wizard/config/questions.php:115
+msgid "CPanel host"
+msgstr "Hostitel CPanel"
+
+#: lets-encrypt/wizard/config/questions.php:104
+msgid "Hosting provider"
+msgstr "Poskytovatel hostingu"
+
+#: lets-encrypt/wizard/config/questions.php:102
+msgid "If your hosting provider is not listed, and there's an SSL activation/installation link, please let us %sknow%s."
+msgstr "Pokud váš poskytovatel hostingu není uveden a je zde odkaz na aktivaci/instalaci SSL, dejte nám prosím %sknow%s."
+
+#: lets-encrypt/wizard/config/questions.php:101
+msgid "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and/or where you can activate it."
+msgstr "Výběrem poskytovatele hostingu vám můžeme sdělit, zda váš poskytovatel hostingu již podporuje bezplatný protokol SSL a/nebo kde jej můžete aktivovat."
+
+#: lets-encrypt/wizard/config/questions.php:99
+msgid "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and how you can activate it."
+msgstr "Výběrem poskytovatele hostingu vám můžeme sdělit, zda váš poskytovatel hostingu již podporuje bezplatný protokol SSL a jak jej můžete aktivovat."
+
+#: lets-encrypt/wizard/config/questions.php:87
+msgid "Include alias domain too?"
+msgstr "Zahrnout také doménu aliasu?"
+
+#: lets-encrypt/wizard/config/questions.php:85
+msgid "You should have the www domain pointed to the same website as the non-www domain."
+msgstr "Doména www by měla směřovat na stejnou webovou stránku jako doména newww."
+
+#: lets-encrypt/wizard/config/questions.php:85
+msgid "This will include both the www. and non-www. version of your domain."
+msgstr "To bude zahrnovat jak www., tak newww. verzi vaší domény."
+
+#: lets-encrypt/wizard/config/questions.php:73
+#: lets-encrypt/wizard/config/steps.php:51
+msgid "Domain"
+msgstr "Doména"
+
+#: lets-encrypt/wizard/config/questions.php:54
+msgid "I agree to the Let's Encrypt %sTerms & Conditions%s"
+msgstr "Souhlasím s podmínkami %sTerms & Conditions%s společnosti Let's Encrypt"
+
+#: lets-encrypt/wizard/config/questions.php:53
+msgid "Terms & Conditions"
+msgstr "Všeobecné obchodní podmínky"
+
+#: lets-encrypt/wizard/config/questions.php:42
+#: lets-encrypt/wizard/config/questions.php:74
+msgid "This field is prefilled based on your configuration"
+msgstr "Toto pole je předvyplněno na základě vaší konfigurace"
+
+#: lets-encrypt/wizard/config/questions.php:41
+msgid "Email address"
+msgstr "Emailová adresa"
+
+#: lets-encrypt/wizard/config/questions.php:39
+msgid "This email address will used to create a Let's Encrypt account. This is also where you will receive renewal notifications."
+msgstr "Tato e-mailová adresa bude použita k vytvoření účtu Let's Encrypt. Na tuto adresu budete také dostávat oznámení o obnovení."
+
+#: lets-encrypt/wizard/config/class-config.php:539
+msgid "No"
+msgstr "Ne"
+
+#: lets-encrypt/wizard/config/class-config.php:538
+msgid "Yes"
+msgstr "Ano"
+
+#: lets-encrypt/wizard/class-wizard.php:953
+#: lets-encrypt/wizard/config/class-config.php:545
+msgid "I don't know, or not listed, proceed with installation"
+msgstr "Nevím, nebo není uveden, pokračujte v instalaci"
+
+#: lets-encrypt/wizard/class-wizard.php:884
+msgid "Go to dashboard"
+msgstr "Přejít na nástěnku"
+
+#: lets-encrypt/wizard/class-wizard.php:814
+msgid "Previous"
+msgstr "Předchozí"
+
+#: grid/templates/grid-container.php:6
+#: lets-encrypt/wizard/templates/content.php:8
+msgid "Changes saved successfully"
+msgstr "Změny byly úspěšně uloženy"
+
+#: lets-encrypt/wizard/class-wizard.php:633
+msgid "If this user stops editing, the lock will expire after %s minutes."
+msgstr "Pokud tento uživatel přestane upravovat, platnost zámku vyprší po %s minutách."
+
+#: lets-encrypt/wizard/class-wizard.php:631
+msgid "The wizard is currently being edited by %s"
+msgstr "Průvodce právě upravuje %s"
+
+#: lets-encrypt/wizard/class-wizard.php:180
+msgid "Attempt %s."
+msgstr "Pokus %s."
+
+#: lets-encrypt/wizard/class-wizard.php:86
+msgid "Checking for subdomain setup..."
+msgstr "Kontrola nastavení subdomény..."
+
+#: lets-encrypt/wizard/class-wizard.php:63
+#: lets-encrypt/wizard/config/steps.php:141
+msgid "Generating SSL certificate..."
+msgstr "Generování certifikátu SSL..."
+
+#: lets-encrypt/wizard/class-wizard.php:57
+msgid "Verifying DNS records..."
+msgstr "Ověřování záznamů DNS..."
+
+#: lets-encrypt/wizard/class-field.php:1314
+msgid "Refresh"
+msgstr "Obnovit"
+
+#: lets-encrypt/wizard/class-field.php:1297
+msgid "Start"
+msgstr "Začátek"
+
+#: lets-encrypt/integrations/plesk/plesk.php:88
+msgid "Successfully installed SSL"
+msgstr "Úspěšná instalace protokolu SSL"
+
+#: lets-encrypt/integrations/plesk/functions.php:34
+msgid "Installing SSL certificate using PLESK API..."
+msgstr "Instalace certifikátu SSL pomocí rozhraní PLESK API..."
+
+#: lets-encrypt/integrations/cpanel/functions.php:102
+#: lets-encrypt/integrations/directadmin/functions.php:30
+msgid "Attempting to install certificate..."
+msgstr "Pokus o instalaci certifikátu..."
+
+#: lets-encrypt/integrations/cpanel/functions.php:95
+msgid "Attempting to set DNS txt record..."
+msgstr "Pokus o nastavení txt záznamu DNS..."
+
+#: lets-encrypt/integrations/cpanel/functions.php:86
+msgid "Attempting to install certificate using AutoSSL..."
+msgstr "Pokus o instalaci certifikátu pomocí AutoSSL..."
+
+#: lets-encrypt/integrations/cpanel/functions.php:61
+msgid "The system is not ready for the DNS verification yet. Please run the wizard again."
+msgstr "Systém ještě není připraven na ověření DNS. Spusťte průvodce znovu."
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:258
+#: lets-encrypt/integrations/cpanel/cpanel.php:278
+msgid "Could not automatically add TXT record. Please proceed manually, following the steps below."
+msgstr "Nepodařilo se automaticky přidat záznam TXT. Postupujte prosím ručně podle níže uvedených kroků."
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:254
+#: lets-encrypt/integrations/cpanel/cpanel.php:273
+msgid "Successfully added TXT record."
+msgstr "Úspěšně přidán záznam TXT."
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:246
+msgid "Login credentials incorrect"
+msgstr "Nesprávné přihlašovací údaje"
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:242
+msgid "Unable to connect to cPanel"
+msgstr "Nelze se připojit k cPanelu"
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:157
+msgid "Errors were reported during installation."
+msgstr "Při instalaci byly hlášeny chyby."
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:117
+msgid "Errors were reported during installation"
+msgstr "Při instalaci byly hlášeny chyby"
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:111
+#: lets-encrypt/integrations/directadmin/directadmin.php:124
+msgid "SSL successfully installed on %s"
+msgstr "Protokol SSL byl úspěšně nainstalován na %s"
+
+#: lets-encrypt/integrations/cpanel/cpanel.php:64
+#: lets-encrypt/integrations/directadmin/directadmin.php:64
+msgid "No valid list of domains."
+msgstr "Žádný platný seznam domén."
+
+#: lets-encrypt/integrations/cloudways/functions.php:51
+msgid "Enabling auto renew..."
+msgstr "Povolení automatického obnovení..."
+
+#: lets-encrypt/integrations/cloudways/functions.php:45
+msgid "Installing SSL certificate..."
+msgstr "Instalace certifikátu SSL..."
+
+#: lets-encrypt/integrations/cloudways/functions.php:39
+msgid "Retrieving Cloudways server data..."
+msgstr "Získání dat serveru Cloudways..."
+
+#: lets-encrypt/integrations/cloudways/cloudways.php:259
+msgid "Could not retrieve server list"
+msgstr "Nepodařilo se načíst seznam serverů"
+
+#: lets-encrypt/integrations/cloudways/cloudways.php:217
+#: lets-encrypt/integrations/cloudways/cloudways.php:252
+msgid "Successfully retrieved server id and app id"
+msgstr "Úspěšné načtení id serveru a id aplikace"
+
+#: lets-encrypt/integrations/cloudways/cloudways.php:201
+msgid "Error enabling auto renew for Let's Encrypt"
+msgstr "Chyba při povolení automatického obnovení pro Let's Encrypt"
+
+#: lets-encrypt/integrations/cloudways/cloudways.php:186
+#: lets-encrypt/integrations/cloudways/cloudways.php:192
+msgid "Successfully installed Let's Encrypt"
+msgstr "Úspěšná instalace aplikace Let's Encrypt"
+
+#: lets-encrypt/integrations/cloudways/cloudways.php:166
+msgid "Failed retrieving access token"
+msgstr "Neúspěšné načtení přístupového tokenu"
+
+#: lets-encrypt/functions.php:405
+msgid "You can follow these %sinstructions%s."
+msgstr "Můžete sledovat tyto %sinstructions%s."
+
+#: lets-encrypt/functions.php:403
+msgid "Your hosting environment does not allow automatic SSL installation."
+msgstr "Vaše hostingové prostředí neumožňuje automatickou instalaci protokolu SSL."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1091
+#: lets-encrypt/functions.php:401
+msgid "According to our information, your hosting provider does not allow any kind of SSL installation, other then their own paid certificate. For an alternative hosting provider with SSL, see this %sarticle%s."
+msgstr "Podle našich informací váš poskytovatel hostingu neumožňuje instalaci žádného druhu SSL, kromě vlastního placeného certifikátu. Alternativního poskytovatele hostingu s SSL naleznete v tomto %sarticle%sdělení."
+
+#: lets-encrypt/functions.php:396
+msgid "You already have free SSL on your hosting environment."
+msgstr "V hostitelském prostředí již máte bezplatný protokol SSL."
+
+#: lets-encrypt/functions.php:394 lets-encrypt/functions.php:398
+#: lets-encrypt/functions.php:406
+msgid "After completing the installation, you can continue to the next step to complete your configuration."
+msgstr "Po dokončení instalace můžete pokračovat dalším krokem a dokončit konfiguraci."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1098
+#: lets-encrypt/functions.php:393
+msgid "According to our information, your hosting provider supplies your account with an SSL certificate by default. Please contact your %shosting support%s if this is not the case."
+msgstr "Podle našich informací váš poskytovatel hostingu standardně dodává k vašemu účtu certifikát SSL. Pokud tomu tak není, obraťte se prosím na %shostingovou podporu%s."
+
+#: lets-encrypt/functions.php:389
+msgid "Go to installation"
+msgstr "Přejít na instalaci"
+
+#: lets-encrypt/functions.php:388
+msgid "Go to activation"
+msgstr "Přejít k aktivaci"
+
+#: lets-encrypt/functions.php:387
+msgid "Please activate it on your dashboard %smanually%s"
+msgstr "Aktivujte ji prosím na svém ovládacím panelu %smanually%s"
+
+#: lets-encrypt/functions.php:386
+msgid "Please complete %smanually%s"
+msgstr "Vyplňte prosím %smanually%s"
+
+#: lets-encrypt/functions.php:384
+msgid "Please activate it manually on your hosting dashboard."
+msgstr "Aktivujte ji prosím ručně na ovládacím panelu hostingu."
+
+#: lets-encrypt/functions.php:383
+msgid "Please complete manually in your hosting dashboard."
+msgstr "Vyplňte prosím ručně v řídicím panelu hostingu."
+
+#: lets-encrypt/functions.php:321
+msgid "You have the required PHP version to continue."
+msgstr "Máte požadovanou verzi PHP, abyste mohli pokračovat."
+
+#: lets-encrypt/functions.php:317
+msgid "The minimum requirements for the PHP version have not been met. Please upgrade to %s"
+msgstr "Minimální požadavky na verzi PHP nebyly splněny. Upgradujte prosím na verzi %s"
+
+#: lets-encrypt/download.php:49
+msgid "File missing. Please retry the previous steps."
+msgstr "Chybějící soubor. Zopakujte prosím předchozí kroky."
+
+#: lets-encrypt/cron.php:84
+msgid "Once every 5 minutes"
+msgstr "Jednou za 5 minut"
+
+#: lets-encrypt/cron.php:80
+msgid "Once every day"
+msgstr "Jednou denně"
+
+#: lets-encrypt/cron.php:76
+msgid "Once every week"
+msgstr "Jednou týdně"
+
+#: lets-encrypt/class-letsencrypt-handler.php:1679
+#: lets-encrypt/integrations/cloudways/functions.php:22
+#: lets-encrypt/integrations/cpanel/functions.php:16
+#: lets-encrypt/integrations/cpanel/functions.php:33
+#: lets-encrypt/integrations/directadmin/functions.php:16
+#: lets-encrypt/integrations/plesk/functions.php:16
+msgid "The system is not ready for the installation yet. Please run the wizard again."
+msgstr "Systém ještě není připraven k instalaci. Spusťte průvodce znovu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1674
+msgid "Installation failed."
+msgstr "Instalace se nezdařila."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1668
+msgid "Not recognized server."
+msgstr "Server nebyl rozpoznán."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1642
+msgid "The certificate installation was rate limited. Please try again later."
+msgstr "Instalace certifikátu byla omezena sazbou. Zkuste to prosím později."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1562
+msgid "Error code %s"
+msgstr "Kód chyby %s"
+
+#: lets-encrypt/class-letsencrypt-handler.php:1545
+msgid "Please create a folder 'rsssl' in the uploads directory, with 644 permissions."
+msgstr "Vytvořte prosím složku 'rsssl' v adresáři uploads s oprávněním 644."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1544
+msgid "Could not create test folder and file."
+msgstr "Nepodařilo se vytvořit testovací složku a soubor."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1515
+msgid "If this is not the case, don't add this alias to your certificate."
+msgstr "Pokud tomu tak není, tento alias do certifikátu nepřidávejte."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1515
+msgid "Could not verify alias domain."
+msgstr "Nepodařilo se ověřit doménu aliasu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1513
+msgid "Please check if the www version of your site also points to this website."
+msgstr "Zkontrolujte prosím, zda www verze vašich stránek také odkazuje na tyto stránky."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1511
+msgid "Please check if the non www version of your site also points to this website."
+msgstr "Zkontrolujte prosím, zda verze vašeho webu, která není www, také odkazuje na tento web."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1492
+msgid "Alias domain check is not relevant for a subdomain"
+msgstr "Kontrola domény aliasu není pro subdoménu relevantní"
+
+#: lets-encrypt/class-letsencrypt-handler.php:1462
+msgid "No subdomain setup detected."
+msgstr "Nebylo zjištěno žádné nastavení subdomény."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1457
+msgid "This is a multisite configuration with subdomains, which requires a wildcard certificate. Wildcard certificates are part of the %spremium%s plan."
+msgstr "Jedná se o konfiguraci více webů se subdoménami, která vyžaduje certifikát se zástupnou kartou. Certifikáty se zástupnými znaky jsou součástí plánu %spremium%s."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1259
+#: lets-encrypt/class-letsencrypt-handler.php:1522
+#: lets-encrypt/class-letsencrypt-handler.php:1573
+msgid "Successfully verified alias domain."
+msgstr "Úspěšně ověřena doména aliasu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1246
+#: lets-encrypt/class-letsencrypt-handler.php:1250
+msgid "Error code %s."
+msgstr "Kód chyby %s."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1232
+msgid "Challenge directory not writable."
+msgstr "Adresář challenge není zapisovatelný."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1226
+msgid "Could not reach challenge directory over %s."
+msgstr "Nepodařilo se dosáhnout adresáře výzvy přes %s."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1222
+#: lets-encrypt/class-letsencrypt-handler.php:1499
+msgid "no response"
+msgstr "Neočekávaná odpověď rozhraní API."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1163
+msgid "The certs directory was successfully created."
+msgstr "Adresář certs byl úspěšně vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1159
+msgid "The certs directory is not created yet."
+msgstr "Adresář certs ještě není vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1144
+msgid "The key directory was successfully created."
+msgstr "Adresář s klíčem byl úspěšně vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1136
+msgid "Trying to create directory in root of website."
+msgstr "Pokus o vytvoření adresáře v kořenovém adresáři webu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1132
+msgid "The key directory is not created yet."
+msgstr "Adresář s klíčem ještě není vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1119
+msgid "The challenge directory was successfully created."
+msgstr "Adresář výzvy byl úspěšně vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1115
+msgid "The challenge directory is not created yet."
+msgstr "Adresář výzev ještě není vytvořen."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1073
+msgid "The required directories have the necessary writing permissions."
+msgstr "Požadované adresáře mají potřebná práva pro zápis."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1066
+msgid "Set permissions to 644 to enable SSL generation."
+msgstr "Nastavte oprávnění na hodnotu 644, aby bylo povoleno generování protokolu SSL."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1066
+msgid "The following directories do not have the necessary writing permissions."
+msgstr "Následující adresáře nemají potřebná práva pro zápis."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1050
+msgid "Please complete the following step(s) first: %s"
+msgstr "Nejprve proveďte následující krok (kroky): %s"
+
+#: lets-encrypt/class-letsencrypt-handler.php:785
+msgid "Order successfully retrieved."
+msgstr "Objednávka byla úspěšně načtena."
+
+#: lets-encrypt/class-letsencrypt-handler.php:768
+msgid "Order successfully created."
+msgstr "Objednávka byla úspěšně vytvořena."
+
+#: lets-encrypt/class-letsencrypt-handler.php:724
+msgid "Bundle not available yet..."
+msgstr "Balíček zatím není k dispozici..."
+
+#: lets-encrypt/class-letsencrypt-handler.php:716
+msgid "Files not created yet..."
+msgstr "Soubory ještě nebyly vytvořeny..."
+
+#: lets-encrypt/class-letsencrypt-handler.php:710
+msgid "Successfully generated certificate."
+msgstr "Certifikát byl úspěšně vygenerován."
+
+#: lets-encrypt/class-letsencrypt-handler.php:672
+msgid "OCSP not supported, the certificate will be generated without OCSP."
+msgstr "OCSP není podporováno, certifikát bude vygenerován bez OCSP."
+
+#: lets-encrypt/class-letsencrypt-handler.php:664
+msgid "As your order will be regenerated, you'll need to update your DNS text records."
+msgstr "Vzhledem k tomu, že se vaše objednávka přegeneruje, je třeba aktualizovat textové záznamy DNS."
+
+#: lets-encrypt/class-letsencrypt-handler.php:443
+#: lets-encrypt/class-letsencrypt-handler.php:661
+msgid "The order is invalid, possibly due to too many failed authorization attempts. Please start at the previous step."
+msgstr "Objednávka je neplatná, pravděpodobně z důvodu příliš mnoha neúspěšných pokusů o autorizaci. Začněte prosím od předchozího kroku."
+
+#: lets-encrypt/class-letsencrypt-handler.php:644
+msgid "Authorization not completed yet."
+msgstr "Autorizace dosud nebyla dokončena."
+
+#: lets-encrypt/class-letsencrypt-handler.php:619
+msgid "Certificate already generated. It was renewed if required."
+msgstr "Certifikát již byl vygenerován. V případě potřeby byl obnoven."
+
+#: lets-encrypt/class-letsencrypt-handler.php:588
+msgid "DNS records were not verified yet. Please complete the previous step."
+msgstr "Záznamy DNS zatím nebyly ověřeny. Dokončete prosím předchozí krok."
+
+#: lets-encrypt/class-letsencrypt-handler.php:574
+msgid "Please double check your DNS txt record."
+msgstr "Překontrolujte prosím svůj txt záznam DNS."
+
+#: lets-encrypt/class-letsencrypt-handler.php:572
+msgid "The certificate generation was rate limited for 10 minutes because the authorization failed."
+msgstr "Generování certifikátu bylo omezeno na 10 minut, protože autorizace selhala."
+
+#: lets-encrypt/class-letsencrypt-handler.php:531
+msgid "Could not verify TXT record for domain %s"
+msgstr "Nepodařilo se ověřit záznam TXT pro doménu %s"
+
+#: lets-encrypt/class-letsencrypt-handler.php:522
+msgid "The DNS response for %s was %s, while it should be %s."
+msgstr "Odpověď DNS pro %s byla %s, zatímco by měla být %s."
+
+#: lets-encrypt/class-letsencrypt-handler.php:515
+msgid "Successfully verified DNS records"
+msgstr "Úspěšně ověřené záznamy DNS"
+
+#: lets-encrypt/class-letsencrypt-handler.php:501
+#: lets-encrypt/integrations/cpanel/functions.php:45
+msgid "Token not generated. Please complete the previous step."
+msgstr "Token nebyl vygenerován. Dokončete prosím předchozí krok."
+
+#: lets-encrypt/class-letsencrypt-handler.php:474
+msgid "Configured for HTTP challenge"
+msgstr "Konfigurace pro výzvu HTTP"
+
+#: lets-encrypt/class-letsencrypt-handler.php:433
+msgid "Token not received yet."
+msgstr "Token ještě nebyl přijat."
+
+#: lets-encrypt/class-letsencrypt-handler.php:418
+#: lets-encrypt/class-letsencrypt-handler.php:426
+msgid "Token successfully retrieved."
+msgstr "Token byl úspěšně načten."
+
+#: lets-encrypt/class-letsencrypt-handler.php:381
+msgid "The email address was not set. Please set the email address"
+msgstr "E-mailová adresa nebyla nastavena. Nastavte prosím e-mailovou adresu"
+
+#: lets-encrypt/class-letsencrypt-handler.php:372
+msgid "Please change your email address %shere%s and try again."
+msgstr "Změňte prosím svou e-mailovou adresu %shere%s a zkuste to znovu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:371
+msgid "The used domain for your email address is not allowed."
+msgstr "Použitá doména pro vaši e-mailovou adresu není povolena."
+
+#: lets-encrypt/class-letsencrypt-handler.php:363
+msgid "Successfully retrieved account"
+msgstr "Úspěšně načtený účet"
+
+#: lets-encrypt/class-letsencrypt-handler.php:343
+msgid "The PHP function CURL has successfully been detected."
+msgstr "Funkce PHP CURL byla úspěšně detekována."
+
+#: lets-encrypt/class-letsencrypt-handler.php:339
+msgid "The PHP function CURL is not available on your server, which is required. Please contact your hosting provider."
+msgstr "Na vašem serveru není k dispozici funkce PHP CURL, která je vyžadována. Obraťte se prosím na svého poskytovatele hostingu."
+
+#: lets-encrypt/class-letsencrypt-handler.php:323
+msgid "DirectAdmin recognized. Possibly the certificate can be installed automatically."
+msgstr "DirectAdmin rozpoznán. Je možné, že se certifikát nainstaluje automaticky."
+
+#: lets-encrypt/class-letsencrypt-handler.php:320
+msgid "Plesk recognized. Possibly the certificate can be installed automatically."
+msgstr "Plesk rozpoznal. Je možné, že se certifikát nainstaluje automaticky."
+
+#: lets-encrypt/class-letsencrypt-handler.php:317
+msgid "CPanel recognized. Possibly the certificate can be installed automatically."
+msgstr "CPanel rozpoznán. Je možné, že se certifikát nainstaluje automaticky."
+
+#: lets-encrypt/class-letsencrypt-handler.php:313
+msgid "The Hosting Panel software was not recognized. Depending on your hosting provider, the generated certificate may need to be installed manually."
+msgstr "Software hostitelského panelu nebyl rozpoznán. V závislosti na poskytovateli hostingu může být nutné vygenerovaný certifikát nainstalovat ručně."
+
+#: lets-encrypt/class-letsencrypt-handler.php:282
+msgid "SSL certificate should be generated and installed."
+msgstr "Měl by být vygenerován a nainstalován certifikát SSL."
+
+#: lets-encrypt/class-letsencrypt-handler.php:276
+msgid "You already have a valid SSL certificate."
+msgstr "Platný certifikát SSL již máte."
+
+#: lets-encrypt/class-letsencrypt-handler.php:272
+msgid "Continue to renew."
+msgstr "Pokračujte v obnově."
+
+#: lets-encrypt/class-letsencrypt-handler.php:272
+msgid "Your certificate will expire on %s."
+msgstr "Platnost vašeho certifikátu vyprší dne %s."
+
+#: lets-encrypt/class-letsencrypt-handler.php:266
+msgid "(unknown)"
+msgstr "(neznámý)"
+
+#: lets-encrypt/class-letsencrypt-handler.php:202
+msgid "Your domain meets the requirements for Let's Encrypt."
+msgstr "Vaše doména splňuje požadavky pro službu Let's Encrypt."
+
+#: lets-encrypt/class-letsencrypt-handler.php:188
+msgid "It is not possible to install Let's Encrypt on a localhost environment."
+msgstr "V prostředí localhost není možné Let's Encrypt nainstalovat."
+
+#: lets-encrypt/class-letsencrypt-handler.php:198
+msgid "It is not possible to install Let's Encrypt on a subfolder configuration."
+msgstr "Let's Encrypt není možné nainstalovat do konfigurace podsložky."
+
+#: lets-encrypt/class-letsencrypt-handler.php:193
+msgid "It is not possible to install Let's Encrypt on a subsite. Please go to the main site of your website."
+msgstr "Službu Let's Encrypt není možné nainstalovat na dílčí stránky. Přejděte prosím na hlavní stránku svého webu."
+
+#: class-admin.php:3402
+msgid "You have the Really Simple SSL Let's Encrypt beta add-on activated. This functionality has now been integrated in core, so you can deactivate the add-on."
+msgstr "Máte aktivovaný doplněk Really Simple SSL Let's Encrypt beta. Tato funkce byla nyní integrována do jádra, takže můžete doplněk deaktivovat."
+
+#: class-admin.php:3183
+msgid "Re-check"
+msgstr "Znovu zkontrolujte"
+
+#: class-admin.php:3181
+msgid "Depending on your hosting provider, %smanual installation%s may be required."
+msgstr "V závislosti na poskytovateli hostingu může být vyžadována %sruční instalace%s."
+
+#: class-admin.php:3180
+msgid "If your hosting provider auto-renews your certificate, no action is required. Alternatively, you have the option to generate an SSL certificate with Really Simple SSL."
+msgstr "Pokud poskytovatel hostingu automaticky obnovuje certifikát, není třeba provádět žádné akce. Případně máte možnost vygenerovat si certifikát SSL pomocí služby Really Simple SSL."
+
+#: class-admin.php:3180
+msgid "SSL certificate will expire on %s."
+msgstr "Platnost certifikátu SSL vyprší dne %s."
+
+#: class-admin.php:3179
+msgid "Your SSL certificate will expire soon."
+msgstr "Platnost vašeho certifikátu SSL brzy vyprší."
+
+#: class-admin.php:3157
+msgid "No SSL detected. Use the retry button to check again."
+msgstr "Nebylo zjištěno žádné SSL. Pomocí tlačítka opakovat kontrolu proveďte znovu."
+
+#: class-admin.php:3036
+msgid "(Unknown)"
+msgstr "Neznámý"
+
+#: class-admin.php:887 class-admin.php:3158 class-admin.php:3167
+#: class-admin.php:3182
+msgid "Install SSL certificate"
+msgstr "Instalace certifikátu SSL"
+
+#: class-admin.php:3159 lets-encrypt/wizard/class-wizard.php:891
+msgid "Retry"
+msgstr "Zkusit znovu"
+
+#: class-admin.php:582 lets-encrypt/wizard/templates/activate.php:58
+msgid "An SSL certificate has been detected"
+msgstr "Byl zjištěn certifikát SSL"
+
+#: grid/templates/tips-tricks.php:39
+msgid "Adding a Permission Policy"
+msgstr "Přidání zásady oprávnění"
+
+#: grid/templates/tips-tricks.php:31
+msgid "Adding a Content Security Policy"
+msgstr "Přidání zásad zabezpečení obsahu"
+
+#: class-admin.php:3342
+msgid "Or set your wp-config.php to writable and reload this page."
+msgstr "Nebo nastavte soubor wp-config.php na zapisovatelný a znovu načtěte tuto stránku."
+
+#: class-admin.php:3334
+msgid "Add the following lines of code to your wp-config.php."
+msgstr "Do souboru wp-config.php přidejte následující řádky kódu."
+
+#: class-admin.php:3334
+msgid "To set the httponly secure cookie settings, your wp-config.php has to be edited, but the file is not writable."
+msgstr "Chcete-li nastavit bezpečné nastavení souborů cookie httponly, je třeba upravit soubor wp-config.php, ale tento soubor není zapisovatelný."
+
+#: class-admin.php:3327
+msgid "HttpOnly Secure cookies not set."
+msgstr "HttpOnly Zabezpečené soubory cookie nejsou nastaveny."
+
+#: class-admin.php:3389
+msgid "Due to a recent update by WP Engine, we have changed your settings automatically to adapt."
+msgstr "Kvůli nedávné aktualizaci WP Engine jsme automaticky změnili vaše nastavení, aby se přizpůsobilo."
+
+#: class-admin.php:3060
+msgid "The Really Simple SSL plugin folder in the /wp-content/plugins/ directory has been renamed to %s. This might cause issues when deactivating, or with premium add-ons. To fix this you can rename the Really Simple SSL folder back to the default %s."
+msgstr "Složka pluginu Really Simple SSL v adresáři /wp-content/plugins/ byla přejmenována na %s. To může způsobit problémy při deaktivaci nebo s prémiovými doplňky. Chcete-li to napravit, můžete složku Really Simple SSL přejmenovat zpět na výchozí %s."
+
+#: class-site-health.php:75
+msgid "Not all recommended security headers are installed"
+msgstr "Nejsou nainstalovány všechny doporučené hlavičky zabezpečení"
+
+#: grid/templates/other-plugins.php:40
+msgid "Beautiful recipes optimized for Google "
+msgstr "Krásné recepty optimalizované pro Google "
+
+#: class-site-health.php:63
+msgid "The recommended security headers are detected on your site."
+msgstr "Na vašem webu jsou detekovány doporučené hlavičky zabezpečení."
+
+#: class-site-health.php:55
+msgid "Recommended security headers installed"
+msgstr "Nainstalované doporučené hlavičky zabezpečení"
+
+#: class-site-health.php:38
+msgid "Security Headers Test"
+msgstr "Test záhlaví zabezpečení"
+
+#: class-site-health.php:32
+msgid "SSL Status Test"
+msgstr "Test stavu SSL"
+
+#: class-admin.php:3156
+msgid "No SSL detected"
+msgstr "Nebylo zjištěno žádné SSL"
+
+#: class-site-health.php:80
+msgid "Learn more about security headers"
+msgstr "Další informace o záhlavích zabezpečení"
+
+#: class-site-health.php:146
+msgid "Enable 301 redirect"
+msgstr "Povolit přesměrování 301"
+
+#: class-site-health.php:141
+msgid "To ensure all traffic passes through SSL, please enable a 301 redirect."
+msgstr "Chcete-li zajistit, aby veškerý provoz procházel protokolem SSL, povolte přesměrování 301."
+
+#: class-site-health.php:138
+msgid "No 301 redirect to SSL enabled."
+msgstr "Není povoleno přesměrování 301 na SSL."
+
+#: class-site-health.php:132
+msgid "Really Simple SSL is installed, but no valid SSL certificate is detected."
+msgstr "Really Simple SSL je nainstalován, ale nebyl nalezen platný SSL certifikát."
+
+#: class-site-health.php:119
+msgid "Really Simple SSL detected an SSL certificate, but has not been configured to enforce SSL."
+msgstr "Really Simple SSL detekoval certifikát SSL, ale nebyl nakonfigurován tak, aby vynucoval SSL."
+
+#: class-site-health.php:116
+msgid "SSL is not enabled."
+msgstr "Protokol SSL není povolen."
+
+#: class-admin.php:4671
+msgid "Deactivate, revert to http"
+msgstr "Deaktivovat, návrat k http"
+
+#: class-admin.php:4670
+msgid "Deactivate, keep https"
+msgstr "Deaktivovat, zachovat https"
+
+#: class-admin.php:4657
+msgid "The WordPress 301 redirect will stop working"
+msgstr "Přesměrování WordPress 301 přestane fungovat"
+
+#: class-admin.php:4652
+msgid "Deactivate, and revert to http. This will remove all changes by the plugin."
+msgstr "Deaktivujte a vraťte se k http. Tím odstraníte všechny změny provedené zásuvným modulem."
+
+#: class-admin.php:4651
+msgid "Deactivate, but stay on SSL."
+msgstr "Deaktivovat, ale zůstat na SSL."
+
+#: class-admin.php:4649
+msgid "To deactivate the plugin correctly, please select if you want to:"
+msgstr "Chcete-li zásuvný modul správně deaktivovat, vyberte, zda chcete:"
+
+#: class-admin.php:4342
+msgid "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
+msgstr "Pokud je povoleno nastavení \"zastavit úpravy souboru .htaccess\", nelze toto nastavení změnit."
+
+#: class-admin.php:4192 class-multisite.php:342
+msgid "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
+msgstr "Povolením této možnosti trvale zrušíte všechna oznámení +1 na kartě \"Váš pokrok\""
+
+#: class-admin.php:4189
+msgid "Fire mixed content fixer with different method"
+msgstr "Fixátor se smíšeným obsahem ohně s různými metodami"
+
+#: class-admin.php:4171
+msgid "Enable WordPress 301 redirect"
+msgstr "Povolení přesměrování WordPress 301"
+
+#: class-admin.php:4170
+msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
+msgstr "Přesměruje všechny požadavky přes HTTP na HTTPS pomocí přesměrování PHP 301. Zapněte, pokud nelze použít přesměrování .htaccess, například na serverech NGINX."
+
+#: class-admin.php:4142
+msgid "Copied!"
+msgstr "Zkopírováno!"
+
+#: class-admin.php:4136
+msgid " You still have %s tasks open."
+msgstr " Stále máte otevřeno %s úkolů."
+
+#: class-admin.php:4037
+msgid "Premium"
+msgstr "Prémiový"
+
+#: class-admin.php:4035
+msgid "Open"
+msgstr "Otevřít"
+
+#: class-admin.php:4033
+msgid "Warning"
+msgstr "Varování"
+
+#: class-admin.php:4031
+msgid "Completed"
+msgstr "Dokončeno"
+
+#: class-admin.php:3966
+msgid "Instructions manual"
+msgstr "Návod k použití"
+
+#: class-admin.php:3907
+msgid "Upgrade to pro"
+msgstr "Upgrade na PRO"
+
+#: class-admin.php:3909
+msgid "Installed"
+msgstr "Nainstalováno"
+
+#: class-admin.php:3904
+msgid "Install"
+msgstr "Instalovat"
+
+#: class-admin.php:3791
+msgid "Tips & Tricks"
+msgstr "Tipy a triky"
+
+#: class-admin.php:3306
+msgid "Your site uses Divi. This can require some additional steps before getting the secure lock."
+msgstr "Váš web používá Divi. To může vyžadovat několik dalších kroků před získáním zabezpečeného zámku."
+
+#: class-admin.php:3292
+msgid "Your site uses Elementor. This can require some additional steps before getting the secure lock."
+msgstr "Váš web používá Elementor. To může vyžadovat několik dalších kroků před získáním zabezpečeného zámku."
+
+#: class-admin.php:3277
+msgid "The .htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on WordPress redirect."
+msgstr "Pravidla přesměrování .htaccess vybraná tímto zásuvným modulem v testu selhala. Nastavte ručně nebo odmítněte ponechat na WordPress přesměrování."
+
+#: class-admin.php:3271
+msgid "The %s file is not writable. You can either use the WordPress redirect, add the rules manually, or set the file to %swritable%s."
+msgstr "Do souboru %s nelze zapisovat. Můžete buď použít přesměrování WordPressu, přidat pravidla ručně, nebo nastavit soubor na %swritable%s."
+
+#: class-admin.php:3259
+msgid "WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess redirect."
+msgstr "WordPress 301 přesměrování povoleno. Doporučujeme povolit přesměrování 301 .htaccess."
+
+#: class-admin.php:3219
+msgid "Mixed content fixer not enabled. Enable the option to fix mixed content on your site."
+msgstr "Není povolen fixátor smíšeného obsahu. Povolte možnost opravy smíšeného obsahu na webu."
+
+#: class-admin.php:3208
+msgid "The mixed content fixer is active, but was not detected on the frontpage."
+msgstr "Opravovač smíšeného obsahu je aktivní, ale na titulní stránce nebyl zjištěn."
+
+#: class-admin.php:3201
+msgid "Really Simple SSL has received no response from the webpage."
+msgstr "Společnost Really Simple SSL neobdržela od webové stránky žádnou odpověď."
+
+#: class-admin.php:3138
+msgid "SSL is not enabled yet."
+msgstr "Protokol SSL zatím není povolen."
+
+#: class-admin.php:3121
+msgid "Really Simple SSL 4.0. Learn more about our newest major release."
+msgstr "Opravdu jednoduché SSL 4.0. Přečtěte si více o naší nejnovější hlavní verzi."
+
+#: class-admin.php:3120
+msgid "https://really-simple-ssl.com/really-simple-ssl-4-a-new-dashboard"
+msgstr "https://really-simple-ssl.com/really-simple-ssl-4-a-new-dashboard"
+
+#: class-admin.php:3076
+msgid "SSL is now activated. Check if your website is secure by following this article."
+msgstr "Protokol SSL je nyní aktivován. Zkontrolujte, zda jsou vaše webové stránky zabezpečené, podle tohoto článku."
+
+#: class-admin.php:3020
+msgid "No recommended redirect rules detected."
+msgstr "Nebyla zjištěna žádná doporučená pravidla přesměrování."
+
+#: class-admin.php:2941
+msgid "General"
+msgstr "Obecné"
+
+#: class-admin.php:575 lets-encrypt/wizard/templates/activate.php:45
+msgid "Before you migrate, please check for: "
+msgstr "Před migrací zkontrolujte, zda"
+
+#: rlrsssl-really-simple-ssl.php:191
+msgid "Please upgrade to the latest version to be able use the full functionality of the plugin."
+msgstr "Chcete-li využívat všechny funkce zásuvného modulu, aktualizujte jej na nejnovější verzi."
+
+#: rlrsssl-really-simple-ssl.php:190
+msgid "You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL."
+msgstr "Máte prémiový doplněk s verzí, která není kompatibilní s verzí >4.0 systému Really Simple SSL."
+
+#: rlrsssl-really-simple-ssl.php:189
+msgid "Plugin dependency error"
+msgstr "Chyba závislosti zásuvného modulu"
+
+#: rlrsssl-really-simple-ssl.php:41
+msgid "Really Simple SSL cannot be activated. The plugin requires WordPress 4.8 or higher"
+msgstr "Really Simple SSL nelze aktivovat. Zásuvný modul vyžaduje WordPress 4.8 nebo vyšší"
+
+#: rlrsssl-really-simple-ssl.php:35
+msgid "Really Simple SSL cannot be activated. The plugin requires PHP 5.6 or higher"
+msgstr "Really Simple SSL nelze aktivovat. Zásuvný modul vyžaduje PHP 5.6 nebo vyšší"
+
+#: class-multisite.php:1045
+msgid "Really Simple SSL has converted all your websites to non SSL."
+msgstr "Really Simple SSL převedl všechny vaše webové stránky na non SSL."
+
+#: class-multisite.php:1042
+msgid "Really Simple SSL has converted all your websites to SSL."
+msgstr "Really Simple SSL převedl všechny vaše webové stránky na SSL."
+
+#: class-multisite.php:1040
+msgid "Conversion of websites completed."
+msgstr "Konverze webových stránek dokončena."
+
+#: class-multisite.php:1035
+msgid "Site conversion in progress. Please refresh this page to check if the process has finished. It will proceed in the background."
+msgstr "Probíhá přestavba webu. Obnovte prosím tuto stránku a zkontrolujte, zda byl proces dokončen. Bude probíhat na pozadí."
+
+#: class-multisite.php:571
+msgid "Setup"
+msgstr "Nastavení"
+
+#: class-admin.php:3799 class-multisite.php:426
+msgid "Our plugins"
+msgstr "Naše pluginy"
+
+#: class-admin.php:3806 class-multisite.php:418
+msgid "Support forum"
+msgstr "Fórum podpory"
+
+#: class-admin.php:3776 class-multisite.php:402
+msgid "Your progress"
+msgstr "Váš průběh"
+
+#: class-multisite.php:360
+msgid "Choose option"
+msgstr "Vyberte možnost"
+
+#: class-admin.php:2965 class-admin.php:4723 class-multisite.php:230
+#: class-multisite.php:475
+msgid "Support"
+msgstr "Podpora"
+
+#: class-multisite.php:130
+msgid "SSL is enabled per site."
+msgstr "SSL je povoleno pro každý web."
+
+#: class-multisite.php:126
+msgid "SSL is enabled networkwide."
+msgstr "Protokol SSL je povolen v celé síti."
+
+#: class-multisite.php:97
+msgid "SSL is activated network wide."
+msgstr "Protokol SSL je aktivován v celé síti."
+
+#: class-multisite.php:95
+msgid "No choice has been made regarding networkwide or per site activation."
+msgstr "Nebyla provedena žádná volba ohledně aktivace pro celou síť nebo pro jednotlivé lokality."
+
+#: grid/templates/progress-footer.php:39
+msgid "301 Redirect"
+msgstr "Přesměrování 301"
+
+#: class-admin.php:881 class-site-health.php:125
+#: grid/templates/progress-footer.php:25
+#: lets-encrypt/wizard/config/steps.php:162
+msgid "Activate SSL"
+msgstr "Aktivovat SSL"
+
+#: grid/templates/progress-footer.php:19
+msgid "Go PRO!"
+msgstr "Získat verzi Pro"
+
+#: grid/templates/progress-footer.php:9
+msgid "SSL Not activated"
+msgstr "SSL není aktivováno"
+
+#: class-admin.php:4132 grid/templates/progress.php:43
+msgid "SSL is not yet enabled on this site."
+msgstr "Na tomto webu zatím není povolena technologie SSL."
+
+#: class-admin.php:4128 grid/templates/progress.php:37
+msgid "Basic SSL configuration finished! Improve your score with %sReally Simple SSL Pro%s."
+msgstr "Základní konfigurace SSL dokončena! Zlepšete své skóre pomocí %sReally Simple SSL Pro%s."
+
+#: grid/templates/progress.php:32
+msgid "SSL configuration finished!"
+msgstr "Konfigurace SSL dokončena!"
+
+#: class-admin.php:4135 grid/templates/progress.php:29
+msgid "You still have %s task open."
+msgid_plural "You still have %s tasks open."
+msgstr[0] "Stále máte otevřenou %s úlohu."
+msgstr[1] "Stále máte otevřené %s úlohy."
+msgstr[2] "Stále máte otevřených %s úloh."
+
+#: class-admin.php:4130 grid/templates/progress.php:29
+msgid "SSL is activated on your site."
+msgstr "SSL je na vašem webu aktivováno."
+
+#: grid/templates/support.php:42
+msgid "Elementor"
+msgstr "Elementor"
+
+#: grid/templates/support.php:35
+msgid "Mixed Content"
+msgstr "Smíšený obsah"
+
+#: grid/templates/support.php:21
+msgid "Multisite"
+msgstr "Více stránkové"
+
+#: grid/templates/support.php:14
+msgid "Redirect loops"
+msgstr "Smyčky přesměrování"
+
+#: grid/templates/support.php:7
+msgid "General Issues"
+msgstr "Obecné problémy"
+
+#: grid/templates/header.php:5
+msgid "Save settings"
+msgstr "Uložit nastavení"
+
+#: grid/templates/support-footer.php:7
+msgid "SSL type:"
+msgstr "Typ SSL:"
+
+#: grid/templates/support-footer.php:6
+msgid "Server type:"
+msgstr "Typ serveru:"
+
+#: grid/templates/support-footer.php:3
+msgid "Download system status"
+msgstr "Stažení stavu systému"
+
+#: grid/templates/tips-tricks.php:47
+msgid "Information about landing page redirects"
+msgstr "Informace o přesměrování cílové stránky"
+
+#: grid/templates/tips-tricks.php:23
+msgid "Improve security: Add security headers"
+msgstr "Zlepšení zabezpečení: Přidejte bezpečnostní záhlaví"
+
+#: grid/templates/tips-tricks.php:15
+msgid "Improve security: Enable HTTP Strict Transport Security (HSTS)"
+msgstr "Zlepšení zabezpečení: Povolte službu HSTS (HTTP Strict Transport Security)"
+
+#: grid/templates/tips-tricks.php:10 grid/templates/tips-tricks.php:18
+#: grid/templates/tips-tricks.php:26 grid/templates/tips-tricks.php:34
+#: grid/templates/tips-tricks.php:42 grid/templates/tips-tricks.php:50
+#: grid/templates/tips-tricks.php:58
+msgid "Read more"
+msgstr "Přečíst více"
+
+#: grid/templates/progress-header.php:15
+msgid "Remaining tasks"
+msgstr "Zbývající úkoly"
+
+#: grid/templates/progress-header.php:7
+msgid "All tasks"
+msgstr "Všechny úlohy"
+
+#. Author of the plugin
+msgid "Really Simple Plugins"
+msgstr "Opravdu jednoduché zásuvné moduly"
+
+#: grid/templates/support.php:28
+msgid "Really Simple SSL Pro"
+msgstr "Really Simple SSL Pro"
+
+#: class-admin.php:2689
+msgid "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
+msgstr "Ahoj, Really Simple SSL udržuje vaše stránky bezpečné již nějakou dobu, úžasné! Pokud máte chvilku, zvažte prosím zanechání recenze na WordPress.org, abyste rozšířili povědomí o tomto pluginu. Velmi si toho vážíme! Pokud máte nějaké dotazy nebo zpětnou vazbu, zanechte nám %smessage%s."
+
+#: class-admin.php:597 lets-encrypt/wizard/templates/activate.php:30
+#: lets-encrypt/wizard/templates/activate.php:70
+msgid "Check out Really Simple SSL Pro"
+msgstr "Podívejte se na Really Simple SSL Pro"
+
+#: class-admin.php:884 lets-encrypt/wizard/class-wizard.php:896
+msgid "Get ready with PRO!"
+msgstr "Připravte se s PRO!"
+
+#: class-admin.php:578
+msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
+msgstr "Obrázky, soubory stylů nebo skripty z domény bez certifikátu SSL: odstraňte je nebo přesuňte na vlastní server"
+
+#: class-admin.php:2699
+msgid "Don't show again"
+msgstr "Znovu nezobrazovat"
+
+#: class-admin.php:3225
+msgid "The mixed content fixer could not be detected due to a cURL error: %s. cURL errors are often caused by an outdated version of PHP or cURL and don't affect the front-end of your site. Contact your hosting provider for a fix."
+msgstr "Opravovač smíšeného obsahu se nepodařilo detekovat kvůli chybě cURL: %s. Chyby cURL jsou často způsobeny zastaralou verzí PHP nebo cURL a nemají vliv na front-end vašeho webu. Obraťte se na poskytovatele hostingu a požádejte o opravu."
+
+#: class-admin.php:3213
+msgid "Error occurred when retrieving the webpage."
+msgstr "Při načítání webové stránky došlo k chybě."
+
+#: class-site-health.php:153
+msgid "The 301 .htaccess redirect is the fastest and most reliable redirect option."
+msgstr "Přesměrování 301 .htaccess je nejrychlejší a nejspolehlivější možností přesměrování."
+
+#: class-site-health.php:150
+msgid "301 .htaccess redirect is not enabled."
+msgstr "Přesměrování 301 .htaccess není povoleno."
+
+#: class-site-health.php:107
+msgid "You have set a 301 redirect to SSL. This is important for SEO purposes"
+msgstr "Nastavili jste přesměrování 301 na SSL. To je důležité pro účely SEO"
+
+#: class-site-health.php:99
+msgid "301 SSL redirect enabled"
+msgstr "Povoleno přesměrování 301 SSL"
+
+#: class-admin.php:4193 class-multisite.php:343
+msgid "Dismiss all Really Simple SSL notices"
+msgstr "Odstranění všech oznámení o protokolu Really Simple SSL"
+
+#: class-admin.php:3254
+msgid "301 redirect to https set: .htaccess redirect."
+msgstr "301 přesměrování na https nastaveno: .htaccess přesměrování."
+
+#: class-multisite.php:1036
+msgid "If the conversion does not proceed after a few minutes, click %shere%s to force the conversion process."
+msgstr "Pokud konverze neproběhne ani po několika minutách, kliknutím na %shere%s proces konverze vynuťte."
+
+#: class-admin.php:3046
+msgid "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise your ssl can be deactivated by anyone on the internet."
+msgstr "Soubor 'force-deactivate.php' je třeba přejmenovat na .txt. Jinak může vaše ssl deaktivovat kdokoli na internetu."
+
+#: multisite-cron.php:11
+msgid "Once every minute"
+msgstr "Jednou za minutu"
+
+#: class-multisite.php:1034
+msgid "Conversion of websites %s percent complete."
+msgstr "Konverze stránek z %s procent hotova."
+
+#: class-admin.php:2698
+msgid "Maybe later"
+msgstr "Možná později"
+
+#: class-admin.php:2697
+msgid "Leave a review"
+msgstr "Zanechat ohodnocení"
+
+#: class-admin.php:2691
+msgid "Hi, Really Simple SSL has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
+msgstr "Ahoj, Really Simple SSL udržuje vaše stránky bezpečné již nějakou dobu, úžasné! Pokud máte chvilku, zvažte prosím zanechání recenze na WordPress.org, abyste rozšířili povědomí o tomto pluginu. Velmi si toho vážíme! Pokud máte nějaké dotazy nebo zpětnou vazbu, zanechte nám %smessage%s."
+
+#: class-multisite.php:160
+msgid "Activate SSL per site or install a wildcard certificate to fix this."
+msgstr "Aktivujte protokol SSL pro každý web nebo nainstalujte certifikát se zástupnými znaky, abyste to vyřešili."
+
+#: class-multisite.php:159
+msgid "This leads to issues when activating SSL networkwide since subdomains will be forced over SSL as well while they don't have a valid certificate."
+msgstr "To vede k problémům při aktivaci SSL v celé síti, protože subdomény budou nuceny používat SSL i v případě, že nemají platný certifikát."
+
+#: class-multisite.php:158
+msgid "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
+msgstr "Provozujete instalaci Multisite se subdoménami, ale váš web nemá certifikát s náhradní kartou."
+
+#: class-admin.php:4669
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: class-admin.php:4659
+msgid "The .htaccess redirect will remain active"
+msgstr "Přesměrování .htaccess zůstane aktivní"
+
+#: class-admin.php:4658
+msgid "Your site address will remain https://"
+msgstr "* Vaše stránka nadále poběží přes https://"
+
+#: class-admin.php:4656
+msgid "The mixed content fixer will stop working"
+msgstr "* Kombinovaný obsah (Mixed content - HTTP a HTTPS) přestane fungovat"
+
+#: class-admin.php:4654
+msgid "Deactivating the plugin while keeping SSL will do the following:"
+msgstr "Deaktivace pluginu při zachování SSL provede následující:"
+
+#: class-admin.php:4636
+msgid "Are you sure?"
+msgstr "Jste si jistý?"
+
+#: class-admin.php:4094
+msgid "More info"
+msgstr "Více informací"
+
+#: class-admin.php:120
+msgid "Really Simple SSL and Really Simple SSL add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr "Really Simple SSL a Really Simple SSL doplňky nezpracovávají žádné osobní informace, takže se GDPR na tyto pluginy, či na jejich použití na vašich webových stránkách nevztahuje. Naše zásady ochrany osobních údajů můžete najít <a href=\"%s\" target=\"_blank\">zde</a>."
+
+#: lets-encrypt/wizard/templates/activate.php:55
+msgid "We strongly recommend to create a %sbackup%s of your site before activating SSL"
+msgstr "Před aktivací SSL důrazně doporučujeme vytvořit %sbackup%svého webu"
+
+#. Author URI of the plugin
+msgid "https://really-simple-plugins.com"
+msgstr "https://really-simple-plugins.com"
+
+#: class-admin.php:4188
+msgid "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer.\""
+msgstr "Pokud je tato volba nastavena na true, oprava smíšeného obsahu se spustí při háčku init namísto háčku template_redirect. Tuto volbu použijte pouze v případě, že máte problémy s opravou smíšeného obsahu.\""
+
+#: class-admin.php:596 lets-encrypt/wizard/templates/activate.php:26
+#: lets-encrypt/wizard/templates/activate.php:66
+msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
+msgstr "Můžete také nechat automatické skenování ve verzi pro a získat prémiovou podporu, vyšší zabezpečení pomocí HSTS a další!"
+
+#: class-multisite.php:99
+msgid "SSL is activated per site."
+msgstr "SSL se aktivuje jednotlivě pro každý web."
+
+#: class-multisite.php:457
+msgid "Options saved."
+msgstr "Nastavení uloženo."
+
+#: class-multisite.php:339
+msgid "Select to enable SSL networkwide or per site."
+msgstr "Vyberte, zda chcete povolit protokol SSL v celé síti nebo pro jednotlivé stránky."
+
+#: class-multisite.php:363
+msgid "per site"
+msgstr "jednotlivě dle webu"
+
+#: class-multisite.php:362
+msgid "networkwide"
+msgstr "celosíťově"
+
+#: class-multisite.php:340
+msgid "Enable SSL"
+msgstr "Povolit SSL"
+
+#: class-admin.php:4309 class-admin.php:4339 class-admin.php:4416
+#: class-admin.php:4692
+msgid "This option is enabled on the network menu."
+msgstr "Toto nastavení je povoleno v síťovém nastavení."
+
+#: class-admin.php:579 lets-encrypt/wizard/templates/activate.php:56
+msgid "You may need to login in again."
+msgstr "Možná se budete muset znova přihlásit."
+
+#: class-admin.php:4335
+msgid "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
+msgstr "Než povolíte přesměrování htaccess, ujistěte se, že víte, jak %sznovu získat přístup%s k webu v případě smyčky přesměrování."
+
+#: class-admin.php:4175
+msgid "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
+msgstr "Přesměrování pomocí souboru .htaccess je rychlejší a lépe pracuje s mezipamětí. Funkce Really Simple SSL detekuje kód přesměrování, který bude s největší pravděpodobností fungovat (99% of webů), ale není to 100%. Ujistěte se, že víte, jak obnovit přístup k webu, pokud se něco pokazí!"
+
+#: class-admin.php:4176 class-site-health.php:158
+msgid "Enable 301 .htaccess redirect"
+msgstr "Aktivovat 301 .htaccess přesměrování"
+
+#: class-admin.php:3242
+msgid "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
+msgstr "Není nastaveno žádné přesměrování 301. Povolte v nastavení WordPressu přesměrování 301, abyste získali trvalé přesměrování 301."
+
+#: class-admin.php:3265
+msgid "Enable a .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
+msgstr "V nastavení povolte přesměrování .htaccess nebo WordPress redirect a vytvořte přesměrování 301."
+
+#: class-admin.php:4165
+msgid "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
+msgstr "Ve většině případů je třeba tuto funkci povolit, abyste předešli problémům se smíšeným obsahem na webu."
+
+#: class-admin.php:4182
+msgid "If you want to customize the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
+msgstr "Pokud chcete upravit soubor .htaccess protokolu Really Simple SSL, musíte zabránit tomu, aby jej Really Simple SSL přepisoval. Povolením této možnosti to uděláte."
+
+#: class-admin.php:3238
+msgid "301 redirect to https set."
+msgstr "Nastavení přesměrování 301 na https."
+
+#: class-multisite.php:577 class-multisite.php:605
+msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
+msgstr "Můžete také nechat automatické skenování ve verzi pro a získat prémiovou podporu a vyšší zabezpečení s HSTS."
+
+#: class-admin.php:4725 class-multisite.php:232
+msgid "Premium Support"
+msgstr "Prémiová podpora"
+
+#: class-multisite.php:579 class-multisite.php:607
+msgid "Check out Really Simple SSL Premium"
+msgstr "Podívejte se na službu Really Simple SSL Premium"
+
+#: lets-encrypt/wizard/class-wizard.php:887
+msgid "Go ahead, activate SSL!"
+msgstr "Pokračujte v aktivaci protokolu SSL!"
+
+#: lets-encrypt/functions.php:379 lets-encrypt/functions.php:380
+msgid "Instructions"
+msgstr "Pokyny"
+
+#: class-multisite.php:134
+msgid "SSL is not enabled yet"
+msgstr "Protokol SSL ještě není povolen"
+
+#: class-admin.php:3134
+msgid "SSL is enabled on your site."
+msgstr "SSL je na vašem webu povoleno."
+
+#: grid/templates/progress-footer.php:6
+msgid "SSL Activated"
+msgstr "Aktivováno SSL"
+
+#: class-admin.php:2568
+msgid "Because your server does not pass a variable with which WordPress can detect SSL, WordPress may create redirect loops on SSL."
+msgstr "Protože váš server nepředává proměnnou, pomocí které by WordPress mohl detekovat SSL, může WordPress při SSL vytvářet smyčky přesměrování."
+
+#: class-admin.php:2562
+msgid "Or set your wp-config.php to %swritable%s and reload this page."
+msgstr "Nebo nastavte soubor wp-config.php na hodnotu %swritable%s a znovu načtěte tuto stránku."
+
+#: class-admin.php:2546
+msgid "Because your site is behind a loadbalancer and is_ssl() returns false, you should add the following line of code to your wp-config.php."
+msgstr "Protože je váš web za loadbalancerem a funkce is_ssl() vrací false, měli byste do souboru wp-config.php přidat následující řádek kódu."
+
+#: class-admin.php:2545
+msgid "Your wp-config.php has to be edited, but is not writable."
+msgstr "Váš soubor wp-config.php musí být upraven, ale není zapisovatelný."
+
+#: class-admin.php:2542 class-admin.php:2569
+msgid "Set your wp-config.php to %swritable%s and reload this page."
+msgstr "Nastavte soubor wp-config.php na hodnotu %swritable%s a znovu načtěte tuto stránku."
+
+#: class-admin.php:2540
+msgid "A definition of a siteurl or homeurl was detected in your wp-config.php, but the file is not writable."
+msgstr "Ve vašem souboru wp-config.php byla nalezena definice siteurl nebo homeurl, ale soubor není zapisovatelný."
+
+#: class-admin.php:2575
+msgid "System detection encountered issues"
+msgstr "Došlo k potížím se zjišťováním systému"
+
+#: class-multisite.php:575 lets-encrypt/wizard/templates/activate.php:20
+#: lets-encrypt/wizard/templates/activate.php:49
+msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
+msgstr "Obrázky, soubory stylů nebo skripty z domény bez certifikátu SSL: odstraňte je nebo přesuňte na vlastní server."
+
+#: class-admin.php:577 class-multisite.php:574
+#: lets-encrypt/wizard/templates/activate.php:19
+#: lets-encrypt/wizard/templates/activate.php:48
+msgid "Http references in your .css and .js files: change any http:// into https://"
+msgstr "Odkazy na Http v souborech .css a .js: změňte všechny http:// na https://"
+
+#: class-multisite.php:572
+msgid "Some things can't be done automatically. Before you migrate, please check for: "
+msgstr "Některé úkony nelze provést automaticky. Před migrací prosím zkontrolujte: "
+
+#: class-admin.php:566 lets-encrypt/wizard/templates/last-step.php:13
+msgid "Almost ready to migrate to SSL!"
+msgstr "Téměř připraveno na přechod na SSL!"
+
+#: class-multisite.php:590
+msgid "Networkwide activation does not check if a site has an SSL certificate. It just migrates all sites to SSL."
+msgstr "Celosíťová aktivace nekontroluje, zda má web certifikát SSL. Pouze migruje všechny weby na SSL."
+
+#: class-multisite.php:587
+msgid "Activate SSL per site"
+msgstr "Aktivace protokolu SSL pro každý web"
+
+#: class-multisite.php:584
+msgid "Activate SSL networkwide"
+msgstr "Aktivace protokolu SSL v celé síti"
+
+#: class-admin.php:51 class-cache.php:11 class-certificate.php:14
+#: class-front-end.php:18 class-help.php:9 class-mixed-content-fixer.php:13
+#: class-multisite.php:28 class-site-health.php:12
+#: lets-encrypt/class-letsencrypt-handler.php:30
+msgid "%s is a singleton class and you cannot create a second instance."
+msgstr "%s je jednotná třída a nemůžete vytvořit druhou."
+
+#: class-admin.php:4374
+msgid ".htaccess is currently not %swritable%s."
+msgstr ".htaccess v současné době není %swritable%s."
+
+#: class-admin.php:3196
+msgid "Mixed content fixer was successfully detected on the front-end."
+msgstr "Fixátor smíšeného obsahu byl úspěšně detekován ve front-endu."
+
+#: class-admin.php:2959 class-multisite.php:469
+#: grid/templates/tips-tricks-footer.php:3
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#. Description of the plugin
+msgid "Lightweight plugin without any setup to make your site SSL proof"
+msgstr "Lehký zásuvný modul bez jakéhokoli nastavení, aby vaše stránky byly odolné proti SSL"
+
+#. Plugin URI of the plugin
+msgid "https://really-simple-ssl.com"
+msgstr "https://really-simple-ssl.com"
+
+#. Plugin Name of the plugin
+msgid "Really Simple SSL"
+msgstr "Really Simple SSL"
+
+#: class-admin.php:4183
+msgid "Stop editing the .htaccess file"
+msgstr "Přestat upravovat soubor .htaccess"
+
+#: grid/templates/settings-footer.php:3
+#: lets-encrypt/wizard/class-field.php:1305
+msgid "Save"
+msgstr "Uložit"
+
+#: class-admin.php:3174
+msgid "An SSL certificate was detected on your site."
+msgstr "Na vašem webu byl zjištěn certifikát SSL."
+
+#: class-site-health.php:129
+msgid "No SSL detected."
+msgstr "Nebylo zjištěno žádné SSL."
+
+#: class-admin.php:2904 class-admin.php:3784 class-admin.php:4163
+#: class-admin.php:4719 class-multisite.php:226 class-multisite.php:338
+#: class-multisite.php:410
+msgid "Settings"
+msgstr "Konfigurace"
+
+#: class-admin.php:4166
+msgid "Mixed content fixer"
+msgstr "Fixátor smíšeného obsahu"
+
+#: class-admin.php:2882
+msgid "SSL"
+msgstr "SSL"
+
+#: class-admin.php:2881
+msgid "SSL settings"
+msgstr "SSL nastavení"
+
+#: class-multisite.php:147
+msgid "Activate networkwide to fix this."
+msgstr "Aktivujte celou síť, abyste to opravili."
+
+#: class-multisite.php:146
+msgid "Because the $_SERVER[\"HTTPS\"] variable is not set, your website may experience redirect loops."
+msgstr "Protože proměnná $_SERVER[\"HTTPS\"] není nastavena, může na vašich webových stránkách docházet k přesměrování."
+
+#: class-multisite.php:145
+msgid "You run a Multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
+msgstr "Provozujete instalaci Multisite s podsložkami, což tomuto pluginu brání opravit chybějící proměnnou serveru v souboru wp-config.php."
+
+#: class-admin.php:3047
+msgid "Check again"
+msgstr "Znovu zkontrolovat"
+
+#: class-admin.php:3045
+msgid "Major security issue!"
+msgstr "Velký bezpečnostní problém!"

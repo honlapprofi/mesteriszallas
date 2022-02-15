@@ -1,0 +1,204 @@
+# Translation of Plugins - Cookie Notice &amp; Compliance for GDPR / CCPA - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Cookie Notice &amp; Compliance for GDPR / CCPA - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-26 14:06:37+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Cookie Notice &amp; Compliance for GDPR / CCPA - Stable (latest release)\n"
+
+#: includes/settings.php:536
+msgid "The text of the privacy policy button."
+msgstr "Text tlačítka zásad ochrany osobních údajů."
+
+#: includes/settings.php:533
+msgid "Enable privacy policy link."
+msgstr "Povolit odkaz na zásady ochrany osobních údajů"
+
+#: includes/settings.php:276
+msgid "Reloading"
+msgstr "Načíst znovu"
+
+#: includes/settings.php:510
+msgid "Enable to reload the page after the notice is accepted."
+msgstr "Povolit opětovné načtení stránky po přijetí cookie."
+
+#: includes/settings.php:475
+msgid "To get the user consent status use the <code>cn_cookies_accepted()</code> function."
+msgstr "Pro získání statusu Cookie Notice použijte <code>cn_cookies_accepted()</code> funkci."
+
+#: includes/settings.php:275
+msgid "Script blocking"
+msgstr "Blokování skriptů"
+
+#: includes/settings.php:65
+msgid "Custom link"
+msgstr "Libovolný odkaz"
+
+#: includes/settings.php:64
+msgid "Page link"
+msgstr "Odkaz na stránku"
+
+#: includes/settings.php:79
+msgid "Text color"
+msgstr "Barva textu"
+
+#: includes/settings.php:81
+msgid "Bar color"
+msgstr "Barva lišty"
+
+#: includes/settings.php:88
+msgid "1 day"
+msgstr "1 den"
+
+#: includes/settings.php:89
+msgid "1 week"
+msgstr "1 týden"
+
+#: includes/settings.php:90
+msgid "1 month"
+msgstr "1 měsíc"
+
+#: includes/settings.php:91
+msgid "3 months"
+msgstr "3 měsíce"
+
+#: includes/settings.php:92
+msgid "6 months"
+msgstr "6 měsíců"
+
+#: includes/settings.php:93
+msgid "1 year"
+msgstr "1 rok"
+
+#: includes/settings.php:94
+msgid "infinity"
+msgstr "navždy"
+
+#: includes/settings.php:100
+msgid "Fade"
+msgstr "Fade efekt"
+
+#: includes/settings.php:101
+msgid "Slide"
+msgstr "Slide efekt"
+
+#: includes/settings.php:148
+msgid "We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it."
+msgstr "Užíváme cookies, abychom vám zajistili co možná nejsnadnější použití našich webových stránek. Pokud budete nadále prohlížet naše stránky předpokládáme, že s použitím cookies souhlasíte."
+
+#: includes/settings.php:149
+msgid "Ok"
+msgstr "Souhlasím"
+
+#: includes/settings.php:188 includes/welcome.php:380
+msgid "Cookie Notice"
+msgstr "Cookie Notice"
+
+#: includes/settings.php:75 includes/settings.php:270
+msgid "Message"
+msgstr "Zpráva"
+
+#: includes/settings.php:271
+msgid "Button text"
+msgstr "Text tlačítka"
+
+#: includes/settings.php:260 includes/settings.php:282
+msgid "Deactivation"
+msgstr "Deaktivace"
+
+#: includes/settings.php:286
+msgid "Position"
+msgstr "Pozice"
+
+#: includes/settings.php:287
+msgid "Animation"
+msgstr "Animace"
+
+#: includes/settings.php:288
+msgid "Colors"
+msgstr "Barvy"
+
+#: includes/settings.php:735
+msgid "Enable if you want all plugin data to be deleted on deactivation."
+msgstr "Povolte, pokud chcete, aby při deaktivaci pluginu se smazala všechna jeho data."
+
+#: includes/settings.php:420
+msgid "Enter the cookie notice message."
+msgstr "Napište zde informace o souhlasu s cookies."
+
+#: includes/settings.php:551
+msgid "-- select page --"
+msgstr "--- zvolte stránku ---"
+
+#: includes/settings.php:562
+msgid "Select from one of your site's pages."
+msgstr "Vyberte jednu stránku z vašich vytvořených"
+
+#: cookie-notice.php:558
+msgid "Settings"
+msgstr "Nastavení"
+
+#: includes/settings.php:150
+msgid "No"
+msgstr "Ne"
+
+#: includes/settings.php:945
+msgid "Are you sure you want to reset these settings to defaults?"
+msgstr "Jste si jisti, že chcete vyresetovat tato nastavení do výchozího stavu?"
+
+#: includes/settings.php:920
+msgid "Settings restored to defaults."
+msgstr "Nastavení resetována do výchozího stavu."
+
+#: includes/settings.php:659
+msgid "Select where all the plugin scripts should be placed."
+msgstr "Zvolte, kde mají být skripty pluginu uloženy."
+
+#: includes/settings.php:475
+msgid "Enter non functional cookies Javascript code here (for e.g. Google Analitycs) to be used after the notice is accepted."
+msgstr "Zde vložte nefunkční cookies javascript kód (např. pro Google Analitycs), který bude použit po vyjádření souhlasu s užitím cookies."
+
+#: includes/settings.php:441
+msgid "Enable to give to the user the possibility to refuse third party non functional cookies."
+msgstr "Dejte uživateli možnost odmítnout cookies funkce třetích stran."
+
+#: includes/settings.php:277
+msgid "On scroll"
+msgstr "Při posunu stránky"
+
+#: includes/settings.php:259 includes/settings.php:281
+msgid "Script placement"
+msgstr "Umístění skriptu"
+
+#: includes/settings.php:106
+msgid "Footer"
+msgstr "Zápatí"
+
+#: includes/settings.php:232
+msgid "Reset to defaults"
+msgstr "Reset do výchozího nastavení"
+
+#: includes/settings.php:575
+msgid "Enter the full URL starting with http(s)://"
+msgstr "Zadejte celý odkaz počínaje http(s)://"
+
+#: includes/settings.php:105
+msgid "Header"
+msgstr "Záhlaví"
+
+#: includes/settings.php:48 includes/welcome.php:457
+msgid "Top"
+msgstr "Nahoře"
+
+#: includes/settings.php:49 includes/welcome.php:456
+msgid "Bottom"
+msgstr "Dole"
+
+#: includes/settings.php:53 includes/settings.php:99
+msgid "None"
+msgstr "Žádný"

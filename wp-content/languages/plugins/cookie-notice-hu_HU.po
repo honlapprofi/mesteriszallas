@@ -1,0 +1,314 @@
+# Translation of Plugins - Cookie Notice for GDPR &amp; CCPA - Stable (latest release) in Hungarian
+# This file is distributed under the same license as the Plugins - Cookie Notice for GDPR &amp; CCPA - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-10 07:06:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: hu\n"
+"Project-Id-Version: Plugins - Cookie Notice for GDPR &amp; CCPA - Stable (latest release)\n"
+
+#: cookie-notice.php:705
+msgid "Corona Banner"
+msgstr "Koronavírus sáv"
+
+#: cookie-notice.php:706
+msgid "Display"
+msgstr "Megjelenítés"
+
+#: cookie-notice.php:732
+msgid "Enable to display the Corona Banner."
+msgstr "Engedélyezzük a koronavírus sáv megjelenítését"
+
+#: cookie-notice.php:733
+msgid "The Corona Banner displays data about Coronavirus pandemia and <strong>five steps recommended by the WHO (World Health Organization)</strong> to help flatten the Coronavirus curve."
+msgstr "A koronavírus sáv adatokat jelenít meg a koronavírus világjárványról és tartalmazza a <strong>WHO (Egészségügyi Világszervezet) által javasolt öt lépést</strong>, amely segít csökkenteni  a koronavírus-görbe meredekségét."
+
+#: cookie-notice.php:743
+msgid "Display information about current cases."
+msgstr "Információk megjelenítése az aktuális esetekről."
+
+#: cookie-notice.php:707
+msgid "Current cases"
+msgstr "Jelenlegi esetek"
+
+#: cookie-notice.php:764
+msgid "Enable if you'd like to adjust the Corona Banner text strings."
+msgstr "A koronavírus sáv szövegének módosítása"
+
+#: cookie-notice.php:266
+msgid "Spread the message. Stop the virus."
+msgstr "Tudassuk másokkal is! Állítsuk meg a vírust!"
+
+#: cookie-notice.php:268
+msgid "Wash often"
+msgstr "Mossunk gyakran kezet!"
+
+#: cookie-notice.php:267
+msgid "Hands"
+msgstr "Kezek"
+
+#: cookie-notice.php:708
+msgid "Text strings"
+msgstr "Szöveges részek"
+
+#: cookie-notice.php:992
+msgid "The amount of time that the cookie should be stored for when user accepts the notice."
+msgstr "Az értesítés elfogadása esetén a sütik tárolásának időtartama."
+
+#: cookie-notice.php:699
+msgid "Accepted expiry"
+msgstr "Sütik lejárata"
+
+#: cookie-notice.php:1015
+msgid "The amount of time that the cookie should be stored for when the user doesn't accept the notice."
+msgstr "Az értesítés megtagadása esetén a sütik tárolásának időtartama."
+
+#: cookie-notice.php:804
+msgid "The text of the option to accept the notice and make it disappear."
+msgstr "Elfogadom gomb szövege, ami bezárja a figyelmeztető sávot is egyben."
+
+#: cookie-notice.php:693
+msgid "Refuse consent"
+msgstr "A hozzájárulás megtagadása"
+
+#: cookie-notice.php:262 cookie-notice.php:694
+msgid "Revoke consent"
+msgstr "Beleegyezés visszavonása"
+
+#: cookie-notice.php:1085
+msgid "Enable to accept the notice when user scrolls."
+msgstr "Értesítés elfogadása ha a felhasználó görget az oldalon."
+
+#: cookie-notice.php:1099
+msgid "Enable to accept the notice on any click on the page."
+msgstr "Értesítés elfogadása, ha a felhasználó kattint az oldalon."
+
+#: cookie-notice.php:698
+msgid "On click"
+msgstr "Kattintáskor"
+
+#: cookie-notice.php:263 cookie-notice.php:692
+msgid "Privacy policy"
+msgstr "Adatvédelmi irányelvek"
+
+#: cookie-notice.php:907
+msgid "Enable privacy policy link."
+msgstr "Jelenjen meg Adatvédelmi irányelvek link"
+
+#: cookie-notice.php:860
+msgid "Enable to give to the user the possibility to revoke their consent <i>(requires \"Refuse consent\" option enabled)</i>."
+msgstr "Lehetővé teszi a felhasználó számára a beleegyezés visszavonását <i>(a \"hozzájárulás megtagadása\" opció engedélyezése szükséges)</i>.."
+
+#: cookie-notice.php:696
+msgid "Reloading"
+msgstr "Oldal újratöltése"
+
+#: cookie-notice.php:884
+msgid "Enable to reload the page after the notice is accepted."
+msgstr "Az oldal újratöltése az értesítés elfogadása után."
+
+#. Plugin URI of the plugin
+msgid "http://www.dfactory.eu/plugins/cookie-notice/"
+msgstr "http://www.dfactory.eu/plugins/cookie-notice/"
+
+#. Author of the plugin
+msgid "dFactory"
+msgstr "dFactory"
+
+#. Author URI of the plugin
+msgid "http://www.dfactory.eu/"
+msgstr "http://www.dfactory.eu/"
+
+#: cookie-notice.php:228
+msgid "Text color"
+msgstr "Szöveg színe"
+
+#: cookie-notice.php:236
+msgid "1 day"
+msgstr "1 nap"
+
+#: cookie-notice.php:237
+msgid "1 week"
+msgstr "1 hét"
+
+#: cookie-notice.php:238
+msgid "1 month"
+msgstr "1 hónap"
+
+#: cookie-notice.php:239
+msgid "3 months"
+msgstr "3 hónap"
+
+#: cookie-notice.php:240
+msgid "6 months"
+msgstr "6 hónap"
+
+#: cookie-notice.php:689
+msgid "Configuration"
+msgstr "Beállítások"
+
+#: cookie-notice.php:224 cookie-notice.php:690
+msgid "Message"
+msgstr "Üzenet"
+
+#: cookie-notice.php:691
+msgid "Button text"
+msgstr "Gomb szövege"
+
+#: cookie-notice.php:702
+msgid "Deactivation"
+msgstr "Kikapcsolás"
+
+#: cookie-notice.php:713
+msgid "Animation"
+msgstr "Animáció"
+
+#: cookie-notice.php:716
+msgid "Colors"
+msgstr "Színek"
+
+#: cookie-notice.php:1441
+msgid "Support"
+msgstr "Támogatás"
+
+#: cookie-notice.php:1458
+msgid "Settings"
+msgstr "Beállítások"
+
+#: cookie-notice.php:260
+msgid "No"
+msgstr "Nem"
+
+#: cookie-notice.php:253
+msgid "Header"
+msgstr "Fejrész"
+
+#: cookie-notice.php:254
+msgid "Footer"
+msgstr "Lábrész"
+
+#: cookie-notice.php:214
+msgid "Custom link"
+msgstr "Egyedi hivatkozás"
+
+#: cookie-notice.php:213
+msgid "Page link"
+msgstr "Oldal hivatkozás"
+
+#: cookie-notice.php:229
+msgid "Bar color"
+msgstr "Sáv színe"
+
+#: cookie-notice.php:241
+msgid "1 year"
+msgstr "1 év "
+
+#: cookie-notice.php:242
+msgid "infinity"
+msgstr "nincs határidő"
+
+#: cookie-notice.php:248
+msgid "Fade"
+msgstr "Fade"
+
+#: cookie-notice.php:249
+msgid "Slide"
+msgstr "Slide"
+
+#: cookie-notice.php:258
+msgid "We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it."
+msgstr "Kedves Látogató! Tájékoztatjuk, hogy a honlap felhasználói élmény fokozásának érdekében sütiket alkalmazunk. A honlapunk használatával ön a tájékoztatásunkat tudomásul veszi."
+
+#: cookie-notice.php:259
+msgid "Ok"
+msgstr "Elfogadom"
+
+#. Plugin Name of the plugin
+#: cookie-notice.php:638 cookie-notice.php:649 cookie-notice.php:652
+#: cookie-notice.php:1355
+msgid "Cookie Notice"
+msgstr "Cookie figyelmeztetés"
+
+#: cookie-notice.php:654
+msgid "Need support?"
+msgstr "Segítség?"
+
+#: cookie-notice.php:657
+msgid "Do you like this plugin?"
+msgstr "Kedveljük ezt a bővítményt?"
+
+#: cookie-notice.php:673
+msgid "Reset to defaults"
+msgstr "﻿Alapértékek visszaállítása"
+
+#: cookie-notice.php:697
+msgid "On scroll"
+msgstr "Görgetés"
+
+#: cookie-notice.php:701
+msgid "Script placement"
+msgstr "Script elhelyezése"
+
+#: cookie-notice.php:711
+msgid "Design"
+msgstr "Design"
+
+#: cookie-notice.php:712
+msgid "Position"
+msgstr "Helyzet"
+
+#: cookie-notice.php:714
+msgid "Button style"
+msgstr "Gomb stílusa"
+
+#: cookie-notice.php:1109
+msgid "Enable if you want all plugin data to be deleted on deactivation."
+msgstr "Jelöljük (kapcsoljuk) be, ha azt szeretnénk, hogy a kikapcsoláskor a bővítmény összes adata törlésre kerüljön."
+
+#: cookie-notice.php:791
+msgid "Enter the cookie notice message."
+msgstr "Adjuk meg a figyelmeztető üzenet szövegét."
+
+#: cookie-notice.php:849
+msgid "Enter non functional cookies Javascript code here (for e.g. Google Analitycs) to be used after the notice is accepted."
+msgstr "Itt adjuk meg a nem funkcionális Javascript kódot (pl.: a Google Analitycs számára), amelyik a sütik elfogadását követően kerülnek használatba."
+
+#: cookie-notice.php:925
+msgid "-- select page --"
+msgstr "-- oldalválasztás --"
+
+#: cookie-notice.php:936
+msgid "Select from one of your site's pages."
+msgstr "A honlapunk egyik oldalának kiválasztása"
+
+#: cookie-notice.php:1033
+msgid "Select where all the plugin scripts should be placed."
+msgstr "Válasszuk ki, hogy a bővítmény összes szkriptjét hol szeretnénk elhelyezni."
+
+#: cookie-notice.php:1301
+msgid "Settings restored to defaults."
+msgstr "A beállítások visszaállítva az alapértékekre."
+
+#: cookie-notice.php:1532
+msgid "Are you sure you want to reset these settings to defaults?"
+msgstr "Biztos, hogy szeretnénk ezeket a beállításokat alaphelyzetbe állítani?"
+
+#: cookie-notice.php:815
+msgid "Enable to give to the user the possibility to refuse third party non functional cookies."
+msgstr "Lehetővé teszi a felhasználó számára a harmadik fél által kínált sütik elutasítását."
+
+#: cookie-notice.php:197
+msgid "Top"
+msgstr "Felül"
+
+#: cookie-notice.php:198
+msgid "Bottom"
+msgstr "Alul"
+
+#: cookie-notice.php:202 cookie-notice.php:247
+msgid "None"
+msgstr "Nem"

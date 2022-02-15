@@ -1,0 +1,2130 @@
+# Translation of Plugins - Loco Translate - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-02-04 08:00:48+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Loco Translate - Stable (latest release)\n"
+
+#: tpl/admin/file/head.php:10
+msgid "Edit file headers"
+msgstr "Upravit hlavičku souboru"
+
+#: tpl/admin/file/conf.php:23
+msgid "Relative path to template file"
+msgstr "Relativní cesta k souboru šablony"
+
+#: tpl/admin/file/conf.php:57 tpl/admin/file/head.php:34
+msgid "Save"
+msgstr "Uložit"
+
+#: tpl/admin/file/conf.php:48 tpl/admin/init/init-po.php:163
+msgid "Merge strings from related JSON files"
+msgstr "Sloučit řetězce ze souvisejících JSON souborů"
+
+#: src/js/Strings.php:37
+msgid "%s translation copied"
+msgid_plural "%s translations copied"
+msgstr[0] "%s překlad zkopírován"
+msgstr[1] "%s překlady zkopírovány"
+msgstr[2] "%s překladů zkopírováno"
+
+#: src/admin/config/ApisController.php:66
+msgid "API URL"
+msgstr "API URL"
+
+#. translators: Where %s is any number of strings
+#: src/gettext/Metadata.php:194 src/js/Strings.php:87
+msgid "%s string"
+msgid_plural "%s strings"
+msgstr[0] "%s řetězec"
+msgstr[1] "%s řetězce"
+msgstr[2] "%s řetězců"
+
+#: src/admin/file/MoveController.php:85
+msgid "%s file moved"
+msgid_plural "%s files moved"
+msgstr[0] "%s soubor přesunut"
+msgstr[1] "%s soubory přesunuty"
+msgstr[2] "%s souborů přesunuto"
+
+#: tpl/admin/file/info-pot.php:31
+msgid "%s word"
+msgid_plural "%s words"
+msgstr[0] "%s slovo"
+msgstr[1] "%s slova"
+msgstr[2] "%s slov"
+
+#: src/gettext/Compiler.php:232
+msgid "PO file saved and MO/JSON files compiled"
+msgstr "PO soubor uložen a MO/JSON soubory zkompilovány"
+
+#: src/gettext/Compiler.php:136 src/gettext/Compiler.php:194
+msgid "JSON compilation failed for %s"
+msgstr "Kompilace souboru JSON selhala pro %s"
+
+#: src/data/Settings.php:179
+msgid "Loco Translate 2.5 adds supports for JSON language pack generation."
+msgstr "Loco Translate 2.5 přidává podporu pro generační JSON jazykový balíček."
+
+#: tpl/admin/config/version.php:75
+msgid "Update Now"
+msgstr "Aktualizovat"
+
+#. translators: Where %s is the full version number of WordPress
+#: tpl/admin/config/version.php:69
+msgid "WordPress %s"
+msgstr "WordPress %s"
+
+#. translators: (1) Name of software, e.g. "WordPress" (2) Version number, e.g.
+#. "5.6"
+#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:72
+msgid "Your version of %1$s is very old. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
+msgstr "Verze %1$s je zastaralá. Doporučujeme aktualizaci aspoň na v%2$s, ale nejlépe na nejnovější stabilní verzi."
+
+#. translators: Where %s is the full version number of PHP
+#: tpl/admin/config/version.php:49
+msgid "PHP %s"
+msgstr "PHP %s"
+
+#: tpl/admin/config/settings.php:162
+msgid "Delete redundant files"
+msgstr "Odstranit nadbytečné soubory"
+
+#: tpl/admin/config/settings.php:156
+msgid "Pretty formatting"
+msgstr "Formátování textu"
+
+#: tpl/admin/config/settings.php:145 tpl/admin/config/settings.php:151
+msgid "Compiling JSON files"
+msgstr "Kompilace JSON souborů"
+
+#. translators: This is HTML formatted. (1) placeholder for language code, (2)
+#. Example language code
+#: tpl/admin/init/upload.php:50
+msgid "Your file must be named as shown above where %1$s is the language code, e.g. %2$s"
+msgstr "Soubor musí být pojmenován jak je popsáno výše, kde %1$s je kód jazyka, např. %2$s"
+
+#: tpl/admin/init/upload.php:45
+msgid "Upload PO file"
+msgstr "Nahrát PO soubor"
+
+#. translators: Indicates that POT files are optional, which is not recommended
+#: tpl/admin/config/settings.php:107
+msgid "Sync with source when template missing"
+msgstr "Synchronizovat se zdrojem, když chybí šablona"
+
+#: tpl/admin/config/settings.php:99
+msgid "Fuzzy matching tolerance"
+msgstr "Tolerance přibližné shody"
+
+#: tpl/admin/config/settings.php:89 tpl/admin/config/settings.php:95
+msgid "Syncing PO files"
+msgstr "Synchronizace PO souborů"
+
+#: tpl/admin/help/side-bar.php:15
+msgid "Info and tutorials"
+msgstr "Informace a tutoriály"
+
+#: src/ajax/ApisController.php:30
+msgid "Need a human?"
+msgstr "Potřebujete překladatele?"
+
+#: src/ajax/UploadController.php:70
+msgid "Your file is identical to the existing one"
+msgstr "Soubor již existuje"
+
+#: src/admin/init/UploadController.php:52
+msgid "Upload a translation file"
+msgstr "Nahrát soubor s překladem"
+
+#: src/admin/init/UploadController.php:29 tpl/admin/init/upload.php:58
+msgid "Upload"
+msgstr "Nahrát"
+
+#: src/admin/bundle/ViewController.php:106
+msgid "Upload PO"
+msgstr "Nahrát PO"
+
+#. Translators: %s will be replaced with the name of a missing POT file
+#: src/ajax/SyncController.php:55
+msgid "Falling back to source extraction because %s is missing"
+msgstr "Návrat zpět k extrakci zdroje, protože chybí %s"
+
+#: tpl/admin/bundle/inc-po-table.php:60
+msgid "Move"
+msgstr "Přesunout"
+
+#: tpl/admin/config/prefs.php:29 tpl/admin/config/prefs.php:33
+msgid "Restrict locales"
+msgstr "Omezit lokální"
+
+#. Translators: Button that opens window for auto-translating
+#: src/admin/file/EditController.php:203
+msgctxt "Editor"
+msgid "Auto"
+msgstr "Automaticky"
+
+#: src/js/Strings.php:155
+msgctxt "Editor"
+msgid "Suggest translation"
+msgstr "Navrhnout překlad"
+
+#: src/js/Strings.php:152
+msgctxt "Editor"
+msgid "Toggle Fuzzy"
+msgstr "Přepnout přibližné"
+
+#: src/js/Strings.php:80
+msgid "Keep this translation"
+msgstr "Ponechat tento překlad"
+
+#: src/js/Strings.php:77
+msgid "Loading suggestions"
+msgstr "Načítání návrhů"
+
+#: src/js/Strings.php:74
+msgid "Suggested translations"
+msgstr "Navrhované překlady"
+
+#: src/js/Strings.php:71
+msgid "Use this translation"
+msgstr "Použít tento překlad"
+
+#: src/js/Strings.php:68
+msgid "Nothing needed updating"
+msgstr "Nic k aktualizaci"
+
+#: src/js/Strings.php:65
+msgid "%s string updated"
+msgid_plural "%s strings updated"
+msgstr[0] "%s řetezec aktualizován"
+msgstr[1] "%s řetezce aktualizovány"
+msgstr[2] "%s řetezců aktualizováno"
+
+#: src/js/Strings.php:62
+msgid "%1$s string translated via %2$s"
+msgid_plural "%1$s strings translated via %2$s"
+msgstr[0] "%1$s řetězec přeložen přes %2$s"
+msgstr[1] "%1$s řetězce přeloženy přes %2$s"
+msgstr[2] "%1$s řetězců přeloženo přes %2$s"
+
+#: src/js/Strings.php:58
+msgid "Translation job aborted with %s string remaining"
+msgid_plural "Translation job aborted with %s strings remaining"
+msgstr[0] "Úloha překladu přerušena s %s zbývajícím řetězcem"
+msgstr[1] "Úloha překladu přerušena se %s zbývajícími řetězci"
+msgstr[2] "Úloha překladu přerušena s %s zbývajícími řetězci"
+
+#: src/js/Strings.php:55
+msgid "Translation progress %s%%"
+msgstr "Průběh překladu %s%%"
+
+#: src/js/Strings.php:51
+msgid "%s characters will be sent for translation."
+msgstr "%s znaků bude zasláno na překlad."
+
+#: src/js/Strings.php:47
+msgid "%s unique source strings."
+msgstr "%s unikátních zdrojových řetězců."
+
+#: src/js/Strings.php:41
+msgid "Strings up to date with %s"
+msgstr "Řetězce aktuální s %s"
+
+#: src/js/Strings.php:33
+msgid "%s string marked Fuzzy"
+msgid_plural "%s strings marked Fuzzy"
+msgstr[0] "%s řetězec označen jako přibližný"
+msgstr[1] "%s řetězce označeny jako přibližné"
+msgstr[2] "%s řetězců označeno jako přibližné"
+
+#: tpl/admin/config/apis.php:142
+msgid "See full disclaimer"
+msgstr "Zobrazit celý text"
+
+#: tpl/admin/config/apis.php:141
+msgid "Third party services are subject to their own terms of use and may incur costs from the provider"
+msgstr "Služby třetích stran podléhají jejich vlastním podmínkám používání a jejich poskytovatel si může účtovat dodatečné náklady"
+
+#: tpl/admin/config/apis.php:139
+msgid "Important"
+msgstr "Důležité"
+
+#: src/admin/config/ApisController.php:67
+msgid "API region"
+msgstr "API region"
+
+#: src/admin/config/ApisController.php:65
+msgid "API key"
+msgstr "API klíč"
+
+#: src/admin/config/ApisController.php:12
+#: src/admin/config/BaseController.php:20
+#: src/admin/config/BaseController.php:42 tpl/admin/help/tab-config-apis.php:2
+msgid "API keys"
+msgstr "API klíče"
+
+#: tpl/ajax/modal-apis-empty.php:11
+msgid "Add automatic translation services in the plugin settings."
+msgstr "Přidat službu pro automatický překlad v nastavení pluginu."
+
+#: tpl/ajax/modal-apis-empty.php:9
+msgid "No translation APIs configured"
+msgstr "API pro překlad není nastaveno"
+
+#: tpl/ajax/modal-apis-batch.php:29
+msgid "Mark new translations as Fuzzy"
+msgstr "Nové překlady označit jako přibližné"
+
+#: tpl/ajax/modal-apis-batch.php:23
+msgid "Overwrite existing translations"
+msgstr "Přepsat existující překlady"
+
+#: tpl/ajax/modal-apis-batch.php:10
+msgid "Auto-translate this file"
+msgstr "Přeložit soubor automaticky"
+
+#. translators: Warning when POT file is opened in the file editor. It can be
+#. disabled in settings.
+#: src/admin/file/EditController.php:164
+msgid "This is NOT a translation file. Manual editing of source strings is not recommended."
+msgstr "Toto není soubor s překladem. Ruční úpravu zdrojových řetězců nedoporučujeme."
+
+#: src/fs/FileWriter.php:315
+msgid "Modification of POT (template) files is disallowed by the plugin settings"
+msgstr "Úprava POT (šablona) souborů není povolena v nastavení pluginu"
+
+#: tpl/admin/init/init-prompt.php:42
+msgid "You can use existing translations as a template using the Copy feature."
+msgstr "Existující překlady můžete použít jako šablonu pomocí funkce Kopírovat."
+
+#: tpl/admin/init/init-prompt.php:40
+msgid "Suggestion"
+msgstr "Doporučení"
+
+#: tpl/admin/file/move-pot.php:14
+msgid "Enter a new location for this file"
+msgstr "Vložte nové umístění souboru"
+
+#: tpl/admin/file/move.php:17
+msgid "The following file will be moved/renamed to the new location:"
+msgid_plural "The following files will be moved/renamed to the new location:"
+msgstr[0] "Tento soubor bude přesunut/přejmenován do nového umístění:"
+msgstr[1] "Tyto soubory budou přesunuty/přejmenovány do nového umístění:"
+msgstr[2] "Tyto soubory budou přesunuty/přejmenovány do nového umístění:"
+
+#: tpl/admin/file/move.php:14
+msgid "Confirm relocation"
+msgstr "Potvrdit přemístění"
+
+#: tpl/admin/file/move-po.php:14
+msgid "Choose a new location for these translations"
+msgstr "Vyberte nové umístění překladů"
+
+#: tpl/admin/bundle/alias.php:14
+msgid "This plugin doesn't have its own translation files, but can be translated in the default text domain"
+msgstr "Tento plugin nemá vlastní soubory překladů, ale lze ho přeložit ve výchozí textové doméně"
+
+#: tpl/admin/config/settings.php:197
+msgid "Editing of POT (template) files"
+msgstr "Úprava POT (šablona) souborů"
+
+#: tpl/admin/config/settings.php:81
+msgid "Recommended"
+msgstr "Doporučené"
+
+#: tpl/admin/config/settings.php:81
+msgid "Enable Ajax file uploads"
+msgstr "Povolit Ajax u nahrávání souborů"
+
+#: src/fs/FileWriter.php:245
+msgid "Parent directory isn't writable"
+msgstr "Do nadřazeného adresáře nelze zapisovat"
+
+#: src/ajax/FsConnectController.php:160
+msgid "This move operation requires permission"
+msgstr "Přesun vyžaduje povolení"
+
+#: src/ajax/FsConnectController.php:127
+msgid "This directory is managed by WordPress. Removed files may be restored during updates"
+msgstr "Tento adresář je ve správě WordPressu. Smazané soubory lze obnovit během aktualizací"
+
+#: src/admin/file/MoveController.php:106 src/admin/file/MoveController.php:133
+msgid "Move %s"
+msgstr "Přesunuto %s"
+
+#: src/admin/file/MoveController.php:89
+msgid "%s file could not be moved"
+msgid_plural "%s files could not be moved"
+msgstr[0] "%s soubor nelze smazat"
+msgstr[1] "%s soubory nelze smazat"
+msgstr[2] "%s souborů nelze smazat"
+
+#: src/admin/file/BaseController.php:107
+msgid "Relocate"
+msgstr "Přemístit"
+
+#: tpl/admin/file/move.php:24
+msgid "Move files"
+msgstr "Přesunout soubory"
+
+#: tpl/admin/errors/file-sec.php:14
+msgid "Access to this file is blocked for security reasons"
+msgstr "Z bezpečnostních důvodů byl přístup k souboru zablokován"
+
+#: tpl/admin/errors/file-sec.php:11
+msgid "File access disallowed"
+msgstr "Přístup k souboru není povolen"
+
+#: src/admin/bundle/ViewController.php:115
+msgid "View template"
+msgstr "Zobrazit šablonu"
+
+#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:76
+msgid "Install manually"
+msgstr "Manuální instalace"
+
+#: tpl/admin/config/version.php:14
+msgid "A newer version of Loco Translate is available for download"
+msgstr "Je dostupná nová verze Loco Translate"
+
+#: tpl/admin/help/side-bar.php:9
+msgid "Official plugin page"
+msgstr "Oficiální stránka pluginu"
+
+#: tpl/admin/common/inc-fsconn.php:28
+msgid "File is protected by the bundle configuration"
+msgstr "Soubor je chráněn konfigurací balíčku"
+
+#: tpl/admin/common/inc-fsconn.php:27
+msgid "Read only"
+msgstr "Pouze pro čtení"
+
+#: tpl/admin/config/settings.php:43
+msgid "Scan JavaScript files with extensions:"
+msgstr "Skenovat javascriptové soubory s rozšířeními:"
+
+#: src/admin/init/InitPoController.php:243
+msgid "Assign template"
+msgstr "Přiřadit šablonu"
+
+#: src/js/Strings.php:149
+msgctxt "Editor"
+msgid "Translated"
+msgstr "Přeloženo"
+
+#: src/js/Strings.php:146
+msgctxt "Editor"
+msgid "Untranslated"
+msgstr "Nepřeloženo"
+
+#: src/hooks/AdminHooks.php:66
+msgid "Administrators and auditors may wish to review Loco's <a href=\"%s\">plugin privacy notice</a>."
+msgstr "Administrátoři a auditoři si možná budou chtít přečíst <a href=\"%s\">prohlášení o ochraně osobních údajů</a> pluginu Loco. "
+
+#: src/hooks/AdminHooks.php:64
+msgid "This plugin doesn't collect any data from public website visitors."
+msgstr "Tento plugin neshromažďuje žádná data od návštěvníků veřejných webových stránek."
+
+#: tpl/admin/bundle/inc-po-table.php:51 tpl/admin/bundle/locale.php:66
+msgid "View"
+msgstr "Zobrazit"
+
+#: tpl/admin/root.php:14
+msgid "Your admin language is %s."
+msgstr "Jazyk administrátora %s."
+
+#: tpl/admin/root.php:12
+msgid "The language of this site is %s."
+msgstr "Jazyk stránky je %s."
+
+#: tpl/admin/list/locales.php:25
+msgid "Site language"
+msgstr "Jazyk stránky"
+
+#: tpl/admin/list/locales.php:22
+msgid "Files found"
+msgstr "Nalezeno souborů"
+
+#: tpl/admin/list/locales.php:16
+msgid "Locale code"
+msgstr "Lokální kód"
+
+#: tpl/admin/list/locales.php:13
+msgid "Locale name"
+msgstr "Lokální jméno"
+
+#: tpl/admin/file/info.php:110
+msgid "Files in this location can be modified or deleted by WordPress automatic updates"
+msgstr "Soubory v tomto umístění mohou být upraveny nebo smazány automatickými aktualizacemi WordPressu"
+
+#: tpl/admin/file/info.php:107
+msgid "WordPress updates"
+msgstr "WordPress aktualizace"
+
+#: tpl/admin/file/info-mo.php:18 tpl/admin/file/info-po.php:24
+#: tpl/admin/file/info-pot.php:21
+msgid "File size"
+msgstr "Velikost souboru"
+
+#: tpl/admin/file/diff.php:17
+msgctxt "Button label for a next revision"
+msgid "Next"
+msgstr "Následující"
+
+#: tpl/admin/file/diff.php:14
+msgctxt "Button label for a previous revision"
+msgid "Previous"
+msgstr "Předchozí"
+
+#: tpl/admin/file/diff.php:6
+msgctxt "revision date short format"
+msgid "j M @ H:i"
+msgstr "j. m. @ H:i"
+
+#: tpl/admin/errors/no-locale.php:11
+msgid "No files found for this language"
+msgstr "Soubory nenalezeny pro tento jazyk"
+
+#: tpl/admin/errors/no-backups.php:18
+msgid "File backups are disabled in your plugin settings"
+msgstr "Zálohy souborů jsou v nastavení vašeho pluginu deaktivovány"
+
+#: tpl/admin/errors/no-backups.php:16
+msgid "Backup files will be written when you save translations from Loco Translate editor"
+msgstr "Záložní soubory budou vytvořeny, když uložíte překlady z editoru Loco Translate"
+
+#: tpl/admin/errors/no-backups.php:12
+msgid "No previous file revisions"
+msgstr "Nejsou předchozí revize"
+
+#: src/admin/config/SettingsController.php:68
+msgid "Disallow"
+msgstr "Zakázat"
+
+#: src/admin/config/SettingsController.php:67
+msgid "Allow (with warning)"
+msgstr "Povolit (s varováním)"
+
+#: src/admin/config/SettingsController.php:66
+msgid "Allow"
+msgstr "Povolit"
+
+#: tpl/admin/config/settings.php:187
+msgid "Modification of installed files"
+msgstr "Úprava nainstalovaných souborů"
+
+#: tpl/admin/config/settings.php:181
+msgid "Save credentials in session"
+msgstr "Uložit pověření v relaci"
+
+#: tpl/admin/config/settings.php:170 tpl/admin/config/settings.php:176
+msgid "File system access"
+msgstr "Přístup k systému souborů"
+
+#: tpl/admin/common/inc-fsconn.php:56
+msgid "Click \"Connect\" to authenticate with the server"
+msgstr "Klikněte na \"Připojit\" pro ověření na serveru"
+
+#. translators: Page title for installed languages page
+#: src/mvc/AdminRouter.php:61
+msgid "Languages &lsaquo; Loco"
+msgstr "Jazyk &lsaquo; Loco"
+
+#: src/mvc/AdminRouter.php:59
+msgid "Languages"
+msgstr "Jazyky"
+
+#: src/fs/FileWriter.php:310
+msgid "Modification of installed files is disallowed by the plugin settings"
+msgstr "Úpravy nainstalovaných souborů nejsou povoleny nastavením pluginu"
+
+#. translators: Where %s is a file name
+#: src/ajax/DiffController.php:47
+msgid "Revisions are identical, you can delete %s"
+msgstr "Revize jsou stejné, %s můžete smazat"
+
+#. translators: Where %s is the name of the invalid POT file
+#: src/admin/file/EditController.php:122 src/ajax/SyncController.php:72
+msgid "Translation template is invalid (%s)"
+msgstr "Překlad šablony je neplatný (%s)"
+
+#: src/admin/file/DiffController.php:58 src/admin/file/DiffController.php:76
+msgid "Restore %s"
+msgstr "Obnovit %s"
+
+#: src/admin/file/DiffController.php:35
+msgid "File restored"
+msgstr "Soubor obnoven"
+
+#: src/admin/file/BaseController.php:106 tpl/admin/file/diff.php:31
+msgid "Restore"
+msgstr "Obnovit"
+
+#: src/admin/bundle/LocaleController.php:137
+msgid "See all core translations"
+msgstr "Zobrazit všechny hlavní překlady"
+
+#: src/admin/bundle/LocaleController.php:130
+#: src/admin/file/EditController.php:166 src/data/Settings.php:180
+#: tpl/admin/common/inc-fsconn.php:16 tpl/admin/common/inc-fsconn.php:41
+#: tpl/admin/config/apis.php:149 tpl/admin/config/prefs.php:45
+#: tpl/admin/config/settings.php:234 tpl/admin/errors/no-backups.php:22
+msgid "Documentation"
+msgstr "Dokumentace (anglicky)"
+
+#: src/admin/bundle/LocaleController.php:129
+msgid "No core translation files are installed for this language"
+msgstr "Pro tento jazyk nebyly nainstalovány překlady souborů jádra"
+
+#: src/ajax/FsConnectController.php:130
+msgid "Changes to this file may be overwritten or deleted when you update WordPress"
+msgstr "Změny v tomto souboru mohou být při aktualizaci WordPressu přepsány nebo smazány"
+
+#: src/ajax/FsConnectController.php:124
+msgid "This directory is managed by WordPress, be careful what you delete"
+msgstr "Tento adresář spravuje WordPress, dávejte pozor, co smažete"
+
+#: src/ajax/FsConnectController.php:121
+msgid "This file may be overwritten or deleted when you update WordPress"
+msgstr "Tento soubor může být při aktualizaci WordPressu přepsán nebo smazán"
+
+#: src/ajax/FsConnectController.php:163
+msgid "Saving this file requires permission"
+msgstr "Uložení vyžaduje oprávnění"
+
+#: src/ajax/FsConnectController.php:157
+msgid "Deleting this file requires permission"
+msgstr "Smazání vyžaduje oprávnění"
+
+#: src/ajax/FsConnectController.php:154
+msgid "Creating this file requires permission"
+msgstr "Vytvoření souboru vyžaduje oprávnění"
+
+#. Translators: Plural category for zero quantity
+#: src/Locale.php:405
+msgctxt "Plural category"
+msgid "Zero"
+msgstr "0"
+
+#: src/admin/init/InitPoController.php:321 tpl/admin/file/info.php:113
+msgid "What's this?"
+msgstr "Více informací."
+
+#: tpl/admin/init/init-prompt.php:46
+msgid "See FAQ"
+msgstr "Zobrazit FAQ"
+
+#. Translators: Where %s is the size of a file
+#: tpl/admin/init/init-pot.php:18
+msgid "largest is %s"
+msgstr "největší je %s"
+
+#: tpl/admin/config/settings.php:68
+msgid "Maximum line length (zero disables wrapping)"
+msgstr "Maximální délka řádku (nulou zakážete zalamování)"
+
+#. Translators: (1) Number of files (2) Maximum size of file that will be
+#. included (3) Size of the largest encountered
+#: src/ajax/SyncController.php:98
+msgid "%1$s file has been skipped because it's %3$s. (Max is %2$s). Check all strings are present before saving."
+msgid_plural "%1$s files over %2$s have been skipped. (Largest is %3$s). Check all strings are present before saving."
+msgstr[0] "%1$s soubor byl přeskočen, protože má %3$s. (Maximum je %2$s). Před uložením zkontrolujte přítomnost všech řetězců."
+msgstr[1] "%1$s soubory z %2$s byly přeskočeny. (Největší má %3$s). Před uložením zkontrolujte přítomnost všech řetězců."
+msgstr[2] "%1$s souborů z %2$s bylo přeskočeno. (Největší má %3$s). Před uložením zkontrolujte přítomnost všech řetězců."
+
+#: src/admin/bundle/ConfController.php:95
+msgid "Child theme declares the same Text Domain as the parent theme"
+msgstr "Child šablona deklaruje stejnou textovou doménu jako ta nadřazená"
+
+#. Translators: General plural category not covered by other forms
+#: src/Locale.php:415
+msgctxt "Plural category"
+msgid "Other"
+msgstr "0, 5, 6, 7, ..."
+
+#. Translators: Plural category used in some multi-plural languages
+#: src/Locale.php:413
+msgctxt "Plural category"
+msgid "Many"
+msgstr "Mnoho"
+
+#. Translators: Plural category used in some multi-plural languages
+#: src/Locale.php:411
+msgctxt "Plural category"
+msgid "Few"
+msgstr "2, 3, 4"
+
+#. Translators: Plural category used in some multi-plural languages
+#: src/Locale.php:409
+msgctxt "Plural category"
+msgid "Two"
+msgstr "Dva"
+
+#. Translators: Plural category for singular quantity
+#: src/Locale.php:407
+msgctxt "Plural category"
+msgid "One"
+msgstr "Jeden"
+
+#. Translators: Plural category for languages that have no plurals
+#: src/Locale.php:397
+msgctxt "Plural category"
+msgid "All forms"
+msgstr "Všechny formuláře"
+
+#: tpl/admin/config/version.php:28
+msgid "You're running a development snapshot of Loco Translate"
+msgstr "Používáte vývojářskou verzi Loco Translate"
+
+#. Author URI of the plugin
+msgid "https://localise.biz/wordpress/plugin"
+msgstr "https://localise.biz/wordpress/plugin"
+
+#. Description of the plugin
+msgid "Translate themes and plugins directly in WordPress"
+msgstr "Překládejte pluginy a šablony přímo ve WordPressu"
+
+#: src/admin/bundle/LocaleController.php:147 tpl/admin/root.php:54
+msgid "See all plugins"
+msgstr "Zobrazit veškeré pluginy"
+
+#: tpl/admin/root.php:50
+msgid "These plugins have recently loaded translation files into the admin area"
+msgstr "Tyto pluginy nedávno načetly soubory překladů v oblasti administrace"
+
+#: tpl/admin/root.php:47
+msgid "Running plugins:"
+msgstr "Spuštěné pluginy:"
+
+#: src/admin/bundle/LocaleController.php:142 tpl/admin/root.php:39
+msgid "See all themes"
+msgstr "Zobrazit veškeré šablony"
+
+#: tpl/admin/root.php:35
+msgid "Active theme:"
+msgstr "Aktivní šablona:"
+
+#: tpl/admin/root.php:26
+msgid "Translations have been recently modified in the following bundles"
+msgstr "Překlady byly upraveny v následujících balících"
+
+#: tpl/admin/root.php:23
+msgid "Recently updated:"
+msgstr "Nedávno aktualizované:"
+
+#: src/admin/RootController.php:84
+msgid "Welcome to Loco Translate"
+msgstr "Vítejte v Loco Translate"
+
+#: tpl/admin/list/inc-table.php:20
+msgid "Sets"
+msgstr "Sady"
+
+#: tpl/admin/bundle/locale.php:32 tpl/admin/list/inc-table.php:11
+msgid "Bundle name"
+msgstr "Název balíku"
+
+#: tpl/admin/init/init-pot.php:42 tpl/admin/init/init-prompt.php:33
+msgid "About templates"
+msgstr "O šablonách"
+
+#: tpl/admin/init/init-prompt.php:24
+msgid "This bundle doesn't define a translations template file"
+msgstr "Tento balík nedefinuje soubor šablony překladu"
+
+#: tpl/admin/init/init-prompt.php:20
+msgid "This bundle's template file doesn't exist yet. We recommend you create it before adding languages"
+msgstr "Konfigurace tohoto balíku zatím neexistuje. Doporučujeme vám ji vytvořit ještě před přidáním jazyků"
+
+#: tpl/admin/init/init-prompt.php:16
+msgid "Template missing"
+msgstr "Chybí šablona"
+
+#: tpl/admin/init/init-pot.php:30
+msgid "Strings will be extracted to:"
+msgstr "Řetězce budou extrahovány do:"
+
+#. Translators: (1) Number of files excluded (2) the maximum size of file that
+#. was included
+#: tpl/admin/init/init-pot.php:24
+msgid "Excludes %1$s file over %2$s"
+msgid_plural "Excludes %1$s files over %2$s"
+msgstr[0] "Vyloučit jeden soubor přesahující %2$s"
+msgstr[1] "Vyloučit  %1$s soubory přesahující %2$s"
+msgstr[2] "Vyloučit  %1$s souborů přesahujících %2$s"
+
+#. Translators: Where %s is the size of a file
+#: tpl/admin/init/init-pot.php:16
+msgid "%s on disk"
+msgstr "%s na disku"
+
+#: tpl/admin/init/init-pot.php:12
+msgid "Source files to scan:"
+msgstr "Zdrojové soubory ke skenování:"
+
+#: tpl/admin/init/init-po.php:183
+msgid "Start translating"
+msgstr "Začít překládat"
+
+#: tpl/admin/init/init-po.php:173
+msgid "Use this file as template when running Sync"
+msgstr "Použít „%s“ jako šablonu při běhu synchronizace"
+
+#: tpl/admin/file/conf.php:38 tpl/admin/init/init-po.php:153
+msgid "Just copy English source strings"
+msgstr "Kopírovat zdrojové řetězce v Angličtině"
+
+#: tpl/admin/file/conf.php:32 tpl/admin/init/init-po.php:147
+msgid "Copy target translations from \"%s\""
+msgstr "Kopírovat cíl překladů z „%s“"
+
+#: tpl/admin/file/conf.php:12 tpl/admin/init/init-po.php:136
+msgid "Template options"
+msgstr "Možnosti šablony"
+
+#: tpl/admin/init/init-po.php:93 tpl/admin/init/upload.php:15
+msgid "Choose a location"
+msgstr "vyberte umístění"
+
+#: tpl/admin/init/init-po.php:79
+msgid "Custom language"
+msgstr "Vlastní jazyk"
+
+#: tpl/admin/init/init-po.php:67
+msgid "Available languages"
+msgstr "Dostupné jazyky"
+
+#: src/admin/bundle/LocaleController.php:116
+#: src/admin/list/LocalesController.php:35 tpl/admin/init/init-po.php:61
+msgid "Installed languages"
+msgstr "Instalované jazyky"
+
+#: tpl/admin/init/init-po.php:60
+msgid "No language selected"
+msgstr "Není vybrán žádný jazyk"
+
+#: tpl/admin/init/init-po.php:55
+msgid "WordPress language"
+msgstr "Jazyk WordPressu"
+
+#: tpl/admin/init/init-po.php:48
+msgid "Choose a language"
+msgstr "Vyberte jazyk"
+
+#: tpl/admin/init/init-po.php:13
+msgid "Create template instead"
+msgstr "Vytvořit šablonu"
+
+#: tpl/admin/init/init-po.php:12
+msgid "You're creating translations directly from source code"
+msgstr "Vytváříte překlady přímo ze zdrojového kódu"
+
+#: tpl/admin/help/tab-support.php:6
+msgid "Getting help with Loco Translate"
+msgstr "Pomoc s Loco Translate"
+
+#: tpl/admin/help/tab-config-apis.php:9 tpl/admin/help/tab-config.php:9
+msgid "Full documentation"
+msgstr "Kompletní dokumentace"
+
+#: tpl/admin/help/tab-config.php:6
+msgid "User options apply to your WordPress login, across all sites"
+msgstr "Uživatelské nastavení platí pro vaše WordPress přihlášení napříč všemi weby"
+
+#: tpl/admin/help/tab-config.php:5
+msgid "Site options apply to all users of Loco Translate across the current site"
+msgstr "Webová nastavení platí pro všechny uživatele Loco Translate napříč celým tímto webem"
+
+#: tpl/admin/help/side-bar.php:12
+msgid "Support forum"
+msgstr "Fórum podpory"
+
+#: tpl/admin/help/side-bar.php:6
+msgid "For more information:"
+msgstr "Pro více informací:"
+
+#: tpl/admin/file/view-mo.php:11
+msgid "File is in binary MO format"
+msgstr "Soubor je v binárním formátu MO"
+
+#. Translators: Where %s is the name (or number) of an operating system user
+#: tpl/admin/file/info.php:96
+msgid "To create new files here you'll have to connect to the remote file system, or make the directory writeable by %s"
+msgstr "Pro vytvoření nového balíku se budete muset připojit ke vzdálenému souborovému systému, nebo udělit uživateli %s práva k zápisu"
+
+#: tpl/admin/file/info.php:92
+msgid "This directory can't be written to directly by the web server"
+msgstr "Tento adresář nemůže být vytvořen přímo webovým serverem"
+
+#: tpl/admin/file/info.php:81
+msgid "Note that the file may not be deletable due to additional ownership permissions"
+msgstr "Pamatujte, že tento soubor nemusí jít smazat díky dodatečným vlastnickým právům"
+
+#. Translators: Where %s is the name (or number) of an operating system user
+#: tpl/admin/file/info.php:73
+msgid "The containing directory is writeable by %s, so you can add new files in the same location"
+msgstr "Obsahující adresář je zapisovatelný uživatelem %s, takže můžete přidávat nové soubory do stejného adresáře"
+
+#: tpl/admin/file/info.php:69
+msgid "Directory is writeable"
+msgstr "Do adresáře lze ukládat"
+
+#. Translators: "either" meaning that the file itself can't exist without a
+#. containing directory
+#: tpl/admin/file/info.php:59
+msgid "The containing directory for this file doesn't exist either"
+msgstr "Adresář ani samotný soubor neexistuje"
+
+#: tpl/admin/file/info.php:55
+msgid "Directory doesn't exist"
+msgstr "Adresář neexistuje"
+
+#. Translators: Where %s is the name (or number) of an operating system user
+#: tpl/admin/file/info.php:43
+msgid "To make changes you'll have to connect to the remote file system, or make the file writeable by %s"
+msgstr "Pro provedení změn se budete muset připojit ke vzdálenému souborovému systému, nebo udělit uživateli %s práva k zápisu"
+
+#: tpl/admin/file/info.php:39
+msgid "This file can't be updated directly by the web server"
+msgstr "Tento soubor nemůže být aktualizován přímo webovým serverem"
+
+#: tpl/admin/file/info.php:27
+msgid "You can update these translations directly from the editor to the file system"
+msgstr "Můžete aktualizovat tyto překlady přímo z editoru do souborového systému"
+
+#. Translators: Where %s is the type of file, e.g. "po"
+#: tpl/admin/file/info.php:24
+msgid "%s file is writeable"
+msgstr "%s soubor lze upravovat"
+
+#: tpl/admin/file/info.php:14
+msgid "File doesn't exist"
+msgstr "Soubor neexistuje"
+
+#: tpl/admin/file/info-pot.php:27
+msgid "Last extracted"
+msgstr "Naposledy extrahováno"
+
+#: tpl/admin/file/info-po.php:88
+msgid "These translations are not linked to a POT file. Sync operations will extract strings directly from source code."
+msgstr "Tyto překlady nejsou přiřazeny k POT souboru. Synchronizace vyextrahuje řetězce přímo ze zdrojového kódu."
+
+#: tpl/admin/file/info-po.php:84
+msgid "Missing template"
+msgstr "Chybí šablona"
+
+#. Translators: Where %s is the name of a template file
+#: tpl/admin/file/info-po.php:75
+msgid "PO file has different source strings to \"%s\". Try running Sync before making any changes."
+msgstr "PO soubor má jiné zdrojové řetězce, než které obsahuje soubor %s. Před provedením jakýchkoliv změn proveďte synchronizaci."
+
+#: tpl/admin/file/info-po.php:71
+msgid "Out of sync with template"
+msgstr "Nesynchronizuje se s šablonou"
+
+#. Translators: Where %s is the name of a template file
+#: tpl/admin/file/info-po.php:64
+msgid "PO file has the same source strings as \"%s\""
+msgstr "PO soubor má stejný zdroj řetězců jako soubor %s."
+
+#: tpl/admin/file/info-po.php:60
+msgid "In sync with template"
+msgstr "V synchronizaci s šablonou"
+
+#: tpl/admin/file/info-po.php:50
+msgid "We can't find the binary MO file that belongs with these translations"
+msgstr "Nepodařilo se najít binární MO soubor, který patří k těmto překladům"
+
+#: tpl/admin/file/info-po.php:47
+msgid "Binary file missing"
+msgstr "Chybí binární soubor"
+
+#: tpl/admin/file/info-other.php:11
+msgid "Unexpected file type"
+msgstr "Neočekávaný typ souboru"
+
+#: tpl/admin/file/info-mo.php:41
+msgid "We can't find the original PO file from which this was compiled"
+msgstr "Nepodařilo se najít původní PO soubor ze kterého byl MO soubor zkompilován"
+
+#: tpl/admin/file/info-mo.php:38
+msgid "PO file missing"
+msgstr "Chybí PO soubor"
+
+#: tpl/admin/file/info-mo.php:27
+msgid "Compiled translations"
+msgstr "Zkompilované překlady"
+
+#: tpl/admin/file/info-mo.php:24 tpl/admin/file/info-po.php:30
+msgid "Last translation"
+msgstr "Poslední překlad"
+
+#: tpl/admin/file/info-mo.php:21 tpl/admin/file/info-po.php:27
+#: tpl/admin/file/info-pot.php:24
+msgid "File modified"
+msgstr "Poslední aktualizace"
+
+#: tpl/admin/file/info-mo.php:15
+msgid "compiled"
+msgstr "zkompilováno"
+
+#: tpl/admin/file/delete.php:30
+msgid "Delete Permanently"
+msgstr "Smazat trvale"
+
+#: tpl/admin/file/delete.php:16
+msgid "Are you sure you want to <strong>permanently</strong> delete the following file?"
+msgstr "Opravdu chcete smazat <strong>trvale</strong> následující soubor?"
+
+#: tpl/admin/file/delete.php:12
+msgid "Confirm delete"
+msgstr "Potvrzení smazání"
+
+#: tpl/admin/errors/no-tokenizer.php:25
+msgid "You can still translate any bundle that has a <a href=\"%s\" target=\"_blank\">template</a>"
+msgstr "Stále můžete překládat jakýkoliv balík, který má svou <a href=\"%s\" target=\"_blank\">šablonu</a>"
+
+#. Translators: change "en" in the URL to your language if it's available at
+#. https://www.php.net/docs.php
+#: tpl/admin/errors/no-tokenizer.php:17
+msgid "Loco requires the <a href=\"http://php.net/manual/en/book.tokenizer.php\" target=\"_blank\">Tokenizer extension</a> to scan PHP source code for translatable strings"
+msgstr "Loco vyžaduje rozšíření <a href=\"http://php.net/manual/en/book.tokenizer.php\" target=\"_blank\">Tokenizer</a> pro vyhledání řetězců k překládání z PHP zdrojového kódu"
+
+#: tpl/admin/errors/no-tokenizer.php:11
+msgid "About the Tokenizer"
+msgstr "O Tokenizeru"
+
+#: tpl/admin/errors/file-missing.php:14
+msgid "Either this file is missing or the server doesn't have permission to access it"
+msgstr "Buď tento soubor chybí nebo serveru chybí oprávnění k přístupu"
+
+#: tpl/admin/errors/file-missing.php:11
+msgid "File not found"
+msgstr "Soubor nebyl nalezen"
+
+#: tpl/admin/errors/file-isdir.php:14
+msgid "This page was expecting a file, but the path is actually a directory"
+msgstr "Stránka očekávala soubor, ale tato cesta odkazuje jen na adresář"
+
+#: tpl/admin/errors/file-isdir.php:11
+msgid "File is a directory"
+msgstr "Soubor je adresář"
+
+#: tpl/admin/config/version.php:38
+msgid "You're running the latest version of Loco Translate"
+msgstr "Používáte aktuální verzi pluginu Loco Translate"
+
+#: tpl/admin/config/version.php:17
+msgid "Upgrade to %s"
+msgstr "Aktualizovat na %s"
+
+#: tpl/admin/config/version.php:11 tpl/admin/config/version.php:25
+#: tpl/admin/config/version.php:35
+msgid "Version %s"
+msgstr "Verze %s"
+
+#: tpl/admin/config/settings.php:216
+msgid "Allow full access to these roles"
+msgstr "Povolit těmto úrovním plný přístup"
+
+#: tpl/admin/config/settings.php:210
+msgid "Grant access to roles"
+msgstr "Povolit přístup úrovním"
+
+#: tpl/admin/config/settings.php:75 tpl/admin/config/settings.php:182
+msgid "Not recommended"
+msgstr "nedoporučeno"
+
+#: tpl/admin/config/settings.php:75
+msgid "Add UTF-8 byte order mark"
+msgstr "Přidat UTF-8 označení pořadí bajtů"
+
+#: tpl/admin/config/settings.php:52 tpl/admin/config/settings.php:58
+msgid "Saving PO/POT files"
+msgstr "Ukládání PO/POT souborů"
+
+#: tpl/admin/config/settings.php:37
+msgid "Scan PHP files with extensions:"
+msgstr "Skenovat PHP soubory s příponami:"
+
+#: tpl/admin/config/settings.php:31
+msgid "Skip PHP files larger than:"
+msgstr "Přeskočit PHP soubory větší než:"
+
+#: tpl/admin/config/settings.php:21 tpl/admin/config/settings.php:27
+msgid "Extracting strings"
+msgstr "Probíhá extrahování řetězců"
+
+#: tpl/admin/config/prefs.php:16 tpl/admin/config/prefs.php:20
+msgid "Translator credit"
+msgstr "Informace o překladateli"
+
+#. translators: text field placeholder
+#: tpl/admin/common/inc-table-filter.php:6
+msgid "Filter..."
+msgstr "Filtrovat..."
+
+#: tpl/admin/common/inc-fsconn.php:60
+msgid "Connect"
+msgstr "Připojit"
+
+#. Translators: When a file or folder cannot be modified due to filesystem
+#. permissions
+#: tpl/admin/common/inc-fsconn.php:50 tpl/admin/file/info.php:36
+#: tpl/admin/file/info.php:89
+msgid "Write protected"
+msgstr "Chráněno proti zápisu"
+
+#: tpl/admin/bundle/view.php:55
+msgid "This bundle isn't automatically compatible and requires configuring before you can use all the functions of Loco Translate"
+msgstr "Tento balík není automaticky kompatibilní a vyžaduje konfiguraci před použitím všech funkcí Loco Translate"
+
+#: tpl/admin/bundle/view.php:52
+msgid "unconfigured"
+msgstr "nenakonfigurováno"
+
+#. Translators: %s is a URL. Keep the <a> tag intact
+#: tpl/admin/bundle/view.php:35 tpl/admin/bundle/view.php:57
+msgid "Click the <a href=\"%s\">setup</a> tab to complete the bundle configuration"
+msgstr "Pro dokončení konfigurace balíku, klikněte na záložku <a href=\"%s\">konfigurace</a>."
+
+#: tpl/admin/bundle/view.php:32
+msgid "This bundle isn't fully configured, so we don't know what the following files are for"
+msgstr "Tento balík není úplně nakonfigurován, takže nevíme k čemu slouží tyto následující soubory"
+
+#: tpl/admin/bundle/view.php:29
+msgid "Additional files found"
+msgstr "Byly nalezeny další soubory"
+
+#: tpl/admin/bundle/setup.php:15
+msgid "If you have trouble translating this bundle, consider asking the author for help"
+msgstr "Pokud se vám nedaří přeložit tento balík, zkuste požádat autora o pomoc"
+
+#: tpl/admin/bundle/setup.php:12
+msgid "Author details"
+msgstr "Informace o autorovi"
+
+#: tpl/admin/bundle/setup/saved.php:19
+msgid "Edit config"
+msgstr "Upravit konfiguraci"
+
+#: tpl/admin/bundle/setup/saved.php:14
+msgid "This bundle's configuration is saved in the WordPress database"
+msgstr "Konfigurace tohoto balíku je uložena v databázi WordPressu"
+
+#: tpl/admin/bundle/setup/saved.php:11
+msgid "Bundle configuration saved"
+msgstr "Konfigurace balíku byla uložena"
+
+#: tpl/admin/bundle/setup/partial.php:14
+msgid "This bundle's configuration has been automatically detected, but isn't fully complete"
+msgstr "Konfigurace tohoto balíku byla automaticky zjištěna, ale není kompletní"
+
+#: tpl/admin/bundle/setup/partial.php:11
+msgid "Partially configured bundle"
+msgstr "Částečně nakonfigurovaný balík"
+
+#: tpl/admin/bundle/setup/none.php:15
+msgid "It needs configuring before you can do any translations"
+msgstr "Než začnete překládat, musíte nejprve nastavit vše potřebné"
+
+#: tpl/admin/bundle/setup/none.php:14
+msgid "This bundle isn't set up for translation in a way we understand"
+msgstr "Tento balík není nastaven pro námi používaný způsob překladu"
+
+#: tpl/admin/bundle/setup/none.php:11
+msgid "Unconfigured bundle"
+msgstr "Nenakonfigurovaný balík"
+
+#: tpl/admin/bundle/setup/meta.php:14
+msgid "This bundle's configuration has been automatically detected and seems to be fully compatible"
+msgstr "Konfigurace tohoto balíku byla automaticky zjištěna, a pravděpodobně je plně kompatibilní"
+
+#: tpl/admin/bundle/setup/inc-nav.php:25
+msgid "Get help with this"
+msgstr "Získat pomoc s tímto"
+
+#: tpl/admin/bundle/setup/inc-nav.php:22
+msgid "Import config from XML"
+msgstr "Importovat konfiguraci z XML"
+
+#: tpl/admin/bundle/setup/core.php:13
+msgid "This bundle's configuration is built into Loco"
+msgstr "Konfigurace tohoto balíku je součástí Loco"
+
+#: tpl/admin/bundle/setup/core.php:10 tpl/admin/bundle/setup/meta.php:11
+msgid "Bundle auto-configured"
+msgstr "Balík byl nakonfigurován automaticky"
+
+#: tpl/admin/bundle/setup/conf.php:55
+msgid "Load config"
+msgstr "Načíst konfiguraci"
+
+#: tpl/admin/bundle/setup/conf.php:49
+msgid "If you've been given a configuration file by a developer, paste the XML code here"
+msgstr "Jestli jste dostali konfigurační soubor od vývojáře, zde vložte XML kód"
+
+#: tpl/admin/bundle/setup/conf.php:46
+msgid "XML setup"
+msgstr "Nastavení XML"
+
+#: tpl/admin/bundle/setup/conf.php:34
+msgid "OK, Load this config"
+msgstr "OK, načíst tuto konfiguraci"
+
+#: tpl/admin/bundle/setup/conf.php:28 tpl/admin/bundle/setup/conf.php:35
+#: tpl/admin/bundle/setup/conf.php:56
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: tpl/admin/bundle/setup/conf.php:27
+msgid "Find config"
+msgstr "Najít nastavení"
+
+#: tpl/admin/bundle/setup/conf.php:16
+msgid ""
+"We have a database of non-standard bundle configurations.\n"
+"If we know your bundle, we'll configure it for you automatically"
+msgstr ""
+"Máme databázi balíků s nestandardní konfigurací.\n"
+"Pokud budeme znát váš balík, nakonfigurujeme vám jej automaticky"
+
+#: tpl/admin/bundle/setup/conf.php:12
+msgid "Check config repository"
+msgstr "Kontrola adresáře konfigurace"
+
+#: tpl/admin/bundle/setup/author.php:15 tpl/admin/bundle/setup/core.php:14
+#: tpl/admin/bundle/setup/meta.php:15
+msgid "You can make changes in the Advanced tab if you need to override the current settings"
+msgstr "Pokud potřebujete změnit aktuální nastavení, přejděte do záložky pokročilé"
+
+#: tpl/admin/bundle/setup/author.php:14
+msgid "This bundle's configuration is provided by the author"
+msgstr "Konfigurace tohoto balíku je dodána autorem"
+
+#: tpl/admin/bundle/setup/author.php:11
+msgid "Official configuration"
+msgstr "Oficiální konfigurace"
+
+#: tpl/admin/bundle/inc-po-table.php:108
+msgid "No translations found for \"%s\""
+msgstr "Pro „%s“ nebyly nalezeny žádné překlady."
+
+#: tpl/admin/bundle/inc-po-table.php:54 tpl/admin/bundle/locale.php:69
+msgid "Info"
+msgstr "Info"
+
+#: tpl/admin/bundle/inc-po-table.php:57 tpl/admin/bundle/locale.php:72
+msgid "Copy"
+msgstr "Kopírovat"
+
+#: tpl/admin/bundle/inc-po-table.php:48 tpl/admin/bundle/locale.php:63
+msgid "Edit"
+msgstr "Upravit"
+
+#: tpl/admin/bundle/inc-po-table.php:28 tpl/admin/bundle/locale.php:49
+msgid "Folder"
+msgstr "Složka"
+
+#: tpl/admin/bundle/inc-po-table.php:25 tpl/admin/bundle/locale.php:46
+#: tpl/admin/list/inc-table.php:17 tpl/admin/list/locales.php:19
+msgid "Last modified"
+msgstr "Naposledy změněno"
+
+#: tpl/admin/bundle/inc-po-table.php:19 tpl/admin/bundle/locale.php:39
+msgid "Pending"
+msgstr "Zbývá"
+
+#: tpl/admin/bundle/inc-po-table.php:16 tpl/admin/bundle/locale.php:36
+#: tpl/admin/file/info-po.php:33
+msgid "Translation progress"
+msgstr "Stav překladu"
+
+#: tpl/admin/bundle/inc-po-table.php:13
+msgid "Language"
+msgstr "Jazyk"
+
+#: tpl/admin/bundle/debug.php:8
+msgid "This information is for developers to find problems in the bundle setup"
+msgstr "Tato informace je pro vývojáře, aby našli chyby v nastavení balíku"
+
+#: tpl/admin/bundle/conf.php:159 tpl/admin/bundle/setup/saved.php:18
+msgid "Reset config"
+msgstr "Resetovat konfiguraci"
+
+#: tpl/admin/bundle/conf.php:146
+msgid "XML"
+msgstr "XML"
+
+#: tpl/admin/bundle/conf.php:144
+msgid "Parent theme"
+msgstr "Nadřazená šablona"
+
+#: tpl/admin/bundle/conf.php:142
+msgid "Add set"
+msgstr "Přidat sadu"
+
+#: tpl/admin/bundle/conf.php:141
+msgid "Save config"
+msgstr "Uložit konfiguraci"
+
+#. Translators: Help tip for "Blocked paths" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:134
+msgid "Folders within the bundle that will never be searched for files"
+msgstr "Složky uvnitř balíku ve kterých se nikdy nebudou hledat žádné soubory"
+
+#: tpl/admin/bundle/conf.php:128
+msgid "Blocked paths"
+msgstr "Blokované cesty"
+
+#. Translators: Help tip for "Source file paths" field in advanced bundle
+#. config
+#: tpl/admin/bundle/conf.php:113
+msgid "Files and folders within the bundle that contain localized PHP code"
+msgstr "Soubory a složky v balíku, které obsahují PHP kód k lokalizaci"
+
+#: tpl/admin/bundle/conf.php:100
+msgid "Source file paths"
+msgstr "Cesty ke zdrojovým souborům"
+
+#. Translators: Help tip for "Domain path" field in advanced bundle config
+#. Translators: Help tip for "Source file paths" field in advanced bundle
+#. config
+#. Translators: Help tip for "Blocked paths" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:94 tpl/admin/bundle/conf.php:113
+#: tpl/admin/bundle/conf.php:134
+msgid "no wildcards"
+msgstr "žádné hvězdičky"
+
+#. Translators: Help tip for "Domain path" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:94
+msgid "Folders within the bundle that contain author-supplied translations"
+msgstr "Složky v balíku, které obsahují autorovy překlady"
+
+#: tpl/admin/bundle/conf.php:89 tpl/admin/bundle/conf.php:108
+msgid "Exclude"
+msgstr "Vyloučit"
+
+#: tpl/admin/bundle/conf.php:85 tpl/admin/bundle/conf.php:104
+msgid "Include"
+msgstr "Zahrnout"
+
+#: tpl/admin/bundle/conf.php:81
+msgid "Domain path"
+msgstr "Domain path"
+
+#. Translators: Help tip for "Template file" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:75
+msgid "Relative path from bundle root to the official POT file"
+msgstr "Relativní cesta od kořenového adresáře balíku k oficiálnímu POT souboru"
+
+#: tpl/admin/bundle/conf.php:71 tpl/admin/common/inc-fsconn.php:12
+msgid "Locked"
+msgstr "Uzamčeno"
+
+#. Translators: Help tip for "File prefix" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:59
+msgid "Usually the same as the text domain, but don't leave blank unless you mean to"
+msgstr "Většinou shodné s „Text domain“, ale nenechávejte toto pole prázdné pokud to opravdu nechcete"
+
+#: tpl/admin/bundle/conf.php:53
+msgid "File prefix"
+msgstr "Prefix souboru"
+
+#. Translators: Help tip for "Text domain" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:47
+msgid "The namespace into which WordPress will load translated strings"
+msgstr "Název adresáře do kterého WordPress bude načítat přeložené řetězce"
+
+#: tpl/admin/bundle/conf.php:41 tpl/admin/list/inc-table.php:14
+msgid "Text domain"
+msgstr "Text domain"
+
+#. Translators: Help tip for "Project name" field in advanced bundle config
+#: tpl/admin/bundle/conf.php:35
+msgid "Descriptive name for this set of translatable strings"
+msgstr "Popisný název pro tuto sadu překladů"
+
+#: tpl/admin/bundle/conf.php:29
+msgid "Project name"
+msgstr "Název projektu"
+
+#: tpl/admin/bundle/alias.php:17
+msgid "Go to WordPress Core"
+msgstr "Přejít na jádro WordPressu"
+
+#: tpl/admin/bundle/alias.php:11
+msgid "\"Hello Dolly\" is part of the WordPress core"
+msgstr "“Hello Dolly„ je součástí jádra WordPressu"
+
+#: src/package/Plugin.php:233
+msgid "Plugin not found: %s"
+msgstr "Plugin nebyl nalezen: %s"
+
+#: src/package/Header.php:92
+msgid "Visit official site"
+msgstr "Navštívit oficiální web"
+
+#. translators: Author credit: "<product>" <version> by <author>
+#: src/package/Header.php:89
+msgid "\"%s\" %s by %s"
+msgstr "„%s“ %s, autor: %s"
+
+#: src/package/Debugger.php:205
+msgid "Configured domain has no extractable strings"
+msgid_plural "%u configured domains have no extractable strings"
+msgstr[0] "Nakonfigurovaná doména nemá žádné řetězce vhodné pro překlad."
+msgstr[1] "%u nakonfigurované domény nemají žádné řetězce vhodné pro překlad."
+msgstr[2] "%u nakonfigurovaných domén nemá žádné řetězce vhodné pro překlad."
+
+#. translators: 1: Number of strings; 2: Text Domain; e.g. 100 strings
+#. extracted from source code for "loco-translate"
+#: src/package/Debugger.php:187
+msgid "%1$s string extracted from source code for \"%2$s\""
+msgid_plural "%1$s strings extracted from source code for \"%2$s\""
+msgstr[0] "Ze zdrojového kódu „%2$s“ byl extrahován jeden řetězec"
+msgstr[1] "Ze zdrojového kódu „%2$s“ byly extrahovány %1$s řetězce"
+msgstr[2] "Ze zdrojového kódu „%2$s“ bylo extrahováno %1$s řetězců"
+
+#: src/admin/bundle/LocaleController.php:136 src/package/Core.php:87
+msgid "WordPress Core"
+msgstr "Jádro WordPressu"
+
+#: src/package/Core.php:29
+msgid "https://wordpress.org/"
+msgstr "https://cs.wordpress.org/"
+
+#: src/package/Core.php:28
+msgid "The WordPress Team"
+msgstr "Tým WordPressu"
+
+#: src/package/Core.php:26
+msgid "WordPress core"
+msgstr "Jádro WordPressu"
+
+#: src/output/Buffer.php:129
+msgid "Loco interrupted by output from %s:%u"
+msgstr "Loco bylo přerušeno výstupem z %s:%u"
+
+#: src/mvc/FileParams.php:153
+msgid "%s ago"
+msgstr "před %s"
+
+#. translators: relative time when something happened in the last 30 seconds
+#: src/mvc/FileParams.php:151
+msgid "Just now"
+msgstr "Nyní"
+
+#: src/mvc/FileParams.php:147
+msgid "Y/m/d"
+msgstr "j. n. Y"
+
+#: src/mvc/Controller.php:49
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Pro přístup na tuto stránku nemáte odpovídající oprávnění."
+
+#: src/mvc/AjaxRouter.php:202
+msgid "Download controller returned empty output"
+msgstr "Ovladač stahování vrátil prázdný výstup"
+
+#: src/mvc/AjaxRouter.php:197
+msgid "Download action not found"
+msgstr "Akce pro stažení nebyla nalezena"
+
+#: src/mvc/AjaxRouter.php:174
+msgid "Ajax controller returned empty JSON"
+msgstr "Ovladač Ajaxu vrátil prázdný JSON"
+
+#: src/mvc/AjaxRouter.php:169
+msgid "Ajax route not found: \"%s\""
+msgstr "Cesta Ajax nebyla nalezena: „%s“"
+
+#: src/mvc/AdminRouter.php:241
+msgid "Page not found"
+msgstr "Stránka nebyla nalezena"
+
+#. translators: Page title for core WordPress translations
+#: src/mvc/AdminRouter.php:56
+msgid "Core translations &lsaquo; Loco"
+msgstr "Překlady jádra &lsaquo; Loco"
+
+#: src/mvc/AdminRouter.php:54 tpl/admin/bundle/setup/conf.php:20
+msgid "WordPress"
+msgstr "WordPress"
+
+#. translators: Page title for plugin translations
+#: src/mvc/AdminRouter.php:51
+msgid "Plugin translations &lsaquo; Loco"
+msgstr "Překlady pluginu &lsaquo; Loco"
+
+#. translators: Page title for theme translations
+#: src/mvc/AdminRouter.php:46
+msgid "Theme translations &lsaquo; Loco"
+msgstr "Překlady šablony &lsaquo; Loco"
+
+#: src/mvc/AdminRouter.php:42
+msgid "Home"
+msgstr "Domů"
+
+#: src/mvc/AdminController.php:115
+msgid "Loco Translate is powered by"
+msgstr "Loco Translate od společnosti"
+
+#: src/mvc/AdminController.php:52
+msgid "Help & support"
+msgstr "Nápověda a podpora"
+
+#: src/js/Strings.php:167
+msgctxt "Editor"
+msgid "Translation"
+msgstr "Překlad"
+
+#: src/js/Strings.php:164
+msgctxt "Editor"
+msgid "Translation not loaded"
+msgstr "Překlad se nenahrál"
+
+#: src/js/Strings.php:161
+msgctxt "Editor"
+msgid "Context not loaded"
+msgstr "Kontext se nepodařilo načíst"
+
+#: src/js/Strings.php:158
+msgctxt "Editor"
+msgid "Source text not loaded"
+msgstr "Zdrojový text se nepodařilo načíst"
+
+#: src/js/Strings.php:143
+msgctxt "Editor"
+msgid "Plural"
+msgstr "Plurál"
+
+#: src/js/Strings.php:140
+msgctxt "Editor"
+msgid "Single"
+msgstr "Singulár"
+
+#: src/js/Strings.php:137
+msgctxt "Editor"
+msgid "Comments"
+msgstr "Komentáře"
+
+#: src/js/Strings.php:134
+msgctxt "Editor"
+msgid "Context"
+msgstr "Kontext"
+
+#: src/js/Strings.php:131
+msgctxt "Editor"
+msgid "%s translation"
+msgstr "%s překlad"
+
+#: src/js/Strings.php:127 tpl/admin/file/info-pot.php:30
+msgctxt "Editor"
+msgid "Source text"
+msgstr "Zdrojový text"
+
+#: src/js/Strings.php:114
+msgid "Server returned invalid data"
+msgstr "Server vrátil neplatné data"
+
+#: src/js/Strings.php:117
+msgid "Check console output for debugging information"
+msgstr "Zkontrolujte výstup konzole pro ladící informace"
+
+#: src/js/Strings.php:120
+msgid "Provide the following text when reporting a problem"
+msgstr "Při hlášení problému uveďte tento text"
+
+#: src/js/Strings.php:14
+msgid "Nothing matches the text filter"
+msgstr "Tomuto textovému filtru neodpovídají žádné výsledky"
+
+#: src/hooks/AdminHooks.php:103 tpl/ajax/modal-apis-batch.php:37
+msgid "Translate"
+msgstr "Překládat"
+
+#. translators: Error thrown when attempting to parse a file that is not PO,
+#. POT or MO
+#: src/gettext/Data.php:23
+msgid "%s is not a Gettext file"
+msgstr "%s není Gettext soubor"
+
+#. Translators: Refers to translation files in an alternative location that
+#. isn't Author, System or Custom.
+#: src/fs/LocaleDirectory.php:72
+msgctxt "File location"
+msgid "Other"
+msgstr "Ostatní"
+
+#. Translators: Refers to translation files in Loco's custom/protected
+#. directory
+#: src/fs/LocaleDirectory.php:69
+msgctxt "File location"
+msgid "Custom"
+msgstr "Vlastní"
+
+#. Translators: Refers to system-installed translation files - i.e. those under
+#. WP_LANG_DIR
+#: src/fs/LocaleDirectory.php:66
+msgctxt "File location"
+msgid "System"
+msgstr "Systém"
+
+#. Translators: Refers to bundled plugin or theme translation files - i.e.
+#. those supplied by the author
+#: src/fs/LocaleDirectory.php:63
+msgctxt "File location"
+msgid "Author"
+msgstr "Autor"
+
+#: src/fs/FileWriter.php:305
+msgid "File modification is disallowed by your WordPress config"
+msgstr "Úprava souboru je zakázána nastavením WordPressu"
+
+#: src/fs/FileWriter.php:294
+msgid "Failed to build directory path"
+msgstr "Nepodařilo se sestavit cestu adresáře"
+
+#: src/fs/FileWriter.php:286
+msgid "Failed to create directory"
+msgstr "Nepodařilo se vytvořit adresář"
+
+#: src/fs/FileWriter.php:249
+msgid "Failed to save file"
+msgstr "Soubor se nepodařilo uložit"
+
+#: src/fs/FileWriter.php:239
+msgid "Permission denied to update file"
+msgstr "Přístup pro aktualizaci souboru byl zamítnut"
+
+#: src/fs/FileWriter.php:214
+msgid "\"%s\" is a directory, not a file"
+msgstr "„%s“ je adresář, nikoliv soubor"
+
+#: src/fs/FileWriter.php:198
+msgid "Failed to delete %s"
+msgstr "Nepodařilo se smazat %s"
+
+#: src/fs/FileWriter.php:160
+msgid "Failed to copy %s to %s"
+msgstr "Kopírování %s do %s se nezdařilo"
+
+#: src/fs/FileWriter.php:150
+msgid "Refusing to copy over an existing file"
+msgstr "Odmítá překopírovat stávající soubor"
+
+#: src/fs/FileWriter.php:132
+msgid "Failed to chmod %s"
+msgstr "Selhalo na chmod %s"
+
+#: src/fs/FileWriter.php:52
+msgid "Failed to connect to remote server"
+msgstr "Připojení ke vzdálenému serveru selhalo"
+
+#: src/error/XmlParseException.php:8
+msgid "XML parse error"
+msgstr "Chyba analýzy XML"
+
+#: src/error/Warning.php:19 src/js/Strings.php:105
+msgid "Warning"
+msgstr "Varování"
+
+#: src/error/Success.php:19 src/js/Strings.php:111
+msgid "OK"
+msgstr "OK"
+
+#: src/error/Notice.php:20 src/js/Strings.php:108
+#: tpl/admin/common/inc-fsconn.php:37
+msgid "Notice"
+msgstr "Upozornění"
+
+#: src/error/Exception.php:164 src/js/Strings.php:102
+msgid "Error"
+msgstr "Chyba"
+
+#: src/data/Permissions.php:155
+msgctxt "User role"
+msgid "Translator"
+msgstr "Překladatel"
+
+#: src/config/XMLModel.php:42
+msgid "XML supplied is empty"
+msgstr "Zadaný soubor XML je prázdný"
+
+#: src/config/FormModel.php:146
+msgid "Text Domain cannot be empty"
+msgstr "Pole „Text domain“ nemůže být prázdné"
+
+#. translators: used when user name of web server process is unknown
+#: src/compat/PosixExtension.php:111
+msgid "the web server"
+msgstr "webový server"
+
+#: src/api/WordPressFileSystem.php:87
+msgid "%s already exists in this folder"
+msgstr "Soubor %s již v této složce existuje"
+
+#: src/ajax/XgettextController.php:67
+msgid "Template file created"
+msgstr "Soubor šablony byl vytvořen"
+
+#: src/gettext/Compiler.php:107
+msgid "PO file saved, but MO file compilation failed"
+msgstr "Soubor PO byl uložen, ale kompilace MO souboru se nezdařila."
+
+#: src/gettext/Compiler.php:235
+msgid "PO file saved and MO file compiled"
+msgstr "Soubor PO byl uložen a soubor MO byl zkompilován"
+
+#: src/fs/Revisions.php:221
+msgid "Failed to create backup file in \"%s\". Check file permissions or disable backups"
+msgstr "Nepodařilo se vytvořit zálohu v „%s“. Zkontrolujte oprávnění souborů nebo vypněte zálohy"
+
+#: src/ajax/MsginitController.php:63
+msgid "MO file exists for this language already. Delete it first"
+msgstr "Pro tento jazyk už MO soubor existuje. Nejprve jej smažte"
+
+#: src/ajax/FsConnectController.php:117
+msgid "Connected to remote file system"
+msgstr "Připojeno ke vzdálenému souborovému systému"
+
+#: src/admin/list/ThemesController.php:14
+msgid "Translate themes"
+msgstr "Překládejte šablony"
+
+#: src/admin/list/PluginsController.php:12
+msgid "Translate plugins"
+msgstr "Překládejte pluginy"
+
+#: src/admin/init/InitPotController.php:106
+msgid "New translations template for \"%s\""
+msgstr "Nová překladatelská šablona „%s“"
+
+#: src/admin/init/InitPotController.php:105
+msgid "New template file"
+msgstr "Nový soubor šablony"
+
+#: src/admin/init/InitPotController.php:57
+msgid "Template file already exists"
+msgstr "Soubor šablony již existuje"
+
+#: src/admin/init/InitPotController.php:16
+msgid "New template"
+msgstr "Nová šablona"
+
+#: src/admin/init/InitPoController.php:233
+msgid "Skip template"
+msgstr "Přeskočit šablonu"
+
+#. translators: Were %s is number of source files that will be scanned
+#: src/admin/init/InitPoController.php:227
+msgid "%s source file will be scanned for translatable strings"
+msgid_plural "%s source files will be scanned for translatable strings"
+msgstr[0] "1 zdrojový soubor bude skenován pro řetězce k překladu"
+msgstr[1] "%s zdrojové soubory budou skenovány pro řetězce k překladu"
+msgstr[2] "%s zdrojových souborů bude skenováno pro řetězce k překladu"
+
+#. translators: 1: Number of strings; 2: Name of POT file; e.g. "100 strings
+#. found in file.pot"
+#: src/admin/init/InitPoController.php:198
+msgid "%1$s string found in %2$s"
+msgid_plural "%1$s strings found in %2$s"
+msgstr[0] "V %2$s byl nalezen jeden řetězec"
+msgstr[1] "V %2$s byly nalezeny %1$s řetězce"
+msgstr[2] "V %2$s bylo nalezeno %1$s řetězců"
+
+#: src/admin/init/InitPoController.php:112
+msgid "Initializing new translations in unknown set"
+msgstr "Začínání nových překladů v neznámé sadě"
+
+#: src/admin/init/InitPoController.php:108
+msgid "Initializing new translations in \"%s\""
+msgstr "Nastavení nových překladů v „%s“"
+
+#: src/admin/file/InfoController.php:177
+msgid "Language header is \"%s\" but file name contains \"%s\""
+msgstr "Jazyk v hlavičce je „%s“, ale název souboru obsahuje „%s“"
+
+#: src/admin/file/InfoController.php:170
+msgid "File does not have a valid header"
+msgstr "Soubor nemá platnou hlavičku"
+
+#: src/admin/file/InfoController.php:138 src/package/Header.php:86
+msgid "Unknown author"
+msgstr "Neznámý autor"
+
+#. Translators: Button that toggles between "code" and regular text editing
+#. modes
+#: src/admin/file/EditController.php:211
+msgctxt "Editor"
+msgid "Toggle code view"
+msgstr "Přepnout zobrazení kódu"
+
+#. Translators: Button that toggles invisible characters
+#: src/admin/file/EditController.php:209
+msgctxt "Editor"
+msgid "Toggle invisibles"
+msgstr "Přepnout neviditelné znaky"
+
+#. Translators: Button for downloading a PO, MO or POT file
+#: src/admin/file/EditController.php:205
+msgctxt "Editor"
+msgid "Download"
+msgstr "Stáhnout"
+
+#. Translators: Button that reloads current screen
+#: src/admin/file/EditController.php:201
+msgctxt "Editor"
+msgid "Revert"
+msgstr "Vrátit původní"
+
+#. Translators: Button that runs in-editor sync/operation
+#: src/admin/file/EditController.php:199
+msgctxt "Editor"
+msgid "Sync"
+msgstr "Synchronizovat"
+
+#. Translators: Button that saves translations to disk
+#: src/admin/file/EditController.php:197
+msgctxt "Editor"
+msgid "Save"
+msgstr "Uložit"
+
+#. Translators: button for removing a string when manually editing a POT file
+#: src/admin/file/EditController.php:195 src/ajax/ApisController.php:26
+msgid "Help"
+msgstr "Nápověda"
+
+#. Translators: button for removing a string when manually editing a POT file
+#: src/admin/file/EditController.php:194
+msgctxt "Editor"
+msgid "Remove"
+msgstr "Odstranit"
+
+#. Translators: button for adding a new string when manually editing a POT file
+#: src/admin/file/EditController.php:192
+msgctxt "Editor"
+msgid "Add"
+msgstr "Přidat"
+
+#: src/admin/file/EditController.php:117
+msgid "Translations don't match template. Run sync to update from %s"
+msgstr "Překlad neodpovídá šabloně. Pro aktualizaci z %s spusťte synchronizaci"
+
+#. translators: %1$s is the file name, %2$s is the bundle name
+#: src/admin/file/EditController.php:18
+msgid "Editing %1$s in %2$s"
+msgstr "Upravujete %1$s v %2$s"
+
+#: src/admin/file/DeleteController.php:99
+msgid "%s dependent file will also be deleted"
+msgid_plural "%s dependent files will also be deleted"
+msgstr[0] "Bude smazán také jeden související soubor."
+msgstr[1] "Budou smazány také %u související soubory."
+msgstr[2] "Bude smazáno také %u souvisejících souborů."
+
+#: src/admin/file/DeleteController.php:76
+#: src/admin/file/DeleteController.php:94
+msgid "Delete %s"
+msgstr "Smazat %s"
+
+#: src/admin/file/DeleteController.php:57 src/admin/file/DiffController.php:45
+msgid "File deleted"
+msgid_plural "%u files deleted"
+msgstr[0] "Soubor byl smazán"
+msgstr[1] "Byly smazány %u soubory"
+msgstr[2] "Bylo smazáno %u souborů"
+
+#: src/admin/file/BaseController.php:108 tpl/admin/bundle/inc-po-table.php:63
+#: tpl/admin/bundle/locale.php:75 tpl/admin/file/diff.php:32
+msgid "Delete"
+msgstr "Smazat"
+
+#: src/admin/file/BaseController.php:105 tpl/admin/bundle/inc-po-table.php:22
+#: tpl/admin/bundle/locale.php:43
+msgid "File info"
+msgstr "Info o souboru"
+
+#: src/admin/file/BaseController.php:104
+msgid "Source"
+msgstr "Zdroj"
+
+#: src/admin/file/BaseController.php:103
+msgid "Editor"
+msgstr "Editor"
+
+#: src/admin/config/SettingsController.php:51
+msgid "Super Admin"
+msgstr "Super Admin"
+
+#: src/admin/config/ApisController.php:59
+#: src/admin/config/PrefsController.php:42
+#: src/admin/config/SettingsController.php:79
+#: src/admin/config/VersionController.php:22 src/mvc/AdminRouter.php:66
+#: tpl/admin/help/tab-config.php:2
+msgid "Plugin settings"
+msgstr "Nastavení pluginu"
+
+#: src/admin/config/DebugController.php:47
+msgid "System diagnostics"
+msgstr "Diagnostika systému"
+
+#: src/admin/config/BaseController.php:21
+#: src/admin/config/VersionController.php:13
+msgid "Version"
+msgstr "Verze"
+
+#: src/admin/config/BaseController.php:19
+#: src/admin/config/PrefsController.php:13 src/mvc/AdminRouter.php:71
+msgid "User options"
+msgstr "Uživatelské nastavení"
+
+#: src/admin/config/BaseController.php:18
+msgid "Site options"
+msgstr "Webová nastavení"
+
+#: src/admin/bundle/ViewController.php:132
+#: src/admin/init/InitPoController.php:217 tpl/admin/init/init-pot.php:40
+msgid "Create template"
+msgstr "Vytvořit šablonu"
+
+#: src/admin/bundle/ViewController.php:123
+msgid "Edit template"
+msgstr "Upravit šablonu"
+
+#: src/admin/bundle/ViewController.php:98 src/admin/file/BaseController.php:127
+#: src/admin/init/InitPoController.php:16
+#: src/admin/init/InitPoController.php:115
+msgid "New language"
+msgstr "Nový jazyk"
+
+#: src/admin/bundle/SetupController.php:114
+msgid "%s file can't be matched to a known set of strings"
+msgid_plural "%s files can't be matched to a known set of strings"
+msgstr[0] "Jeden soubor nemůže být přiřazeno ke známé sadě řetězců"
+msgstr[1] "%s soubory nemohou být přiřazeny ke známé sadě řetězců"
+msgstr[2] "%s souborů nemůže být přiřazeno ke známé sadě řetězců"
+
+#: src/admin/bundle/SetupController.php:35
+msgid "Bundle setup"
+msgstr "Konfigurace balíku"
+
+#: src/admin/bundle/SetupController.php:25
+msgid "Setup tab"
+msgstr "Záložka konfigurace"
+
+#. translators: where %s is a plugin or theme
+#: src/admin/bundle/SetupController.php:15
+msgid "Set up %s"
+msgstr "Nastavení %s"
+
+#: src/admin/bundle/DebugController.php:24
+msgid "Bundle diagnostics"
+msgstr "Diagnostika balíku"
+
+#: src/admin/bundle/ConfController.php:140 tpl/admin/bundle/setup/core.php:17
+#: tpl/admin/bundle/setup/inc-nav.php:19
+msgid "Advanced configuration"
+msgstr "Pokročilá konfigurace"
+
+#: src/admin/bundle/ConfController.php:55
+msgid "Advanced tab"
+msgstr "Záložka pokročilé konfigurace"
+
+#. translators: where %s is a plugin or theme
+#: src/admin/bundle/ConfController.php:16
+msgid "Configure %s"
+msgstr "Konfigurace %s"
+
+#: src/admin/bundle/BaseController.php:113
+#: src/admin/config/BaseController.php:24
+#: src/admin/config/DebugController.php:12 src/error/Debug.php:19
+msgid "Debug"
+msgstr "Ladění"
+
+#: src/admin/bundle/BaseController.php:110 tpl/admin/file/conf.php:58
+#: tpl/admin/file/move.php:26
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: src/admin/bundle/BaseController.php:109
+msgid "Setup"
+msgstr "Konfigurace"
+
+#: src/admin/bundle/BaseController.php:53
+msgid "Configuration reset"
+msgstr "Konfigurace byla resetována"
+
+#: src/admin/bundle/BaseController.php:38
+msgid "Configuration saved"
+msgstr "Konfigurace byla uložena"
+
+#. translators: home screen title where %s is the version number
+#: src/admin/RootController.php:23
+msgid "Loco Translate %s"
+msgstr "Loco Translate %s"
+
+#: src/admin/bundle/BaseController.php:108
+#: src/admin/bundle/LocaleController.php:34
+#: src/admin/bundle/ViewController.php:25
+#: src/admin/config/BaseController.php:41 src/admin/file/EditController.php:27
+#: src/admin/file/InfoController.php:26 src/admin/file/ViewController.php:26
+#: src/admin/init/InitPoController.php:25
+#: src/admin/init/InitPotController.php:25 src/admin/list/BaseController.php:45
+#: src/admin/list/LocalesController.php:24 src/admin/RootController.php:12
+msgid "Overview"
+msgstr "Přehled"
+
+#: src/admin/bundle/LocaleController.php:146 src/admin/Navigation.php:44
+#: src/mvc/AdminRouter.php:49
+msgid "Plugins"
+msgstr "Pluginy"
+
+#: src/admin/bundle/LocaleController.php:141 src/admin/Navigation.php:41
+#: src/mvc/AdminRouter.php:44
+msgid "Themes"
+msgstr "Šablony"
+
+#: src/Locale.php:324
+msgid "Invalid locale"
+msgstr "Neplatný cílový jazyk"
+
+#: loco.php:143
+msgid "Loco Translate requires the \"%s\" PHP extension. Ask your hosting provider to install it"
+msgstr "Loco vyžaduje PHP rozšíření „%s“. Požádejte svůj webhosting o jeho instalaci"
+
+#. Author of the plugin
+msgid "Tim Whitlock"
+msgstr "Tim Whitlock"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/loco-translate/"
+msgstr "https://cs.wordpress.org/plugins/loco-translate/"
+
+#. Translators: Placeholder text for text filter above editor
+#: src/admin/file/EditController.php:207
+msgid "Filter translations"
+msgstr "Filtrovat překlady"
+
+#: tpl/admin/bundle/conf.php:65 tpl/admin/bundle/inc-po-table.php:42
+#: tpl/admin/file/edit-pot.php:10 tpl/admin/file/info-pot.php:18
+#: tpl/admin/file/view-pot.php:9
+msgid "Template file"
+msgstr "Soubor šablony"
+
+#: tpl/admin/config/apis.php:148 tpl/admin/config/prefs.php:44
+#: tpl/admin/config/settings.php:233
+msgid "Save settings"
+msgstr "Uložit nastavení"
+
+#: tpl/admin/config/settings.php:62
+msgid "Number of backups to keep of each file:"
+msgstr "Počet záloh pro každý soubor:"
+
+#: tpl/admin/config/settings.php:137
+msgid "Include Fuzzy strings"
+msgstr "Zahrnout přibližné řetězce"
+
+#: tpl/admin/config/settings.php:131
+msgid "Generate hash tables"
+msgstr "Generovat hašovací tabulky"
+
+#: tpl/admin/config/settings.php:120 tpl/admin/config/settings.php:126
+msgid "Compiling MO files"
+msgstr "Kompilování MO souborů"
+
+#: tpl/admin/bundle/locale.php:14 tpl/admin/common/inc-po-header.php:8
+#: tpl/admin/file/edit-pot.php:12 tpl/admin/file/view-pot.php:11
+msgctxt "Modified time"
+msgid "Updated"
+msgstr "Aktualizováno"
+
+#: tpl/admin/init/init-prompt.php:45
+msgid "Back"
+msgstr "Zpět"
+
+#: src/js/Strings.php:83
+msgid "Your changes will be lost if you continue without saving"
+msgstr "Vaše změny budou ztraceny, pokud budete pokračovat bez uložení"
+
+#: src/js/Strings.php:29
+msgid "%s obsolete string removed"
+msgid_plural "%s obsolete strings removed"
+msgstr[0] "1 zastaralý řetězec byl odstraněn"
+msgstr[1] "%s zastaralé řetězce byly odstraněny"
+msgstr[2] "%s zastaralých řetězců bylo odstraněno"
+
+#: src/js/Strings.php:25
+msgid "%s new string added"
+msgid_plural "%s new strings added"
+msgstr[0] "Byl přidán 1 nový řetězec"
+msgstr[1] "Byly přidány %s nové řetězce"
+msgstr[2] "Bylo přidáno %s nových řetězců"
+
+#: src/js/Strings.php:44
+msgid "Strings up to date with source code"
+msgstr "Již aktuální se zdrojovým kódem"
+
+#: src/js/Strings.php:21
+msgid "Merged from source code"
+msgstr "Sloučeno ze zdrojového kódu"
+
+#: src/js/Strings.php:18
+msgid "Merged from %s"
+msgstr "Sloučeno z %s"
+
+#. translators: Where %s is either PO or POT
+#: src/admin/file/HeadController.php:80 src/gettext/Compiler.php:239
+msgid "%s file saved"
+msgstr "%s soubor byl uložen"
+
+#: src/js/Strings.php:123
+msgid "Unknown error"
+msgstr "Neznámá chyba"
+
+#: src/admin/file/EditController.php:165 src/mvc/AdminRouter.php:67
+#: src/mvc/AdminRouter.php:72 tpl/admin/common/inc-fsconn.php:18
+#: tpl/admin/common/inc-fsconn.php:43 tpl/admin/errors/no-backups.php:24
+#: tpl/ajax/modal-apis-empty.php:15
+msgid "Settings"
+msgstr "Nastavení"
+
+#. Plugin Name of the plugin
+#: src/hooks/AdminHooks.php:63 src/mvc/AdminRouter.php:37
+msgid "Loco Translate"
+msgstr "Loco Translate"
+
+#. translators: Page title for plugin home screen
+#: src/mvc/AdminRouter.php:39
+msgid "Loco, Translation Management"
+msgstr "Loco, správa překladů"
+
+#: src/gettext/Metadata.php:209 src/js/Strings.php:99
+msgid "%s untranslated"
+msgstr "%s nepřeložených"
+
+#: src/gettext/Metadata.php:206 src/js/Strings.php:95
+msgid "%s fuzzy"
+msgstr "%s přibližných"
+
+#: src/gettext/Metadata.php:204 src/js/Strings.php:91
+msgid "%s%% translated"
+msgstr "%s%% přeloženo"
+
+#: src/admin/config/ApisController.php:43
+#: src/admin/config/PrefsController.php:26
+#: src/admin/config/SettingsController.php:31
+msgid "Settings saved"
+msgstr "Nastavení bylo uloženo"
+
+#: src/error/WriteException.php:13
+msgid "Permission denied"
+msgstr "Přístup zamítnut"

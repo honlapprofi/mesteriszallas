@@ -1,0 +1,170 @@
+# Translation of Plugins - Email Address Encoder - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Email Address Encoder - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-29 17:18:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Email Address Encoder - Stable (latest release)\n"
+
+#: includes/ui.php:147
+msgid "Register the output buffer early"
+msgstr "Den Ausgabepuffer frühzeitig registrieren"
+
+#: includes/ui.php:142
+msgid "Buffer priority"
+msgstr "Bufferpriorität"
+
+#: includes/ui.php:129
+msgid "Polymorphous ROT47/CSS"
+msgstr "Polymorphes ROT47/CSS"
+
+#: includes/ui.php:132
+msgid "State-of-the-art protection against smart robots, but requires JavaScript."
+msgstr "Hochmoderner Schutz vor intelligenten Robotern, erfordert jedoch JavaScript."
+
+#: includes/admin.php:487
+msgid "Incompatible plugin detected!"
+msgstr "Inkompatibles Plugin erkannt!"
+
+#: includes/admin.php:489
+msgid "The \"Ginger – EU Cookie Law\" plugin decodes all HTML entities and thus prevents the Email Address Encoder from working. Please use a different cookie banner plugin, or use the full-page scanner technique of the <a href=\"%s\">Premium version</a>."
+msgstr "Das Plugin \"Ginger - EU Cookie Law\" dekodiert alle HTML-Entitäten und verhindert so, dass der Email Address Encoder funktioniert. Bitte verwende ein anderes Cookie-Banner-Plugin oder die Ganzseiten-Scannertechnik der <a href=\"%s\">Premium-Version</a>."
+
+#: includes/admin.php:207
+msgid "1 Unprotected Email"
+msgstr "1 ungeschützte E-Mail"
+
+#: includes/admin.php:208
+msgid "{number} Unprotected Emails"
+msgstr "{number} ungeschützte E-Mails"
+
+#: includes/ui.php:79
+msgid "Nothing, don’t do anything"
+msgstr "Nichts, tue nichts."
+
+#: includes/ui.php:70
+msgid "Full-page scanner"
+msgstr "Ganzseitenscanner"
+
+#: includes/admin.php:164
+msgid "Premium"
+msgstr "Premium"
+
+#: includes/admin.php:160
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/ui.php:22
+msgid "Your email address..."
+msgstr "Deine E-Mail-Adresse …"
+
+#: includes/ui.php:23
+msgid "Notify me"
+msgstr "Benachrichtige mich"
+
+#: includes/admin.php:374
+msgid "You’ll receive a notification should your site contain unprotected email addresses."
+msgstr "Du erhältst eine Benachrichtigung, wenn deine Website ungeschützte E-Mail-Adressen enthält."
+
+#: includes/admin.php:366
+msgid "Whoops, something went wrong. Please try again."
+msgstr "Ups, es ist ein Fehler aufgetreten. Bitte versuche es erneut."
+
+#: includes/admin.php:312
+msgid "Protect your email addresses!"
+msgstr "Schütze deine E-Mail-Adressen!"
+
+#: includes/ui.php:30
+msgid "Scan your pages"
+msgstr "Scanne deine Seiten"
+
+#: includes/ui.php:33
+msgid "Don’t want automatic warnings? Use the page scanner to see whether all your email addresses are protected."
+msgstr "Du willst keine automatischen Warnungen? Verwende den Seitenscanner, um festzustellen, ob alle deine E-Mail-Adressen geschützt sind."
+
+#: includes/admin.php:314
+msgid "Receive <a href=\"%1$s\">automatic warnings</a> when your site contains unprotected email addresses, or use the <a href=\"%1$s\">page scanner</a> to test your site manually."
+msgstr "Erhalte <a href=\"%1$s\">automatische Warnungen</a>, wenn deine Website ungeschützte E-Mail-Adressen enthält, oder verwende den <a href=\"%1$s\">Seitenscanner</a>, um deine Website manuell zu testen."
+
+#: includes/ui.php:81
+msgid "Turns off email protection."
+msgstr "Schaltet den E-Mail-Schutz aus."
+
+#: includes/ui.php:73
+msgid "Protects all email addresses on your site."
+msgstr "Schützt alle E-Mail-Adressen auf deiner Website."
+
+#: includes/ui.php:71 includes/ui.php:110 includes/ui.php:120
+#: includes/ui.php:130 includes/ui.php:150
+msgid "Premium only"
+msgstr "Nur Premium"
+
+#: includes/ui.php:64
+msgid "Protects email addresses in filtered sections only."
+msgstr "Schützt E-Mail-Adressen nur in gefilterten Abschnitten."
+
+#: includes/ui.php:160
+msgid "Filter priority"
+msgstr "Filterpriorität"
+
+#: includes/ui.php:165
+msgid "The filter priority specifies when the plugin searches for and encodes email addresses. The default value of <code>1000</code> ensures that all other plugins have finished their execution and no emails are missed."
+msgstr "Die Filterpriorität legt fest, wann das Plugin nach E-Mail-Adressen sucht und diese kodiert. Der Standardwert von <code>1000</code> stellt sicher, dass alle anderen Plugins ihre Ausführung beendet haben und keine E-Mails verpasst werden."
+
+#. Author URI of the plugin
+msgid "https://till.im/"
+msgstr "https://till.im/"
+
+#. Plugin URI of the plugin
+msgid "https://encoder.till.im/"
+msgstr "https://encoder.till.im/"
+
+#: includes/ui.php:37
+msgid "Open Page Scanner"
+msgstr "Öffne den Seitenscanner"
+
+#: includes/ui.php:122
+msgid "Offers the best protection, but requires JavaScript."
+msgstr "Bietet den besten Schutz, erfordert aber JavaScript."
+
+#: includes/ui.php:119
+msgid "ROT13 encoding"
+msgstr "ROT13-Kodierung"
+
+#: includes/admin.php:169
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/admin.php:86
+msgid "Email Encoder"
+msgstr "E-Mail-Encoder"
+
+#: includes/ui.php:53 includes/ui.php:58
+msgid "Search for emails using"
+msgstr "Suche nach E-Mails mit"
+
+#: includes/ui.php:109
+msgid "CSS direction"
+msgstr "CSS-Ausrichtung"
+
+#: includes/ui.php:62
+msgid "WordPress filters"
+msgstr "WordPress-Filter"
+
+#. Plugin Name of the plugin
+#: includes/admin.php:85 includes/ui.php:4
+msgid "Email Address Encoder"
+msgstr "Email Address Encoder"
+
+#. Author of the plugin
+msgid "Till Krüss"
+msgstr "Till Krüss"
+
+#. Description of the plugin
+msgid "A lightweight plugin that protects email addresses from email-harvesting robots by encoding them into decimal and hexadecimal entities."
+msgstr "Ein leichtgewichtiges Plugin, dass E-Mail-Adressen gegen das Abgreifen durch Robots schützt, durch die Kodierung der E-Mail-Adressen in dezimale und hexadezimale Einheiten."
