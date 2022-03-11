@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-23 08:26:45+0000\n"
+"PO-Revision-Date: 2022-03-10 09:57:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,210 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: upgrade/upgrade-to-pro.php:549
+msgid "Your license key has reached its activation limit."
+msgstr "Your licence key has reached its activation limit."
+
+#: upgrade/upgrade-to-pro.php:546
+msgid "This appears to be an invalid license key for this plugin."
+msgstr "This appears to be an invalid licence key for this plugin."
+
+#: upgrade/upgrade-to-pro.php:543
+msgid "Your license is not active for this URL."
+msgstr "Your licence is not active for this URL."
+
+#: upgrade/upgrade-to-pro.php:540
+msgid "Invalid license."
+msgstr "Invalid licence."
+
+#: upgrade/upgrade-to-pro.php:537
+msgid "Missing license."
+msgstr "Missing licence."
+
+#: upgrade/upgrade-to-pro.php:534
+msgid "Your license key has been disabled."
+msgstr "Your licence key has been disabled."
+
+#: upgrade/upgrade-to-pro.php:528
+msgid "Your license key expired on %s."
+msgstr "Your licence key expired on %s."
+
+#: upgrade/upgrade-to-pro.php:520 upgrade/upgrade-to-pro.php:552
+msgid "An error occurred, please try again."
+msgstr "An error occurred, please try again."
+
+#: upgrade/upgrade-to-pro.php:420
+msgid "Plugin already installed!"
+msgstr "Plugin already installed!"
+
+#: upgrade/upgrade-to-pro.php:363
+msgid "Check your %slicense%s."
+msgstr "Check your %slicence%s."
+
+#: upgrade/upgrade-to-pro.php:362
+msgid "Install %sManually%s."
+msgstr "Install %sManually%s."
+
+#: upgrade/upgrade-to-pro.php:362 upgrade/upgrade-to-pro.php:363
+msgid "An Error Occurred:"
+msgstr "An Error Occurred:"
+
+#: upgrade/upgrade-to-pro.php:357
+msgid "Visit Dashboard"
+msgstr "Visit Dashboard"
+
+#: upgrade/upgrade-to-pro.php:346
+msgid "Installing"
+msgstr "Installing"
+
+#: upgrade/upgrade-to-pro.php:321
+msgid "Recommended by Really Simple Plugins"
+msgstr "Recommended by Really Simple Plugins"
+
+#: upgrade/upgrade-to-pro.php:223
+msgid "Installation finished"
+msgstr "Installation finished"
+
+#: upgrade/upgrade-to-pro.php:169
+msgid "Really Simple SSL automatically detects your settings and configures your website to run over HTTPS. To keep it lightweight, we kept the options to a minimum. Your website will move to SSL with one click."
+msgstr "Really Simple SSL automatically detects your settings and configures your website to run over HTTPS. To keep it lightweight, we kept the options to a minimum. Your website will move to SSL with one click."
+
+#: upgrade/upgrade-to-pro.php:165
+msgid "One click SSL optimization"
+msgstr "One click SSL optimisation"
+
+#: upgrade/upgrade-to-pro.php:152
+msgid "Configure your Cookie Notice, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA and PIPEDA."
+msgstr "Configure your Cookie Notice, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA and PIPEDA."
+
+#: upgrade/upgrade-to-pro.php:148
+msgid "GDPR/CCPA Privacy Suite"
+msgstr "GDPR/CCPA Privacy Suite"
+
+#: upgrade/upgrade-to-pro.php:139
+msgid "Get detailed insights into visitors' behaviour with Burst Statistics, the privacy-friendly analytics dashboard from Really Simple Plugins."
+msgstr "Get detailed insights into visitors' behaviour with Burst Statistics, the privacy-friendly analytics dashboard from Really Simple Plugins."
+
+#: upgrade/upgrade-to-pro.php:135
+msgid "Self-hosted and privacy-friendly analytics tool."
+msgstr "Self-hosted and privacy-friendly analytics tool."
+
+#: upgrade/upgrade-to-pro.php:102
+msgid "Failed to activate plugin"
+msgstr "Failed to activate plugin"
+
+#: upgrade/upgrade-to-pro.php:101
+msgid "Plugin activated"
+msgstr "Plugin activated"
+
+#: upgrade/upgrade-to-pro.php:100
+msgid "Activating plugin..."
+msgstr "Activating plugin..."
+
+#: upgrade/upgrade-to-pro.php:95
+msgid "Failed to install plugin"
+msgstr "Failed to install plugin"
+
+#: upgrade/upgrade-to-pro.php:94
+msgid "Plugin installed"
+msgstr "Plugin installed"
+
+#: upgrade/upgrade-to-pro.php:93
+msgid "Installing plugin..."
+msgstr "Installing plugin..."
+
+#: upgrade/upgrade-to-pro.php:88
+msgid "Failed to gather package information"
+msgstr "Failed to gather package information"
+
+#: upgrade/upgrade-to-pro.php:87
+msgid "Package information retrieved"
+msgstr "Package information retrieved"
+
+#: upgrade/upgrade-to-pro.php:86
+msgid "Retrieving package information..."
+msgstr "Retrieving package information..."
+
+#: upgrade/upgrade-to-pro.php:81
+msgid "License invalid"
+msgstr "Licence invalid"
+
+#: upgrade/upgrade-to-pro.php:80
+msgid "License valid"
+msgstr "Licence valid"
+
+#: upgrade/upgrade-to-pro.php:79
+msgid "Validating license..."
+msgstr "Validating licence..."
+
+#: upgrade/upgrade-to-pro.php:74
+msgid "Destination folder already exists"
+msgstr "Destination folder already exists"
+
+#: upgrade/upgrade-to-pro.php:73
+msgid "Able to create destination folder"
+msgstr "Able to create destination folder"
+
+#: upgrade/upgrade-to-pro.php:72
+msgid "Checking if plugin folder exists..."
+msgstr "Checking if plugin folder exists..."
+
+#: class-admin.php:3375
+msgid "Improve security with Really Simple SSL Pro."
+msgstr "Improve security with Really Simple SSL Pro."
+
+#: class-admin.php:3168
+msgid "Check manually"
+msgstr "Check manually"
+
+#: class-admin.php:3165
+msgid "Could not test certificate"
+msgstr "Could not test certificate"
+
+#: class-admin.php:3106
+msgid "Remember to change your URLs in external services like Google Analytics, Search Console and others. This should prevent any data loss resulting from the switch to https."
+msgstr "Remember to change your URLs in external services like Google Analytics, Search Console and others. This should prevent any data loss resulting from the switch to https."
+
+#: class-admin.php:906
+msgid "Override SSL detection if %smanual check%s clears."
+msgstr "Override SSL detection if %smanual check%s clears."
+
+#: class-admin.php:607
+msgid "This detection method is not 100% accurate."
+msgstr "This detection method is not 100% accurate."
+
+#: class-admin.php:602 class-admin.php:607
+msgid "If you’re certain an SSL certificate is present, please check “Override SSL detection” to continue activating SSL."
+msgstr "If you’re certain an SSL certificate is present, please check “Override SSL detection” to continue activating SSL."
+
+#: class-admin.php:601 class-admin.php:3166
+msgid "Automatic certificate detection is not possible on your server."
+msgstr "Automatic certificate detection is not possible on your server."
+
+#: class-admin.php:601
+msgid "Could not test certificate."
+msgstr "Could not test certificate."
+
+#: lets-encrypt/wizard/config/steps.php:67
+msgid "Checking host..."
+msgstr "Checking host..."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1099
+msgid "After completing the installation, you can let Really Simple SSL automatically configure your site for SSL by using the 'Activate SSL' button."
+msgstr "After completing the installation, you can let Really Simple SSL automatically configure your site for SSL by using the 'Activate SSL' button."
+
+#: lets-encrypt/class-letsencrypt-handler.php:1084
+msgid "We have not detected any known hosting limitations."
+msgstr "We have not detected any known hosting limitations."
+
+#: class-admin.php:3546
+msgid "%sEnable%s"
+msgstr "%sEnable%s"
+
+#: class-admin.php:3152
+msgid "The wp-config.php file is not writable, and needs to be edited. Please set this file to writable."
+msgstr "The wp-config.php file is not writable, and needs to be edited. Please set this file to writable."
 
 #: grid/templates/tips-tricks.php:55
 msgid "Install a Let's Encrypt SSL Certificate with Really Simple SSL"
@@ -31,6 +235,10 @@ msgstr "Security"
 msgid "Recommended security headers enabled."
 msgstr "Recommended security headers enabled."
 
+#: class-admin.php:3357
+msgid "The following recommended security headers are not detected:"
+msgstr "The following recommended security headers are not detected:"
+
 #: lets-encrypt/wizard/config/questions.php:64
 msgid "Disable OCSP Stapling"
 msgstr "Disable OCSP Stapling"
@@ -47,11 +255,11 @@ msgstr "OCSP stapling should be enabled by default. You can disable if this is n
 msgid "For more information, please read this %sarticle%s"
 msgstr "For more information, please read this %sarticle%s"
 
-#: class-admin.php:4196
+#: class-admin.php:4195
 msgid "Enable High Contrast mode"
 msgstr "Enable High Contrast mode"
 
-#: class-admin.php:4195
+#: class-admin.php:4194
 msgid "If enabled, all the Really Simple SSL pages within the WordPress admin will be in high contrast"
 msgstr "If enabled, all the Really Simple SSL pages within the WordPress admin will be in high contrast"
 
@@ -103,11 +311,11 @@ msgstr "As Really Simple SSL handles all the functionality this plugin provides,
 msgid "We have detected the %s plugin on your website."
 msgstr "We have detected the %s plugin on your website."
 
-#: class-admin.php:590
+#: class-admin.php:606
 msgid "Please %srefresh detection%s if a certificate has been installed recently."
 msgstr "Please %srefresh detection%s if a certificate has been installed recently."
 
-#: class-admin.php:589
+#: class-admin.php:605
 msgid "No SSL certificate has been detected."
 msgstr "No SSL certificate has been detected."
 
@@ -127,7 +335,7 @@ msgstr "If you entered your DNS records before, they need to be changed."
 msgid "Order ID mismatch, regenerate order."
 msgstr "Order ID mismatch, regenerate order."
 
-#: class-admin.php:4731 class-multisite.php:238
+#: class-admin.php:4667 class-multisite.php:238
 msgid "Improve security - Upgrade to Pro"
 msgstr "Improve security - Upgrade to Pro"
 
@@ -1178,7 +1386,7 @@ msgstr "No SSL detected. Use the retry button to check again."
 msgid "(Unknown)"
 msgstr "(Unknown)"
 
-#: class-admin.php:887 class-admin.php:3158 class-admin.php:3167
+#: class-admin.php:903 class-admin.php:3158 class-admin.php:3167
 #: class-admin.php:3182
 msgid "Install SSL certificate"
 msgstr "Install SSL certificate"
@@ -1187,7 +1395,7 @@ msgstr "Install SSL certificate"
 msgid "Retry"
 msgstr "Retry"
 
-#: class-admin.php:582 lets-encrypt/wizard/templates/activate.php:58
+#: class-admin.php:598 lets-encrypt/wizard/templates/activate.php:58
 msgid "An SSL certificate has been detected"
 msgstr "An SSL certificate has been detected"
 
@@ -1279,75 +1487,75 @@ msgstr "Really Simple SSL detected an SSL certificate, but has not been configur
 msgid "SSL is not enabled."
 msgstr "SSL is not enabled."
 
-#: class-admin.php:4671
+#: class-admin.php:4607
 msgid "Deactivate, revert to http"
 msgstr "Deactivate, revert to http"
 
-#: class-admin.php:4670
+#: class-admin.php:4606
 msgid "Deactivate, keep https"
 msgstr "Deactivate, keep https"
 
-#: class-admin.php:4657
+#: class-admin.php:4593
 msgid "The WordPress 301 redirect will stop working"
 msgstr "The WordPress 301 redirect will stop working"
 
-#: class-admin.php:4652
+#: class-admin.php:4588
 msgid "Deactivate, and revert to http. This will remove all changes by the plugin."
 msgstr "Deactivate, and revert to http. This will remove all changes by the plugin."
 
-#: class-admin.php:4651
+#: class-admin.php:4587
 msgid "Deactivate, but stay on SSL."
 msgstr "Deactivate, but stay on SSL."
 
-#: class-admin.php:4649
+#: class-admin.php:4585
 msgid "To deactivate the plugin correctly, please select if you want to:"
 msgstr "To deactivate the plugin correctly, please select if you want to:"
 
-#: class-admin.php:4342
+#: class-admin.php:4341
 msgid "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
 msgstr "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
 
-#: class-admin.php:4192 class-multisite.php:342
+#: class-admin.php:4191 class-multisite.php:342
 msgid "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
 msgstr "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
 
-#: class-admin.php:4189
+#: class-admin.php:4188
 msgid "Fire mixed content fixer with different method"
 msgstr "Fire mixed content fixer with different method"
 
-#: class-admin.php:4171
+#: class-admin.php:4170
 msgid "Enable WordPress 301 redirect"
 msgstr "Enable WordPress 301 redirect"
 
-#: class-admin.php:4170
+#: class-admin.php:4169
 msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
 msgstr "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
 
-#: class-admin.php:4142
+#: class-admin.php:4141
 msgid "Copied!"
 msgstr "Copied!"
 
-#: class-admin.php:4136
+#: class-admin.php:4135
 msgid " You still have %s tasks open."
 msgstr " You still have %s tasks open."
 
-#: class-admin.php:4037
+#: class-admin.php:4036
 msgid "Premium"
 msgstr "Premium"
 
-#: class-admin.php:4035
+#: class-admin.php:4034
 msgid "Open"
 msgstr "Open"
 
-#: class-admin.php:4033
+#: class-admin.php:4032
 msgid "Warning"
 msgstr "Warning"
 
-#: class-admin.php:4031
+#: class-admin.php:4030
 msgid "Completed"
 msgstr "Completed"
 
-#: class-admin.php:3966
+#: class-admin.php:3965
 msgid "Instructions manual"
 msgstr "Instructions manual"
 
@@ -1355,11 +1563,12 @@ msgstr "Instructions manual"
 msgid "Upgrade to pro"
 msgstr "Upgrade to pro"
 
-#: class-admin.php:3909
+#: class-admin.php:3909 upgrade/upgrade-to-pro.php:180
 msgid "Installed"
 msgstr "Installed"
 
-#: class-admin.php:3904
+#: class-admin.php:3904 upgrade/upgrade-to-pro.php:137
+#: upgrade/upgrade-to-pro.php:150 upgrade/upgrade-to-pro.php:167
 msgid "Install"
 msgstr "Install"
 
@@ -1423,19 +1632,19 @@ msgstr "No recommended redirect rules detected."
 msgid "General"
 msgstr "General"
 
-#: class-admin.php:575 lets-encrypt/wizard/templates/activate.php:45
+#: class-admin.php:591 lets-encrypt/wizard/templates/activate.php:45
 msgid "Before you migrate, please check for: "
 msgstr "Before you migrate, please check for: "
 
-#: rlrsssl-really-simple-ssl.php:191
+#: rlrsssl-really-simple-ssl.php:194
 msgid "Please upgrade to the latest version to be able use the full functionality of the plugin."
 msgstr "Please upgrade to the latest version to be able use the full functionality of the plugin."
 
-#: rlrsssl-really-simple-ssl.php:190
+#: rlrsssl-really-simple-ssl.php:193
 msgid "You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL."
 msgstr "You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL."
 
-#: rlrsssl-really-simple-ssl.php:189
+#: rlrsssl-really-simple-ssl.php:192
 msgid "Plugin dependency error"
 msgstr "Plugin dependency error"
 
@@ -1483,7 +1692,7 @@ msgstr "Your progress"
 msgid "Choose option"
 msgstr "Choose option"
 
-#: class-admin.php:2965 class-admin.php:4723 class-multisite.php:230
+#: class-admin.php:2965 class-admin.php:4659 class-multisite.php:230
 #: class-multisite.php:475
 msgid "Support"
 msgstr "Support"
@@ -1508,7 +1717,7 @@ msgstr "No choice has been made regarding networkwide or per site activation."
 msgid "301 Redirect"
 msgstr "301 Redirect"
 
-#: class-admin.php:881 class-site-health.php:125
+#: class-admin.php:897 class-site-health.php:125
 #: grid/templates/progress-footer.php:25
 #: lets-encrypt/wizard/config/steps.php:162
 msgid "Activate SSL"
@@ -1522,11 +1731,11 @@ msgstr "Go PRO!"
 msgid "SSL Not activated"
 msgstr "SSL Not activated"
 
-#: class-admin.php:4132 grid/templates/progress.php:43
+#: class-admin.php:4131 grid/templates/progress.php:43
 msgid "SSL is not yet enabled on this site."
 msgstr "SSL is not yet enabled on this site."
 
-#: class-admin.php:4128 grid/templates/progress.php:37
+#: class-admin.php:4127 grid/templates/progress.php:37
 msgid "Basic SSL configuration finished! Improve your score with %sReally Simple SSL Pro%s."
 msgstr "Basic SSL configuration finished! Improve your score with %sReally Simple SSL Pro%s."
 
@@ -1534,13 +1743,13 @@ msgstr "Basic SSL configuration finished! Improve your score with %sReally Simpl
 msgid "SSL configuration finished!"
 msgstr "SSL configuration finished!"
 
-#: class-admin.php:4135 grid/templates/progress.php:29
+#: class-admin.php:4134 grid/templates/progress.php:29
 msgid "You still have %s task open."
 msgid_plural "You still have %s tasks open."
 msgstr[0] "You still have %s task open."
 msgstr[1] "You still have %s tasks open."
 
-#: class-admin.php:4130 grid/templates/progress.php:29
+#: class-admin.php:4129 grid/templates/progress.php:29
 msgid "SSL is activated on your site."
 msgstr "SSL is activated on your site."
 
@@ -1619,16 +1828,16 @@ msgstr "Really Simple SSL Pro"
 msgid "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 msgstr "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 
-#: class-admin.php:597 lets-encrypt/wizard/templates/activate.php:30
+#: class-admin.php:613 lets-encrypt/wizard/templates/activate.php:30
 #: lets-encrypt/wizard/templates/activate.php:70
 msgid "Check out Really Simple SSL Pro"
 msgstr "Check out Really Simple SSL Pro"
 
-#: class-admin.php:884 lets-encrypt/wizard/class-wizard.php:896
+#: class-admin.php:900 lets-encrypt/wizard/class-wizard.php:896
 msgid "Get ready with PRO!"
 msgstr "Get ready with PRO!"
 
-#: class-admin.php:578
+#: class-admin.php:594
 msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
 msgstr "Images, style sheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
 
@@ -1660,7 +1869,7 @@ msgstr "You have set a 301 redirect to SSL. This is important for SEO purposes"
 msgid "301 SSL redirect enabled"
 msgstr "301 SSL redirect enabled"
 
-#: class-admin.php:4193 class-multisite.php:343
+#: class-admin.php:4192 class-multisite.php:343
 msgid "Dismiss all Really Simple SSL notices"
 msgstr "Dismiss all Really Simple SSL notices"
 
@@ -1708,31 +1917,31 @@ msgstr "This leads to issues when activating SSL networkwide since subdomains wi
 msgid "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
 msgstr "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
 
-#: class-admin.php:4669
+#: class-admin.php:4605 upgrade/upgrade-to-pro.php:360
 msgid "Cancel"
 msgstr "Cancel"
 
-#: class-admin.php:4659
+#: class-admin.php:4595
 msgid "The .htaccess redirect will remain active"
 msgstr "The .htaccess redirect will remain active"
 
-#: class-admin.php:4658
+#: class-admin.php:4594
 msgid "Your site address will remain https://"
 msgstr "Your site address will remain https://"
 
-#: class-admin.php:4656
+#: class-admin.php:4592
 msgid "The mixed content fixer will stop working"
 msgstr "The mixed content fixer will stop working"
 
-#: class-admin.php:4654
+#: class-admin.php:4590
 msgid "Deactivating the plugin while keeping SSL will do the following:"
 msgstr "Deactivating the plugin while keeping SSL will do the following:"
 
-#: class-admin.php:4636
+#: class-admin.php:4572
 msgid "Are you sure?"
 msgstr "Are you sure?"
 
-#: class-admin.php:4094
+#: class-admin.php:4093
 msgid "More info"
 msgstr "More info"
 
@@ -1748,11 +1957,11 @@ msgstr "We strongly recommend to create a %sbackup%s of your site before activat
 msgid "https://really-simple-plugins.com"
 msgstr "https://really-simple-plugins.com"
 
-#: class-admin.php:4188
+#: class-admin.php:4187
 msgid "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer.\""
 msgstr "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer.\""
 
-#: class-admin.php:596 lets-encrypt/wizard/templates/activate.php:26
+#: class-admin.php:612 lets-encrypt/wizard/templates/activate.php:26
 #: lets-encrypt/wizard/templates/activate.php:66
 msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
 msgstr "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
@@ -1781,24 +1990,24 @@ msgstr "network-wide"
 msgid "Enable SSL"
 msgstr "Enable SSL"
 
-#: class-admin.php:4309 class-admin.php:4339 class-admin.php:4416
-#: class-admin.php:4692
+#: class-admin.php:4308 class-admin.php:4338 class-admin.php:4415
+#: class-admin.php:4628
 msgid "This option is enabled on the network menu."
 msgstr "This option is enabled on the network menu."
 
-#: class-admin.php:579 lets-encrypt/wizard/templates/activate.php:56
+#: class-admin.php:595 lets-encrypt/wizard/templates/activate.php:56
 msgid "You may need to login in again."
 msgstr "You may need to log in again."
 
-#: class-admin.php:4335
+#: class-admin.php:4334
 msgid "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
 msgstr "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
 
-#: class-admin.php:4175
+#: class-admin.php:4174
 msgid "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
 msgstr "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
 
-#: class-admin.php:4176 class-site-health.php:158
+#: class-admin.php:4175 class-site-health.php:158
 msgid "Enable 301 .htaccess redirect"
 msgstr "Enable 301 .htaccess redirect"
 
@@ -1810,11 +2019,11 @@ msgstr "No 301 redirect is set. Enable the WordPress 301 redirect in the setting
 msgid "Enable a .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
 msgstr "Enable an .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
 
-#: class-admin.php:4165
+#: class-admin.php:4164
 msgid "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
 msgstr "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
 
-#: class-admin.php:4182
+#: class-admin.php:4181
 msgid "If you want to customize the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
 msgstr "If you want to customise the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
 
@@ -1826,7 +2035,7 @@ msgstr "301 redirect to https set."
 msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
 msgstr "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
 
-#: class-admin.php:4725 class-multisite.php:232
+#: class-admin.php:4661 class-multisite.php:232
 msgid "Premium Support"
 msgstr "Premium Support"
 
@@ -1887,7 +2096,7 @@ msgstr "System detection encountered issues"
 msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
 msgstr "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
 
-#: class-admin.php:577 class-multisite.php:574
+#: class-admin.php:593 class-multisite.php:574
 #: lets-encrypt/wizard/templates/activate.php:19
 #: lets-encrypt/wizard/templates/activate.php:48
 msgid "Http references in your .css and .js files: change any http:// into https://"
@@ -1897,7 +2106,7 @@ msgstr "Http references in your .css and .js files: change any http:// into http
 msgid "Some things can't be done automatically. Before you migrate, please check for: "
 msgstr "Some things can't be done automatically. Before you migrate, please check for: "
 
-#: class-admin.php:566 lets-encrypt/wizard/templates/last-step.php:13
+#: class-admin.php:582 lets-encrypt/wizard/templates/last-step.php:13
 msgid "Almost ready to migrate to SSL!"
 msgstr "Almost ready to migrate to SSL!"
 
@@ -1920,7 +2129,7 @@ msgstr "Activate SSL network-wide"
 msgid "%s is a singleton class and you cannot create a second instance."
 msgstr "%s is a singleton class and you cannot create a second instance."
 
-#: class-admin.php:4374
+#: class-admin.php:4373
 msgid ".htaccess is currently not %swritable%s."
 msgstr ".htaccess is currently not %swritable%s."
 
@@ -1945,7 +2154,7 @@ msgstr "https://really-simple-ssl.com"
 msgid "Really Simple SSL"
 msgstr "Really Simple SSL"
 
-#: class-admin.php:4183
+#: class-admin.php:4182
 msgid "Stop editing the .htaccess file"
 msgstr "Stop editing the .htaccess file"
 
@@ -1962,13 +2171,13 @@ msgstr "An SSL certificate was detected on your site."
 msgid "No SSL detected."
 msgstr "No SSL detected."
 
-#: class-admin.php:2904 class-admin.php:3784 class-admin.php:4163
-#: class-admin.php:4719 class-multisite.php:226 class-multisite.php:338
+#: class-admin.php:2904 class-admin.php:3784 class-admin.php:4162
+#: class-admin.php:4655 class-multisite.php:226 class-multisite.php:338
 #: class-multisite.php:410
 msgid "Settings"
 msgstr "Settings"
 
-#: class-admin.php:4166
+#: class-admin.php:4165
 msgid "Mixed content fixer"
 msgstr "Mixed content fixer"
 

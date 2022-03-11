@@ -1,4 +1,5 @@
 <?php
+
 // exit if accessed directly
 if ( ! defined( 'ABSPATH' ) )
 	exit;
@@ -9,11 +10,13 @@ if ( ! defined( 'ABSPATH' ) )
  * @class Cookie_Notice_Welcome_API
  */
 class Cookie_Notice_Welcome_API {
+
 	// api urls
-	private $account_api_url = '';
-	private $designer_api_url = '';
-	private $x_api_key = '';
-	
+	private $account_api_url = 'https://account-api.hu-manity.co';
+	private $designer_api_url = 'https://designer-api.hu-manity.co';
+	private $transactional_api_url = 'https://transactional-api.hu-manity.co';
+	private $x_api_key = 'hudft60djisdusdjwek';
+
 	/**
 	 * Constructor.
 	 *
@@ -21,10 +24,9 @@ class Cookie_Notice_Welcome_API {
 	 */
 	public function __construct() {
 		add_action( 'wp_ajax_cn_api_request', array( $this, 'api_request' ) );
-		
-		$this->account_api_url = 'https://account-api.hu-manity.co';
-		$this->designer_api_url = 'https://designer-api.hu-manity.co';
-		$this->x_api_key = 'hudft60djisdusdjwek';
+		// cron job
+		add_action( 'init', [ $this, 'check_cron' ] );
+		add_action( 'cookie_notice_get_app_analytics', [ $this, 'get_app_analytics' ] );
 	}
 
 	/**
@@ -49,7 +51,7 @@ class Cookie_Notice_Welcome_API {
 
 		if ( ! $request )
 			return false;
-		
+
 		// get site language
 		$locale = get_locale();
 		$locale_code = explode( '_', $locale );
@@ -62,7 +64,7 @@ class Cookie_Notice_Welcome_API {
 
 		$params = array();
 
-		switch ( $request ) {
+		switch ($request) {
 			case 'get_bt_init_token':
 				$result = $this->request( 'get_token' );
 
@@ -83,7 +85,7 @@ class Cookie_Notice_Welcome_API {
 				// validate plan and payment method
 				$plan = in_array( $_POST['plan'], array( 'monthly', 'yearly' ), true ) ? $_POST['plan'] : false;
 				$plan = ! empty( $plan ) ? 'compliance_' . $plan . '_notrial' : false;
-				
+
 				$method = in_array( $_POST['method'], array( 'credit_card', 'paypal' ), true ) ? $_POST['method'] : false;
 
 				// valid plan and payment method?
@@ -97,17 +99,17 @@ class Cookie_Notice_Welcome_API {
 				// user found?
 				if ( ! empty( $result->id ) ) {
 					$customer = $result;
-				// create user
+					// create user
 				} else {
 					$result = $this->request(
-						'create_customer',
-						array(
-							'AppID'					=> $app_id,
-							'AdminID'				=> $admin_id, // remove later - AdminID from API response
-							'paymentMethodNonce'	=> sanitize_text_field( $_POST['payment_nonce'] )
-						)
+							'create_customer',
+							array(
+								'AppID' => $app_id,
+								'AdminID' => $admin_id, // remove later - AdminID from API response
+								'paymentMethodNonce' => sanitize_text_field( $_POST['payment_nonce'] )
+							)
 					);
-					
+
 					if ( ! empty( $result->success ) ) {
 						$customer = $result->customer;
 					} else {
@@ -120,15 +122,15 @@ class Cookie_Notice_Welcome_API {
 					$response = array( 'error' => __( 'Unable to create customer data.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				// @todo: check if subscribtion exists
 				$subscription = $this->request(
-					'create_subscription',
-					array(
-						'AppID'					=> $app_id,
-						'PlanId'				=> $plan,
-						'paymentMethodToken'	=> $customer->paymentMethods[0]->token
-					)
+						'create_subscription',
+						array(
+							'AppID' => $app_id,
+							'PlanId' => $plan,
+							'paymentMethodToken' => $customer->paymentMethods[0]->token
+						)
 				);
 
 				// subscription assigned?
@@ -145,7 +147,7 @@ class Cookie_Notice_Welcome_API {
 				$pass2 = ! empty( $_POST['pass2'] ) ? $_POST['pass2'] : '';
 				$terms = isset( $_POST['terms'] );
 				$language = ! empty( $_POST['language'] ) ? sanitize_text_field( $_POST['language'] ) : 'en';
-				
+
 				if ( ! $terms ) {
 					$response = array( 'error' => __( "Please accept the Terms of Service to proceed.", 'cookie-notice' ) );
 					break;
@@ -155,12 +157,12 @@ class Cookie_Notice_Welcome_API {
 					$response = array( 'error' => __( 'Email is not allowed to be empty.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				if ( ! $pass || ! is_string( $pass ) ) {
 					$response = array( 'error' => __( 'Password is not allowed to be empty.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				if ( $pass !== $pass2 ) {
 					$response = array( 'error' => __( "Passwords do not match.", 'cookie-notice' ) );
 					break;
@@ -171,28 +173,28 @@ class Cookie_Notice_Welcome_API {
 					'Password' => $pass,
 					'Language' => $language
 				);
-				
+
 				$response = $this->request( $request, $params );
 
 				// errors?
 				if ( ! empty( $response->error ) ) {
 					break;
 				}
-				
+
 				// errors?
 				if ( ! empty( $response->message ) ) {
 					$response->error = $response->message;
 					break;
 				}
-				
+
 				// ok, so log in now
 				$params = array(
 					'AdminID' => $email,
 					'Password' => $pass
 				);
-				
+
 				$response = $this->request( 'login', $params );
-				
+
 				// errors?
 				if ( ! empty( $response->error ) ) {
 					break;
@@ -208,10 +210,10 @@ class Cookie_Notice_Welcome_API {
 					$response = array( 'error' => __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				// set token
 				set_transient( 'cookie_notice_app_token', $response->data, 24 * HOUR_IN_SECONDS );
-				
+
 				// multisite?
 				if ( is_multisite() ) {
 					switch_to_blog( 1 );
@@ -224,24 +226,24 @@ class Cookie_Notice_Welcome_API {
 					$site_url = get_home_url();
 					$site_description = get_bloginfo( 'description' );
 				}
-				
+
 				// create new app, no need to check existing
 				$params = array(
 					'DomainName' => $site_title,
 					'DomainUrl' => $site_url,
 				);
-				
+
 				if ( ! empty( $site_description ) )
 					$params['DomainDescription'] = $site_description;
-				
+
 				$response = $this->request( 'app_create', $params );
-				
+
 				// errors?
 				if ( ! empty( $response->message ) ) {
 					$response->error = $response->message;
 					break;
 				}
-				
+
 				// data in response?
 				if ( empty( $response->data->AppID ) || empty( $response->data->SecretKey ) ) {
 					$response = array( 'error' => __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ) );
@@ -250,15 +252,15 @@ class Cookie_Notice_Welcome_API {
 					$app_id = $response->data->AppID;
 					$secret_key = $response->data->SecretKey;
 				}
-				
+
 				// update options: app ID and secret key
 				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $app_id, 'app_key' => $secret_key ), Cookie_Notice()->options['general'] );
 
 				update_option( 'cookie_notice_options', Cookie_Notice()->options['general'] );
-				
+
 				// purge cache
 				delete_transient( 'cookie_notice_compliance_cache' );
-				
+
 				// get options
 				$app_config = get_transient( 'cookie_notice_app_config' );
 
@@ -272,37 +274,40 @@ class Cookie_Notice_Welcome_API {
 
 						foreach ( $array as $subkey => $value ) {
 							$new_params[$key] = $object;
-							$new_params[$key]->{$subkey} = $value;	
+							$new_params[$key]->{$subkey} = $value;
 						}
 					}
-					
+
 					$params = $new_params;
 				}
 
 				$params['AppID'] = $app_id;
 				// @todo When mutliple default languages are supported
 				$params['DefaultLanguage'] = 'en';
-				// $params['CurrentLanguage'] = $locale_code[0];
+				
+				// add translations if needed
+				if ( $locale_code[0] !== 'en' )
+					$params['Languages'] = array( $locale_code[0] );
 
 				$response = $this->request( 'quick_config', $params );
 
 				if ( $response->status === 200 ) {
 					// notify publish app
-					$params = array( 
-						'AppID' => $app_id 
+					$params = array(
+						'AppID' => $app_id
 					);
 
 					$response = $this->request( 'notify_app', $params );
 
 					if ( $response->status === 200 ) {
 						$response = true;
-						
+
 						// update app status
 						update_option( 'cookie_notice_status', 'active' );
 					} else {
 						// update app status
 						update_option( 'cookie_notice_status', 'pending' );
-					
+
 						// errors?
 						if ( ! empty( $response->error ) ) {
 							break;
@@ -317,7 +322,7 @@ class Cookie_Notice_Welcome_API {
 				} else {
 					// update app status
 					update_option( 'cookie_notice_status', 'pending' );
-				
+
 					// errors?
 					if ( ! empty( $response->error ) ) {
 						$response->error = $response->error;
@@ -330,41 +335,41 @@ class Cookie_Notice_Welcome_API {
 						break;
 					}
 				}
-				
+
 				break;
 
 			case 'login':
 				$email = is_email( $_POST['email'] );
 				$pass = ! empty( $_POST['pass'] ) ? $_POST['pass'] : '';
-				
+
 				if ( ! $email ) {
 					$response = array( 'error' => __( 'Email is not allowed to be empty.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				if ( ! $pass ) {
 					$response = array( 'error' => __( 'Password is not allowed to be empty.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				$params = array(
 					'AdminID' => $email,
 					'Password' => $pass
 				);
-				
+
 				$response = $this->request( $request, $params );
 
 				// errors?
 				if ( ! empty( $response->error ) ) {
 					break;
 				}
-				
+
 				// errors?
 				if ( ! empty( $response->message ) ) {
 					$response->error = $response->message;
 					break;
 				}
-				
+
 				// token in response?
 				if ( empty( $response->data->token ) ) {
 					$response = array( 'error' => __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ) );
@@ -373,12 +378,11 @@ class Cookie_Notice_Welcome_API {
 
 				// set token
 				set_transient( 'cookie_notice_app_token', $response->data, 24 * HOUR_IN_SECONDS );
-				
+
 				// get apps and check if one for the current domain already exists	
 				$response = $this->request( 'list_apps', array() );
-				
+
 				// echo '<pre>'; print_r( $response ); echo '</pre>'; exit;
-				
 				// errors?
 				if ( ! empty( $response->message ) ) {
 					$response->error = $response->message;
@@ -387,7 +391,7 @@ class Cookie_Notice_Welcome_API {
 
 				$apps_list = array();
 				$app_exists = false;
-				
+
 				// multisite?
 				if ( is_multisite() ) {
 					switch_to_blog( 1 );
@@ -400,17 +404,17 @@ class Cookie_Notice_Welcome_API {
 					$site_url = get_home_url();
 					$site_description = get_bloginfo( 'description' );
 				}
-				
+
 				// apps added, check if current one exists
 				if ( ! empty( $response->data ) ) {
 					$apps_list = (array) $response->data;
-					
+
 					foreach ( $apps_list as $index => $app ) {
 						$site_without_http = trim( str_replace( array( 'http://', 'https://' ), '', $site_url ), '/' );
-						
+
 						if ( $app->DomainUrl === $site_without_http ) {
 							$app_exists = $app;
-							
+
 							continue;
 						}
 					}
@@ -418,7 +422,7 @@ class Cookie_Notice_Welcome_API {
 
 				// if no app, create one
 				if ( ! $app_exists ) {
-					
+
 					// create new app
 					$params = array(
 						'DomainName' => $site_title,
@@ -429,22 +433,22 @@ class Cookie_Notice_Welcome_API {
 						$params['DomainDescription'] = $site_description;
 
 					$response = $this->request( 'app_create', $params );
-					
+
 					// errors?
 					if ( ! empty( $response->message ) ) {
 						$response->error = $response->message;
 						break;
 					}
-					
+
 					$app_exists = $response->data;
 				}
-				
+
 				// check if we have the valid app data
 				if ( empty( $app_exists->AppID ) || empty( $app_exists->SecretKey ) ) {
 					$response = array( 'error' => __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ) );
 					break;
 				}
-				
+
 				// update options: app ID and secret key
 				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $app_exists->AppID, 'app_key' => $app_exists->SecretKey ), Cookie_Notice()->options['general'] );
 
@@ -457,14 +461,17 @@ class Cookie_Notice_Welcome_API {
 				$params = array(
 					'AppID' => $app_exists->AppID,
 					'DefaultLanguage' => 'en',
-					// 'CurrentLanguage' => $locale_code[0]
 				);
+				
+				// add translations if needed
+				if ( $locale_code[0] !== 'en' )
+					$params['Languages'] = array( $locale_code[0] );
 
 				$response = $this->request( 'quick_config', $params );
 
 				if ( $response->status === 200 ) {
 					// @todo notify publish app
-					$params = array( 
+					$params = array(
 						'AppID' => $app_exists->AppID
 					);
 
@@ -472,13 +479,13 @@ class Cookie_Notice_Welcome_API {
 
 					if ( $response->status === 200 ) {
 						$response = true;
-						
+
 						// update app status
 						update_option( 'cookie_notice_status', 'active' );
 					} else {
 						// update app status
 						update_option( 'cookie_notice_status', 'pending' );
-					
+
 						// errors?
 						if ( ! empty( $response->error ) ) {
 							break;
@@ -493,7 +500,7 @@ class Cookie_Notice_Welcome_API {
 				} else {
 					// update app status
 					update_option( 'cookie_notice_status', 'pending' );
-				
+
 					// errors?
 					if ( ! empty( $response->error ) ) {
 						$response->error = $response->error;
@@ -506,7 +513,7 @@ class Cookie_Notice_Welcome_API {
 						break;
 					}
 				}
-				
+
 				break;
 
 			case 'configure':
@@ -523,12 +530,12 @@ class Cookie_Notice_Welcome_API {
 					'cn_privacy_paper',
 					'cn_privacy_contact',
 				);
-				
+
 				$options = array();
-				
+
 				// loop through potential config form fields
 				foreach ( $fields as $field ) {
-					switch ( $field ) {
+					switch ($field) {
 						case 'cn_position':
 							// sanitize position
 							$position = isset( $_POST[$field] ) ? sanitize_key( $_POST[$field] ) : '';
@@ -656,14 +663,14 @@ class Cookie_Notice_Welcome_API {
 							break;
 
 						case 'cn_privacy_contact':
-							$options['config']['privacyContact'] = false;// isset( $_POST[$field] );
+							$options['config']['privacyContact'] = false; // isset( $_POST[$field] );
 							break;
 					}
 				}
-				
+
 				// set options
 				set_transient( 'cookie_notice_app_config', $options, 24 * HOUR_IN_SECONDS );
-				
+
 				break;
 
 			case 'select_plan':
@@ -673,7 +680,7 @@ class Cookie_Notice_Welcome_API {
 		echo json_encode( $response );
 		exit;
 	}
-	
+
 	/**
 	 * API request.
 	 *
@@ -682,9 +689,9 @@ class Cookie_Notice_Welcome_API {
 	 * @return false|object
 	 */
 	private function request( $request = '', $params = '' ) {
-		$api_args = array( 
-			'timeout' => 60, 
-			'sslverify' => false, 
+		$api_args = array(
+			'timeout' => 60,
+			'sslverify' => false,
 			'headers' => array( 'x-api-key' => $this->x_api_key )
 		);
 		$api_params = array();
@@ -695,7 +702,7 @@ class Cookie_Notice_Welcome_API {
 		$api_token = ! empty( $data_token->token ) ? $data_token->token : '';
 		$admin_id = ! empty( $data_token->email ) ? $data_token->email : '';
 
-		switch ( $request ) {
+		switch ($request) {
 			case 'register':
 				$api_url = $this->account_api_url . '/api/account/account/registration';
 				$api_args['method'] = 'POST';
@@ -710,10 +717,10 @@ class Cookie_Notice_Welcome_API {
 				$api_url = $this->account_api_url . '/api/account/app/list';
 				$api_args['method'] = 'GET';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token
+						)
 				);
 				break;
 
@@ -721,41 +728,53 @@ class Cookie_Notice_Welcome_API {
 				$api_url = $this->account_api_url . '/api/account/app/add';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token
+						)
 				);
 				break;
-			
+
+			case 'get_analytics':
+				$api_url = $this->transactional_api_url . '/api/transactional/analytics/analytics-data';
+				$api_args['method'] = 'GET';
+				$api_args['headers'] = array_merge(
+						$api_args['headers'],
+						array(
+							'app-id' => Cookie_Notice()->options['general']['app_id'],
+							'app-secret-key' => Cookie_Notice()->options['general']['app_key'],
+						)
+				);
+				break;
+
 			case 'get_config':
 				$api_url = $this->designer_api_url . '/api/designer/user-design-live';
 				$api_args['method'] = 'GET';
 				break;
-			
+
 			case 'quick_config':
 				$json = true;
 				$api_url = $this->designer_api_url . '/api/designer/user-design/quick';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token,
-						'Content-Type'	=> 'application/json; charset=utf-8'
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
 				);
 				break;
-			
+
 			case 'notify_app':
 				$json = true;
 				$api_url = $this->account_api_url . '/api/account/app/notifyAppPublished';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token,
-						'Content-Type'	=> 'application/json; charset=utf-8'
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
 				);
 				break;
 
@@ -764,10 +783,10 @@ class Cookie_Notice_Welcome_API {
 				$api_url = $this->account_api_url . '/api/account/braintree';
 				$api_args['method'] = 'GET';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization'	=> 'Bearer ' . $api_token
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token
+						)
 				);
 				break;
 
@@ -778,11 +797,11 @@ class Cookie_Notice_Welcome_API {
 				$api_args['method'] = 'POST';
 				$api_args['data_format'] = 'body';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization'	=> 'Bearer ' . $api_token,
-						'Content-Type'	=> 'application/json; charset=utf-8'
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
 				);
 				break;
 
@@ -792,11 +811,11 @@ class Cookie_Notice_Welcome_API {
 				$api_url = $this->account_api_url . '/api/account/braintree/createcustomer';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token,
-						'Content-Type'	=> 'application/json; charset=utf-8'
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
 				);
 				break;
 
@@ -806,11 +825,11 @@ class Cookie_Notice_Welcome_API {
 				$api_url = $this->account_api_url . '/api/account/braintree/createsubscription';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
-					$api_args['headers'],
-					array(
-						'Authorization' => 'Bearer ' . $api_token,
-						'Content-Type'	=> 'application/json; charset=utf-8'
-					)
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
 				);
 				break;
 		}
@@ -828,7 +847,7 @@ class Cookie_Notice_Welcome_API {
 			else
 				$api_args['body'] = $api_params;
 		}
-		
+
 		$response = wp_remote_request( $api_url, $api_args );
 
 		if ( is_wp_error( $response ) )
@@ -848,22 +867,69 @@ class Cookie_Notice_Welcome_API {
 
 		return $result;
 	}
-	
+
 	/**
-	 * Ajax API request
+	 * Check whether WP Cron needs to add new task.
+	 *
+	 * @return void
+	 */
+	public function check_cron() {
+		// compliance acitve only
+		if ( Cookie_Notice()->get_status() == 'active' ) {
+			if ( ! wp_next_scheduled( 'cookie_notice_get_app_analytics' ) ) {
+				// set schedule
+				wp_schedule_event( time(), 'hourly', 'cookie_notice_get_app_analytics' ); // hourly
+			}
+		} elseif ( wp_next_scheduled( 'cookie_notice_get_app_analytics' ) ) {
+			wp_clear_scheduled_hook( 'cookie_notice_get_app_analytics' );
+		}
+	}
+
+	/**
+	 * Get app config
+	 */
+	public function get_app_analytics() {
+		$result = array();
+
+		$params = array(
+			'AppID' => Cookie_Notice()->options['general']['app_id']
+		);
+
+		$response = $this->request( 'get_analytics', $params );
+		
+		// echo '<pre>'; print_r( $response ); echo '</pre>';	exit;
+
+		// get analytics
+		if ( ! empty( $response->data ) ) {
+			$result = ! empty( $response->data ) ? map_deep( (array) $response->data, 'sanitize_text_field' ) : array();
+
+			// update app status
+			if ( ! empty( $result ) ) {
+				// add time updated
+				$result['lastUpdated'] = date( 'Y-m-d H:i:s', current_time( 'timestamp', true ) );
+
+				update_option( 'cookie_notice_app_analytics', $result, false );
+			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Get app status
 	 */
 	public function get_app_status( $app_id ) {
 		$result = '';
-		
+
 		if ( ! current_user_can( apply_filters( 'cn_manage_cookie_notice_cap', 'manage_options' ) ) )
 			return false;
 
-		$params = array( 
-			'AppID' => $app_id 
+		$params = array(
+			'AppID' => $app_id
 		);
-		
+
 		$response = $this->request( 'get_config', $params );
-		
+
 		if ( ! empty( $response->data ) ) {
 			$result = 'active';
 		} else {
@@ -874,7 +940,7 @@ class Cookie_Notice_Welcome_API {
 					$result = '';
 			}
 		}
-		
+
 		return $result;
 	}
 
@@ -907,9 +973,10 @@ class Cookie_Notice_Welcome_API {
 
 		if ( 0 !== curl_errno( $curl ) || 200 !== curl_getinfo( $curl, CURLINFO_HTTP_CODE ) )
 			$response = null;
-		
+
 		curl_close( $curl );
 
 		return $response;
 	}
+
 }

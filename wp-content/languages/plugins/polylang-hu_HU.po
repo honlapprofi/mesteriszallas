@@ -1,0 +1,2264 @@
+# Translation of Plugins - Polylang - Stable (latest release) in Hungarian
+# This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-02-25 17:06:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: hu\n"
+"Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
+
+#: modules/site-health/admin-site-health.php:280
+msgid "The homepage is not translated in all languages"
+msgstr "A honlap nincs minden nyelvre lefordítva"
+
+#: modules/site-health/admin-site-health.php:270
+msgid "It is mandatory to translate the static front page in all languages."
+msgstr "A statikus kezdőlapot minden nyelvre kötelező lefordítani."
+
+#: modules/site-health/admin-site-health.php:262
+msgid "All languages have a translated homepage"
+msgstr "Minden nyelvnek van lefordított honlapja"
+
+#: modules/site-health/admin-site-health.php:246
+msgid "Homepage translated"
+msgstr "A honlap lefordítva"
+
+#: modules/site-health/admin-site-health.php:231
+msgid "Undefined"
+msgstr "Nincs megadva"
+
+#. translators: placeholder is the flag image
+#: modules/site-health/admin-site-health.php:213
+msgid "Flag used in the language switcher: %s"
+msgstr "A nyelvváltóban használt zászló: %s"
+
+#. translators: placeholder is the language name
+#: modules/site-health/admin-site-health.php:211
+msgid "Language: %s"
+msgstr "Nyelv: %s"
+
+#. translators: placeholder is the plugin name
+#: modules/site-health/admin-site-health.php:173
+msgid "%s Options"
+msgstr "%s Opciók"
+
+#: include/widget-calendar.php:248
+msgid "Previous and next months"
+msgstr "Előző és következő hónapok"
+
+#. translators: %s: is the translated label of the 'Ignore' button
+#: modules/wizard/view-wizard-step-languages.php:135
+msgid "%s: stay at this step"
+msgstr "%s: maradjon ennél a lépésnél"
+
+#. translators: %s: is the translated label of the 'No' button
+#: modules/wizard/view-wizard-step-languages.php:126
+msgid "%s: don't add this language and continue to the next step"
+msgstr "%s: ne adja hozzá ezt a nyelvet és lépjen tovább"
+
+#. translators: %s: is the translated label of the 'Yes' button
+#: modules/wizard/view-wizard-step-languages.php:117
+msgid "%s: add this language and continue to the next step"
+msgstr "%s: adja hozzá ezt a nyelvet és lépjen tovább"
+
+#: modules/wizard/view-wizard-step-languages.php:110
+msgid "Do you want to add this language before continuing to the next step?"
+msgstr "Hozzá szeretné adni ezt a nyelvet, mielőtt továbblépünk?"
+
+#. translators: %1$s: is a language flag image, %2$s: is a language native name
+#: modules/wizard/view-wizard-step-languages.php:103
+msgid "You selected %1$s %2$s but you didn't add it to the list before continuing to the next step."
+msgstr "A %1$s %2$s nyelvet választotta, de nem adta hozzá a listához, mielőtt folytatná a következő lépéssel."
+
+#: modules/wizard/view-wizard-step-languages.php:80
+msgid "Languages already defined"
+msgstr "Felvett nyelvek"
+
+#: modules/wizard/view-wizard-step-languages.php:68
+msgid "Remove"
+msgstr "Eltávolít"
+
+#: modules/wizard/view-wizard-step-languages.php:33
+msgid "Select a language to be added"
+msgstr "Válassza ki a hozzáadni kívánt nyelvet"
+
+#: modules/wizard/view-wizard-step-languages.php:27
+msgid "First we are going to define the languages that you will use on your website."
+msgstr "Először megadjuk azokat a nyelveket, amelyeket a webhelyen használni szeretnél."
+
+#: modules/wizard/view-wizard-step-languages.php:24
+msgid "This wizard will help you configure your Polylang settings, and get you started quickly with your multilingual website."
+msgstr "Ez a varázsló segít a Polylang beállításainak a megadásában, és lehetővé teszi, hogy gyorsan be tudja üzemelni a többnyelvű webhelyét."
+
+#: modules/wizard/html-wizard-notice.php:47
+msgid "Skip setup"
+msgstr "Telepítési varázsló kihagyása"
+
+#: modules/wizard/html-wizard-notice.php:41
+msgid "Run the Setup Wizard"
+msgstr "Telepítési varázsló indítása"
+
+#: modules/wizard/html-wizard-notice.php:33
+msgid "You&lsquo;re almost ready to translate your contents!"
+msgstr "Már majdnem készen állunk a fordítás megkezdéséhez!"
+
+#. translators: %s is the plugin name
+#: modules/wizard/html-wizard-notice.php:26
+msgid "Welcome to %s"
+msgstr "Üdvözöl a %s"
+
+#: modules/wizard/view-wizard-step-licenses.php:24
+msgid "There is an error with a license key."
+msgstr "Hiba történt a licenckulccsal."
+
+#: modules/wizard/view-wizard-step-licenses.php:19
+msgid "Please enter your license key:"
+msgid_plural "Please enter your license keys:"
+msgstr[0] "Kérjük, adja meg a licenckulcsot:"
+msgstr[1] "Kérjük, add meg a licenckulcsokat:"
+
+#: modules/wizard/view-wizard-step-licenses.php:18
+msgid "You are using plugins which require a license key."
+msgstr "Olyan bővítményeket használ, melyekhez licenckulcs szükséges."
+
+#: modules/wizard/view-wizard-page.php:103
+msgid "Not right now"
+msgstr "Most nem"
+
+#: modules/wizard/view-wizard-page.php:91
+msgid "Continue"
+msgstr "Tovább"
+
+#. translators: %s is the plugin name
+#: modules/wizard/view-wizard-page.php:27
+msgid "%s &rsaquo; Setup"
+msgstr "%s &rsaquo; Telepítő"
+
+#: modules/wizard/view-wizard-step-media.php:54
+msgid "Help"
+msgstr "Súgó"
+
+#: modules/wizard/view-wizard-step-media.php:45
+msgid "Allow Polylang to translate media"
+msgstr "Engedélyezem a Polylang számára a média fordítását"
+
+#: modules/wizard/view-wizard-step-media.php:28
+msgid "You must activate media translation if you want to translate the title, the alternative text, the caption, or the description. Otherwise you can safely deactivate it."
+msgstr "Aktiválja a médiafordítást, ha le szeretné fordítani a címet, az alternatív szöveget, a feliratot vagy a leírásokat. Ellenkező esetben kikapcsolhatja."
+
+#: modules/wizard/view-wizard-step-media.php:25
+msgid "When you want to insert media in a post, only the media in the language of the current post will be displayed."
+msgstr "Ha médiát szeretne beilleszteni egy bejegyzésbe, akkor csak az aktuális bejegyzés nyelvének megfelelő média jelenik meg."
+
+#: modules/wizard/view-wizard-step-media.php:24
+msgid "When you translate a media, the file is not duplicated on your disk, however you will see one entry per language in the media library."
+msgstr "Média fordításakor a fájl maga nem duplikálódik a háttértáron, de nyelvenként egy-egy külön bejegyzés lesz látható a médiatárban."
+
+#: modules/wizard/view-wizard-step-media.php:23
+msgid "Polylang allows you to translate the text attached to your media, for example the title, the alternative text, the caption, or the description."
+msgstr "A Polylang lehetővé teszi a médiához csatolt szöveg, például a cím, az alternatív szöveg, a felirat vagy a leírás lefordítását."
+
+#: modules/wizard/view-wizard-step-last.php:109
+msgid "Return to the Dashboard"
+msgstr "Vissza a Vezérlőpulthoz"
+
+#: modules/wizard/view-wizard-step-last.php:91
+msgid "Polylang Business Pack"
+msgstr "Polylang Üzleti Csomag"
+
+#. translators: %s is the name of Polylang Business Pack product
+#: modules/wizard/view-wizard-step-last.php:90
+msgid "We have noticed that you are using Polylang with WooCommerce. To ensure a better compatibility, we recommend you use %s which includes both Polylang Pro and Polylang For WooCommerce."
+msgstr "Észrevettük, hogy a Polylang-ot a WooCommerce szolgáltatással használja. A jobb kompatibilitás érdekében javasoljuk, hogy használja a %s alkalmazást, amely magában foglalja a Polylang Pro és a Polylang For WooCommerce szolgáltatásokat is."
+
+#: modules/wizard/view-wizard-step-last.php:85
+msgid "Purchase Polylang Business Pack"
+msgstr "Vásárolja meg a Polylang Üzleti Csomag-ot"
+
+#: modules/wizard/view-wizard-step-last.php:84
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: modules/wizard/view-wizard-step-last.php:75
+#: modules/wizard/view-wizard-step-last.php:99
+msgid "Buy now"
+msgstr "Megveszem most"
+
+#: modules/wizard/view-wizard-step-last.php:69
+msgid "Thank you for activating Polylang. If you want more advanced features - duplication, synchronization, REST API support, integration with other plugins, etc. - or further help provided by our Premium support, we recommend you upgrade to Polylang Pro."
+msgstr "Köszönjük, hogy aktiválta a Polylang szolgáltatást. Ha fejlettebb funkciókat szeretne - duplikáció, szinkronizálás, REST API támogatás, integráció más beépülő modulokkal, stb. -, vagy Prémium támogatást, javasoljuk, hogy váltson a Polylang Pro csomagra."
+
+#: modules/wizard/view-wizard-step-last.php:67
+msgid "Upgrade to Polylang Pro"
+msgstr "Frissítés Polylang Pro-ra "
+
+#: modules/wizard/view-wizard-step-last.php:66
+msgid "Polylang Pro"
+msgstr "Polylang Pro"
+
+#: modules/wizard/view-wizard-step-last.php:58
+msgid "View pages"
+msgstr "Oldalak megtekintése"
+
+#: modules/wizard/view-wizard-step-last.php:53
+msgid "You're ready to translate the posts on your website."
+msgstr "Készen állunk, hogy elkezdhesse a webhelyén található bejegyzések fordítását."
+
+#: modules/wizard/view-wizard-step-last.php:52
+msgid "Translate some pages"
+msgstr "Fordítson le pár oldalt"
+
+#: modules/wizard/view-wizard-step-last.php:38
+msgid "To get your website ready, there are still two steps you need to perform manually: add menus in each language, and add a language switcher to allow your visitors to select their preferred language."
+msgstr "Ahhoz hogy kész legyen a webhelye, még két lépést el kell végeznie manuálisan: adjon hozzá menüt minden nyelven, és adjon hozzá nyelvváltót is, hogy a látogatók kiválaszthassák a kívánt nyelvet."
+
+#: modules/wizard/view-wizard-step-last.php:36
+msgid "Create menus"
+msgstr "Menükészítés"
+
+#: modules/wizard/view-wizard-step-last.php:35
+#: modules/wizard/view-wizard-step-last.php:51
+msgid "Next step"
+msgstr "Következő lépés"
+
+#: modules/wizard/view-wizard-step-last.php:26
+#: modules/wizard/view-wizard-step-last.php:44
+msgid "Read documentation"
+msgstr "Dokumentáció megtekintése"
+
+#: modules/wizard/view-wizard-step-last.php:18
+msgid "You're now able to translate your contents such as posts, pages, categories and tags. You can learn how to use Polylang by reading the documentation."
+msgstr "Most már le tudja fordítani a tartalmait, mint például a bejegyzéseket, oldalakat, kategóriákat és címkéket. A Polylang használatát a dokumentáció elolvasásával ismerheti meg."
+
+#: modules/wizard/view-wizard-step-last.php:15
+msgid "You're ready to translate your contents!"
+msgstr "Készen áll a weboldala lefordítására!"
+
+#: modules/wizard/view-wizard-step-home-page.php:107
+msgid "If you add a new language, don't forget to translate your homepage."
+msgstr "Ha új nyelvet ad hozzá, ne felejtse el lefordítani a kezdőlapot."
+
+#: modules/wizard/view-wizard-step-home-page.php:103
+msgid "One language is well defined and assigned to your home page."
+msgstr "Egy nyelv pontosan definiálva van, és hozzá van rendelve a kezdőlaphoz."
+
+#: modules/wizard/view-wizard-step-home-page.php:97
+msgid "We are going to prepare this page in"
+msgstr "Ezt az oldalt előkészítjük ezen a nyelven: "
+
+#: modules/wizard/view-wizard-step-home-page.php:60
+msgid "Your static homepage is already translated in"
+msgstr "A statikus honlapja már le van fordítva ezen a nyelven: "
+
+#: modules/wizard/view-wizard-step-home-page.php:54
+msgid "After the pages is created, it is up to you to put the translated content in each page linked to each language."
+msgstr "Az oldalak létrehozása után Önön múlik, hogy a lefordított tartalmat az egyes nyelvekhez tartozó oldalakba illeszti-e."
+
+#: modules/wizard/view-wizard-step-home-page.php:51
+msgid "For your site to work correctly, this page must be translated in all available languages."
+msgstr "A webhely megfelelő működéséhez ezt az oldalt le kell fordítani az összes elérhető nyelvre. "
+
+#. translators: %s is the language of the front page ( flag, native name and
+#. locale )
+#: modules/wizard/view-wizard-step-home-page.php:46
+msgid "Its language is : %s."
+msgstr "Nyelve : %s."
+
+#. translators: %s is the post title of the front page
+#: modules/wizard/view-wizard-step-home-page.php:38
+msgid "You defined this page as your static homepage: %s."
+msgstr "Statikus kezdőlapként van beállítva ez az oldal: %s"
+
+#: modules/wizard/wizard.php:829
+msgid "Ready!"
+msgstr "Készen vagyunk!"
+
+#: modules/wizard/view-wizard-step-home-page.php:33
+#: modules/wizard/wizard.php:734 modules/wizard/wizard.php:769
+msgid "Homepage"
+msgstr "Kezdőlap"
+
+#: modules/wizard/wizard.php:666
+msgid "Content"
+msgstr "Tartalom"
+
+#: modules/wizard/wizard.php:492
+msgid "Remove this language"
+msgstr "Távolítsa el ezt a nyelvet"
+
+#: modules/wizard/view-wizard-step-languages.php:136
+#: modules/wizard/wizard.php:491
+msgid "Ignore"
+msgstr "Mellőz"
+
+#: modules/wizard/view-wizard-step-languages.php:127
+#: modules/wizard/wizard.php:490
+msgid "No"
+msgstr "Nem"
+
+#: modules/wizard/view-wizard-step-languages.php:118
+#: modules/wizard/wizard.php:489
+msgid "Yes"
+msgstr "Igen"
+
+#: modules/wizard/wizard.php:488
+msgid "A language wasn't added."
+msgstr "Nyelv nem lett hozzáadva."
+
+#: modules/wizard/wizard.php:481
+msgid "You selected a language, however, to be able to continue, you need to add it."
+msgstr "Kiválasztott egy nyelvet, de a folytatáshoz hozzá is kell adni."
+
+#: modules/wizard/wizard.php:480
+msgid "You need to add at least one language."
+msgstr "Legalább egy nyelvet hozzá kell adnia."
+
+#: modules/wizard/wizard.php:479
+msgid "You already added this language."
+msgstr "Már hozzáadta ezt a nyelvet."
+
+#: modules/wizard/wizard.php:478
+msgid "You need to select a language to be added."
+msgstr "Ki kell választania egy hozzáadni kívánt nyelvet."
+
+#: modules/wizard/view-wizard-step-licenses.php:21
+#: modules/wizard/wizard.php:375
+msgid "Licenses"
+msgstr "Licencek"
+
+#: modules/wizard/wizard.php:195
+msgid "Sorry, you are not allowed to manage options for this site."
+msgstr "Sajnos nincs jogosultsága a webhely beállításait kezelni."
+
+#: modules/wizard/wizard.php:137
+msgid "Setup"
+msgstr "Telepítés"
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:24
+msgid "Choose the language to be assigned"
+msgstr "Válassza ki a hozzárendelni kívánt nyelvet"
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:21
+msgid "The selected language below will be applied to all your content without an assigned language."
+msgstr "Az alábbi kiválasztott nyelv az összes tartalomra vonatkozni fog, hozzárendelt nyelv nélkül."
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:20
+msgid "For your site to work correctly, you need to assign a language to all your contents."
+msgstr "Ahhoz, hogy webhelye megfelelően működjön, nyelvet kell rendelnie az összes tartalomhoz."
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:17
+msgid "Content without language"
+msgstr "Nyelv nélküli tartalom"
+
+#: include/license.php:286
+msgid "Your license key has been disabled."
+msgstr "Az Ön licenckulcsa le van tiltva."
+
+#: admin/admin-filters.php:120
+msgid "Privacy Policy Page"
+msgstr "Adatvédelmi irányelvek oldal"
+
+#. translators: 1: Plugin name 2: Current WordPress version 3: Required
+#. WordPress version
+#: install/install.php:74
+msgid "%1$s has deactivated itself because you are using an old version of WordPress. You are using using WordPress %2$s. %1$s requires at least WordPress %3$s."
+msgstr "%1$s deaktiválta magát, mert a WordPress egy régi verzióját használja. Jelenleg a(z) %2$s WordPress fut. %1$s használatához legalább WordPress %3$s szükséges."
+
+#. translators: 1: Plugin name 2: Current PHP version 3: Required PHP version
+#: install/install.php:50
+msgid "%1$s has deactivated itself because you are using an old version of PHP. You are using using PHP %2$s. %1$s requires PHP %3$s."
+msgstr "%1$s inaktiválta magát, mert a PHP régi verzióját használod. Jelenleg %2$s PHP fut, %1$s számára PHP %3$s szükséges."
+
+#: settings/flags.php:159
+msgid "North Macedonia"
+msgstr "Észak-Macedónia"
+
+#. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
+#: include/license.php:334
+msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s."
+msgstr "A licenckulcsa hamarosan lejár! Egészen pontosan ekkor jár le: %1$s. %2$sÚjítsa meg még ma!%3$s."
+
+#: settings/settings-module.php:317
+msgid "To enable this feature, you need Polylang Pro."
+msgstr "A funkció engedélyezéséhez a Polylang Pro alkalmazásra van szükség."
+
+#: admin/admin-classic-editor.php:355
+msgid "If you attempt to modify them anyway, your changes will not be saved."
+msgstr "Ha mégis megpróbálja módosítani őket, a módosításai nem kerülnek mentésre."
+
+#: admin/admin-classic-editor.php:353
+msgid "Some taxonomies or metadata may be synchronized with existing translations that you are not allowed to modify."
+msgstr "Egyes taxonómiák vagy metaadatok szinkronizálásra kerülhetnek olyan már meglévő fordításokkal, amelyek módosítása számodra nem engedélyezett."
+
+#. translators: %s is a comma separated list of native language names
+#: admin/admin-static-pages.php:190
+msgid "You must translate your static front page in %s."
+msgstr "A statikus nyitólapját a következő nyelvekre kell lefordítani: %s."
+
+#. translators: %1$s is link start tag, %2$s is link end tag.
+#: admin/admin-notices.php:261
+msgid "We have noticed that you have been using Polylang for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a 5 stars rating%2$s."
+msgstr "Úgy látjuk, hogy már egy ideje használja a Polylang-ot. Reméljük, hogy tetszik, és nagyon hálásak lennénk, ha %1$s5 csillagos értékelést adna nekünk%2$s."
+
+#. translators: %1$s is link start tag, %2$s is link end tag.
+#: admin/admin-notices.php:236
+msgid "We have noticed that you are using Polylang with WooCommerce. To ensure compatibility, we recommend you use %1$sPolylang for WooCommerce%2$s."
+msgstr "Úgy látjuk, hogy a Polylang-ot a WooCommerce szolgáltatással együtt használja. A kompatibilitás biztosítása érdekében javasoljuk, hogy használja a %1$sPolylang for WooCommerce%2$s alkalmazást."
+
+#. translators: %1$s and %2$s are Polylang version numbers
+#: install/upgrade.php:91
+msgid "Before upgrading to %2$s, please upgrade to %1$s."
+msgstr "Mielőtt %2$s verzióra frissítene, kérjük, előbb frissítsen %1$s verzióra."
+
+#: modules/lingotek/lingotek.php:135
+msgid "When you activate your account, Lingotek will be able to get an accurate count of the number of words in your site. Then tell them which languages you wish to have them translated into."
+msgstr "Amikor aktiválja fiókját, a Lingotek pontosan meg tudja majd számolni a webhelyén található szavakat. Ezután közölje, hogy mely nyelvekre szeretné lefordítani őket."
+
+#: modules/lingotek/lingotek.php:132
+msgid "Do you need professional translations for your site?"
+msgstr "Szüksége van profi fordításokra a webhelyéhez?"
+
+#: modules/lingotek/lingotek.php:111
+msgid "If you're on a tight budget, looking for near-instant results, and are okay with less-than-perfect quality, machine translation is an excellent option."
+msgstr "Ha szűkös a költségvetése, gyors eredményre vágyik és beéri a kevésbé tökéletes fordítással is, akkor a gépi fordítás kiváló megoldás lehet."
+
+#. Author of the plugin
+msgid "WP SYNTEX"
+msgstr "WP SYNTEX"
+
+#. translators: accessibility text
+#: admin/admin-notices.php:217 modules/wizard/wizard.php:371
+#: modules/wizard/wizard.php:472 modules/wizard/wizard.php:663
+#: settings/settings.php:334
+msgid "Dismiss this notice."
+msgstr "Figyelmen kívül hagyás."
+
+#: include/filters.php:390
+msgid "User"
+msgstr "Felhasználó"
+
+#. translators: %s is a language native name
+#: include/filters.php:381
+msgid "User description - %s"
+msgstr "Felhasználó leírása - %s"
+
+#: include/filters.php:357
+msgid "Translated user descriptions"
+msgstr "Lefordított felhasználói leírások"
+
+#: settings/flags.php:234
+msgid "Tibet"
+msgstr "Tibet"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://polylang.pro"
+msgstr "https://polylang.pro"
+
+#. translators: %1$s is link start tag, %2$s is link end tag.
+#: settings/view-about.php:24
+msgid "Support and extra features are available to %1$sPolylang Pro%2$s users."
+msgstr "Támogatás és extra funkciók a %1$sPolylang Pro%2$s felhasználók számára érhetők el."
+
+#: settings/settings-module.php:319
+msgid "Upgrade now."
+msgstr "Bővítsen most!"
+
+#. translators: %s is a date
+#: include/license.php:342
+msgid "Your license key expires on %s."
+msgstr "A licenckulcsa lejár ekkor: %s."
+
+#: include/license.php:329
+msgid "The license key never expires."
+msgstr "A licenckulcs sohasem jár le. "
+
+#. translators: %1$s is link start tag, %2$s is link end tag
+#: include/license.php:317
+msgid "Your license key has reached its activation limit. %1$sView possible upgrades%2$s now."
+msgstr "A licenckulcsa elérte az aktiválási korlátot. %1$sNézze meg%2$s a frissítési lehetőségeket."
+
+#. translators: %s is a product name
+#: include/license.php:311
+msgid "This is not a %s license key."
+msgstr "Ez nem egy %s licenckulcs."
+
+#. translators: %1$s is a product name, %2$s is link start tag, %3$s is link
+#. end tag.
+#: include/license.php:302
+msgid "Your %1$s license key is not active for this URL. Please %2$svisit your account page%3$s to manage your license key URLs."
+msgstr "A %1$s licenckulcsa nem aktív ehhez az URL-hez. Kérjük, %2$slátogasson el a fiókja weboldalára%3$s a licenckulcs URL-jeinek a kezeléséhez."
+
+#. translators: %1$s is link start tag, %2$s is link end tag.
+#: include/license.php:292
+msgid "Invalid license. Please %1$svisit your account page%2$s and verify it."
+msgstr "Érvénytelen licenc. Kérjük, %1$slátogasson el a fiókja weboldalára%2$s és ellenőrízze."
+
+#. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
+#: include/license.php:277
+msgid "Your license key expired on %1$s. Please %2$srenew your license key%3$s."
+msgstr "A licenckulcsa %1$s napon lejárt. Kérjük, %2$sújítsa meg a licenckulcsát%3$s. "
+
+#: settings/settings-licenses.php:39
+msgid "Manage licenses for Polylang Pro and add-ons."
+msgstr "A Polylang Pro és a bővítmények licenceinek kezelése."
+
+#: settings/settings-licenses.php:38
+msgid "License keys"
+msgstr "Licenckulcsok"
+
+#: modules/translate-slugs/settings-preview-translate-slugs.php:46
+msgid "Allows to translate custom post types and taxonomies slugs in URLs."
+msgstr "Lehetővé teszi az egyéni bejegyzéstípusok és taxonómiai mezők fordítását keresőbarát URL-ekben."
+
+#: modules/translate-slugs/settings-preview-translate-slugs.php:32
+msgid "Translate slugs"
+msgstr "Keresőbarát URL-ek fordítása"
+
+#: modules/share-slug/settings-preview-share-slug.php:46
+msgid "Allows to share the same URL slug across languages for posts and terms."
+msgstr "Lehetővé teszi, hogy ugyanazt a keresőbarát URL-t több nyelv használja a bejegyzésekhez és kifejezésekhez."
+
+#: modules/share-slug/settings-preview-share-slug.php:32
+msgid "Share slugs"
+msgstr "Keresőbarát URL megosztása"
+
+#: install/plugin-updater.php:507
+msgid "Error"
+msgstr "Hiba"
+
+#: install/plugin-updater.php:507
+msgid "You do not have permission to install plugin updates"
+msgstr "Nincs jogosultsága a bővítmények frissítésére"
+
+#. translators: %1$s plugin name, %3$s plugin version, %2$s and %5$s are link
+#. start tags, %4$s and %6$s are link end tags.
+#: install/plugin-updater.php:263
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr "A %1$s új verziója elérhető. %2$sNézze meg, mi változott a %3$s verzióban%4$s vagy %5$sfrissítsen most%6$s. "
+
+#. translators: %1$s plugin name, %3$s plugin version, %2$s is link start tag,
+#. %4$s is link end tag.
+#: install/plugin-updater.php:254
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "A %1$s új verziója elérhető. %2$sNézze meg, mi változott a %3$s verzióban%4$s."
+
+#. translators: Post calendar label. %s: Date.
+#: include/widget-calendar.php:221
+msgid "Posts published on %s"
+msgstr "Bejegyzések közzétéve: %s"
+
+#: include/widget-calendar.php:219
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "Y-m-d"
+
+#: settings/view-tab-lang.php:143
+msgid "Choose a flag for the language."
+msgstr "Egy zászló kiválasztása a nyelvhez."
+
+#. translators: accessibility text
+#: settings/table-string.php:345
+msgid "Filter by group"
+msgstr "Szűrés csoportra"
+
+#. translators:  accessibility text, %s is a string potentially in any language
+#: settings/table-string.php:102
+msgid "Select %s"
+msgstr "%s kijelölése"
+
+#: settings/table-settings.php:149
+msgid "Description"
+msgstr "Leírás"
+
+#: settings/table-settings.php:148
+msgid "Module"
+msgstr "Modul"
+
+#: settings/settings-module.php:140
+msgid "Save Changes"
+msgstr "Változások mentése"
+
+#: settings/settings-module.php:139 js/build/block-editor.js:80
+#: js/build/classic-editor.js:80
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: settings/table-languages.php:211
+msgid "Delete this language and all its associated data"
+msgstr "Törölje ezt a nyelvet és az összes kapcsolódó adatot"
+
+#. translators: accessibility text, %s is a native language name
+#: settings/table-languages.php:117
+msgid "Choose %s as default language"
+msgstr "Legyen %s az alapértelmezett nyelv"
+
+#: settings/table-languages.php:114
+msgid "Select as default language"
+msgstr "Legyen ez az alapértelmezett nyelv"
+
+#: settings/table-languages.php:91 settings/table-languages.php:205
+msgid "Edit this language"
+msgstr "Szerkessze ezt a nyelvet"
+
+#: settings/settings.php:352
+msgid "You can set them all to the default language."
+msgstr "Mindet beállíthatja az alapértelmezett nyelvre."
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:19
+#: settings/settings.php:350
+msgid "There are posts, pages, categories or tags without language."
+msgstr "Vannak nyelvmegadás nélküli bejegyzések, oldalak, kategóriák vagy címkék. "
+
+#. translators: %s is an url
+#: settings/settings-url.php:325
+msgid "Polylang was unable to access the %s URL. Please check that the URL is valid."
+msgstr "A Polylang nem tudta elérni a %s URL-t. Kérjük, ellenőrízze, hogy az URL érvényes-e."
+
+#. translators: %s is a native language name
+#: settings/settings-url.php:269
+msgid "Please enter a valid URL for %s."
+msgstr "Kérjük, adjon meg egy érvényes URL-t ehhez a nyelvhez: %s."
+
+#: settings/settings-url.php:39
+msgid "Decide how your URLs will look like."
+msgstr "Döntse el, hogy fognak kinézni az URL-ek. "
+
+#: settings/settings-module.php:135
+msgid "Deactivated"
+msgstr "Kikapcsolva"
+
+#: settings/settings-module.php:130
+msgid "Activate this module"
+msgstr "Modul aktiválása"
+
+#: include/license.php:326 settings/settings-module.php:126
+msgid "Deactivate"
+msgstr "Deaktiválás"
+
+#: settings/settings-module.php:124
+msgid "Deactivate this module"
+msgstr "Modul kikapcsolása"
+
+#: settings/settings-module.php:118
+msgid "Configure this module"
+msgstr "Modul konfigurálása"
+
+#: settings/settings-cpt.php:60
+msgid "Activate languages and translations management for the custom post types and the taxonomies."
+msgstr "Aktiválja a nyelveket és a fordításkezelést az egyéni poszttípusokhoz és a taxonómiákhoz."
+
+#: settings/settings-cpt.php:59
+msgid "Custom post types and Taxonomies"
+msgstr "Egyéni postatípusok és taxonómiák"
+
+#: settings/flags.php:266
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: settings/flags.php:265
+msgid "Zambia"
+msgstr "Zambia"
+
+#: settings/flags.php:264
+msgid "South Africa"
+msgstr "Dél-Afrika"
+
+#: settings/flags.php:263
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: settings/flags.php:262
+msgid "Yemen"
+msgstr "Jemen"
+
+#: settings/flags.php:261
+msgid "Western Samoa"
+msgstr "Nyugat-Szamoa"
+
+#: settings/flags.php:260
+msgid "Wallis and Futuna"
+msgstr "Wallis és Futuna"
+
+#: settings/flags.php:259
+msgid "Wales"
+msgstr "Wales"
+
+#: settings/flags.php:258
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: settings/flags.php:257
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: settings/flags.php:256
+msgid "United States Virgin Islands"
+msgstr "Amerikai Virgin-szigetek"
+
+#: settings/flags.php:255
+msgid "British Virgin Islands"
+msgstr "Brit Virgin-szigetek "
+
+#: settings/flags.php:254
+msgid "Veneto"
+msgstr "Veneto"
+
+#: settings/flags.php:253
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: settings/flags.php:252
+msgid "Saint Vincent and the Grenadines"
+msgstr "Saint Vincent és Grenadines"
+
+#: settings/flags.php:251
+msgid "Vatican"
+msgstr "Vatikán"
+
+#: settings/flags.php:250
+msgid "Uzbekistan"
+msgstr "Üzbegisztán"
+
+#: settings/flags.php:249
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: settings/flags.php:248
+msgid "United States"
+msgstr "Egyesült Államok"
+
+#: settings/flags.php:247
+msgid "Uganda"
+msgstr "Uganda"
+
+#: settings/flags.php:246
+msgid "Ukraine"
+msgstr "Ukrajna"
+
+#: settings/flags.php:245
+msgid "Tanzania"
+msgstr "Tanzánia"
+
+#: settings/flags.php:244
+msgid "Taiwan"
+msgstr "Tajvan"
+
+#: settings/flags.php:243
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: settings/flags.php:242
+msgid "Trinidad and Tobago"
+msgstr "Trinidad és Tobago"
+
+#: settings/flags.php:241
+msgid "Turkey"
+msgstr "Törökország"
+
+#: settings/flags.php:240
+msgid "Tonga"
+msgstr "Tongai Királyság"
+
+#: settings/flags.php:239
+msgid "Tunisia"
+msgstr "Tunézia"
+
+#: settings/flags.php:238
+msgid "Turkmenistan"
+msgstr "Türkmenisztán"
+
+#: settings/flags.php:237
+msgid "Timor-Leste"
+msgstr "Kelet-Timor"
+
+#: settings/flags.php:236
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: settings/flags.php:235
+msgid "Tajikistan"
+msgstr "Tadzsikisztán"
+
+#: settings/flags.php:233
+msgid "Thailand"
+msgstr "Thaiföld"
+
+#: settings/flags.php:232
+msgid "Togo"
+msgstr "Togo"
+
+#: settings/flags.php:231
+msgid "French Southern Territories"
+msgstr "Francia Déli Területek"
+
+#: settings/flags.php:230
+msgid "Chad"
+msgstr "Csád"
+
+#: settings/flags.php:229
+msgid "Turks and Caicos Islands"
+msgstr "Turks és Caicos szigetek"
+
+#: settings/flags.php:228
+msgid "Swaziland"
+msgstr "Szváziföld"
+
+#: settings/flags.php:227
+msgid "Syria"
+msgstr "Szíria"
+
+#: settings/flags.php:226
+msgid "El Salvador"
+msgstr "Salvador"
+
+#: settings/flags.php:225
+msgid "São Tomé and Príncipe"
+msgstr "São Tomé és Príncipe"
+
+#: settings/flags.php:224
+msgid "South Sudan"
+msgstr "Dél-Szudán"
+
+#: settings/flags.php:223
+msgid "Suriname"
+msgstr "Suriname Köztársaság"
+
+#: settings/flags.php:222
+msgid "Somalia"
+msgstr "Szomália"
+
+#: settings/flags.php:221
+msgid "Senegal"
+msgstr "Szenegál"
+
+#: settings/flags.php:220
+msgid "San Marino"
+msgstr "San Marino Köztársaság"
+
+#: settings/flags.php:219
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: settings/flags.php:218
+msgid "Slovakia"
+msgstr "Szlovákia"
+
+#: settings/flags.php:217
+msgid "Slovenia"
+msgstr "Szlovénia"
+
+#: settings/flags.php:216
+msgid "Saint Helena"
+msgstr "Szt.Heléna"
+
+#: settings/flags.php:215
+msgid "Singapore"
+msgstr "Singapore"
+
+#: settings/flags.php:214
+msgid "Sweden"
+msgstr "Svédország"
+
+#: settings/flags.php:213
+msgid "Sudan"
+msgstr "Szudán"
+
+#: settings/flags.php:212
+msgid "Scotland"
+msgstr "Skócia"
+
+#: settings/flags.php:211
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#: settings/flags.php:210
+msgid "Solomon Islands"
+msgstr "Salamon-szigetek"
+
+#: settings/flags.php:209
+msgid "Saudi Arabia"
+msgstr "Szaud-Arábia"
+
+#: settings/flags.php:208
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: settings/flags.php:207
+msgid "Russia"
+msgstr "Oroszország"
+
+#: settings/flags.php:206
+msgid "Serbia"
+msgstr "Szerbia"
+
+#: settings/flags.php:205
+msgid "Romania"
+msgstr "Románia"
+
+#: settings/flags.php:204
+msgid "Quebec"
+msgstr "Quebec"
+
+#: settings/flags.php:203
+msgid "Qatar"
+msgstr "Katar"
+
+#: settings/flags.php:202
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: settings/flags.php:201
+msgid "Belau"
+msgstr "Belau"
+
+#: settings/flags.php:200
+msgid "Portugal"
+msgstr "Portugália"
+
+#: settings/flags.php:199
+msgid "Palestinian Territory"
+msgstr "Palesztina"
+
+#: settings/flags.php:198
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: settings/flags.php:197
+msgid "Pitcairn"
+msgstr "Pitcairn-szigetek"
+
+#: settings/flags.php:196
+msgid "Saint Pierre and Miquelon"
+msgstr "Saint Pierre és Miquelon"
+
+#: settings/flags.php:195
+msgid "Poland"
+msgstr "Lengyelország"
+
+#: settings/flags.php:194
+msgid "Pakistan"
+msgstr "Pakisztán"
+
+#: settings/flags.php:193
+msgid "Philippines"
+msgstr "Fülöp-szigetek"
+
+#: settings/flags.php:192
+msgid "Papua New Guinea"
+msgstr "Pápua Új-Guinea"
+
+#: settings/flags.php:191
+msgid "French Polynesia"
+msgstr "Francia Polinézia"
+
+#: settings/flags.php:190
+msgid "Peru"
+msgstr "Peru"
+
+#: settings/flags.php:189
+msgid "Panama"
+msgstr "Panama"
+
+#: settings/flags.php:188
+msgid "Oman"
+msgstr "Oman"
+
+#: settings/flags.php:187
+msgid "Occitania"
+msgstr "Okcitánia"
+
+#: settings/flags.php:186
+msgid "New Zealand"
+msgstr "Új-Zéland"
+
+#: settings/flags.php:185
+msgid "Niue"
+msgstr "Niue"
+
+#: settings/flags.php:184
+msgid "Nauru"
+msgstr "Nauru"
+
+#: settings/flags.php:183
+msgid "Nepal"
+msgstr "Nepál"
+
+#: settings/flags.php:182
+msgid "Norway"
+msgstr "Norvégia"
+
+#: settings/flags.php:181
+msgid "Netherlands"
+msgstr "Hollandia"
+
+#: settings/flags.php:180
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: settings/flags.php:179
+msgid "Nigeria"
+msgstr "Nigéria"
+
+#: settings/flags.php:178
+msgid "Norfolk Island"
+msgstr "Norfolk-sziget"
+
+#: settings/flags.php:177
+msgid "Niger"
+msgstr "Niger"
+
+#: settings/flags.php:176
+msgid "New Caledonia"
+msgstr "Új-Kaledónia"
+
+#: settings/flags.php:175
+msgid "Namibia"
+msgstr "Namíbia"
+
+#: settings/flags.php:174
+msgid "Mozambique"
+msgstr "Mozambik"
+
+#: settings/flags.php:173
+msgid "Malaysia"
+msgstr "Malajzia"
+
+#: settings/flags.php:172
+msgid "Mexico"
+msgstr "Mexikó"
+
+#: settings/flags.php:171
+msgid "Malawi"
+msgstr "Malawi"
+
+#: settings/flags.php:170
+msgid "Maldives"
+msgstr "Maldív-szigetek"
+
+#: settings/flags.php:169
+msgid "Mauritius"
+msgstr "Mauríciusz"
+
+#: settings/flags.php:168
+msgid "Malta"
+msgstr "Máta"
+
+#: settings/flags.php:167
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: settings/flags.php:166
+msgid "Mauritania"
+msgstr "Mauritánia"
+
+#: settings/flags.php:165
+msgid "Martinique"
+msgstr "Martinique"
+
+#: settings/flags.php:164
+msgid "Northern Mariana Islands"
+msgstr "Északi Mariana-szigetek"
+
+#: settings/flags.php:163
+msgid "Macao"
+msgstr "Macao"
+
+#: settings/flags.php:162
+msgid "Mongolia"
+msgstr "Mongólia"
+
+#: settings/flags.php:161
+msgid "Myanmar"
+msgstr "Mianmar"
+
+#: settings/flags.php:160
+msgid "Mali"
+msgstr "Mali"
+
+#: settings/flags.php:158
+msgid "Marshall Islands"
+msgstr "Marshall-szigetek"
+
+#: settings/flags.php:157
+msgid "Madagascar"
+msgstr "Madagaszkár"
+
+#: settings/flags.php:156
+msgid "Montenegro"
+msgstr "Montenegró"
+
+#: settings/flags.php:155
+msgid "Moldova"
+msgstr "Moldávia"
+
+#: settings/flags.php:154
+msgid "Monaco"
+msgstr "Monakó"
+
+#: settings/flags.php:153
+msgid "Morocco"
+msgstr "Marokkó"
+
+#: settings/flags.php:152
+msgid "Libya"
+msgstr "Líbia"
+
+#: settings/flags.php:151
+msgid "Latvia"
+msgstr "Lettország"
+
+#: settings/flags.php:150
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+#: settings/flags.php:149
+msgid "Lithuania"
+msgstr "Litvánia"
+
+#: settings/flags.php:148
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: settings/flags.php:147
+msgid "Liberia"
+msgstr "Libéria"
+
+#: settings/flags.php:146
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: settings/flags.php:145
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: settings/flags.php:144
+msgid "Saint Lucia"
+msgstr "Santa Lucia"
+
+#: settings/flags.php:143
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: settings/flags.php:142
+msgid "Laos"
+msgstr "Laosz"
+
+#: settings/flags.php:141
+msgid "Kazakhstan"
+msgstr "Kazahsztán"
+
+#: settings/flags.php:140
+msgid "Cayman Islands"
+msgstr "Kajmán-szigetek"
+
+#: settings/flags.php:139
+msgid "Kuwait"
+msgstr "Kuvait"
+
+#: settings/flags.php:138
+msgid "Kurdistan"
+msgstr "Kurdisztán"
+
+#: settings/flags.php:137
+msgid "South Korea"
+msgstr "Dél-Korea"
+
+#: settings/flags.php:136
+msgid "North Korea"
+msgstr "Észak-Korea"
+
+#: settings/flags.php:135
+msgid "Saint Kitts and Nevis"
+msgstr "Saint Kitts és Nevis"
+
+#: settings/flags.php:134
+msgid "Comoros"
+msgstr "Comoros"
+
+#: settings/flags.php:133
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: settings/flags.php:132
+msgid "Cambodia"
+msgstr "Kambodzsa"
+
+#: settings/flags.php:131
+msgid "Kyrgyzstan"
+msgstr "Kirgizisztán"
+
+#: settings/flags.php:130
+msgid "Kenya"
+msgstr "Kenya"
+
+#: settings/flags.php:129
+msgid "Japan"
+msgstr "Japán"
+
+#: settings/flags.php:128
+msgid "Jordan"
+msgstr "Jordánia"
+
+#: settings/flags.php:127
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: settings/flags.php:126
+msgid "Italy"
+msgstr "Olaszország"
+
+#: settings/flags.php:125
+msgid "Iceland"
+msgstr "Izland"
+
+#: settings/flags.php:124
+msgid "Iran"
+msgstr "Irán"
+
+#: settings/flags.php:123
+msgid "Iraq"
+msgstr "Irak"
+
+#: settings/flags.php:122
+msgid "British Indian Ocean Territory"
+msgstr "British Indian Ocean Territory"
+
+#: settings/flags.php:121
+msgid "India"
+msgstr "India"
+
+#: settings/flags.php:120
+msgid "Israel"
+msgstr "Izrael"
+
+#: settings/flags.php:119
+msgid "Republic of Ireland"
+msgstr "Írország"
+
+#: settings/flags.php:118
+msgid "Indonesia"
+msgstr "Indonézia"
+
+#: settings/flags.php:117
+msgid "Hungary"
+msgstr "Magyarország"
+
+#: settings/flags.php:116
+msgid "Haiti"
+msgstr "Haiti"
+
+#: settings/flags.php:115
+msgid "Croatia"
+msgstr "Horvátország"
+
+#: settings/flags.php:114
+msgid "Honduras"
+msgstr "Hondurasz"
+
+#: settings/flags.php:113
+msgid "Heard Island and McDonald Islands"
+msgstr "Heard Island and McDonald Islands"
+
+#: settings/flags.php:112
+msgid "Hong Kong"
+msgstr "Hongkong S.A.R, Kína"
+
+#: settings/flags.php:111
+msgid "Guyana"
+msgstr "Guyana"
+
+#: settings/flags.php:110
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: settings/flags.php:109
+msgid "Guam"
+msgstr "Guam"
+
+#: settings/flags.php:108
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: settings/flags.php:107
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Dél-Georgia és Déli-Sandwich-szigetek"
+
+#: settings/flags.php:106
+msgid "Greece"
+msgstr "Görögország"
+
+#: settings/flags.php:105
+msgid "Equatorial Guinea"
+msgstr "Egyenlítői Guinea"
+
+#: settings/flags.php:104
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: settings/flags.php:103
+msgid "Guinea"
+msgstr "Guinea"
+
+#: settings/flags.php:102
+msgid "Gambia"
+msgstr "Gambia"
+
+#: settings/flags.php:101
+msgid "Greenland"
+msgstr "Grönland"
+
+#: settings/flags.php:100
+msgid "Gibraltar"
+msgstr "Gibraltár"
+
+#: settings/flags.php:99
+msgid "Ghana"
+msgstr "Ghána"
+
+#: settings/flags.php:98
+msgid "Georgia"
+msgstr "Georgia"
+
+#: settings/flags.php:97
+msgid "Grenada"
+msgstr "Grenada"
+
+#: settings/flags.php:96
+msgid "United Kingdom"
+msgstr "Egyesült Királyság"
+
+#: settings/flags.php:95
+msgid "Galicia"
+msgstr "Galícia"
+
+#: settings/flags.php:94
+msgid "Gabon"
+msgstr "Gabon"
+
+#: settings/flags.php:93
+msgid "France"
+msgstr "Franciaország"
+
+#: settings/flags.php:92
+msgid "Faroe Islands"
+msgstr "Faroe-szigetek"
+
+#: settings/flags.php:91
+msgid "Micronesia"
+msgstr "Mikronézia"
+
+#: settings/flags.php:90
+msgid "Falkland Islands"
+msgstr "Falkland-szigetek"
+
+#: settings/flags.php:89
+msgid "Fiji"
+msgstr "Fidzsi"
+
+#: settings/flags.php:88
+msgid "Finland"
+msgstr "Finnország"
+
+#: settings/flags.php:87
+msgid "Ethiopia"
+msgstr "Etiópia"
+
+#: settings/flags.php:86
+msgid "Esperanto"
+msgstr "eszperantó"
+
+#: settings/flags.php:85
+msgid "Spain"
+msgstr "Spanyolország"
+
+#: settings/flags.php:84
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: settings/flags.php:83
+msgid "England"
+msgstr "Anglia"
+
+#: settings/flags.php:82
+msgid "Western Sahara"
+msgstr "Nyugat-Szahara"
+
+#: settings/flags.php:81
+msgid "Egypt"
+msgstr "Egyiptom"
+
+#: settings/flags.php:80
+msgid "Estonia"
+msgstr "Észtország"
+
+#: settings/flags.php:79
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: settings/flags.php:78
+msgid "Algeria"
+msgstr "Algéria"
+
+#: settings/flags.php:77
+msgid "Dominican Republic"
+msgstr "Dominikai Köztársaság"
+
+#: settings/flags.php:76
+msgid "Dominica"
+msgstr "Dominika"
+
+#: settings/flags.php:75
+msgid "Denmark"
+msgstr "Dánia"
+
+#: settings/flags.php:74
+msgid "Djibouti"
+msgstr "Dzsibuti"
+
+#: settings/flags.php:73
+msgid "Germany"
+msgstr "Németország"
+
+#: settings/flags.php:72
+msgid "Czech Republic"
+msgstr "Cseh Köztársaság"
+
+#: settings/flags.php:71
+msgid "Cyprus"
+msgstr "Ciprus"
+
+#: settings/flags.php:70
+msgid "Christmas Island"
+msgstr "Karácsony-sziget"
+
+#: settings/flags.php:69
+msgid "Cape Verde"
+msgstr "Zöld-foki Köztársaság"
+
+#: settings/flags.php:68
+msgid "Cuba"
+msgstr "Kuba"
+
+#: settings/flags.php:67
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: settings/flags.php:66
+msgid "Colombia"
+msgstr "Kolumbia"
+
+#: settings/flags.php:65
+msgid "China"
+msgstr "Kína"
+
+#: settings/flags.php:64
+msgid "Cameroon"
+msgstr "Kamerun"
+
+#: settings/flags.php:63
+msgid "Chile"
+msgstr "Chile"
+
+#: settings/flags.php:62
+msgid "Cook Islands"
+msgstr "Cook-szigetek"
+
+#: settings/flags.php:61
+msgid "Ivory Coast"
+msgstr "Elefántcsontpart"
+
+#: settings/flags.php:60
+msgid "Switzerland"
+msgstr "Svájc"
+
+#: settings/flags.php:59
+msgid "Congo"
+msgstr "Kongó"
+
+#: settings/flags.php:58
+msgid "Central African Republic"
+msgstr "Közép-afrikai Köztársaság"
+
+#: settings/flags.php:57
+msgid "Democratic Republic of the Congo"
+msgstr "Kongó - Kinshasa"
+
+#: settings/flags.php:56
+msgid "Cocos"
+msgstr "Cocos"
+
+#: settings/flags.php:55
+msgid "Catalonia"
+msgstr "Katalónia"
+
+#: settings/flags.php:54
+msgid "Canada"
+msgstr "Kanada"
+
+#: settings/flags.php:53
+msgid "Belize"
+msgstr "Belize"
+
+#: settings/flags.php:52
+msgid "Belarus"
+msgstr "Belorusszia"
+
+#: settings/flags.php:51
+msgid "Botswana"
+msgstr "Botswana"
+
+#: settings/flags.php:50
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: settings/flags.php:49
+msgid "Bahamas"
+msgstr "Bahamák"
+
+#: settings/flags.php:48
+msgid "Brazil"
+msgstr "Brazília"
+
+#: settings/flags.php:47
+msgid "Bolivia"
+msgstr "Bolívia"
+
+#: settings/flags.php:46
+msgid "Brunei"
+msgstr "Brunei"
+
+#: settings/flags.php:45
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: settings/flags.php:44
+msgid "Benin"
+msgstr "Benin"
+
+#: settings/flags.php:43
+msgid "Burundi"
+msgstr "Burundi"
+
+#: settings/flags.php:42
+msgid "Bahrain"
+msgstr "Bahrein"
+
+#: settings/flags.php:41
+msgid "Bulgaria"
+msgstr "Bulgária"
+
+#: settings/flags.php:40
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: settings/flags.php:39
+msgid "Belgium"
+msgstr "Belgium"
+
+#: settings/flags.php:38
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: settings/flags.php:37
+msgid "Barbados"
+msgstr "Barbados"
+
+#: settings/flags.php:36
+msgid "Basque Country"
+msgstr "Baszkföld"
+
+#: settings/flags.php:35
+msgid "Bosnia and Herzegovina"
+msgstr "Bosznia-Hercegovina"
+
+#: settings/flags.php:34
+msgid "Azerbaijan"
+msgstr "Azerbajdzsán"
+
+#: settings/flags.php:33
+msgid "Åland Islands"
+msgstr "Åland-szigetek"
+
+#: settings/flags.php:32
+msgid "Aruba"
+msgstr "Aruba "
+
+#: settings/flags.php:31
+msgid "Australia"
+msgstr "Ausztrália"
+
+#: settings/flags.php:30
+msgid "Austria"
+msgstr "Ausztria"
+
+#: settings/flags.php:29
+msgid "American Samoa"
+msgstr "Amerikai Szamoa"
+
+#: settings/flags.php:28
+msgid "Arab league"
+msgstr "Arab Államok Ligája"
+
+#: settings/flags.php:27
+msgid "Argentina"
+msgstr "Argentína"
+
+#: settings/flags.php:26
+msgid "Angola"
+msgstr "Angola"
+
+#: settings/flags.php:25
+msgid "Netherlands Antilles"
+msgstr "Holland-Antillák"
+
+#: settings/flags.php:24
+msgid "Armenia"
+msgstr "Örményország"
+
+#: settings/flags.php:23
+msgid "Albania"
+msgstr "Albánia"
+
+#: settings/flags.php:22
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: settings/flags.php:21
+msgid "Antigua and Barbuda"
+msgstr "Antigua és Barbuda"
+
+#: settings/flags.php:20
+msgid "Afghanistan"
+msgstr "Afganisztán"
+
+#: settings/flags.php:19
+msgid "United Arab Emirates"
+msgstr "Egyesült Arab Emirátus"
+
+#: settings/flags.php:18
+msgid "Andorra"
+msgstr "Andorra"
+
+#. translators: accessibility text
+#: admin/view-translations-post.php:58 admin/view-translations-term.php:77
+msgid "Translation"
+msgstr "Fordítás"
+
+#: admin/admin-static-pages.php:102
+msgid "Posts Page"
+msgstr "Bejegyzések oldala"
+
+#: admin/admin-static-pages.php:98
+msgid "Front Page"
+msgstr "Kezdőlap"
+
+#: admin/admin-nav-menu.php:82
+msgid "Add to Menu"
+msgstr "Hozzáadás a menühöz"
+
+#: admin/admin-model.php:300 modules/wizard/wizard.php:487
+msgid "The flag does not exist"
+msgstr "A zászló nem létezik."
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-links.php:27
+msgid "Add a translation in %s"
+msgstr "Fordítás hozzáadása ezen a nyelven: %s"
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-filters-columns.php:196 admin/admin-filters-columns.php:333
+msgid "This item is in %s"
+msgstr "Az elem nyelve: %s"
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-filters-columns.php:177 admin/admin-filters-columns.php:319
+#: admin/admin-links.php:54
+msgid "Edit the translation in %s"
+msgstr "A fordítás szerkesztése %s nyelven "
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-filters-columns.php:173 admin/admin-filters-columns.php:315
+msgid "Edit this item in %s"
+msgstr "Az elem szerkesztése %s nyelven"
+
+#. Description of the plugin
+msgid "Adds multilingual capability to WordPress"
+msgstr "Többnyelvű tartalom, fordítások kezelése."
+
+#. Plugin Name of the plugin
+msgid "Polylang"
+msgstr "Polylang"
+
+#: modules/lingotek/lingotek.php:273
+msgid "Learn more..."
+msgstr "További információk..."
+
+#: modules/lingotek/lingotek.php:150
+msgid "Do you need help creating glossaries and terminologies?"
+msgstr "Segítségre van szüksége a szószedetek és terminológiák létrehozásához?"
+
+#: modules/lingotek/lingotek.php:149
+msgid "Do you have existing Translation Memories you would like to use?"
+msgstr "Van olyan korábbi fordítás, melyet használni szeretne?"
+
+#: modules/lingotek/lingotek.php:148
+msgid "Do you need customized workflows?"
+msgstr "Szüksége van testreszabott munkafolyamatokra? "
+
+#: modules/lingotek/lingotek.php:147
+msgid "Do you need someone to run your localization project?"
+msgstr "Szüksége van valakire a lokalizációs projekt kezeléséhez?"
+
+#: modules/lingotek/lingotek.php:146
+msgid "Start the process of getting extra services."
+msgstr "Indítsa el az extra szolgáltatások igénylését."
+
+#: modules/lingotek/lingotek.php:144
+msgid "Do you need help translating your site?"
+msgstr "Szüksége van segítségre a webhely fordításához?"
+
+#: modules/lingotek/lingotek.php:143
+msgid "Need extra services?"
+msgstr "Szüksége van extra szolgáltatásokra?"
+
+#: modules/lingotek/lingotek.php:136
+msgid "Once activated, click on the \"request translation bid\" and a certified translation project manager will contact you for a no-obligations translation bid."
+msgstr "Az aktiválás után kattints a \"fordítási ajánlat kérése\" gombra, és egy felhatalmazott fordítási projektmenedzser felveszi veled a kapcsolatot és egy kötelezettség nélküli fordítási ajánlatot tesz."
+
+#: modules/lingotek/lingotek.php:134
+msgid "Start the process of getting a professional translation bid."
+msgstr "Indítsa el a profi fordításra vonatkozó ajánlatkérést."
+
+#: modules/lingotek/lingotek.php:131
+msgid "Professionally translate my site"
+msgstr "A weboldal szakszerű fordítsa"
+
+#: modules/lingotek/lingotek.php:124
+msgid "Save and re-use previously translated material (leverage translation memory (TM))."
+msgstr "A korábban lefordított anyagok mentése és újrafelhasználása (fordítómemória (TM) használata). "
+
+#: modules/lingotek/lingotek.php:123
+msgid "Have linguists compare side-by-side versions of original and translated text."
+msgstr "Nyelvészek hasonlítsák össze az eredeti és a lefordított szöveg változatait."
+
+#: modules/lingotek/lingotek.php:122
+msgid "Access an online translator workbench."
+msgstr "Hozzáférés egy online fordítóhoz."
+
+#: modules/lingotek/lingotek.php:119
+msgid "Do you need to connect to a professional translation management system?"
+msgstr "Szüksége van egy professzionális fordításkezelő rendszerre?"
+
+#: modules/lingotek/lingotek.php:118
+msgid "Translation Management System"
+msgstr "Fordításkezelő rendszer"
+
+#: modules/lingotek/lingotek.php:110 modules/lingotek/lingotek.php:121
+msgid "Access free machine translation for your site for up to 100,000 characters."
+msgstr "Ingyenes hozzáférés a webhely gépi fordításához, 100 000 karakter terjedelemig."
+
+#: modules/lingotek/lingotek.php:108
+msgid "Polylang is now fully integrated with Lingotek!"
+msgstr "A Polylang immáron teljesen integrálva van a Lingotek-hez! "
+
+#: modules/lingotek/lingotek.php:107
+msgid "Automatically translate my site"
+msgstr "A weboldal automatikus fordítása"
+
+#: modules/lingotek/lingotek.php:104
+msgid "Polylang is now fully integrated with Lingotek, a professional translation management system!"
+msgstr "A Polylang immár teljes mértékben integrálva van a Lingotek professzionális fordításkezelő rendszerrel! "
+
+#: modules/lingotek/lingotek.php:97
+msgid "Request Services"
+msgstr "Szolgáltatások igénylése"
+
+#: modules/lingotek/lingotek.php:91
+msgid "Request Translation"
+msgstr "Fordítás igénylése"
+
+#: modules/lingotek/lingotek.php:86 settings/settings-module.php:132
+msgid "Activate"
+msgstr "Aktivál"
+
+#: modules/lingotek/lingotek.php:86 settings/settings-module.php:134
+msgid "Activated"
+msgstr "Aktiválva"
+
+#: modules/lingotek/lingotek.php:47
+msgid "Activate Lingotek"
+msgstr "Lingotek aktiválása"
+
+#: modules/lingotek/lingotek.php:42
+msgid "Click on Activate Lingotek to start translating."
+msgstr "A fordítás megkezdéséhez kattints a Lingotek aktiválása gombra."
+
+#: modules/lingotek/lingotek.php:38
+msgid "Learn more"
+msgstr "További információk"
+
+#: settings/settings-licenses.php:43
+msgid "Close"
+msgstr "Bezár"
+
+#: modules/lingotek/lingotek.php:33
+msgid "You’ve just upgraded to the latest version of Polylang! Would you like to automatically translate your website for free?"
+msgstr "Most frissített a Polylang legújabb verziójára! Szeretné ingyenesen automatikusan lefordítani a webhelyét?"
+
+#: install/upgrade.php:88
+msgid "Polylang has been deactivated because you upgraded from a too old version."
+msgstr "A Polylang bővítmény ki lett kapcsolva, mert túl régi verzióról lett frissítve."
+
+#: include/widget-languages.php:118
+msgid "Title:"
+msgstr "Cím:"
+
+#: include/widget-languages.php:23
+msgid "Displays a language switcher"
+msgstr "Nyelv választó elhelyezése"
+
+#. translators: Calendar caption: 1: Month name, 2: 4-digit year.
+#: include/widget-calendar.php:149
+msgctxt "calendar caption"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: include/switcher.php:46
+msgid "Displays as a dropdown"
+msgstr "Megjelenítés lenyíló listában"
+
+#: include/switcher.php:51
+msgid "Hides languages with no translation"
+msgstr "Elrejti a fordítás nélküli nyelveket"
+
+#: include/switcher.php:50
+msgid "Hides the current language"
+msgstr "Aktuális nyelv elrejtése"
+
+#: include/switcher.php:49
+msgid "Forces link to front page"
+msgstr "Főoldal linkje tartalmazza a nyelvet is"
+
+#: include/switcher.php:48
+msgid "Displays flags"
+msgstr "Nyelv zászlók mutatása"
+
+#: include/switcher.php:47
+msgid "Displays language names"
+msgstr "Nyelvek nevének mutatása"
+
+#: integrations/wp-importer/wordpress-importer.php:45
+msgid "Import <strong>posts, pages, comments, custom fields, categories, and tags</strong> from a WordPress export file."
+msgstr "<strong>Bejegyzések, oldalak, megjegyzések, egyéni mezők, kategóriák és címkék </strong> importálása egy WordPress exportfájlból."
+
+#: admin/admin-default-term.php:139
+msgid "Uncategorized"
+msgstr "Kategória nélküli"
+
+#: frontend/frontend-filters-search.php:102
+#: frontend/frontend-filters-search.php:103
+msgid "Search"
+msgstr "Keresés"
+
+#: settings/view-tab-strings.php:21
+msgid "Use this to remove unused strings from database, for example after a plugin has been uninstalled."
+msgstr "Már nem használt szöveg fordítások törlése adatbázisból, pl. eltávolított bővítményhez tartozó szövegek fordításai."
+
+#: settings/view-tab-strings.php:19
+msgid "Clean strings translation database"
+msgstr "Szöveg fordítások törlése"
+
+#: settings/view-tab-strings.php:16
+msgid "Search translations"
+msgstr "Fordítás keresése"
+
+#: modules/sync/settings-sync.php:32
+msgid "The synchronization options allow to maintain exact same values (or translations in the case of taxonomies and page parent) of meta content between the translations of a post or page."
+msgstr "A szinkronizálás segítségével az oldalakhoz vagy bejegyzésekhez tartozó metaadatok a fordítások esetén is ugyanazokat az értékeket veszik fel."
+
+#: modules/sync/settings-sync.php:31
+msgid "Synchronization"
+msgstr "Szinkronizálás"
+
+#: settings/settings-cpt.php:142
+msgid "Activate languages and translations for custom taxonomies."
+msgstr "Egyedi taxonómiák (kategóriák, címkék) fordításának bekapcsolása."
+
+#: settings/settings-cpt.php:124
+msgid "Custom taxonomies"
+msgstr "Egyedi taxonómiák (kategóriák, címkék)"
+
+#: settings/settings-cpt.php:118
+msgid "Activate languages and translations for custom post types."
+msgstr "Egyedi bejegyzés típusok fordításának bekapcsolása."
+
+#: settings/settings-cpt.php:100
+msgid "Custom post types"
+msgstr "Egyedi bejegyzés típusok"
+
+#: modules/wizard/view-wizard-step-media.php:21 modules/wizard/wizard.php:609
+#: settings/settings-media.php:31
+msgid "Media"
+msgstr "Média"
+
+#: settings/settings-browser.php:32
+msgid "Detect browser language"
+msgstr "Böngésző nyelvének használata"
+
+#. translators: %1$s example url when the option is active. %2$s example url
+#. when the option is not active
+#: settings/settings-url.php:195
+msgid "Example: %1$s instead of %2$s"
+msgstr "Például: %1$s ehelyett: %2$s"
+
+#: settings/settings-url.php:184
+msgid "The front page URL contains the language code instead of the page name or page id"
+msgstr "A kezdőlap URL címe az oldal neve vagy azonosítója helyett a nyelvi kódot tartalmazza."
+
+#: settings/settings-url.php:162
+msgid "Keep /language/ in pretty permalinks"
+msgstr "/language/ megtartása a linkekben."
+
+#: settings/settings-url.php:151
+msgid "Remove /language/ in pretty permalinks"
+msgstr "/language/ eltávolítása a linkekből."
+
+#: settings/settings-url.php:129
+msgid "Hide URL language information for default language"
+msgstr "Nyelvkód eltávolítása a linkekből az alapértelmezett nyelv esetén"
+
+#: settings/settings-url.php:94
+msgid "The language is set from different domains"
+msgstr "A nyelvet a linkben található domén határozza meg."
+
+#: settings/settings-url.php:83
+msgid "The language is set from the subdomain name in pretty permalinks"
+msgstr "A nyelvet a linkben található aldomén határozza meg."
+
+#: settings/settings-url.php:76 settings/settings-url.php:87
+#: settings/settings-url.php:155 settings/settings-url.php:166
+msgid "Example:"
+msgstr "Példa:"
+
+#: settings/settings-url.php:72
+msgid "The language is set from the code in the URL"
+msgstr "A nyelvet az URL-ben levő kód határozza meg"
+
+#: settings/settings-url.php:72
+msgid "The language is set from the directory name in pretty permalinks"
+msgstr "A nyelvet a linkben található mappanév határozza meg."
+
+#: settings/settings-url.php:66
+msgid "Posts, pages, categories and tags URLs will not be modified."
+msgstr "A bejegyzések, oldalak, kategóriák és címkék URL-jei nem módosulnak."
+
+#: settings/settings-url.php:62
+msgid "The language is set from content"
+msgstr "A nyelvet a tartalom nyelve határozza meg."
+
+#: settings/settings-url.php:38
+msgid "URL modifications"
+msgstr "Linkek módosítása"
+
+#. translators: accessibility text
+#: modules/wizard/view-wizard-step-home-page.php:77
+#: modules/wizard/view-wizard-step-home-page.php:92
+#: modules/wizard/view-wizard-step-home-page.php:124
+#: modules/wizard/view-wizard-step-languages.php:76
+#: modules/wizard/view-wizard-step-languages.php:91
+#: settings/table-languages.php:133 settings/table-languages.php:152
+msgid "Default language"
+msgstr "Alapértelmezett nyelv"
+
+#: settings/view-tab-lang.php:175
+msgid "Update"
+msgstr "Frissítés"
+
+#: settings/view-tab-lang.php:154
+msgid "Position of the language in the language switcher"
+msgstr "Hányadikként jelenjen meg a nyelv"
+
+#: settings/view-tab-lang.php:123
+msgid "Choose the text direction for the language"
+msgstr "Nyelv írásmódjának kiválasztása"
+
+#: settings/view-tab-lang.php:120
+msgid "right to left"
+msgstr "jobbról balra"
+
+#: settings/view-tab-lang.php:115
+msgid "left to right"
+msgstr "balról jobbra"
+
+#: settings/view-tab-lang.php:110
+msgid "Text direction"
+msgstr "Nyelv írásmódja"
+
+#: settings/view-tab-lang.php:106
+msgid "Language code - preferably 2-letters ISO 639-1  (for example: en)"
+msgstr "Nyelvkód - 2 karakteres ISO 639-1 nyelvkód (pl. hu)"
+
+#: settings/view-tab-lang.php:99
+msgid "Language code"
+msgstr "Nyelvkód"
+
+#: settings/view-tab-lang.php:95
+msgid "WordPress Locale for the language (for example: en_US). You will need to install the .mo file for this language."
+msgstr "WordPress nyelvkód (pl. hu_HU). A nyelvhez tartozó .mo fordítás fájlt kézzel kell telepíteni."
+
+#: settings/view-tab-lang.php:84
+msgid "The name is how it is displayed on your site (for example: English)."
+msgstr "A nyelv teljes neve, ahogy majd a honlapon is megjelenik (pl. Magyar)"
+
+#: settings/view-tab-lang.php:73
+msgid "You can choose a language in the list or directly edit it below."
+msgstr "Kiválasztható egy nyelv, vagy lentebb megadhatók a részletei:"
+
+#: include/widget-languages.php:57 settings/view-tab-lang.php:53
+msgid "Choose a language"
+msgstr "Nyelv kiválasztása"
+
+#: modules/wizard/view-wizard-step-languages.php:55
+#: modules/wizard/view-wizard-step-languages.php:59
+#: settings/view-tab-lang.php:32 settings/view-tab-lang.php:175
+msgid "Add new language"
+msgstr "Új nyelv hozzáadása"
+
+#: settings/view-tab-lang.php:32
+msgid "Edit language"
+msgstr "Nyelv szerkesztése"
+
+#. translators: %1$s is link start tag, %2$s is link end tag.
+#: settings/view-about.php:16
+msgid "Polylang is provided with an extensive %1$sdocumentation%2$s (in English). It includes information on how to set up your multilingual site and use it on a daily basis; FAQs, and documentation for developers to adapt their plugins and themes."
+msgstr "A Polylang kiterjedt %1$sdokumentációval%2$s rendelkezik (angolul). Útmutatót tartalmaz a többnyelvű webhely felállításához és a napi használatához; GYIK és fejlesztőknek szóló dokumentációt tartalmaz a beépülő modulok és a témák adaptálásához."
+
+#: settings/table-string.php:364
+msgid "Filter"
+msgstr "Szűrő"
+
+#: settings/table-string.php:351
+msgid "View all groups"
+msgstr "Összes csoport"
+
+#: admin/view-translations-media.php:13 admin/view-translations-post.php:12
+#: admin/view-translations-term.php:14 admin/view-translations-term.php:21
+#: settings/table-string.php:160
+msgid "Translations"
+msgstr "Fordítások"
+
+#: settings/table-string.php:159
+msgid "Group"
+msgstr "Csoport"
+
+#: settings/table-string.php:158
+msgid "Name"
+msgstr "Név"
+
+#: settings/table-string.php:157
+msgid "String"
+msgstr "Szöveg"
+
+#: settings/table-languages.php:155
+msgid "Posts"
+msgstr "Bejegyzések"
+
+#: settings/table-languages.php:154 settings/view-tab-lang.php:127
+msgid "Flag"
+msgstr "Zászló"
+
+#: settings/table-languages.php:153 settings/view-tab-lang.php:147
+msgid "Order"
+msgstr "Sorrend"
+
+#: settings/table-languages.php:151
+msgid "Code"
+msgstr "Nyelvkód"
+
+#: settings/table-languages.php:150 settings/view-tab-lang.php:88
+msgid "Locale"
+msgstr "WP nyelvkód"
+
+#: settings/table-languages.php:149 settings/view-tab-lang.php:77
+msgid "Full name"
+msgstr "Nyelv teljes neve"
+
+#: settings/table-languages.php:214 settings/table-string.php:313
+msgid "Delete"
+msgstr "Törlés"
+
+#: settings/table-languages.php:213
+msgid "You are about to permanently delete this language. Are you sure?"
+msgstr "Valóban véglegesen töröljük ezt a nyelvet?"
+
+#: modules/sync/settings-sync.php:111
+msgid "Featured image"
+msgstr "Kiemelt kép"
+
+#: modules/sync/settings-sync.php:110
+msgid "Page order"
+msgstr "Oldal sorrend"
+
+#: modules/sync/settings-sync.php:109
+msgid "Page template"
+msgstr "Oldal sablonminta"
+
+#: modules/sync/settings-sync.php:108
+msgid "Page parent"
+msgstr "Szülő oldal"
+
+#: modules/sync/settings-sync.php:107
+msgid "Post format"
+msgstr "Formátum"
+
+#: modules/sync/settings-sync.php:106
+msgid "Published date"
+msgstr "Közzététel időpontja"
+
+#: modules/sync/settings-sync.php:105
+msgid "Sticky posts"
+msgstr "Ragadós bejegyzések"
+
+#: modules/sync/settings-sync.php:104
+msgid "Ping status"
+msgstr "Értesítés (ping) állapot"
+
+#: modules/sync/settings-sync.php:103
+msgid "Comment status"
+msgstr "Hozzászólás állapot"
+
+#: modules/sync/settings-sync.php:102
+msgid "Custom fields"
+msgstr "Egyedi mezők"
+
+#: modules/sync/settings-sync.php:101
+msgid "Taxonomies"
+msgstr "Taxonómiák (kategóriák, címkék)"
+
+#: settings/settings-licenses.php:113 settings/settings-module.php:258
+msgid "Settings saved."
+msgstr "Beállítások elmentve."
+
+#: settings/table-string.php:418
+msgid "Translations updated."
+msgstr "Fordítások frissítve."
+
+#: admin/admin-base.php:123 include/mo.php:21 settings/settings.php:146
+msgid "Strings translations"
+msgstr "Szöveg fordítások"
+
+#: settings/settings.php:116
+msgid "About Polylang"
+msgstr "A Polylang bővítményről"
+
+#: settings/settings.php:194
+msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
+msgstr "A nyelv hozzá lett adva, de a WordPress fordítások (.mo fájlok) ehhez a nyelvhez nem lettek letöltve, ezt kézzel kell megtenni."
+
+#: admin/admin-base.php:454 admin/admin-base.php:472
+msgid "Filters content by language"
+msgstr "Tartalom szűrése nyelv szerint"
+
+#: admin/admin-base.php:445
+msgid "Show all languages"
+msgstr "Minden nyelv"
+
+#: admin/admin-base.php:126 admin/admin.php:104
+#: settings/settings-module.php:120
+msgid "Settings"
+msgstr "Beállítások"
+
+#: admin/admin-strings.php:70
+msgid "Widget text"
+msgstr "Widget szöveg"
+
+#: admin/admin-strings.php:69
+msgid "Widget title"
+msgstr "Widget címe"
+
+#: admin/admin-nav-menu.php:49 include/nav-menu.php:72
+#: include/widget-languages.php:21
+msgid "Language switcher"
+msgstr "Nyelv választó"
+
+#: admin/admin-model.php:288 modules/wizard/wizard.php:486
+msgid "The language must have a name"
+msgstr "Nevet is kell adni a nyelvnek"
+
+#: admin/admin-model.php:281 modules/wizard/wizard.php:485
+msgid "The language code must be unique"
+msgstr "A nyelvkódnak egyedinek kell lennie"
+
+#: admin/admin-model.php:275 modules/wizard/wizard.php:484
+msgid "The language code contains invalid characters"
+msgstr "A nyelvkód hibás karaktert tartalmaz."
+
+#: admin/admin-model.php:270 modules/wizard/wizard.php:483
+msgid "Enter a valid WordPress locale"
+msgstr "WordPress nyelvkód (pl. hu_HU)"
+
+#: settings/settings.php:224
+msgid "Language updated."
+msgstr "Nyelv frissítve."
+
+#: settings/settings.php:209
+msgid "Language deleted."
+msgstr "Nyelv törölve."
+
+#: settings/settings.php:187
+msgid "Language added."
+msgstr "Nyelv hozzáadva."
+
+#: admin/admin-model.php:41 modules/wizard/wizard.php:482
+msgid "Impossible to add the language."
+msgstr "Nem lehetséges a nyelv hozzáadása."
+
+#: include/filters-widgets-options.php:51 include/translated-post.php:118
+msgid "All languages"
+msgstr "Minden nyelv"
+
+#: include/filters-widgets-options.php:66
+msgid "The widget is displayed for:"
+msgstr "Widget megjelenítése ennél a nyelvnél:"
+
+#: admin/admin-filters-term.php:514
+msgid "None"
+msgstr "Nincs"
+
+#: admin/admin-filters-term.php:153 admin/admin-filters-term.php:226
+msgid "Sets the language"
+msgstr "Nyelvek beállítása"
+
+#: settings/table-languages.php:207
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: admin/admin-classic-editor.php:243
+msgid "(no parent)"
+msgstr "(nincs szülő)"
+
+#: admin/admin-base.php:119 admin/admin-base.php:143
+#: admin/admin-classic-editor.php:75 admin/admin-nav-menu.php:72
+#: admin/admin-nav-menu.php:75 admin/admin-nav-menu.php:108
+#: admin/admin-notices.php:110 include/nav-menu.php:71
+#: include/translated-post.php:116
+#: modules/wizard/view-wizard-step-languages.php:29
+#: modules/wizard/wizard.php:498 settings/settings.php:126
+msgid "Languages"
+msgstr "Nyelvek"
+
+#: admin/admin-classic-editor.php:127 admin/admin-filters-columns.php:234
+#: admin/admin-filters-media.php:62 admin/admin-filters-term.php:151
+#: admin/admin-filters-term.php:224 include/translated-post.php:117
+#: modules/wizard/view-wizard-step-languages.php:67
+msgid "Language"
+msgstr "Nyelv"
+
+#: admin/admin-filters-columns.php:220
+msgid "&mdash; No Change &mdash;"
+msgstr "&mdash; Nincs változás &mdash;"

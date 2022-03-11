@@ -8,7 +8,7 @@
  * Plugin Name:       Polylang Connect for Elementor
  * Plugin URI:        https://github.com/creame/connect-polylang-elementor
  * Description:       Connect Polylang with Elementor. Display templates in the correct language, language switcher widget, language visibility conditions and dynamic tags.
- * Version:           2.0.3
+ * Version:           2.0.6
  * Author:            Creame
  * Author URI:        https://crea.me/
  * License:           GPL-2.0-or-later
@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 2.0.0
  */
-define( 'CPEL_PLUGIN_VERSION', '2.0.3' );
+define( 'CPEL_PLUGIN_VERSION', '2.0.6' );
 define( 'CPEL_FILE', __FILE__ );
 define( 'CPEL_DIR', plugin_dir_path( CPEL_FILE ) );
 define( 'CPEL_BASENAME', plugin_basename( CPEL_FILE ) );
@@ -47,22 +47,23 @@ spl_autoload_register(
 		$prefix   = __NAMESPACE__; // project-specific namespace prefix
 		$base_dir = __DIR__ . '/includes'; // base directory for the namespace prefix
 
+		// Does the class use the namespace prefix? No, move to the next registered autoloader
 		$len = strlen( $prefix );
-		if ( strncmp( $prefix, $class, $len ) !== 0 ) { // does the class use the namespace prefix?
-			return; // no, move to the next registered autoloader
+		if ( strncmp( $prefix, $class, $len ) !== 0 ) {
+			return;
 		}
 
 		$relative_class_name = substr( $class, $len );
 
 		// Replace the namespace prefix with the base directory, replace namespace
-		// separators with directory separators in the relative class name, append
-		// with .php and transform CamelCase to lower-dashed
-		$file = str_replace( '\\', '/', $relative_class_name ) . '.php';
+		// separators with directory separators in the relative class name,
+		// append with .php and transform CamelCase to lower-dashed
+		$file = str_replace( '\\', DIRECTORY_SEPARATOR, $relative_class_name );
 		$file = strtolower( preg_replace( '/([a-zA-Z])(?=[A-Z])/', '$1-', $file ) );
-		$file = $base_dir . $file;
+		$path = $base_dir . $file . '.php';
 
-		if ( file_exists( $file ) ) {
-			require $file;
+		if ( file_exists( $path ) ) {
+			require $path;
 		}
 	}
 );

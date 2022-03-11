@@ -79,6 +79,7 @@
 	opacity: 0.5;
 	padding: 10px;
 	outline: none;
+        cursor: pointer;
 }
 
 .cn-close-icon:hover {
@@ -106,6 +107,7 @@
 
 #cookie-notice .cn-button {
 	margin: 0 0 0 10px;
+        display: inline-block;
 }
 #cookie-notice .cn-button:not(.cn-button-custom) {
 	font-family: -apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif;

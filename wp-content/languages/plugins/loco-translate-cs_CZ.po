@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-04 08:00:48+0000\n"
+"PO-Revision-Date: 2022-03-08 14:25:03+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,24 +68,20 @@ msgstr "PO soubor uložen a MO/JSON soubory zkompilovány"
 msgid "JSON compilation failed for %s"
 msgstr "Kompilace souboru JSON selhala pro %s"
 
-#: src/data/Settings.php:179
-msgid "Loco Translate 2.5 adds supports for JSON language pack generation."
-msgstr "Loco Translate 2.5 přidává podporu pro generační JSON jazykový balíček."
-
-#: tpl/admin/config/version.php:75
+#: tpl/admin/config/version.php:74
 msgid "Update Now"
 msgstr "Aktualizovat"
 
 #. translators: Where %s is the full version number of WordPress
-#: tpl/admin/config/version.php:69
+#: tpl/admin/config/version.php:68
 msgid "WordPress %s"
 msgstr "WordPress %s"
 
 #. translators: (1) Name of software, e.g. "WordPress" (2) Version number, e.g.
 #. "5.6"
-#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:72
-msgid "Your version of %1$s is very old. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
-msgstr "Verze %1$s je zastaralá. Doporučujeme aktualizaci aspoň na v%2$s, ale nejlépe na nejnovější stabilní verzi."
+#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:71
+msgid "Your version of %1$s is out of date. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
+msgstr "Vaše verze %1$s je zastaralá. Doporučujeme upgradovat alespoň na v%2$s, ale nejlépe na nejnovější stabilní verzi."
 
 #. translators: Where %s is the full version number of PHP
 #: tpl/admin/config/version.php:49
@@ -244,15 +240,15 @@ msgstr[0] "%s řetězec označen jako přibližný"
 msgstr[1] "%s řetězce označeny jako přibližné"
 msgstr[2] "%s řetězců označeno jako přibližné"
 
-#: tpl/admin/config/apis.php:142
+#: tpl/admin/config/apis.php:121
 msgid "See full disclaimer"
 msgstr "Zobrazit celý text"
 
-#: tpl/admin/config/apis.php:141
+#: tpl/admin/config/apis.php:120
 msgid "Third party services are subject to their own terms of use and may incur costs from the provider"
 msgstr "Služby třetích stran podléhají jejich vlastním podmínkám používání a jejich poskytovatel si může účtovat dodatečné náklady"
 
-#: tpl/admin/config/apis.php:139
+#: tpl/admin/config/apis.php:118
 msgid "Important"
 msgstr "Důležité"
 
@@ -386,7 +382,7 @@ msgstr "Přístup k souboru není povolen"
 msgid "View template"
 msgstr "Zobrazit šablonu"
 
-#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:76
+#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:75
 msgid "Install manually"
 msgstr "Manuální instalace"
 
@@ -572,10 +568,10 @@ msgid "See all core translations"
 msgstr "Zobrazit všechny hlavní překlady"
 
 #: src/admin/bundle/LocaleController.php:130
-#: src/admin/file/EditController.php:166 src/data/Settings.php:180
-#: tpl/admin/common/inc-fsconn.php:16 tpl/admin/common/inc-fsconn.php:41
-#: tpl/admin/config/apis.php:149 tpl/admin/config/prefs.php:45
-#: tpl/admin/config/settings.php:234 tpl/admin/errors/no-backups.php:22
+#: src/admin/file/EditController.php:166 tpl/admin/common/inc-fsconn.php:16
+#: tpl/admin/common/inc-fsconn.php:41 tpl/admin/config/apis.php:128
+#: tpl/admin/config/prefs.php:45 tpl/admin/config/settings.php:234
+#: tpl/admin/errors/no-backups.php:22
 msgid "Documentation"
 msgstr "Dokumentace (anglicky)"
 
@@ -1997,7 +1993,7 @@ msgstr "Šablony"
 msgid "Invalid locale"
 msgstr "Neplatný cílový jazyk"
 
-#: loco.php:143
+#: loco.php:141
 msgid "Loco Translate requires the \"%s\" PHP extension. Ask your hosting provider to install it"
 msgstr "Loco vyžaduje PHP rozšíření „%s“. Požádejte svůj webhosting o jeho instalaci"
 
@@ -2020,7 +2016,7 @@ msgstr "Filtrovat překlady"
 msgid "Template file"
 msgstr "Soubor šablony"
 
-#: tpl/admin/config/apis.php:148 tpl/admin/config/prefs.php:44
+#: tpl/admin/config/apis.php:127 tpl/admin/config/prefs.php:44
 #: tpl/admin/config/settings.php:233
 msgid "Save settings"
 msgstr "Uložit nastavení"

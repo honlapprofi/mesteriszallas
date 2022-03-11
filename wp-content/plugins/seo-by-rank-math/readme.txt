@@ -5,7 +5,7 @@ Tags: seo, sitemap, google search console, schema, redirection, WordPress SEO
 Tested up to: 5.9
 Requires at least: 5.6
 Requires PHP: 7.2
-Stable tag: 1.0.82.1
+Stable tag: 1.0.84
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -580,29 +580,15 @@ Please drop us an email at support@rankmath.com and we would be more than happy 
 
 == Changelog ==
 
-= 1.0.82.1 [Feb 11, 2022] =
-* Fixed: WooCommerce Variable products with the query string in URL were not working well when the [Remove Product Base](https://rankmath.com/kb/general-settings/#remove-base) option was enabled
-
-= 1.0.82 [Feb 09, 2022] =
-* Added: [New options](https://i.rankmath.com/LoMD3n) to debug the IndexNow API related issues
-* Added: Support for Cyrillic characters in the Content Analysis, now languages like Russian are supported
-* Added: Support for ImageMagick extension
-* Added: [New filter](https://rankmath.com/kb/filters-hooks-api-developer/#change-sitemap-caching-mode) to change the Sitemap caching method
-* Improved: Made several significant code improvements in the Analytics Module that have made the plugin even FASTER and lighter
-* Improved: Made several improvements in [Content AI](https://rankmath.com/content-ai/) to make it easy to understand
-* Improved: Plugin performance by removing duplicate queries
-* Improved: Don't submit `noindex` posts to the [IndexNow API](https://rankmath.com/kb/how-to-use-indexnow/) after updating the post
-* Improved: Warning shown below the Thumbnail Overlay field
-* Fixed: JS errors in Gutenberg editor after disabling the PRO version
-* Fixed: Content analysis was not analyzing the main post content on the pages that were using Divi's dynamic Header & Footer templates
-* Fixed: PHP warning on Divi's frontend editor when WP File Manager plugin was active
-* Fixed: Searching for encoded [404 URLs](https://rankmath.com/kb/advanced-404-monitor/) was not working
-* Fixed: Too many redirections error on some setups when [Remove Product Base](https://rankmath.com/kb/general-settings/#remove-base) option was enabled
-* Fixed: Editing a Focus Keyword was not working
-* Fixed: Content AI's [Recommended keywords](https://rankmath.com/kb/how-to-use-content-ai/#keywords) were not detecting accented characters in the Content area
-* Fixed: SEO panel was getting closed after removing the Focus keyword in the Divi Page Builder
-* Fixed: [Slack sharing](https://rankmath.com/kb/slack-enhanced-sharing/) was showing the wrong product price for the Product variant
-* Fixed: PHP errors on some sites
-* Removed: [Alexa Verification field](https://rankmath.com/kb/verify-your-site-with-alexa/#how-to-set-up-your-site-on-alexa) from the General Settings as it is no longer used
+= 1.0.84 [Mar 09, 2022] =
+* Added: [HUGE!] [Google URL Inspection API Integration](https://rankmath.com/kb/url-inspection-api-integration/) in our Analytics Module, now you can see current Index Staus, Earned Rich Results, Errors & Warnings from Google directly in your WordPress backend!
+* Improved: [Keyword in URL](https://rankmath.com/kb/score-100-in-tests/#focus-keyword-in-the-url-primary-focus-keyword-only) test now detects the Focus Keyword in the parent page slug and domain name
+* Improved: Made several code improvements
+* Fixed: [404 Monitor](https://rankmath.com/kb/advanced-404-monitor/) was not working on the Full Site Editing sites
+* Fixed: [Thumbnail Overlay](https://rankmath.com/kb/meta-box-social-tab/#add-icon-overlay-to-thumbnails) option was not working on some setups
+* Fixed: SEO data was not updating in the Divi Page Builder's editor on the sub-folder installation
+* Fixed: [SERP Preview](https://rankmath.com/kb/general-tab/#the-preview-section) was showing text from the commented code
+* Fixed: The `startDate` field in [Event schema](https://rankmath.com/kb/rich-snippets/#event) was not accepting the variables
+* Fixed: [Content AI](https://rankmath.com/content-ai/) style on RTL sites
 
 Full changelog can be found here - **[Rank Math SEO changelog](https://rankmath.com/changelog/?utm_source=Plugin&utm_medium=Changelog&utm_campaign=WP)**

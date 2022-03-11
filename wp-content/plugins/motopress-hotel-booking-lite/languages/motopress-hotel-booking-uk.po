@@ -1,4 +1,4 @@
-# Copyright (C) 2021 MotoPress
+# Copyright (C) 2022 MotoPress
 # This file is distributed under the same license as the Hotel Booking plugin.
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-22T20:11:18+00:00\n"
-"PO-Revision-Date: 2021-12-22 20:52\n"
+"POT-Creation-Date: 2022-02-16T09:10:20+00:00\n"
+"PO-Revision-Date: 2022-02-21 07:39\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: motopress-hotel-booking\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
@@ -53,12 +53,12 @@ msgctxt "Post Status"
 msgid "Auto Draft"
 msgstr "Авточернетка"
 
-#: functions.php:180
+#: functions.php:192
 msgctxt "Zero price"
 msgid "Free"
 msgstr "Безкоштовно"
 
-#: functions.php:211
+#: functions.php:223
 msgctxt "Ex: $99 for 2 nights"
 msgid "per night"
 msgid_plural "for %d nights"
@@ -68,11 +68,11 @@ msgstr[2] "за %d діб"
 msgstr[3] ""
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:565
+#: functions.php:577
 msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr "Ви використовуєте дві версії плагіну Hotel Booking одночасно. Будь ласка, <a href=\"%s\">деактивуйте одну з них</a>."
 
-#: functions.php:583
+#: functions.php:595
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr "<a href=\"%s\">Перейдіть на Преміум версію</a>, щоб скористатися цією функцією."
 
@@ -93,6 +93,54 @@ msgstr "Source ID не зазначено."
 #: includes/admin/sync-logs-list-table.php:83
 msgid "Error"
 msgstr "Помилка"
+
+#: includes/admin/customers-list-table.php:133
+#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
+#: includes/admin/sync-rooms-list-table.php:140
+#: includes/post-types/room-type-cpt.php:319
+#: templates/account/bookings.php:78
+msgid "View"
+msgstr "Переглянути"
+
+#: includes/admin/customers-list-table.php:137
+#: includes/admin/fields/abstract-complex-field.php:25
+#: includes/admin/fields/rules-list-field.php:38
+#: includes/admin/sync-rooms-list-table.php:141
+msgid "Delete"
+msgstr "Видалити"
+
+#: includes/admin/customers-list-table.php:194
+#: includes/post-types/attributes-cpt.php:293
+msgid "Name"
+msgstr "Ім’я"
+
+#: includes/admin/customers-list-table.php:195
+#: includes/admin/menu-pages/customers-menu-page.php:189
+#: includes/ajax.php:1069
+#: includes/bundles/customer-bundle.php:101
+#: includes/bundles/export-bundle.php:31
+#: includes/post-types/booking-cpt.php:89
+#: includes/post-types/payment-cpt.php:242
+#: includes/views/shortcodes/checkout-view.php:560
+#: templates/account/account-details.php:34
+msgid "Email"
+msgstr "Адреса електронної пошти"
+
+#: includes/admin/customers-list-table.php:196
+#: includes/admin/menus.php:71
+#: includes/admin/menus.php:72
+#: includes/post-types/booking-cpt.php:200
+#: includes/shortcodes/account-shortcode.php:217
+msgid "Bookings"
+msgstr "Бронювання"
+
+#: includes/admin/customers-list-table.php:197
+msgid "Date Registered"
+msgstr "Дата реєстрації"
+
+#: includes/admin/customers-list-table.php:198
+msgid "Last Active"
+msgstr "Остання активність"
 
 #. translators: Terms are variations for Attributes and bear no relation to the Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:16
@@ -120,7 +168,7 @@ msgid "Configure terms"
 msgstr "Налаштувати варіанти"
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:20
-#: includes/ajax.php:1051
+#: includes/ajax.php:1054
 #: includes/post-types/reserved-room-cpt.php:22
 msgid "Reserved Accommodations"
 msgstr "Заброньовані помешкання"
@@ -292,12 +340,6 @@ msgstr "Активні помешкання:"
 msgid "Add"
 msgstr "Додати"
 
-#: includes/admin/fields/abstract-complex-field.php:25
-#: includes/admin/fields/rules-list-field.php:38
-#: includes/admin/sync-rooms-list-table.php:141
-msgid "Delete"
-msgstr "Видалити"
-
 #: includes/admin/fields/amount-field.php:75
 msgid "Per adult:"
 msgstr "За дорослого:"
@@ -316,12 +358,14 @@ msgstr "За дитину:"
 
 #: includes/admin/fields/complex-horizontal-field.php:49
 #: includes/admin/fields/rules-list-field.php:39
+#: templates/account/bookings.php:22
+#: templates/account/bookings.php:77
 #: templates/edit-booking/edit-reserved-rooms.php:47
 msgid "Actions"
 msgstr "Дії"
 
 #: includes/admin/fields/complex-vertical-field.php:17
-#: includes/admin/menu-pages/settings-menu-page.php:303
+#: includes/admin/menu-pages/settings-menu-page.php:333
 #: includes/settings/main-settings.php:25
 #: includes/settings/main-settings.php:43
 msgid "Default"
@@ -329,15 +373,17 @@ msgstr "За замовчуванням"
 
 #: includes/admin/fields/dynamic-select-field.php:61
 #: includes/admin/fields/page-select-field.php:16
+#: includes/admin/menu-pages/customers-menu-page.php:242
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:37
-#: includes/admin/menu-pages/settings-menu-page.php:231
+#: includes/admin/menu-pages/settings-menu-page.php:237
 #: includes/post-types/booking-cpt.php:101
 #: includes/post-types/booking-cpt.php:146
 #: includes/post-types/payment-cpt.php:213
 #: includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:185
-#: includes/views/shortcodes/checkout-view.php:206
+#: includes/views/shortcodes/checkout-view.php:241
+#: includes/views/shortcodes/checkout-view.php:262
+#: templates/account/account-details.php:51
 #: templates/edit-booking/add-room-popup.php:30
 #: templates/edit-booking/add-room-popup.php:38
 msgid "— Select —"
@@ -396,7 +442,7 @@ msgstr "Редагувати"
 
 #: includes/admin/fields/rules-list-field.php:37
 #: includes/admin/sync-rooms-list-table.php:75
-#: includes/ajax.php:949
+#: includes/ajax.php:952
 #: includes/script-managers/admin-script-manager.php:92
 msgid "Done"
 msgstr "Готово"
@@ -420,7 +466,7 @@ msgstr "Немає"
 
 #: includes/admin/fields/time-picker-field.php:13
 msgid "HH:MM"
-msgstr ""
+msgstr "HH:MM"
 
 #: includes/admin/fields/total-price-field.php:18
 msgid "Recalculate Total Price"
@@ -450,7 +496,7 @@ msgstr "Додайте тривалість перебування"
 #: includes/post-types/room-type-cpt.php:277
 #: includes/views/booking-view.php:93
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:177
+#: includes/views/shortcodes/checkout-view.php:233
 #: template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
 #: templates/shortcodes/search/search-form.php:74
@@ -574,13 +620,13 @@ msgstr "Нове бронювання"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:61
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:26
 #: includes/admin/menu-pages/shortcodes-menu-page.php:354
-#: includes/ajax.php:1037
+#: includes/ajax.php:1040
 #: includes/bundles/export-bundle.php:18
 #: includes/post-types/booking-cpt.php:38
 #: includes/post-types/payment-cpt.php:140
 #: assets/blocks/blocks.js:1066
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:63
 msgid "Check-in / Check-out"
@@ -589,7 +635,7 @@ msgstr "Прибуття / Виїзд "
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:64
 #: includes/views/booking-view.php:95
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:179
+#: includes/views/shortcodes/checkout-view.php:235
 #: template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
@@ -606,8 +652,8 @@ msgstr "Інформація про клієнта"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:66
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:16
 #: includes/post-types/rate-cpt.php:52
-#: includes/post-types/service-cpt.php:131
-#: includes/post-types/service-cpt.php:135
+#: includes/post-types/service-cpt.php:133
+#: includes/post-types/service-cpt.php:137
 #: includes/views/single-service-view.php:18
 #: includes/widgets/rooms-widget.php:194
 #: assets/blocks/blocks.js:360
@@ -636,7 +682,7 @@ msgstr "Помешкання"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:95
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:55
+#: includes/admin/menu-pages/create-booking/booking-step.php:62
 #: includes/bookings-calendar.php:525
 #: includes/script-managers/admin-script-manager.php:96
 msgid "Booking #%s"
@@ -696,6 +742,7 @@ msgid "Imported %s"
 msgstr "Імпортовано %s"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:27
+#: includes/admin/menu-pages/customers-menu-page.php:281
 msgid "Customer"
 msgstr "Покупець"
 
@@ -717,6 +764,8 @@ msgstr "Вартість"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:30
 #: includes/post-types/booking-cpt.php:201
+#: templates/account/bookings.php:18
+#: templates/account/bookings.php:64
 msgid "Booking"
 msgstr "Бронювання"
 
@@ -815,7 +864,7 @@ msgstr "Тип ліжка"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:330
 #: includes/post-types/room-cpt.php:25
 #: includes/post-types/room-cpt.php:35
-#: includes/wizard.php:99
+#: includes/wizard.php:100
 msgid "Accommodations"
 msgstr "Помешкання"
 
@@ -882,41 +931,41 @@ msgid "Services are extra offers that you can sell or give for free. E.g. Thai m
 msgstr "Послуги - це сервіси, які ви можете продавати додатково або пропонувати безкоштовно. Наприклад, тайський масаж, трансфер, нагляд за дитиною. Гості можуть замовити їх додатково на сторінці оформлення бронювання."
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:17
-#: includes/post-types/service-cpt.php:147
+#: includes/post-types/service-cpt.php:149
 msgid "Periodicity"
 msgstr "Періодичність"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:18
-#: includes/post-types/service-cpt.php:196
+#: includes/post-types/service-cpt.php:198
 msgid "Charge"
 msgstr "Оплата"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:41
 #: includes/entities/service.php:203
-#: includes/post-types/service-cpt.php:150
+#: includes/post-types/service-cpt.php:152
 msgid "Per Day"
 msgstr "За день"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:43
-#: includes/post-types/service-cpt.php:151
+#: includes/post-types/service-cpt.php:153
 msgid "Guest Choice"
 msgstr "На вибір гостя"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:45
 #: includes/entities/service.php:207
-#: includes/post-types/service-cpt.php:149
+#: includes/post-types/service-cpt.php:151
 msgid "Once"
 msgstr "Один раз"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:213
-#: includes/post-types/service-cpt.php:199
+#: includes/post-types/service-cpt.php:201
 msgid "Per Guest"
 msgstr "За гостя"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:215
-#: includes/post-types/service-cpt.php:198
+#: includes/post-types/service-cpt.php:200
 msgid "Per Accommodation"
 msgstr "За помешкання"
 
@@ -931,13 +980,14 @@ msgstr "Правила бронювання збережено."
 #: includes/admin/menu-pages/booking-rules-menu-page.php:34
 #: includes/admin/menu-pages/booking-rules-menu-page.php:444
 #: includes/admin/menu-pages/booking-rules-menu-page.php:448
-#: includes/admin/menu-pages/settings-menu-page.php:334
+#: includes/admin/menu-pages/settings-menu-page.php:364
 msgid "Booking Rules"
 msgstr "Правила бронювання"
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:71
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:55
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:118
+#: templates/account/account-details.php:94
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
@@ -1096,33 +1146,33 @@ msgstr "Очистити результати пошуку"
 #: includes/admin/menu-pages/create-booking-menu-page.php:162
 #: includes/admin/menu-pages/edit-booking-menu-page.php:55
 msgid "Note: booking rules are disabled in the plugin settings and are not taken into account."
-msgstr ""
+msgstr "Примітка: правила бронювання відключені в налаштуваннях плагіна і не враховуються."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:39
-#: includes/shortcodes/checkout-shortcode/step-booking.php:475
+#: includes/admin/menu-pages/create-booking/booking-step.php:46
+#: includes/shortcodes/checkout-shortcode/step-booking.php:485
 msgid "Unable to create booking. Please try again."
 msgstr "Неможливо створити бронювання. Будь ласка, спробуйте ще раз."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:63
-#: includes/shortcodes/checkout-shortcode/step-booking.php:107
+#: includes/admin/menu-pages/create-booking/booking-step.php:70
+#: includes/shortcodes/checkout-shortcode/step-booking.php:110
 msgid "Booking is blocked due to maintenance reason. Please try again later."
 msgstr "Бронювання неможливе через технічне обслуговування. Будь ласка, спробуйте пізніше."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:104
-#: includes/admin/menu-pages/create-booking/booking-step.php:244
+#: includes/admin/menu-pages/create-booking/booking-step.php:111
+#: includes/admin/menu-pages/create-booking/booking-step.php:251
 #: includes/admin/menu-pages/create-booking/checkout-step.php:105
 #: includes/admin/menu-pages/edit-booking/booking-control.php:34
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:50
 #: includes/admin/menu-pages/edit-booking/summary-control.php:45
-#: includes/shortcodes/checkout-shortcode/step-booking.php:176
-#: includes/shortcodes/checkout-shortcode/step-booking.php:335
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:131
+#: includes/shortcodes/checkout-shortcode/step-booking.php:186
+#: includes/shortcodes/checkout-shortcode/step-booking.php:345
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:149
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "Помешкань для бронювання не обрано."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:135
+#: includes/admin/menu-pages/create-booking/booking-step.php:113
+#: includes/admin/menu-pages/create-booking/booking-step.php:142
 #: includes/admin/menu-pages/create-booking/checkout-step.php:107
 #: includes/admin/menu-pages/create-booking/checkout-step.php:126
 #: includes/admin/menu-pages/create-booking/checkout-step.php:149
@@ -1132,79 +1182,79 @@ msgstr "Помешкань для бронювання не обрано."
 msgid "Selected accommodations are not valid."
 msgstr "Неправильно обрано помешкання."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:130
+#: includes/admin/menu-pages/create-booking/booking-step.php:137
 #: includes/admin/menu-pages/create-booking/checkout-step.php:121
 #: includes/admin/menu-pages/create-booking/step.php:147
-#: includes/ajax.php:591
-#: includes/shortcodes/checkout-shortcode/step-booking.php:190
-#: includes/shortcodes/checkout-shortcode/step-booking.php:196
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:146
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:158
+#: includes/ajax.php:594
+#: includes/shortcodes/checkout-shortcode/step-booking.php:200
+#: includes/shortcodes/checkout-shortcode/step-booking.php:206
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:166
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:178
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "Тип помешкання недійсний."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:140
-#: includes/admin/menu-pages/create-booking/booking-step.php:161
-#: includes/ajax.php:599
-#: includes/shortcodes/checkout-shortcode/step-booking.php:202
-#: includes/shortcodes/checkout-shortcode/step-booking.php:218
-#: includes/shortcodes/checkout-shortcode/step-booking.php:375
-#: includes/shortcodes/checkout-shortcode/step-booking.php:387
+#: includes/admin/menu-pages/create-booking/booking-step.php:147
+#: includes/admin/menu-pages/create-booking/booking-step.php:168
+#: includes/ajax.php:602
+#: includes/shortcodes/checkout-shortcode/step-booking.php:212
+#: includes/shortcodes/checkout-shortcode/step-booking.php:228
+#: includes/shortcodes/checkout-shortcode/step-booking.php:385
+#: includes/shortcodes/checkout-shortcode/step-booking.php:397
 #: includes/utils/parse-utils.php:253
 msgid "Rate is not valid."
 msgstr "Тариф недійсний."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:166
+#: includes/admin/menu-pages/create-booking/booking-step.php:173
 #: includes/admin/menu-pages/create-booking/step.php:165
 #: includes/admin/menu-pages/create-booking/step.php:169
-#: includes/ajax.php:472
-#: includes/shortcodes/checkout-shortcode/step-booking.php:224
+#: includes/ajax.php:475
+#: includes/shortcodes/checkout-shortcode/step-booking.php:234
 #: includes/shortcodes/search-results-shortcode.php:539
 #: includes/utils/parse-utils.php:102
 #: includes/utils/parse-utils.php:257
 msgid "Adults number is not valid."
 msgstr "Неправильна кількість дорослих."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:171
+#: includes/admin/menu-pages/create-booking/booking-step.php:178
 #: includes/admin/menu-pages/create-booking/step.php:187
 #: includes/admin/menu-pages/create-booking/step.php:191
-#: includes/ajax.php:488
-#: includes/shortcodes/checkout-shortcode/step-booking.php:230
+#: includes/ajax.php:491
+#: includes/shortcodes/checkout-shortcode/step-booking.php:240
 #: includes/shortcodes/search-results-shortcode.php:555
 #: includes/utils/parse-utils.php:127
 #: includes/utils/parse-utils.php:261
 msgid "Children number is not valid."
 msgstr "Неправильна кількість дітей."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:176
-#: includes/ajax.php:608
-#: includes/shortcodes/checkout-shortcode/step-booking.php:235
+#: includes/admin/menu-pages/create-booking/booking-step.php:183
+#: includes/ajax.php:611
+#: includes/shortcodes/checkout-shortcode/step-booking.php:245
 #: includes/utils/parse-utils.php:265
 msgid "The total number of guests is not valid."
 msgstr "Неправильна загальна кількість гостей."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:181
+#: includes/admin/menu-pages/create-booking/booking-step.php:188
 #: includes/admin/menu-pages/create-booking/checkout-step.php:136
-#: includes/shortcodes/checkout-shortcode/step-booking.php:240
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:189
+#: includes/shortcodes/checkout-shortcode/step-booking.php:250
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:209
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr "Обрані дати не відповідають правилам бронювання для %s"
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:232
+#: includes/admin/menu-pages/create-booking/booking-step.php:239
 #: includes/admin/menu-pages/create-booking/checkout-step.php:141
 #: includes/utils/parse-utils.php:197
 msgid "Accommodations are not available."
 msgstr "Помешкання недоступні."
 
 #: includes/admin/menu-pages/create-booking/checkout-step.php:131
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:184
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:204
 msgid "There are no rates for requested dates."
 msgstr "Немає тарифів на ці дати."
 
 #: includes/admin/menu-pages/create-booking/results-step.php:145
-#: includes/wizard.php:90
+#: includes/wizard.php:91
 msgid "Search Results"
 msgstr "Результати пошуку"
 
@@ -1218,46 +1268,166 @@ msgid "Search parameters are not set."
 msgstr "Параметри пошуку не встановлено."
 
 #: includes/admin/menu-pages/create-booking/step.php:106
-#: includes/ajax.php:439
+#: includes/ajax.php:442
 #: includes/script-managers/public-script-manager.php:244
-#: includes/shortcodes/checkout-shortcode/step.php:42
+#: includes/shortcodes/checkout-shortcode/step.php:50
 #: includes/shortcodes/search-results-shortcode.php:570
 #: includes/utils/parse-utils.php:38
 msgid "Check-in date is not valid."
 msgstr "Неправильна дата прибуття."
 
 #: includes/admin/menu-pages/create-booking/step.php:108
-#: includes/shortcodes/checkout-shortcode/step.php:45
+#: includes/shortcodes/checkout-shortcode/step.php:53
 #: includes/shortcodes/search-results-shortcode.php:573
 #: includes/utils/parse-utils.php:40
 msgid "Check-in date cannot be earlier than today."
 msgstr "Дата прибуття не може бути раніше, ніж сьогодні."
 
 #: includes/admin/menu-pages/create-booking/step.php:127
-#: includes/ajax.php:456
+#: includes/ajax.php:459
 #: includes/script-managers/public-script-manager.php:245
-#: includes/shortcodes/checkout-shortcode/step.php:69
+#: includes/shortcodes/checkout-shortcode/step.php:84
 #: includes/shortcodes/search-results-shortcode.php:591
 #: includes/utils/parse-utils.php:71
 msgid "Check-out date is not valid."
 msgstr "Неправильна дата виїзду."
 
 #: includes/admin/menu-pages/create-booking/step.php:129
-#: includes/ajax.php:1181
-#: includes/ajax.php:1189
-#: includes/ajax.php:1250
-#: includes/shortcodes/checkout-shortcode/step.php:72
+#: includes/ajax.php:1184
+#: includes/ajax.php:1192
+#: includes/ajax.php:1253
+#: includes/shortcodes/checkout-shortcode/step.php:87
 #: includes/shortcodes/search-results-shortcode.php:598
 #: includes/utils/parse-utils.php:73
 msgid "Nothing found. Please try again with different search parameters."
 msgstr "Нічого не знайдено. Повторіть спробу з іншими параметрами пошуку."
+
+#: includes/admin/menu-pages/customers-menu-page.php:51
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Вибачте, вам не дозволено доступ до цієї сторінки."
+
+#: includes/admin/menu-pages/customers-menu-page.php:142
+msgid "User ID"
+msgstr "ID користувача"
+
+#: includes/admin/menu-pages/customers-menu-page.php:153
+#: templates/account/account-details.php:30
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#: includes/admin/menu-pages/customers-menu-page.php:165
+#: includes/ajax.php:1061
+#: includes/bundles/customer-bundle.php:83
+#: includes/bundles/export-bundle.php:29
+#: includes/post-types/booking-cpt.php:77
+#: includes/post-types/payment-cpt.php:228
+#: includes/views/shortcodes/checkout-view.php:538
+#: templates/account/account-details.php:22
+msgid "First Name"
+msgstr "Ім’я"
+
+#: includes/admin/menu-pages/customers-menu-page.php:177
+#: includes/ajax.php:1065
+#: includes/bundles/customer-bundle.php:92
+#: includes/bundles/export-bundle.php:30
+#: includes/post-types/booking-cpt.php:83
+#: includes/post-types/payment-cpt.php:235
+#: includes/views/shortcodes/checkout-view.php:549
+#: templates/account/account-details.php:26
+msgid "Last Name"
+msgstr "Прізвище"
+
+#: includes/admin/menu-pages/customers-menu-page.php:201
+#: includes/ajax.php:1073
+#: includes/bundles/customer-bundle.php:110
+#: includes/bundles/export-bundle.php:32
+#: includes/post-types/booking-cpt.php:95
+#: includes/post-types/payment-cpt.php:249
+#: includes/views/shortcodes/checkout-view.php:571
+#: templates/account/account-details.php:38
+msgid "Phone"
+msgstr "Телефон"
+
+#: includes/admin/menu-pages/customers-menu-page.php:213
+#: includes/ajax.php:1081
+#: includes/bundles/customer-bundle.php:128
+#: includes/bundles/export-bundle.php:34
+#: includes/post-types/booking-cpt.php:108
+#: includes/views/shortcodes/checkout-view.php:605
+#: templates/account/account-details.php:42
+msgid "Address"
+msgstr "Адреса  "
+
+#: includes/admin/menu-pages/customers-menu-page.php:225
+#: includes/ajax.php:1089
+#: includes/bundles/customer-bundle.php:146
+#: includes/bundles/export-bundle.php:36
+#: includes/post-types/booking-cpt.php:120
+#: includes/post-types/payment-cpt.php:284
+#: includes/views/shortcodes/checkout-view.php:627
+#: templates/account/account-details.php:64
+msgid "State / County"
+msgstr "Область / Район"
+
+#: includes/admin/menu-pages/customers-menu-page.php:237
+#: includes/ajax.php:1077
+#: includes/bundles/export-bundle.php:33
+#: includes/post-types/booking-cpt.php:102
+#: includes/post-types/payment-cpt.php:256
+#: templates/account/account-details.php:46
+msgid "Country"
+msgstr "Країна"
+
+#: includes/admin/menu-pages/customers-menu-page.php:250
+#: includes/ajax.php:1085
+#: includes/bundles/customer-bundle.php:137
+#: includes/bundles/export-bundle.php:35
+#: includes/post-types/booking-cpt.php:114
+#: includes/post-types/payment-cpt.php:277
+#: includes/views/shortcodes/checkout-view.php:616
+#: templates/account/account-details.php:68
+msgid "City"
+msgstr "Місто"
+
+#: includes/admin/menu-pages/customers-menu-page.php:262
+#: includes/ajax.php:1093
+#: includes/bundles/customer-bundle.php:155
+#: includes/bundles/export-bundle.php:37
+#: includes/post-types/booking-cpt.php:126
+#: includes/views/shortcodes/checkout-view.php:638
+#: templates/account/account-details.php:72
+msgid "Postcode"
+msgstr "Поштовий індекс"
+
+#: includes/admin/menu-pages/customers-menu-page.php:296
+msgid "Customer data updated."
+msgstr "Дані клієнта оновлено."
+
+#: includes/admin/menu-pages/customers-menu-page.php:302
+msgid "User account updated."
+msgstr "Акаунт користувача оновлено."
+
+#: includes/admin/menu-pages/customers-menu-page.php:309
+msgid "Edit User Profile"
+msgstr "Редагувати профіль користувача"
+
+#: includes/admin/menu-pages/customers-menu-page.php:341
+#: includes/admin/menu-pages/i-cal-menu-page.php:148
+msgid "Update"
+msgstr "Оновлення"
+
+#: includes/admin/menu-pages/customers-menu-page.php:347
+#: includes/admin/menu-pages/customers-menu-page.php:360
+#: includes/admin/menu-pages/customers-menu-page.php:364
+msgid "Customers"
+msgstr "Клієнти"
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:66
 msgid "The booking is not set."
 msgstr "Бронювання не встановлено."
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:74
-#: includes/ajax.php:1024
+#: includes/ajax.php:1027
 msgid "The booking not found."
 msgstr "Бронювання не знайдено."
 
@@ -1291,7 +1461,7 @@ msgid "You cannot edit the imported booking. Please update the source booking an
 msgstr "Неможливо редагувати імпортоване бронювання. Будь ласка, оновіть джерело бронювання та синхронізуйте календарі знов."
 
 #: includes/admin/menu-pages/edit-booking/booking-control.php:22
-#: includes/ajax.php:190
+#: includes/ajax.php:193
 msgid "Request does not pass security verification. Please refresh the page and try one more time."
 msgstr "Запит не пройшов перевірку безпеки. Будь ласка, оновіть сторінку та спробуйте ще раз."
 
@@ -1335,7 +1505,7 @@ msgstr "— Додати нове —"
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:788
 msgid "Extensions"
 msgstr "Розширення"
 
@@ -1407,10 +1577,6 @@ msgstr "Синхронізувати всі зовнішні календарі"
 #: includes/admin/menu-pages/i-cal-menu-page.php:121
 msgid "Sync your bookings across all online channels like Booking.com, TripAdvisor, Airbnb etc. via iCalendar file format."
 msgstr "Синхронізуйте усі бронювання сайту з онлайн-платформами оренди житла, такими як Booking.com, TripAdvisor, Airbnb тощо, котрі підтримують формат файлу iCalendar."
-
-#: includes/admin/menu-pages/i-cal-menu-page.php:148
-msgid "Update"
-msgstr "Оновлення"
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:212
 msgid "Calendar URL"
@@ -1591,12 +1757,6 @@ msgstr[1] "%s помешкання згенеровано"
 msgstr[2] "%s помешкань згенеровано"
 msgstr[3] ""
 
-#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
-#: includes/admin/sync-rooms-list-table.php:140
-#: includes/post-types/room-type-cpt.php:319
-msgid "View"
-msgstr "Переглянути"
-
 #: includes/admin/menu-pages/settings-menu-page.php:54
 msgid "General"
 msgstr "Загальне"
@@ -1629,42 +1789,50 @@ msgstr "загальні положення та умови"
 msgid "If you define a \"Terms\" page the customer will be asked if they accept them when checking out."
 msgstr "Якщо ви визначите сторінку \"Умови\", покупця буде запропоновано прийняти їх перед оформленням замовлення."
 
-#: includes/admin/menu-pages/settings-menu-page.php:84
+#: includes/admin/menu-pages/settings-menu-page.php:80
+msgid "My Account Page"
+msgstr "Сторінка Мій акаунт"
+
+#: includes/admin/menu-pages/settings-menu-page.php:81
+msgid "Select a page to display user account. Use the customer account shortcode on this page."
+msgstr "Виберіть сторінку, щоб показати акаунт користувача. Використовуйте шорткод акаунта клієнта на цій сторінці."
+
+#: includes/admin/menu-pages/settings-menu-page.php:90
 msgid "Misc"
 msgstr "Різне"
 
-#: includes/admin/menu-pages/settings-menu-page.php:89
+#: includes/admin/menu-pages/settings-menu-page.php:95
 msgid "Square Units"
 msgstr "Квадратні одиниці"
 
-#: includes/admin/menu-pages/settings-menu-page.php:95
+#: includes/admin/menu-pages/settings-menu-page.php:101
 #: includes/post-types/payment-cpt.php:190
 msgid "Currency"
 msgstr "Валюта"
 
-#: includes/admin/menu-pages/settings-menu-page.php:101
+#: includes/admin/menu-pages/settings-menu-page.php:107
 msgid "Currency Position"
 msgstr "Місце значка валюти"
 
-#: includes/admin/menu-pages/settings-menu-page.php:107
+#: includes/admin/menu-pages/settings-menu-page.php:113
 msgid "Datepicker Date Format"
 msgstr "Формат вибору дати"
 
-#: includes/admin/menu-pages/settings-menu-page.php:113
-#: includes/emails/templaters/email-templater.php:135
+#: includes/admin/menu-pages/settings-menu-page.php:119
+#: includes/emails/templaters/email-templater.php:140
 msgid "Check-out Time"
 msgstr "Час виїзду"
 
-#: includes/admin/menu-pages/settings-menu-page.php:118
-#: includes/emails/templaters/email-templater.php:131
+#: includes/admin/menu-pages/settings-menu-page.php:124
+#: includes/emails/templaters/email-templater.php:136
 msgid "Check-in Time"
 msgstr "Час прибуття"
 
-#: includes/admin/menu-pages/settings-menu-page.php:123
+#: includes/admin/menu-pages/settings-menu-page.php:129
 msgid "Bed Types"
 msgstr "Тип ліжка"
 
-#: includes/admin/menu-pages/settings-menu-page.php:128
+#: includes/admin/menu-pages/settings-menu-page.php:134
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:124
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:189
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:251
@@ -1674,15 +1842,15 @@ msgstr "Тип ліжка"
 msgid "Type"
 msgstr "Тип"
 
-#: includes/admin/menu-pages/settings-menu-page.php:132
+#: includes/admin/menu-pages/settings-menu-page.php:138
 msgid "Add Bed Type"
 msgstr "Додати тип ліжка"
 
-#: includes/admin/menu-pages/settings-menu-page.php:137
+#: includes/admin/menu-pages/settings-menu-page.php:143
 msgid "Show Lowest Price for"
 msgstr "Показати найнижчу ціну в межах"
 
-#: includes/admin/menu-pages/settings-menu-page.php:138
+#: includes/admin/menu-pages/settings-menu-page.php:144
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:146
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:212
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:273
@@ -1690,341 +1858,361 @@ msgstr "Показати найнижчу ціну в межах"
 msgid "days"
 msgstr "дня(ів)"
 
-#: includes/admin/menu-pages/settings-menu-page.php:142
+#: includes/admin/menu-pages/settings-menu-page.php:148
 msgid "Lowest price of accommodation for selected number of days if check-in and check-out dates are not set. Example: set 0 to display today's lowest price, set 7 to display the lowest price for the next week."
 msgstr "Цією цифрою ви задаєте діапазон днів, з якого буде автоматично визначено найнижчу вартість помешкання для відображення на сайті, якщо дати прибуття та від'їзду не обрані. Наприклад: оберіть 0, щоб показати найнижчу вартість на момент пошуку; оберіть 7, щоб показати найнижчу вартість в межах наступного тижня (семи днів)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:146
+#: includes/admin/menu-pages/settings-menu-page.php:152
 msgid "Enable search form to recommend the best set of accommodations according to a number of guests."
 msgstr "Дозволити формі пошуку рекомендувати найкращі помешкання відповідно до обраної кількості гостей."
 
-#: includes/admin/menu-pages/settings-menu-page.php:152
+#: includes/admin/menu-pages/settings-menu-page.php:158
 msgid "Enable the use of coupons."
 msgstr "Дозволити використання купонів."
 
-#: includes/admin/menu-pages/settings-menu-page.php:157
+#: includes/admin/menu-pages/settings-menu-page.php:163
 msgid "Text on Checkout"
 msgstr "Текст на сторінці оформлення бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:158
+#: includes/admin/menu-pages/settings-menu-page.php:164
 msgid "This text will appear on the checkout page."
 msgstr "Текст з'явиться на сторінці оформлення бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:167
+#: includes/admin/menu-pages/settings-menu-page.php:173
 msgid "Disable Booking"
 msgstr "Вимкнути функцію бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:172
+#: includes/admin/menu-pages/settings-menu-page.php:178
 msgid "Hide reservation forms and buttons"
 msgstr "Сховати форми та кнопки бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:178
+#: includes/admin/menu-pages/settings-menu-page.php:184
 msgid "Text instead of reservation form while booking is disabled"
 msgstr "Текст за відсутності форм бронювання (коли можливість бронювання відключена)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:187
+#: includes/admin/menu-pages/settings-menu-page.php:193
 #: includes/admin/menu-pages/shortcodes-menu-page.php:482
-#: includes/wizard.php:108
+#: includes/wizard.php:109
 #: assets/blocks/blocks.js:1423
 #: assets/blocks/blocks.js:1453
 msgid "Booking Confirmation"
 msgstr "Підтвердження бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:192
+#: includes/admin/menu-pages/settings-menu-page.php:198
 msgid "Confirmation Mode"
 msgstr "Режим підтвердження бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:194
+#: includes/admin/menu-pages/settings-menu-page.php:200
 msgid "By customer via email"
 msgstr "Клієнтом (посилання в листі)"
 
-#: includes/admin/menu-pages/settings-menu-page.php:195
+#: includes/admin/menu-pages/settings-menu-page.php:201
 msgid "By admin manually"
 msgstr "Адміністратором вручну"
 
-#: includes/admin/menu-pages/settings-menu-page.php:196
+#: includes/admin/menu-pages/settings-menu-page.php:202
 msgid "Confirmation upon payment"
 msgstr "Підтвердження шляхом оплати"
 
-#: includes/admin/menu-pages/settings-menu-page.php:202
+#: includes/admin/menu-pages/settings-menu-page.php:208
 msgid "Booking Confirmed Page"
 msgstr "Сторінка \"Бронювання підтверджене\""
 
-#: includes/admin/menu-pages/settings-menu-page.php:203
+#: includes/admin/menu-pages/settings-menu-page.php:209
 msgid "Page user will be redirected to once the booking is confirmed via email or by admin."
 msgstr "Сторінка, на яку потрапляє гість після підтвердження бронювання через email або адміністратором."
 
-#: includes/admin/menu-pages/settings-menu-page.php:208
+#: includes/admin/menu-pages/settings-menu-page.php:214
 msgid "Approval Time for User"
 msgstr "Час на підтвердження бронювання клієнтом"
 
-#: includes/admin/menu-pages/settings-menu-page.php:209
+#: includes/admin/menu-pages/settings-menu-page.php:215
 msgid "Period of time in minutes the user is given to confirm booking via email. Unconfirmed bookings become Abandoned and accommodation status changes to Available."
 msgstr "Відрізок часу у хвилинах, що надається користувачеві для підтвердження бронювання шляхом натискання посилання у листі. Непідтверджені бронювання переходять у статус \"Занедбано\", роблячи помешкання вільним для подальшого бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:216
+#: includes/admin/menu-pages/settings-menu-page.php:222
 msgid "Country of residence field is required for reservation."
 msgstr "Поле \"Країна проживання\" обов'язкове для заповнення для створення бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:221
+#: includes/admin/menu-pages/settings-menu-page.php:227
 msgid "Full address fields are required for reservation."
 msgstr "Усі поля адреси обов'язкові для заповнення для створення бронювання. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:226
+#: includes/admin/menu-pages/settings-menu-page.php:232
 msgid "Customer information is required when placing admin bookings."
 msgstr "Інформація про користувача необхідна для створення бронювання адміністратором."
 
-#: includes/admin/menu-pages/settings-menu-page.php:232
+#: includes/admin/menu-pages/settings-menu-page.php:238
 msgid "Default Country on Checkout"
 msgstr "Країна за замовчуванням на сторінці оформлення бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:237
-#: includes/emails/templaters/email-templater.php:186
+#: includes/admin/menu-pages/settings-menu-page.php:243
+#: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:397
+#: includes/views/shortcodes/checkout-view.php:453
 msgid "Price Breakdown"
 msgstr "Таблиця розподілу вартості бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:238
+#: includes/admin/menu-pages/settings-menu-page.php:244
 msgid "Price breakdown unfolded by default."
 msgstr "Таблиця розподілу вартості бронювання розгорнута за замовчуванням."
 
-#: includes/admin/menu-pages/settings-menu-page.php:246
-#: includes/upgrader.php:646
-#: includes/wizard.php:145
+#: includes/admin/menu-pages/settings-menu-page.php:252
+msgid "Accounts"
+msgstr "Акаунти"
+
+#: includes/admin/menu-pages/settings-menu-page.php:257
+msgid "Account creation"
+msgstr "Створення акаунту"
+
+#: includes/admin/menu-pages/settings-menu-page.php:258
+msgid "Automatically create an account for a user at checkout."
+msgstr "Автоматично створити акаунт користувача при оформленні замовлення."
+
+#: includes/admin/menu-pages/settings-menu-page.php:263
+msgid "Allow customers to create an account during checkout."
+msgstr "Дозволити кліэнтам створювати акаунт під час оформлення замовлення."
+
+#: includes/admin/menu-pages/settings-menu-page.php:268
+msgid "Allow customers to log into their existing account during checkout."
+msgstr "Дозволити клієнтам вхід в свій існуючий обліковий запис під час оформлення замовлення."
+
+#: includes/admin/menu-pages/settings-menu-page.php:276
+#: includes/upgrader.php:706
+#: includes/wizard.php:146
 msgid "Booking Cancellation"
 msgstr "Скасування бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:251
+#: includes/admin/menu-pages/settings-menu-page.php:281
 msgid "User can cancel booking via link provided inside email."
 msgstr "Клієнт може скасувати бронювання шляхом натискання на відповідне посилання у листі."
 
-#: includes/admin/menu-pages/settings-menu-page.php:256
+#: includes/admin/menu-pages/settings-menu-page.php:286
 msgid "Booking Cancelation Page"
-msgstr ""
+msgstr "Сторінка скасування бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:257
+#: includes/admin/menu-pages/settings-menu-page.php:287
 msgid "Page to confirm booking cancelation."
-msgstr ""
+msgstr "Сторінка для підтвердження скасування бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:262
+#: includes/admin/menu-pages/settings-menu-page.php:292
 msgid "Booking Canceled Page"
-msgstr ""
+msgstr "Сторінка скасованого бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:263
+#: includes/admin/menu-pages/settings-menu-page.php:293
 msgid "Page to redirect to after a booking is canceled."
-msgstr ""
+msgstr "Сторінка для перенаправлення після відміни бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Search Options"
 msgstr "Налаштування пошуку"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Maximum accommodation occupancy available in the Search Form."
 msgstr "Максимальна кількість осіб, яку гість може обрати у формі пошуку вільних місць."
 
-#: includes/admin/menu-pages/settings-menu-page.php:278
+#: includes/admin/menu-pages/settings-menu-page.php:308
 msgid "Max Adults"
 msgstr "Максимальна кількість дорослих"
 
-#: includes/admin/menu-pages/settings-menu-page.php:285
+#: includes/admin/menu-pages/settings-menu-page.php:315
 msgid "Max Children"
 msgstr "Максимальна кількість дітей"
 
-#: includes/admin/menu-pages/settings-menu-page.php:290
+#: includes/admin/menu-pages/settings-menu-page.php:320
 msgid "Age of Child"
 msgstr "Вік дитини"
 
-#: includes/admin/menu-pages/settings-menu-page.php:291
+#: includes/admin/menu-pages/settings-menu-page.php:321
 msgid "Optional description of the \"Children\" field."
 msgstr "Опис поля \"Діти\" (необов'язковий)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:296
+#: includes/admin/menu-pages/settings-menu-page.php:326
 msgid "Skip Search Results"
 msgstr "Пропустити результати пошуку"
 
-#: includes/admin/menu-pages/settings-menu-page.php:297
+#: includes/admin/menu-pages/settings-menu-page.php:327
 msgid "Skip search results page and enable direct booking from accommodation pages."
 msgstr "Пропустити сторінку результатів пошуку, ввімкнувши пряме бронювання зі сторінки помешкання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:301
+#: includes/admin/menu-pages/settings-menu-page.php:331
 msgid "Direct Booking Form"
 msgstr "Форма прямого бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:304
+#: includes/admin/menu-pages/settings-menu-page.php:334
 msgid "Show price for selected period"
 msgstr "Показувати ціну за обраний період"
 
-#: includes/admin/menu-pages/settings-menu-page.php:305
+#: includes/admin/menu-pages/settings-menu-page.php:335
 msgid "Show price together with adults and children fields"
 msgstr "Показувати ціну разом з полями дітей та дорослих"
 
-#: includes/admin/menu-pages/settings-menu-page.php:311
+#: includes/admin/menu-pages/settings-menu-page.php:341
 msgid "Book button behavior on the search results page"
 msgstr "Дія кнопки \"Забронювати\" на сторінці результатів пошуку"
 
-#: includes/admin/menu-pages/settings-menu-page.php:312
+#: includes/admin/menu-pages/settings-menu-page.php:342
 msgid "Redirect to the checkout page immediately after successful addition to reservation."
 msgstr "Перенаправляти одразу на сторінку оформлення бронювання після успішного додавання до кошика."
 
-#: includes/admin/menu-pages/settings-menu-page.php:318
+#: includes/admin/menu-pages/settings-menu-page.php:348
 msgid "Enable \"adults\" and \"children\" options for my website (default)."
 msgstr "Увімкнути параметри \"дорослі\" та \"діти\" на моєму сайті (початкове налаштування)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:319
+#: includes/admin/menu-pages/settings-menu-page.php:349
 msgid "Disable \"children\" option for my website (hide \"children\" field and use Guests label instead)."
 msgstr "Вимкнути параметр \"діти\" на моєму сайті (приховати поле \"діти\", використовуючи натомість спільне \"гості\" для дорослих та дітей)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:320
+#: includes/admin/menu-pages/settings-menu-page.php:350
 msgid "Disable \"adults\" and \"children\" options for my website."
 msgstr "Вимкнути параметри \"дорослі\" та \"діти\" на моєму сайті."
 
-#: includes/admin/menu-pages/settings-menu-page.php:323
+#: includes/admin/menu-pages/settings-menu-page.php:353
 msgid "Guest Management"
 msgstr "Керування гостями"
 
-#: includes/admin/menu-pages/settings-menu-page.php:329
+#: includes/admin/menu-pages/settings-menu-page.php:359
 msgid "Hide \"adults\" and \"children\" fields within search availability forms."
 msgstr "Приховати поля \"дорослі\" та \"діти\" в усіх формах пошуку вільних місць."
 
-#: includes/admin/menu-pages/settings-menu-page.php:335
+#: includes/admin/menu-pages/settings-menu-page.php:365
 msgid "Do not apply booking rules for admin bookings."
-msgstr ""
+msgstr "Не застосовувати правила бронювання для адміністраторів."
 
-#: includes/admin/menu-pages/settings-menu-page.php:342
+#: includes/admin/menu-pages/settings-menu-page.php:372
 msgid "Display Options"
 msgstr "Додаткові налаштування"
 
-#: includes/admin/menu-pages/settings-menu-page.php:347
+#: includes/admin/menu-pages/settings-menu-page.php:377
 msgid "Display gallery images of accommodation page in lightbox."
 msgstr "Відображати фото з галереї на сторінці помешкання у лайтбоксі."
 
-#: includes/admin/menu-pages/settings-menu-page.php:353
+#: includes/admin/menu-pages/settings-menu-page.php:383
 msgid "Calendar Theme"
 msgstr "Тема календаря"
 
-#: includes/admin/menu-pages/settings-menu-page.php:354
+#: includes/admin/menu-pages/settings-menu-page.php:384
 msgid "Select theme for an availability calendar."
 msgstr "Оберіть тему для календаря доступності місць."
 
-#: includes/admin/menu-pages/settings-menu-page.php:358
+#: includes/admin/menu-pages/settings-menu-page.php:388
 msgid "Template Mode"
 msgstr "Режим шаблону"
 
-#: includes/admin/menu-pages/settings-menu-page.php:360
+#: includes/admin/menu-pages/settings-menu-page.php:390
 msgid "Developer Mode"
 msgstr "Режим розробника"
 
-#: includes/admin/menu-pages/settings-menu-page.php:361
+#: includes/admin/menu-pages/settings-menu-page.php:391
 msgid "Theme Mode"
 msgstr "Режим теми"
 
-#: includes/admin/menu-pages/settings-menu-page.php:363
+#: includes/admin/menu-pages/settings-menu-page.php:393
 msgid "Choose Theme Mode to display the content with the styles of your theme. Choose Developer Mode to control appearance of the content with custom page templates, actions and filters. This option can't be changed if your theme is initially integrated with the plugin."
 msgstr "Оберіть \"Режим теми\", щоб відображати вміст плагіну у стилі вашої теми. Оберіть \"Режим розробника\", щоб самостійно налаштувати візуальну частину за допомогою користувацьких шаблонів сторінок, дій та фільтрів. Цей параметр неможливо змінити, якщо ви використовуєте тему з вбудованим плагіном Hotel Booking."
 
-#: includes/admin/menu-pages/settings-menu-page.php:373
+#: includes/admin/menu-pages/settings-menu-page.php:403
 msgid "More Styles"
 msgstr "Більше стилів"
 
-#: includes/admin/menu-pages/settings-menu-page.php:374
+#: includes/admin/menu-pages/settings-menu-page.php:404
 msgid "Extend the styling options of Hotel Booking plugin with the new free addon - Hotel Booking Styles."
 msgstr "Розширте параметри стилізації плагіну Hotel Booking за допомогою нового безкоштовного додатку Hotel Booking Styles."
 
-#: includes/admin/menu-pages/settings-menu-page.php:385
+#: includes/admin/menu-pages/settings-menu-page.php:415
 msgid "Calendars Synchronization"
 msgstr "Синхронізація календарів"
 
-#: includes/admin/menu-pages/settings-menu-page.php:390
+#: includes/admin/menu-pages/settings-menu-page.php:420
 msgid "Export admin blocks."
 msgstr "Експортувати блоки адміністратора"
 
-#: includes/admin/menu-pages/settings-menu-page.php:395
+#: includes/admin/menu-pages/settings-menu-page.php:425
 msgid "Do not export imported bookings."
 msgstr "Не експортувати імпортовані бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:402
+#: includes/admin/menu-pages/settings-menu-page.php:432
 msgid "Calendars Synchronization Scheduler"
 msgstr "Графік синхронізації календарів"
 
-#: includes/admin/menu-pages/settings-menu-page.php:411
+#: includes/admin/menu-pages/settings-menu-page.php:441
 msgid "Enable automatic external calendars synchronization"
 msgstr "Увімкнути автоматичну синхронізацію зовнішніх календарів"
 
-#: includes/admin/menu-pages/settings-menu-page.php:417
+#: includes/admin/menu-pages/settings-menu-page.php:447
 msgid "Clock"
 msgstr "Годинник"
 
-#: includes/admin/menu-pages/settings-menu-page.php:418
+#: includes/admin/menu-pages/settings-menu-page.php:448
 msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr "Синхронізувати календарі о цій годині (UTC) або починаючи з цього часу згідно з обраним нижче інтервалом."
 
-#: includes/admin/menu-pages/settings-menu-page.php:426
+#: includes/admin/menu-pages/settings-menu-page.php:456
 msgid "Interval"
 msgstr "Інтервал"
 
-#: includes/admin/menu-pages/settings-menu-page.php:428
+#: includes/admin/menu-pages/settings-menu-page.php:458
 #: includes/crons/cron-manager.php:79
 msgid "Quarter an Hour"
 msgstr "Чверть години"
 
-#: includes/admin/menu-pages/settings-menu-page.php:429
+#: includes/admin/menu-pages/settings-menu-page.php:459
 #: includes/crons/cron-manager.php:84
 msgid "Half an Hour"
 msgstr "Пів години"
 
-#: includes/admin/menu-pages/settings-menu-page.php:430
+#: includes/admin/menu-pages/settings-menu-page.php:460
 msgid "Once Hourly"
 msgstr "Раз на годину"
 
-#: includes/admin/menu-pages/settings-menu-page.php:431
+#: includes/admin/menu-pages/settings-menu-page.php:461
 msgid "Twice Daily"
 msgstr "Двічі на день"
 
-#: includes/admin/menu-pages/settings-menu-page.php:432
+#: includes/admin/menu-pages/settings-menu-page.php:462
 msgid "Once Daily"
 msgstr "Раз на день"
 
-#: includes/admin/menu-pages/settings-menu-page.php:440
+#: includes/admin/menu-pages/settings-menu-page.php:470
 msgid "Automatically delete sync logs older than"
 msgstr "Автоматично видаляти журнал змін синхронізації давніші за"
 
-#: includes/admin/menu-pages/settings-menu-page.php:442
+#: includes/admin/menu-pages/settings-menu-page.php:472
 msgid "Day"
 msgstr "День"
 
-#: includes/admin/menu-pages/settings-menu-page.php:443
+#: includes/admin/menu-pages/settings-menu-page.php:473
 msgid "Week"
 msgstr "Тиждень"
 
-#: includes/admin/menu-pages/settings-menu-page.php:444
+#: includes/admin/menu-pages/settings-menu-page.php:474
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "Місяць"
 
-#: includes/admin/menu-pages/settings-menu-page.php:445
+#: includes/admin/menu-pages/settings-menu-page.php:475
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "Квартал"
 
-#: includes/admin/menu-pages/settings-menu-page.php:446
+#: includes/admin/menu-pages/settings-menu-page.php:476
 msgid "Half a Year"
 msgstr "Пів року"
 
-#: includes/admin/menu-pages/settings-menu-page.php:447
+#: includes/admin/menu-pages/settings-menu-page.php:477
 msgid "Never Delete"
 msgstr "Ніколи не видаляти"
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:486
 msgid "Block Editor"
 msgstr "Блоковий редактор"
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:491
+#: includes/admin/menu-pages/settings-menu-page.php:496
 msgid "Enable block editor for \"%s\"."
 msgstr "Увімкнути блоковий редактор для \"%s\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:491
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -2032,211 +2220,211 @@ msgstr "Увімкнути блоковий редактор для \"%s\"."
 msgid "Accommodation Types"
 msgstr "Типи помешкань"
 
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:496
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
-#: includes/post-types/service-cpt.php:90
-#: includes/post-types/service-cpt.php:100
+#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:102
 #: includes/views/booking-view.php:170
 msgid "Services"
 msgstr "Послуги"
 
-#: includes/admin/menu-pages/settings-menu-page.php:494
+#: includes/admin/menu-pages/settings-menu-page.php:525
 msgid "Admin Emails"
 msgstr "Листи адміну"
 
-#: includes/admin/menu-pages/settings-menu-page.php:507
+#: includes/admin/menu-pages/settings-menu-page.php:538
 msgid "Customer Emails"
 msgstr "Листи клієнту"
 
-#: includes/admin/menu-pages/settings-menu-page.php:512
+#: includes/admin/menu-pages/settings-menu-page.php:543
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr "Перетворіть гостей у постійних клієнтів, налаштовуючи автоматичні маркетингові кампанії email-листування за допомогою додатку <a>Hotel Booking & Mailchimp Integration</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:515
+#: includes/admin/menu-pages/settings-menu-page.php:546
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr "Перетворіть гостей у постійних клієнтів, налаштовуючи автоматичні маркетингові кампанії email-листування за допомогою додатку Hotel Booking & Mailchimp Integration."
 
-#: includes/admin/menu-pages/settings-menu-page.php:530
+#: includes/admin/menu-pages/settings-menu-page.php:561
 msgid "Cancellation Details Template"
 msgstr "Шаблон \"Деталі скасування\""
 
-#: includes/admin/menu-pages/settings-menu-page.php:531
+#: includes/admin/menu-pages/settings-menu-page.php:562
 msgid "Used for %cancellation_details% tag."
 msgstr "Використовується для позначки %cancellation_details%"
 
-#: includes/admin/menu-pages/settings-menu-page.php:548
+#: includes/admin/menu-pages/settings-menu-page.php:581
 msgid "Email Settings"
 msgstr "Налаштування email"
 
-#: includes/admin/menu-pages/settings-menu-page.php:553
+#: includes/admin/menu-pages/settings-menu-page.php:586
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr "Використовуйте додаток <a>Hotel Booking Notifier</a> для відправлення автоматичних листів-сповіщень на кшталт інструкцій місцезнаходження ключів, правил внутрішнього розпорядку тощо до та після прибуття/виїзду. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:556
+#: includes/admin/menu-pages/settings-menu-page.php:589
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr "Використовуйте додаток Hotel Booking Notifier для відправлення автоматичних листів-сповіщень на кшталт інструкцій місцезнаходження ключів, правил внутрішнього розпорядку тощо до та після прибуття/виїзду. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:564
+#: includes/admin/menu-pages/settings-menu-page.php:597
 msgid "Email Sender"
 msgstr "Відправник "
 
-#: includes/admin/menu-pages/settings-menu-page.php:569
+#: includes/admin/menu-pages/settings-menu-page.php:602
 msgid "Administrator Email"
 msgstr "Email адміністратора"
 
-#: includes/admin/menu-pages/settings-menu-page.php:575
+#: includes/admin/menu-pages/settings-menu-page.php:608
 msgid "From Email"
 msgstr "Email відправника"
 
-#: includes/admin/menu-pages/settings-menu-page.php:581
+#: includes/admin/menu-pages/settings-menu-page.php:614
 msgid "From Name"
 msgstr "Ім'я відправника"
 
-#: includes/admin/menu-pages/settings-menu-page.php:588
+#: includes/admin/menu-pages/settings-menu-page.php:621
 msgid "Logo URL"
 msgstr "URL логотипу"
 
-#: includes/admin/menu-pages/settings-menu-page.php:595
+#: includes/admin/menu-pages/settings-menu-page.php:628
 msgid "Footer Text"
 msgstr "Текст підвалу"
 
-#: includes/admin/menu-pages/settings-menu-page.php:603
+#: includes/admin/menu-pages/settings-menu-page.php:636
 msgid "Reserved Accommodation Details Template"
 msgstr "Шаблон \"Деталі заброньованого помешкання\""
 
-#: includes/admin/menu-pages/settings-menu-page.php:604
+#: includes/admin/menu-pages/settings-menu-page.php:637
 msgid "Used for %reserved_rooms_details% tag."
 msgstr "Використовується для позначки %reserved_rooms_details%"
 
-#: includes/admin/menu-pages/settings-menu-page.php:615
+#: includes/admin/menu-pages/settings-menu-page.php:648
 msgid "Styles"
 msgstr "Стилі"
 
-#: includes/admin/menu-pages/settings-menu-page.php:620
+#: includes/admin/menu-pages/settings-menu-page.php:653
 msgid "Base Color"
 msgstr "Основний колір"
 
-#: includes/admin/menu-pages/settings-menu-page.php:626
+#: includes/admin/menu-pages/settings-menu-page.php:659
 msgid "Background Color"
 msgstr "Колір фону"
 
-#: includes/admin/menu-pages/settings-menu-page.php:632
+#: includes/admin/menu-pages/settings-menu-page.php:665
 msgid "Body Background Color"
 msgstr "Колір фону тіла"
 
-#: includes/admin/menu-pages/settings-menu-page.php:638
+#: includes/admin/menu-pages/settings-menu-page.php:671
 msgid "Body Text Color"
 msgstr "Колір тексту тіла"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:691
 msgid "Payment Gateways"
 msgstr "Способи оплати"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:691
 msgid "General Settings"
 msgstr "Загальні налаштування"
 
-#: includes/admin/menu-pages/settings-menu-page.php:663
+#: includes/admin/menu-pages/settings-menu-page.php:696
 msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr "Не вистачає способів оплати? Спробуйте спеціальний додаток Hotel Booking - <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:667
+#: includes/admin/menu-pages/settings-menu-page.php:700
 msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr "Ви також можете надіслати гостеві запит із прямим посиланням на <a href=\"%s\" target=\"_blank\">сплату залишку за бронюванням</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:676
+#: includes/admin/menu-pages/settings-menu-page.php:709
 msgid "User Pays"
 msgstr "Клієнт платить"
 
-#: includes/admin/menu-pages/settings-menu-page.php:678
+#: includes/admin/menu-pages/settings-menu-page.php:711
 msgid "Full Amount"
 msgstr "Всю суму"
 
-#: includes/admin/menu-pages/settings-menu-page.php:679
+#: includes/admin/menu-pages/settings-menu-page.php:712
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "Завдаток"
 
-#: includes/admin/menu-pages/settings-menu-page.php:685
+#: includes/admin/menu-pages/settings-menu-page.php:718
 msgid "Deposit Type"
 msgstr "Тип депозиту"
 
-#: includes/admin/menu-pages/settings-menu-page.php:687
+#: includes/admin/menu-pages/settings-menu-page.php:720
 msgid "Fixed"
 msgstr "Фіксований"
 
-#: includes/admin/menu-pages/settings-menu-page.php:688
+#: includes/admin/menu-pages/settings-menu-page.php:721
 msgid "Percent"
 msgstr "Відсоток"
 
-#: includes/admin/menu-pages/settings-menu-page.php:694
+#: includes/admin/menu-pages/settings-menu-page.php:727
 msgid "Deposit Amount"
 msgstr "Сума завдатку"
 
-#: includes/admin/menu-pages/settings-menu-page.php:702
+#: includes/admin/menu-pages/settings-menu-page.php:735
 msgid "Deposit Time Frame (days)"
 msgstr "Дозволяти завдаток за (днів)"
 
-#: includes/admin/menu-pages/settings-menu-page.php:703
+#: includes/admin/menu-pages/settings-menu-page.php:736
 msgid "Apply deposit to bookings made in at least the selected number of days prior to the check-in date. Otherwise, the full amount is charged."
 msgstr "Приміняти завдаток лише до бронювань, зроблених щонайменше за ту кількість днів до дати прибуття, яку ви обрали у цьому полі. Інакше сплачується повна сума."
 
-#: includes/admin/menu-pages/settings-menu-page.php:711
+#: includes/admin/menu-pages/settings-menu-page.php:744
 msgid "Force Secure Checkout"
 msgstr "Примусовий режим безпеки при оформленні бронювання"
 
-#: includes/admin/menu-pages/settings-menu-page.php:713
+#: includes/admin/menu-pages/settings-menu-page.php:746
 msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
 msgstr "Запустити SSL (HTTPS) на сторінці оформлення бронювання. SSL сертифікат має бути встановлений для використання цієї функції."
 
-#: includes/admin/menu-pages/settings-menu-page.php:717
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Reservation Received Page"
 msgstr "Сторінка \"Бронювання отримане\""
 
-#: includes/admin/menu-pages/settings-menu-page.php:722
+#: includes/admin/menu-pages/settings-menu-page.php:755
 msgid "Failed Transaction Page"
 msgstr "Сторінка невдалої транзакції"
 
-#: includes/admin/menu-pages/settings-menu-page.php:727
+#: includes/admin/menu-pages/settings-menu-page.php:760
 msgid "Default Gateway"
 msgstr "Спосіб оплати за замовчуванням"
 
-#: includes/admin/menu-pages/settings-menu-page.php:735
+#: includes/admin/menu-pages/settings-menu-page.php:768
 msgid "Pending Payment Time"
 msgstr "Час на завершення оплати"
 
-#: includes/admin/menu-pages/settings-menu-page.php:736
+#: includes/admin/menu-pages/settings-menu-page.php:769
 msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
 msgstr "Відрізок часу у хвилинах, що надається користувачеві для завершення оплати. Неоплачені бронювання переходять у статус \"Занедбано\", роблячи помешкання вільним для подальшого бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:758
+#: includes/admin/menu-pages/settings-menu-page.php:791
 msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr "Встановіть <a href=\"%s\" target=\"_blank\">додатки плагіну Hotel Booking</a> для подальших налаштувань."
 
-#: includes/admin/menu-pages/settings-menu-page.php:760
+#: includes/admin/menu-pages/settings-menu-page.php:793
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr "Встановіть додатки плагіну Hotel Booking для подальших налаштувань."
 
-#: includes/admin/menu-pages/settings-menu-page.php:778
+#: includes/admin/menu-pages/settings-menu-page.php:811
 msgid "Advanced"
-msgstr ""
+msgstr "Додатково"
 
-#: includes/admin/menu-pages/settings-menu-page.php:790
-#: includes/admin/menu-pages/settings-menu-page.php:792
+#: includes/admin/menu-pages/settings-menu-page.php:823
+#: includes/admin/menu-pages/settings-menu-page.php:825
 msgid "License"
 msgstr "Ліцензія"
 
-#: includes/admin/menu-pages/settings-menu-page.php:831
+#: includes/admin/menu-pages/settings-menu-page.php:864
 msgid "Settings saved."
 msgstr "Налаштування збережено."
 
-#: includes/admin/menu-pages/settings-menu-page.php:863
+#: includes/admin/menu-pages/settings-menu-page.php:896
 msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr "<strong>Зауважте:</strong> Способи оплати з'являться на сторінці оформлення бронювання лише у режимі \"Підтвердження шляхом оплати\". Перевірте у меню Помешкання > Налаштування > Загальне > Режим підтвердження бронювання."
 
-#: includes/admin/menu-pages/settings-menu-page.php:951
-#: includes/admin/menu-pages/settings-menu-page.php:955
+#: includes/admin/menu-pages/settings-menu-page.php:984
+#: includes/admin/menu-pages/settings-menu-page.php:988
 #: assets/blocks/blocks.js:54
 #: assets/blocks/blocks.js:186
 #: assets/blocks/blocks.js:293
@@ -2300,6 +2488,7 @@ msgstr "Частини посилання (слаги) атрибутів, ро�
 #: includes/admin/menu-pages/shortcodes-menu-page.php:468
 #: includes/admin/menu-pages/shortcodes-menu-page.php:486
 #: includes/admin/menu-pages/shortcodes-menu-page.php:502
+#: includes/admin/menu-pages/shortcodes-menu-page.php:518
 msgid "Custom CSS class for shortcode wrapper"
 msgstr "Користувацький CSS клас для обгортки короткого коду"
 
@@ -2314,6 +2503,7 @@ msgstr "Користувацький CSS клас для обгортки кор
 #: includes/admin/menu-pages/shortcodes-menu-page.php:469
 #: includes/admin/menu-pages/shortcodes-menu-page.php:487
 #: includes/admin/menu-pages/shortcodes-menu-page.php:503
+#: includes/admin/menu-pages/shortcodes-menu-page.php:519
 msgid "whitespace separated css classes"
 msgstr "CSS класи, розмежовані пробілами"
 
@@ -2492,7 +2682,7 @@ msgstr "назва користувацького поля"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:288
 #: includes/admin/menu-pages/shortcodes-menu-page.php:327
 #: includes/admin/menu-pages/shortcodes-menu-page.php:336
-#: includes/admin/menu-pages/shortcodes-menu-page.php:601
+#: includes/admin/menu-pages/shortcodes-menu-page.php:617
 msgid "empty string"
 msgstr "пустий рядок"
 
@@ -2658,59 +2848,72 @@ msgstr "Використовуйте цей короткий код на сто�
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:498
 msgid "Booking Cancelation"
-msgstr ""
+msgstr "Скасування бронювання"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:499
 msgid "Display booking cancelation details."
-msgstr ""
+msgstr "Відображати деталі скасування бронювання."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:509
 msgid "Use this shortcode on the Booking Cancelation page"
-msgstr ""
+msgstr "Використовуйте цей короткий код на сторінці Скасування бронювання"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:521
-#: includes/admin/menu-pages/shortcodes-menu-page.php:654
-#: includes/admin/menu-pages/shortcodes-menu-page.php:658
+#: includes/admin/menu-pages/shortcodes-menu-page.php:514
+msgid "Customer Account"
+msgstr "Акаунт клієнта"
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:515
+msgid "Display log in form or customer account area."
+msgstr "Показує форму входу чи акаунт клієнта."
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+msgid "Use this shortcode to create the My Account page."
+msgstr "Використовуйте цей шорткод для створення сторінки Мій акаунт."
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:537
+#: includes/admin/menu-pages/shortcodes-menu-page.php:670
+#: includes/admin/menu-pages/shortcodes-menu-page.php:674
 msgid "Shortcodes"
 msgstr "Короткі коди"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+#: includes/admin/menu-pages/shortcodes-menu-page.php:541
 msgid "Shortcode"
 msgstr "Короткий код"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:526
+#: includes/admin/menu-pages/shortcodes-menu-page.php:542
 #: includes/post-types/attributes-cpt.php:299
 msgid "Parameters"
 msgstr "Параметри"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:527
+#: includes/admin/menu-pages/shortcodes-menu-page.php:543
 msgid "Example"
 msgstr "Приклад"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:559
-#: includes/admin/menu-pages/shortcodes-menu-page.php:581
+#: includes/admin/menu-pages/shortcodes-menu-page.php:575
+#: includes/admin/menu-pages/shortcodes-menu-page.php:597
 msgid "Deprecated since %s"
 msgstr "Застаріле починаючи з версії %s"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:591
+#: includes/admin/menu-pages/shortcodes-menu-page.php:607
 msgid "Values:"
 msgstr "Значення:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:596
+#: includes/admin/menu-pages/shortcodes-menu-page.php:612
 msgid "Default:"
 msgstr "За замовчуванням:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:642
+#: includes/admin/menu-pages/shortcodes-menu-page.php:658
 msgid "Optional."
 msgstr "Необов’язкове."
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:650
+#: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:182
-#: includes/views/shortcodes/checkout-view.php:203
-#: includes/views/shortcodes/checkout-view.php:437
-#: includes/views/shortcodes/checkout-view.php:447
+#: includes/views/shortcodes/checkout-view.php:238
+#: includes/views/shortcodes/checkout-view.php:259
+#: includes/views/shortcodes/checkout-view.php:493
+#: includes/views/shortcodes/checkout-view.php:523
+#: templates/account/account-details.php:34
 msgid "Required"
 msgstr "Обов’язкове"
 
@@ -2772,19 +2975,19 @@ msgstr "Ліміт"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:145
 msgid "How often this fee is charged. Set 0 to charge each day of the stay period. Set 1 to charge once."
-msgstr ""
+msgstr "Як часто ця плата стягується. Встановіть 0 для оплати кожного дня перебування. Встановіть 1 для оплати один раз."
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:151
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:153
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:221
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:223
 msgid "Include"
-msgstr ""
+msgstr "Включити"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:152
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:222
 msgid "Show accommodation rate with this charge included"
-msgstr ""
+msgstr "Показувати вартість проживання з включеною цією платою"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:176
 #: includes/bundles/export-bundle.php:42
@@ -2812,7 +3015,7 @@ msgstr "За помешкання (%)"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:272
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:322
 msgid "Limit of days the fee is charged. Set 0 to charge each day of stay period. Set 1 to charge once."
-msgstr ""
+msgstr "Обмеження кількості днів сплати збору. Встановіть 0 для сплати кожен день перебування. Встановіть 1 для сплати один раз."
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:238
 #: includes/views/booking-view.php:199
@@ -2829,12 +3032,6 @@ msgstr "Відсоток"
 #: includes/views/booking-view.php:243
 msgid "Fee Taxes"
 msgstr "Податки на збори"
-
-#: includes/admin/menus.php:71
-#: includes/admin/menus.php:72
-#: includes/post-types/booking-cpt.php:200
-msgid "Bookings"
-msgstr "Бронювання"
 
 #: includes/admin/room-list-table.php:100
 msgid "External Calendars"
@@ -2877,12 +3074,12 @@ msgid "d/m/Y - H:i:s"
 msgstr "d/m/Y - H:i:s"
 
 #: includes/admin/sync-rooms-list-table.php:73
-#: includes/ajax.php:947
+#: includes/ajax.php:950
 msgid "Waiting"
 msgstr "Очікування"
 
 #: includes/admin/sync-rooms-list-table.php:74
-#: includes/ajax.php:948
+#: includes/ajax.php:951
 msgid "Processing"
 msgstr "Обробка"
 
@@ -2909,41 +3106,41 @@ msgstr "Видалено"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:36
 msgid "Copying to clipboard failed. Please press Ctrl/Cmd+C to copy."
-msgstr ""
+msgstr "Не вдалося виконати копіювання до буфера обміну. Будь ласка, натисніть Ctrl/Cmd+C, щоб скопіювати."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:56
 msgid "Description is missing."
-msgstr ""
+msgstr "Опис відсутній."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:59
 msgid "User is missing."
-msgstr ""
+msgstr "Користувач відсутній."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:62
 msgid "Permission is missing."
-msgstr ""
+msgstr "Дозвіл відсутній."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:74
 msgid "You do not have permission to assign API Keys to the selected user."
-msgstr ""
+msgstr "У вас немає дозволу на призначення API ключів для вибраного користувача."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:101
 msgid "API Key updated successfully."
-msgstr ""
+msgstr "Ключ API оновлено."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:133
 msgid "API Key generated successfully. Make sure to copy your new keys now as the secret key will be hidden once you leave this page."
-msgstr ""
+msgstr "Ключ API створено. Переконайтесь що зробили копію нового ключа. Секретний ключ буде приховано після того як ви залишите цю сторінку."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:137
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:116
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:119
 msgid "Revoke key"
-msgstr ""
+msgstr "Відкликати ключ"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:46
 msgid "No keys found."
-msgstr ""
+msgstr "Ключів не знайдено."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:57
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:22
@@ -2956,184 +3153,184 @@ msgstr "Опис"
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:58
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:81
 msgid "Consumer key ending in"
-msgstr ""
+msgstr "Ключ користувача закінчується на"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:59
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:36
 msgid "User"
-msgstr ""
+msgstr "Користувач"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:60
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:55
 msgid "Permissions"
-msgstr ""
+msgstr "Дозволи"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:61
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:89
 msgid "Last access"
-msgstr ""
+msgstr "Останній доступ"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:99
 msgid "API key"
-msgstr ""
+msgstr "API ключ"
 
 #. translators: %d: API key ID.
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:111
 msgid "ID: %d"
-msgstr ""
+msgstr "ID: %d"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:126
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:225
 msgid "Revoke"
-msgstr ""
+msgstr "Відкликати"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:182
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:65
 msgid "Read"
-msgstr ""
+msgstr "Читання"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:183
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:66
 msgid "Write"
-msgstr ""
+msgstr "Запис"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:184
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:67
 msgid "Read/Write"
-msgstr ""
+msgstr "Читання/Запис"
 
 #. translators: 1: last access date 2: last access time
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:204
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:96
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s о %2$s"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:211
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:100
 msgid "Unknown"
-msgstr ""
+msgstr "Невідомо"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:69
 msgid "You do not have permission to edit this API Key"
-msgstr ""
+msgstr "Ви не маєте дозволу редагувати цей ключ API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:90
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:92
 msgid "Add key"
-msgstr ""
+msgstr "Додати ключ"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:177
 msgid "You do not have permission to revoke this API Key"
-msgstr ""
+msgstr "У вас немає дозволу на відкликання цього ключа API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:192
 msgid "You do not have permission to edit API Keys"
-msgstr ""
+msgstr "Ви не маєте дозволу для редагування ключів API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:212
 msgid "You do not have permission to revoke API Keys"
-msgstr ""
+msgstr "У вас немає дозволу на відкликання Ключів API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:13
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:114
 msgid "Generate API key"
-msgstr ""
+msgstr "Згенерувати ключ API"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:25
 msgid "Friendly name for identifying this key."
-msgstr ""
+msgstr "Зручна назва для визначення цього ключа."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:39
 msgid "Owner of these keys."
-msgstr ""
+msgstr "Власник цих ключів."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:58
 msgid "Access type of these keys."
-msgstr ""
+msgstr "Тип доступу цих ключів."
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:148
 msgid "Consumer key"
-msgstr ""
+msgstr "Ключ користувача"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:151
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:159
 msgid "Copied!"
-msgstr ""
+msgstr "Скопійовано!"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:151
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:159
 msgid "Copy"
-msgstr ""
+msgstr "Копіювати"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:156
 msgid "Consumer secret"
-msgstr ""
+msgstr "Секретний ключ"
 
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:164
 msgid "QR Code"
-msgstr ""
+msgstr "QR-код"
 
-#: includes/ajax.php:251
+#: includes/ajax.php:254
 msgid "No bookings found for your request."
 msgstr "Не знайдено бронювань на ваш запит."
 
-#: includes/ajax.php:258
+#: includes/ajax.php:261
 msgid "Uploads directory is not writable."
 msgstr "Неможливо записати до каталогу завантажень."
 
-#: includes/ajax.php:323
+#: includes/ajax.php:326
 msgid "No enough data"
 msgstr "Недостатньо даних"
 
-#: includes/ajax.php:341
+#: includes/ajax.php:344
 #: includes/script-managers/admin-script-manager.php:88
 msgid "An error has occurred"
 msgstr "Сталася помилка"
 
-#: includes/ajax.php:353
-#: includes/ajax.php:393
-#: includes/ajax.php:686
+#: includes/ajax.php:356
+#: includes/ajax.php:396
+#: includes/ajax.php:689
 #: includes/csv/bookings/bookings-query.php:77
 msgid "Please complete all required fields and try again."
 msgstr "Будь ласка, заповніть усі обов'язкові поля та спробуйте ще раз."
 
-#: includes/ajax.php:379
+#: includes/ajax.php:382
 #: includes/script-managers/public-script-manager.php:220
 msgid "An error has occurred, please try again later."
 msgstr "Сталася помилка. Будь ласка, спробуйте ще раз пізніше."
 
-#: includes/ajax.php:505
-#: includes/ajax.php:574
+#: includes/ajax.php:508
+#: includes/ajax.php:577
 msgid "An error has occurred. Please try again later."
 msgstr "Виникла помилка. Будь ласка, спробуйте знову пізніше."
 
-#: includes/ajax.php:702
+#: includes/ajax.php:705
 msgid "Sorry, the minimum allowed payment amount is %s to use this payment method."
 msgstr "Вибачте, мінімально можлива сума платежу %1$s при використанні цього способу оплати."
 
-#: includes/ajax.php:765
+#: includes/ajax.php:768
 msgid "Chosen payment method is not available. Please refresh the page and try one more time."
 msgstr "Обраний спосіб оплати недоступний. Будь ласка, оновіть сторінку та спробуйте ще раз."
 
-#: includes/ajax.php:838
+#: includes/ajax.php:841
 msgid "Coupon applied successfully."
 msgstr "Купон успішно застосований."
 
-#: includes/ajax.php:844
+#: includes/ajax.php:847
 #: includes/entities/abstract-coupon.php:205
 msgid "Coupon is not valid."
 msgstr "Купон недійсний."
 
-#: includes/ajax.php:1033
+#: includes/ajax.php:1036
 #: includes/post-types/booking-cpt.php:33
 msgid "Booking Information"
 msgstr "Інформація про бронювання"
 
-#: includes/ajax.php:1041
-#: includes/emails/templaters/email-templater.php:123
+#: includes/ajax.php:1044
+#: includes/emails/templaters/email-templater.php:128
 #: includes/post-types/booking-cpt.php:45
 #: template-functions.php:609
 #: template-functions.php:613
@@ -3145,8 +3342,8 @@ msgstr "Інформація про бронювання"
 msgid "Check-in Date"
 msgstr "Дата прибуття"
 
-#: includes/ajax.php:1045
-#: includes/emails/templaters/email-templater.php:127
+#: includes/ajax.php:1048
+#: includes/emails/templaters/email-templater.php:132
 #: includes/post-types/booking-cpt.php:52
 #: template-functions.php:618
 #: template-functions.php:622
@@ -3158,7 +3355,7 @@ msgstr "Дата прибуття"
 msgid "Check-out Date"
 msgstr "Дата виїзду"
 
-#: includes/ajax.php:1054
+#: includes/ajax.php:1057
 #: includes/post-types/booking-cpt.php:72
 #: templates/emails/customer-approved-booking.php:31
 #: templates/emails/customer-cancelled-booking.php:29
@@ -3167,123 +3364,50 @@ msgstr "Дата виїзду"
 msgid "Customer Information"
 msgstr "Інформація про клієнта"
 
-#: includes/ajax.php:1058
-#: includes/bundles/customer-bundle.php:83
-#: includes/bundles/export-bundle.php:29
-#: includes/post-types/booking-cpt.php:77
-#: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:462
-msgid "First Name"
-msgstr "Ім’я"
-
-#: includes/ajax.php:1062
-#: includes/bundles/customer-bundle.php:92
-#: includes/bundles/export-bundle.php:30
-#: includes/post-types/booking-cpt.php:83
-#: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:473
-msgid "Last Name"
-msgstr "Прізвище"
-
-#: includes/ajax.php:1066
-#: includes/bundles/customer-bundle.php:101
-#: includes/bundles/export-bundle.php:31
-#: includes/post-types/booking-cpt.php:89
-#: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:484
-msgid "Email"
-msgstr "Адреса електронної пошти"
-
-#: includes/ajax.php:1070
-#: includes/bundles/customer-bundle.php:110
-#: includes/bundles/export-bundle.php:32
-#: includes/post-types/booking-cpt.php:95
-#: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:495
-msgid "Phone"
-msgstr "Телефон"
-
-#: includes/ajax.php:1074
-#: includes/bundles/export-bundle.php:33
-#: includes/post-types/booking-cpt.php:102
-#: includes/post-types/payment-cpt.php:256
-msgid "Country"
-msgstr "Країна"
-
-#: includes/ajax.php:1078
-#: includes/bundles/customer-bundle.php:128
-#: includes/bundles/export-bundle.php:34
-#: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:528
-msgid "Address"
-msgstr "Адреса  "
-
-#: includes/ajax.php:1082
-#: includes/bundles/customer-bundle.php:137
-#: includes/bundles/export-bundle.php:35
-#: includes/post-types/booking-cpt.php:114
-#: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:539
-msgid "City"
-msgstr "Місто"
-
-#: includes/ajax.php:1086
-#: includes/bundles/customer-bundle.php:146
-#: includes/bundles/export-bundle.php:36
-#: includes/post-types/booking-cpt.php:120
-#: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:550
-msgid "State / County"
-msgstr "Область / Район"
-
-#: includes/ajax.php:1090
-#: includes/bundles/customer-bundle.php:155
-#: includes/bundles/export-bundle.php:37
-#: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:561
-msgid "Postcode"
-msgstr "Поштовий індекс"
-
-#: includes/ajax.php:1094
+#: includes/ajax.php:1097
 #: includes/bundles/export-bundle.php:38
-#: includes/emails/templaters/email-templater.php:176
+#: includes/emails/templaters/email-templater.php:181
 #: includes/post-types/booking-cpt.php:133
 msgid "Customer Note"
 msgstr "Примітка клієнта"
 
-#: includes/ajax.php:1100
+#: includes/ajax.php:1103
 #: includes/post-types/booking-cpt.php:140
 msgid "Additional Information"
 msgstr "Додаткова інформація"
 
-#: includes/ajax.php:1104
+#: includes/ajax.php:1107
 #: includes/bundles/export-bundle.php:40
 #: includes/post-types/booking-cpt.php:145
 #: includes/post-types/coupon-cpt.php:124
 msgid "Coupon"
 msgstr "Купон"
 
-#: includes/ajax.php:1108
+#: includes/ajax.php:1111
 #: includes/post-types/booking-cpt.php:152
 msgid "Total Booking Price"
 msgstr "Загальна вартість бронювання"
 
-#: includes/ajax.php:1117
+#: includes/ajax.php:1120
 #: includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:572
+#: includes/views/shortcodes/checkout-view.php:649
 msgid "Notes"
 msgstr "Нотатки"
 
 #. translators: %1$s: note author, %1$s: note date
-#: includes/ajax.php:1132
+#: includes/ajax.php:1135
 msgid "%1$s on %2$s"
 msgstr "%1$s %2$s"
 
-#: includes/ajax.php:1231
+#: includes/ajax.php:1234
 #: template-functions.php:78
 msgid "Based on your search parameters"
 msgstr "Виходячи з параметрів пошуку"
+
+#: includes/ajax.php:1265
+msgid "You do not have permission to do this action."
+msgstr "У вас немає дозволу виконувати цю дію."
 
 #: includes/attribute-functions.php:164
 #: includes/post-types/attributes-cpt.php:131
@@ -3291,7 +3415,7 @@ msgstr "Виходячи з параметрів пошуку"
 #: includes/post-types/attributes-cpt.php:325
 msgctxt "Not selected value in the search form."
 msgid "&mdash;"
-msgstr ""
+msgstr "&mdash;"
 
 #: includes/bookings-calendar.php:499
 msgid "Year"
@@ -3339,7 +3463,7 @@ msgstr "В очікуванні"
 #: includes/bookings-calendar.php:575
 #: includes/bookings-calendar.php:576
 msgid "External"
-msgstr ""
+msgstr "Зовнішнє"
 
 #: includes/bookings-calendar.php:577
 #: includes/bookings-calendar.php:578
@@ -5111,7 +5235,7 @@ msgid "Phone is required."
 msgstr "Необхідно вказати телефон."
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:508
+#: includes/views/shortcodes/checkout-view.php:584
 msgid "Country of residence"
 msgstr "Країна проживання"
 
@@ -5140,6 +5264,8 @@ msgid "Note is required."
 msgstr "Нотатка необхідна."
 
 #: includes/bundles/export-bundle.php:20
+#: templates/account/bookings.php:19
+#: templates/account/bookings.php:68
 #: templates/create-booking/search/search-form.php:38
 #: templates/edit-booking/edit-dates.php:29
 #: templates/shortcodes/search/search-form.php:29
@@ -5147,6 +5273,8 @@ msgid "Check-in"
 msgstr "Прибуття"
 
 #: includes/bundles/export-bundle.php:21
+#: templates/account/bookings.php:20
+#: templates/account/bookings.php:71
 #: templates/create-booking/search/search-form.php:58
 #: templates/edit-booking/edit-dates.php:38
 #: templates/shortcodes/search/search-form.php:49
@@ -5166,31 +5294,33 @@ msgstr "Дорослих/Гостей"
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
 #: includes/views/edit-booking/checkout-view.php:170
-#: includes/views/shortcodes/checkout-view.php:222
+#: includes/views/shortcodes/checkout-view.php:278
 msgid "Full Guest Name"
 msgstr "Повна ім'я гостей"
 
 #: includes/bundles/export-bundle.php:41
 #: includes/views/booking-view.php:330
+#: templates/account/bookings.php:21
+#: templates/account/bookings.php:74
 msgid "Total"
 msgstr "Загалом"
 
 #: includes/bundles/export-bundle.php:43
 msgid "Total Accommodation Taxes"
-msgstr ""
+msgstr "Загалом податків за перебування"
 
 #: includes/bundles/export-bundle.php:45
 #: includes/reports/earnings-report.php:97
 msgid "Total Fees"
-msgstr ""
+msgstr "Загалом зборів"
 
 #: includes/bundles/export-bundle.php:46
 msgid "Total Service Taxes"
-msgstr ""
+msgstr "Загалом податків за послуги"
 
 #: includes/bundles/export-bundle.php:47
 msgid "Total Fee Taxes"
-msgstr ""
+msgstr "Загалом податків за збори"
 
 #: includes/bundles/export-bundle.php:48
 msgid "Paid"
@@ -5216,15 +5346,15 @@ msgstr "Квадратний ярд"
 
 #: includes/bundles/units-bundle.php:21
 msgid "m²"
-msgstr ""
+msgstr "м²"
 
 #: includes/bundles/units-bundle.php:22
 msgid "ft²"
-msgstr ""
+msgstr "фут²"
 
 #: includes/bundles/units-bundle.php:23
 msgid "yd²"
-msgstr ""
+msgstr "ярд²"
 
 #: includes/crons/cron-manager.php:89
 msgid "User Approval Time setted in Hotel Booking Settings"
@@ -5263,35 +5393,35 @@ msgstr[3] ""
 msgid "Please select columns to export."
 msgstr "Будь ласка, оберіть стовпчики для експорту."
 
-#: includes/emails/abstract-email.php:397
+#: includes/emails/abstract-email.php:418
 msgid "Disable this email notification"
 msgstr "Відключити цей лист-сповіщення"
 
-#: includes/emails/abstract-email.php:402
+#: includes/emails/abstract-email.php:423
 msgid "Subject"
 msgstr "Тема"
 
-#: includes/emails/abstract-email.php:411
+#: includes/emails/abstract-email.php:432
 msgid "Header"
 msgstr "Заголовок"
 
-#: includes/emails/abstract-email.php:420
+#: includes/emails/abstract-email.php:441
 msgid "Email Template"
 msgstr "Шаблон email"
 
-#: includes/emails/abstract-email.php:503
+#: includes/emails/abstract-email.php:542
 msgid "\"%s\" email will not be sent: there is no customer email in the booking."
 msgstr "\"%s\" лист не буде надіслано: у бронюванні відсутня адреса електронної пошти клієнта."
 
-#: includes/emails/abstract-email.php:538
+#: includes/emails/abstract-email.php:577
 msgid "Deprecated tags in header of %s"
 msgstr "Застарілі позначки у заголовку %s"
 
-#: includes/emails/abstract-email.php:541
+#: includes/emails/abstract-email.php:580
 msgid "Deprecated tags in subject of %s"
 msgstr "Застарілі позначки у темі %s"
 
-#: includes/emails/abstract-email.php:544
+#: includes/emails/abstract-email.php:583
 msgid "Deprecated tags in template of %s"
 msgstr "Застарілі позначки у шаблоні %s"
 
@@ -5330,7 +5460,7 @@ msgstr "Лист про скасування бронювання"
 
 #: includes/emails/booking/admin/confirmed-by-payment-email.php:8
 #: includes/emails/booking/admin/confirmed-email.php:8
-#: includes/wizard.php:123
+#: includes/wizard.php:124
 msgid "Booking Confirmed"
 msgstr "Бронювання підтверджене"
 
@@ -5384,11 +5514,11 @@ msgstr "%site_title% - Ваше бронювання #%booking_id% підтве�
 msgid "Email that will be sent to customer when booking is approved."
 msgstr "Лист, який буде надіслано клієнту після підтвердження бронювання."
 
-#: includes/emails/booking/customer/base-email.php:45
+#: includes/emails/booking/customer/base-email.php:51
 msgid "\"%s\" mail was sent to customer."
 msgstr "\"%s\" лист надісланий клієнту."
 
-#: includes/emails/booking/customer/base-email.php:47
+#: includes/emails/booking/customer/base-email.php:53
 msgid "\"%s\" mail sending is failed."
 msgstr "\"%s\" не вдалося надіслати."
 
@@ -5441,6 +5571,22 @@ msgstr "Цей лист надсилається, якщо у \"Режимі п�
 msgid "New Booking Email (Confirmation by Admin)"
 msgstr "Лист про нове бронювання (Підтверджується адміном)"
 
+#: includes/emails/booking/customer/registration-email.php:8
+msgid "Welcome"
+msgstr "Вітаємо"
+
+#: includes/emails/booking/customer/registration-email.php:12
+msgid "%site_title% - account details"
+msgstr "%site_title% - деталі акаунта"
+
+#: includes/emails/booking/customer/registration-email.php:16
+msgid "Email that will be sent to a customer after they registered on your site."
+msgstr "E-mail, який буде відправлений клієнту після реєстрації на вашому сайті."
+
+#: includes/emails/booking/customer/registration-email.php:20
+msgid "Customer Registration Email"
+msgstr "Email реєстрації клієнта"
+
 #: includes/emails/templaters/abstract-templater.php:72
 msgid "Possible tags:"
 msgstr "Можливі позначки:"
@@ -5458,97 +5604,124 @@ msgstr "Немає"
 msgid "User Cancellation Link"
 msgstr "Посилання на скасування бронювання"
 
-#: includes/emails/templaters/email-templater.php:97
+#: includes/emails/templaters/email-templater.php:102
 msgid "Site title (set in Settings > General)"
 msgstr "Назва сайту (Налаштування > Загальне)"
 
-#: includes/emails/templaters/email-templater.php:111
+#: includes/emails/templaters/email-templater.php:116
 #: includes/post-types/payment-cpt.php:214
 msgid "Booking ID"
 msgstr "ID бронювання"
 
-#: includes/emails/templaters/email-templater.php:115
+#: includes/emails/templaters/email-templater.php:120
 msgid "Booking Edit Link"
 msgstr "Посилання на редагування бронювання"
 
-#: includes/emails/templaters/email-templater.php:119
+#: includes/emails/templaters/email-templater.php:124
 msgid "Booking Total Price"
 msgstr "Загальна сума бронювання"
 
-#: includes/emails/templaters/email-templater.php:140
+#: includes/emails/templaters/email-templater.php:145
+#: includes/emails/templaters/email-templater.php:284
 msgid "Customer First Name"
 msgstr "Ім'я клієнта"
 
-#: includes/emails/templaters/email-templater.php:144
+#: includes/emails/templaters/email-templater.php:149
+#: includes/emails/templaters/email-templater.php:288
 msgid "Customer Last Name"
 msgstr "Прізвище клієнта"
 
-#: includes/emails/templaters/email-templater.php:148
+#: includes/emails/templaters/email-templater.php:153
+#: includes/emails/templaters/email-templater.php:292
 msgid "Customer Email"
 msgstr "Електронна адреса клієнта"
 
-#: includes/emails/templaters/email-templater.php:152
+#: includes/emails/templaters/email-templater.php:157
+#: includes/emails/templaters/email-templater.php:296
 msgid "Customer Phone"
 msgstr "Телефон клієнта"
 
-#: includes/emails/templaters/email-templater.php:156
+#: includes/emails/templaters/email-templater.php:161
+#: includes/emails/templaters/email-templater.php:300
 msgid "Customer Country"
 msgstr "Країна користувача"
 
-#: includes/emails/templaters/email-templater.php:160
+#: includes/emails/templaters/email-templater.php:165
+#: includes/emails/templaters/email-templater.php:304
 msgid "Customer Address"
 msgstr "Адреса користувача"
 
-#: includes/emails/templaters/email-templater.php:164
+#: includes/emails/templaters/email-templater.php:169
+#: includes/emails/templaters/email-templater.php:308
 msgid "Customer City"
 msgstr "Місто користувача"
 
-#: includes/emails/templaters/email-templater.php:168
+#: includes/emails/templaters/email-templater.php:173
+#: includes/emails/templaters/email-templater.php:312
 msgid "Customer State/County"
 msgstr "Область/Район користувача"
 
-#: includes/emails/templaters/email-templater.php:172
+#: includes/emails/templaters/email-templater.php:177
+#: includes/emails/templaters/email-templater.php:316
 msgid "Customer Postcode"
 msgstr "Поштовий індекс користувача"
 
-#: includes/emails/templaters/email-templater.php:181
+#: includes/emails/templaters/email-templater.php:186
 msgid "Reserved Accommodations Details"
 msgstr "Деталі заброньованого помешкання"
 
-#: includes/emails/templaters/email-templater.php:203
+#: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:94
+#: includes/views/shortcodes/checkout-view.php:150
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "Деталі бронювання"
 
-#: includes/emails/templaters/email-templater.php:216
+#: includes/emails/templaters/email-templater.php:221
 msgid "Confirmation Link"
 msgstr "Посилання для підтвердження бронювання"
 
-#: includes/emails/templaters/email-templater.php:220
+#: includes/emails/templaters/email-templater.php:225
 msgid "Confirmation Link Expiration Time ( UTC )"
 msgstr "Термін дії посилання для підтвердження бронювання (UTC)"
 
-#: includes/emails/templaters/email-templater.php:233
+#: includes/emails/templaters/email-templater.php:238
 msgid "Cancellation Details (if enabled)"
 msgstr "Деталі скасування бронювання (якщо увімкнено)"
 
-#: includes/emails/templaters/email-templater.php:246
+#: includes/emails/templaters/email-templater.php:251
 msgid "The total price of payment"
 msgstr "Загальна сума платежу"
 
-#: includes/emails/templaters/email-templater.php:250
+#: includes/emails/templaters/email-templater.php:255
 msgid "The unique ID of payment"
 msgstr "Унікальний ID платежу"
 
-#: includes/emails/templaters/email-templater.php:254
+#: includes/emails/templaters/email-templater.php:259
 msgid "The method of payment"
 msgstr "Спосіб оплати"
 
-#: includes/emails/templaters/email-templater.php:258
+#: includes/emails/templaters/email-templater.php:263
 msgid "Payment instructions"
 msgstr "Інструкції з оплати"
+
+#: includes/emails/templaters/email-templater.php:276
+msgid "User login"
+msgstr "Логін користувача"
+
+#: includes/emails/templaters/email-templater.php:280
+msgid "User password"
+msgstr "Пароль користувача"
+
+#: includes/emails/templaters/email-templater.php:320
+msgid "Link to My Account page"
+msgstr "Посилання на сторінку Мій акаунт"
+
+#: includes/emails/templaters/email-templater.php:547
+#: includes/upgrader.php:821
+#: includes/wizard.php:183
+msgid "My Account"
+msgstr "Мій акаунт"
 
 #: includes/emails/templaters/reserved-rooms-templater.php:171
 msgid "Accommodation Type Link"
@@ -5831,7 +6004,7 @@ msgstr "Зробіть платіж безпосередньо на наш ба�
 
 #: includes/payments/gateways/beanstream-gateway.php:54
 msgid "Beanstream/Bambora"
-msgstr ""
+msgstr "Beanstream/Bambora"
 
 #: includes/payments/gateways/beanstream-gateway.php:59
 #: includes/payments/gateways/braintree-gateway.php:144
@@ -5862,12 +6035,12 @@ msgstr "Опцію <a href=\"%2$s\">Force Secure Checkout</a> відключен
 
 #: includes/payments/gateways/beanstream-gateway.php:90
 msgid "Beanstream"
-msgstr ""
+msgstr "Beanstream"
 
 #: includes/payments/gateways/beanstream-gateway.php:101
 #: includes/payments/gateways/braintree-gateway.php:205
 msgid "Merchant ID"
-msgstr ""
+msgstr "ID Продавця"
 
 #: includes/payments/gateways/beanstream-gateway.php:103
 msgid "Your Merchant ID can be found in the top-right corner of the screen after logging in to the Beanstream Back Office"
@@ -5892,7 +6065,7 @@ msgstr "Необхідний одноразовий платіжний токе�
 #: includes/payments/gateways/braintree-gateway.php:137
 #: includes/payments/gateways/braintree-gateway.php:194
 msgid "Braintree"
-msgstr ""
+msgstr "Braintree"
 
 #: includes/payments/gateways/braintree-gateway.php:150
 #: includes/payments/gateways/stripe-gateway.php:67
@@ -5918,7 +6091,7 @@ msgstr "У вашому обліковому записі Braintree оберіт
 #: includes/payments/gateways/braintree-gateway.php:211
 #: includes/payments/gateways/stripe-gateway.php:201
 msgid "Public Key"
-msgstr ""
+msgstr "Публічний ключ"
 
 #: includes/payments/gateways/braintree-gateway.php:216
 msgid "Private Key"
@@ -5926,7 +6099,7 @@ msgstr "Особистий ключ"
 
 #: includes/payments/gateways/braintree-gateway.php:221
 msgid "Merchant Account ID"
-msgstr ""
+msgstr "Ідентифікатор облікового запису продавця"
 
 #: includes/payments/gateways/braintree-gateway.php:222
 msgid "In case the site currency differs from default currency in your Braintree account, you can set specific merchant account to avoid <a href=\"%s\">complications with currencty conversions</a>. Otherwise leave the field empty."
@@ -6030,7 +6203,7 @@ msgstr "Ручна оплата"
 #: includes/payments/gateways/paypal-gateway.php:58
 #: includes/payments/gateways/paypal-gateway.php:69
 msgid "PayPal"
-msgstr ""
+msgstr "PayPal"
 
 #: includes/payments/gateways/paypal-gateway.php:70
 msgid "Pay via PayPal"
@@ -6119,7 +6292,7 @@ msgstr "ID транзакції повернення коштів через Pay
 #: includes/payments/gateways/stripe-gateway.php:110
 #: includes/payments/gateways/stripe-gateway.php:176
 msgid "Stripe"
-msgstr ""
+msgstr "Stripe"
 
 #: includes/payments/gateways/stripe-gateway.php:132
 msgid "Use the card number %1$s with CVC %2$s, a valid expiration date and random 5-digit ZIP-code to test a payment."
@@ -6136,27 +6309,27 @@ msgstr "Оплата кредитною карткою через систему
 #: includes/payments/gateways/stripe-gateway.php:185
 #: includes/payments/gateways/stripe-gateway.php:589
 msgid "Bancontact"
-msgstr ""
+msgstr "Bancontact"
 
 #: includes/payments/gateways/stripe-gateway.php:186
 #: includes/payments/gateways/stripe-gateway.php:590
 msgid "iDEAL"
-msgstr ""
+msgstr "iDEAL"
 
 #: includes/payments/gateways/stripe-gateway.php:187
 #: includes/payments/gateways/stripe-gateway.php:591
 msgid "Giropay"
-msgstr ""
+msgstr "Giropay"
 
 #: includes/payments/gateways/stripe-gateway.php:188
 #: includes/payments/gateways/stripe-gateway.php:592
 msgid "SEPA Direct Debit"
-msgstr ""
+msgstr "SEPA Direct Debit"
 
 #: includes/payments/gateways/stripe-gateway.php:189
 #: includes/payments/gateways/stripe-gateway.php:593
 msgid "SOFORT"
-msgstr ""
+msgstr "SOFORT"
 
 #: includes/payments/gateways/stripe-gateway.php:195
 msgid "Euro is the only acceptable currency for the selected payment methods. Change your currency to Euro in General settings."
@@ -6164,11 +6337,11 @@ msgstr "Євро є єдиною прийнятною валютою для об
 
 #: includes/payments/gateways/stripe-gateway.php:207
 msgid "Secret Key"
-msgstr ""
+msgstr "Секретний ключ"
 
 #: includes/payments/gateways/stripe-gateway.php:212
 msgid "Webhook Secret"
-msgstr ""
+msgstr "Webhook Secret"
 
 #: includes/payments/gateways/stripe-gateway.php:218
 msgid "Payment Methods"
@@ -6334,7 +6507,7 @@ msgstr "Кредитна або дебетова картка"
 
 #: includes/payments/gateways/stripe-gateway.php:596
 msgid "IBAN"
-msgstr ""
+msgstr "IBAN"
 
 #: includes/payments/gateways/stripe-gateway.php:597
 msgid "Select iDEAL Bank"
@@ -6386,7 +6559,7 @@ msgstr "Тестова оплата"
 #: includes/payments/gateways/two-checkout-gateway.php:65
 #: includes/payments/gateways/two-checkout-gateway.php:101
 msgid "2Checkout"
-msgstr ""
+msgstr "2Checkout"
 
 #: includes/payments/gateways/two-checkout-gateway.php:88
 msgid "To setup the callback process for 2Checkout to automatically mark payments completed, you will need to"
@@ -6414,7 +6587,7 @@ msgstr "Номер аккаунта"
 
 #: includes/payments/gateways/two-checkout-gateway.php:192
 msgid "Secret Word"
-msgstr ""
+msgstr "Секретне слово"
 
 #: includes/payments/gateways/two-checkout/ins-listener.php:69
 msgid "2Checkout \"Order Created\" notification received."
@@ -6511,10 +6684,6 @@ msgstr "Нов(а)ий %s"
 #: includes/post-types/attributes-cpt.php:163
 msgid "No &quot;%s&quot; found"
 msgstr "\"%s&\" не знайдено"
-
-#: includes/post-types/attributes-cpt.php:293
-msgid "Name"
-msgstr "Ім’я"
 
 #: includes/post-types/attributes-cpt.php:294
 msgid "Name (numeric)"
@@ -6698,7 +6867,7 @@ msgstr "Сума знижки"
 
 #: includes/post-types/coupon-cpt.php:46
 msgid "Enter percent or fixed amount according to selected type."
-msgstr ""
+msgstr "Введіть відсоток або фіксовану суму відповідно до обраного типу."
 
 #: includes/post-types/coupon-cpt.php:51
 msgid "Expiration Date"
@@ -6886,7 +7055,7 @@ msgid_plural "Completed <span class=\"count\">(%s)</span>"
 msgstr[0] "Виконано <span class=\"count\">(%s)</span>"
 msgstr[1] "Виконано <span class=\"count\">(%s)</span>"
 msgstr[2] "Виконано <span class=\"count\">(%s)</span>"
-msgstr[3] ""
+msgstr[3] "Виконано <span class=\"count\">(%s)</span>"
 
 #: includes/post-types/payment-cpt/statuses.php:68
 msgctxt "Payment status"
@@ -6899,7 +7068,7 @@ msgid_plural "Failed <span class=\"count\">(%s)</span>"
 msgstr[0] "Не вдалося <span class=\"count\">(%s)</span>"
 msgstr[1] "Не вдалося <span class=\"count\">(%s)</span>"
 msgstr[2] "Не вдалося <span class=\"count\">(%s)</span>"
-msgstr[3] ""
+msgstr[3] "Не вдалося <span class=\"count\">(%s)</span>"
 
 #: includes/post-types/payment-cpt/statuses.php:78
 msgctxt "Payment status"
@@ -6917,7 +7086,7 @@ msgid_plural "On Hold <span class=\"count\">(%s)</span>"
 msgstr[0] "Утримується <span class=\"count\">(%s)</span>"
 msgstr[1] "Утримуються <span class=\"count\">(%s)</span>"
 msgstr[2] "Утримуються <span class=\"count\">(%s)</span>"
-msgstr[3] ""
+msgstr[3] "Утримуються <span class=\"count\">(%s)</span>"
 
 #: includes/post-types/payment-cpt/statuses.php:98
 msgctxt "Payment status"
@@ -6930,7 +7099,7 @@ msgid_plural "Refunded <span class=\"count\">(%s)</span>"
 msgstr[0] "Відшкодовано <span class=\"count\">(%s)</span>"
 msgstr[1] "Відшкодовано <span class=\"count\">(%s)</span>"
 msgstr[2] "Відшкодовано <span class=\"count\">(%s)</span>"
-msgstr[3] ""
+msgstr[3] "Відшкодовано <span class=\"count\">(%s)</span>"
 
 #: includes/post-types/payment-cpt/statuses.php:108
 msgctxt "Payment status"
@@ -7428,152 +7597,152 @@ msgstr "Завантажено до цього сезону"
 msgid "This is where you can add new seasons."
 msgstr "Тут можна додавати нові сезони."
 
-#: includes/post-types/service-cpt.php:91
+#: includes/post-types/service-cpt.php:93
 #: includes/views/booking-view.php:174
 msgid "Service"
 msgstr "Послуга"
 
-#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:94
 msgctxt "Add New Service"
 msgid "Add New"
 msgstr "Додати нову"
 
-#: includes/post-types/service-cpt.php:93
+#: includes/post-types/service-cpt.php:95
 msgid "Add New Service"
 msgstr "Додати послугу"
 
-#: includes/post-types/service-cpt.php:94
+#: includes/post-types/service-cpt.php:96
 msgid "Edit Service"
 msgstr "Редагувати послугу"
 
-#: includes/post-types/service-cpt.php:95
+#: includes/post-types/service-cpt.php:97
 msgid "New Service"
 msgstr "Нова послуга"
 
-#: includes/post-types/service-cpt.php:96
+#: includes/post-types/service-cpt.php:98
 msgid "View Service"
 msgstr "Переглянути послугу"
 
-#: includes/post-types/service-cpt.php:97
+#: includes/post-types/service-cpt.php:99
 msgid "Search Service"
 msgstr "Шукати послугу"
 
-#: includes/post-types/service-cpt.php:98
+#: includes/post-types/service-cpt.php:100
 msgid "No services found"
 msgstr "Послуг не знайдено"
 
-#: includes/post-types/service-cpt.php:99
+#: includes/post-types/service-cpt.php:101
 msgid "No services found in Trash"
 msgstr "Послуг у кошику не знайдено"
 
-#: includes/post-types/service-cpt.php:101
+#: includes/post-types/service-cpt.php:103
 msgid "Insert into service description"
 msgstr "Вставити до опису послуги"
 
-#: includes/post-types/service-cpt.php:102
+#: includes/post-types/service-cpt.php:104
 msgid "Uploaded to this service"
 msgstr "Завантажено до цієї послуги"
 
 #. translators: do not translate
-#: includes/post-types/service-cpt.php:119
+#: includes/post-types/service-cpt.php:121
 msgctxt "slug"
-msgid "service"
+msgid "services"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:153
+#: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
 msgstr "Скільки разів клієнт платить"
 
-#: includes/post-types/service-cpt.php:163
+#: includes/post-types/service-cpt.php:165
 msgid "Minimum"
 msgstr "Мінімум"
 
-#: includes/post-types/service-cpt.php:175
+#: includes/post-types/service-cpt.php:177
 msgid "Maximum"
 msgstr "Максимум"
 
-#: includes/post-types/service-cpt.php:185
+#: includes/post-types/service-cpt.php:187
 msgid "Empty means unlimited"
 msgstr "Якщо не обрано, то необмежене значення"
 
 #: includes/reports/earnings-report.php:91
 msgid "Total Sales"
-msgstr ""
+msgstr "Загалом продаж"
 
 #: includes/reports/earnings-report.php:94
 msgid "Total Without Taxes"
-msgstr ""
+msgstr "Загалом без податків"
 
 #: includes/reports/earnings-report.php:100
 msgid "Total Services"
-msgstr ""
+msgstr "Загалом послуг"
 
 #: includes/reports/earnings-report.php:103
 msgid "Total Discounts"
-msgstr ""
+msgstr "Знижка загалом"
 
 #: includes/reports/earnings-report.php:106
 msgid "Total Bookings"
-msgstr ""
+msgstr "Загалом бронювань"
 
 #: includes/reports/earnings-report.php:286
 #: includes/reports/report-filters.php:27
 msgid "Revenue (Beta)"
-msgstr ""
+msgstr "Дохід (бета-версія)"
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:20
+#: includes/views/shortcodes/checkout-view.php:76
 msgid "Apply"
 msgstr "Застосувати"
 
 #: includes/reports/earnings-report.php:466
 msgid "From %s to %s"
-msgstr ""
+msgstr "З %s до %s"
 
 #: includes/reports/report-filters.php:50
 msgid "Today"
-msgstr ""
+msgstr "Сьогодні"
 
 #: includes/reports/report-filters.php:53
 msgid "Yesterday"
-msgstr ""
+msgstr "Вчора"
 
 #: includes/reports/report-filters.php:56
 msgid "This week"
-msgstr ""
+msgstr "Цього тижня"
 
 #: includes/reports/report-filters.php:59
 msgid "Last week"
-msgstr ""
+msgstr "Минулого тижня"
 
 #: includes/reports/report-filters.php:62
 msgid "Last 30 days"
-msgstr ""
+msgstr "Останні 30 днів"
 
 #: includes/reports/report-filters.php:65
 msgid "This month"
-msgstr ""
+msgstr "Цього місяця"
 
 #: includes/reports/report-filters.php:68
 msgid "Last month"
-msgstr ""
+msgstr "Минулого місяця"
 
 #: includes/reports/report-filters.php:71
 msgid "This quarter"
-msgstr ""
+msgstr "Цього кварталу"
 
 #: includes/reports/report-filters.php:74
 msgid "Last quarter"
-msgstr ""
+msgstr "Минулого кварталу"
 
 #: includes/reports/report-filters.php:77
 msgid "This year"
-msgstr ""
+msgstr "Цього року"
 
 #: includes/reports/report-filters.php:80
 msgid "Last year"
-msgstr ""
+msgstr "Минулого року"
 
 #. translators: %s - original Rate title
 #: includes/repositories/rate-repository.php:195
@@ -7599,6 +7768,10 @@ msgstr "Оброблення..."
 #: includes/script-managers/admin-script-manager.php:100
 msgid "Cancelling..."
 msgstr "Скасування..."
+
+#: includes/script-managers/admin-script-manager.php:101
+msgid "Want to delete?"
+msgstr "Хочете видалити?"
 
 #: includes/script-managers/public-script-manager.php:225
 msgid "Not available"
@@ -7718,6 +7891,34 @@ msgstr "Сіро-блакитна"
 msgid "Turquoise"
 msgstr "Бірюзова"
 
+#: includes/shortcodes/account-shortcode.php:199
+msgid "Account data updated."
+msgstr "Дані акаунта оновлено."
+
+#: includes/shortcodes/account-shortcode.php:205
+msgid "Password changed."
+msgstr "Пароль змінено."
+
+#: includes/shortcodes/account-shortcode.php:216
+msgid "Dashboard"
+msgstr "Панель керування"
+
+#: includes/shortcodes/account-shortcode.php:218
+msgid "Account"
+msgstr "Акаунт"
+
+#: includes/shortcodes/account-shortcode.php:219
+msgid "Logout"
+msgstr "Вийти"
+
+#: includes/shortcodes/account-shortcode.php:255
+msgid "Passwords do not match."
+msgstr "Паролі не збігаються."
+
+#: includes/shortcodes/account-shortcode.php:258
+msgid "Please, provide a valid current password."
+msgstr "Будь ласка, введіть дійсний поточний пароль."
+
 #: includes/shortcodes/booking-confirmation-shortcode.php:375
 msgid "Payment:"
 msgstr "Оплата:"
@@ -7731,34 +7932,34 @@ msgstr "Спосіб оплати:"
 msgid "Status:"
 msgstr "Статус:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:144
+#: includes/shortcodes/checkout-shortcode/step-booking.php:154
 msgid "Checkout data is not valid."
 msgstr "Дата виїзду не дійсна."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:446
+#: includes/shortcodes/checkout-shortcode/step-booking.php:456
 msgid "Payment method is not valid."
 msgstr "Спосіб оплати недійсний."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:152
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:172
 msgid "Accommodation count is not valid."
 msgstr "Неправильна кількість помешкань."
 
-#: includes/shortcodes/checkout-shortcode/step.php:81
+#: includes/shortcodes/checkout-shortcode/step.php:96
 msgid "Accommodation is already booked."
 msgstr "Помешкання вже заброньоване."
 
-#: includes/shortcodes/checkout-shortcode/step.php:91
-#: includes/shortcodes/checkout-shortcode/step.php:100
-#: includes/shortcodes/checkout-shortcode/step.php:109
+#: includes/shortcodes/checkout-shortcode/step.php:106
+#: includes/shortcodes/checkout-shortcode/step.php:115
+#: includes/shortcodes/checkout-shortcode/step.php:124
 msgid "Reservation submitted"
 msgstr "Бронювання надіслано"
 
-#: includes/shortcodes/checkout-shortcode/step.php:92
+#: includes/shortcodes/checkout-shortcode/step.php:107
 msgid "Details of your reservation have just been sent to you in a confirmation email. Please check your inbox to complete booking."
 msgstr "Деталі вашого бронювання щойно надіслані вам електронною поштою з підтвердженням. Будь ласка, перевірте свою поштову скриньку для завершення бронювання."
 
-#: includes/shortcodes/checkout-shortcode/step.php:101
-#: includes/shortcodes/checkout-shortcode/step.php:110
+#: includes/shortcodes/checkout-shortcode/step.php:116
+#: includes/shortcodes/checkout-shortcode/step.php:125
 msgid "We received your booking request. Once it is confirmed we will notify you via email."
 msgstr "Ваш запит на бронювання отримано. Ми надішлемо вам листа, щойно ваше бронювання підтвердиться."
 
@@ -7833,13 +8034,64 @@ msgstr[3] ""
 msgid "Book"
 msgstr "Забронювати"
 
-#: includes/users-and-roles/roles.php:30
-msgid "Hotel Manager"
-msgstr ""
+#: includes/users-and-roles/customers.php:281
+#: includes/users-and-roles/customers.php:371
+msgid "Please, provide a valid email."
+msgstr "Будь ласка, введіть дійсну адресу електронної пошти."
 
-#: includes/users-and-roles/roles.php:35
+#: includes/users-and-roles/customers.php:309
+msgid "Could not create a customer."
+msgstr "Не вдалося створити клієнта."
+
+#: includes/users-and-roles/customers.php:367
+msgid "Could not retrieve a customer."
+msgstr "Не вдалося отримати клієнта."
+
+#: includes/users-and-roles/customers.php:520
+#: includes/users-and-roles/customers.php:566
+msgid "Please, provide a valid Customer ID."
+msgstr "Будь ласка, введіть дійсний ID клієнта."
+
+#: includes/users-and-roles/customers.php:552
+msgid "A database error."
+msgstr "Помилка бази даних."
+
+#: includes/users-and-roles/customers.php:572
+msgid "No customer was deleted."
+msgstr "Жодного клієнта не було видалено."
+
+#: includes/users-and-roles/customers.php:681
+#: includes/views/shortcodes/checkout-view.php:22
+msgid "An account with this email already exists. Please, log in."
+msgstr "Акаунт з цією електронною адресою вже існує. Будь ласка, авторизуйтесь."
+
+#: includes/users-and-roles/roles.php:34
+msgid "Hotel Manager"
+msgstr "Менеджер готелю"
+
+#: includes/users-and-roles/roles.php:39
 msgid "Hotel Worker"
-msgstr ""
+msgstr "Працівник готелю"
+
+#: includes/users-and-roles/roles.php:44
+msgid "Hotel Customer"
+msgstr "Клієнт готелю"
+
+#: includes/users-and-roles/user.php:41
+msgid "Please provide a valid email address."
+msgstr "Будь ласка, вкажіть дійсну e-mail адресу."
+
+#: includes/users-and-roles/user.php:56
+msgid "Please enter a valid account username."
+msgstr "Будь ласка, введіть дійсне ім'я користувача."
+
+#: includes/users-and-roles/user.php:60
+msgid "An account is already registered with that username. Please choose another."
+msgstr "Обліковий запис з цим ім'ям вже зареєстрований. Буль ласка, оберіть інше."
+
+#: includes/users-and-roles/user.php:68
+msgid "Please enter an account password."
+msgstr "Будь ласка, введіть пароль акаунта."
 
 #: includes/utils/date-utils.php:116
 msgid "Sunday"
@@ -7884,23 +8136,23 @@ msgstr "Неправильна кількість дітей"
 #: includes/utils/taxes-and-fees-utils.php:26
 msgctxt "Text about taxes and fees below the price."
 msgid " (+taxes and fees)"
-msgstr ""
+msgstr " (+податки і збори)"
 
 #. translators: %s is a tax value
 #: includes/utils/taxes-and-fees-utils.php:53
 msgctxt "Text about taxes and fees below the price."
 msgid " (+%s taxes and fees)"
-msgstr ""
+msgstr " (+%s податків і зборів)"
 
 #: includes/utils/taxes-and-fees-utils.php:77
 msgctxt "Text about taxes and fees below the price."
 msgid " (includes taxes and fees)"
-msgstr ""
+msgstr " (включає податки та збори)"
 
 #: includes/views/booking-view.php:71
 msgctxt "Accommodation type in price breakdown table. Example: #1 Double Room"
 msgid "#%d %s"
-msgstr ""
+msgstr "#%d %s"
 
 #: includes/views/booking-view.php:74
 msgid "Expand"
@@ -7967,14 +8219,14 @@ msgstr "Купон: %s"
 
 #: includes/views/booking-view.php:293
 msgid "Subtotal (excl. taxes)"
-msgstr ""
+msgstr "Загалом (без податків)"
 
 #: includes/views/booking-view.php:302
 msgid "Taxes"
-msgstr ""
+msgstr "Податки"
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:19
+#: includes/views/shortcodes/checkout-view.php:75
 msgid "Coupon Code:"
 msgstr "Код купону:"
 
@@ -7992,7 +8244,7 @@ msgid "Accommodation:"
 msgstr "Помешкання:"
 
 #: includes/views/edit-booking/checkout-view.php:160
-#: includes/views/shortcodes/checkout-view.php:202
+#: includes/views/shortcodes/checkout-view.php:258
 #: template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
@@ -8065,64 +8317,82 @@ msgstr[1] "x %d дорослих"
 msgstr[2] "x %d дорослих"
 msgstr[3] ""
 
-#: includes/views/shortcodes/checkout-view.php:112
+#: includes/views/shortcodes/checkout-view.php:40
+msgid "Returning customer?"
+msgstr "Постійний клієнт?"
+
+#: includes/views/shortcodes/checkout-view.php:41
+msgid "Click here to log in"
+msgstr "Натисніть тут, щоб увійти"
+
+#. translators: 1 - username;
+#: includes/views/shortcodes/checkout-view.php:57
+#: templates/account/dashboard.php:28
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)."
+msgstr "Привіт %1$s (не %1$s? <a href=\"%2$s\">Вийти</a>)."
+
+#: includes/views/shortcodes/checkout-view.php:168
 msgid "Accommodation #%d"
 msgstr "Помешкання #%d"
 
-#: includes/views/shortcodes/checkout-view.php:116
+#: includes/views/shortcodes/checkout-view.php:172
 msgid "Accommodation Type:"
 msgstr "Тип помешкання:"
 
-#: includes/views/shortcodes/checkout-view.php:256
+#: includes/views/shortcodes/checkout-view.php:312
 msgid "Choose Rate"
 msgstr "Оберіть тариф"
 
-#: includes/views/shortcodes/checkout-view.php:323
+#: includes/views/shortcodes/checkout-view.php:379
 msgid "Choose Additional Services"
 msgstr "Оберіть додаткові послуги"
 
-#: includes/views/shortcodes/checkout-view.php:352
+#: includes/views/shortcodes/checkout-view.php:408
 msgid "for "
 msgstr "для"
 
-#: includes/views/shortcodes/checkout-view.php:363
+#: includes/views/shortcodes/checkout-view.php:419
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr "гостя(ей)"
 
-#: includes/views/shortcodes/checkout-view.php:384
+#: includes/views/shortcodes/checkout-view.php:440
 msgid "time(s)"
 msgstr "раз(и)"
 
-#: includes/views/shortcodes/checkout-view.php:432
+#: includes/views/shortcodes/checkout-view.php:488
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr "загальні положення та умови"
 
-#: includes/views/shortcodes/checkout-view.php:435
+#: includes/views/shortcodes/checkout-view.php:491
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr "Я прочитав і приймаю %s"
 
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:529
 msgid "Your Information"
 msgstr "Ваша інформація"
 
-#: includes/views/shortcodes/checkout-view.php:456
+#: includes/views/shortcodes/checkout-view.php:532
 #: template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "Обов’язкові поля позначені %s"
 
-#: includes/views/shortcodes/checkout-view.php:589
+#: includes/views/shortcodes/checkout-view.php:665
+msgid "Create an account"
+msgstr "Створити акаунт"
+
+#: includes/views/shortcodes/checkout-view.php:684
 msgid "Payment Method"
 msgstr "Спосіб оплати"
 
-#: includes/views/shortcodes/checkout-view.php:594
+#: includes/views/shortcodes/checkout-view.php:689
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "На жаль, немає доступних способів оплати."
 
-#: includes/views/shortcodes/checkout-view.php:688
+#: includes/views/shortcodes/checkout-view.php:783
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -8134,33 +8404,33 @@ msgstr "На жаль, немає доступних способів оплат
 msgid "Total Price:"
 msgstr "Загальна вартість:"
 
-#: includes/views/shortcodes/checkout-view.php:699
+#: includes/views/shortcodes/checkout-view.php:794
 msgid "Deposit:"
 msgstr "Завдаток:"
 
-#: includes/views/shortcodes/checkout-view.php:718
+#: includes/views/shortcodes/checkout-view.php:813
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "Прибуття:"
 
-#: includes/views/shortcodes/checkout-view.php:725
+#: includes/views/shortcodes/checkout-view.php:820
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr "з"
 
-#: includes/views/shortcodes/checkout-view.php:741
+#: includes/views/shortcodes/checkout-view.php:836
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "Виїзд:"
 
-#: includes/views/shortcodes/checkout-view.php:748
+#: includes/views/shortcodes/checkout-view.php:843
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "до"
 
-#: includes/views/shortcodes/checkout-view.php:822
+#: includes/views/shortcodes/checkout-view.php:919
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "Забронювати зараз"
@@ -8198,7 +8468,7 @@ msgid "Book Button"
 msgstr "Кнопка бронювання"
 
 #: includes/widgets/search-availability-widget.php:50
-#: includes/wizard.php:84
+#: includes/wizard.php:85
 msgid "Search Availability"
 msgstr "Перевірити наявність вільних місць"
 
@@ -8244,27 +8514,27 @@ msgstr "Сторінки підтвердження бронювання та р
 msgid "Install Pages"
 msgstr "Встановити сторінки"
 
-#: includes/wizard.php:132
+#: includes/wizard.php:133
 msgid "Booking Canceled"
 msgstr "Бронювання скасоване"
 
-#: includes/wizard.php:133
+#: includes/wizard.php:134
 msgid "Your reservation is canceled."
 msgstr "Ваше бронювання скасоване."
 
-#: includes/wizard.php:160
+#: includes/wizard.php:161
 msgid "Reservation Received"
 msgstr "Бронювання отримане"
 
-#: includes/wizard.php:169
+#: includes/wizard.php:170
 msgid "Transaction Failed"
 msgstr "Помилка транзакції"
 
-#: includes/wizard.php:170
+#: includes/wizard.php:171
 msgid "Unfortunately, your transaction cannot be completed at this time. Please try again or contact us."
 msgstr "На жаль, наразі вашу транзакцію неможливо завершити. Повторіть спробу або зв’яжіться з нами."
 
-#: plugin.php:1012
+#: plugin.php:1055
 msgid "Prices start at: %s"
 msgstr "Ціна від: %s"
 
@@ -8326,6 +8596,35 @@ msgstr "До оплати"
 #: template-functions.php:877
 msgid "Add Payment Manually"
 msgstr "Додати платіж вручну"
+
+#: templates/account/account-details.php:78
+msgid "Change Password"
+msgstr "Змінити пароль"
+
+#: templates/account/account-details.php:81
+msgid "Old Password"
+msgstr "Старий пароль"
+
+#: templates/account/account-details.php:85
+msgid "New Password"
+msgstr "Новий пароль"
+
+#: templates/account/account-details.php:89
+msgid "Confirm New Password"
+msgstr "Підтвердити новий пароль"
+
+#: templates/account/account-details.php:99
+msgid "You are not allowed to access this page."
+msgstr "Вам не дозволено доступ до цієї сторінки."
+
+#: templates/account/bookings.php:114
+#: templates/account/bookings.php:119
+msgid "No bookings found."
+msgstr "Бронювань не знайдено."
+
+#: templates/account/dashboard.php:38
+msgid "From your account dashboard you can view <a href=\"%1$s\">your recent bookings</a> or edit your <a href=\"%2$s\">password and account details</a>."
+msgstr "З панелі управління акаунта ви можете переглянути <a href=\"%1$s\">ваші останні бронювання</a> або змінити <a href=\"%2$s\">пароль і обліковий запис</a>."
 
 #: templates/create-booking/results/reserve-rooms.php:37
 msgid "Base price"
@@ -8444,7 +8743,7 @@ msgstr "Ім'я: %1$s %2$s"
 #: templates/emails/customer-confirmation-booking.php:38
 #: templates/emails/customer-pending-booking.php:35
 msgid "Email: %s"
-msgstr ""
+msgstr "Email: %s"
 
 #: templates/emails/admin-customer-cancelled-booking.php:28
 #: templates/emails/admin-customer-confirmed-booking.php:28
@@ -8513,12 +8812,13 @@ msgstr "%1$s %2$s, ваше бронювання підтверджено!"
 #: templates/emails/customer-confirmation-booking.php:25
 #: templates/emails/customer-pending-booking.php:20
 msgid "ID: #%s"
-msgstr ""
+msgstr "ID: #%s"
 
 #: templates/emails/customer-approved-booking.php:41
 #: templates/emails/customer-cancelled-booking.php:38
 #: templates/emails/customer-confirmation-booking.php:44
 #: templates/emails/customer-pending-booking.php:41
+#: templates/emails/customer-registration.php:26
 msgid "Thank you!"
 msgstr "Дякуємо!"
 
@@ -8544,7 +8844,7 @@ msgstr "Примітка: посилання дійсне до"
 
 #: templates/emails/customer-confirmation-booking.php:20
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: templates/emails/customer-confirmation-booking.php:22
 msgid "If you did not place this booking, please ignore this email."
@@ -8557,6 +8857,30 @@ msgstr "%1$s %2$s, ваше бронювання в очікуванні."
 #: templates/emails/customer-pending-booking.php:17
 msgid "We will notify you by email once it is confirmed by our staff."
 msgstr "Ми надішлемо вам листа, щойно бронювання буде підтверджене нашим персоналом."
+
+#: templates/emails/customer-registration.php:15
+msgid "Hi %1$s %2$s,"
+msgstr "Привіт %1$s %2$s,"
+
+#: templates/emails/customer-registration.php:17
+msgid "Thanks for creating an account on %1$s."
+msgstr "Дякуємо за створення акаунта на %1$s."
+
+#: templates/emails/customer-registration.php:19
+msgid "You Account Details"
+msgstr "Деталі вашого акаунта"
+
+#: templates/emails/customer-registration.php:20
+msgid "Login: %s"
+msgstr "Логін: %s"
+
+#: templates/emails/customer-registration.php:21
+msgid "Password: %s"
+msgstr "Пароль: %s"
+
+#: templates/emails/customer-registration.php:22
+msgid "Log in here: %s"
+msgstr "Увійдіть тут: %s"
 
 #: templates/emails/reserved-room-details.php:14
 msgid "Accommodation #%s"
@@ -8580,11 +8904,11 @@ msgstr "Обов’язкові поля позначені"
 
 #: templates/shortcodes/booking-cancellation/already-cancelled.php:7
 msgid "Booking is already canceled."
-msgstr ""
+msgstr "Бронювання вже скасовано."
 
 #: templates/shortcodes/booking-cancellation/booking-cancellation-button.php:14
 msgid "Cancel Booking"
-msgstr ""
+msgstr "Відмінити бронювання"
 
 #: templates/shortcodes/booking-cancellation/invalid-request.php:7
 #: templates/shortcodes/booking-confirmation/invalid-request.php:7
@@ -8593,7 +8917,7 @@ msgstr "Неправильний запит."
 
 #: templates/shortcodes/booking-cancellation/not-possible.php:7
 msgid "Cancelation of your booking is not possible for some reason. Please contact the website administrator."
-msgstr ""
+msgstr "Скасування бронювання неможливе з якоїсь причини. Будь ласка, зверніться до адміністратора сайту."
 
 #: templates/shortcodes/booking-confirmation/already-confirmed.php:7
 msgid "Booking is already confirmed."

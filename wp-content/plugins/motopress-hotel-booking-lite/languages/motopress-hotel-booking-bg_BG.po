@@ -1,4 +1,4 @@
-# Copyright (C) 2021 MotoPress
+# Copyright (C) 2022 MotoPress
 # This file is distributed under the same license as the Hotel Booking plugin.
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-22T20:11:18+00:00\n"
-"PO-Revision-Date: 2021-12-22 20:52\n"
+"POT-Creation-Date: 2022-02-16T09:10:20+00:00\n"
+"PO-Revision-Date: 2022-02-16 09:25\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: motopress-hotel-booking\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -53,12 +53,12 @@ msgctxt "Post Status"
 msgid "Auto Draft"
 msgstr "Автоматична чернова"
 
-#: functions.php:180
+#: functions.php:192
 msgctxt "Zero price"
 msgid "Free"
 msgstr "Безплатна"
 
-#: functions.php:211
+#: functions.php:223
 msgctxt "Ex: $99 for 2 nights"
 msgid "per night"
 msgid_plural "for %d nights"
@@ -66,11 +66,11 @@ msgstr[0] "на вечер"
 msgstr[1] "за %d вечери"
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:565
+#: functions.php:577
 msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr "В същото време използвате два случая на плъгин за Hotel Booking plugin, моля, <a href=\"%s\"> деактивирайте един от тях </a>."
 
-#: functions.php:583
+#: functions.php:595
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr "<a href=\"%s\">Upgrade to Premium</a>  за да активирате тази функция."
 
@@ -91,6 +91,54 @@ msgstr "Липсва идентификатор на източник"
 #: includes/admin/sync-logs-list-table.php:83
 msgid "Error"
 msgstr "Грешка"
+
+#: includes/admin/customers-list-table.php:133
+#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
+#: includes/admin/sync-rooms-list-table.php:140
+#: includes/post-types/room-type-cpt.php:319
+#: templates/account/bookings.php:78
+msgid "View"
+msgstr "Гледка"
+
+#: includes/admin/customers-list-table.php:137
+#: includes/admin/fields/abstract-complex-field.php:25
+#: includes/admin/fields/rules-list-field.php:38
+#: includes/admin/sync-rooms-list-table.php:141
+msgid "Delete"
+msgstr "Изтриване"
+
+#: includes/admin/customers-list-table.php:194
+#: includes/post-types/attributes-cpt.php:293
+msgid "Name"
+msgstr "Име"
+
+#: includes/admin/customers-list-table.php:195
+#: includes/admin/menu-pages/customers-menu-page.php:189
+#: includes/ajax.php:1069
+#: includes/bundles/customer-bundle.php:101
+#: includes/bundles/export-bundle.php:31
+#: includes/post-types/booking-cpt.php:89
+#: includes/post-types/payment-cpt.php:242
+#: includes/views/shortcodes/checkout-view.php:560
+#: templates/account/account-details.php:34
+msgid "Email"
+msgstr "Имейл"
+
+#: includes/admin/customers-list-table.php:196
+#: includes/admin/menus.php:71
+#: includes/admin/menus.php:72
+#: includes/post-types/booking-cpt.php:200
+#: includes/shortcodes/account-shortcode.php:217
+msgid "Bookings"
+msgstr "Резервации"
+
+#: includes/admin/customers-list-table.php:197
+msgid "Date Registered"
+msgstr ""
+
+#: includes/admin/customers-list-table.php:198
+msgid "Last Active"
+msgstr ""
 
 #. translators: Terms are variations for Attributes and bear no relation to the Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:16
@@ -118,7 +166,7 @@ msgid "Configure terms"
 msgstr "Конфигуриране на условия"
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:20
-#: includes/ajax.php:1051
+#: includes/ajax.php:1054
 #: includes/post-types/reserved-room-cpt.php:22
 msgid "Reserved Accommodations"
 msgstr "Резервирани настанявания"
@@ -290,12 +338,6 @@ msgstr "Активни Настанявания:"
 msgid "Add"
 msgstr "Добавяне"
 
-#: includes/admin/fields/abstract-complex-field.php:25
-#: includes/admin/fields/rules-list-field.php:38
-#: includes/admin/sync-rooms-list-table.php:141
-msgid "Delete"
-msgstr "Изтриване"
-
 #: includes/admin/fields/amount-field.php:75
 msgid "Per adult:"
 msgstr "за възрастен"
@@ -314,12 +356,14 @@ msgstr "на дете:"
 
 #: includes/admin/fields/complex-horizontal-field.php:49
 #: includes/admin/fields/rules-list-field.php:39
+#: templates/account/bookings.php:22
+#: templates/account/bookings.php:77
 #: templates/edit-booking/edit-reserved-rooms.php:47
 msgid "Actions"
 msgstr "Действия"
 
 #: includes/admin/fields/complex-vertical-field.php:17
-#: includes/admin/menu-pages/settings-menu-page.php:303
+#: includes/admin/menu-pages/settings-menu-page.php:333
 #: includes/settings/main-settings.php:25
 #: includes/settings/main-settings.php:43
 msgid "Default"
@@ -327,15 +371,17 @@ msgstr "Подразбиране"
 
 #: includes/admin/fields/dynamic-select-field.php:61
 #: includes/admin/fields/page-select-field.php:16
+#: includes/admin/menu-pages/customers-menu-page.php:242
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:37
-#: includes/admin/menu-pages/settings-menu-page.php:231
+#: includes/admin/menu-pages/settings-menu-page.php:237
 #: includes/post-types/booking-cpt.php:101
 #: includes/post-types/booking-cpt.php:146
 #: includes/post-types/payment-cpt.php:213
 #: includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:185
-#: includes/views/shortcodes/checkout-view.php:206
+#: includes/views/shortcodes/checkout-view.php:241
+#: includes/views/shortcodes/checkout-view.php:262
+#: templates/account/account-details.php:51
 #: templates/edit-booking/add-room-popup.php:30
 #: templates/edit-booking/add-room-popup.php:38
 msgid "— Select —"
@@ -394,7 +440,7 @@ msgstr "Редактирай"
 
 #: includes/admin/fields/rules-list-field.php:37
 #: includes/admin/sync-rooms-list-table.php:75
-#: includes/ajax.php:949
+#: includes/ajax.php:952
 #: includes/script-managers/admin-script-manager.php:92
 msgid "Done"
 msgstr "Готово"
@@ -448,7 +494,7 @@ msgstr "Добави продължителност на престоя"
 #: includes/post-types/room-type-cpt.php:277
 #: includes/views/booking-view.php:93
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:177
+#: includes/views/shortcodes/checkout-view.php:233
 #: template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
 #: templates/shortcodes/search/search-form.php:74
@@ -572,7 +618,7 @@ msgstr "Нова резервация"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:61
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:26
 #: includes/admin/menu-pages/shortcodes-menu-page.php:354
-#: includes/ajax.php:1037
+#: includes/ajax.php:1040
 #: includes/bundles/export-bundle.php:18
 #: includes/post-types/booking-cpt.php:38
 #: includes/post-types/payment-cpt.php:140
@@ -587,7 +633,7 @@ msgstr "Настаняване / Освобождаване"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:64
 #: includes/views/booking-view.php:95
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:179
+#: includes/views/shortcodes/checkout-view.php:235
 #: template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
@@ -604,8 +650,8 @@ msgstr "Информация Клиент"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:66
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:16
 #: includes/post-types/rate-cpt.php:52
-#: includes/post-types/service-cpt.php:131
-#: includes/post-types/service-cpt.php:135
+#: includes/post-types/service-cpt.php:133
+#: includes/post-types/service-cpt.php:137
 #: includes/views/single-service-view.php:18
 #: includes/widgets/rooms-widget.php:194
 #: assets/blocks/blocks.js:360
@@ -634,7 +680,7 @@ msgstr "Настаняване"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:95
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:55
+#: includes/admin/menu-pages/create-booking/booking-step.php:62
 #: includes/bookings-calendar.php:525
 #: includes/script-managers/admin-script-manager.php:96
 msgid "Booking #%s"
@@ -690,6 +736,7 @@ msgid "Imported %s"
 msgstr "Внесени %s"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:27
+#: includes/admin/menu-pages/customers-menu-page.php:281
 msgid "Customer"
 msgstr "Клиент"
 
@@ -711,6 +758,8 @@ msgstr "Сума"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:30
 #: includes/post-types/booking-cpt.php:201
+#: templates/account/bookings.php:18
+#: templates/account/bookings.php:64
 msgid "Booking"
 msgstr "Резервация"
 
@@ -809,7 +858,7 @@ msgstr "Вид легло"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:330
 #: includes/post-types/room-cpt.php:25
 #: includes/post-types/room-cpt.php:35
-#: includes/wizard.php:99
+#: includes/wizard.php:100
 msgid "Accommodations"
 msgstr "Настанявания"
 
@@ -876,41 +925,41 @@ msgid "Services are extra offers that you can sell or give for free. E.g. Thai m
 msgstr "Услугите са допълнителни оферти, които можете да продавате или давате безплатно. Например Масаж, трансфер до хотел / летище, гледане на деца. Гостите могат да ги предупредят, когато правят резервация."
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:17
-#: includes/post-types/service-cpt.php:147
+#: includes/post-types/service-cpt.php:149
 msgid "Periodicity"
 msgstr "Периодичност"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:18
-#: includes/post-types/service-cpt.php:196
+#: includes/post-types/service-cpt.php:198
 msgid "Charge"
 msgstr "Такса"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:41
 #: includes/entities/service.php:203
-#: includes/post-types/service-cpt.php:150
+#: includes/post-types/service-cpt.php:152
 msgid "Per Day"
 msgstr "На ден"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:43
-#: includes/post-types/service-cpt.php:151
+#: includes/post-types/service-cpt.php:153
 msgid "Guest Choice"
 msgstr "Избор на госта"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:45
 #: includes/entities/service.php:207
-#: includes/post-types/service-cpt.php:149
+#: includes/post-types/service-cpt.php:151
 msgid "Once"
 msgstr "Веднъж"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:213
-#: includes/post-types/service-cpt.php:199
+#: includes/post-types/service-cpt.php:201
 msgid "Per Guest"
 msgstr "на гост"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:215
-#: includes/post-types/service-cpt.php:198
+#: includes/post-types/service-cpt.php:200
 msgid "Per Accommodation"
 msgstr "на настаняване"
 
@@ -925,13 +974,14 @@ msgstr "Правилата за резервацията са запазени."
 #: includes/admin/menu-pages/booking-rules-menu-page.php:34
 #: includes/admin/menu-pages/booking-rules-menu-page.php:444
 #: includes/admin/menu-pages/booking-rules-menu-page.php:448
-#: includes/admin/menu-pages/settings-menu-page.php:334
+#: includes/admin/menu-pages/settings-menu-page.php:364
 msgid "Booking Rules"
 msgstr "Правила за резервация"
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:71
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:55
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:118
+#: templates/account/account-details.php:94
 msgid "Save Changes"
 msgstr "Запази промените"
 
@@ -1092,31 +1142,31 @@ msgstr "Изчисти резултатите от Търсенето"
 msgid "Note: booking rules are disabled in the plugin settings and are not taken into account."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:39
-#: includes/shortcodes/checkout-shortcode/step-booking.php:475
+#: includes/admin/menu-pages/create-booking/booking-step.php:46
+#: includes/shortcodes/checkout-shortcode/step-booking.php:485
 msgid "Unable to create booking. Please try again."
 msgstr "Резервацията не може да се създаде. Моля, опитайте отново."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:63
-#: includes/shortcodes/checkout-shortcode/step-booking.php:107
+#: includes/admin/menu-pages/create-booking/booking-step.php:70
+#: includes/shortcodes/checkout-shortcode/step-booking.php:110
 msgid "Booking is blocked due to maintenance reason. Please try again later."
 msgstr "Резервирането е блокирано поради извършване на поддръжка. Моля, опитайте отново по-късно."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:104
-#: includes/admin/menu-pages/create-booking/booking-step.php:244
+#: includes/admin/menu-pages/create-booking/booking-step.php:111
+#: includes/admin/menu-pages/create-booking/booking-step.php:251
 #: includes/admin/menu-pages/create-booking/checkout-step.php:105
 #: includes/admin/menu-pages/edit-booking/booking-control.php:34
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:50
 #: includes/admin/menu-pages/edit-booking/summary-control.php:45
-#: includes/shortcodes/checkout-shortcode/step-booking.php:176
-#: includes/shortcodes/checkout-shortcode/step-booking.php:335
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:131
+#: includes/shortcodes/checkout-shortcode/step-booking.php:186
+#: includes/shortcodes/checkout-shortcode/step-booking.php:345
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:149
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "Няма избрани настанявания за резервация."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:135
+#: includes/admin/menu-pages/create-booking/booking-step.php:113
+#: includes/admin/menu-pages/create-booking/booking-step.php:142
 #: includes/admin/menu-pages/create-booking/checkout-step.php:107
 #: includes/admin/menu-pages/create-booking/checkout-step.php:126
 #: includes/admin/menu-pages/create-booking/checkout-step.php:149
@@ -1126,79 +1176,79 @@ msgstr "Няма избрани настанявания за резерваци
 msgid "Selected accommodations are not valid."
 msgstr "Избраните видове настанявания не са валидни."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:130
+#: includes/admin/menu-pages/create-booking/booking-step.php:137
 #: includes/admin/menu-pages/create-booking/checkout-step.php:121
 #: includes/admin/menu-pages/create-booking/step.php:147
-#: includes/ajax.php:591
-#: includes/shortcodes/checkout-shortcode/step-booking.php:190
-#: includes/shortcodes/checkout-shortcode/step-booking.php:196
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:146
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:158
+#: includes/ajax.php:594
+#: includes/shortcodes/checkout-shortcode/step-booking.php:200
+#: includes/shortcodes/checkout-shortcode/step-booking.php:206
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:166
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:178
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "Видът настаняване не е валиден."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:140
-#: includes/admin/menu-pages/create-booking/booking-step.php:161
-#: includes/ajax.php:599
-#: includes/shortcodes/checkout-shortcode/step-booking.php:202
-#: includes/shortcodes/checkout-shortcode/step-booking.php:218
-#: includes/shortcodes/checkout-shortcode/step-booking.php:375
-#: includes/shortcodes/checkout-shortcode/step-booking.php:387
+#: includes/admin/menu-pages/create-booking/booking-step.php:147
+#: includes/admin/menu-pages/create-booking/booking-step.php:168
+#: includes/ajax.php:602
+#: includes/shortcodes/checkout-shortcode/step-booking.php:212
+#: includes/shortcodes/checkout-shortcode/step-booking.php:228
+#: includes/shortcodes/checkout-shortcode/step-booking.php:385
+#: includes/shortcodes/checkout-shortcode/step-booking.php:397
 #: includes/utils/parse-utils.php:253
 msgid "Rate is not valid."
 msgstr "Тарифата не е валидна."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:166
+#: includes/admin/menu-pages/create-booking/booking-step.php:173
 #: includes/admin/menu-pages/create-booking/step.php:165
 #: includes/admin/menu-pages/create-booking/step.php:169
-#: includes/ajax.php:472
-#: includes/shortcodes/checkout-shortcode/step-booking.php:224
+#: includes/ajax.php:475
+#: includes/shortcodes/checkout-shortcode/step-booking.php:234
 #: includes/shortcodes/search-results-shortcode.php:539
 #: includes/utils/parse-utils.php:102
 #: includes/utils/parse-utils.php:257
 msgid "Adults number is not valid."
 msgstr "Номера на възрастните не е валиден."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:171
+#: includes/admin/menu-pages/create-booking/booking-step.php:178
 #: includes/admin/menu-pages/create-booking/step.php:187
 #: includes/admin/menu-pages/create-booking/step.php:191
-#: includes/ajax.php:488
-#: includes/shortcodes/checkout-shortcode/step-booking.php:230
+#: includes/ajax.php:491
+#: includes/shortcodes/checkout-shortcode/step-booking.php:240
 #: includes/shortcodes/search-results-shortcode.php:555
 #: includes/utils/parse-utils.php:127
 #: includes/utils/parse-utils.php:261
 msgid "Children number is not valid."
 msgstr "Номера на децата не е валиден."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:176
-#: includes/ajax.php:608
-#: includes/shortcodes/checkout-shortcode/step-booking.php:235
+#: includes/admin/menu-pages/create-booking/booking-step.php:183
+#: includes/ajax.php:611
+#: includes/shortcodes/checkout-shortcode/step-booking.php:245
 #: includes/utils/parse-utils.php:265
 msgid "The total number of guests is not valid."
 msgstr "Общият брой на гостите не е валиден."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:181
+#: includes/admin/menu-pages/create-booking/booking-step.php:188
 #: includes/admin/menu-pages/create-booking/checkout-step.php:136
-#: includes/shortcodes/checkout-shortcode/step-booking.php:240
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:189
+#: includes/shortcodes/checkout-shortcode/step-booking.php:250
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:209
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr "Избраните дати не отговарят на правилата за резервация за тип %s"
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:232
+#: includes/admin/menu-pages/create-booking/booking-step.php:239
 #: includes/admin/menu-pages/create-booking/checkout-step.php:141
 #: includes/utils/parse-utils.php:197
 msgid "Accommodations are not available."
 msgstr "Настаняванията не са налични."
 
 #: includes/admin/menu-pages/create-booking/checkout-step.php:131
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:184
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:204
 msgid "There are no rates for requested dates."
 msgstr "За заявените дати няма тарифи."
 
 #: includes/admin/menu-pages/create-booking/results-step.php:145
-#: includes/wizard.php:90
+#: includes/wizard.php:91
 msgid "Search Results"
 msgstr "Резултати от търсенето"
 
@@ -1212,46 +1262,166 @@ msgid "Search parameters are not set."
 msgstr "Параметрите за търсене не са зададени."
 
 #: includes/admin/menu-pages/create-booking/step.php:106
-#: includes/ajax.php:439
+#: includes/ajax.php:442
 #: includes/script-managers/public-script-manager.php:244
-#: includes/shortcodes/checkout-shortcode/step.php:42
+#: includes/shortcodes/checkout-shortcode/step.php:50
 #: includes/shortcodes/search-results-shortcode.php:570
 #: includes/utils/parse-utils.php:38
 msgid "Check-in date is not valid."
 msgstr "Датата на вписване не е валидна."
 
 #: includes/admin/menu-pages/create-booking/step.php:108
-#: includes/shortcodes/checkout-shortcode/step.php:45
+#: includes/shortcodes/checkout-shortcode/step.php:53
 #: includes/shortcodes/search-results-shortcode.php:573
 #: includes/utils/parse-utils.php:40
 msgid "Check-in date cannot be earlier than today."
 msgstr "Датата на настаняване не може да бъде по-рано от днес."
 
 #: includes/admin/menu-pages/create-booking/step.php:127
-#: includes/ajax.php:456
+#: includes/ajax.php:459
 #: includes/script-managers/public-script-manager.php:245
-#: includes/shortcodes/checkout-shortcode/step.php:69
+#: includes/shortcodes/checkout-shortcode/step.php:84
 #: includes/shortcodes/search-results-shortcode.php:591
 #: includes/utils/parse-utils.php:71
 msgid "Check-out date is not valid."
 msgstr "Датата на освобождаване не е валидна."
 
 #: includes/admin/menu-pages/create-booking/step.php:129
-#: includes/ajax.php:1181
-#: includes/ajax.php:1189
-#: includes/ajax.php:1250
-#: includes/shortcodes/checkout-shortcode/step.php:72
+#: includes/ajax.php:1184
+#: includes/ajax.php:1192
+#: includes/ajax.php:1253
+#: includes/shortcodes/checkout-shortcode/step.php:87
 #: includes/shortcodes/search-results-shortcode.php:598
 #: includes/utils/parse-utils.php:73
 msgid "Nothing found. Please try again with different search parameters."
 msgstr "Нищо не е намерено. Моля, опитайте отново с различни параметри за търсене."
+
+#: includes/admin/menu-pages/customers-menu-page.php:51
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:142
+msgid "User ID"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:153
+#: templates/account/account-details.php:30
+msgid "Username"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:165
+#: includes/ajax.php:1061
+#: includes/bundles/customer-bundle.php:83
+#: includes/bundles/export-bundle.php:29
+#: includes/post-types/booking-cpt.php:77
+#: includes/post-types/payment-cpt.php:228
+#: includes/views/shortcodes/checkout-view.php:538
+#: templates/account/account-details.php:22
+msgid "First Name"
+msgstr "Име"
+
+#: includes/admin/menu-pages/customers-menu-page.php:177
+#: includes/ajax.php:1065
+#: includes/bundles/customer-bundle.php:92
+#: includes/bundles/export-bundle.php:30
+#: includes/post-types/booking-cpt.php:83
+#: includes/post-types/payment-cpt.php:235
+#: includes/views/shortcodes/checkout-view.php:549
+#: templates/account/account-details.php:26
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: includes/admin/menu-pages/customers-menu-page.php:201
+#: includes/ajax.php:1073
+#: includes/bundles/customer-bundle.php:110
+#: includes/bundles/export-bundle.php:32
+#: includes/post-types/booking-cpt.php:95
+#: includes/post-types/payment-cpt.php:249
+#: includes/views/shortcodes/checkout-view.php:571
+#: templates/account/account-details.php:38
+msgid "Phone"
+msgstr "Телефон за връзка"
+
+#: includes/admin/menu-pages/customers-menu-page.php:213
+#: includes/ajax.php:1081
+#: includes/bundles/customer-bundle.php:128
+#: includes/bundles/export-bundle.php:34
+#: includes/post-types/booking-cpt.php:108
+#: includes/views/shortcodes/checkout-view.php:605
+#: templates/account/account-details.php:42
+msgid "Address"
+msgstr "Адрес"
+
+#: includes/admin/menu-pages/customers-menu-page.php:225
+#: includes/ajax.php:1089
+#: includes/bundles/customer-bundle.php:146
+#: includes/bundles/export-bundle.php:36
+#: includes/post-types/booking-cpt.php:120
+#: includes/post-types/payment-cpt.php:284
+#: includes/views/shortcodes/checkout-view.php:627
+#: templates/account/account-details.php:64
+msgid "State / County"
+msgstr "Държава"
+
+#: includes/admin/menu-pages/customers-menu-page.php:237
+#: includes/ajax.php:1077
+#: includes/bundles/export-bundle.php:33
+#: includes/post-types/booking-cpt.php:102
+#: includes/post-types/payment-cpt.php:256
+#: templates/account/account-details.php:46
+msgid "Country"
+msgstr "Държава"
+
+#: includes/admin/menu-pages/customers-menu-page.php:250
+#: includes/ajax.php:1085
+#: includes/bundles/customer-bundle.php:137
+#: includes/bundles/export-bundle.php:35
+#: includes/post-types/booking-cpt.php:114
+#: includes/post-types/payment-cpt.php:277
+#: includes/views/shortcodes/checkout-view.php:616
+#: templates/account/account-details.php:68
+msgid "City"
+msgstr "Град"
+
+#: includes/admin/menu-pages/customers-menu-page.php:262
+#: includes/ajax.php:1093
+#: includes/bundles/customer-bundle.php:155
+#: includes/bundles/export-bundle.php:37
+#: includes/post-types/booking-cpt.php:126
+#: includes/views/shortcodes/checkout-view.php:638
+#: templates/account/account-details.php:72
+msgid "Postcode"
+msgstr "Пощенски код"
+
+#: includes/admin/menu-pages/customers-menu-page.php:296
+msgid "Customer data updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:302
+msgid "User account updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:309
+msgid "Edit User Profile"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:341
+#: includes/admin/menu-pages/i-cal-menu-page.php:148
+msgid "Update"
+msgstr "Обнови"
+
+#: includes/admin/menu-pages/customers-menu-page.php:347
+#: includes/admin/menu-pages/customers-menu-page.php:360
+#: includes/admin/menu-pages/customers-menu-page.php:364
+msgid "Customers"
+msgstr ""
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:66
 msgid "The booking is not set."
 msgstr "Резервацията не е зададена."
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:74
-#: includes/ajax.php:1024
+#: includes/ajax.php:1027
 msgid "The booking not found."
 msgstr "Резервацията не е намерена."
 
@@ -1285,7 +1455,7 @@ msgid "You cannot edit the imported booking. Please update the source booking an
 msgstr "Вие не можете да редактирате импортираната резервация. Моля, редактирайте базовата резервация и направете синхронизация на вашите календари."
 
 #: includes/admin/menu-pages/edit-booking/booking-control.php:22
-#: includes/ajax.php:190
+#: includes/ajax.php:193
 msgid "Request does not pass security verification. Please refresh the page and try one more time."
 msgstr "Заявката не премина проверката за сигурност. Моля, опреснете страницата и опитайте още веднъж."
 
@@ -1329,7 +1499,7 @@ msgstr "Добави нова"
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:788
 msgid "Extensions"
 msgstr "Разширения."
 
@@ -1401,10 +1571,6 @@ msgstr "Синхронизирайте всички външни календа�
 #: includes/admin/menu-pages/i-cal-menu-page.php:121
 msgid "Sync your bookings across all online channels like Booking.com, TripAdvisor, Airbnb etc. via iCalendar file format."
 msgstr "Синхронизирайте вашите резервации във всички онлайн канали като Booking.com, TripAdvisor, Airbnb и т.н. чрез файловия формат iCalendar."
-
-#: includes/admin/menu-pages/i-cal-menu-page.php:148
-msgid "Update"
-msgstr "Обнови"
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:212
 msgid "Calendar URL"
@@ -1583,12 +1749,6 @@ msgid_plural "%s accommodations generated."
 msgstr[0] "Настаняването е създадено"
 msgstr[1] "%s Настаняванията са създадени."
 
-#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
-#: includes/admin/sync-rooms-list-table.php:140
-#: includes/post-types/room-type-cpt.php:319
-msgid "View"
-msgstr "Гледка"
-
 #: includes/admin/menu-pages/settings-menu-page.php:54
 msgid "General"
 msgstr "Основни"
@@ -1621,42 +1781,50 @@ msgstr "Условия на ползване"
 msgid "If you define a \"Terms\" page the customer will be asked if they accept them when checking out."
 msgstr "Ако определите страница \"Условия за Ползване\", клиентът ще бъде попитан дали ще ги приеме при приключване."
 
-#: includes/admin/menu-pages/settings-menu-page.php:84
+#: includes/admin/menu-pages/settings-menu-page.php:80
+msgid "My Account Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:81
+msgid "Select a page to display user account. Use the customer account shortcode on this page."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:90
 msgid "Misc"
 msgstr "Разни"
 
-#: includes/admin/menu-pages/settings-menu-page.php:89
+#: includes/admin/menu-pages/settings-menu-page.php:95
 msgid "Square Units"
 msgstr "Квадратни единици"
 
-#: includes/admin/menu-pages/settings-menu-page.php:95
+#: includes/admin/menu-pages/settings-menu-page.php:101
 #: includes/post-types/payment-cpt.php:190
 msgid "Currency"
 msgstr "Валута"
 
-#: includes/admin/menu-pages/settings-menu-page.php:101
+#: includes/admin/menu-pages/settings-menu-page.php:107
 msgid "Currency Position"
 msgstr "Позиция на валутата"
 
-#: includes/admin/menu-pages/settings-menu-page.php:107
+#: includes/admin/menu-pages/settings-menu-page.php:113
 msgid "Datepicker Date Format"
 msgstr "Формат за избиране на датата"
 
-#: includes/admin/menu-pages/settings-menu-page.php:113
-#: includes/emails/templaters/email-templater.php:135
+#: includes/admin/menu-pages/settings-menu-page.php:119
+#: includes/emails/templaters/email-templater.php:140
 msgid "Check-out Time"
 msgstr "Час на освобождаване"
 
-#: includes/admin/menu-pages/settings-menu-page.php:118
-#: includes/emails/templaters/email-templater.php:131
+#: includes/admin/menu-pages/settings-menu-page.php:124
+#: includes/emails/templaters/email-templater.php:136
 msgid "Check-in Time"
 msgstr "Час на настаняване"
 
-#: includes/admin/menu-pages/settings-menu-page.php:123
+#: includes/admin/menu-pages/settings-menu-page.php:129
 msgid "Bed Types"
 msgstr "Видове легла"
 
-#: includes/admin/menu-pages/settings-menu-page.php:128
+#: includes/admin/menu-pages/settings-menu-page.php:134
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:124
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:189
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:251
@@ -1666,15 +1834,15 @@ msgstr "Видове легла"
 msgid "Type"
 msgstr "Вид"
 
-#: includes/admin/menu-pages/settings-menu-page.php:132
+#: includes/admin/menu-pages/settings-menu-page.php:138
 msgid "Add Bed Type"
 msgstr "Добавете тип легло"
 
-#: includes/admin/menu-pages/settings-menu-page.php:137
+#: includes/admin/menu-pages/settings-menu-page.php:143
 msgid "Show Lowest Price for"
 msgstr "Покажи най-ниската цена за"
 
-#: includes/admin/menu-pages/settings-menu-page.php:138
+#: includes/admin/menu-pages/settings-menu-page.php:144
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:146
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:212
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:273
@@ -1682,341 +1850,361 @@ msgstr "Покажи най-ниската цена за"
 msgid "days"
 msgstr "дни"
 
-#: includes/admin/menu-pages/settings-menu-page.php:142
+#: includes/admin/menu-pages/settings-menu-page.php:148
 msgid "Lowest price of accommodation for selected number of days if check-in and check-out dates are not set. Example: set 0 to display today's lowest price, set 7 to display the lowest price for the next week."
 msgstr "Най-ниска цена на настаняването за избрания брой дни, ако не са зададени дати за настаняване и напускане. Пример: Задайте 0, за да покажете най-ниската цена за днес, задайте 7, за да покажете най-ниската цена за следващата седмица."
 
-#: includes/admin/menu-pages/settings-menu-page.php:146
+#: includes/admin/menu-pages/settings-menu-page.php:152
 msgid "Enable search form to recommend the best set of accommodations according to a number of guests."
 msgstr "Активирайте формуляра за търсене, за да препоръчате най-добрия набор от настаняване според редица гости."
 
-#: includes/admin/menu-pages/settings-menu-page.php:152
+#: includes/admin/menu-pages/settings-menu-page.php:158
 msgid "Enable the use of coupons."
 msgstr "Активирайте използването на ваучери."
 
-#: includes/admin/menu-pages/settings-menu-page.php:157
+#: includes/admin/menu-pages/settings-menu-page.php:163
 msgid "Text on Checkout"
 msgstr "Текст на страницата за плащане"
 
-#: includes/admin/menu-pages/settings-menu-page.php:158
+#: includes/admin/menu-pages/settings-menu-page.php:164
 msgid "This text will appear on the checkout page."
 msgstr "Този текст ще се показва на страницата за плащане."
 
-#: includes/admin/menu-pages/settings-menu-page.php:167
+#: includes/admin/menu-pages/settings-menu-page.php:173
 msgid "Disable Booking"
 msgstr "Деактивиране на резервацията"
 
-#: includes/admin/menu-pages/settings-menu-page.php:172
+#: includes/admin/menu-pages/settings-menu-page.php:178
 msgid "Hide reservation forms and buttons"
 msgstr "Скриване на формуляри и бутони за резервация"
 
-#: includes/admin/menu-pages/settings-menu-page.php:178
+#: includes/admin/menu-pages/settings-menu-page.php:184
 msgid "Text instead of reservation form while booking is disabled"
 msgstr "Текст вместо формуляр за резервация, докато резервацията е деактивирана"
 
-#: includes/admin/menu-pages/settings-menu-page.php:187
+#: includes/admin/menu-pages/settings-menu-page.php:193
 #: includes/admin/menu-pages/shortcodes-menu-page.php:482
-#: includes/wizard.php:108
+#: includes/wizard.php:109
 #: assets/blocks/blocks.js:1423
 #: assets/blocks/blocks.js:1453
 msgid "Booking Confirmation"
 msgstr "Потвърждение на резервация"
 
-#: includes/admin/menu-pages/settings-menu-page.php:192
+#: includes/admin/menu-pages/settings-menu-page.php:198
 msgid "Confirmation Mode"
 msgstr "Режим за потвърждение"
 
-#: includes/admin/menu-pages/settings-menu-page.php:194
+#: includes/admin/menu-pages/settings-menu-page.php:200
 msgid "By customer via email"
 msgstr "От клиента чрез Ймеил"
 
-#: includes/admin/menu-pages/settings-menu-page.php:195
+#: includes/admin/menu-pages/settings-menu-page.php:201
 msgid "By admin manually"
 msgstr "Ръчно от администратор"
 
-#: includes/admin/menu-pages/settings-menu-page.php:196
+#: includes/admin/menu-pages/settings-menu-page.php:202
 msgid "Confirmation upon payment"
 msgstr "Потвърждение при плащане"
 
-#: includes/admin/menu-pages/settings-menu-page.php:202
+#: includes/admin/menu-pages/settings-menu-page.php:208
 msgid "Booking Confirmed Page"
 msgstr "Страница за потвърждение на резервацията"
 
-#: includes/admin/menu-pages/settings-menu-page.php:203
+#: includes/admin/menu-pages/settings-menu-page.php:209
 msgid "Page user will be redirected to once the booking is confirmed via email or by admin."
 msgstr "Потребителят на страницата ще бъде пренасочен, след като резервацията бъде потвърдена чрез имейл или от администратора."
 
-#: includes/admin/menu-pages/settings-menu-page.php:208
+#: includes/admin/menu-pages/settings-menu-page.php:214
 msgid "Approval Time for User"
 msgstr "Време за одобрение за потребителя"
 
-#: includes/admin/menu-pages/settings-menu-page.php:209
+#: includes/admin/menu-pages/settings-menu-page.php:215
 msgid "Period of time in minutes the user is given to confirm booking via email. Unconfirmed bookings become Abandoned and accommodation status changes to Available."
 msgstr "Периодът в минути се дава на потребителя, за да потвърди резервацията по имейл. Непотвърдени резервации се изоставят, а състоянието на настаняването се променя на Налично."
 
-#: includes/admin/menu-pages/settings-menu-page.php:216
+#: includes/admin/menu-pages/settings-menu-page.php:222
 msgid "Country of residence field is required for reservation."
 msgstr "За резервация се изисква поле на държава на пребиваване."
 
-#: includes/admin/menu-pages/settings-menu-page.php:221
+#: includes/admin/menu-pages/settings-menu-page.php:227
 msgid "Full address fields are required for reservation."
 msgstr "Задължително адресните полета за резервация трабва да са попълнени."
 
-#: includes/admin/menu-pages/settings-menu-page.php:226
+#: includes/admin/menu-pages/settings-menu-page.php:232
 msgid "Customer information is required when placing admin bookings."
 msgstr "При поставянето на администраторски резервации се изисква информация за клиента."
 
-#: includes/admin/menu-pages/settings-menu-page.php:232
+#: includes/admin/menu-pages/settings-menu-page.php:238
 msgid "Default Country on Checkout"
 msgstr "Страна по подразбиране при финализиране на плащането"
 
-#: includes/admin/menu-pages/settings-menu-page.php:237
-#: includes/emails/templaters/email-templater.php:186
+#: includes/admin/menu-pages/settings-menu-page.php:243
+#: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:397
+#: includes/views/shortcodes/checkout-view.php:453
 msgid "Price Breakdown"
 msgstr "Разгъвка на цените"
 
-#: includes/admin/menu-pages/settings-menu-page.php:238
+#: includes/admin/menu-pages/settings-menu-page.php:244
 msgid "Price breakdown unfolded by default."
 msgstr "Разбиването на цената се разгръща по подразбиране."
 
-#: includes/admin/menu-pages/settings-menu-page.php:246
-#: includes/upgrader.php:646
-#: includes/wizard.php:145
-msgid "Booking Cancellation"
-msgstr "Отмяна на резервация"
-
-#: includes/admin/menu-pages/settings-menu-page.php:251
-msgid "User can cancel booking via link provided inside email."
-msgstr "Потребителят може да отмени резервацията чрез линк, предоставен вътре в имейл"
-
-#: includes/admin/menu-pages/settings-menu-page.php:256
-msgid "Booking Cancelation Page"
+#: includes/admin/menu-pages/settings-menu-page.php:252
+msgid "Accounts"
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:257
-msgid "Page to confirm booking cancelation."
+msgid "Account creation"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:262
-msgid "Booking Canceled Page"
+#: includes/admin/menu-pages/settings-menu-page.php:258
+msgid "Automatically create an account for a user at checkout."
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:263
+msgid "Allow customers to create an account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:268
+msgid "Allow customers to log into their existing account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:276
+#: includes/upgrader.php:706
+#: includes/wizard.php:146
+msgid "Booking Cancellation"
+msgstr "Отмяна на резервация"
+
+#: includes/admin/menu-pages/settings-menu-page.php:281
+msgid "User can cancel booking via link provided inside email."
+msgstr "Потребителят може да отмени резервацията чрез линк, предоставен вътре в имейл"
+
+#: includes/admin/menu-pages/settings-menu-page.php:286
+msgid "Booking Cancelation Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:287
+msgid "Page to confirm booking cancelation."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:292
+msgid "Booking Canceled Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:293
 msgid "Page to redirect to after a booking is canceled."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Search Options"
 msgstr "Търсене опции"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Maximum accommodation occupancy available in the Search Form."
 msgstr "Максимална заетост на настаняванията, налична във формуляра за търсене."
 
-#: includes/admin/menu-pages/settings-menu-page.php:278
+#: includes/admin/menu-pages/settings-menu-page.php:308
 msgid "Max Adults"
 msgstr "Максимум възрастни"
 
-#: includes/admin/menu-pages/settings-menu-page.php:285
+#: includes/admin/menu-pages/settings-menu-page.php:315
 msgid "Max Children"
 msgstr "Максимум деца "
 
-#: includes/admin/menu-pages/settings-menu-page.php:290
+#: includes/admin/menu-pages/settings-menu-page.php:320
 msgid "Age of Child"
 msgstr "Възраст на децата"
 
-#: includes/admin/menu-pages/settings-menu-page.php:291
+#: includes/admin/menu-pages/settings-menu-page.php:321
 msgid "Optional description of the \"Children\" field."
 msgstr "Незадължително описание на полето \"Деца\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:296
+#: includes/admin/menu-pages/settings-menu-page.php:326
 msgid "Skip Search Results"
 msgstr "Пропуснете резултатите от търсенето"
 
-#: includes/admin/menu-pages/settings-menu-page.php:297
+#: includes/admin/menu-pages/settings-menu-page.php:327
 msgid "Skip search results page and enable direct booking from accommodation pages."
 msgstr "Пропуснете страницата с резултати от търсенето и разрешете директна резервация от страниците за настаняване."
 
-#: includes/admin/menu-pages/settings-menu-page.php:301
+#: includes/admin/menu-pages/settings-menu-page.php:331
 msgid "Direct Booking Form"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:304
+#: includes/admin/menu-pages/settings-menu-page.php:334
 msgid "Show price for selected period"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:305
+#: includes/admin/menu-pages/settings-menu-page.php:335
 msgid "Show price together with adults and children fields"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:311
+#: includes/admin/menu-pages/settings-menu-page.php:341
 msgid "Book button behavior on the search results page"
 msgstr "Поведение на бутона \"резервирай\" на страницата с резултати от търсенето"
 
-#: includes/admin/menu-pages/settings-menu-page.php:312
+#: includes/admin/menu-pages/settings-menu-page.php:342
 msgid "Redirect to the checkout page immediately after successful addition to reservation."
 msgstr "Пренасочване към разплащане, веднага след успешно добавяне на резервация."
 
-#: includes/admin/menu-pages/settings-menu-page.php:318
+#: includes/admin/menu-pages/settings-menu-page.php:348
 msgid "Enable \"adults\" and \"children\" options for my website (default)."
 msgstr "Активирайте опциите \"възрастни\" и \"деца\" за моя уебсайт (по подразбиране)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:319
+#: includes/admin/menu-pages/settings-menu-page.php:349
 msgid "Disable \"children\" option for my website (hide \"children\" field and use Guests label instead)."
 msgstr "Деактивирайте опцията \"деца\" за уебсайта си (скрийте полето \"деца\" и вместо това използвайте етикета \"Гости\")."
 
-#: includes/admin/menu-pages/settings-menu-page.php:320
+#: includes/admin/menu-pages/settings-menu-page.php:350
 msgid "Disable \"adults\" and \"children\" options for my website."
 msgstr "Деактивирайте опциите \"възрастни\" и \"деца\" за моя уебсайт."
 
-#: includes/admin/menu-pages/settings-menu-page.php:323
+#: includes/admin/menu-pages/settings-menu-page.php:353
 msgid "Guest Management"
 msgstr "Управление на гостите"
 
-#: includes/admin/menu-pages/settings-menu-page.php:329
+#: includes/admin/menu-pages/settings-menu-page.php:359
 msgid "Hide \"adults\" and \"children\" fields within search availability forms."
 msgstr "Скрийте полетата \"възрастни\" и \"деца\" в формулярите за наличност за търсене."
 
-#: includes/admin/menu-pages/settings-menu-page.php:335
+#: includes/admin/menu-pages/settings-menu-page.php:365
 msgid "Do not apply booking rules for admin bookings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:342
+#: includes/admin/menu-pages/settings-menu-page.php:372
 msgid "Display Options"
 msgstr "Показване на опции"
 
-#: includes/admin/menu-pages/settings-menu-page.php:347
+#: includes/admin/menu-pages/settings-menu-page.php:377
 msgid "Display gallery images of accommodation page in lightbox."
 msgstr "Показване на галерия изображения на страница за настаняване в lightbox."
 
-#: includes/admin/menu-pages/settings-menu-page.php:353
+#: includes/admin/menu-pages/settings-menu-page.php:383
 msgid "Calendar Theme"
 msgstr "Визия на календара"
 
-#: includes/admin/menu-pages/settings-menu-page.php:354
+#: includes/admin/menu-pages/settings-menu-page.php:384
 msgid "Select theme for an availability calendar."
 msgstr "Изберете визия за календара."
 
-#: includes/admin/menu-pages/settings-menu-page.php:358
+#: includes/admin/menu-pages/settings-menu-page.php:388
 msgid "Template Mode"
 msgstr "Режим на шаблона"
 
-#: includes/admin/menu-pages/settings-menu-page.php:360
+#: includes/admin/menu-pages/settings-menu-page.php:390
 msgid "Developer Mode"
 msgstr "Режим за програмисти"
 
-#: includes/admin/menu-pages/settings-menu-page.php:361
+#: includes/admin/menu-pages/settings-menu-page.php:391
 msgid "Theme Mode"
 msgstr "Режим на темата"
 
-#: includes/admin/menu-pages/settings-menu-page.php:363
+#: includes/admin/menu-pages/settings-menu-page.php:393
 msgid "Choose Theme Mode to display the content with the styles of your theme. Choose Developer Mode to control appearance of the content with custom page templates, actions and filters. This option can't be changed if your theme is initially integrated with the plugin."
 msgstr "Изберете режим на тема, за да покажете съдържанието със стиловете на вашата тема. Изберете Режим на програмист, за да контролирате външния вид на съдържанието с персонализирани шаблони на страници, действия и филтри. Тази опция не може да бъде променена, ако темата ви първоначално е интегрирана с приставката."
 
-#: includes/admin/menu-pages/settings-menu-page.php:373
+#: includes/admin/menu-pages/settings-menu-page.php:403
 msgid "More Styles"
 msgstr "Oще стилове"
 
-#: includes/admin/menu-pages/settings-menu-page.php:374
+#: includes/admin/menu-pages/settings-menu-page.php:404
 msgid "Extend the styling options of Hotel Booking plugin with the new free addon - Hotel Booking Styles."
 msgstr "Увеличете стилистичните опций на резервационият хотелски плъгин, с новият безплатен аддон. - Hotel Booking Styles."
 
-#: includes/admin/menu-pages/settings-menu-page.php:385
+#: includes/admin/menu-pages/settings-menu-page.php:415
 msgid "Calendars Synchronization"
 msgstr "Синхронизация на календари"
 
-#: includes/admin/menu-pages/settings-menu-page.php:390
+#: includes/admin/menu-pages/settings-menu-page.php:420
 msgid "Export admin blocks."
 msgstr "Експортиране на администраторски блокове."
 
-#: includes/admin/menu-pages/settings-menu-page.php:395
+#: includes/admin/menu-pages/settings-menu-page.php:425
 msgid "Do not export imported bookings."
 msgstr "Не изнасяйте внесени резервации."
 
-#: includes/admin/menu-pages/settings-menu-page.php:402
+#: includes/admin/menu-pages/settings-menu-page.php:432
 msgid "Calendars Synchronization Scheduler"
 msgstr "График за синхронизиране на календари"
 
-#: includes/admin/menu-pages/settings-menu-page.php:411
+#: includes/admin/menu-pages/settings-menu-page.php:441
 msgid "Enable automatic external calendars synchronization"
 msgstr "Активиране на автоматична синхронизация на външни календари"
 
-#: includes/admin/menu-pages/settings-menu-page.php:417
+#: includes/admin/menu-pages/settings-menu-page.php:447
 msgid "Clock"
 msgstr "Часовник"
 
-#: includes/admin/menu-pages/settings-menu-page.php:418
+#: includes/admin/menu-pages/settings-menu-page.php:448
 msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr "Синхронизирайте календарите в този момент (UTC) или започнете по това време всеки интервал по-долу."
 
-#: includes/admin/menu-pages/settings-menu-page.php:426
+#: includes/admin/menu-pages/settings-menu-page.php:456
 msgid "Interval"
 msgstr "Интервал"
 
-#: includes/admin/menu-pages/settings-menu-page.php:428
+#: includes/admin/menu-pages/settings-menu-page.php:458
 #: includes/crons/cron-manager.php:79
 msgid "Quarter an Hour"
 msgstr "Четвърт час "
 
-#: includes/admin/menu-pages/settings-menu-page.php:429
+#: includes/admin/menu-pages/settings-menu-page.php:459
 #: includes/crons/cron-manager.php:84
 msgid "Half an Hour"
 msgstr "Половин час"
 
-#: includes/admin/menu-pages/settings-menu-page.php:430
+#: includes/admin/menu-pages/settings-menu-page.php:460
 msgid "Once Hourly"
 msgstr "Веднъж на час"
 
-#: includes/admin/menu-pages/settings-menu-page.php:431
+#: includes/admin/menu-pages/settings-menu-page.php:461
 msgid "Twice Daily"
 msgstr "Двапъти дневно"
 
-#: includes/admin/menu-pages/settings-menu-page.php:432
+#: includes/admin/menu-pages/settings-menu-page.php:462
 msgid "Once Daily"
 msgstr "Веднъж дневно"
 
-#: includes/admin/menu-pages/settings-menu-page.php:440
+#: includes/admin/menu-pages/settings-menu-page.php:470
 msgid "Automatically delete sync logs older than"
 msgstr "Автоматично изтриване на журналите за синхронизация, по-стари от"
 
-#: includes/admin/menu-pages/settings-menu-page.php:442
+#: includes/admin/menu-pages/settings-menu-page.php:472
 msgid "Day"
 msgstr "Ден"
 
-#: includes/admin/menu-pages/settings-menu-page.php:443
+#: includes/admin/menu-pages/settings-menu-page.php:473
 msgid "Week"
 msgstr "Седмица"
 
-#: includes/admin/menu-pages/settings-menu-page.php:444
+#: includes/admin/menu-pages/settings-menu-page.php:474
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "Месец"
 
-#: includes/admin/menu-pages/settings-menu-page.php:445
+#: includes/admin/menu-pages/settings-menu-page.php:475
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "Четеримесечие"
 
-#: includes/admin/menu-pages/settings-menu-page.php:446
+#: includes/admin/menu-pages/settings-menu-page.php:476
 msgid "Half a Year"
 msgstr "Половин година"
 
-#: includes/admin/menu-pages/settings-menu-page.php:447
+#: includes/admin/menu-pages/settings-menu-page.php:477
 msgid "Never Delete"
 msgstr "Никога не изтривайте"
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:486
 msgid "Block Editor"
 msgstr "Редактор на блокове"
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:491
+#: includes/admin/menu-pages/settings-menu-page.php:496
 msgid "Enable block editor for \"%s\"."
 msgstr "Активиране на редактора на блокове за \"%s\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:491
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -2024,211 +2212,211 @@ msgstr "Активиране на редактора на блокове за \"
 msgid "Accommodation Types"
 msgstr "Видове настанявания"
 
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:496
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
-#: includes/post-types/service-cpt.php:90
-#: includes/post-types/service-cpt.php:100
+#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:102
 #: includes/views/booking-view.php:170
 msgid "Services"
 msgstr "Услуги"
 
-#: includes/admin/menu-pages/settings-menu-page.php:494
+#: includes/admin/menu-pages/settings-menu-page.php:525
 msgid "Admin Emails"
 msgstr "Електронни пощи на администратор"
 
-#: includes/admin/menu-pages/settings-menu-page.php:507
+#: includes/admin/menu-pages/settings-menu-page.php:538
 msgid "Customer Emails"
 msgstr "Електронни пощи на клиенти"
 
-#: includes/admin/menu-pages/settings-menu-page.php:512
+#: includes/admin/menu-pages/settings-menu-page.php:543
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr "Превърнете еднократните гости в лоялни клиенти, като изпращате автоматични маркетингови кампании с <a>Hotel Booking & Mailchimp Integration</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:515
+#: includes/admin/menu-pages/settings-menu-page.php:546
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr "Превърнете еднократните гости в лоялни клиенти, като изпращате автоматични маркетингови кампании с the Hotel Booking & Mailchimp Integration."
 
-#: includes/admin/menu-pages/settings-menu-page.php:530
+#: includes/admin/menu-pages/settings-menu-page.php:561
 msgid "Cancellation Details Template"
 msgstr "Шаблон за подробности за анулирането"
 
-#: includes/admin/menu-pages/settings-menu-page.php:531
+#: includes/admin/menu-pages/settings-menu-page.php:562
 msgid "Used for %cancellation_details% tag."
 msgstr "Използва се за  %cancellation_details% етикет."
 
-#: includes/admin/menu-pages/settings-menu-page.php:548
+#: includes/admin/menu-pages/settings-menu-page.php:581
 msgid "Email Settings"
 msgstr "Настройки на електронната поща"
 
-#: includes/admin/menu-pages/settings-menu-page.php:553
+#: includes/admin/menu-pages/settings-menu-page.php:586
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr "Изпращайте автоматизирани известия по имейл, като ключови инструкции за вземане, правила за дома, преди и след пристигане / заминаване с <a> Hotel Booking Notifier </a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:556
+#: includes/admin/menu-pages/settings-menu-page.php:589
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr "Изпращайте автоматизирани известия по имейл, като ключови инструкции за вземане, правила за дома, преди и след пристигане / заминаване с Нотификатор за резервация на хотел."
 
-#: includes/admin/menu-pages/settings-menu-page.php:564
+#: includes/admin/menu-pages/settings-menu-page.php:597
 msgid "Email Sender"
 msgstr "Изпращач на електронна поща"
 
-#: includes/admin/menu-pages/settings-menu-page.php:569
+#: includes/admin/menu-pages/settings-menu-page.php:602
 msgid "Administrator Email"
 msgstr "Админ мейл адрес"
 
-#: includes/admin/menu-pages/settings-menu-page.php:575
+#: includes/admin/menu-pages/settings-menu-page.php:608
 msgid "From Email"
 msgstr "От Имейл адрес"
 
-#: includes/admin/menu-pages/settings-menu-page.php:581
+#: includes/admin/menu-pages/settings-menu-page.php:614
 msgid "From Name"
 msgstr "От име"
 
-#: includes/admin/menu-pages/settings-menu-page.php:588
+#: includes/admin/menu-pages/settings-menu-page.php:621
 msgid "Logo URL"
 msgstr "Лого URL"
 
-#: includes/admin/menu-pages/settings-menu-page.php:595
+#: includes/admin/menu-pages/settings-menu-page.php:628
 msgid "Footer Text"
 msgstr "Текст в футъра"
 
-#: includes/admin/menu-pages/settings-menu-page.php:603
+#: includes/admin/menu-pages/settings-menu-page.php:636
 msgid "Reserved Accommodation Details Template"
 msgstr "Шаблон за подробности за запазено настаняване"
 
-#: includes/admin/menu-pages/settings-menu-page.php:604
+#: includes/admin/menu-pages/settings-menu-page.php:637
 msgid "Used for %reserved_rooms_details% tag."
 msgstr "Използва се за %reserved_rooms_details% етикет."
 
-#: includes/admin/menu-pages/settings-menu-page.php:615
+#: includes/admin/menu-pages/settings-menu-page.php:648
 msgid "Styles"
 msgstr "Стилова"
 
-#: includes/admin/menu-pages/settings-menu-page.php:620
+#: includes/admin/menu-pages/settings-menu-page.php:653
 msgid "Base Color"
 msgstr "Основен цвят"
 
-#: includes/admin/menu-pages/settings-menu-page.php:626
+#: includes/admin/menu-pages/settings-menu-page.php:659
 msgid "Background Color"
 msgstr "Цвят на фона"
 
-#: includes/admin/menu-pages/settings-menu-page.php:632
+#: includes/admin/menu-pages/settings-menu-page.php:665
 msgid "Body Background Color"
 msgstr "Цвят на фона на тялото"
 
-#: includes/admin/menu-pages/settings-menu-page.php:638
+#: includes/admin/menu-pages/settings-menu-page.php:671
 msgid "Body Text Color"
 msgstr "Цвят на текстю"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:691
 msgid "Payment Gateways"
 msgstr "Начини на плащане"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:691
 msgid "General Settings"
 msgstr "Основни настройки"
 
-#: includes/admin/menu-pages/settings-menu-page.php:663
+#: includes/admin/menu-pages/settings-menu-page.php:696
 msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr "Нуждаете се от повече шлюзи? Използвайте разширението ни за <a href=\"%s\" target=\"_blank\"> разплащания с WooCommerce </a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:667
+#: includes/admin/menu-pages/settings-menu-page.php:700
 msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr "Можете също да изпратите електронната поща на връзката <a href=\"%s\" target=\"_blank\"> линк за плащане на баланс </a> на вашите гости."
 
-#: includes/admin/menu-pages/settings-menu-page.php:676
+#: includes/admin/menu-pages/settings-menu-page.php:709
 msgid "User Pays"
 msgstr "Потребителят плаща"
 
-#: includes/admin/menu-pages/settings-menu-page.php:678
+#: includes/admin/menu-pages/settings-menu-page.php:711
 msgid "Full Amount"
 msgstr "Пълно количество"
 
-#: includes/admin/menu-pages/settings-menu-page.php:679
+#: includes/admin/menu-pages/settings-menu-page.php:712
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "Депозит"
 
-#: includes/admin/menu-pages/settings-menu-page.php:685
+#: includes/admin/menu-pages/settings-menu-page.php:718
 msgid "Deposit Type"
 msgstr "Вид депозит"
 
-#: includes/admin/menu-pages/settings-menu-page.php:687
+#: includes/admin/menu-pages/settings-menu-page.php:720
 msgid "Fixed"
 msgstr "Фиксирана"
 
-#: includes/admin/menu-pages/settings-menu-page.php:688
+#: includes/admin/menu-pages/settings-menu-page.php:721
 msgid "Percent"
 msgstr "Процент"
 
-#: includes/admin/menu-pages/settings-menu-page.php:694
+#: includes/admin/menu-pages/settings-menu-page.php:727
 msgid "Deposit Amount"
 msgstr "Размер на депозита"
 
-#: includes/admin/menu-pages/settings-menu-page.php:702
+#: includes/admin/menu-pages/settings-menu-page.php:735
 msgid "Deposit Time Frame (days)"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:703
+#: includes/admin/menu-pages/settings-menu-page.php:736
 msgid "Apply deposit to bookings made in at least the selected number of days prior to the check-in date. Otherwise, the full amount is charged."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:711
+#: includes/admin/menu-pages/settings-menu-page.php:744
 msgid "Force Secure Checkout"
 msgstr "Принудителна сигурност"
 
-#: includes/admin/menu-pages/settings-menu-page.php:713
+#: includes/admin/menu-pages/settings-menu-page.php:746
 msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
 msgstr "Форсиране на SSL (HTTPS) на страниците за плащане. Трябва да имате инсталиран SSL сертификат, за да използвате тази опция."
 
-#: includes/admin/menu-pages/settings-menu-page.php:717
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Reservation Received Page"
 msgstr "Страница за получена резервация"
 
-#: includes/admin/menu-pages/settings-menu-page.php:722
+#: includes/admin/menu-pages/settings-menu-page.php:755
 msgid "Failed Transaction Page"
 msgstr "Страница за неуспешна транзакция"
 
-#: includes/admin/menu-pages/settings-menu-page.php:727
+#: includes/admin/menu-pages/settings-menu-page.php:760
 msgid "Default Gateway"
 msgstr "Портал по подразбиране"
 
-#: includes/admin/menu-pages/settings-menu-page.php:735
+#: includes/admin/menu-pages/settings-menu-page.php:768
 msgid "Pending Payment Time"
 msgstr "Изчакващо време за плащане"
 
-#: includes/admin/menu-pages/settings-menu-page.php:736
+#: includes/admin/menu-pages/settings-menu-page.php:769
 msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
 msgstr "Периодът от време в минути, който се предоставя на потребителят да завърши плащането си. Неплатените резервации стават \"Изоставени\" и статутът на настаняване се променя на Налични."
 
-#: includes/admin/menu-pages/settings-menu-page.php:758
+#: includes/admin/menu-pages/settings-menu-page.php:791
 msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr "Инсталирайте <a href=\"%s\" target=\"_blank\"> добавки за резервация на хотели </a>, за да управлявате техните настройки."
 
-#: includes/admin/menu-pages/settings-menu-page.php:760
+#: includes/admin/menu-pages/settings-menu-page.php:793
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr "Инсталирайте добавката за резервация на хотели, за да управлявате нястройките им."
 
-#: includes/admin/menu-pages/settings-menu-page.php:778
+#: includes/admin/menu-pages/settings-menu-page.php:811
 msgid "Advanced"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:790
-#: includes/admin/menu-pages/settings-menu-page.php:792
+#: includes/admin/menu-pages/settings-menu-page.php:823
+#: includes/admin/menu-pages/settings-menu-page.php:825
 msgid "License"
 msgstr "Лиценз"
 
-#: includes/admin/menu-pages/settings-menu-page.php:831
+#: includes/admin/menu-pages/settings-menu-page.php:864
 msgid "Settings saved."
 msgstr "Настройките са запазени."
 
-#: includes/admin/menu-pages/settings-menu-page.php:863
+#: includes/admin/menu-pages/settings-menu-page.php:896
 msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr "<strong> Забележка: </strong> Начините на плащане ще се покажат на страницата за плащане само когато е активирано Потвърждение при плащане в Настаняване> Настройки> Общи> Режим на потвърждение."
 
-#: includes/admin/menu-pages/settings-menu-page.php:951
-#: includes/admin/menu-pages/settings-menu-page.php:955
+#: includes/admin/menu-pages/settings-menu-page.php:984
+#: includes/admin/menu-pages/settings-menu-page.php:988
 #: assets/blocks/blocks.js:54
 #: assets/blocks/blocks.js:186
 #: assets/blocks/blocks.js:293
@@ -2292,6 +2480,7 @@ msgstr "Стопчета от атрибути, разделени със зап
 #: includes/admin/menu-pages/shortcodes-menu-page.php:468
 #: includes/admin/menu-pages/shortcodes-menu-page.php:486
 #: includes/admin/menu-pages/shortcodes-menu-page.php:502
+#: includes/admin/menu-pages/shortcodes-menu-page.php:518
 msgid "Custom CSS class for shortcode wrapper"
 msgstr "Персонализиран клас CSS за обвиване на къси кодове"
 
@@ -2306,6 +2495,7 @@ msgstr "Персонализиран клас CSS за обвиване на к�
 #: includes/admin/menu-pages/shortcodes-menu-page.php:469
 #: includes/admin/menu-pages/shortcodes-menu-page.php:487
 #: includes/admin/menu-pages/shortcodes-menu-page.php:503
+#: includes/admin/menu-pages/shortcodes-menu-page.php:519
 msgid "whitespace separated css classes"
 msgstr "css класове, разделени с бяло пространство"
 
@@ -2484,7 +2674,7 @@ msgstr "персонализирано поле за име"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:288
 #: includes/admin/menu-pages/shortcodes-menu-page.php:327
 #: includes/admin/menu-pages/shortcodes-menu-page.php:336
-#: includes/admin/menu-pages/shortcodes-menu-page.php:601
+#: includes/admin/menu-pages/shortcodes-menu-page.php:617
 msgid "empty string"
 msgstr "празен низ"
 
@@ -2660,49 +2850,62 @@ msgstr ""
 msgid "Use this shortcode on the Booking Cancelation page"
 msgstr ""
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:521
-#: includes/admin/menu-pages/shortcodes-menu-page.php:654
-#: includes/admin/menu-pages/shortcodes-menu-page.php:658
+#: includes/admin/menu-pages/shortcodes-menu-page.php:514
+msgid "Customer Account"
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:515
+msgid "Display log in form or customer account area."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+msgid "Use this shortcode to create the My Account page."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:537
+#: includes/admin/menu-pages/shortcodes-menu-page.php:670
+#: includes/admin/menu-pages/shortcodes-menu-page.php:674
 msgid "Shortcodes"
 msgstr "Кратки кодове"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+#: includes/admin/menu-pages/shortcodes-menu-page.php:541
 msgid "Shortcode"
 msgstr "Кратък код"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:526
+#: includes/admin/menu-pages/shortcodes-menu-page.php:542
 #: includes/post-types/attributes-cpt.php:299
 msgid "Parameters"
 msgstr "Параметри"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:527
+#: includes/admin/menu-pages/shortcodes-menu-page.php:543
 msgid "Example"
 msgstr "Пример"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:559
-#: includes/admin/menu-pages/shortcodes-menu-page.php:581
+#: includes/admin/menu-pages/shortcodes-menu-page.php:575
+#: includes/admin/menu-pages/shortcodes-menu-page.php:597
 msgid "Deprecated since %s"
 msgstr "Отхвърлен от %s"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:591
+#: includes/admin/menu-pages/shortcodes-menu-page.php:607
 msgid "Values:"
 msgstr "Стойности:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:596
+#: includes/admin/menu-pages/shortcodes-menu-page.php:612
 msgid "Default:"
 msgstr "По подразбиране:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:642
+#: includes/admin/menu-pages/shortcodes-menu-page.php:658
 msgid "Optional."
 msgstr "По избор."
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:650
+#: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:182
-#: includes/views/shortcodes/checkout-view.php:203
-#: includes/views/shortcodes/checkout-view.php:437
-#: includes/views/shortcodes/checkout-view.php:447
+#: includes/views/shortcodes/checkout-view.php:238
+#: includes/views/shortcodes/checkout-view.php:259
+#: includes/views/shortcodes/checkout-view.php:493
+#: includes/views/shortcodes/checkout-view.php:523
+#: templates/account/account-details.php:34
 msgid "Required"
 msgstr "Задължително"
 
@@ -2822,12 +3025,6 @@ msgstr "Процент"
 msgid "Fee Taxes"
 msgstr "Данъци върху таксите"
 
-#: includes/admin/menus.php:71
-#: includes/admin/menus.php:72
-#: includes/post-types/booking-cpt.php:200
-msgid "Bookings"
-msgstr "Резервации"
-
 #: includes/admin/room-list-table.php:100
 msgid "External Calendars"
 msgstr "Външни календари"
@@ -2869,12 +3066,12 @@ msgid "d/m/Y - H:i:s"
 msgstr "d/m/Y - H:i:s"
 
 #: includes/admin/sync-rooms-list-table.php:73
-#: includes/ajax.php:947
+#: includes/ajax.php:950
 msgid "Waiting"
 msgstr "Изчакване"
 
 #: includes/admin/sync-rooms-list-table.php:74
-#: includes/ajax.php:948
+#: includes/ajax.php:951
 msgid "Processing"
 msgstr "Обработване"
 
@@ -3068,64 +3265,64 @@ msgstr ""
 msgid "QR Code"
 msgstr ""
 
-#: includes/ajax.php:251
+#: includes/ajax.php:254
 msgid "No bookings found for your request."
 msgstr "Няма намерени резервации за вашата заявка."
 
-#: includes/ajax.php:258
+#: includes/ajax.php:261
 msgid "Uploads directory is not writable."
 msgstr "Директорията за качвания не може да се записва."
 
-#: includes/ajax.php:323
+#: includes/ajax.php:326
 msgid "No enough data"
 msgstr "Няма достатъчно информация"
 
-#: includes/ajax.php:341
+#: includes/ajax.php:344
 #: includes/script-managers/admin-script-manager.php:88
 msgid "An error has occurred"
 msgstr "Възникна грешка"
 
-#: includes/ajax.php:353
-#: includes/ajax.php:393
-#: includes/ajax.php:686
+#: includes/ajax.php:356
+#: includes/ajax.php:396
+#: includes/ajax.php:689
 #: includes/csv/bookings/bookings-query.php:77
 msgid "Please complete all required fields and try again."
 msgstr "Моля, попълнете всички задължителни полета и опитайте още веднъж,"
 
-#: includes/ajax.php:379
+#: includes/ajax.php:382
 #: includes/script-managers/public-script-manager.php:220
 msgid "An error has occurred, please try again later."
 msgstr "Възникна грешка, моля опитайте по-късно."
 
-#: includes/ajax.php:505
-#: includes/ajax.php:574
+#: includes/ajax.php:508
+#: includes/ajax.php:577
 msgid "An error has occurred. Please try again later."
 msgstr "Възникна грешка. Моля, опитайте отново по-късно."
 
-#: includes/ajax.php:702
+#: includes/ajax.php:705
 msgid "Sorry, the minimum allowed payment amount is %s to use this payment method."
 msgstr "За съжаление, минималната разрешена сума за плащане е %s, за да използвате този метод на плащане."
 
-#: includes/ajax.php:765
+#: includes/ajax.php:768
 msgid "Chosen payment method is not available. Please refresh the page and try one more time."
 msgstr "Избраният начин на плащане не е налице. Моля, опреснете страницата и опитайте още веднъж."
 
-#: includes/ajax.php:838
+#: includes/ajax.php:841
 msgid "Coupon applied successfully."
 msgstr "Ваучерът е приложен успешно."
 
-#: includes/ajax.php:844
+#: includes/ajax.php:847
 #: includes/entities/abstract-coupon.php:205
 msgid "Coupon is not valid."
 msgstr "Ваучерът не е валиден."
 
-#: includes/ajax.php:1033
+#: includes/ajax.php:1036
 #: includes/post-types/booking-cpt.php:33
 msgid "Booking Information"
 msgstr "Информация по резервациите"
 
-#: includes/ajax.php:1041
-#: includes/emails/templaters/email-templater.php:123
+#: includes/ajax.php:1044
+#: includes/emails/templaters/email-templater.php:128
 #: includes/post-types/booking-cpt.php:45
 #: template-functions.php:609
 #: template-functions.php:613
@@ -3137,8 +3334,8 @@ msgstr "Информация по резервациите"
 msgid "Check-in Date"
 msgstr "Дата на настаняване"
 
-#: includes/ajax.php:1045
-#: includes/emails/templaters/email-templater.php:127
+#: includes/ajax.php:1048
+#: includes/emails/templaters/email-templater.php:132
 #: includes/post-types/booking-cpt.php:52
 #: template-functions.php:618
 #: template-functions.php:622
@@ -3150,7 +3347,7 @@ msgstr "Дата на настаняване"
 msgid "Check-out Date"
 msgstr "Дата на освобождаване"
 
-#: includes/ajax.php:1054
+#: includes/ajax.php:1057
 #: includes/post-types/booking-cpt.php:72
 #: templates/emails/customer-approved-booking.php:31
 #: templates/emails/customer-cancelled-booking.php:29
@@ -3159,123 +3356,50 @@ msgstr "Дата на освобождаване"
 msgid "Customer Information"
 msgstr "Клиентска информация"
 
-#: includes/ajax.php:1058
-#: includes/bundles/customer-bundle.php:83
-#: includes/bundles/export-bundle.php:29
-#: includes/post-types/booking-cpt.php:77
-#: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:462
-msgid "First Name"
-msgstr "Име"
-
-#: includes/ajax.php:1062
-#: includes/bundles/customer-bundle.php:92
-#: includes/bundles/export-bundle.php:30
-#: includes/post-types/booking-cpt.php:83
-#: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:473
-msgid "Last Name"
-msgstr "Фамилия"
-
-#: includes/ajax.php:1066
-#: includes/bundles/customer-bundle.php:101
-#: includes/bundles/export-bundle.php:31
-#: includes/post-types/booking-cpt.php:89
-#: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:484
-msgid "Email"
-msgstr "Имейл"
-
-#: includes/ajax.php:1070
-#: includes/bundles/customer-bundle.php:110
-#: includes/bundles/export-bundle.php:32
-#: includes/post-types/booking-cpt.php:95
-#: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:495
-msgid "Phone"
-msgstr "Телефон за връзка"
-
-#: includes/ajax.php:1074
-#: includes/bundles/export-bundle.php:33
-#: includes/post-types/booking-cpt.php:102
-#: includes/post-types/payment-cpt.php:256
-msgid "Country"
-msgstr "Държава"
-
-#: includes/ajax.php:1078
-#: includes/bundles/customer-bundle.php:128
-#: includes/bundles/export-bundle.php:34
-#: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:528
-msgid "Address"
-msgstr "Адрес"
-
-#: includes/ajax.php:1082
-#: includes/bundles/customer-bundle.php:137
-#: includes/bundles/export-bundle.php:35
-#: includes/post-types/booking-cpt.php:114
-#: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:539
-msgid "City"
-msgstr "Град"
-
-#: includes/ajax.php:1086
-#: includes/bundles/customer-bundle.php:146
-#: includes/bundles/export-bundle.php:36
-#: includes/post-types/booking-cpt.php:120
-#: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:550
-msgid "State / County"
-msgstr "Държава"
-
-#: includes/ajax.php:1090
-#: includes/bundles/customer-bundle.php:155
-#: includes/bundles/export-bundle.php:37
-#: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:561
-msgid "Postcode"
-msgstr "Пощенски код"
-
-#: includes/ajax.php:1094
+#: includes/ajax.php:1097
 #: includes/bundles/export-bundle.php:38
-#: includes/emails/templaters/email-templater.php:176
+#: includes/emails/templaters/email-templater.php:181
 #: includes/post-types/booking-cpt.php:133
 msgid "Customer Note"
 msgstr "Пояснения от клиента"
 
-#: includes/ajax.php:1100
+#: includes/ajax.php:1103
 #: includes/post-types/booking-cpt.php:140
 msgid "Additional Information"
 msgstr "Допълтенила информация"
 
-#: includes/ajax.php:1104
+#: includes/ajax.php:1107
 #: includes/bundles/export-bundle.php:40
 #: includes/post-types/booking-cpt.php:145
 #: includes/post-types/coupon-cpt.php:124
 msgid "Coupon"
 msgstr "Ваучер"
 
-#: includes/ajax.php:1108
+#: includes/ajax.php:1111
 #: includes/post-types/booking-cpt.php:152
 msgid "Total Booking Price"
 msgstr "Обща сума на резервацията"
 
-#: includes/ajax.php:1117
+#: includes/ajax.php:1120
 #: includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:572
+#: includes/views/shortcodes/checkout-view.php:649
 msgid "Notes"
 msgstr "Бележки"
 
 #. translators: %1$s: note author, %1$s: note date
-#: includes/ajax.php:1132
+#: includes/ajax.php:1135
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: includes/ajax.php:1231
+#: includes/ajax.php:1234
 #: template-functions.php:78
 msgid "Based on your search parameters"
 msgstr "Въз основа на параметрите ви за търсене"
+
+#: includes/ajax.php:1265
+msgid "You do not have permission to do this action."
+msgstr ""
 
 #: includes/attribute-functions.php:164
 #: includes/post-types/attributes-cpt.php:131
@@ -5103,7 +5227,7 @@ msgid "Phone is required."
 msgstr "Необходим е телефон."
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:508
+#: includes/views/shortcodes/checkout-view.php:584
 msgid "Country of residence"
 msgstr "Държава на пребиваване"
 
@@ -5132,6 +5256,8 @@ msgid "Note is required."
 msgstr "Забележката е задължителна."
 
 #: includes/bundles/export-bundle.php:20
+#: templates/account/bookings.php:19
+#: templates/account/bookings.php:68
 #: templates/create-booking/search/search-form.php:38
 #: templates/edit-booking/edit-dates.php:29
 #: templates/shortcodes/search/search-form.php:29
@@ -5139,6 +5265,8 @@ msgid "Check-in"
 msgstr "Настаняване"
 
 #: includes/bundles/export-bundle.php:21
+#: templates/account/bookings.php:20
+#: templates/account/bookings.php:71
 #: templates/create-booking/search/search-form.php:58
 #: templates/edit-booking/edit-dates.php:38
 #: templates/shortcodes/search/search-form.php:49
@@ -5158,12 +5286,14 @@ msgstr "Възрастни/Гости"
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
 #: includes/views/edit-booking/checkout-view.php:170
-#: includes/views/shortcodes/checkout-view.php:222
+#: includes/views/shortcodes/checkout-view.php:278
 msgid "Full Guest Name"
 msgstr "Пълно име на гостите"
 
 #: includes/bundles/export-bundle.php:41
 #: includes/views/booking-view.php:330
+#: templates/account/bookings.php:21
+#: templates/account/bookings.php:74
 msgid "Total"
 msgstr "Общо"
 
@@ -5251,35 +5381,35 @@ msgstr[1] "x%d пъти"
 msgid "Please select columns to export."
 msgstr "Моля, изберете колони за експортиране."
 
-#: includes/emails/abstract-email.php:397
+#: includes/emails/abstract-email.php:418
 msgid "Disable this email notification"
 msgstr "Деактивирайте това известие по имейл"
 
-#: includes/emails/abstract-email.php:402
+#: includes/emails/abstract-email.php:423
 msgid "Subject"
 msgstr "Основание"
 
-#: includes/emails/abstract-email.php:411
+#: includes/emails/abstract-email.php:432
 msgid "Header"
 msgstr ""
 
-#: includes/emails/abstract-email.php:420
+#: includes/emails/abstract-email.php:441
 msgid "Email Template"
 msgstr "Мейл шаблон"
 
-#: includes/emails/abstract-email.php:503
+#: includes/emails/abstract-email.php:542
 msgid "\"%s\" email will not be sent: there is no customer email in the booking."
 msgstr "\"%s\" имейлът няма да бъде изпратен: няма клиентски имейл в резервацията."
 
-#: includes/emails/abstract-email.php:538
+#: includes/emails/abstract-email.php:577
 msgid "Deprecated tags in header of %s"
 msgstr "Остарели маркери в заглавието на %s"
 
-#: includes/emails/abstract-email.php:541
+#: includes/emails/abstract-email.php:580
 msgid "Deprecated tags in subject of %s"
 msgstr "Остарели маркери в тема %s"
 
-#: includes/emails/abstract-email.php:544
+#: includes/emails/abstract-email.php:583
 msgid "Deprecated tags in template of %s"
 msgstr "Остарели маркери в шаблон от %s"
 
@@ -5318,7 +5448,7 @@ msgstr "Мейл адрес за анулиране на резервацият�
 
 #: includes/emails/booking/admin/confirmed-by-payment-email.php:8
 #: includes/emails/booking/admin/confirmed-email.php:8
-#: includes/wizard.php:123
+#: includes/wizard.php:124
 msgid "Booking Confirmed"
 msgstr "Резервацията е потвърдена"
 
@@ -5372,11 +5502,11 @@ msgstr "%site_title% - Вашата резервация #%booking_id% е пот
 msgid "Email that will be sent to customer when booking is approved."
 msgstr "Имейл, който ще бъде изпратен на клиента при потвърждаване на резервацията."
 
-#: includes/emails/booking/customer/base-email.php:45
+#: includes/emails/booking/customer/base-email.php:51
 msgid "\"%s\" mail was sent to customer."
 msgstr "\"%s\" мейл бе изпратен до клиента."
 
-#: includes/emails/booking/customer/base-email.php:47
+#: includes/emails/booking/customer/base-email.php:53
 msgid "\"%s\" mail sending is failed."
 msgstr "\"%s\" неуспешно изпращане на мейла."
 
@@ -5429,6 +5559,22 @@ msgstr "Този имейл се изпраща, когато „Режимът 
 msgid "New Booking Email (Confirmation by Admin)"
 msgstr "Нов имейл на резервацията (потвърждение от Администратор)"
 
+#: includes/emails/booking/customer/registration-email.php:8
+msgid "Welcome"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:12
+msgid "%site_title% - account details"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:16
+msgid "Email that will be sent to a customer after they registered on your site."
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:20
+msgid "Customer Registration Email"
+msgstr ""
+
 #: includes/emails/templaters/abstract-templater.php:72
 msgid "Possible tags:"
 msgstr "Възможни етикети:"
@@ -5446,97 +5592,124 @@ msgstr "нищо"
 msgid "User Cancellation Link"
 msgstr "Потребителски линк за анулиране"
 
-#: includes/emails/templaters/email-templater.php:97
+#: includes/emails/templaters/email-templater.php:102
 msgid "Site title (set in Settings > General)"
 msgstr "Заглавие на сайта (зададено в Настройки> Общи)"
 
-#: includes/emails/templaters/email-templater.php:111
+#: includes/emails/templaters/email-templater.php:116
 #: includes/post-types/payment-cpt.php:214
 msgid "Booking ID"
 msgstr "ИД № резервация"
 
-#: includes/emails/templaters/email-templater.php:115
+#: includes/emails/templaters/email-templater.php:120
 msgid "Booking Edit Link"
 msgstr "Редактиране линк на резервацията"
 
-#: includes/emails/templaters/email-templater.php:119
+#: includes/emails/templaters/email-templater.php:124
 msgid "Booking Total Price"
 msgstr "Крайна цена на резервацията"
 
-#: includes/emails/templaters/email-templater.php:140
+#: includes/emails/templaters/email-templater.php:145
+#: includes/emails/templaters/email-templater.php:284
 msgid "Customer First Name"
 msgstr "Име на клиента"
 
-#: includes/emails/templaters/email-templater.php:144
+#: includes/emails/templaters/email-templater.php:149
+#: includes/emails/templaters/email-templater.php:288
 msgid "Customer Last Name"
 msgstr "Фамилия на клиента"
 
-#: includes/emails/templaters/email-templater.php:148
+#: includes/emails/templaters/email-templater.php:153
+#: includes/emails/templaters/email-templater.php:292
 msgid "Customer Email"
 msgstr "Клиентски имейл адрес"
 
-#: includes/emails/templaters/email-templater.php:152
+#: includes/emails/templaters/email-templater.php:157
+#: includes/emails/templaters/email-templater.php:296
 msgid "Customer Phone"
 msgstr "Клиентски телефон"
 
-#: includes/emails/templaters/email-templater.php:156
+#: includes/emails/templaters/email-templater.php:161
+#: includes/emails/templaters/email-templater.php:300
 msgid "Customer Country"
 msgstr "Държава на клиента"
 
-#: includes/emails/templaters/email-templater.php:160
+#: includes/emails/templaters/email-templater.php:165
+#: includes/emails/templaters/email-templater.php:304
 msgid "Customer Address"
 msgstr "Адрес на клиента"
 
-#: includes/emails/templaters/email-templater.php:164
+#: includes/emails/templaters/email-templater.php:169
+#: includes/emails/templaters/email-templater.php:308
 msgid "Customer City"
 msgstr "Град на клиента"
 
-#: includes/emails/templaters/email-templater.php:168
+#: includes/emails/templaters/email-templater.php:173
+#: includes/emails/templaters/email-templater.php:312
 msgid "Customer State/County"
 msgstr "Държава / окръг на клиента"
 
-#: includes/emails/templaters/email-templater.php:172
+#: includes/emails/templaters/email-templater.php:177
+#: includes/emails/templaters/email-templater.php:316
 msgid "Customer Postcode"
 msgstr "Пощенски код на клиента"
 
-#: includes/emails/templaters/email-templater.php:181
+#: includes/emails/templaters/email-templater.php:186
 msgid "Reserved Accommodations Details"
 msgstr "Детайли за запазени места за настаняване"
 
-#: includes/emails/templaters/email-templater.php:203
+#: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:94
+#: includes/views/shortcodes/checkout-view.php:150
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "Детайли резервация"
 
-#: includes/emails/templaters/email-templater.php:216
+#: includes/emails/templaters/email-templater.php:221
 msgid "Confirmation Link"
 msgstr "Линк за потвърждение"
 
-#: includes/emails/templaters/email-templater.php:220
+#: includes/emails/templaters/email-templater.php:225
 msgid "Confirmation Link Expiration Time ( UTC )"
 msgstr "Часови пояс за валидността на линка за потвърждение"
 
-#: includes/emails/templaters/email-templater.php:233
+#: includes/emails/templaters/email-templater.php:238
 msgid "Cancellation Details (if enabled)"
 msgstr "Детайли за анулиране (ако е активирано)"
 
-#: includes/emails/templaters/email-templater.php:246
+#: includes/emails/templaters/email-templater.php:251
 msgid "The total price of payment"
 msgstr "Общата цена на плащането"
 
-#: includes/emails/templaters/email-templater.php:250
+#: includes/emails/templaters/email-templater.php:255
 msgid "The unique ID of payment"
 msgstr "Уникалният ИД номер на плащането"
 
-#: includes/emails/templaters/email-templater.php:254
+#: includes/emails/templaters/email-templater.php:259
 msgid "The method of payment"
 msgstr "Методът на плащане"
 
-#: includes/emails/templaters/email-templater.php:258
+#: includes/emails/templaters/email-templater.php:263
 msgid "Payment instructions"
 msgstr "Инструкции за плащане"
+
+#: includes/emails/templaters/email-templater.php:276
+msgid "User login"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:280
+msgid "User password"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:320
+msgid "Link to My Account page"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:547
+#: includes/upgrader.php:821
+#: includes/wizard.php:183
+msgid "My Account"
+msgstr ""
 
 #: includes/emails/templaters/reserved-rooms-templater.php:171
 msgid "Accommodation Type Link"
@@ -6478,10 +6651,6 @@ msgstr "Нови %s"
 msgid "No &quot;%s&quot; found"
 msgstr "Не са намерени &quot;%s&quot;"
 
-#: includes/post-types/attributes-cpt.php:293
-msgid "Name"
-msgstr "Име"
-
 #: includes/post-types/attributes-cpt.php:294
 msgid "Name (numeric)"
 msgstr "Име (номерично)"
@@ -7372,71 +7541,71 @@ msgstr "Качено към този сезон"
 msgid "This is where you can add new seasons."
 msgstr "Тук може да добавите нови сезони."
 
-#: includes/post-types/service-cpt.php:91
+#: includes/post-types/service-cpt.php:93
 #: includes/views/booking-view.php:174
 msgid "Service"
 msgstr "Услуга"
 
-#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:94
 msgctxt "Add New Service"
 msgid "Add New"
 msgstr "Добави нова"
 
-#: includes/post-types/service-cpt.php:93
+#: includes/post-types/service-cpt.php:95
 msgid "Add New Service"
 msgstr "Добави нова услуга"
 
-#: includes/post-types/service-cpt.php:94
+#: includes/post-types/service-cpt.php:96
 msgid "Edit Service"
 msgstr "Редактирай услуга"
 
-#: includes/post-types/service-cpt.php:95
+#: includes/post-types/service-cpt.php:97
 msgid "New Service"
 msgstr "Нова услуга"
 
-#: includes/post-types/service-cpt.php:96
+#: includes/post-types/service-cpt.php:98
 msgid "View Service"
 msgstr "Разгледай услуга"
 
-#: includes/post-types/service-cpt.php:97
+#: includes/post-types/service-cpt.php:99
 msgid "Search Service"
 msgstr "Търсене на услуги"
 
-#: includes/post-types/service-cpt.php:98
+#: includes/post-types/service-cpt.php:100
 msgid "No services found"
 msgstr "Няма намерени услуги"
 
-#: includes/post-types/service-cpt.php:99
+#: includes/post-types/service-cpt.php:101
 msgid "No services found in Trash"
 msgstr "Няма намерени изтрити услуги"
 
-#: includes/post-types/service-cpt.php:101
+#: includes/post-types/service-cpt.php:103
 msgid "Insert into service description"
 msgstr "Включете в описанието на услугата"
 
-#: includes/post-types/service-cpt.php:102
+#: includes/post-types/service-cpt.php:104
 msgid "Uploaded to this service"
 msgstr "Качени в тази услуга"
 
 #. translators: do not translate
-#: includes/post-types/service-cpt.php:119
+#: includes/post-types/service-cpt.php:121
 msgctxt "slug"
-msgid "service"
+msgid "services"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:153
+#: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
 msgstr "Колко пъти клиентът ще бъде таксуван."
 
-#: includes/post-types/service-cpt.php:163
+#: includes/post-types/service-cpt.php:165
 msgid "Minimum"
 msgstr "Минимум"
 
-#: includes/post-types/service-cpt.php:175
+#: includes/post-types/service-cpt.php:177
 msgid "Maximum"
 msgstr "Максимум"
 
-#: includes/post-types/service-cpt.php:185
+#: includes/post-types/service-cpt.php:187
 msgid "Empty means unlimited"
 msgstr "Празна означава неограничен"
 
@@ -7467,7 +7636,7 @@ msgstr ""
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:20
+#: includes/views/shortcodes/checkout-view.php:76
 msgid "Apply"
 msgstr "Приложи"
 
@@ -7543,6 +7712,10 @@ msgstr "Обработка ..."
 #: includes/script-managers/admin-script-manager.php:100
 msgid "Cancelling..."
 msgstr "Анулиране ..."
+
+#: includes/script-managers/admin-script-manager.php:101
+msgid "Want to delete?"
+msgstr ""
 
 #: includes/script-managers/public-script-manager.php:225
 msgid "Not available"
@@ -7658,6 +7831,34 @@ msgstr "Шибър синьо"
 msgid "Turquoise"
 msgstr "Тюркоаз"
 
+#: includes/shortcodes/account-shortcode.php:199
+msgid "Account data updated."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:205
+msgid "Password changed."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:216
+msgid "Dashboard"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:218
+msgid "Account"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:219
+msgid "Logout"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:255
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:258
+msgid "Please, provide a valid current password."
+msgstr ""
+
 #: includes/shortcodes/booking-confirmation-shortcode.php:375
 msgid "Payment:"
 msgstr "Плащане"
@@ -7671,34 +7872,34 @@ msgstr "Метод на Плащане"
 msgid "Status:"
 msgstr "Статус:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:144
+#: includes/shortcodes/checkout-shortcode/step-booking.php:154
 msgid "Checkout data is not valid."
 msgstr "Данните на финализиране на поръчката са невалидни."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:446
+#: includes/shortcodes/checkout-shortcode/step-booking.php:456
 msgid "Payment method is not valid."
 msgstr "Методът на плащане не е валиден."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:152
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:172
 msgid "Accommodation count is not valid."
 msgstr "Броят настанявания не е валиден."
 
-#: includes/shortcodes/checkout-shortcode/step.php:81
+#: includes/shortcodes/checkout-shortcode/step.php:96
 msgid "Accommodation is already booked."
 msgstr "Настаняването вече е резервирано."
 
-#: includes/shortcodes/checkout-shortcode/step.php:91
-#: includes/shortcodes/checkout-shortcode/step.php:100
-#: includes/shortcodes/checkout-shortcode/step.php:109
+#: includes/shortcodes/checkout-shortcode/step.php:106
+#: includes/shortcodes/checkout-shortcode/step.php:115
+#: includes/shortcodes/checkout-shortcode/step.php:124
 msgid "Reservation submitted"
 msgstr "Резервацията е изпратена"
 
-#: includes/shortcodes/checkout-shortcode/step.php:92
+#: includes/shortcodes/checkout-shortcode/step.php:107
 msgid "Details of your reservation have just been sent to you in a confirmation email. Please check your inbox to complete booking."
 msgstr "Подробности за вашата резервация бяха изпратени на имейл адреса Ви за потвърждение. Моля, проверете входящата си поща, за да завършите резервацията."
 
-#: includes/shortcodes/checkout-shortcode/step.php:101
-#: includes/shortcodes/checkout-shortcode/step.php:110
+#: includes/shortcodes/checkout-shortcode/step.php:116
+#: includes/shortcodes/checkout-shortcode/step.php:125
 msgid "We received your booking request. Once it is confirmed we will notify you via email."
 msgstr "Получихме заявката ви за резервация. Ще ви уведомим по имейл, когато бъде потвърдена."
 
@@ -7763,12 +7964,63 @@ msgstr[1] "от %d налични настанявания"
 msgid "Book"
 msgstr "Запази"
 
-#: includes/users-and-roles/roles.php:30
+#: includes/users-and-roles/customers.php:281
+#: includes/users-and-roles/customers.php:371
+msgid "Please, provide a valid email."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:309
+msgid "Could not create a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:367
+msgid "Could not retrieve a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:520
+#: includes/users-and-roles/customers.php:566
+msgid "Please, provide a valid Customer ID."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:552
+msgid "A database error."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:572
+msgid "No customer was deleted."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:681
+#: includes/views/shortcodes/checkout-view.php:22
+msgid "An account with this email already exists. Please, log in."
+msgstr ""
+
+#: includes/users-and-roles/roles.php:34
 msgid "Hotel Manager"
 msgstr ""
 
-#: includes/users-and-roles/roles.php:35
+#: includes/users-and-roles/roles.php:39
 msgid "Hotel Worker"
+msgstr ""
+
+#: includes/users-and-roles/roles.php:44
+msgid "Hotel Customer"
+msgstr ""
+
+#: includes/users-and-roles/user.php:41
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: includes/users-and-roles/user.php:56
+msgid "Please enter a valid account username."
+msgstr ""
+
+#: includes/users-and-roles/user.php:60
+msgid "An account is already registered with that username. Please choose another."
+msgstr ""
+
+#: includes/users-and-roles/user.php:68
+msgid "Please enter an account password."
 msgstr ""
 
 #: includes/utils/date-utils.php:116
@@ -7904,7 +8156,7 @@ msgid "Taxes"
 msgstr ""
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:19
+#: includes/views/shortcodes/checkout-view.php:75
 msgid "Coupon Code:"
 msgstr "Ваучер код:"
 
@@ -7922,7 +8174,7 @@ msgid "Accommodation:"
 msgstr "Вид настаняване:"
 
 #: includes/views/edit-booking/checkout-view.php:160
-#: includes/views/shortcodes/checkout-view.php:202
+#: includes/views/shortcodes/checkout-view.php:258
 #: template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
@@ -7993,64 +8245,82 @@ msgid_plural "x %d adults"
 msgstr[0] "x %d възрастен"
 msgstr[1] "x %d възрастни"
 
-#: includes/views/shortcodes/checkout-view.php:112
+#: includes/views/shortcodes/checkout-view.php:40
+msgid "Returning customer?"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:41
+msgid "Click here to log in"
+msgstr ""
+
+#. translators: 1 - username;
+#: includes/views/shortcodes/checkout-view.php:57
+#: templates/account/dashboard.php:28
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)."
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:168
 msgid "Accommodation #%d"
 msgstr "Настаняване #%d"
 
-#: includes/views/shortcodes/checkout-view.php:116
+#: includes/views/shortcodes/checkout-view.php:172
 msgid "Accommodation Type:"
 msgstr "Вид настаняване"
 
-#: includes/views/shortcodes/checkout-view.php:256
+#: includes/views/shortcodes/checkout-view.php:312
 msgid "Choose Rate"
 msgstr "Избери Тарифа"
 
-#: includes/views/shortcodes/checkout-view.php:323
+#: includes/views/shortcodes/checkout-view.php:379
 msgid "Choose Additional Services"
 msgstr "Изберете Допълнителни услуги"
 
-#: includes/views/shortcodes/checkout-view.php:352
+#: includes/views/shortcodes/checkout-view.php:408
 msgid "for "
 msgstr "за"
 
-#: includes/views/shortcodes/checkout-view.php:363
+#: includes/views/shortcodes/checkout-view.php:419
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr "гост(и)"
 
-#: includes/views/shortcodes/checkout-view.php:384
+#: includes/views/shortcodes/checkout-view.php:440
 msgid "time(s)"
 msgstr "път(и)"
 
-#: includes/views/shortcodes/checkout-view.php:432
+#: includes/views/shortcodes/checkout-view.php:488
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr "Условията за ползване"
 
-#: includes/views/shortcodes/checkout-view.php:435
+#: includes/views/shortcodes/checkout-view.php:491
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr "Прочетох и съм съгласен с %s"
 
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:529
 msgid "Your Information"
 msgstr "Име на Резервацията"
 
-#: includes/views/shortcodes/checkout-view.php:456
+#: includes/views/shortcodes/checkout-view.php:532
 #: template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "Задължителните полета са последвани от %s"
 
-#: includes/views/shortcodes/checkout-view.php:589
+#: includes/views/shortcodes/checkout-view.php:665
+msgid "Create an account"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:684
 msgid "Payment Method"
 msgstr "Метод на плащане"
 
-#: includes/views/shortcodes/checkout-view.php:594
+#: includes/views/shortcodes/checkout-view.php:689
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "Съжаляваме, няма налични начини на плащане."
 
-#: includes/views/shortcodes/checkout-view.php:688
+#: includes/views/shortcodes/checkout-view.php:783
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -8062,33 +8332,33 @@ msgstr "Съжаляваме, няма налични начини на плащ
 msgid "Total Price:"
 msgstr "Крайна сума:"
 
-#: includes/views/shortcodes/checkout-view.php:699
+#: includes/views/shortcodes/checkout-view.php:794
 msgid "Deposit:"
 msgstr "Депозит:"
 
-#: includes/views/shortcodes/checkout-view.php:718
+#: includes/views/shortcodes/checkout-view.php:813
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "Настаняване:"
 
-#: includes/views/shortcodes/checkout-view.php:725
+#: includes/views/shortcodes/checkout-view.php:820
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr "от"
 
-#: includes/views/shortcodes/checkout-view.php:741
+#: includes/views/shortcodes/checkout-view.php:836
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "Напускане:"
 
-#: includes/views/shortcodes/checkout-view.php:748
+#: includes/views/shortcodes/checkout-view.php:843
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "до"
 
-#: includes/views/shortcodes/checkout-view.php:822
+#: includes/views/shortcodes/checkout-view.php:919
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "Запази Сега"
@@ -8126,7 +8396,7 @@ msgid "Book Button"
 msgstr "Бутон за резервации"
 
 #: includes/widgets/search-availability-widget.php:50
-#: includes/wizard.php:84
+#: includes/wizard.php:85
 msgid "Search Availability"
 msgstr "Търсене"
 
@@ -8172,27 +8442,27 @@ msgstr "Страниците за потвърждение на резервац
 msgid "Install Pages"
 msgstr "Инсталирай страници"
 
-#: includes/wizard.php:132
+#: includes/wizard.php:133
 msgid "Booking Canceled"
 msgstr "Резервацията Ви е отказана."
 
-#: includes/wizard.php:133
+#: includes/wizard.php:134
 msgid "Your reservation is canceled."
 msgstr "Вашата резервация е отказана."
 
-#: includes/wizard.php:160
+#: includes/wizard.php:161
 msgid "Reservation Received"
 msgstr "Благодарности, Вашата резервация е получена!"
 
-#: includes/wizard.php:169
+#: includes/wizard.php:170
 msgid "Transaction Failed"
 msgstr "Плащането е неуспешно."
 
-#: includes/wizard.php:170
+#: includes/wizard.php:171
 msgid "Unfortunately, your transaction cannot be completed at this time. Please try again or contact us."
 msgstr "За съжаление, плащането Ви не може да бъде осъществена. Моля, опитайте отново или се свържете с нас."
 
-#: plugin.php:1012
+#: plugin.php:1055
 msgid "Prices start at: %s"
 msgstr "Цените започват от: %s"
 
@@ -8254,6 +8524,35 @@ msgstr "Да плати"
 #: template-functions.php:877
 msgid "Add Payment Manually"
 msgstr "Добави Плащане ръчно"
+
+#: templates/account/account-details.php:78
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/account-details.php:81
+msgid "Old Password"
+msgstr ""
+
+#: templates/account/account-details.php:85
+msgid "New Password"
+msgstr ""
+
+#: templates/account/account-details.php:89
+msgid "Confirm New Password"
+msgstr ""
+
+#: templates/account/account-details.php:99
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#: templates/account/bookings.php:114
+#: templates/account/bookings.php:119
+msgid "No bookings found."
+msgstr "Няма намерени резервации."
+
+#: templates/account/dashboard.php:38
+msgid "From your account dashboard you can view <a href=\"%1$s\">your recent bookings</a> or edit your <a href=\"%2$s\">password and account details</a>."
+msgstr ""
 
 #: templates/create-booking/results/reserve-rooms.php:37
 msgid "Base price"
@@ -8445,6 +8744,7 @@ msgstr "ИД №: #%s"
 #: templates/emails/customer-cancelled-booking.php:38
 #: templates/emails/customer-confirmation-booking.php:44
 #: templates/emails/customer-pending-booking.php:41
+#: templates/emails/customer-registration.php:26
 msgid "Thank you!"
 msgstr "Благодарим Ви!"
 
@@ -8483,6 +8783,30 @@ msgstr "Скъпи %1$s %2$s, резервацията Ви е изпратен�
 #: templates/emails/customer-pending-booking.php:17
 msgid "We will notify you by email once it is confirmed by our staff."
 msgstr "Ще ви уведомим на посочения мейл адрес, след като бъде потвърдено от нашия персонал."
+
+#: templates/emails/customer-registration.php:15
+msgid "Hi %1$s %2$s,"
+msgstr ""
+
+#: templates/emails/customer-registration.php:17
+msgid "Thanks for creating an account on %1$s."
+msgstr ""
+
+#: templates/emails/customer-registration.php:19
+msgid "You Account Details"
+msgstr ""
+
+#: templates/emails/customer-registration.php:20
+msgid "Login: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:21
+msgid "Password: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:22
+msgid "Log in here: %s"
+msgstr ""
 
 #: templates/emails/reserved-room-details.php:14
 msgid "Accommodation #%s"

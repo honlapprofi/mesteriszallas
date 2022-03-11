@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-03 11:58:52+0000\n"
+"PO-Revision-Date: 2022-02-24 13:25:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +32,7 @@ msgid "Continue"
 msgstr "Pokračovat"
 
 #. translators: %s: Learn WordPress link.
-#: wp-admin/about.php:273
+#: wp-admin/about.php:304
 msgid "Want to dive into 5.9 but don&#8217;t know where to start? Visit <a href=\"%s\">learn.wordpress.org</a> for expanding resources on new features in WordPress 5.9."
 msgstr "Chcete se ponořit do 5.9, ale nevíte, kde začít? Navštivte <a href=\"%s\">learn.wordpress.org</a>, pro rozšíření zdrojů o nových funkcích ve WordPressu 5.9."
 
@@ -105,144 +105,144 @@ msgstr "Další informace o verzi %s."
 msgid "WordPress is free and open source software"
 msgstr "WordPress je bezplatný a open source software"
 
-#: wp-admin/about.php:268
+#: wp-admin/about.php:299
 msgid "Learn more about the new features in 5.9"
 msgstr "Zjistěte více o nových funkcích v 5.9"
 
 #. translators: %s: Gallery Refactor dev note link.
-#: wp-admin/about.php:253
+#: wp-admin/about.php:284
 msgid "The changes to the Gallery block listed above are the result of a near-complete refactoring. Have you built a plugin or theme on the Gallery block functionality? Be sure to read the <a href=\"%s\">Gallery block compatibility dev note</a>."
 msgstr "Výše uvedené změny v bloku Galerie jsou výsledkem téměř úplného refaktorování. Vytvořili jste plugin nebo šablonu na funkci bloku galerie? Nezapomeňte si přečíst <a href=\"%s\">Poznámku pro vývojáře o kompatibilitě bloku galerie</a>."
 
-#: wp-admin/about.php:247
+#: wp-admin/about.php:278
 msgid "A refactored Gallery block"
 msgstr "Refaktorovaný blok galerie"
 
-#: wp-admin/about.php:242
+#: wp-admin/about.php:273
 msgid "Now you can lock any block (or a few of them) in a pattern, just by adding a lock attribute to its settings in block.json &#8212; leaving the rest of the pattern free for site editors to adapt to their content."
 msgstr "Nyní můžete zamknout jakýkoli blok (nebo několik z nich) ve vzoru pouhým přidáním atributu zámku do jeho nastavení v block.json – zbytek vzoru ponecháte volný pro editory webu, aby se přizpůsobili svému obsahu."
 
-#: wp-admin/about.php:239
+#: wp-admin/about.php:270
 msgid "Block&#8209;level locking"
 msgstr "Zamykání na úrovni bloku"
 
 #. translators: %s: Multiple stylesheets dev note link.
-#: wp-admin/about.php:229
+#: wp-admin/about.php:260
 msgid "Now you can register more than one stylesheet per block. You can use this to share styles across blocks you write, or to load styles for individual blocks, so your styles are only loaded when the block is used. Find out more about <a href=\"%s\">using multiple stylesheets in a block</a>."
 msgstr "Nyní můžete zaregistrovat více než jednu šablonu stylů na blok. Můžete to použít ke sdílení stylů napříč bloky, které píšete, nebo k načtení stylů pro jednotlivé bloky, takže vaše styly se načtou pouze tehdy, když je blok použit. Zjistěte více o <a href=\"%s\">používání více šablon stylů v bloku</a>."
 
-#: wp-admin/about.php:223
+#: wp-admin/about.php:254
 msgid "Multiple stylesheets for a block"
 msgstr "Více šablon stylů pro blok"
 
 #. translators: %s: Block-based themes dev note link.
-#: wp-admin/about.php:215
+#: wp-admin/about.php:246
 msgid "A new way to build themes: Block themes use blocks to define the templates that structure your entire site. The new templates and template parts are defined in HTML and use the custom styling offered in theme.json. More information is available in the <a href=\"%s\">block themes dev note</a>."
 msgstr "Nový způsob vytváření šablon: Blokové šablony používají bloky k definování šablon, které strukturují celý váš web. Nové šablony a části šablon jsou definovány v HTML a používají vlastní styly nabízené v theme.json. Další informace jsou k dispozici v <a href=\"%s\">poznámce pro vývojáře blokových šablon</a>."
 
-#: wp-admin/about.php:209
+#: wp-admin/about.php:240
 msgid "Introducing block themes"
 msgstr "Představujeme blokové šablony"
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:199
+#: wp-admin/about.php:230
 msgid "WordPress %s for developers"
 msgstr "WordPress %s pro vývojáře"
 
-#: wp-admin/about.php:184
+#: wp-admin/about.php:215
 msgid "Style every image in your gallery differently from the next (with different crops, or duotones, for instance) or make them all the same. And change the layout with drag-and-drop."
 msgstr "Upravte styl každého obrázku ve vaší galerii odlišně od ostatních (například s různými oříznutími nebo duplexy) nebo je vytvořte stejné. A změnit rozložení pomocí přetažení."
 
-#: wp-admin/about.php:181
+#: wp-admin/about.php:212
 msgid "Treat every image in a Gallery block the same way you would treat it in the Image block."
 msgstr "Zacházejte s každým obrázkem v bloku Galerie stejně, jako byste s ním zacházeli v bloku Obrázek."
 
-#: wp-admin/about.php:178
+#: wp-admin/about.php:209
 msgid "A better Gallery block"
 msgstr "Lepší blok galerie"
 
-#: wp-admin/about.php:170
+#: wp-admin/about.php:201
 msgid "In 5.9, the List View lets you drag and drop your content exactly where you want it. Managing complex documents is easier, too: simple controls let you expand and collapse sections as you build your site &#8212; and add HTML anchors to your blocks to help users get around the page."
 msgstr "Ve verzi 5.9 vám zobrazení seznamu umožňuje přetáhnout obsah přesně tam, kam chcete. Správa složitých dokumentů je také jednodušší: jednoduché ovládací prvky umožňují rozbalovat a sbalovat sekce při vytváření webu &#8212; a přidejte do svých bloků kotvy HTML, které uživatelům pomohou stránku obejít."
 
-#: wp-admin/about.php:167
+#: wp-admin/about.php:198
 msgid "A revamped List View"
 msgstr "Přepracované zobrazení seznamu"
 
-#: wp-admin/about.php:153
+#: wp-admin/about.php:184
 msgid "With a near full-screen view that draws you in to see fine details, the Pattern Explorer makes it easy to compare patterns and choose the one your users will expect."
 msgstr "Díky zobrazení téměř na celou obrazovku, které vás vtáhne, abyste viděli jemné detaily, usnadňuje Průzkumník vzorů porovnat vzory a vybrat ten, který vaši uživatelé očekávají."
 
-#: wp-admin/about.php:150
+#: wp-admin/about.php:181
 msgid "The WordPress Pattern Directory is the home of a wide range of block patterns built to save you time and add core site functionality. And you can edit them as you see fit. Need something different in the header or footer for your theme? Swap it out with a new one in a few clicks."
 msgstr "Adresář WordPress vzorů je domovem široké škály vzorů bloků vytvořených tak, aby vám ušetřily čas a přidaly základní funkce webu. A můžete je upravit, jak uznáte za vhodné. Potřebujete pro své téma něco jiného v záhlaví nebo zápatí? Vyměňte jej za nový několika kliknutími."
 
-#: wp-admin/about.php:147
+#: wp-admin/about.php:178
 msgid "The power of patterns"
 msgstr "Síla vzorů"
 
-#: wp-admin/about.php:139
+#: wp-admin/about.php:170
 msgid "WordPress 5.9 features new typography tools, flexible layout controls, and finer control over details like spacing, borders, and more &#8212; to help you get not just the look, but the polish that says you care about details."
 msgstr "WordPress 5.9 obsahuje nové typografické nástroje, flexibilní ovládací prvky rozvržení a jemnější kontrolu nad detaily, jako jsou mezery, okraje a další, které vám pomohou získat nejen vzhled, ale i lesk, který říká, že vám záleží na detailech."
 
-#: wp-admin/about.php:136
+#: wp-admin/about.php:167
 msgid "Better block controls"
 msgstr "Lepší ovládání bloků"
 
-#: wp-admin/about.php:124
+#: wp-admin/about.php:155
 msgid "Do you love to blog or produce content? New tweaks to the publishing flow help you say more, faster."
 msgstr "Milujete blogování nebo tvorbu obsahu? Nové vylepšení toku publikování vám pomohou říci více a rychleji."
 
-#: wp-admin/about.php:121
+#: wp-admin/about.php:152
 msgid "More improvements and updates"
 msgstr "Další vylepšení a aktualizace"
 
-#: wp-admin/about.php:112
+#: wp-admin/about.php:143
 msgid "The new Navigation block gives you the power to choose: an always-on responsive menu or one that adapts to your user&#8217;s screen size. Whatever you create, know it&#8217;s there to reuse wherever you like, whether in a brand new template or after switching themes."
 msgstr "Nový blok navigace vám dává možnost vybrat si: neustále reagující nabídku nebo nabídku, která se přizpůsobí velikosti obrazovky vašeho uživatele. Ať už vytvoříte cokoli, vězte, že je to možné znovu použít, kdekoli chcete, ať už ve zcela nové šabloně nebo po změně šablon."
 
-#: wp-admin/about.php:109
+#: wp-admin/about.php:140
 msgid "Blocks come to site navigation, the heart of user experience."
 msgstr "Bloky přicházejí do navigace na webu, která je hlavní uživatelské zkušenosti."
 
-#: wp-admin/about.php:106
+#: wp-admin/about.php:137
 msgid "The Navigation block"
 msgstr "Navigační blok"
 
-#: wp-admin/about.php:92
+#: wp-admin/about.php:123
 msgid "When you use any of those new themes, you no longer need the Customizer. Instead, you have all the power of the Styles interface inside the Site Editor. Just as in Twenty Twenty&#8209;Two, you build your site&#8217;s look and feel there, with the tools you need for the job in a fluid interface that practically comes alive in your hands."
 msgstr "Když použijete některý z těchto nových šablon, již nepotřebujete Přizpůsobení. Místo toho máte veškerou sílu rozhraní stylů v editoru webu. Stejně jako v Twenty Twenty Two tam vytvoříte vzhled a dojem svého webu s nástroji, které pro svou práci potřebujete, v plynulém rozhraní, které prakticky ožije ve vašich rukou."
 
-#: wp-admin/about.php:89
+#: wp-admin/about.php:120
 msgid "More block themes built for full site editing features are in the Theme Directory alongside the Twenty Twenty&#8209;Two theme, just waiting to be explored. Expect more to come!"
 msgstr "Další blokové šablony vytvořené pro plné funkce úprav webu jsou v adresáři šablon spolu se šablonou Twenty Twenty Two, jen čekají na prozkoumání. Očekávejte další!"
 
-#: wp-admin/about.php:86
+#: wp-admin/about.php:117
 msgid "Your personal paintbox awaits"
 msgstr "Vaše osobní krabice s barvami čeká"
 
 #. translators: %s: Link to Themes screen.
-#: wp-admin/about.php:74
+#: wp-admin/about.php:105
 msgid "The Twenty Twenty&#8209;Two theme is already available to you. It came installed with WordPress 5.9, and you will find it with <a href=\"%s\">your other installed themes</a>."
 msgstr "Šablona Twenty Twenty Two je vám již k dispozici. Byla nainstalována s WordPress 5.9 a najdete jí s <a href=\"%s\">ostatními nainstalovanými šablonami</a>."
 
-#: wp-admin/about.php:67
+#: wp-admin/about.php:98
 msgid "Block themes put a wide array of visual choices in your hands, from color schemes and typeface combinations to page templates and image filters &#8212; all together, in the site editing interface. By making changes in one place, you can give Twenty Twenty&#8209;Two the same look and feel as your brand or other websites &#8212; or take your site&#8217;s look in another direction."
 msgstr "Blokové šablony vám dávají do rukou širokou škálu vizuálních možností, od barevných schémat a kombinací písem až po šablony stránek a obrazové filtry vše dohromady v rozhraní pro úpravy webu. Provedením změn na jednom místě můžete dát Twenty Twenty Two stejný vzhled a dojem jako vaše značka nebo jiné webové stránky nebo se podívejte na svůj web jiným směrem."
 
-#: wp-admin/about.php:64
+#: wp-admin/about.php:95
 msgid "And say hello to the first default block theme in the history of WordPress. This is more than just a new default theme. It&#8217;s a brand-new way to work with WordPress themes."
 msgstr "A pozdravte první výchozí blokovou šablonu v historii WordPressu. Toto je více než jen nová výchozí šablona. Je to zbrusu nový způsob práce s WordPress šablonami."
 
-#: wp-admin/about.php:61
+#: wp-admin/about.php:92
 msgid "Say hello to Twenty Twenty&#8209;Two"
 msgstr "Přivítejte šablonu Twenty Twenty Two"
 
-#: wp-admin/about.php:49
+#: wp-admin/about.php:80
 msgid "It puts you in control of your whole site, right in the WordPress Admin."
 msgstr "Dává vám kontrolu nad celým webem přímo v administraci WordPressu."
 
-#: wp-admin/about.php:46
+#: wp-admin/about.php:77
 msgid "Full Site Editing is here"
 msgstr "Kompletní úprava stránek je zde"
 
@@ -273,7 +273,7 @@ msgid "The application password feature requires HTTPS, which is not enabled on 
 msgstr "Funkce hesla aplikace vyžaduje protokol HTTPS, který na tomto webu není povolen."
 
 #. translators: 1: Date, 2: Time.
-#: wp-admin/update-core.php:1049
+#: wp-admin/update-core.php:1057
 msgid "g:i a T"
 msgstr "G:i T"
 
@@ -858,7 +858,7 @@ msgstr "Kontaktní informace"
 msgid "Copy suggested policy text to clipboard"
 msgstr "Zkopírujte navrhovaný text zásad do schránky"
 
-#: wp-admin/includes/file.php:1894 wp-admin/includes/update-core.php:1491
+#: wp-admin/includes/file.php:1896 wp-admin/includes/update-core.php:1491
 msgid "Directory listing failed."
 msgstr "Výpis adresáře se nezdařil."
 
@@ -938,15 +938,15 @@ msgid "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-
 msgstr "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-is-authentication-not-working"
 
 #. translators: %s: WordPress 5.9 Field Guide link.
-#: wp-admin/about.php:290
+#: wp-admin/about.php:321
 msgid "Check out the latest version of the WordPress Field Guide. It highlights developer notes for each change you may want to be aware of. <a href=\"%s\">WordPress 5.9 Field Guide.</a>"
 msgstr "Podívejte se na nejnovější verzi průvodce WordPressu. Zdůrazňuje poznámky vývojářů ke každé změně, o které byste měli vědět. <a href=\"%s\">Průvodce WordPress 5.9</a>"
 
-#: wp-admin/update-core.php:392
+#: wp-admin/update-core.php:400
 msgid "This site appears to be under version control. Automatic updates are disabled."
 msgstr "Zdá se, že web podléhá kontrole verzí. Automatické aktualizace jsou vypnuty."
 
-#: wp-admin/update-core.php:265
+#: wp-admin/update-core.php:273
 msgid "You are using a development version of WordPress."
 msgstr "Používáte vývojovou verzi WordPressu."
 
@@ -954,40 +954,40 @@ msgstr "Používáte vývojovou verzi WordPressu."
 msgid "You can update to the latest nightly build manually:"
 msgstr "Manuálně můžete aktualizovat na nejnovější verzi zde:"
 
-#: wp-admin/update-core.php:412
+#: wp-admin/update-core.php:420
 msgid "Enable automatic updates for all new versions of WordPress."
 msgstr "Povolit automatické aktualizace pro všechny nové verze WordPressu."
 
-#: wp-admin/update-core.php:401
+#: wp-admin/update-core.php:409
 msgid "Switch to automatic updates for maintenance and security releases only."
 msgstr "Přepněte na automatické aktualizace týkající se pouze údržby a zabezpečení."
 
 #. translators: Current version of WordPress.
-#: wp-admin/update-core.php:1044
+#: wp-admin/update-core.php:1052
 msgid "Current version: %s"
 msgstr "Současná verze: %s"
 
-#: wp-admin/update-core.php:1022
+#: wp-admin/update-core.php:1030
 msgid "Here you can find information about updates, set auto-updates and see what plugins or themes need updating."
 msgstr "Zde najdete informace o aktualizacích, nastavení automatických aktualizací a uvidíte, jaké pluginy nebo šablony je třeba aktualizovat."
 
-#: wp-admin/update-core.php:416
+#: wp-admin/update-core.php:424
 msgid "This site will not receive automatic updates for new versions of WordPress."
 msgstr "Tento web nebude dostávat automatické aktualizace pro nové verze WordPressu."
 
-#: wp-admin/update-core.php:405
+#: wp-admin/update-core.php:413
 msgid "This site is automatically kept up to date with maintenance and security releases of WordPress only."
 msgstr "Web je automaticky udržován v aktuálním stavu pouze aktualizacemi týkajících se údržby a zabezpečení WordPressu."
 
-#: wp-admin/update-core.php:394
+#: wp-admin/update-core.php:402
 msgid "This site is automatically kept up to date with each new version of WordPress."
 msgstr "Web je automaticky aktualizován s každou novou verzí WordPressu."
 
-#: wp-admin/update-core.php:305
+#: wp-admin/update-core.php:313
 msgid "WordPress will only receive automatic security and maintenance releases from now on."
 msgstr "WordPress bude od teď dostávat pouze automatické bezpečnostní a udržovací aktualizace."
 
-#: wp-admin/update-core.php:302
+#: wp-admin/update-core.php:310
 msgid "Automatic updates for all WordPress versions have been enabled. Thank you!"
 msgstr "Byly povoleny automatické aktualizace pro všechny verze WordPressu. Děkuji!"
 
@@ -1009,7 +1009,7 @@ msgstr "Přidat nové heslo aplikace"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "Je nutné vytvořit Heslo pro aplikaci, ale není nutné upravovat uživatele."
 
-#: wp-admin/about.php:303
+#: wp-admin/about.php:334
 msgid "Go to Updates"
 msgstr "Přejít na aktualizace"
 
@@ -1365,7 +1365,7 @@ msgstr "\"%1$s\" hodnota je menší než \"%2$s\""
 msgid "Environment type"
 msgstr "Typ prostředí"
 
-#: wp-admin/about.php:285
+#: wp-admin/about.php:316
 msgid "Check the Field Guide for more!"
 msgstr "Pro více informací prozkoumejte průvodce!"
 
@@ -1377,11 +1377,11 @@ msgstr "Automatické aktualizace jsou dostupné pouze pro pluginy schválené na
 msgid "Update Incompatible"
 msgstr "Aktualizace není kompatibilní"
 
-#: wp-admin/update-core.php:710
+#: wp-admin/update-core.php:718
 msgid "This update doesn&#8217;t work with your version of WordPress."
 msgstr "Tato aktualizace nepodporuje vaši aktuálně používanou verzi WordPressu."
 
-#: wp-admin/update-core.php:676
+#: wp-admin/update-core.php:684
 msgid "This update doesn&#8217;t work with your versions of WordPress and PHP."
 msgstr "Tato aktualizace nepodporuje aktuálně používanou verzi WordPressu a PHP."
 
@@ -1630,28 +1630,28 @@ msgid "The admin email verification page will reappear after %s."
 msgstr "Stránka ověření e-mailu administrátora se objeví znovu po %s."
 
 #: wp-admin/plugins.php:583 wp-admin/themes.php:202
-#: wp-admin/update-core.php:1003 wp-admin/network/themes.php:319
+#: wp-admin/update-core.php:1011 wp-admin/network/themes.php:319
 msgid "<a href=\"https://wordpress.org/support/article/plugins-themes-auto-updates/\">Learn more: Auto-updates documentation</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/plugins-themes-auto-updates/\">Zjistěte více: Dokumentace k automatickým aktualizacím</a>"
 
 #: wp-admin/includes/class-wp-debug-data.php:1200 wp-admin/plugins.php:575
-#: wp-admin/themes.php:197 wp-admin/update-core.php:998
+#: wp-admin/themes.php:197 wp-admin/update-core.php:1006
 #: wp-admin/network/themes.php:312
 msgid "Auto-updates"
 msgstr "Automatické aktualizace"
 
 #: wp-admin/plugins.php:579 wp-admin/themes.php:192
-#: wp-admin/update-core.php:993 wp-admin/network/themes.php:315
+#: wp-admin/update-core.php:1001 wp-admin/network/themes.php:315
 msgid "Please note: Third-party themes and plugins, or custom code, may override WordPress scheduling."
 msgstr "Poznámka: Pluginy a šablony třetích stran nebo vlastní kód může přepsat WordPress plánování."
 
-#: wp-admin/update-core.php:992
+#: wp-admin/update-core.php:1000
 msgid "Auto-updates can be enabled or disabled for WordPress major versions and for each individual theme or plugin. Themes or plugins with auto-updates enabled will display the estimated date of the next auto-update. Auto-updates depends on the WP-Cron task scheduling system."
 msgstr "Automatické aktualizace mohou být povoleny nebo zakázány pro hlavní verze WordPressu a pro každou šablonu nebo plugin zvlášť. Šablony a pluginy s povolenými automatickými aktualizacemi zobrazí předpokládané datum příští automatické aktualizace. Automatické aktualizace jsou závislé na systému plánování úloh WP-Cron."
 
 #. translators: 1: Documentation on WordPress backups, 2: Documentation on
 #. updating WordPress.
-#: wp-admin/update-core.php:259
+#: wp-admin/update-core.php:267
 msgid "<strong>Important:</strong> Before updating, please <a href=\"%1$s\">back up your database and files</a>. For help with updates, visit the <a href=\"%2$s\">Updating WordPress</a> documentation page."
 msgstr "<strong>Důležité:</strong> Před aktualizací <a href=\"%1$s\">zálohujte svou databázi a soubory</a>. Pokud potřebujete pomoc s aktualizacemi, navštivte dokumentaci <a href=\"%2$s\">aktualizace WordPressu</a>."
 
@@ -2017,7 +2017,7 @@ msgstr "Aktualizujete šablonu. Nezapomeňte <a href=\"%s\">zazálohovat databá
 #: wp-admin/includes/class-plugin-installer-skin.php:302
 #: wp-admin/includes/class-theme-installer-skin.php:331
 #: wp-admin/includes/class-theme-installer-skin.php:337
-#: wp-admin/update-core.php:260
+#: wp-admin/update-core.php:268
 msgid "https://wordpress.org/support/article/wordpress-backups/"
 msgstr "https://wordpress.org/support/article/wordpress-backups/"
 
@@ -2493,7 +2493,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/using-permalinks/\">Manu
 msgid "<a href=\"https://wordpress.org/support/article/settings-permalinks-screen/\">Documentation on Permalinks Settings</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/settings-permalinks-screen/\">Manuál pro nastavení trvalých odkazů</a> (anglicky)"
 
-#: wp-admin/update-core.php:1008
+#: wp-admin/update-core.php:1016
 msgid "<a href=\"https://wordpress.org/support/article/dashboard-updates-screen/\">Documentation on Updating WordPress</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/dashboard-updates-screen/\">Manuál pro aktualizaci WordPressu</a> (anglicky)"
 
@@ -2890,7 +2890,7 @@ msgstr[0] "%s závažný problém"
 msgstr[1] "%s závažné problémy"
 msgstr[2] "%s závažných problémů"
 
-#: wp-admin/update-core.php:261
+#: wp-admin/update-core.php:269
 msgid "https://wordpress.org/support/article/updating-wordpress/"
 msgstr "https://wordpress.org/support/article/debugging-in-wordpress/"
 
@@ -3013,7 +3013,7 @@ msgstr "Kontrola stavu webu vyžaduje jazyk JavaScript."
 msgid "Site Health Info"
 msgstr "Informace o webu"
 
-#: wp-admin/update-core.php:530 wp-admin/update-core.php:719
+#: wp-admin/update-core.php:538 wp-admin/update-core.php:727
 msgid "This update doesn&#8217;t work with your version of PHP."
 msgstr "Tato aktualizace nepodporuje vaši aktuálně používanou verzi PHP."
 
@@ -3030,18 +3030,18 @@ msgid "Go to the Plugins screen"
 msgstr "Přejít na stránku pluginů"
 
 #. translators: %s: The filename of the package.
-#: wp-admin/includes/file.php:1480
+#: wp-admin/includes/file.php:1482
 msgid "The authenticity of %s could not be verified."
 msgstr "Pravost %s nelze ověřit."
 
 #. translators: %s: The filename of the package.
-#: wp-admin/includes/file.php:1432
+#: wp-admin/includes/file.php:1434
 msgid "The authenticity of %s could not be verified as no signature was found."
 msgstr "Pravost %s nelze ověřit, protože nebyl nalezen žádný podpis."
 
 #. translators: %s: The filename of the package.
-#: wp-admin/includes/file.php:1363 wp-admin/includes/file.php:1382
-#: wp-admin/includes/file.php:1414
+#: wp-admin/includes/file.php:1365 wp-admin/includes/file.php:1384
+#: wp-admin/includes/file.php:1416
 msgid "The authenticity of %s could not be verified as signature verification is unavailable on this system."
 msgstr "Pravost %s nelze ověřit, protože tento systém nepodporuje možnost ověření podpisu."
 
@@ -3663,7 +3663,7 @@ msgstr "Pluginy čekají na aktualizaci"
 
 #: wp-admin/includes/class-wp-site-health.php:371
 msgid "Plugins extend your site&#8217;s functionality with things like contact forms, ecommerce and much more. That means they have deep access to your site, so it&#8217;s vital to keep them up to date."
-msgstr "Pluginy rozšiřují funkčnost webu např. kontaktními formuláři, ecommerce, atd.. Musí mít přístup k důležitým částem webu, a proto je nezbytné udržovat je aktuální."
+msgstr "Pluginy rozšiřují funkčnost webu o věci, jako jsou kontaktní formuláře, elektronický obchod a mnoho dalšího. Mají přístup k důležitým částem webu, a proto je nezbytné udržovat je aktuální."
 
 #: wp-admin/includes/class-wp-site-health.php:363
 msgid "Your plugins are all up to date"
@@ -4401,8 +4401,9 @@ msgid "Cannot Install"
 msgstr "Nelze nainstalovat"
 
 #. translators: %s: WordPress version.
-#: wp-admin/includes/update.php:302 wp-admin/index.php:119
-#: wp-admin/install.php:238 wp-admin/update-core.php:94 wp-admin/upgrade.php:80
+#: wp-admin/about.php:64 wp-admin/includes/update.php:302
+#: wp-admin/index.php:119 wp-admin/install.php:238 wp-admin/update-core.php:94
+#: wp-admin/upgrade.php:80
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -4435,7 +4436,7 @@ msgid "Deleting a category does not delete the posts in that category. Instead, 
 msgstr "Smazání rubriky nesmaže příspěvky v dané rubrice. Příspěvky, které byly přiřazeny jen smazané rubrice, budou přiřazeny výchozí rubrice %s. Výchozí rubriku nelze smazat."
 
 #. translators: %s: A link to install the Classic Editor plugin.
-#: wp-admin/edit-form-blocks.php:321
+#: wp-admin/edit-form-blocks.php:320
 msgid "The block editor requires JavaScript. Please enable JavaScript in your browser settings, or try the <a href=\"%s\">Classic Editor plugin</a>."
 msgstr "Blokový editor vyžaduje JavaScript. Aktivujte JavaScript v nastavení prohlížeče, nebo zkuste plugin <a href=\"%s\">Klasický editor</a>."
 
@@ -5962,7 +5963,7 @@ msgstr "Opakování"
 #: wp-admin/plugin-editor.php:145 wp-admin/plugin-install.php:122
 #: wp-admin/plugins.php:590 wp-admin/revision.php:158
 #: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:141
-#: wp-admin/themes.php:209 wp-admin/tools.php:57 wp-admin/update-core.php:1010
+#: wp-admin/themes.php:209 wp-admin/tools.php:57 wp-admin/update-core.php:1018
 #: wp-admin/upload.php:76 wp-admin/upload.php:257 wp-admin/user-edit.php:74
 #: wp-admin/user-new.php:296 wp-admin/users.php:78 wp-admin/widgets-form.php:72
 #: wp-admin/network.php:83 wp-admin/network/settings.php:65
@@ -6085,9 +6086,9 @@ msgstr "Nemáte dostatečné oprávnění pro úpravy této sady změn."
 msgid "Sorry, you are not allowed to update themes for this site."
 msgstr "Nemáte dostatečné oprávnění pro aktualizaci šablon na tomto webu."
 
-#: wp-admin/update-core.php:23 wp-admin/update-core.php:1088
-#: wp-admin/update-core.php:1124 wp-admin/update-core.php:1165
-#: wp-admin/update-core.php:1206 wp-admin/update-core.php:1235
+#: wp-admin/update-core.php:23 wp-admin/update-core.php:1096
+#: wp-admin/update-core.php:1132 wp-admin/update-core.php:1173
+#: wp-admin/update-core.php:1214 wp-admin/update-core.php:1243
 msgid "Sorry, you are not allowed to update this site."
 msgstr "Nemáte dostatečné oprávnění pro aktualizaci tohoto webu."
 
@@ -6457,7 +6458,7 @@ msgstr "Mediální soubor byl aktualizován."
 #: wp-admin/includes/update.php:510 wp-admin/includes/update.php:524
 #: wp-admin/includes/update.php:543 wp-admin/includes/update.php:684
 #: wp-admin/includes/update.php:697 wp-admin/includes/update.php:710
-#: wp-admin/update-core.php:556
+#: wp-admin/update-core.php:564
 msgid "View %1$s version %2$s details"
 msgstr "Zobrazit podrobnosti o verzi %2$s pro %1$s"
 
@@ -6665,7 +6666,7 @@ msgid "Another update is currently in progress."
 msgstr "Právě probíhá jiná aktualizace."
 
 #: wp-admin/includes/class-plugin-upgrader-skin.php:85
-#: wp-admin/update-core.php:1148 wp-admin/update-core.php:1189
+#: wp-admin/update-core.php:1156 wp-admin/update-core.php:1197
 msgid "Update progress"
 msgstr "Průběh aktualizace"
 
@@ -6811,7 +6812,7 @@ msgid "(Currently set to: %s)"
 msgstr "(Aktuálně umístěno: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:327
+#: wp-admin/about.php:358
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>WordPress %s</strong> opravuje bezpečnostní problém."
 
@@ -6823,15 +6824,15 @@ msgstr "https://cs.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Profilový obrázek"
 
-#: wp-admin/about.php:324
+#: wp-admin/about.php:355
 msgid "Maintenance and Security Releases"
 msgstr "Opravné a bezpečnostní verze"
 
-#: wp-admin/about.php:321
+#: wp-admin/about.php:352
 msgid "Security Releases"
 msgstr "Bezpečnostní verze"
 
-#: wp-admin/about.php:318
+#: wp-admin/about.php:349
 msgid "Maintenance Releases"
 msgstr "Opravné verze"
 
@@ -7582,7 +7583,7 @@ msgstr "Jakmile publikujete nový příspěvek, tak může WordPress automaticky
 msgid "The <a href=\"https://wordpress.org/support/article/glossary/#character-set\">character encoding</a> of your site (UTF-8 is recommended)"
 msgstr "Nastavení <a href=\"https://wordpress.org/support/article/glossary/#character-set\">znakové sady</a> (anglicky) používané na webu (doporučeno je UTF-8)"
 
-#: wp-admin/includes/file.php:2376
+#: wp-admin/includes/file.php:2378
 msgid "example: www.wordpress.org"
 msgstr "např. www.naswp.cz"
 
@@ -7646,7 +7647,7 @@ msgstr "Zrušit"
 msgid "Main menu"
 msgstr "Hlavní menu"
 
-#: wp-admin/includes/file.php:2425
+#: wp-admin/includes/file.php:2427
 msgid "Enter the location on the server where the public and private keys are located. If a passphrase is needed, enter that in the password field above."
 msgstr "Zadejte umístění na serveru, kde se nacházejí veřejné a soukromé klíče. Je-li nutné přístupové heslo, zadejte jej do výše uvedeného pole."
 
@@ -7690,7 +7691,7 @@ msgstr "1 příspěvek nebyl aktualizován, protože ho právě někdo upravuje.
 msgid "You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button."
 msgstr "Můžete se odhlásit z jiných zařízení, například telefonu nebo veřejného počítače, klepnutím na tlačítko „Odhlásit ostatní aktivní relace“."
 
-#: wp-admin/update-core.php:804
+#: wp-admin/update-core.php:812
 msgid "New translations are available."
 msgstr "Jsou dostupné aktualizace překladů."
 
@@ -8320,27 +8321,27 @@ msgstr "Děkujeme, že používáte <a href=\"%s\">WordPress</a>."
 msgid "Search installed themes..."
 msgstr "Hledat instalované šablony..."
 
-#: wp-admin/update-core.php:978
+#: wp-admin/update-core.php:986
 msgid "<strong>Translations</strong> &mdash; The files translating WordPress into your language are updated for you whenever any other updates occur. But if these files are out of date, you can <strong>click the &#8220;Update Translations&#8221;</strong> button."
 msgstr "<strong>Překlady</strong> &mdash; soubory, které převádějí WordPress do vašeho jazyka, se aktualizují vždy, když se vyskytnou nějaké další aktualizace. Pokud jsou však tyto soubory zastaralé, můžete <strong>kliknout na tlačítko „Aktualizovat překlady“</strong>."
 
-#: wp-admin/update-core.php:974
+#: wp-admin/update-core.php:982
 msgid "In most cases, WordPress will automatically apply maintenance and security updates in the background for you."
 msgstr "Ve většině případů WordPress automaticky provede údržbu a bezpečnostní aktualizace na pozadí."
 
-#: wp-admin/update-core.php:974
+#: wp-admin/update-core.php:982
 msgid "<strong>WordPress</strong> &mdash; Updating your WordPress installation is a simple one-click procedure: just <strong>click on the &#8220;Update now&#8221; button</strong> when you are notified that a new version is available."
 msgstr "<strong>WordPress</strong> &mdash; Aktualizace WordPressu je velice jednoduchá: je-li dostupná nová verze, stačí <strong>kliknout na tlačítko „Aktualizovat“</strong>."
 
-#: wp-admin/update-core.php:964
+#: wp-admin/update-core.php:972
 msgid "If an update is available, you&#8127;ll see a notification appear in the Toolbar and navigation menu."
 msgstr "Je-li dostupná nějaká aktualizace, objeví se v panelu nástrojů a v navigačním panelu oznámení."
 
-#: wp-admin/update-core.php:975
+#: wp-admin/update-core.php:983
 msgid "<strong>Themes and Plugins</strong> &mdash; To update individual themes or plugins from this screen, use the checkboxes to make your selection, then <strong>click on the appropriate &#8220;Update&#8221; button</strong>. To update all of your themes or plugins at once, you can check the box at the top of the section to select all before clicking the update button."
 msgstr "<strong>Šablony a pluginy</strong> &mdash; Chcete-li z této stránky aktualizovat jednotlivé šablony nebo pluginy, zaškrtněte políčka a <strong>klikněte na příslušné tlačítko „Aktualizovat“</strong>. Chcete-li aktualizovat všechny své šablony nebo pluginy najednou před kliknutím na tlačítko „Aktualizovat“, zaškrtněte políčko v horní části seznamu a vybere se vše."
 
-#: wp-admin/update-core.php:963
+#: wp-admin/update-core.php:971
 msgid "On this screen, you can update to the latest version of WordPress, as well as update your themes, plugins, and translations from the WordPress.org repositories."
 msgstr "Na této stránce můžete aktualizovat na nejnovější verzi WordPressu, můžete zde také aktualizovat šablony, pluginy a překlady z WordPress.org adresářů."
 
@@ -8625,11 +8626,11 @@ msgid "The update cannot be installed because we will be unable to copy some fil
 msgstr "Aktualizaci nelze nainstalovat, protože by nebylo možné zkopírovat některé soubory. Běžně je tato chyba způsobena nedostatečnými právy k souborům."
 
 #: wp-admin/includes/class-language-pack-upgrader.php:114
-#: wp-admin/update-core.php:795
+#: wp-admin/update-core.php:803
 msgid "Your translations are all up to date."
 msgstr "Používáte nejnovější dostupné překlady."
 
-#: wp-admin/update-core.php:794 wp-admin/update-core.php:802
+#: wp-admin/update-core.php:802 wp-admin/update-core.php:810
 msgid "Translations"
 msgstr "Překlady"
 
@@ -8661,7 +8662,7 @@ msgid "If you experience any issues or need support, the volunteers in the WordP
 msgstr "Pokud došlo k nějakému technickému problému, objevila se nečekaná chyba nebo jen potřebujete s něčím poradit, tak můžete na rozcestníku podpory vyhledat pomoc. (česky)."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:827
-#: wp-admin/update-core.php:964
+#: wp-admin/update-core.php:972
 msgid "Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers."
 msgstr "Z hlediska bezpečnosti jsou pravidelné aktualizace WordPressu velmi důležité a přispívají alespoň trochu k tomu, aby mohl být internet bezpečnějším místem pro správce webů i čtenáře."
 
@@ -8735,7 +8736,7 @@ msgid "Updating translations for %1$s (%2$s)&#8230;"
 msgstr "Aktualizace překladu pro %1$s (%2$s)&#8230;"
 
 #: wp-admin/includes/class-language-pack-upgrader-skin.php:31
-#: wp-admin/update-core.php:806 wp-admin/update-core.php:1216
+#: wp-admin/update-core.php:814 wp-admin/update-core.php:1224
 msgid "Update Translations"
 msgstr "Aktualizovat překlady"
 
@@ -8829,12 +8830,12 @@ msgstr "Kopírování potřebných souborů&#8230;"
 msgid "Preparing to install the latest version&#8230;"
 msgstr "Příprava k instalaci nejnovější verze&#8230;"
 
-#: wp-admin/includes/file.php:2390
+#: wp-admin/includes/file.php:2392
 msgid "This password will not be stored on the server."
 msgstr "Zadané heslo nebude uloženo nikde na serveru."
 
 #. translators: 1: File checksum, 2: Expected checksum value.
-#: wp-admin/includes/file.php:1334
+#: wp-admin/includes/file.php:1336
 msgid "The checksum of the file (%1$s) does not match the expected checksum value (%2$s)."
 msgstr "Kontrolní součet souboru (%1$s) neodpovídá očekávané hodnotě kontrolního součtu (%2$s)."
 
@@ -9534,7 +9535,7 @@ msgid "Search engine visibility"
 msgstr "Dostupnost pro vyhledávače"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1588 wp-admin/update-core.php:896
+#: wp-admin/includes/update-core.php:1588 wp-admin/update-core.php:904
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "Vítejte ve WordPressu %1$s. Během chvíle budete přesměrováni na stránku &#8222;O WordPressu&#8220;. Pokud se tak nestane, klikněte <a href=\"%2$s\">zde</a>."
 
@@ -9741,8 +9742,8 @@ msgstr "Pod označenou oblastí pro nahrávání naleznete odkaz <strong>jednodu
 msgid "User deleted."
 msgstr "Uživatel byl smazán."
 
-#: wp-admin/includes/class-core-upgrader.php:36 wp-admin/includes/file.php:1669
-#: wp-admin/includes/file.php:1810
+#: wp-admin/includes/class-core-upgrader.php:36 wp-admin/includes/file.php:1671
+#: wp-admin/includes/file.php:1812
 msgid "Could not copy files. You may have run out of disk space."
 msgstr "Nepodařilo se zkopírovat soubory. Možná jste vyčerpali volné místo na disku."
 
@@ -9800,8 +9801,8 @@ msgstr "https://cs.wordpress.org/about/"
 
 #: wp-admin/includes/class-wp-list-table.php:1203
 #: wp-admin/includes/nav-menu.php:672 wp-admin/includes/nav-menu.php:903
-#: wp-admin/update-core.php:482 wp-admin/update-core.php:602
-#: wp-admin/update-core.php:654 wp-admin/update-core.php:776
+#: wp-admin/update-core.php:490 wp-admin/update-core.php:610
+#: wp-admin/update-core.php:662 wp-admin/update-core.php:784
 msgid "Select All"
 msgstr "Označit vše"
 
@@ -10260,14 +10261,15 @@ msgstr "Zadejte e-mailovou adresu nebo uživatelské jméno existujícího uživ
 msgid "Show Toolbar when viewing site"
 msgstr "Zobrazovat navigační lištu při prohlížení webu"
 
+#. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:350
+#: wp-admin/about.php:61 wp-admin/about.php:381
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Podrobnější informace naleznete na oficiální <a href=\"%s\">stránce o této verzi</a> (anglicky)."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:344
+#: wp-admin/about.php:375
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>WordPress %1$s</strong> opravuje několik bezpečnostních problémů a %2$s další chybu."
@@ -10276,15 +10278,16 @@ msgstr[2] "<strong>WordPress %1$s</strong> opravuje několik bezpečnostních pr
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:338
+#: wp-admin/about.php:369
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>WordPress %1$s</strong> opravuje bezpečnostní problém a %2$s další chybu."
 msgstr[1] "<strong>WordPress %1$s</strong> opravuje bezpečnostní problém a %2$s další chyby."
 msgstr[2] "<strong>WordPress %1$s</strong> opravuje bezpečnostní problém a %2$s dalších chyb."
 
+#. translators: 1: WordPress version number, 2: plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:332
+#: wp-admin/about.php:49 wp-admin/about.php:363
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>WordPress %1$s</strong> opravuje %2$s chybu."
@@ -10292,19 +10295,19 @@ msgstr[1] "<strong>WordPress %1$s</strong> opravuje %2$s chyby."
 msgstr[2] "<strong>WordPress %1$s</strong> opravuje %2$s chyb."
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:329
+#: wp-admin/about.php:360
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>WordPress %s</strong> opravuje několik bezpečnostních problémů."
 
-#: wp-admin/about.php:323
+#: wp-admin/about.php:354
 msgid "Maintenance and Security Release"
 msgstr "Opravná a bezpečnostní verze"
 
-#: wp-admin/about.php:320
+#: wp-admin/about.php:351
 msgid "Security Release"
 msgstr "Bezpečnostní verze"
 
-#: wp-admin/about.php:317
+#: wp-admin/about.php:44 wp-admin/about.php:348
 msgid "Maintenance Release"
 msgstr "Opravná verze"
 
@@ -10318,7 +10321,7 @@ msgid "This screen allows you to choose your permalink structure. You can choose
 msgstr "Tato stránka umožňuje výběr struktury trvalých odkazů. Můžete si vybrat z běžných nastavení, nebo si vytvořit vlastní strukturu URL adres."
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1596 wp-admin/update-core.php:904
+#: wp-admin/includes/update-core.php:1596 wp-admin/update-core.php:912
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "Vítejte ve WordPressu %1$s. <a href=\"%2$s\">Podrobnější informace</a>."
 
@@ -10338,7 +10341,7 @@ msgstr "Vytváření rubrik"
 msgid "Troubleshooting"
 msgstr "Řešení potíží"
 
-#: wp-admin/update-core.php:984
+#: wp-admin/update-core.php:992
 msgid "How to Update"
 msgstr "Aktualizace"
 
@@ -10545,7 +10548,7 @@ msgid "Links may be separated into Link Categories; these are different than the
 msgstr "Jednotlivé odkazy mohou být zařazovány do různých rubrik odkazů, které se však liší od rubrik používaných pro příspěvky."
 
 #. translators: 1: URL to About screen, 2: WordPress version.
-#: wp-admin/update-core.php:285
+#: wp-admin/update-core.php:293
 msgid "<a href=\"%1$s\">Learn more about WordPress %2$s</a>."
 msgstr "<a href=\"%1$s\">Podrobnější informace o WordPressu %2$s</a>."
 
@@ -10589,11 +10592,11 @@ msgstr "<strong>Upravit</strong> &#8211; Budete přesměrováni na administračn
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
 msgstr "Protože však používáte víceuživatelskou verzi WordPressu, můžete na tomto webu jednoduše registrovat i stávající uživatelské účty z celé sítě webů, a to zadáním platného uživatelského jména nebo e-mailu a přiřazením odpovídající uživatelské úrovně. Další pokročilé možnosti úprav existujících uživatelů (např. doplnění hesla či informací v profilu) jsou dostupné pouze pro uživatele s rozšířenými pravomocemi pro správu sítě webů. Příslušnou administrační stránku naleznete v menu horní navigační lišty Moje weby > Administrace sítě webů > Uživatelé, kde stačí jen kliknout na odkaz s názvem Upravit, který se objeví když přejedete kurzorem myši přes zvolené uživatelské jméno."
 
-#: wp-admin/about.php:306
+#: wp-admin/about.php:337
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Přejít na úvodní stránku administrace &rarr; Nástěnka"
 
-#: wp-admin/about.php:303
+#: wp-admin/about.php:334
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "Zpět na přehled aktualizací"
 
@@ -10681,7 +10684,7 @@ msgid "The %s table is okay."
 msgstr "Tabulka %s je v pořádku."
 
 #. translators: %s: Plugin version.
-#: wp-admin/update-core.php:558
+#: wp-admin/update-core.php:566
 msgid "View version %s details."
 msgstr "Zobrazit podrobnosti o verzi %s"
 
@@ -10707,7 +10710,7 @@ msgstr "Audio, video nebo jiný typ souboru"
 msgid "Insert media from another website"
 msgstr "Vložit mediální soubor z jiného webu"
 
-#: wp-admin/includes/file.php:2300
+#: wp-admin/includes/file.php:2302
 msgid "<strong>Error</strong>: Could not connect to the server. Please verify the settings are correct."
 msgstr "<strong>CHYBA:</strong> Během připojování k serveru došlo k nečekané chybě. Ověřte prosím, zda je vše správně nastaveno."
 
@@ -10741,7 +10744,7 @@ msgstr "Na levé straně je umístěno hlavní navigační menu, které obsahuje
 #: wp-admin/plugins.php:544 wp-admin/revision.php:151
 #: wp-admin/site-health.php:80 wp-admin/theme-editor.php:28
 #: wp-admin/theme-install.php:121 wp-admin/themes.php:143
-#: wp-admin/update-core.php:969 wp-admin/upload.php:54 wp-admin/upload.php:230
+#: wp-admin/update-core.php:977 wp-admin/upload.php:54 wp-admin/upload.php:230
 #: wp-admin/user-edit.php:66 wp-admin/user-new.php:273 wp-admin/users.php:34
 #: wp-admin/widgets-form.php:43 wp-admin/network/index.php:34
 #: wp-admin/network/settings.php:49 wp-admin/network/site-new.php:23
@@ -10938,7 +10941,7 @@ msgstr "Nastavení bylo uloženo."
 #: wp-admin/plugin-install.php:120 wp-admin/plugins.php:587
 #: wp-admin/revision.php:156 wp-admin/site-health.php:89
 #: wp-admin/theme-editor.php:51 wp-admin/theme-install.php:139
-#: wp-admin/themes.php:206 wp-admin/tools.php:55 wp-admin/update-core.php:1007
+#: wp-admin/themes.php:206 wp-admin/tools.php:55 wp-admin/update-core.php:1015
 #: wp-admin/upload.php:74 wp-admin/upload.php:255 wp-admin/user-edit.php:72
 #: wp-admin/user-new.php:294 wp-admin/users.php:75 wp-admin/widgets-form.php:70
 #: wp-admin/network.php:67 wp-admin/network.php:80
@@ -11423,7 +11426,7 @@ msgid "Search Installed Themes"
 msgstr "Hledat instalované šablony"
 
 #. translators: %s: Link to documentation on child themes.
-#: wp-admin/update-core.php:642
+#: wp-admin/update-core.php:650
 msgid "<strong>Please Note:</strong> Any customizations you have made to theme files will be lost. Please consider using <a href=\"%s\">child themes</a> for modifications."
 msgstr "<strong>Upozornění:</strong> Během automatické aktualizace vybraných šablon budou smazány všechny úpravy, které jste v souborech těchto šablon dosud udělali. Do budoucna proto raději zvažte pro zachování vlastních úprav možnost využití <a href=\"%s\">odvozených šablon</a> (anglicky)."
 
@@ -11436,20 +11439,20 @@ msgstr[0] "Zvýrazněno <span class=\"count\">(%s)</span>"
 msgstr[1] "Zvýrazněno <span class=\"count\">(%s)</span>"
 msgstr[2] "Zvýrazněno <span class=\"count\">(%s)</span>"
 
-#: wp-admin/update-core.php:1050
+#: wp-admin/update-core.php:1058
 msgid "Check again."
 msgstr "Zkontrolovat znovu"
 
 #. translators: 1: Date, 2: Time.
-#: wp-admin/update-core.php:1049
+#: wp-admin/update-core.php:1057
 msgid "Last checked on %1$s at %2$s."
 msgstr "Poslední kontrola proběhla %1$s (%2$s)"
 
-#: wp-admin/update-core.php:1030
+#: wp-admin/update-core.php:1038
 msgid "Please select one or more plugins to update."
 msgstr "Vyberte prosím jeden nebo více pluginů, které chcete aktualizovat."
 
-#: wp-admin/update-core.php:1028
+#: wp-admin/update-core.php:1036
 msgid "Please select one or more themes to update."
 msgstr "Vyberte prosím jednu nebo více šablon, které chcete aktualizovat."
 
@@ -11469,7 +11472,7 @@ msgstr "Stylování vizuálního editoru"
 msgid "Sorry, you are not allowed to edit users."
 msgstr "Nemáte dostatečné oprávnění pro úpravy uživatelů."
 
-#: wp-admin/includes/file.php:2347
+#: wp-admin/includes/file.php:2349
 msgid "To perform the requested action, WordPress needs to access your web server."
 msgstr "K provedení požadované akce se WordPress musí připojit k webovému serveru."
 
@@ -11579,19 +11582,19 @@ msgstr "Oříznout obrázek a zobrazit ho v záhlaví webu"
 msgid "XFN stands for <a href=\"https://gmpg.org/xfn/\">XHTML Friends Network</a>, which is optional. WordPress allows the generation of XFN attributes to show how you are related to the authors/owners of the site to which you are linking."
 msgstr "Zkratka XFN představuje službu <a href=\"http://gmpg.org/xfn/\" target=\"_blank\">XHTML Friends Network</a>, což je síť přátel tvořená prostřednictvím XHTML (konkrétně atributů odkazů) a vyplnění této sekce o vašem vztahu k odkazovanému webu je zcela dobrovolné. WordPress jen umožňuje automatické vytváření XFN atributů v odkazu, abyste mohli s jejich pomocí přehledně zobrazovat, jakým způsobem jste spojeni s autory/vlastníky webů, na které odkazujete."
 
-#: wp-admin/includes/file.php:2357
+#: wp-admin/includes/file.php:2359
 msgid "FTP Password"
 msgstr "Heslo (FTP)"
 
-#: wp-admin/includes/file.php:2356
+#: wp-admin/includes/file.php:2358
 msgid "FTP Username"
 msgstr "Uživatelské jméno (FTP)"
 
-#: wp-admin/includes/file.php:2353
+#: wp-admin/includes/file.php:2355
 msgid "FTP/SSH Password"
 msgstr "Heslo (FTP/SSH)"
 
-#: wp-admin/includes/file.php:2352
+#: wp-admin/includes/file.php:2354
 msgid "FTP/SSH Username"
 msgstr "Uživatelské jméno (FTP/SSH)"
 
@@ -11638,15 +11641,15 @@ msgstr "U většiny šablon je velmi důležitý zejména název webu, který je
 msgid "<strong>Order</strong> &mdash; Pages are usually ordered alphabetically, but you can choose your own order by entering a number (1 for first, etc.) in this field."
 msgstr "<strong>Pořadí</strong> &mdash; Stránky jsou většinou řazeny podle abecedy, ale pokud chcete, tak můžete jejich pořadí v tomto poli upravit vlastním číslováním, např. zadáním čísla 1 pro první stránku v pořadí atd."
 
-#: wp-admin/includes/file.php:2361
+#: wp-admin/includes/file.php:2363
 msgid "If you do not remember your credentials, you should contact your web host."
 msgstr "Pokud potřebné informace neznáte, kontaktujte prosím poskytovatele hostingu."
 
-#: wp-admin/includes/file.php:2355
+#: wp-admin/includes/file.php:2357
 msgid "Please enter your FTP credentials to proceed."
 msgstr "Zadejte prosím přihlašovací údaje k FTP, aby bylo možné pokračovat."
 
-#: wp-admin/includes/file.php:2351
+#: wp-admin/includes/file.php:2353
 msgid "Please enter your FTP or SSH credentials to proceed."
 msgstr "Zadejte prosím přihlašovací údaje k FTP nebo SSH, aby bylo možné pokračovat."
 
@@ -11757,23 +11760,23 @@ msgstr "Nakonec musíte ještě dole na obrazovce kliknout na tlačítko &#8222;
 msgid "The boxes for link name, web address, and description have fixed positions, while the others may be repositioned using drag and drop. You can also hide boxes you don&#8217;t use in the Screen Options tab, or minimize boxes by clicking on the title bar of the box."
 msgstr "Pole pro název, URL adresu a popis odkazovaného webu jsou umístěna napevno, zatímco ostatní sekce formuláře můžete libovolně přemisťovat uchopením lišty s názvem sekce kurzorem myši a jeho tažením až na místo určení. Konkrétní sekce můžete také skrýt pomocí záložky Nastavení zobrazených informací, nebo je rozbalit/sbalit kliknutím na lištu s názvem sekce."
 
-#: wp-admin/update-core.php:620
+#: wp-admin/update-core.php:628
 msgid "Your themes are all up to date."
 msgstr "Používáte nejnovější dostupné verze šablon."
 
-#: wp-admin/update-core.php:451
+#: wp-admin/update-core.php:459
 msgid "Your plugins are all up to date."
 msgstr "Používáte nejnovější dostupné verze pluginů."
 
-#: wp-admin/update-core.php:280
+#: wp-admin/update-core.php:288
 msgid "While your site is being updated, it will be in maintenance mode. As soon as your updates are complete, this mode will be deactivated."
 msgstr "Jakmile zahájíte automatickou aktualizaci, tak dojde k zapnutí režimu údržby. Po úspěšném dokončení aktualizace se bude web zobrazovat zase normálně."
 
-#: wp-admin/update-core.php:253
+#: wp-admin/update-core.php:261
 msgid "An updated version of WordPress is available."
 msgstr "Nová verze WordPressu je k dispozici."
 
-#: wp-admin/update-core.php:267
+#: wp-admin/update-core.php:275
 msgid "You have the latest version of WordPress."
 msgstr "Používáte nejnovější verzi WordPressu."
 
@@ -12026,7 +12029,7 @@ msgstr "Zobrazit pokročilé vlastnosti jednotlivých položek menu"
 
 #. translators: 1: Plugin version, 2: New version.
 #. translators: 1: Theme version, 2: New version.
-#: wp-admin/update-core.php:581 wp-admin/update-core.php:755
+#: wp-admin/update-core.php:589 wp-admin/update-core.php:763
 msgid "You have version %1$s installed. Update to %2$s."
 msgstr "Používáte zastaralou verzi %1$s. Můžete aktualizovat na nejnovější verzi %2$s."
 
@@ -12198,7 +12201,7 @@ msgstr[0] "%s komentář byl přesunut do koše."
 msgstr[1] "%s komentáře byly přesunuty do koše."
 msgstr[2] "%s komentářů bylo přesunuto do koše."
 
-#: wp-admin/update-core.php:637
+#: wp-admin/update-core.php:645
 msgid "The following themes have new versions available. Check the ones you want to update and then click &#8220;Update Themes&#8221;."
 msgstr "Pro následující šablony jsou dostupné jejich novější verze. Zaškrtnutím označíte všechny šablony, které chcete aktualizovat a potom klikněte na tlačítko &#8222;Aktualizovat šablony&#8220;."
 
@@ -12214,7 +12217,7 @@ msgstr "Uživatel byl registrován na tomto webu."
 msgid "Invitation email sent to user. A confirmation link must be clicked for them to be added to your site."
 msgstr "Uživateli byl odeslán uvítací e-mail s ověřovacím odkazem, na který musí kliknout, aby mohl být registrován na vašem webu."
 
-#: wp-admin/update-core.php:474
+#: wp-admin/update-core.php:482
 msgid "The following plugins have new versions available. Check the ones you want to update and then click &#8220;Update Plugins&#8221;."
 msgstr "Pro následující pluginy jsou dostupné jejich novější verze. Zaškrtnutím označíte všechny pluginy, které chcete aktualizovat a potom klikněte na tlačítko &#8222;Aktualizovat pluginy&#8220;."
 
@@ -12374,17 +12377,17 @@ msgid "User already exists. Password inherited."
 msgstr "Uživatel již existuje, jeho heslo zůstalo nezměněno."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:426
-#: wp-admin/includes/update-core.php:1582 wp-admin/update-core.php:892
+#: wp-admin/includes/update-core.php:1582 wp-admin/update-core.php:900
 msgid "WordPress updated successfully."
 msgstr "WordPress byl úspěšně aktualizován"
 
-#: wp-admin/update-core.php:845
+#: wp-admin/update-core.php:853
 msgid "Update WordPress"
 msgstr "Aktualizace WordPressu"
 
-#: wp-admin/plugins.php:157 wp-admin/update-core.php:477
-#: wp-admin/update-core.php:606 wp-admin/update-core.php:1142
-#: wp-admin/update-core.php:1147
+#: wp-admin/plugins.php:157 wp-admin/update-core.php:485
+#: wp-admin/update-core.php:614 wp-admin/update-core.php:1150
+#: wp-admin/update-core.php:1155
 msgid "Update Plugins"
 msgstr "Aktualizovat pluginy"
 
@@ -12395,7 +12398,7 @@ msgstr "Aktualizovat pluginy"
 msgid "You cannot update because <a href=\"%1$s\">WordPress %2$s</a> requires PHP version %3$s or higher and MySQL version %4$s or higher. You are running PHP version %5$s and MySQL version %6$s."
 msgstr "Automatická aktualizace nemůže být provedena, protože <a href=\"%1$s\">WordPress %2$s</a> vyžaduje alespoň PHP %3$s a MySQL %4$s. Na vašem serveru jsou však používány starší verze PHP %5$s a MySQL %6$s."
 
-#: wp-admin/update-core.php:960 wp-admin/update-core.php:1021
+#: wp-admin/update-core.php:968 wp-admin/update-core.php:1029
 msgid "WordPress Updates"
 msgstr "Aktualizace WordPressu"
 
@@ -12403,7 +12406,7 @@ msgstr "Aktualizace WordPressu"
 msgid "Edit menu item"
 msgstr "Upravit položku menu"
 
-#: wp-admin/about.php:306 wp-admin/includes/network.php:148
+#: wp-admin/about.php:337 wp-admin/includes/network.php:148
 msgid "Go to Dashboard"
 msgstr "Přejít na úvodní stránku administrace sítě webů &rarr; Nástěnka"
 
@@ -12786,18 +12789,18 @@ msgid "Plugin Reactivation"
 msgstr "Reaktivace pluginu"
 
 #: wp-admin/includes/class-wp-automatic-updater.php:424
-#: wp-admin/update-core.php:886 wp-admin/js/updates.js:825
+#: wp-admin/update-core.php:894 wp-admin/js/updates.js:825
 #: wp-admin/js/updates.js:1480
 msgid "Installation failed."
 msgstr "Instalace se nezdařila"
 
 #. translators: %s: WordPress version.
-#: wp-admin/update-core.php:513 wp-admin/update-core.php:522
+#: wp-admin/update-core.php:521 wp-admin/update-core.php:530
 msgid "Compatibility with WordPress %s: Unknown"
 msgstr "Kompatibilita pluginu s WordPressem %s: Neznámá"
 
 #. translators: %s: WordPress version.
-#: wp-admin/update-core.php:510 wp-admin/update-core.php:519
+#: wp-admin/update-core.php:518 wp-admin/update-core.php:527
 msgid "Compatibility with WordPress %s: 100%% (according to its author)"
 msgstr "Kompatibilita pluginu s WordPressem %s: 100%% (podle autora pluginu)"
 
@@ -12805,7 +12808,7 @@ msgstr "Kompatibilita pluginu s WordPressem %s: 100%% (podle autora pluginu)"
 msgid "Hide hidden updates"
 msgstr "Skrýt skryté aktualiazce"
 
-#: wp-admin/update-core.php:211 wp-admin/update-core.php:222
+#: wp-admin/update-core.php:211 wp-admin/update-core.php:230
 msgid "Show hidden updates"
 msgstr "Zobrazit skryté aktualizace"
 
@@ -13398,8 +13401,8 @@ msgstr "Nastavení komentářů"
 msgid "No users found."
 msgstr "Nebyli nalezeni žádní uživatelé."
 
-#: wp-admin/update-core.php:649 wp-admin/update-core.php:780
-#: wp-admin/update-core.php:1183 wp-admin/update-core.php:1188
+#: wp-admin/update-core.php:657 wp-admin/update-core.php:788
+#: wp-admin/update-core.php:1191 wp-admin/update-core.php:1196
 #: wp-admin/network/themes.php:85
 msgid "Update Themes"
 msgstr "Aktualizovat šablony"
@@ -14570,61 +14573,61 @@ msgstr "Převrátit svisle"
 msgid "Image data does not exist. Please re-upload the image."
 msgstr "Příslušná obrázková data bohužel neexistují. Zkuste prosím nahrát obrázek znovu."
 
-#: wp-admin/includes/file.php:2445
+#: wp-admin/includes/file.php:2447
 msgid "Proceed"
 msgstr "Spustit"
 
-#: wp-admin/includes/file.php:2395
+#: wp-admin/includes/file.php:2397
 msgid "Connection Type"
 msgstr "Způsob připojení"
 
-#: wp-admin/includes/file.php:2422
+#: wp-admin/includes/file.php:2424
 msgid "Private Key:"
 msgstr "Soukromý klíč:"
 
-#: wp-admin/includes/file.php:2418
+#: wp-admin/includes/file.php:2420
 msgid "Public Key:"
 msgstr "Veřejný klíč:"
 
-#: wp-admin/includes/file.php:2416
+#: wp-admin/includes/file.php:2418
 msgid "Authentication Keys"
 msgstr "Autentifikační klíče"
 
-#: wp-admin/includes/file.php:2375
+#: wp-admin/includes/file.php:2377
 msgid "Hostname"
 msgstr "Server (hostname)"
 
-#: wp-admin/includes/file.php:2341
+#: wp-admin/includes/file.php:2343
 msgid "Connection Information"
 msgstr "Informace o připojení"
 
-#: wp-admin/includes/file.php:2315
+#: wp-admin/includes/file.php:2317
 msgid "SSH2"
 msgstr "SSH2"
 
-#: wp-admin/includes/file.php:2312
+#: wp-admin/includes/file.php:2314
 msgid "FTPS (SSL)"
 msgstr "FTPS (SSL)"
 
-#: wp-admin/includes/file.php:2309
+#: wp-admin/includes/file.php:2311
 msgid "FTP"
 msgstr "FTP"
 
-#: wp-admin/includes/file.php:1783
+#: wp-admin/includes/file.php:1785
 msgid "Empty archive."
 msgstr "Archiv je prázdný."
 
-#: wp-admin/includes/file.php:1736 wp-admin/includes/file.php:1866
-#: wp-admin/includes/file.php:1911 wp-admin/includes/update-core.php:1364
+#: wp-admin/includes/file.php:1738 wp-admin/includes/file.php:1868
+#: wp-admin/includes/file.php:1913 wp-admin/includes/update-core.php:1364
 #: wp-admin/includes/update-core.php:1508
 msgid "Could not copy file."
 msgstr "Soubor se nepodařilo zkopírovat."
 
-#: wp-admin/includes/file.php:1732
+#: wp-admin/includes/file.php:1734
 msgid "Could not extract file from archive."
 msgstr "Nepodařilo se rozbalit archiv."
 
-#: wp-admin/includes/file.php:1633 wp-admin/includes/file.php:1713
+#: wp-admin/includes/file.php:1635 wp-admin/includes/file.php:1715
 msgid "Could not retrieve file from archive."
 msgstr "Nepodařilo se získat soubor z archivu."
 
@@ -14943,12 +14946,12 @@ msgstr "Režim údržby webu byl vypnut&#8230;"
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "Režim údržby webu byl zapnut&#8230;"
 
-#: wp-admin/includes/file.php:1624 wp-admin/includes/file.php:1779
+#: wp-admin/includes/file.php:1626 wp-admin/includes/file.php:1781
 msgid "Incompatible Archive."
 msgstr "Formát archivu není kompatibilní."
 
-#: wp-admin/includes/class-wp-upgrader.php:163 wp-admin/includes/file.php:1704
-#: wp-admin/includes/file.php:1845 wp-admin/includes/file.php:1919
+#: wp-admin/includes/class-wp-upgrader.php:163 wp-admin/includes/file.php:1706
+#: wp-admin/includes/file.php:1847 wp-admin/includes/file.php:1921
 #: wp-admin/includes/update-core.php:1522
 msgid "Could not create directory."
 msgstr "Nepodařilo se vytvořit adresář."
@@ -14989,7 +14992,7 @@ msgid "Filesystem error."
 msgstr "Chyba souborového systému."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:409
-#: wp-admin/includes/class-wp-upgrader.php:150 wp-admin/includes/file.php:1546
+#: wp-admin/includes/class-wp-upgrader.php:150 wp-admin/includes/file.php:1548
 #: wp-admin/includes/plugin.php:934 wp-admin/includes/theme.php:62
 msgid "Could not access filesystem."
 msgstr "Nepodařilo se připojit k souborovému systému."

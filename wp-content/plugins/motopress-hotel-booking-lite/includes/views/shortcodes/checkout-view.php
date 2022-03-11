@@ -10,6 +10,62 @@ use MPHB\Utils\DateUtils;
  */
 class CheckoutView {
 
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public static function renderCustomerErrors() {
+		if( isset( $_GET['customer_error'] ) ) {
+			if( $_GET['customer_error'] == 'wp_user_exists' ) {
+				?>
+				<p class="mphb-errors-wrapper">
+					<?php echo esc_html__( 'An account with this email already exists. Please, log in.', 'motopress-hotel-booking' ); ?>
+				</p>
+			<?php
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public static function renderLoginForm() {
+		$showLoginForm = MPHB()->settings()->main()->allowCustomersLogIn();
+		
+		if( ! get_current_user_id() && $showLoginForm ) {
+			?>
+			<div class="mphb-login-form-wrap">
+				<p>
+					<?php esc_html_e( 'Returning customer?', 'motopress-hotel-booking' ); ?>
+					<a id="mphb-render-checkout-login" href="#"><?php esc_html_e( 'Click here to log in', 'motopress-hotel-booking' ); ?></a>
+				</p>
+				<div class="mphb-login-form mphb-hide"><?php wp_login_form( array( 'redirect' => get_permalink() ) ); ?></div>
+			</div>
+			<?php
+		} else if( get_current_user_id() ) {
+			$user = get_user_by( 'id', get_current_user_id() );
+			
+			$userDisplayName = $user->data->display_name;
+			$logout = wp_logout_url();
+			?>
+				<div class="mphb-login-form-wrap">
+					<p>
+						<?php printf(
+							wp_kses(
+								//translators: 1 - username;
+								__( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>).', 'motopress-hotel-booking' ),
+								array( 'a' => array( 'href' => array(), ), )
+							),
+							esc_html( $userDisplayName ),
+							esc_url( $logout )
+						); ?>
+					</p>
+				</div>
+			<?php
+		}
+	}
+
 	public static function renderCoupon(){
 		if ( !MPHB()->settings()->main()->isCouponsEnabled() ) {
 			return;
@@ -442,8 +498,28 @@ class CheckoutView {
 		}
 	}
 
-	public static function renderCustomerDetails(){
-        $requiredAttr = 'required="required"';
+	/**
+	 * 
+	 * @since 4.2.0 - \MPHB\UsersAndRoles\Customer $customer added
+	 */
+	public static function renderCustomerDetails( $booking, $roomDetails, $customer = null ){		
+		$firstName = '';
+		$lastName = '';
+		$email = '';
+		
+		if( ! $customer && get_current_user_id() ) {
+			$user = wp_get_current_user();
+			
+			$firstName = get_user_meta( $user->ID, 'first_name', true );
+			$lastName = get_user_meta( $user->ID, 'last_name', true );
+			$email = $user->data->user_email;
+		} else if( $customer ) {
+			$firstName = $customer->getFirstName();
+			$lastName = $customer->getLastName();
+			$email = $customer->getEmail();
+		}
+		
+		$requiredAttr = 'required="required"';
         $requiredAbbr = '<abbr title="' . esc_attr__( 'Required', 'motopress-hotel-booking' ) . '">*</abbr>';
         if ( is_admin() && !MPHB()->settings()->main()->isCustomerRequiredOnAdmin() ) {
             $requiredAttr = $requiredAbbr = '';
@@ -464,7 +540,7 @@ class CheckoutView {
 					echo $requiredAbbr; ?>
 				</label>
 				<br />
-				<input type="text" id="mphb_first_name" name="mphb_first_name" <?php 
+				<input type="text" id="mphb_first_name" name="mphb_first_name" value="<?php echo esc_attr( $firstName ); ?>" <?php 
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo $requiredAttr; ?> />
 			</p>
@@ -475,7 +551,7 @@ class CheckoutView {
 					echo $requiredAbbr; ?>
 				</label>
 				<br />
-				<input type="text" name="mphb_last_name" id="mphb_last_name" <?php 
+				<input type="text" name="mphb_last_name" id="mphb_last_name" value="<?php echo esc_attr( $lastName ); ?>" <?php 
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo $requiredAttr; ?> />
 			</p>
@@ -488,7 +564,7 @@ class CheckoutView {
 				<br />
 				<input type="email" name="mphb_email" <?php 
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo $requiredAttr; ?> id="mphb_email" />
+					echo $requiredAttr; ?> id="mphb_email" value="<?php echo esc_attr( $email ); ?>" />
 			</p>
 			<p class="mphb-customer-phone">
 				<label for="mphb_phone">
@@ -499,7 +575,7 @@ class CheckoutView {
 				<br />
 				<input type="text" name="mphb_phone" <?php 
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo $requiredAttr; ?> id="mphb_phone" />
+					echo $requiredAttr; ?> id="mphb_phone" value="<?php echo $customer ? $customer->getPhone() : ''; ?>" />
 			</p>
 			<?php if ( MPHB()->settings()->main()->isRequireCountry() ) : ?>
 				<?php $defaultCountry = MPHB()->settings()->main()->getDefaultCountry(); ?>
@@ -510,6 +586,7 @@ class CheckoutView {
 						echo $requiredAbbr; ?>
 					</label>
 					<br />
+					<?php $defaultCountry = $customer ? strtoupper( $customer->getCountry() ) : $defaultCountry; ?>
 					<select name="mphb_country" <?php 
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo $requiredAttr; ?> id="mphb_country">
@@ -532,7 +609,7 @@ class CheckoutView {
 					<br />
 					<input type="text" name="mphb_address1" <?php 
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo $requiredAttr; ?> id="mphb_address1" />
+						echo $requiredAttr; ?> id="mphb_address1" value="<?php echo $customer ? $customer->getAddress1() : ''; ?>" />
 				</p>
 				<p class="mphb-customer-city">
 					<label for="mphb_city">
@@ -543,7 +620,7 @@ class CheckoutView {
 					<br />
 					<input type="text" name="mphb_city" <?php 
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo $requiredAttr; ?> id="mphb_city" />
+						echo $requiredAttr; ?> id="mphb_city" value="<?php echo $customer ? $customer->getCity() : ''; ?>" />
 				</p>
 				<p class="mphb-customer-state">
 					<label for="mphb_state">
@@ -554,7 +631,7 @@ class CheckoutView {
 					<br />
 					<input type="text" name="mphb_state" <?php 
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo $requiredAttr; ?> id="mphb_state" />
+						echo $requiredAttr; ?> id="mphb_state" value="<?php echo $customer ? $customer->getState() : ''; ?>" />
 				</p>
 				<p class="mphb-customer-zip">
 					<label for="mphb_zip">
@@ -565,13 +642,31 @@ class CheckoutView {
 					<br />
 					<input type="text" name="mphb_zip" <?php 
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo $requiredAttr; ?> id="mphb_zip" />
+						echo $requiredAttr; ?> id="mphb_zip" value="<?php echo $customer ? $customer->getZip() : ''; ?>" />
 				</p>
 			<?php endif; // full address			?>
 			<p class="mphb-customer-note">
 				<label for="mphb_note"><?php esc_html_e( 'Notes', 'motopress-hotel-booking' ); ?></label><br />
 				<textarea name="mphb_note" id="mphb_note" rows="4"></textarea>
 			</p>
+			<?php
+			$autoCreateNewAccount = MPHB()->settings()->main()->automaticallyCreateUser();
+			$allowToCreateAccount = MPHB()->settings()->main()->allowCustomersCreateAccount();
+			
+			$allowToCreateAccount = $allowToCreateAccount && ! $autoCreateNewAccount && ! get_current_user_id(); // If auto-creating is checked, than do not show a checkbox
+			
+			if( $allowToCreateAccount ) {
+				?>
+				<p class="mphb-customer-create-account">
+					<input type="checkbox" 
+					id="mphb_create_new_account"
+					name="mphb_create_new_account"
+					value="1" />
+					<label for="mphb_create_new_account"><?php echo esc_html__( 'Create an account', 'motopress-hotel-booking' ); ?></label>
+				</p>
+				<?php
+			}
+			?>
 		</section>
 		<?php
 	}
@@ -788,7 +883,7 @@ class CheckoutView {
 	 * @param \MPHB\Entities\Booking $booking
 	 * @param array $roomDetails
 	 */
-	public static function renderCheckoutForm( $booking, $roomDetails ){
+	public static function renderCheckoutForm( $booking, $roomDetails, $customer = null ){
 		$actionUrl = add_query_arg( 'step', \MPHB\Shortcodes\CheckoutShortcode::STEP_BOOKING, MPHB()->settings()->pages()->getCheckoutPageUrl() );
 		$checkoutId = mphb_generate_uuid4();
 		$nonceAction = \MPHB\Shortcodes\CheckoutShortcode::NONCE_ACTION_BOOKING . '-' . $checkoutId;
@@ -816,7 +911,9 @@ class CheckoutView {
 				   		echo \MPHB\Shortcodes\CheckoutShortcode::STEP_BOOKING; ?>"
 				   />
 
-			<?php do_action( 'mphb_sc_checkout_form', $booking, $roomDetails ); ?>
+			<?php do_action( 'mphb_sc_checkout_form', $booking, $roomDetails, $customer ); ?>
+			
+			
 
 			<p class="mphb_sc_checkout-submit-wrapper">
 				<input type="submit" class="button" value="<?php esc_attr_e( 'Book Now', 'motopress-hotel-booking' ); ?>"/>

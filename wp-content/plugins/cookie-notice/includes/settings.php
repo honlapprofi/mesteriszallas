@@ -198,27 +198,55 @@ class Cookie_Notice_Settings {
 		<div class="wrap">
 			<h2>' . __( 'Cookie Notice & Compliance for GDPR/CCPA', 'cookie-notice' ) . '</h2>
 			<div class="cookie-notice-settings">
-				<div class="cookie-notice-credits">
-					<div class="inside">
-						<div class="inner">';
-		
-		// compliance enabled
-		if ( Cookie_Notice()->get_status() === 'active' ) {
-			echo '			<h2>We\'re Promoting Privacy&trade;</h2>
-							<p>' . __( 'Promote the privacy of your website visitors without affecting how you do your business.', 'cookie-notice' ) . '</p>';
-		} else {
-			echo '			<h1><b>Cookie Compliance&trade;</b></h1>
-							<h2>' . __( 'The next generation of Cookie Notice', 'cookie-notice' ) . '</h2>
-							<div class="cn-lead">
-								<p>' . __( 'A free web application to help you deliver better consent experiences and comply with GDPR, CCPA and other data privacy laws more effectively.', 'cookie-notice' ) . '</p>
+				<div class="cookie-notice-sidebar">
+					<div class="cookie-notice-credits">
+						<div class="inside">
+							<div class="inner">';
+
+			// compliance enabled
+			if ( Cookie_Notice()->get_status() === 'active' ) {
+				echo '			<h2>We\'re Promoting Privacy&trade;</h2>
+								<p>' . __( 'Promote the privacy of your website visitors without affecting how you do your business.', 'cookie-notice' ) . '</p>';
+			} else {
+				echo '			<h1><b>Cookie Compliance&trade;</b></h1>
+								<h2>' . __( 'The next generation of Cookie Notice', 'cookie-notice' ) . '</h2>
+								<div class="cn-lead">
+									<p>' . __( 'A free web application to help you deliver better consent experiences and comply with GDPR, CCPA and other data privacy laws more effectively.', 'cookie-notice' ) . '</p>
+								</div>
+								<img src="//cns2-53eb.kxcdn.com/screen-dashboard-small.png">
+								<a href="' . esc_url( admin_url( 'index.php?page=cookie-notice' ) ) . '" class="button button-primary button-hero cn-button cn-run-upgrade">' . __( 'Free Upgrade', 'cookie-notice' ) . '</a>';
+			}
+
+			echo '
 							</div>
-							<img src="//cns2-53eb.kxcdn.com/screen-dashboard-small.png">
-							<a href="' . esc_url( admin_url( 'index.php?page=cookie-notice' ) ) . '" class="cn-btn cn-run-upgrade">' . __( 'Free Upgrade', 'cookie-notice' ) . '</a>';
-		}
-		
-		echo '
 						</div>
-					</div>
+					</div>';
+			
+			if ( Cookie_Notice()->get_status() !== 'active' ) {
+				echo '
+					<div class="cookie-notice-faq">
+						<h2>' . __( 'F.A.Q.', 'cookie-notice' ) . '</h2>
+						<div class="cn-toggle-container">
+							<label for="cn-faq-1" class="cn-toggle-item">
+								<input id="cn-faq-1" type="checkbox" checked />
+								<span class="cn-toggle-heading">' . __( 'Does the Cookie Notice make my site fully compliant with GDPR?', 'cookie-notice' ) . '</span>
+								<span class="cn-toggle-body">' . __( 'It is not possible to provide the required technical compliance features using only a WordPress plugin. Features like consent record storage, purpose categories and script blocking that bring your site into full compliance with GDPR are only available through the Cookie Compliance integration.', 'cookie-notice' ) . '
+							</label>
+							<label for="cn-faq-2" class="cn-toggle-item">
+								<input id="cn-faq-2" type="checkbox" />
+								<span class="cn-toggle-heading">' . __( 'Does the Cookie Compiance integration make my site fully compliant with GDPR?', 'cookie-notice' ) . '</span>
+								<span class="cn-toggle-body">' . __( 'Yes! The plugin + web application version includes technical compliance features to meet requirements for over 100 countries and legal jurisdictions.', 'cookie-notice' ) . '</span>
+							</label>
+							<label for="cn-faq-3" class="cn-toggle-item">
+								<input id="cn-faq-3" type="checkbox" />
+								<span class="cn-toggle-heading">' . __( 'Is Cookie Compliance free?', 'cookie-notice' ) . '</span>
+								<span class="cn-toggle-body">' . __( 'Yes, but with limits. Cookie Compliance includes both free and paid plans to choose from depending on your needs and your website monthly traffic.', 'cookie-notice' ) . '</span>
+							</label>
+						</div>
+					</div>';
+			}
+			
+			echo '
 				</div>
 				<form action="options.php" method="post">';
 
@@ -314,7 +342,7 @@ class Cookie_Notice_Settings {
 						<span class="cn_compliance_status">' . __( 'Proof-of-Consent', 'cookie-notice' ) . ': <label class="cn-active">' . __( 'Active', 'cookie-notice' ) . '</label></span>
 					</div>
 					<div id="cn_app_actions">
-						<a href="' . $this->app_login_url . '" class="button button-primary button-hero" target="_blank">' . __( 'Log in & Configure', 'cookie-notice' ) . '</a>
+						<a href="' . $this->app_login_url . '" class="button button-primary button-hero cn-button" target="_blank">' . __( 'Log in & Configure', 'cookie-notice' ) . '</a>
 						<p class="description">' . __( 'Log into the Cookie Compliance&trade; web application and configure your Privacy Experience.', 'cookie-notice' ) . '</p>
 					</div>
 				</fieldset>';
@@ -329,7 +357,7 @@ class Cookie_Notice_Settings {
 						<span class="cn_compliance_status">' . __( 'Proof-of-Consent', 'cookie-notice' ) . ': <label class="cn-pending">' . __( 'Pending', 'cookie-notice' ) . '</label></span>
 					</div>
 					<div id="cn_app_actions">
-						<a href="' . $this->app_login_url . '" class="button button-primary button-hero" target="_blank">' . __( 'Log in & configure', 'cookie-notice' ) . '</a>
+						<a href="' . $this->app_login_url . '" class="button button-primary button-hero cn-button" target="_blank">' . __( 'Log in & configure', 'cookie-notice' ) . '</a>
 						<p class="description">' . __( 'Log into the Cookie Compliance&trade; web application and complete the setup process.', 'cookie-notice' ) . '</p>
 					</div>
 				</fieldset>';
@@ -344,7 +372,7 @@ class Cookie_Notice_Settings {
 						<span class="cn_compliance_status">' . __( 'Proof-of-Consent', 'cookie-notice' ) . ': <label class="cn-inactive">' . __( 'Inactive', 'cookie-notice' ) . '</label></span>
 					</div>
 					<div id="cn_app_actions">
-						<a href="' . admin_url( 'index.php?page=cookie-notice' ) . '" class="button button-primary button-hero cn-run-welcome">' . __( 'Add Compliance features', 'cookie-notice' ) . '</a>
+						<a href="' . admin_url( 'index.php?page=cookie-notice' ) . '" class="button button-primary button-hero cn-button cn-run-welcome">' . __( 'Add Compliance features', 'cookie-notice' ) . '</a>
 						<p class="description">' . __( 'Sign up to Cookie Compliance&trade; and add GDPR, CCPA and other international data privacy laws compliance features.', 'cookie-notice' ) . '</p>
 					</div>
 				</fieldset>';

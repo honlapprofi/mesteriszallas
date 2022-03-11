@@ -148,7 +148,7 @@ msgstr "A beállítások előkészítése befejeződött."
 msgid "%s is not the latest version. You must update the plugin before you can use it. "
 msgstr "%s nem a legutóbbi verzió. A használat előtt a bővítményt szükséges frissíteni."
 
-#: lib/model/import/class-ai1wm-import-confirm.php:65
+#: lib/model/import/class-ai1wm-import-confirm.php:91
 msgid "Your backup is from a PHP 5 but the site that you are importing to is PHP 7. This could cause the import to fail. Technical details: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 msgstr "A mentés a PHP5-ös verziójával készült, de a PHP7-es verziójú weboldalra kívánjuk exportálni, ami hibákat idézhet elő. Technikai tudnivalók: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 
@@ -238,7 +238,7 @@ msgstr "Az archív fájl sérült. Kövesse <a href=\"https://help.servmask.com/
 msgid "Your PHP is 32-bit. In order to import your file, please change your PHP version to 64-bit and try again. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "A PHP 32 bites. A fájl importálásához módosítsa a PHP verzióját 64 bitesre, és próbálja újra. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Műszaki információk</a>"
 
-#: lib/model/import/class-ai1wm-import-confirm.php:71
+#: lib/model/import/class-ai1wm-import-confirm.php:96
 msgid "<i class=\"ai1wm-import-info\">Your backup is from a PHP 5 but the site that you are importing to is PHP 7. This could cause the import to fail. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Technical details</a></i>"
 msgstr "<i class=\"ai1wm-import-info\">A biztonsági mentés egy PHP 5-ről származik, de az importált webhely a PHP 7. Ez az importálás sikertelenségét okozhatja. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Műszaki információk</a></i>"
 
@@ -841,8 +841,7 @@ msgstr "Segítségre van szükségem a bővítménnyel kapcsolatban"
 msgid "I have ideas to improve this plugin"
 msgstr "Van fejlesztési ötletem a bővítménnyel kapcsolatban"
 
-#: lib/view/backups/index.php:81 lib/view/export/index.php:73
-#: lib/view/import/index.php:69
+#: lib/view/common/sidebar-right.php:39
 msgid "Leave Feedback"
 msgstr "Visszajelzés"
 

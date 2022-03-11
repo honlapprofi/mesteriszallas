@@ -72,10 +72,15 @@ class CheckoutShortcode extends AbstractShortcode {
 	 * @return string
 	 */
 	protected function detectStep() {
-
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-		$step = ( isset( $_REQUEST['mphb_checkout_step'] ) ? mphb_clean( wp_unslash( $_REQUEST['mphb_checkout_step'] )) : self::STEP_CHECKOUT );
-
+		if( isset( $_REQUEST['mphb_checkout_step'] ) ) {
+			$step = mphb_clean( wp_unslash( $_REQUEST['mphb_checkout_step'] ) );
+		} else if( mphb_get_cookie( 'mphb_checkout_step' ) ) {
+			$step = mphb_clean( wp_unslash( mphb_get_cookie( 'mphb_checkout_step' ) ) );
+		} else {
+			$step = self::STEP_CHECKOUT;
+		}
+		
 		if ( $step === self::STEP_BOOKING && MPHB()->getSession()->get( 'mphb_checkout_step' ) === self::STEP_COMPLETE ) {
 
 			// Is it a rebooking?
@@ -102,6 +107,14 @@ class CheckoutShortcode extends AbstractShortcode {
 		$nonce = '';
 
 		if ( $this->currentStep === self::STEP_CHECKOUT ) {
+			
+			// Skip nonce verification for logged in users during checkout. Because nonce fields are different before and after authorization.
+			if( get_current_user_id() ) {
+				
+				$this->isCorrectNonce = true;
+				
+				return $this->isCorrectNonce;
+			}
 
 			$nonceAction = self::NONCE_ACTION_CHECKOUT;
 
@@ -113,14 +126,14 @@ class CheckoutShortcode extends AbstractShortcode {
 
 				$nonce = sanitize_text_field( wp_unslash( $_POST[self::RECOMMENDATION_NONCE_NAME] ));
 			}
-		} else {
-
+		} else if ( $this->currentStep === self::STEP_BOOKING ) {
+			
 			$nonceAction = self::NONCE_ACTION_BOOKING;
-
+	
 			if ( isset( $_POST[ self::BOOKING_CID_NAME ] ) ) {
 				$nonceAction .= '-' . sanitize_text_field( wp_unslash( $_POST[ self::BOOKING_CID_NAME ] ));
 			}
-
+	
 			if ( isset( $_POST[self::NONCE_NAME] ) ) {
 				$nonce = sanitize_text_field( wp_unslash( $_POST[ self::NONCE_NAME ] ));
 			}

@@ -50,7 +50,7 @@
 }
 
 .cpel-switcher--layout-dropdown .cpel-switcher__toggle a i {
-    transition: transform 200ms ease-in-out;
+    transition: transform 0s 200ms;
 }
 
 .cpel-switcher--layout-dropdown .cpel-switcher__toggle.cpel-switcher__toggle--on::after {
@@ -59,6 +59,7 @@
 
 .cpel-switcher--layout-dropdown .cpel-switcher__toggle.cpel-switcher__toggle--on a i {
     transform: rotateX(180deg);
+    transition-delay: 0s;
 }
 
 
@@ -84,14 +85,16 @@
     top: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     min-width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 200ms ease-in-out;
+    transition: max-height 200ms ease-out;
 }
 
 .cpel-switcher--layout-dropdown .cpel-switcher__toggle--on+.cpel-switcher__list {
     max-height: 300px;
+    transition: max-height 400ms ease-in;
 }
 
 .cpel-switcher--layout-dropdown .cpel-switcher__lang {

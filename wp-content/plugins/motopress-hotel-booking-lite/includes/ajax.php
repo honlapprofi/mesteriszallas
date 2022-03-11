@@ -71,6 +71,9 @@ class Ajax {
 	'get_free_accommodations_amount'	 => array(
 		'method' => 'GET',
 		'nopriv' => true
+	),
+	'remove_customer' => array(
+		'method' => 'POST'
 	)
 	);
 
@@ -955,6 +958,26 @@ class Ajax {
 		} else {
 			wp_send_json_error( array( 'message' => __( 'Nothing found. Please try again with different search parameters.', 'motopress-hotel-booking' ) ) );
 		}
+	}
+	
+	public function remove_customer() {
+		if( ! isset( $_POST['itemId'] ) ) {
+			wp_die();
+		}
+		
+		$this->verifyNonce(__FUNCTION__);
+		
+		if( ! current_user_can( \MPHB\UsersAndRoles\CapabilitiesAndRoles::DELETE_CUSTOMER ) ) {
+			wp_die( esc_html__( 'You do not have permission to do this action.', 'motopress-hotel-booking' ) );
+		}
+		
+		$customerId = (int) $_POST['itemId'];
+		
+		$deleted = \MPHB\UsersAndRoles\Customers::delete( $customerId );
+		
+		echo wp_json_encode( $deleted );
+		
+		wp_die();
 	}
 
 }

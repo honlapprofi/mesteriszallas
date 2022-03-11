@@ -3,9 +3,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: Connect Polylang to Elementor\n"
 "POT-Creation-Date: 2021-05-14 10:09+0000\n"
-"PO-Revision-Date: 2022-01-31 17:25+0000\n"
+"PO-Revision-Date: 2022-02-23 17:03+0000\n"
 "Last-Translator: Pacotole <pacotole@crea.me>\n"
-"Language-Team: Spanish (Spain)\n"
+"Language-Team: Español\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,6 +23,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: includes/connect-plugins.php:498
+#, php-format
+msgid "(from %s)"
+msgstr "(desde %s)"
+
 #: includes/finder/polylang-category.php:67
 msgid "All languages of your website"
 msgstr "Todos los idiomas de su web"
@@ -33,10 +38,14 @@ msgid "languages, switcher, polylang, multilingual, flags, countries, country"
 msgstr "idiomas, conmutador, polylang, multilingüe, banderas, países, país"
 
 #. Description of the plugin
+#, fuzzy
+#| msgid ""
+#| "Connect Polylang with Elementor Page Builder. Display templates in the "
+#| "correct language, language switcher widget, widget language visibility "
+#| "settings and language dynamic tags."
 msgid ""
-"Connect Polylang with Elementor Page Builder. Display templates in the "
-"correct language, language switcher widget, widget language visibility "
-"settings and language dynamic tags."
+"Connect Polylang with Elementor. Display templates in the correct language, "
+"language switcher widget, language visibility conditions and dynamic tags."
 msgstr ""
 "Conecta Polylang con Elementor Page Builder. Muestra las plantillas en el "
 "idioma correcto, widget de selección de idioma, ajustes de visibilidad de "
@@ -50,10 +59,6 @@ msgstr "Creame"
 #: includes/dynamic-tags/language-flag.php:30
 msgid "Current Language"
 msgstr "Idioma actual"
-
-#: includes/util/info.php:19
-msgid "David Decker - DECKERWEB"
-msgstr "David Decker - DECKERWEB"
 
 #: includes/widgets/polylang-language-switcher.php:262
 #| msgid "Displays language code"
@@ -81,7 +86,7 @@ msgid "Language URL"
 msgstr "URL de idioma"
 
 #. Title attribute for Elementor My Templates link
-#: includes/admin-extras.php:70
+#: includes/admin-extras.php:63
 msgid "Elementor My Templates"
 msgstr "Elementor Mis Plantillas"
 
@@ -114,12 +119,12 @@ msgstr "Nombre de idioma"
 msgid "Language Visibility"
 msgstr "Visibilidad de idioma"
 
-#: includes/admin-extras.php:71
+#: includes/admin-extras.php:64
 msgctxt "Link title attribute for Elementor My Templates"
 msgid "Templates"
 msgstr "Plantillas"
 
-#: includes/admin-extras.php:58
+#: includes/admin-extras.php:51
 msgctxt "Link title attribute for Polylang settings"
 msgid "Languages"
 msgstr "Idiomas"
@@ -138,7 +143,7 @@ msgid "Polylang Connect for Elementor"
 msgstr "Polylang Connect para Elementor"
 
 #. Title attribute for Polylang settings link
-#: includes/admin-extras.php:57
+#: includes/admin-extras.php:50
 msgid "Polylang Languages Setup"
 msgstr "Configuración de idiomas de Polylang"
 

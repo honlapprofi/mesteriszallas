@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Hotel Booking Lite - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-26 14:08:05+0000\n"
+"PO-Revision-Date: 2022-02-17 12:45:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -174,6 +174,7 @@ msgstr "Vážený/á %1$s %2$s, Vaše rezervace je zrušena!"
 #: templates/emails/customer-cancelled-booking.php:38
 #: templates/emails/customer-confirmation-booking.php:44
 #: templates/emails/customer-pending-booking.php:41
+#: templates/emails/customer-registration.php:26
 msgid "Thank you!"
 msgstr "Děkujeme!"
 
@@ -329,29 +330,29 @@ msgstr "V <a href=\"%s\">nastavení</a> uveďte věk nebo deaktivujte děti."
 msgid "Note is required."
 msgstr "Poznámka je požadována."
 
-#: includes/admin/menu-pages/settings-menu-page.php:510
+#: includes/admin/menu-pages/settings-menu-page.php:541
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr "Změňte jednorázové hosty na loajální zákazníky zasíláním automatických marketingových kampaní s integrací Hotel Booking & Mailchimp."
 
-#: includes/admin/menu-pages/settings-menu-page.php:507
+#: includes/admin/menu-pages/settings-menu-page.php:538
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr "Změňte jednorázové hosty na loajální zákazníky zasíláním automatických marketingových kampaní s integrací <a>Hotel Booking & Mailchimp</a>."
 
-#: includes/ajax.php:477
-#: includes/shortcodes/checkout-shortcode/step-booking.php:235
+#: includes/ajax.php:480
+#: includes/shortcodes/checkout-shortcode/step-booking.php:245
 #: includes/utils/parse-utils.php:265
 msgid "The total number of guests is not valid."
 msgstr "Celkový počet hostů není platný."
 
-#: includes/admin/menu-pages/settings-menu-page.php:548
+#: includes/admin/menu-pages/settings-menu-page.php:581
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr "Odesílejte automatická e-mailová oznámení, jako jsou pokyny k vyzvednutí klíčů, pravidla domu, před a po příjezdu / odjezdu pomocí <a> Hotel Booking Notifier </a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:551
+#: includes/admin/menu-pages/settings-menu-page.php:584
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr "Odesílejte automatická e-mailová oznámení, jako jsou pokyny k vyzvednutí klíčů, pravidla domu před/po příjezdu/odjezdu pomocí oznámení o rezervaci hotelu."
 
-#: includes/wizard.php:160
+#: includes/wizard.php:161
 msgid "Reservation Received"
 msgstr "Rezervace obdržena"
 
@@ -371,15 +372,15 @@ msgstr "Aktualizovat stránky"
 msgid "Use this shortcode on Booking Confirmed and Reservation Received pages"
 msgstr "Použijte tento odkaz (shortcode) pro stránky  \"Rezervace potvrzena\" a \"Rezervace přijata\""
 
-#: includes/admin/menu-pages/settings-menu-page.php:712
+#: includes/admin/menu-pages/settings-menu-page.php:745
 msgid "Reservation Received Page"
 msgstr "Stránka Rezervace obdržena"
 
-#: includes/admin/menu-pages/settings-menu-page.php:203
+#: includes/admin/menu-pages/settings-menu-page.php:209
 msgid "Page user will be redirected to once the booking is confirmed via email or by admin."
 msgstr "Jakmile bude rezervace potvrzena e-mailem nebo správcem, bude uživatel stránky přesměrován."
 
-#: includes/admin/menu-pages/settings-menu-page.php:202
+#: includes/admin/menu-pages/settings-menu-page.php:208
 msgid "Booking Confirmed Page"
 msgstr "Stránka Rezervace potvrzena"
 
@@ -413,27 +414,32 @@ msgstr "Proveďte platbu přímo na náš bankovní účet. Jako variabilní sym
 msgid "Direct Bank Transfer"
 msgstr "Přímý bankovní převod"
 
-#: includes/emails/templaters/email-templater.php:258
+#: includes/emails/templaters/email-templater.php:263
 msgid "Payment instructions"
 msgstr "Platební instrukce"
 
-#: includes/emails/templaters/email-templater.php:172
+#: includes/emails/templaters/email-templater.php:177
+#: includes/emails/templaters/email-templater.php:316
 msgid "Customer Postcode"
 msgstr "PSČ zákazníka"
 
-#: includes/emails/templaters/email-templater.php:168
+#: includes/emails/templaters/email-templater.php:173
+#: includes/emails/templaters/email-templater.php:312
 msgid "Customer State/County"
 msgstr "Stát zákazníka"
 
-#: includes/emails/templaters/email-templater.php:164
+#: includes/emails/templaters/email-templater.php:169
+#: includes/emails/templaters/email-templater.php:308
 msgid "Customer City"
 msgstr "Město zákazníka"
 
-#: includes/emails/templaters/email-templater.php:160
+#: includes/emails/templaters/email-templater.php:165
+#: includes/emails/templaters/email-templater.php:304
 msgid "Customer Address"
 msgstr "Adresa zákazníka"
 
-#: includes/emails/templaters/email-templater.php:156
+#: includes/emails/templaters/email-templater.php:161
+#: includes/emails/templaters/email-templater.php:300
 msgid "Customer Country"
 msgstr "Země zákazníka"
 
@@ -441,49 +447,49 @@ msgstr "Země zákazníka"
 msgid "Interval for automatic cleaning of synchronization logs."
 msgstr "Interval pro automatické čištění a synchronizaci logů."
 
-#: includes/admin/menu-pages/settings-menu-page.php:442
+#: includes/admin/menu-pages/settings-menu-page.php:472
 msgid "Never Delete"
 msgstr "Nikdy nemazat"
 
-#: includes/admin/menu-pages/settings-menu-page.php:441
+#: includes/admin/menu-pages/settings-menu-page.php:471
 msgid "Half a Year"
 msgstr "Půl roku"
 
-#: includes/admin/menu-pages/settings-menu-page.php:438
+#: includes/admin/menu-pages/settings-menu-page.php:468
 msgid "Week"
 msgstr "Týden"
 
-#: includes/admin/menu-pages/settings-menu-page.php:437
+#: includes/admin/menu-pages/settings-menu-page.php:467
 msgid "Day"
 msgstr "Den"
 
-#: includes/admin/menu-pages/settings-menu-page.php:435
+#: includes/admin/menu-pages/settings-menu-page.php:465
 msgid "Automatically delete sync logs older than"
 msgstr "Automaticky mazat synchronizované logy starší než"
 
-#: includes/admin/menu-pages/settings-menu-page.php:425
+#: includes/admin/menu-pages/settings-menu-page.php:455
 #: includes/crons/cron-manager.php:80
 msgid "Half an Hour"
 msgstr "Půl hodiny"
 
-#: includes/admin/menu-pages/settings-menu-page.php:424
+#: includes/admin/menu-pages/settings-menu-page.php:454
 #: includes/crons/cron-manager.php:75
 msgid "Quarter an Hour"
 msgstr "Čtvrt hodiny"
 
-#: includes/admin/menu-pages/settings-menu-page.php:226
+#: includes/admin/menu-pages/settings-menu-page.php:232
 msgid "Customer information is required when placing admin bookings."
 msgstr "Informace o zákazníkovi je požadována, pokud vkládá rezervaci administrátor."
 
-#: includes/views/shortcodes/checkout-view.php:384
+#: includes/views/shortcodes/checkout-view.php:440
 msgid "time(s)"
 msgstr "čas(y)"
 
-#: plugin.php:926
+#: plugin.php:969
 msgid "Prices start at: %s"
 msgstr "Cena začíná na: %s"
 
-#: includes/views/shortcodes/checkout-view.php:363
+#: includes/views/shortcodes/checkout-view.php:419
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr "Hosta/hostů"
@@ -505,12 +511,12 @@ msgstr "%s je ve vybraném období dostupné."
 msgid "Reserve %1$s of %2$s available accommodations."
 msgstr "Rezervujte si %1$s z %2$s dostupného ubytování."
 
-#: includes/views/shortcodes/checkout-view.php:435
+#: includes/views/shortcodes/checkout-view.php:491
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr "Četl/a jsem a souhlasím s %s"
 
-#: includes/views/shortcodes/checkout-view.php:432
+#: includes/views/shortcodes/checkout-view.php:488
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr "Všeobecné obchodní podmínky"
@@ -541,12 +547,12 @@ msgstr "Mezisoučet ubytování"
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:20
+#: includes/views/shortcodes/checkout-view.php:76
 msgid "Apply"
 msgstr "Uplatnit"
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:19
+#: includes/views/shortcodes/checkout-view.php:75
 msgid "Coupon Code:"
 msgstr "Kód kupónu:"
 
@@ -583,20 +589,20 @@ msgstr "#%d %s"
 msgid "Expand"
 msgstr "Rozšířit"
 
-#: includes/views/shortcodes/checkout-view.php:112
+#: includes/views/shortcodes/checkout-view.php:168
 msgid "Accommodation #%d"
 msgstr "Ubytování #%d"
 
-#: includes/views/shortcodes/checkout-view.php:589
+#: includes/views/shortcodes/checkout-view.php:684
 msgid "Payment Method"
 msgstr "Platební metoda"
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:508
+#: includes/views/shortcodes/checkout-view.php:584
 msgid "Country of residence"
 msgstr "Země trvalého pobytu"
 
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:529
 msgid "Your Information"
 msgstr "Vaše informace"
 
@@ -612,17 +618,17 @@ msgstr "Sazba:"
 msgid "Accommodation:"
 msgstr "Ubytování:"
 
-#: includes/views/shortcodes/checkout-view.php:748
+#: includes/views/shortcodes/checkout-view.php:843
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "do"
 
-#: includes/views/shortcodes/checkout-view.php:725
+#: includes/views/shortcodes/checkout-view.php:820
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr "od"
 
-#: includes/ajax.php:937 template-functions.php:78
+#: includes/ajax.php:940 template-functions.php:78
 msgid "Based on your search parameters"
 msgstr "Na základě vašich parametrů vyhledávání"
 
@@ -685,23 +691,23 @@ msgstr "Datumy:"
 msgid "Rate: %s"
 msgstr "Hodnocení: %s"
 
-#: includes/views/shortcodes/checkout-view.php:594
+#: includes/views/shortcodes/checkout-view.php:689
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "Omlouváme se, ale zdá se, že nejsou k dispozici žádné způsoby platby."
 
-#: includes/views/shortcodes/checkout-view.php:699
+#: includes/views/shortcodes/checkout-view.php:794
 msgid "Deposit:"
 msgstr "Záloha:"
 
-#: includes/views/shortcodes/checkout-view.php:352
+#: includes/views/shortcodes/checkout-view.php:408
 msgid "for "
 msgstr "pro"
 
-#: includes/views/shortcodes/checkout-view.php:323
+#: includes/views/shortcodes/checkout-view.php:379
 msgid "Choose Additional Services"
 msgstr "Vyberte si doplňkové služby:"
 
-#: includes/views/shortcodes/checkout-view.php:256
+#: includes/views/shortcodes/checkout-view.php:312
 msgid "Choose Rate"
 msgstr "Ohodnoťte"
 
@@ -709,16 +715,16 @@ msgstr "Ohodnoťte"
 msgid "Guest:"
 msgstr "Hosté:"
 
-#: includes/emails/templaters/email-templater.php:203
+#: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:94
+#: includes/views/shortcodes/checkout-view.php:150
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "Detaily rezervace"
 
-#: includes/ajax.php:823 includes/bundles/customer-bundle.php:164
+#: includes/ajax.php:826 includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:572
+#: includes/views/shortcodes/checkout-view.php:649
 msgid "Notes"
 msgstr "Poznámky"
 
@@ -929,31 +935,31 @@ msgstr "Zobrazit importované rezervace."
 msgid "Imported booking."
 msgstr "Importované rezervace."
 
-#: includes/admin/menu-pages/settings-menu-page.php:858
+#: includes/admin/menu-pages/settings-menu-page.php:891
 msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr "<strong> Poznámka: </strong> Způsoby platby se objeví na stránce pokladny pouze v případě, že je v nabídce Ubytování> Nastavení> Obecné> Režim potvrzení aktivováno Potvrzení platby."
 
-#: includes/admin/menu-pages/settings-menu-page.php:753
+#: includes/admin/menu-pages/settings-menu-page.php:786
 msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr "Nainstalujte <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> pro správu nastavení."
 
-#: includes/admin/menu-pages/settings-menu-page.php:662
+#: includes/admin/menu-pages/settings-menu-page.php:695
 msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr "Odkaz na <a href=\"%s\" target=\"_blank\">žádost o platbu zůstatku</a> můžete také poslat svým hostům."
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:691
 msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr "Potřebujete více platebních bran? Použijte naše rozšíření pro Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:395
+#: includes/admin/menu-pages/settings-menu-page.php:425
 msgid "Do not export imported bookings."
 msgstr "Neexportujte importované rezervace."
 
-#: includes/admin/menu-pages/settings-menu-page.php:390
+#: includes/admin/menu-pages/settings-menu-page.php:420
 msgid "Export admin blocks."
 msgstr "Exportovat bloky administrátora"
 
-#: includes/admin/menu-pages/settings-menu-page.php:385
+#: includes/admin/menu-pages/settings-menu-page.php:415
 msgid "Calendars Synchronization"
 msgstr "Synchronizace kalendáře"
 
@@ -990,15 +996,15 @@ msgstr[0] "x %d"
 msgstr[1] "x %d krát"
 msgstr[2] "x %d krát"
 
-#: includes/post-types/service-cpt.php:185
+#: includes/post-types/service-cpt.php:187
 msgid "Empty means unlimited"
 msgstr "Prázdný znamená neomezeně"
 
-#: includes/post-types/service-cpt.php:175
+#: includes/post-types/service-cpt.php:177
 msgid "Maximum"
 msgstr "Maximum"
 
-#: includes/post-types/service-cpt.php:163
+#: includes/post-types/service-cpt.php:165
 msgid "Minimum"
 msgstr "Minimum"
 
@@ -1030,12 +1036,12 @@ msgstr "Celkem: %s."
 msgid "Booking imported with UID %s."
 msgstr "Rezervace importována s UID %s."
 
-#: includes/ajax.php:730
+#: includes/ajax.php:733
 msgid "The booking not found."
 msgstr "Rezervace nenalezena."
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:43
-#: includes/post-types/service-cpt.php:151
+#: includes/post-types/service-cpt.php:153
 msgid "Guest Choice"
 msgstr "Výběr hosta"
 
@@ -1043,27 +1049,27 @@ msgstr "Výběr hosta"
 msgid "All accommodation types"
 msgstr "Všechny typy ubytování"
 
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:788
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr "Nainstalujte si doplňky pro Hotel Booking abyste mohli spravovat nastavení."
 
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:750
+#: includes/admin/menu-pages/settings-menu-page.php:783
 msgid "Extensions"
 msgstr "Rozšíření"
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:486
+#: includes/admin/menu-pages/settings-menu-page.php:491
 msgid "Enable block editor for \"%s\"."
 msgstr "Povolit blokový editor pro \"%s\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:451
+#: includes/admin/menu-pages/settings-menu-page.php:481
 msgid "Block Editor"
 msgstr "Blokový editor"
 
-#: includes/admin/menu-pages/settings-menu-page.php:238
+#: includes/admin/menu-pages/settings-menu-page.php:244
 msgid "Price breakdown unfolded by default."
 msgstr "Rozpis cen se ve výchozím nastavení rozvine."
 
@@ -1092,11 +1098,13 @@ msgstr "Hlavní obrázek"
 msgid "Enable \"%s\""
 msgstr "Povolit \"%s\""
 
-#: includes/ajax.php:792 includes/bundles/customer-bundle.php:146
+#: includes/admin/menu-pages/customers-menu-page.php:225 includes/ajax.php:795
+#: includes/bundles/customer-bundle.php:146
 #: includes/bundles/export-bundle.php:36
 #: includes/post-types/booking-cpt.php:120
 #: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:550
+#: includes/views/shortcodes/checkout-view.php:627
+#: templates/account/account-details.php:64
 msgid "State / County"
 msgstr "Stát / Země"
 
@@ -1112,19 +1120,19 @@ msgctxt "Not selected value in the search form."
 msgid "&mdash;"
 msgstr "&mdash;"
 
-#: includes/wizard.php:170
+#: includes/wizard.php:171
 msgid "Unfortunately, your transaction cannot be completed at this time. Please try again or contact us."
 msgstr "Vaše transakce bohužel v tuto chvíli nelze dokončit. Zkuste to prosím znovu nebo nás kontaktujte."
 
-#: includes/wizard.php:169
+#: includes/wizard.php:170
 msgid "Transaction Failed"
 msgstr "Transakce selhala"
 
-#: includes/wizard.php:133
+#: includes/wizard.php:134
 msgid "Your reservation is canceled."
 msgstr "Vaše rezervace je zrušena."
 
-#: includes/wizard.php:132
+#: includes/wizard.php:133
 msgid "Booking Canceled"
 msgstr "Rezervace zrušena"
 
@@ -1176,6 +1184,7 @@ msgstr "ID termínu"
 msgid "Name (numeric)"
 msgstr "Jméno (číselné)"
 
+#: includes/admin/customers-list-table.php:194
 #: includes/post-types/attributes-cpt.php:292
 msgid "Name"
 msgstr "Jméno"
@@ -1817,32 +1826,32 @@ msgstr "Čárkami oddělené atributy atributů."
 msgid "Custom attributes for advanced search."
 msgstr "Vlastní atributy pro pokročilé vyhledávání."
 
-#: includes/admin/menu-pages/settings-menu-page.php:329
+#: includes/admin/menu-pages/settings-menu-page.php:359
 msgid "Hide \"adults\" and \"children\" fields within search availability forms."
 msgstr "Skrýt pole „dospělí“ a „děti“ ve formulářích dostupnosti vyhledávání."
 
-#: includes/admin/menu-pages/settings-menu-page.php:323
+#: includes/admin/menu-pages/settings-menu-page.php:353
 msgid "Guest Management"
 msgstr "Správa hostů"
 
-#: includes/admin/menu-pages/settings-menu-page.php:320
+#: includes/admin/menu-pages/settings-menu-page.php:350
 msgid "Disable \"adults\" and \"children\" options for my website."
 msgstr "Zakažte možnosti „dospělí“ a „děti“ pro můj web."
 
-#: includes/admin/menu-pages/settings-menu-page.php:319
+#: includes/admin/menu-pages/settings-menu-page.php:349
 msgid "Disable \"children\" option for my website (hide \"children\" field and use Guests label instead)."
 msgstr "Zakažte u mého webu možnost „děti“ (skrýt pole „děti“ a místo toho použít název Hosté)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:318
+#: includes/admin/menu-pages/settings-menu-page.php:348
 msgid "Enable \"adults\" and \"children\" options for my website (default)."
 msgstr "Povolit pro můj web možnosti „dospělí“ a „děti“ (výchozí)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:232
+#: includes/admin/menu-pages/settings-menu-page.php:238
 msgid "Default Country on Checkout"
 msgstr "Výchozí země při odjezdu"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
-#: includes/entities/service.php:213 includes/post-types/service-cpt.php:199
+#: includes/entities/service.php:213 includes/post-types/service-cpt.php:201
 msgid "Per Guest"
 msgstr "Za hosta"
 
@@ -1887,8 +1896,6 @@ msgstr "Nastavení termínů"
 
 #. translators: Terms are variations for Attributes and bear no relation to the
 #. Terms and Conditions Page.
-#. translators: Terms are variations for Attributes and bear no relation to the
-#. Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:68
 #: includes/admin/manage-cpt-pages/attributes-manage-cpt-page.php:89
 msgid "Please add attribute in default language to configure terms."
@@ -1912,11 +1919,11 @@ msgstr "Přidat délku pobytu"
 msgid "<code>Please select Accommodation Type and click Create Rate button to continue.</code>"
 msgstr "<code> Vyberte typ ubytování a pokračujte kliknutím na tlačítko Vytvořit cenu. </code>"
 
-#: includes/admin/menu-pages/settings-menu-page.php:158
+#: includes/admin/menu-pages/settings-menu-page.php:164
 msgid "This text will appear on the checkout page."
 msgstr "Tento text se objeví na stránce pro odjezd."
 
-#: includes/admin/menu-pages/settings-menu-page.php:157
+#: includes/admin/menu-pages/settings-menu-page.php:163
 msgid "Text on Checkout"
 msgstr "Text pro odjezd"
 
@@ -1952,11 +1959,11 @@ msgstr "Žádné sazby v koši"
 msgid "No rates found"
 msgstr "Sazby nenalezeny"
 
-#: includes/admin/menu-pages/settings-menu-page.php:297
+#: includes/admin/menu-pages/settings-menu-page.php:327
 msgid "Skip search results page and enable direct booking from accommodation pages."
 msgstr "Přeskočit stránku s výsledky vyhledávání a povolit přímou rezervaci ze stránek ubytování."
 
-#: includes/admin/menu-pages/settings-menu-page.php:296
+#: includes/admin/menu-pages/settings-menu-page.php:326
 msgid "Skip Search Results"
 msgstr "Přeskočit výsledky vyhledávání"
 
@@ -2059,11 +2066,11 @@ msgstr "ID štítků, které se zobrazí."
 msgid "IDs of categories that will be shown."
 msgstr "ID kategorií, které budou zobrazeny."
 
-#: includes/admin/menu-pages/settings-menu-page.php:291
+#: includes/admin/menu-pages/settings-menu-page.php:321
 msgid "Optional description of the \"Children\" field."
 msgstr "Volitelný popis pole „Děti“."
 
-#: includes/admin/menu-pages/settings-menu-page.php:290
+#: includes/admin/menu-pages/settings-menu-page.php:320
 msgid "Age of Child"
 msgstr "Věk dítěte"
 
@@ -2183,35 +2190,35 @@ msgstr "Daně a poplatky"
 msgid "Taxes and fees saved."
 msgstr "Daně a poplatky byly uloženy"
 
-#: includes/admin/menu-pages/settings-menu-page.php:427
+#: includes/admin/menu-pages/settings-menu-page.php:457
 msgid "Twice Daily"
 msgstr "Dvakrát denně"
 
-#: includes/admin/menu-pages/settings-menu-page.php:428
+#: includes/admin/menu-pages/settings-menu-page.php:458
 msgid "Once Daily"
 msgstr "Jednou denně"
 
-#: includes/admin/menu-pages/settings-menu-page.php:426
+#: includes/admin/menu-pages/settings-menu-page.php:456
 msgid "Once Hourly"
 msgstr "Jednou za hodinu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:422
+#: includes/admin/menu-pages/settings-menu-page.php:452
 msgid "Interval"
 msgstr "Interval"
 
-#: includes/admin/menu-pages/settings-menu-page.php:415
+#: includes/admin/menu-pages/settings-menu-page.php:445
 msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr "Synchronizujte kalendáře v tento čas (UTC) nebo začněte v tuto dobu každý interval níže."
 
-#: includes/admin/menu-pages/settings-menu-page.php:414
+#: includes/admin/menu-pages/settings-menu-page.php:444
 msgid "Clock"
 msgstr "Hodiny"
 
-#: includes/admin/menu-pages/settings-menu-page.php:409
+#: includes/admin/menu-pages/settings-menu-page.php:439
 msgid "Enable automatic external calendars synchronization"
 msgstr "Povolit automatickou synchronizaci externích kalendářů"
 
-#: includes/admin/menu-pages/settings-menu-page.php:402
+#: includes/admin/menu-pages/settings-menu-page.php:432
 msgid "Calendars Synchronization Scheduler"
 msgstr "Plánovač synchronizace kalendářů"
 
@@ -2275,6 +2282,7 @@ msgstr "Přidat pravidlo"
 #: includes/admin/menu-pages/booking-rules-menu-page.php:71
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:55
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:118
+#: templates/account/account-details.php:94
 msgid "Save Changes"
 msgstr "Uložit změny"
 
@@ -2350,7 +2358,7 @@ msgstr "Příslušenství"
 msgid "Done"
 msgstr "Hotovo"
 
-#: includes/emails/abstract-email.php:503
+#: includes/emails/abstract-email.php:542
 msgid "\"%s\" email will not be sent: there is no customer email in the booking."
 msgstr "\"%s\" e-mail nebude odeslán: klientův email nebyl uveden."
 
@@ -2375,7 +2383,7 @@ msgid "Sync, Import and Export Calendars"
 msgstr "Synchronizace, import a export kalendářů"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:41
-#: includes/entities/service.php:203 includes/post-types/service-cpt.php:150
+#: includes/entities/service.php:203 includes/post-types/service-cpt.php:152
 msgid "Per Day"
 msgstr "Denně"
 
@@ -2456,7 +2464,7 @@ msgstr "Datum vypršení platnosti"
 msgid "Coupon Information"
 msgstr "Informace o kupónu"
 
-#: includes/ajax.php:810 includes/bundles/export-bundle.php:40
+#: includes/ajax.php:813 includes/bundles/export-bundle.php:40
 #: includes/post-types/booking-cpt.php:145
 #: includes/post-types/coupon-cpt.php:124
 msgid "Coupon"
@@ -2474,15 +2482,15 @@ msgstr "Omlouváme se, kupón nelze uplatnit na rezervační obsah."
 msgid "This coupon has expired."
 msgstr "Kupón již vypršel"
 
-#: includes/ajax.php:665 includes/entities/abstract-coupon.php:205
+#: includes/ajax.php:668 includes/entities/abstract-coupon.php:205
 msgid "Coupon is not valid."
 msgstr "Kupón je neplatný"
 
-#: includes/ajax.php:659
+#: includes/ajax.php:662
 msgid "Coupon applied successfully."
 msgstr "Kupón byl úspěšně uplatněn."
 
-#: includes/admin/menu-pages/settings-menu-page.php:152
+#: includes/admin/menu-pages/settings-menu-page.php:158
 msgid "Enable the use of coupons."
 msgstr "Povolit použití kupónů."
 
@@ -2500,19 +2508,19 @@ msgstr "Vaše databáze se aktualizuje na pozadí."
 
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
-#: includes/views/shortcodes/checkout-view.php:222
+#: includes/views/shortcodes/checkout-view.php:278
 msgid "Full Guest Name"
 msgstr "Úplné jméno návštěvníka"
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:184
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:204
 msgid "There are no rates for requested dates."
 msgstr "K dispozici nejsou žádné ceny za požadovaný termín."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:152
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:172
 msgid "Accommodation count is not valid."
 msgstr "Počet ubytování není správný."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:446
+#: includes/shortcodes/checkout-shortcode/step-booking.php:456
 msgid "Payment method is not valid."
 msgstr "Tento způsob platby není možné využít."
 
@@ -2620,17 +2628,21 @@ msgstr "Tokenizace se nepodařila: %s"
 msgid "Reserved Accommodation"
 msgstr "Rezervované ubytování"
 
-#: includes/ajax.php:784 includes/bundles/customer-bundle.php:128
+#: includes/admin/menu-pages/customers-menu-page.php:213 includes/ajax.php:787
+#: includes/bundles/customer-bundle.php:128
 #: includes/bundles/export-bundle.php:34
 #: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:528
+#: includes/views/shortcodes/checkout-view.php:605
+#: templates/account/account-details.php:42
 msgid "Address"
 msgstr "Adresa"
 
-#: includes/ajax.php:796 includes/bundles/customer-bundle.php:155
+#: includes/admin/menu-pages/customers-menu-page.php:262 includes/ajax.php:799
+#: includes/bundles/customer-bundle.php:155
 #: includes/bundles/export-bundle.php:37
 #: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:561
+#: includes/views/shortcodes/checkout-view.php:638
+#: templates/account/account-details.php:72
 msgid "Postcode"
 msgstr "PSČ"
 
@@ -2648,11 +2660,11 @@ msgstr "Chyba"
 msgid "Sequential Number of Accommodation"
 msgstr "Sekvenční počet ubytování"
 
-#: includes/emails/templaters/email-templater.php:233
+#: includes/emails/templaters/email-templater.php:238
 msgid "Cancellation Details (if enabled)"
 msgstr "Podrobnosti o zrušení (pokud je povoleno)"
 
-#: includes/emails/templaters/email-templater.php:181
+#: includes/emails/templaters/email-templater.php:186
 msgid "Reserved Accommodations Details"
 msgstr "Podrobnosti o rezervovaných ubytováních"
 
@@ -2661,15 +2673,15 @@ msgstr "Podrobnosti o rezervovaných ubytováních"
 msgid "Deprecated."
 msgstr "Zastaralé. "
 
-#: includes/emails/abstract-email.php:544
+#: includes/emails/abstract-email.php:583
 msgid "Deprecated tags in template of %s"
 msgstr "Zastaralé tagy v šabloně %s"
 
-#: includes/emails/abstract-email.php:541
+#: includes/emails/abstract-email.php:580
 msgid "Deprecated tags in subject of %s"
 msgstr "Zastaralé tagy v předmětu %s"
 
-#: includes/emails/abstract-email.php:538
+#: includes/emails/abstract-email.php:577
 msgid "Deprecated tags in header of %s"
 msgstr "Zastaralé tagy v záhlaví %s"
 
@@ -2923,51 +2935,51 @@ msgstr "Afghánistán"
 msgid "Count per page"
 msgstr "Počet na stránku"
 
-#: includes/admin/menu-pages/settings-menu-page.php:599
+#: includes/admin/menu-pages/settings-menu-page.php:632
 msgid "Used for %reserved_rooms_details% tag."
 msgstr "Používá se pro tag %reserved_rooms_details%."
 
-#: includes/admin/menu-pages/settings-menu-page.php:598
+#: includes/admin/menu-pages/settings-menu-page.php:631
 msgid "Reserved Accommodation Details Template"
 msgstr "Šablona podrobnosti o rezervovaném pokoji"
 
-#: includes/admin/menu-pages/settings-menu-page.php:526
+#: includes/admin/menu-pages/settings-menu-page.php:557
 msgid "Used for %cancellation_details% tag."
 msgstr "Používá se pro tag %cancellation_details%."
 
-#: includes/admin/menu-pages/settings-menu-page.php:525
+#: includes/admin/menu-pages/settings-menu-page.php:556
 msgid "Cancellation Details Template"
 msgstr "Šablona podrobnosti o zrušení rezervace"
 
-#: includes/admin/menu-pages/settings-menu-page.php:354
+#: includes/admin/menu-pages/settings-menu-page.php:384
 msgid "Select theme for an availability calendar."
 msgstr "Vybrat si vzhled kalendáře dostupnosti."
 
-#: includes/admin/menu-pages/settings-menu-page.php:353
+#: includes/admin/menu-pages/settings-menu-page.php:383
 msgid "Calendar Theme"
 msgstr "Vzhled kalendáře"
 
-#: includes/admin/menu-pages/settings-menu-page.php:347
+#: includes/admin/menu-pages/settings-menu-page.php:377
 msgid "Display gallery images of accommodation page in lightbox."
 msgstr "Zobrazit galerii obrázků stránek ubytování v lightboxu."
 
-#: includes/admin/menu-pages/settings-menu-page.php:342
+#: includes/admin/menu-pages/settings-menu-page.php:372
 msgid "Display Options"
 msgstr "Zobrazit možnosti"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Search Options"
 msgstr "Možnosti vyhledávání"
 
-#: includes/admin/menu-pages/settings-menu-page.php:221
+#: includes/admin/menu-pages/settings-menu-page.php:227
 msgid "Full address fields are required for reservation."
 msgstr "Kompletní pole s adresou jsou vyžadovány pro rezervaci."
 
-#: includes/admin/menu-pages/settings-menu-page.php:216
+#: includes/admin/menu-pages/settings-menu-page.php:222
 msgid "Country of residence field is required for reservation."
 msgstr "Pole země trvalého pobytu je vyžadováno pro rezervaci."
 
-#: includes/admin/menu-pages/settings-menu-page.php:146
+#: includes/admin/menu-pages/settings-menu-page.php:152
 msgid "Enable search form to recommend the best set of accommodations according to a number of guests."
 msgstr "Aktivujte formulář vyhledávání, pokud chcete doporučit nejlepší nabídky ubytování podle počtu hostů."
 
@@ -2996,7 +3008,7 @@ msgid "Product ID is not valid"
 msgstr "ID produktu není platné"
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:20
-#: includes/ajax.php:757 includes/post-types/reserved-room-cpt.php:22
+#: includes/ajax.php:760 includes/post-types/reserved-room-cpt.php:22
 msgid "Reserved Accommodations"
 msgstr "Rezervované ubytování"
 
@@ -3005,8 +3017,8 @@ msgstr "Rezervované ubytování"
 msgid "Braintree"
 msgstr "Braintree"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:559
-#: includes/admin/menu-pages/shortcodes-menu-page.php:581
+#: includes/admin/menu-pages/shortcodes-menu-page.php:575
+#: includes/admin/menu-pages/shortcodes-menu-page.php:597
 msgid "Deprecated since %s"
 msgstr "Zastaralé od %s"
 
@@ -3022,23 +3034,23 @@ msgstr[2] "Dokončeno <span class=\"count\">(%s)</span>"
 msgid "Manual Payment"
 msgstr "Ruční platba"
 
-#: includes/emails/templaters/email-templater.php:254
+#: includes/emails/templaters/email-templater.php:259
 msgid "The method of payment"
 msgstr "Platební metoda"
 
-#: includes/emails/templaters/email-templater.php:250
+#: includes/emails/templaters/email-templater.php:255
 msgid "The unique ID of payment"
 msgstr "Unikátní ID platby"
 
-#: includes/emails/templaters/email-templater.php:246
+#: includes/emails/templaters/email-templater.php:251
 msgid "The total price of payment"
 msgstr "Celková částka platby"
 
-#: includes/admin/menu-pages/settings-menu-page.php:142
+#: includes/admin/menu-pages/settings-menu-page.php:148
 msgid "Lowest price of accommodation for selected number of days if check-in and check-out dates are not set. Example: set 0 to display today's lowest price, set 7 to display the lowest price for the next week."
 msgstr "Nejnižší cena ubytování za počet dnů pokud data příjezdu a odjezdu nejsou zadána. Například: zadejte 0, pokud chcete zobrazit nejnižší dnešní cenu, zadejte 7, pokud chcete zobrazit nejnižší cenu za týden."
 
-#: includes/admin/menu-pages/settings-menu-page.php:138
+#: includes/admin/menu-pages/settings-menu-page.php:144
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:146
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:212
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:273
@@ -3046,11 +3058,12 @@ msgstr "Nejnižší cena ubytování za počet dnů pokud data příjezdu a odje
 msgid "days"
 msgstr "Dnů"
 
-#: includes/admin/menu-pages/settings-menu-page.php:137
+#: includes/admin/menu-pages/settings-menu-page.php:143
 msgid "Show Lowest Price for"
 msgstr "Ukázat nejnižší cenu za"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:27
+#: includes/admin/menu-pages/customers-menu-page.php:281
 msgid "Customer"
 msgstr "Zákazník"
 
@@ -3131,7 +3144,7 @@ msgctxt "Availability"
 msgid "Free"
 msgstr "k dispozici"
 
-#: includes/admin/menu-pages/settings-menu-page.php:583
+#: includes/admin/menu-pages/settings-menu-page.php:616
 msgid "Logo URL"
 msgstr "Adresa URL pro logo"
 
@@ -3149,8 +3162,8 @@ msgstr "Poplatky za ubytování"
 msgid "Calendar"
 msgstr "Kalendář"
 
-#: includes/admin/menu-pages/settings-menu-page.php:929
-#: includes/admin/menu-pages/settings-menu-page.php:933
+#: includes/admin/menu-pages/settings-menu-page.php:962
+#: includes/admin/menu-pages/settings-menu-page.php:966
 #: assets/blocks/blocks.js:54 assets/blocks/blocks.js:186
 #: assets/blocks/blocks.js:293 assets/blocks/blocks.js:543
 #: assets/blocks/blocks.js:1060 assets/blocks/blocks.js:1282
@@ -3158,7 +3171,7 @@ msgstr "Kalendář"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: includes/wizard.php:90
+#: includes/wizard.php:91
 msgid "Search Results"
 msgstr "Výsledky vyhledávání"
 
@@ -3200,7 +3213,7 @@ msgstr "Nadpis:"
 msgid "Search Availability Form"
 msgstr "Formulář pro vyhledání aktuálně dostupných možností ubytování"
 
-#: includes/widgets/search-availability-widget.php:50 includes/wizard.php:84
+#: includes/widgets/search-availability-widget.php:50 includes/wizard.php:85
 msgid "Search Availability"
 msgstr "Vyhledání aktuálně dostupných možností ubytování"
 
@@ -3214,6 +3227,7 @@ msgid "Display Accommodation Types"
 msgstr "Zobrazit Typy ubytování"
 
 #: includes/bundles/export-bundle.php:41 includes/views/booking-view.php:330
+#: templates/account/bookings.php:21 templates/account/bookings.php:74
 msgid "Total"
 msgstr "Celkem"
 
@@ -3253,29 +3267,29 @@ msgstr "Pondělí"
 msgid "Sunday"
 msgstr "Neděle"
 
-#: includes/shortcodes/checkout-shortcode/step.php:101
-#: includes/shortcodes/checkout-shortcode/step.php:110
+#: includes/shortcodes/checkout-shortcode/step.php:116
+#: includes/shortcodes/checkout-shortcode/step.php:125
 msgid "We received your booking request. Once it is confirmed we will notify you via email."
 msgstr "Obdrželi jsme Vaši žádost o rezervaci. Budeme Vás informovat e-mailem, jakmile bude rezervace potvrzena."
 
-#: includes/shortcodes/checkout-shortcode/step.php:92
+#: includes/shortcodes/checkout-shortcode/step.php:107
 msgid "Details of your reservation have just been sent to you in a confirmation email. Please check your inbox to complete booking."
 msgstr "Poslali jsme Vám potvrzující e-mail se všemi detaily Vaší rezervace. Zkontrolujte svou schránku a dokončete rezervaci."
 
-#: includes/shortcodes/checkout-shortcode/step.php:91
-#: includes/shortcodes/checkout-shortcode/step.php:100
-#: includes/shortcodes/checkout-shortcode/step.php:109
+#: includes/shortcodes/checkout-shortcode/step.php:106
+#: includes/shortcodes/checkout-shortcode/step.php:115
+#: includes/shortcodes/checkout-shortcode/step.php:124
 msgid "Reservation submitted"
 msgstr "Rezervace byla odeslána"
 
-#: includes/shortcodes/checkout-shortcode/step.php:81
+#: includes/shortcodes/checkout-shortcode/step.php:96
 msgid "Accommodation is already booked."
 msgstr "Toto ubytování je již rezervováno."
 
-#: includes/admin/menu-pages/settings-menu-page.php:237
-#: includes/emails/templaters/email-templater.php:186
+#: includes/admin/menu-pages/settings-menu-page.php:243
+#: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:397
+#: includes/views/shortcodes/checkout-view.php:453
 msgid "Price Breakdown"
 msgstr "Pokles cen"
 
@@ -3287,7 +3301,7 @@ msgstr "Datum odjezdu:"
 msgid "Check-in Date:"
 msgstr "Datum příjezdu:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:475
+#: includes/shortcodes/checkout-shortcode/step-booking.php:485
 msgid "Unable to create booking. Please try again."
 msgstr "Nelze vytvořit rezervaci. Zkuste to znovu. "
 
@@ -3338,7 +3352,7 @@ msgstr "Není dostupný"
 msgid "Available"
 msgstr "Dostupný"
 
-#: includes/ajax.php:210 includes/script-managers/admin-script-manager.php:88
+#: includes/ajax.php:213 includes/script-managers/admin-script-manager.php:88
 msgid "An error has occurred"
 msgstr "Došlo k chybě"
 
@@ -3350,53 +3364,47 @@ msgstr "Vytvořte galerii, která ukáže tento typ ubytování"
 msgid "Accommodation Type Gallery"
 msgstr "Galerie pro typ ubytování"
 
-#: includes/post-types/service-cpt.php:153
+#: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
 msgstr "Kolikrát bude klient platit. "
 
-#. translators: do not translate
-#: includes/post-types/service-cpt.php:119
-msgctxt "slug"
-msgid "service"
-msgstr "service"
-
-#: includes/post-types/service-cpt.php:102
+#: includes/post-types/service-cpt.php:104
 msgid "Uploaded to this service"
 msgstr "Nahrano do této služby"
 
-#: includes/post-types/service-cpt.php:101
+#: includes/post-types/service-cpt.php:103
 msgid "Insert into service description"
 msgstr "Vložit do popisu služby"
 
-#: includes/post-types/service-cpt.php:99
+#: includes/post-types/service-cpt.php:101
 msgid "No services found in Trash"
 msgstr "V koši nebyla nalezena žádná služba"
 
-#: includes/post-types/service-cpt.php:98
+#: includes/post-types/service-cpt.php:100
 msgid "No services found"
 msgstr "Nebyly nalezeny žádné služby"
 
-#: includes/post-types/service-cpt.php:97
+#: includes/post-types/service-cpt.php:99
 msgid "Search Service"
 msgstr "Vyhledat služby"
 
-#: includes/post-types/service-cpt.php:96
+#: includes/post-types/service-cpt.php:98
 msgid "View Service"
 msgstr "Zobrazit službu"
 
-#: includes/post-types/service-cpt.php:95
+#: includes/post-types/service-cpt.php:97
 msgid "New Service"
 msgstr "Nová služba"
 
-#: includes/post-types/service-cpt.php:94
+#: includes/post-types/service-cpt.php:96
 msgid "Edit Service"
 msgstr "Upravit službu"
 
-#: includes/post-types/service-cpt.php:93
+#: includes/post-types/service-cpt.php:95
 msgid "Add New Service"
 msgstr "Přidat novou službu"
 
-#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:94
 msgctxt "Add New Service"
 msgid "Add New"
 msgstr "Přidat novou"
@@ -3623,7 +3631,7 @@ msgctxt "Add New Accommodation Type"
 msgid "Add Accommodation Type"
 msgstr "Přidat typ ubytování"
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:486
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -4038,25 +4046,26 @@ msgctxt "Add New Booking"
 msgid "Add New Booking"
 msgstr "Přidat novou rezervaci"
 
-#: includes/admin/menus.php:71 includes/admin/menus.php:72
-#: includes/post-types/booking-cpt.php:200
+#: includes/admin/customers-list-table.php:196 includes/admin/menus.php:71
+#: includes/admin/menus.php:72 includes/post-types/booking-cpt.php:200
 #: includes/reports/earnings-report.php:422
+#: includes/shortcodes/account-shortcode.php:217
 msgid "Bookings"
 msgstr "Rezervace"
 
-#: includes/ajax.php:814 includes/post-types/booking-cpt.php:152
+#: includes/ajax.php:817 includes/post-types/booking-cpt.php:152
 msgid "Total Booking Price"
 msgstr "Celková cena za rezervaci"
 
-#: includes/ajax.php:806 includes/post-types/booking-cpt.php:140
+#: includes/ajax.php:809 includes/post-types/booking-cpt.php:140
 msgid "Additional Information"
 msgstr "Dodatečné informace"
 
-#: includes/post-types/service-cpt.php:91 includes/views/booking-view.php:174
+#: includes/post-types/service-cpt.php:93 includes/views/booking-view.php:174
 msgid "Service"
 msgstr "Služba"
 
-#: includes/ajax.php:739 includes/post-types/booking-cpt.php:33
+#: includes/ajax.php:742 includes/post-types/booking-cpt.php:33
 msgid "Booking Information"
 msgstr "Informace o rezervaci"
 
@@ -4823,38 +4832,48 @@ msgstr "Alžírsko"
 msgid "Albania"
 msgstr "Albánie"
 
-#: includes/ajax.php:776 includes/bundles/customer-bundle.php:110
+#: includes/admin/menu-pages/customers-menu-page.php:201 includes/ajax.php:779
+#: includes/bundles/customer-bundle.php:110
 #: includes/bundles/export-bundle.php:32 includes/post-types/booking-cpt.php:95
 #: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:495
+#: includes/views/shortcodes/checkout-view.php:571
+#: templates/account/account-details.php:38
 msgid "Phone"
 msgstr "Telefonní číslo"
 
-#: includes/ajax.php:768 includes/bundles/customer-bundle.php:92
+#: includes/admin/menu-pages/customers-menu-page.php:177 includes/ajax.php:771
+#: includes/bundles/customer-bundle.php:92
 #: includes/bundles/export-bundle.php:30 includes/post-types/booking-cpt.php:83
 #: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:473
+#: includes/views/shortcodes/checkout-view.php:549
+#: templates/account/account-details.php:26
 msgid "Last Name"
 msgstr "Příjmení"
 
-#: includes/ajax.php:764 includes/bundles/customer-bundle.php:83
+#: includes/admin/menu-pages/customers-menu-page.php:165 includes/ajax.php:767
+#: includes/bundles/customer-bundle.php:83
 #: includes/bundles/export-bundle.php:29 includes/post-types/booking-cpt.php:77
 #: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:462
+#: includes/views/shortcodes/checkout-view.php:538
+#: templates/account/account-details.php:22
 msgid "First Name"
 msgstr "Jméno"
 
-#: includes/ajax.php:788 includes/bundles/customer-bundle.php:137
+#: includes/admin/menu-pages/customers-menu-page.php:250 includes/ajax.php:791
+#: includes/bundles/customer-bundle.php:137
 #: includes/bundles/export-bundle.php:35
 #: includes/post-types/booking-cpt.php:114
 #: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:539
+#: includes/views/shortcodes/checkout-view.php:616
+#: templates/account/account-details.php:68
 msgid "City"
 msgstr "Město"
 
-#: includes/ajax.php:780 includes/bundles/export-bundle.php:33
+#: includes/admin/menu-pages/customers-menu-page.php:237 includes/ajax.php:783
+#: includes/bundles/export-bundle.php:33
 #: includes/post-types/booking-cpt.php:102
 #: includes/post-types/payment-cpt.php:256
+#: templates/account/account-details.php:46
 msgid "Country"
 msgstr "Země"
 
@@ -4910,7 +4929,7 @@ msgid "%site_title% - Your booking #%booking_id% is cancelled"
 msgstr "%site_title% - Vaše rezervace #%booking_id je zrušena"
 
 #: includes/emails/booking/admin/confirmed-by-payment-email.php:8
-#: includes/emails/booking/admin/confirmed-email.php:8 includes/wizard.php:123
+#: includes/emails/booking/admin/confirmed-email.php:8 includes/wizard.php:124
 msgid "Booking Confirmed"
 msgstr "Rezervace je potvrzena "
 
@@ -4963,11 +4982,11 @@ msgstr "Případně tagy:"
 msgid "User Cancellation Link"
 msgstr "Zrušení uživatelem Odkaz"
 
-#: includes/emails/templaters/email-templater.php:220
+#: includes/emails/templaters/email-templater.php:225
 msgid "Confirmation Link Expiration Time ( UTC )"
 msgstr "Potvrzovací odkaz je platný do ( UTC )"
 
-#: includes/emails/templaters/email-templater.php:216
+#: includes/emails/templaters/email-templater.php:221
 msgid "Confirmation Link"
 msgstr "Potvrzovací odkaz"
 
@@ -4983,42 +5002,45 @@ msgstr "Typ ubytování kategorie"
 msgid "Accommodation Type Link"
 msgstr "Typ ubytování Odkaz"
 
-#: includes/ajax.php:800 includes/bundles/export-bundle.php:38
-#: includes/emails/templaters/email-templater.php:176
+#: includes/ajax.php:803 includes/bundles/export-bundle.php:38
+#: includes/emails/templaters/email-templater.php:181
 #: includes/post-types/booking-cpt.php:133
 msgid "Customer Note"
 msgstr "Poznámka pro zákazníka"
 
-#: includes/emails/templaters/email-templater.php:152
+#: includes/emails/templaters/email-templater.php:157
+#: includes/emails/templaters/email-templater.php:296
 msgid "Customer Phone"
 msgstr "Telefonní číslo zákazníka"
 
-#: includes/emails/templaters/email-templater.php:144
+#: includes/emails/templaters/email-templater.php:149
+#: includes/emails/templaters/email-templater.php:288
 msgid "Customer Last Name"
 msgstr "Příjmení zákazníka"
 
-#: includes/emails/templaters/email-templater.php:140
+#: includes/emails/templaters/email-templater.php:145
+#: includes/emails/templaters/email-templater.php:284
 msgid "Customer First Name"
 msgstr "Jméno zákazníka"
 
-#: includes/emails/templaters/email-templater.php:119
+#: includes/emails/templaters/email-templater.php:124
 msgid "Booking Total Price"
 msgstr "Celková cena za rezervaci"
 
-#: includes/emails/templaters/email-templater.php:115
+#: includes/emails/templaters/email-templater.php:120
 msgid "Booking Edit Link"
 msgstr "Editace rezervace Odkaz"
 
-#: includes/emails/templaters/email-templater.php:111
+#: includes/emails/templaters/email-templater.php:116
 #: includes/post-types/payment-cpt.php:214
 msgid "Booking ID"
 msgstr "ID rezervace"
 
-#: includes/emails/templaters/email-templater.php:97
+#: includes/emails/templaters/email-templater.php:102
 msgid "Site title (set in Settings > General)"
 msgstr "Nadpis stránky (nastavit v nastaveních > Všeobecná)"
 
-#: includes/emails/abstract-email.php:402
+#: includes/emails/abstract-email.php:423
 msgid "Subject"
 msgstr "Předmět"
 
@@ -5258,7 +5280,7 @@ msgstr "&lt; Předchozí"
 msgid "Period:"
 msgstr "Doba:"
 
-#: includes/views/shortcodes/checkout-view.php:116
+#: includes/views/shortcodes/checkout-view.php:172
 msgid "Accommodation Type:"
 msgstr "Typ ubytování:"
 
@@ -5307,48 +5329,49 @@ msgstr "Zákaznický"
 msgid "Year"
 msgstr "Rok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:440
+#: includes/admin/menu-pages/settings-menu-page.php:470
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "Čtvrt"
 
-#: includes/admin/menu-pages/settings-menu-page.php:439
+#: includes/admin/menu-pages/settings-menu-page.php:469
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "Měsíc"
 
-#: includes/ajax.php:586
+#: includes/ajax.php:589
 msgid "Chosen payment method is not available. Please refresh the page and try one more time."
 msgstr "Zvolený způsob platby není dostupný. Obnovte prosím stránku a zkuste to ještě jednou."
 
-#: includes/ajax.php:374 includes/ajax.php:443
+#: includes/ajax.php:377 includes/ajax.php:446
 msgid "An error has occurred. Please try again later."
 msgstr "Došlo k chybě. Zkuste to prosím znovu později."
 
-#: includes/ajax.php:248 includes/script-managers/public-script-manager.php:220
+#: includes/ajax.php:251 includes/script-managers/public-script-manager.php:220
 msgid "An error has occurred, please try again later."
 msgstr "Došlo k chybě. Zkuste to prosím znovu později."
 
-#: includes/ajax.php:222 includes/ajax.php:262
+#: includes/ajax.php:225 includes/ajax.php:265
 #: includes/csv/bookings/bookings-query.php:77
 msgid "Please complete all required fields and try again."
 msgstr "Vyplňte prosím všechna požadovaná pole a zkuste to znovu."
 
-#: includes/ajax.php:150
+#: includes/ajax.php:153
 msgid "Request does not pass security verification. Please refresh the page and try one more time."
 msgstr "Žádost neprošla bezpečnostní kontrolou. Obnovte prosím stránku a zkuste to ještě jednou."
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:650
+#: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:182
-#: includes/views/shortcodes/checkout-view.php:203
-#: includes/views/shortcodes/checkout-view.php:437
-#: includes/views/shortcodes/checkout-view.php:447
+#: includes/views/shortcodes/checkout-view.php:238
+#: includes/views/shortcodes/checkout-view.php:259
+#: includes/views/shortcodes/checkout-view.php:493
+#: includes/views/shortcodes/checkout-view.php:523
+#: templates/account/account-details.php:34
 msgid "Required"
 msgstr "Požadovaná"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:642
+#: includes/admin/menu-pages/shortcodes-menu-page.php:658
 msgid "Optional."
 msgstr "Volitelné."
 
@@ -5358,30 +5381,30 @@ msgstr "Volitelné."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:288
 #: includes/admin/menu-pages/shortcodes-menu-page.php:327
 #: includes/admin/menu-pages/shortcodes-menu-page.php:336
-#: includes/admin/menu-pages/shortcodes-menu-page.php:601
+#: includes/admin/menu-pages/shortcodes-menu-page.php:617
 msgid "empty string"
 msgstr "prázdné pole"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:596
+#: includes/admin/menu-pages/shortcodes-menu-page.php:612
 msgid "Default:"
 msgstr "Výchozí:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:591
+#: includes/admin/menu-pages/shortcodes-menu-page.php:607
 msgid "Values:"
 msgstr "Hodnoty:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:527
+#: includes/admin/menu-pages/shortcodes-menu-page.php:543
 msgid "Example"
 msgstr "Příklad"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:526
+#: includes/admin/menu-pages/shortcodes-menu-page.php:542
 #: includes/post-types/attributes-cpt.php:298
 msgid "Parameters"
 msgstr "Parametry"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:521
-#: includes/admin/menu-pages/shortcodes-menu-page.php:654
-#: includes/admin/menu-pages/shortcodes-menu-page.php:658
+#: includes/admin/menu-pages/shortcodes-menu-page.php:537
+#: includes/admin/menu-pages/shortcodes-menu-page.php:670
+#: includes/admin/menu-pages/shortcodes-menu-page.php:674
 msgid "Shortcodes"
 msgstr "Krátké kódy"
 
@@ -5593,22 +5616,9 @@ msgstr "Dostupnost Výsledky vyhledávání"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:469
 #: includes/admin/menu-pages/shortcodes-menu-page.php:487
 #: includes/admin/menu-pages/shortcodes-menu-page.php:503
+#: includes/admin/menu-pages/shortcodes-menu-page.php:519
 msgid "whitespace separated css classes"
 msgstr "css třídy oddělené mezerami"
-
-#: includes/admin/menu-pages/shortcodes-menu-page.php:50
-#: includes/admin/menu-pages/shortcodes-menu-page.php:76
-#: includes/admin/menu-pages/shortcodes-menu-page.php:160
-#: includes/admin/menu-pages/shortcodes-menu-page.php:237
-#: includes/admin/menu-pages/shortcodes-menu-page.php:339
-#: includes/admin/menu-pages/shortcodes-menu-page.php:400
-#: includes/admin/menu-pages/shortcodes-menu-page.php:426
-#: includes/admin/menu-pages/shortcodes-menu-page.php:446
-#: includes/admin/menu-pages/shortcodes-menu-page.php:468
-#: includes/admin/menu-pages/shortcodes-menu-page.php:486
-#: includes/admin/menu-pages/shortcodes-menu-page.php:502
-msgid "Custom CSS class for shortcode wrapper"
-msgstr "CSS třída pro obálku krátkého kódu"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:40
 msgid "Check-out date presetted in the search form."
@@ -5642,12 +5652,27 @@ msgstr "Zobrazit vyhledávací pole."
 msgid "Availability Search Form"
 msgstr "Vyhledávací formulář Dostupnost"
 
-#: includes/admin/menu-pages/settings-menu-page.php:826
+#: includes/admin/menu-pages/settings-menu-page.php:859
 msgid "Settings saved."
 msgstr "Nastavení uloženo."
 
-#: includes/admin/menu-pages/settings-menu-page.php:785
-#: includes/admin/menu-pages/settings-menu-page.php:787
+#: includes/admin/menu-pages/shortcodes-menu-page.php:50
+#: includes/admin/menu-pages/shortcodes-menu-page.php:76
+#: includes/admin/menu-pages/shortcodes-menu-page.php:160
+#: includes/admin/menu-pages/shortcodes-menu-page.php:237
+#: includes/admin/menu-pages/shortcodes-menu-page.php:339
+#: includes/admin/menu-pages/shortcodes-menu-page.php:400
+#: includes/admin/menu-pages/shortcodes-menu-page.php:426
+#: includes/admin/menu-pages/shortcodes-menu-page.php:446
+#: includes/admin/menu-pages/shortcodes-menu-page.php:468
+#: includes/admin/menu-pages/shortcodes-menu-page.php:486
+#: includes/admin/menu-pages/shortcodes-menu-page.php:502
+#: includes/admin/menu-pages/shortcodes-menu-page.php:518
+msgid "Custom CSS class for shortcode wrapper"
+msgstr "CSS třída pro obálku krátkého kódu"
+
+#: includes/admin/menu-pages/settings-menu-page.php:818
+#: includes/admin/menu-pages/settings-menu-page.php:820
 msgid "License"
 msgstr "Licence"
 
@@ -5669,156 +5694,156 @@ msgstr "Dny pro přihlášení"
 #: includes/admin/menu-pages/booking-rules-menu-page.php:34
 #: includes/admin/menu-pages/booking-rules-menu-page.php:444
 #: includes/admin/menu-pages/booking-rules-menu-page.php:448
-#: includes/admin/menu-pages/settings-menu-page.php:334
+#: includes/admin/menu-pages/settings-menu-page.php:364
 msgid "Booking Rules"
 msgstr "Pravidla pro rezervaci"
 
-#: includes/admin/menu-pages/settings-menu-page.php:731
+#: includes/admin/menu-pages/settings-menu-page.php:764
 msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
 msgstr "Doba v minutách, během které uživatel může dokončit platbu. Nezaplacené rezervace jsou opuštěné a status se mění na Dostupné."
 
-#: includes/admin/menu-pages/settings-menu-page.php:730
+#: includes/admin/menu-pages/settings-menu-page.php:763
 msgid "Pending Payment Time"
 msgstr "Čekací doba na platbu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:722
+#: includes/admin/menu-pages/settings-menu-page.php:755
 msgid "Default Gateway"
 msgstr "Výchozí brána"
 
-#: includes/admin/menu-pages/settings-menu-page.php:717
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Failed Transaction Page"
 msgstr "Stránka Transakce se nepodařila "
 
-#: includes/admin/menu-pages/settings-menu-page.php:708
+#: includes/admin/menu-pages/settings-menu-page.php:741
 msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
 msgstr "Nezbytné SSL (HTTPS) na stránkách pro odhlášení. Abyste mohl využít tuto funkci, musíte mít certifikát SSL nainstalovaný."
 
-#: includes/admin/menu-pages/settings-menu-page.php:706
+#: includes/admin/menu-pages/settings-menu-page.php:739
 msgid "Force Secure Checkout"
 msgstr "Nezbytné bezpečnostní odhlášení"
 
-#: includes/admin/menu-pages/settings-menu-page.php:689
+#: includes/admin/menu-pages/settings-menu-page.php:722
 msgid "Deposit Amount"
 msgstr "Částka zálohy"
 
-#: includes/admin/menu-pages/settings-menu-page.php:683
+#: includes/admin/menu-pages/settings-menu-page.php:716
 msgid "Percent"
 msgstr "Procent"
 
-#: includes/admin/menu-pages/settings-menu-page.php:682
+#: includes/admin/menu-pages/settings-menu-page.php:715
 msgid "Fixed"
 msgstr "Fixed"
 
-#: includes/admin/menu-pages/settings-menu-page.php:680
+#: includes/admin/menu-pages/settings-menu-page.php:713
 msgid "Deposit Type"
 msgstr "Typ zálohy "
 
-#: includes/admin/menu-pages/settings-menu-page.php:674
+#: includes/admin/menu-pages/settings-menu-page.php:707
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "Záloha"
 
-#: includes/admin/menu-pages/settings-menu-page.php:673
+#: includes/admin/menu-pages/settings-menu-page.php:706
 msgid "Full Amount"
 msgstr "Celková částka"
 
-#: includes/admin/menu-pages/settings-menu-page.php:671
+#: includes/admin/menu-pages/settings-menu-page.php:704
 msgid "User Pays"
 msgstr "Uživatel platí"
 
-#: includes/admin/menu-pages/settings-menu-page.php:653
+#: includes/admin/menu-pages/settings-menu-page.php:686
 msgid "General Settings"
 msgstr "Obecné nastavení"
 
-#: includes/admin/menu-pages/settings-menu-page.php:653
+#: includes/admin/menu-pages/settings-menu-page.php:686
 msgid "Payment Gateways"
 msgstr "Platební brány"
 
-#: includes/admin/menu-pages/settings-menu-page.php:633
+#: includes/admin/menu-pages/settings-menu-page.php:666
 msgid "Body Text Color"
 msgstr "Barva Těla Textu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:627
+#: includes/admin/menu-pages/settings-menu-page.php:660
 msgid "Body Background Color"
 msgstr "Barva těla pozadí"
 
-#: includes/admin/menu-pages/settings-menu-page.php:621
+#: includes/admin/menu-pages/settings-menu-page.php:654
 msgid "Background Color"
 msgstr "Barva pozadí"
 
-#: includes/admin/menu-pages/settings-menu-page.php:615
+#: includes/admin/menu-pages/settings-menu-page.php:648
 msgid "Base Color"
 msgstr "Základní barva"
 
-#: includes/admin/menu-pages/settings-menu-page.php:610
+#: includes/admin/menu-pages/settings-menu-page.php:643
 msgid "Styles"
 msgstr "Styly"
 
-#: includes/admin/menu-pages/settings-menu-page.php:590
+#: includes/admin/menu-pages/settings-menu-page.php:623
 msgid "Footer Text"
 msgstr "Text v patičce"
 
-#: includes/admin/menu-pages/settings-menu-page.php:576
+#: includes/admin/menu-pages/settings-menu-page.php:609
 msgid "From Name"
 msgstr "Ze jména"
 
-#: includes/admin/menu-pages/settings-menu-page.php:543
+#: includes/admin/menu-pages/settings-menu-page.php:576
 msgid "Email Settings"
 msgstr "Nastavení e-mailu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:285
+#: includes/admin/menu-pages/settings-menu-page.php:315
 msgid "Max Children"
 msgstr "Maximální počet dětí"
 
-#: includes/admin/menu-pages/settings-menu-page.php:278
+#: includes/admin/menu-pages/settings-menu-page.php:308
 msgid "Max Adults"
 msgstr "Maximální počet dospělých"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Maximum accommodation occupancy available in the Search Form."
 msgstr "Maximální ubytovací kapacita, která je dostupná ve vyhledávacím poli."
 
-#: includes/admin/menu-pages/settings-menu-page.php:251
+#: includes/admin/menu-pages/settings-menu-page.php:281
 msgid "User can cancel booking via link provided inside email."
 msgstr "Uživatel může zrušit rezervaci přes odkaz uvedený v e-mailu."
 
-#: includes/admin/menu-pages/settings-menu-page.php:246
-#: includes/upgrader.php:600 includes/wizard.php:145
+#: includes/admin/menu-pages/settings-menu-page.php:276
+#: includes/upgrader.php:660 includes/wizard.php:146
 msgid "Booking Cancellation"
 msgstr "Zrušení rezervace"
 
-#: includes/admin/menu-pages/settings-menu-page.php:208
+#: includes/admin/menu-pages/settings-menu-page.php:214
 msgid "Approval Time for User"
 msgstr "čas na schválení uživatelem"
 
-#: includes/admin/menu-pages/settings-menu-page.php:196
+#: includes/admin/menu-pages/settings-menu-page.php:202
 msgid "Confirmation upon payment"
 msgstr "Potvrzení o platbě"
 
-#: includes/admin/menu-pages/settings-menu-page.php:195
+#: includes/admin/menu-pages/settings-menu-page.php:201
 msgid "By admin manually"
 msgstr "Ručně administrátorem"
 
-#: includes/admin/menu-pages/settings-menu-page.php:192
+#: includes/admin/menu-pages/settings-menu-page.php:198
 msgid "Confirmation Mode"
 msgstr "Způsob potvrzení"
 
-#: includes/admin/menu-pages/settings-menu-page.php:187
+#: includes/admin/menu-pages/settings-menu-page.php:193
 #: includes/admin/menu-pages/shortcodes-menu-page.php:482
-#: includes/wizard.php:108 assets/blocks/blocks.js:1423
+#: includes/wizard.php:109 assets/blocks/blocks.js:1423
 #: assets/blocks/blocks.js:1453
 msgid "Booking Confirmation"
 msgstr "Potvrzení rezervace"
 
-#: includes/admin/menu-pages/settings-menu-page.php:178
+#: includes/admin/menu-pages/settings-menu-page.php:184
 msgid "Text instead of reservation form while booking is disabled"
 msgstr "Text namísto rezervačního formuláře, když rezervace je zakázána"
 
-#: includes/admin/menu-pages/settings-menu-page.php:172
+#: includes/admin/menu-pages/settings-menu-page.php:178
 msgid "Hide reservation forms and buttons"
 msgstr "Skrýt rezervační formulář a tlačítka"
 
-#: includes/admin/menu-pages/settings-menu-page.php:167
+#: includes/admin/menu-pages/settings-menu-page.php:173
 msgid "Disable Booking"
 msgstr "Zakázat rezervaci"
 
@@ -5826,27 +5851,27 @@ msgstr "Zakázat rezervaci"
 msgid "Terms & Conditions"
 msgstr "Pravidla a podmínky"
 
-#: includes/admin/menu-pages/settings-menu-page.php:363
+#: includes/admin/menu-pages/settings-menu-page.php:393
 msgid "Choose Theme Mode to display the content with the styles of your theme. Choose Developer Mode to control appearance of the content with custom page templates, actions and filters. This option can't be changed if your theme is initially integrated with the plugin."
 msgstr "Vyberte si režim motivu pro zobrazení obsahu se styly ve vašem motivu. Vyberte si režim pro vývojáře a správujte vzhed stránky pomocí šablony, opcí a filtrů. Tuto možnost nelze změnit, pokud Váš motiv je od začátku integrován s pluginem."
 
-#: includes/admin/menu-pages/settings-menu-page.php:361
+#: includes/admin/menu-pages/settings-menu-page.php:391
 msgid "Theme Mode"
 msgstr "Testovací režim"
 
-#: includes/admin/menu-pages/settings-menu-page.php:360
+#: includes/admin/menu-pages/settings-menu-page.php:390
 msgid "Developer Mode"
 msgstr "Režim pro vývojáře"
 
-#: includes/admin/menu-pages/settings-menu-page.php:358
+#: includes/admin/menu-pages/settings-menu-page.php:388
 msgid "Template Mode"
 msgstr "Režim šablony"
 
-#: includes/admin/menu-pages/settings-menu-page.php:132
+#: includes/admin/menu-pages/settings-menu-page.php:138
 msgid "Add Bed Type"
 msgstr "Přidat typ postele"
 
-#: includes/admin/menu-pages/settings-menu-page.php:128
+#: includes/admin/menu-pages/settings-menu-page.php:134
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:124
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:189
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:251
@@ -5856,38 +5881,38 @@ msgstr "Přidat typ postele"
 msgid "Type"
 msgstr "Typ"
 
-#: includes/admin/menu-pages/settings-menu-page.php:123
+#: includes/admin/menu-pages/settings-menu-page.php:129
 msgid "Bed Types"
 msgstr "Typy postele"
 
-#: includes/admin/menu-pages/settings-menu-page.php:113
-#: includes/emails/templaters/email-templater.php:135
+#: includes/admin/menu-pages/settings-menu-page.php:119
+#: includes/emails/templaters/email-templater.php:140
 msgid "Check-out Time"
 msgstr "čas odhlášení"
 
-#: includes/admin/menu-pages/settings-menu-page.php:118
-#: includes/emails/templaters/email-templater.php:131
+#: includes/admin/menu-pages/settings-menu-page.php:124
+#: includes/emails/templaters/email-templater.php:136
 msgid "Check-in Time"
 msgstr "čas přihlášení"
 
-#: includes/admin/menu-pages/settings-menu-page.php:107
+#: includes/admin/menu-pages/settings-menu-page.php:113
 msgid "Datepicker Date Format"
 msgstr "Datepicker Formát data"
 
-#: includes/admin/menu-pages/settings-menu-page.php:101
+#: includes/admin/menu-pages/settings-menu-page.php:107
 msgid "Currency Position"
 msgstr "Měnová pozice"
 
-#: includes/admin/menu-pages/settings-menu-page.php:95
+#: includes/admin/menu-pages/settings-menu-page.php:101
 #: includes/post-types/payment-cpt.php:190
 msgid "Currency"
 msgstr "Měna"
 
-#: includes/admin/menu-pages/settings-menu-page.php:89
+#: includes/admin/menu-pages/settings-menu-page.php:95
 msgid "Square Units"
 msgstr "Čtvereční jednotky "
 
-#: includes/admin/menu-pages/settings-menu-page.php:84
+#: includes/admin/menu-pages/settings-menu-page.php:90
 msgid "Misc"
 msgstr "Různé"
 
@@ -5915,8 +5940,9 @@ msgstr "Stránky"
 msgid "General"
 msgstr "Všeobecné"
 
+#: includes/admin/customers-list-table.php:133
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:82
-#: includes/post-types/room-type-cpt.php:319
+#: includes/post-types/room-type-cpt.php:319 templates/account/bookings.php:78
 msgid "View"
 msgstr "Prohlédnout si"
 
@@ -5938,22 +5964,22 @@ msgid "Booking Calendar"
 msgstr "Kalendář rezervace"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
-#: includes/entities/service.php:215 includes/post-types/service-cpt.php:198
+#: includes/entities/service.php:215 includes/post-types/service-cpt.php:200
 msgid "Per Accommodation"
 msgstr "Za pobyt"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:45
-#: includes/entities/service.php:207 includes/post-types/service-cpt.php:149
+#: includes/entities/service.php:207 includes/post-types/service-cpt.php:151
 msgid "Once"
 msgstr " Jednou"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:18
-#: includes/post-types/service-cpt.php:196
+#: includes/post-types/service-cpt.php:198
 msgid "Charge"
 msgstr "Sazba"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:17
-#: includes/post-types/service-cpt.php:147
+#: includes/post-types/service-cpt.php:149
 msgid "Periodicity"
 msgstr "Periodicita"
 
@@ -6011,6 +6037,14 @@ msgstr "Částka byla zdvojnásobena."
 msgid "Duplicate"
 msgstr "Zdvojnásobit"
 
+#: includes/admin/manage-cpt-pages/rate-manage-cpt-page.php:22
+msgid "Season &#8212; Price"
+msgstr "Sezóna &#8212; Cena"
+
+#: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:141
+msgid "Modified on: "
+msgstr "Upraveno dne:"
+
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:35
 #: includes/admin/menu-pages/booking-rules-menu-page.php:183
 #: includes/admin/menu-pages/booking-rules-menu-page.php:214
@@ -6024,17 +6058,9 @@ msgstr "Zdvojnásobit"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:280
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:330
 #: includes/post-types/room-cpt.php:25 includes/post-types/room-cpt.php:35
-#: includes/wizard.php:99
+#: includes/wizard.php:100
 msgid "Accommodations"
 msgstr "Ubytování"
-
-#: includes/admin/manage-cpt-pages/rate-manage-cpt-page.php:22
-msgid "Season &#8212; Price"
-msgstr "Sezóna &#8212; Cena"
-
-#: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:141
-msgid "Modified on: "
-msgstr "Upraveno dne:"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:136
 msgid "Created on: "
@@ -6055,7 +6081,8 @@ msgid "Gateway"
 msgstr "Brána"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:30
-#: includes/post-types/booking-cpt.php:201
+#: includes/post-types/booking-cpt.php:201 templates/account/bookings.php:18
+#: templates/account/bookings.php:64
 msgid "Booking"
 msgstr "Rezervace"
 
@@ -6113,8 +6140,8 @@ msgstr "Datum"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:63
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:16
-#: includes/post-types/rate-cpt.php:52 includes/post-types/service-cpt.php:131
-#: includes/post-types/service-cpt.php:135
+#: includes/post-types/rate-cpt.php:52 includes/post-types/service-cpt.php:133
+#: includes/post-types/service-cpt.php:137
 #: includes/views/single-service-view.php:18
 #: includes/widgets/rooms-widget.php:194 assets/blocks/blocks.js:360
 #: assets/blocks/blocks.js:411 assets/blocks/blocks.js:610
@@ -6123,11 +6150,11 @@ msgstr "Datum"
 msgid "Price"
 msgstr "Cena"
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:491
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
-#: includes/post-types/service-cpt.php:90
-#: includes/post-types/service-cpt.php:100 includes/views/booking-view.php:170
+#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:102 includes/views/booking-view.php:170
 msgid "Services"
 msgstr "Služby"
 
@@ -6151,7 +6178,7 @@ msgstr "Ubytování"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:58
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:26
-#: includes/admin/menu-pages/shortcodes-menu-page.php:354 includes/ajax.php:743
+#: includes/admin/menu-pages/shortcodes-menu-page.php:354 includes/ajax.php:746
 #: includes/bundles/export-bundle.php:18 includes/post-types/booking-cpt.php:38
 #: includes/post-types/payment-cpt.php:140 assets/blocks/blocks.js:1066
 msgid "ID"
@@ -6230,19 +6257,21 @@ msgstr "Přidat galerii"
 
 #: includes/admin/fields/dynamic-select-field.php:61
 #: includes/admin/fields/page-select-field.php:16
+#: includes/admin/menu-pages/customers-menu-page.php:242
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:37
-#: includes/admin/menu-pages/settings-menu-page.php:231
+#: includes/admin/menu-pages/settings-menu-page.php:237
 #: includes/post-types/booking-cpt.php:101
 #: includes/post-types/booking-cpt.php:146
 #: includes/post-types/payment-cpt.php:213 includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:185
-#: includes/views/shortcodes/checkout-view.php:206
+#: includes/views/shortcodes/checkout-view.php:241
+#: includes/views/shortcodes/checkout-view.php:262
+#: templates/account/account-details.php:51
 msgid "— Select —"
 msgstr "— Vybrat —"
 
 #: includes/admin/fields/complex-vertical-field.php:17
-#: includes/admin/menu-pages/settings-menu-page.php:303
+#: includes/admin/menu-pages/settings-menu-page.php:333
 #: includes/settings/main-settings.php:25
 #: includes/settings/main-settings.php:43
 msgid "Default"
@@ -6250,9 +6279,11 @@ msgstr "Výchozí"
 
 #: includes/admin/fields/complex-horizontal-field.php:49
 #: includes/admin/fields/rules-list-field.php:39
+#: templates/account/bookings.php:22 templates/account/bookings.php:77
 msgid "Actions"
 msgstr "Kroky"
 
+#: includes/admin/customers-list-table.php:137
 #: includes/admin/fields/abstract-complex-field.php:25
 #: includes/admin/fields/rules-list-field.php:38
 msgid "Delete"
@@ -6411,7 +6442,7 @@ msgstr "Hodnocení ubytování nadpis"
 msgid "Accommodation Rate Description"
 msgstr "Hodnocení ubytování popis"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+#: includes/admin/menu-pages/shortcodes-menu-page.php:541
 msgid "Shortcode"
 msgstr "Zkrácený zápis"
 
@@ -6427,7 +6458,7 @@ msgstr "\"%s\" e-mail byl odeslán administrátoru."
 msgid "\"%s\" mail sending to admin is failed."
 msgstr "\"%s\" e-mail pro administrátora není odeslán."
 
-#: includes/emails/booking/customer/base-email.php:45
+#: includes/emails/booking/customer/base-email.php:51
 msgid "\"%s\" mail was sent to customer."
 msgstr "\"%s\" e-mail byl odeslán zákazníkovi."
 
@@ -6453,26 +6484,30 @@ msgstr "E-mail rezervace je schválená"
 msgid "Cancelled Booking Email"
 msgstr "E-mail zrušení rezervace"
 
-#: includes/ajax.php:772 includes/bundles/customer-bundle.php:101
+#: includes/admin/customers-list-table.php:195
+#: includes/admin/menu-pages/customers-menu-page.php:189 includes/ajax.php:775
+#: includes/bundles/customer-bundle.php:101
 #: includes/bundles/export-bundle.php:31 includes/post-types/booking-cpt.php:89
 #: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:484
+#: includes/views/shortcodes/checkout-view.php:560
+#: templates/account/account-details.php:34
 msgid "Email"
 msgstr "E-mail"
 
-#: includes/admin/menu-pages/settings-menu-page.php:194
+#: includes/admin/menu-pages/settings-menu-page.php:200
 msgid "By customer via email"
 msgstr "Klientem přes e-mail"
 
-#: includes/admin/menu-pages/settings-menu-page.php:489
+#: includes/admin/menu-pages/settings-menu-page.php:520
 msgid "Admin Emails"
 msgstr "E-maily od administrátora"
 
-#: includes/admin/menu-pages/settings-menu-page.php:502
+#: includes/admin/menu-pages/settings-menu-page.php:533
 msgid "Customer Emails"
 msgstr "E-maily od zákazníků"
 
-#: includes/emails/templaters/email-templater.php:148
+#: includes/emails/templaters/email-templater.php:153
+#: includes/emails/templaters/email-templater.php:292
 msgid "Customer Email"
 msgstr "E-mail zákazníka"
 
@@ -6480,31 +6515,31 @@ msgstr "E-mail zákazníka"
 msgid "Approved Booking Email (via payment)"
 msgstr "Potvrzovací e-mail o rezervaci (přes platbu)"
 
-#: includes/admin/menu-pages/settings-menu-page.php:564
+#: includes/admin/menu-pages/settings-menu-page.php:597
 msgid "Administrator Email"
 msgstr "E-mail administrátora"
 
-#: includes/admin/menu-pages/settings-menu-page.php:209
+#: includes/admin/menu-pages/settings-menu-page.php:215
 msgid "Period of time in minutes the user is given to confirm booking via email. Unconfirmed bookings become Abandoned and accommodation status changes to Available."
 msgstr "Doba v minutách, během které uživatel může potvrdit rezervaci e-mailem. Nezaplacené rezervace jsou opuštěné a stav se mění na dostupné."
 
-#: includes/emails/abstract-email.php:397
+#: includes/emails/abstract-email.php:418
 msgid "Disable this email notification"
 msgstr "Deaktivovat oznámení o tomto e-mailu"
 
-#: includes/emails/abstract-email.php:420
+#: includes/emails/abstract-email.php:441
 msgid "Email Template"
 msgstr "Šablona e-mailu"
 
-#: includes/emails/booking/customer/base-email.php:47
+#: includes/emails/booking/customer/base-email.php:53
 msgid "\"%s\" mail sending is failed."
 msgstr "\"%s\" Odeslání e-mailu se nezdařilo."
 
-#: includes/admin/menu-pages/settings-menu-page.php:559
+#: includes/admin/menu-pages/settings-menu-page.php:592
 msgid "Email Sender"
 msgstr "Odesilatel e-mailu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:570
+#: includes/admin/menu-pages/settings-menu-page.php:603
 msgid "From Email"
 msgstr "Z e-mailu"
 
@@ -6541,7 +6576,7 @@ msgstr "E-mail, který bude odeslán administrátorovi, když je platba hotová.
 msgid "This email is sent when \"Booking Confirmation Mode\" is set to Admin confirmation."
 msgstr "E-mail bude odeslán, pokud \"Způsob potvrzení rezervace\" je nastaven jako Potvrzení administrátorem."
 
-#: functions.php:582
+#: functions.php:594
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr "<a href=\"%s\">Upgradujte na Premium</a> pro povolení této funkce."
 
@@ -6555,7 +6590,7 @@ msgstr "<a href=\"%s\">Upgradujte na Premium</a> pro povolení této funkce."
 msgid "Guests:"
 msgstr "Hosté:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:144
+#: includes/shortcodes/checkout-shortcode/step-booking.php:154
 msgid "Checkout data is not valid."
 msgstr "Datum odjezdu není platné."
 
@@ -6568,11 +6603,11 @@ msgid "https://motopress.com/products/hotel-booking/"
 msgstr "https://motopress.com/products/hotel-booking/"
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:564
+#: functions.php:576
 msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr "Používáte současně dvě instance modulu Hotel Booking, <a href=\"%s\"> deaktivujte jednu z nich </a>."
 
-#: includes/views/shortcodes/checkout-view.php:202 template-functions.php:652
+#: includes/views/shortcodes/checkout-view.php:258 template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
 msgid "Children %s"
@@ -6587,15 +6622,15 @@ msgstr "%s - kopie"
 msgid "https://motopress.com/"
 msgstr "https://motopress.com/"
 
-#: includes/ajax.php:887 includes/ajax.php:895 includes/ajax.php:956
-#: includes/shortcodes/checkout-shortcode/step.php:72
+#: includes/ajax.php:890 includes/ajax.php:898 includes/ajax.php:959
+#: includes/shortcodes/checkout-shortcode/step.php:87
 #: includes/shortcodes/search-results-shortcode.php:598
 #: includes/utils/parse-utils.php:73
 msgid "Nothing found. Please try again with different search parameters."
 msgstr "Nic nalezeno. Zkuste to prosím znovu s různými parametry vyhledávání."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:240
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:189
+#: includes/shortcodes/checkout-shortcode/step-booking.php:250
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:209
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr "Vybraná data nesplňují rezervační pravidla pro typ %s"
@@ -6642,26 +6677,26 @@ msgstr "Je vyžadováno příjmení."
 msgid "First name is required."
 msgstr "Je vyžadováno jméno."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:176
-#: includes/shortcodes/checkout-shortcode/step-booking.php:335
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:131
+#: includes/shortcodes/checkout-shortcode/step-booking.php:186
+#: includes/shortcodes/checkout-shortcode/step-booking.php:345
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:149
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "Není vybráno žádné ubytování, které chcete rezervovat. "
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:107
+#: includes/shortcodes/checkout-shortcode/step-booking.php:110
 msgid "Booking is blocked due to maintenance reason. Please try again later."
 msgstr "Rezervace je blokovaná z důvodu údržby. Zkuste to prosím později."
 
-#: includes/ajax.php:357
-#: includes/shortcodes/checkout-shortcode/step-booking.php:230
+#: includes/ajax.php:360
+#: includes/shortcodes/checkout-shortcode/step-booking.php:240
 #: includes/shortcodes/search-results-shortcode.php:555
 #: includes/utils/parse-utils.php:127 includes/utils/parse-utils.php:261
 msgid "Children number is not valid."
 msgstr "Počet dětí není spravný."
 
-#: includes/ajax.php:341
-#: includes/shortcodes/checkout-shortcode/step-booking.php:224
+#: includes/ajax.php:344
+#: includes/shortcodes/checkout-shortcode/step-booking.php:234
 #: includes/shortcodes/search-results-shortcode.php:539
 #: includes/utils/parse-utils.php:102 includes/utils/parse-utils.php:257
 msgid "Adults number is not valid."
@@ -6671,7 +6706,7 @@ msgstr "Počet dospelých není validní."
 msgid "Choose dates to see relevant prices"
 msgstr "Vyberte si datum pro rezervaci a uvidíte ceny na vámi zvolený termíny"
 
-#: functions.php:210
+#: functions.php:222
 msgctxt "Ex: $99 for 2 nights"
 msgid "per night"
 msgid_plural "for %d nights"
@@ -6679,7 +6714,7 @@ msgstr[0] "za noc"
 msgstr[1] "za %d noci"
 msgstr[2] "za %d nocí"
 
-#: functions.php:179
+#: functions.php:191
 msgctxt "Zero price"
 msgid "Free"
 msgstr "Bezplatná"
@@ -6698,25 +6733,27 @@ msgstr "Cena začína na:"
 msgid "MotoPress"
 msgstr "MotoPress"
 
-#: includes/views/shortcodes/checkout-view.php:741
+#: includes/views/shortcodes/checkout-view.php:836
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "Odjezd:"
 
-#: includes/views/shortcodes/checkout-view.php:718
+#: includes/views/shortcodes/checkout-view.php:813
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "Příjezd:"
 
-#: includes/bundles/export-bundle.php:21
+#: includes/bundles/export-bundle.php:21 templates/account/bookings.php:20
+#: templates/account/bookings.php:71
 #: templates/create-booking/search/search-form.php:58
 #: templates/shortcodes/search/search-form.php:49
 msgid "Check-out"
 msgstr "Odjezd"
 
-#: includes/bundles/export-bundle.php:20
+#: includes/bundles/export-bundle.php:20 templates/account/bookings.php:19
+#: templates/account/bookings.php:68
 #: templates/create-booking/search/search-form.php:38
 #: templates/shortcodes/search/search-form.php:29
 msgid "Check-in"
@@ -6749,7 +6786,6 @@ msgid "Formatted as %s"
 msgstr "Formát datumu %s"
 
 #. translators: Verb. To book an accommodation.
-#. translators: Verb. To book an accommodation.
 #: includes/shortcodes/search-results-shortcode.php:887
 #: template-functions.php:511 template-functions.php:523
 msgid "Book"
@@ -6767,7 +6803,7 @@ msgstr "Prohlédnout si:"
 msgid "Bed Type:"
 msgstr "Typ postele:"
 
-#: includes/views/shortcodes/checkout-view.php:688
+#: includes/views/shortcodes/checkout-view.php:783
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -6793,12 +6829,12 @@ msgstr[2] "%d dospělých"
 msgid "Categories:"
 msgstr "Kategorie:"
 
-#: includes/views/shortcodes/checkout-view.php:456 template-functions.php:599
+#: includes/views/shortcodes/checkout-view.php:532 template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "Povinná pole jsou označena %s"
 
-#: includes/views/shortcodes/checkout-view.php:822
+#: includes/views/shortcodes/checkout-view.php:919
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "Zarezervovat teď"
@@ -6819,7 +6855,7 @@ msgstr "Nebylo nalezeno žádné ubytování"
 msgid "View Booking"
 msgstr "Zobrazit rezervaci"
 
-#: includes/ajax.php:760 includes/post-types/booking-cpt.php:72
+#: includes/ajax.php:763 includes/post-types/booking-cpt.php:72
 #: templates/emails/customer-approved-booking.php:31
 #: templates/emails/customer-cancelled-booking.php:29
 #: templates/emails/customer-confirmation-booking.php:35
@@ -6842,13 +6878,13 @@ msgstr "Děti"
 #: includes/admin/fields/variable-pricing-field.php:126
 #: includes/emails/templaters/reserved-rooms-templater.php:155
 #: includes/post-types/room-type-cpt.php:277 includes/views/booking-view.php:93
-#: includes/views/shortcodes/checkout-view.php:177 template-functions.php:633
+#: includes/views/shortcodes/checkout-view.php:233 template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
 #: templates/shortcodes/search/search-form.php:74 assets/blocks/blocks.js:60
 msgid "Adults"
 msgstr "Dospělí"
 
-#: includes/ajax.php:751 includes/emails/templaters/email-templater.php:127
+#: includes/ajax.php:754 includes/emails/templaters/email-templater.php:132
 #: includes/post-types/booking-cpt.php:52 template-functions.php:618
 #: template-functions.php:622
 #: templates/create-booking/search/search-form.php:69
@@ -6858,7 +6894,7 @@ msgstr "Dospělí"
 msgid "Check-out Date"
 msgstr "Datum odjezdu"
 
-#: includes/ajax.php:747 includes/emails/templaters/email-templater.php:123
+#: includes/ajax.php:750 includes/emails/templaters/email-templater.php:128
 #: includes/post-types/booking-cpt.php:45 template-functions.php:609
 #: template-functions.php:613
 #: templates/create-booking/search/search-form.php:49
@@ -6875,39 +6911,39 @@ msgstr "Datum příjezdu"
 msgid "Search"
 msgstr "Hledat"
 
-#: includes/ajax.php:468
-#: includes/shortcodes/checkout-shortcode/step-booking.php:202
-#: includes/shortcodes/checkout-shortcode/step-booking.php:218
-#: includes/shortcodes/checkout-shortcode/step-booking.php:375
-#: includes/shortcodes/checkout-shortcode/step-booking.php:387
+#: includes/ajax.php:471
+#: includes/shortcodes/checkout-shortcode/step-booking.php:212
+#: includes/shortcodes/checkout-shortcode/step-booking.php:228
+#: includes/shortcodes/checkout-shortcode/step-booking.php:385
+#: includes/shortcodes/checkout-shortcode/step-booking.php:397
 #: includes/utils/parse-utils.php:253
 msgid "Rate is not valid."
 msgstr "Částka je neplatná."
 
-#: includes/ajax.php:460
-#: includes/shortcodes/checkout-shortcode/step-booking.php:190
-#: includes/shortcodes/checkout-shortcode/step-booking.php:196
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:146
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:158
+#: includes/ajax.php:463
+#: includes/shortcodes/checkout-shortcode/step-booking.php:200
+#: includes/shortcodes/checkout-shortcode/step-booking.php:206
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:166
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:178
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "Typ ubytování je neplatný."
 
-#: includes/ajax.php:325 includes/script-managers/public-script-manager.php:245
-#: includes/shortcodes/checkout-shortcode/step.php:69
+#: includes/ajax.php:328 includes/script-managers/public-script-manager.php:245
+#: includes/shortcodes/checkout-shortcode/step.php:84
 #: includes/shortcodes/search-results-shortcode.php:591
 #: includes/utils/parse-utils.php:71
 msgid "Check-out date is not valid."
 msgstr "Datum odjezdu je neplatné."
 
-#: includes/shortcodes/checkout-shortcode/step.php:45
+#: includes/shortcodes/checkout-shortcode/step.php:53
 #: includes/shortcodes/search-results-shortcode.php:573
 #: includes/utils/parse-utils.php:40
 msgid "Check-in date cannot be earlier than today."
 msgstr "Datum příjezdu nemůže být starší než dnešní."
 
-#: includes/ajax.php:308 includes/script-managers/public-script-manager.php:244
-#: includes/shortcodes/checkout-shortcode/step.php:42
+#: includes/ajax.php:311 includes/script-managers/public-script-manager.php:244
+#: includes/shortcodes/checkout-shortcode/step.php:50
 #: includes/shortcodes/search-results-shortcode.php:570
 #: includes/utils/parse-utils.php:38
 msgid "Check-in date is not valid."
@@ -6985,7 +7021,7 @@ msgstr "Informace o zákazníku"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:61
 #: includes/views/booking-view.php:95
-#: includes/views/shortcodes/checkout-view.php:179 template-functions.php:635
+#: includes/views/shortcodes/checkout-view.php:235 template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
 msgstr "Hosté"
@@ -7031,8 +7067,6 @@ msgstr "Je vyžadován e-mail."
 
 #. translators: Terms are variations for Attributes and bear no relation to the
 #. Terms and Conditions Page.
-#. translators: Terms are variations for Attributes and bear no relation to the
-#. Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:16
 #: includes/admin/manage-cpt-pages/attributes-manage-cpt-page.php:33
 #: includes/admin/menu-pages/attributes-menu-page.php:40
@@ -7040,6 +7074,12 @@ msgstr "Je vyžadován e-mail."
 msgid "Terms"
 msgstr "Položky"
 
-#: includes/emails/abstract-email.php:411
+#: includes/emails/abstract-email.php:432
 msgid "Header"
 msgstr "Záhlaví"
+
+#. translators: do not translate
+#: includes/post-types/service-cpt.php:121
+msgctxt "slug"
+msgid "services"
+msgstr "služby"

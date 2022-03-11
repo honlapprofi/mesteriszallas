@@ -13,7 +13,7 @@ class ConfirmationEmail extends BaseEmail {
 	}
 
 	protected function initDescription(){
-		$userConfirmationNote	 = '&nbsp<strong>' . __( 'This email is sent when "Booking Confirmation Mode" is set to Customer confirmation via email.', 'motopress-hotel-booking' ) . '</strong>';
+		$userConfirmationNote	 = '&nbsp;<strong>' . __( 'This email is sent when "Booking Confirmation Mode" is set to Customer confirmation via email.', 'motopress-hotel-booking' ) . '</strong>';
 		$this->description		 = __( 'Email that will be sent to customer after booking is placed.', 'motopress-hotel-booking' ) . $userConfirmationNote;
 	}
 

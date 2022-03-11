@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Rank Math SEO – Best SEO Plugin For WordPress To Increase Your SEO Traffic - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-11 10:58:39+0000\n"
+"PO-Revision-Date: 2022-03-09 11:23:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -661,7 +661,7 @@ msgstr "Neplatná položka ID."
 msgid "Sorry, you are not allowed to edit this term."
 msgstr "Nemáte dostatečné oprávnění pro úpravy této položky."
 
-#: includes/modules/analytics/class-analytics-common.php:297
+#: includes/modules/analytics/class-analytics-common.php:296
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Average position of all the ranking keywords below 100 position."
 msgstr "Průměrná pozice všech klíčových slov pod 100 pozicí."
@@ -805,16 +805,16 @@ msgstr "Dostávejte pravidelné zprávy o výkonnosti SEO e-mailem. Po aktivaci 
 msgid "Rank Math has detected a new post type: %1$s. You may want to check the settings of the <a href=\"%2$s\">Titles &amp; Meta page</a> and <a href=\"%3$s\">the Sitemap</a>."
 msgstr "Nástroj Rank Math zjistil nový typ příspěvku: %1$s. Měli byste zkontrolovat nastavení stránky <a href=\"%2$s\">Tituly &amp; Meta</a> a <a href=\"%3$s\">Mapu stránek</a>."
 
-#: includes/admin/wizard/views/search-console-ui.php:324
+#: includes/admin/wizard/views/search-console-ui.php:341
 msgid "Learn more about Email Reports."
 msgstr "Další informace o e-mailových zprávách."
 
-#: includes/admin/wizard/views/search-console-ui.php:324
+#: includes/admin/wizard/views/search-console-ui.php:341
 msgid "Receive Analytics reports periodically in email."
 msgstr "Pravidelně dostávejte analytické zprávy e-mailem."
 
-#: includes/admin/wizard/views/search-console-ui.php:323
-#: includes/admin/wizard/views/search-console-ui.php:328
+#: includes/admin/wizard/views/search-console-ui.php:340
+#: includes/admin/wizard/views/search-console-ui.php:345
 #: includes/modules/analytics/views/options.php:114
 #: includes/modules/analytics/views/options.php:129
 msgid "Email Reports"
@@ -852,7 +852,7 @@ msgstr "Chyba analýzy Rank Math SEO: "
 msgid "Since you are using an NGINX server, you may need to add the following code to your %s <strong>if your Sitemap pages are not loading</strong>. If you are unsure how to do it, please contact your hosting provider."
 msgstr "Vzhledem k tomu, že používáte server NGINX, může být nutné přidat následující kód do %s <strong>pokud se Mapy stránek nenačítají</strong>. Pokud si nejste jisti, jak to udělat, obraťte se na svého poskytovatele hostingu."
 
-#: includes/admin/wizard/views/search-console-ui.php:206
+#: includes/admin/wizard/views/search-console-ui.php:223
 msgid "Enable Cookieless Tracking. Want to make Analytics GDPR ready? %s"
 msgstr "Povolit sledování bez použití cookie. Chcete, aby byli analytiky souladu s GDPR? %s"
 
@@ -876,23 +876,23 @@ msgstr "Pokročilé schéma, analytika a mnoho dalšího..."
 msgid "Upgrade to PRO"
 msgstr "Upgrade na PRO"
 
-#: includes/modules/analytics/class-analytics.php:272
+#: includes/modules/analytics/class-analytics.php:281
 msgid "Cache deleted."
 msgstr "Vymazání mezipaměti."
 
-#: includes/modules/analytics/class-analytics.php:271
+#: includes/modules/analytics/class-analytics.php:280
 msgid "Are you sure you want to disconnect Google services from your site?"
 msgstr "Jste si jisti, že chcete služby Google od webu odpojit?"
 
-#: includes/modules/analytics/class-analytics.php:270
+#: includes/modules/analytics/class-analytics.php:279
 msgid "You are about to delete your 90 days cache."
 msgstr "Chystáte se odstranit 90denní mezipaměť."
 
-#: includes/modules/analytics/class-analytics.php:269
+#: includes/modules/analytics/class-analytics.php:278
 msgid "You are about to delete all the previously imported data."
 msgstr "Chystáte se odstranit všechna dříve importovaná data."
 
-#: includes/modules/analytics/class-analytics.php:268
+#: includes/modules/analytics/class-analytics.php:277
 msgid "Are you sure you want to do this?"
 msgstr "Opravdu to chcete udělat?"
 
@@ -925,7 +925,7 @@ msgstr "Mapa lokalit %1$s %2$s"
 msgid "Focus Keywords of the current post"
 msgstr "Klíčová slova tohoto příspěvku"
 
-#: includes/admin/wizard/views/search-console-ui.php:231
+#: includes/admin/wizard/views/search-console-ui.php:248
 msgid "Self-Hosted Analytics JS File"
 msgstr "Samostatně umístěný analytický soubor JS"
 
@@ -1058,15 +1058,15 @@ msgstr "Není dáno"
 msgid "Given"
 msgstr "Dáno"
 
-#: includes/modules/analytics/class-analytics.php:166
+#: includes/modules/analytics/class-analytics.php:175
 msgid "Cancel Fetch"
 msgstr "Zrušit načítání"
 
-#: includes/modules/analytics/class-ajax.php:195
+#: includes/modules/analytics/class-ajax.php:197
 msgid "Data fetching started in the background."
 msgstr "Načítají se data v pozadí."
 
-#: includes/modules/analytics/class-ajax.php:161
+#: includes/modules/analytics/class-ajax.php:163
 msgid "Data fetching cancelled."
 msgstr "Načítání dat zrušeno."
 
@@ -1115,7 +1115,7 @@ msgid "Re-create Missing Database Tables"
 msgstr "Znovu vytvořit chybějící databázové tabulky"
 
 #. translators: Auth URL
-#: includes/modules/analytics/class-analytics.php:114
+#: includes/modules/analytics/class-analytics.php:113
 msgid "It seems like the connection with your Google account & Rank Math needs to be made again. <a href=\"%s\" class=\"rank-math-reconnect-google\">Please click here.</a>"
 msgstr "Zdá se, že je třeba znovu propojit Rank Math s vaším Google účtem. <a href=\"%s\" class=\"rank-math-reconnect-google\">Prosím, klikněte zde.</a>"
 
@@ -1124,7 +1124,7 @@ msgid "Import meta information of your terms like the titles, descriptions, robo
 msgstr "Importujte meta informace jako jsou názvy, popisy, robots meta, OpenGraph informace atd."
 
 #. translators: reconnect link
-#: includes/modules/analytics/google/class-request.php:153
+#: includes/modules/analytics/google/class-request.php:155
 msgid "There is a problem with the Google auth token. Please <a href=\"%1$s\" class=\"button button-link rank-math-reconnect-google\">reconnect your app</a>"
 msgstr "Neexistuje žádný obnovovací token. Připojte <a href=\"%1$s\" class=\"button button-link rank-math-reconnect-google\">znovu svou aplikaci</a>"
 
@@ -1284,7 +1284,7 @@ msgstr "Celkový počet 404 stránek otevřených uživateli."
 msgid "Log Count"
 msgstr "Počet protokolů"
 
-#: includes/modules/analytics/class-analytics-common.php:291
+#: includes/modules/analytics/class-analytics-common.php:290
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Total number of keywords your site ranking below 100 position."
 msgstr "Celkový počet klíčových slov vaše stránky Rank Math pod 100 pozice."
@@ -1299,15 +1299,15 @@ msgstr "Zobrazit report"
 msgid "Last 30 Days"
 msgstr "Posledních 30 dnů"
 
-#: includes/admin/wizard/views/search-console-ui.php:302
+#: includes/admin/wizard/views/search-console-ui.php:319
 msgid "Google AdSense support is only available in Rank Math Pro's Advanced Analytics module."
 msgstr "Podpora Google AdSense je k dispozici pouze v modulu Advanced Analytics společnosti Rank Math Pro."
 
-#: includes/admin/wizard/views/search-console-ui.php:167
+#: includes/admin/wizard/views/search-console-ui.php:184
 msgid "Enable this option only if you are not using any other plugin/theme to install Google Analytics code."
 msgstr "Tuto možnost povolte pouze v případě, že k instalaci kódu Google Analytics nepoužíváte žádný jiný plugin/motiv."
 
-#: includes/admin/wizard/views/search-console-ui.php:59
+#: includes/admin/wizard/views/search-console-ui.php:61
 msgid "Reconnect"
 msgstr "Znovu připojit"
 
@@ -1336,13 +1336,13 @@ msgstr "3 nejlepší pozice"
 msgid "Upgrade"
 msgstr "Upgradovat"
 
-#: includes/modules/analytics/class-analytics-common.php:279
+#: includes/modules/analytics/class-analytics-common.php:278
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "How many times your site showed up in the search results."
 msgstr "Kolikrát se váš web objevil ve výsledcích vyhledávání."
 
-#: includes/modules/analytics/class-analytics-common.php:273
-#: includes/modules/analytics/class-analytics-common.php:285
+#: includes/modules/analytics/class-analytics-common.php:272
+#: includes/modules/analytics/class-analytics-common.php:284
 msgid "This is the number of pageviews carried out by visitors from Google."
 msgstr "Jedná se o počet zobrazení stránek prováděných návštěvníky společnosti Google."
 
@@ -1351,7 +1351,7 @@ msgstr "Jedná se o počet zobrazení stránek prováděných návštěvníky sp
 msgid "Posts"
 msgstr "Příspěvky"
 
-#: includes/modules/analytics/class-analytics-common.php:272
+#: includes/modules/analytics/class-analytics-common.php:271
 msgid "Search Traffic"
 msgstr "Hledat provoz"
 
@@ -1380,50 +1380,50 @@ msgstr "Výhody připojení účtu Google"
 msgid "Connect Google Services"
 msgstr "Připojení služeb Google"
 
-#: includes/admin/wizard/views/search-console-ui.php:276
+#: includes/admin/wizard/views/search-console-ui.php:293
 msgid "AdSense"
 msgstr "AdSense"
 
-#: includes/admin/wizard/views/search-console-ui.php:255
+#: includes/admin/wizard/views/search-console-ui.php:272
 msgid "Exclude Logged-in users"
 msgstr "Vyloučit přihlášené uživatele"
 
-#: includes/admin/wizard/views/search-console-ui.php:185
-#: includes/admin/wizard/views/search-console-ui.php:210
-#: includes/admin/wizard/views/search-console-ui.php:235
-#: includes/admin/wizard/views/search-console-ui.php:302
+#: includes/admin/wizard/views/search-console-ui.php:202
+#: includes/admin/wizard/views/search-console-ui.php:227
+#: includes/admin/wizard/views/search-console-ui.php:252
+#: includes/admin/wizard/views/search-console-ui.php:319
 #: includes/module/class-manager.php:383
 #: includes/modules/analytics/views/options.php:137
 msgid "PRO"
 msgstr "PRO"
 
-#: includes/admin/wizard/views/search-console-ui.php:181
+#: includes/admin/wizard/views/search-console-ui.php:198
 msgid "Anonymize IP addresses"
 msgstr "Anonymizovat IP adresy"
 
-#: includes/admin/wizard/views/search-console-ui.php:166
+#: includes/admin/wizard/views/search-console-ui.php:183
 msgid "Install analytics code"
 msgstr "Instalace analytického kódu"
 
-#: includes/admin/wizard/views/search-console-ui.php:144
+#: includes/admin/wizard/views/search-console-ui.php:161
 msgid "View"
 msgstr "Zobrazit"
 
-#: includes/admin/wizard/views/search-console-ui.php:133
+#: includes/admin/wizard/views/search-console-ui.php:150
 msgid "Property"
 msgstr "Nemovitost"
 
-#: includes/admin/wizard/views/search-console-ui.php:85
+#: includes/admin/wizard/views/search-console-ui.php:87
 msgid "Site"
 msgstr "Stránka"
 
-#: includes/admin/wizard/views/search-console-ui.php:59
+#: includes/admin/wizard/views/search-console-ui.php:61
 msgid "Disconnect"
 msgstr "Odpojit"
 
 #: includes/admin/wizard/views/google-connect.php:37
 #: includes/admin/wizard/views/rank-math-connect.php:39
-#: includes/admin/wizard/views/search-console-ui.php:313
+#: includes/admin/wizard/views/search-console-ui.php:330
 msgid "We do not store any of the data from your Google account on our servers, everything is processed & stored on your server. We take your privacy extremely seriously and ensure it is never misused. %s"
 msgstr "Neukládáme žádné údaje z vašeho účtu Google na našich serverech, vše je zpracováno a uloženo na vašem serveru. Vaše soukromí bereme velmi vážně a zajišťujeme, aby nikdy nebylo zneužito. %s"
 
@@ -1773,7 +1773,7 @@ msgid "Storage Days: %s"
 msgstr "Dny skladování: %s"
 
 #: includes/modules/analytics/views/options.php:77
-msgid "Delete Data"
+msgid "Delete data"
 msgstr "Odstranit data"
 
 #. Translators: placeholder is a link to rankmath.com, with "free version" as
@@ -1804,43 +1804,43 @@ msgstr "Post re-index v průběhu."
 msgid "Analytics cache cleared."
 msgstr "Mezipaměť Analytics byla vymazána."
 
-#: includes/modules/analytics/class-analytics.php:476
+#: includes/modules/analytics/class-analytics.php:506
 msgid "Rebuild Index"
 msgstr "Znovu sestavit index"
 
 #. translators: 1. Review Schema documentation link
-#: includes/modules/analytics/class-analytics.php:475
+#: includes/modules/analytics/class-analytics.php:505
 msgid "Missing some posts/pages in the Analytics data? Clear the index and build a new one for more accurate stats."
 msgstr "Chybí v datech Analytics některé příspěvky/stránky? Vymažte index a vytvořte nový pro přesnější statistiky."
 
-#: includes/modules/analytics/class-analytics.php:473
+#: includes/modules/analytics/class-analytics.php:503
 msgid "Rebuild Index for Analytics"
 msgstr "Znovu sestavit index pro analýzu"
 
-#: includes/modules/analytics/class-analytics.php:470
+#: includes/modules/analytics/class-analytics.php:500
 msgid "Clear Cache"
 msgstr "Vymazání mezipaměti"
 
 #. translators: 1. Review Schema documentation link
-#: includes/modules/analytics/class-analytics.php:469
+#: includes/modules/analytics/class-analytics.php:499
 msgid "Clear analytics cache to re-calculate all the stats again."
 msgstr "Vymazáním mezipaměti analýzy znovu spočítejte všechny statistiky."
 
-#: includes/modules/analytics/class-analytics.php:467
+#: includes/modules/analytics/class-analytics.php:497
 msgid "Purge Analytics Cache"
 msgstr "Vyčistit mezipaměť analýzy"
 
 #. translators: Link to kb article
-#: includes/modules/analytics/class-analytics.php:445
+#: includes/modules/analytics/class-analytics.php:475
 msgid "See your Google Search Console, Analytics and AdSense data without leaving your WP dashboard. %s."
 msgstr "Podívejte se na údaje z Google Search Console, Analytics a AdSense, aniž byste museli opustit ovládací panel WP. %s."
 
-#: includes/modules/analytics/class-analytics.php:234
+#: includes/modules/analytics/class-analytics.php:243
 msgid "Now!"
 msgstr "Hned!"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:229
+#: includes/modules/analytics/class-analytics.php:238
 msgid "%s second"
 msgid_plural "%s seconds"
 msgstr[0] "%s vteřina"
@@ -1848,7 +1848,7 @@ msgstr[1] "%s vteřiny"
 msgstr[2] "%s vteřin"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:224
+#: includes/modules/analytics/class-analytics.php:233
 msgid "%s minute"
 msgid_plural "%s minutes"
 msgstr[0] "%s minuta"
@@ -1856,7 +1856,7 @@ msgstr[1] "%s minuty"
 msgstr[2] "%s minut"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:219
+#: includes/modules/analytics/class-analytics.php:228
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s hodina"
@@ -1864,7 +1864,7 @@ msgstr[1] "%s hodiny"
 msgstr[2] "%s hodin"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:214
+#: includes/modules/analytics/class-analytics.php:223
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s den"
@@ -1872,7 +1872,7 @@ msgstr[1] "%s dny"
 msgstr[2] "%s dní"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:209
+#: includes/modules/analytics/class-analytics.php:218
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s týden"
@@ -1880,7 +1880,7 @@ msgstr[1] "%s týdny"
 msgstr[2] "%s týdny"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:204
+#: includes/modules/analytics/class-analytics.php:213
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s měsíc"
@@ -1888,22 +1888,22 @@ msgstr[1] "%s měsíce"
 msgstr[2] "%s měsíců"
 
 #. translators: %s: amount of time
-#: includes/modules/analytics/class-analytics.php:199
+#: includes/modules/analytics/class-analytics.php:208
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s rok"
 msgstr[1] "%s roky"
 msgstr[2] "%s let"
 
-#: includes/modules/analytics/class-analytics.php:165
+#: includes/modules/analytics/class-analytics.php:174
 msgid "Rank Math is importing latest data from connected Google Services, %1$s remaining."
 msgstr "Nástroj Rank Math importuje nejnovější data z připojených služeb Google, zbývá %1$s."
 
-#: includes/modules/analytics/rest/class-rest.php:175
+#: includes/modules/analytics/rest/class-rest.php:140
 msgid "Sorry, no post id found."
 msgstr "Omlouváme se, žádný post id nalezen."
 
-#: includes/modules/analytics/rest/class-rest.php:150
+#: includes/modules/analytics/rest/class-rest.php:115
 msgid "Sorry, no preference found."
 msgstr "Je nám líto, nebyly nalezeny žádné preference."
 
@@ -2109,8 +2109,8 @@ msgid "Connected"
 msgstr "Připojen"
 
 #: includes/admin/views/plugin-activation.php:23
-#: includes/admin/wizard/views/search-console-ui.php:122
-#: includes/admin/wizard/views/search-console-ui.php:287
+#: includes/admin/wizard/views/search-console-ui.php:139
+#: includes/admin/wizard/views/search-console-ui.php:304
 msgid "Account"
 msgstr "Účet"
 
@@ -2966,10 +2966,7 @@ msgstr "Velký"
 msgid "You have not entered a tagline yet. It is a good idea to choose one. %1$sYou can fix this in the customizer%2$s."
 msgstr "Dosud jste nezadali slogan. Je to dobrý nápad vybrat si jeden. %1$s Můžete to opravit v úpravci%2$s."
 
-#. translators: 1. Review Schema documentation link
 #. translators: 1. Credits left 2. Buy more credits link
-#: includes/modules/analytics/class-analytics.php:469
-#: includes/modules/analytics/class-analytics.php:475
 #: includes/modules/content-ai/views/options.php:51
 msgid "here"
 msgstr "zde"
@@ -4863,7 +4860,7 @@ msgid "Fetching in Progress"
 msgstr "Načítání probíhá"
 
 #: includes/modules/analytics/views/options.php:78
-msgid "Update Data manually"
+msgid "Update data manually"
 msgstr "Ruční aktualizace dat"
 
 #: includes/opengraph/class-slack.php:323
@@ -4874,36 +4871,36 @@ msgstr "Položky"
 msgid "Warnings"
 msgstr "Upozornění"
 
-#: includes/modules/analytics/class-ajax.php:172
+#: includes/modules/analytics/class-ajax.php:174
 msgid "Google oAuth is not authorized."
 msgstr "Služba Google oAuth není autorizována."
 
-#: includes/modules/analytics/class-ajax.php:207
+#: includes/modules/analytics/class-ajax.php:209
 msgid "Not a valid settings founds to delete cache."
 msgstr "Není platné nastavení zjištěno, odstranit cache."
 
-#: includes/modules/analytics/class-analytics-common.php:296
+#: includes/modules/analytics/class-analytics-common.php:295
 #: includes/modules/analytics/views/email-reports/sections/summary.php:64
 msgid "Average Position"
 msgstr "Průměrná pozice"
 
-#: includes/modules/analytics/class-analytics-common.php:278
+#: includes/modules/analytics/class-analytics-common.php:277
 #: includes/modules/analytics/views/email-reports/sections/summary.php:20
 msgid "Total Impressions"
 msgstr "Celkový počet zobrazení"
 
-#: includes/modules/analytics/class-analytics-common.php:284
+#: includes/modules/analytics/class-analytics-common.php:283
 #: includes/modules/analytics/views/email-reports/sections/summary.php:34
 msgid "Total Clicks"
 msgstr "Celkových kliknutí"
 
-#: includes/modules/analytics/class-analytics-common.php:290
+#: includes/modules/analytics/class-analytics-common.php:289
 #: includes/modules/analytics/views/email-reports/sections/summary.php:50
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Total Keywords"
 msgstr "Klíčová slova celkem"
 
-#: includes/modules/status/class-system-status.php:194
+#: includes/modules/status/class-system-status.php:195
 msgid "Not found"
 msgstr "Nenalezeno"
 
@@ -4911,7 +4908,7 @@ msgstr "Nenalezeno"
 msgid "Response Code"
 msgstr "Kód odpovědi"
 
-#: includes/modules/analytics/google/class-request.php:225
+#: includes/modules/analytics/google/class-request.php:227
 msgid "Bad request. Please check the code."
 msgstr "Špatná žádost. Zkontrolujte kód."
 
@@ -4920,13 +4917,13 @@ msgid "Pages"
 msgstr "Stránky"
 
 #: includes/admin/class-setup-wizard.php:112
-#: includes/admin/wizard/views/search-console-ui.php:109
+#: includes/admin/wizard/views/search-console-ui.php:126
 #: includes/module/class-manager.php:206
 #: includes/modules/analytics/class-analytics-common.php:70
 #: includes/modules/analytics/class-analytics-common.php:141
-#: includes/modules/analytics/class-analytics.php:49
-#: includes/modules/analytics/class-analytics.php:410
-#: includes/modules/analytics/class-analytics.php:443
+#: includes/modules/analytics/class-analytics.php:48
+#: includes/modules/analytics/class-analytics.php:440
+#: includes/modules/analytics/class-analytics.php:473
 #: includes/modules/role-manager/class-capability-manager.php:63
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Analytics"
@@ -5253,11 +5250,11 @@ msgstr "Místo přesměrování zobrazte konzolu pro ladění. Pouze správci."
 msgid "Debug Redirections"
 msgstr "Přesměrování ladění"
 
-#: includes/modules/redirections/class-import-export.php:41
+#: includes/modules/redirections/class-import-export.php:63
 msgid "Export to Nginx config file"
 msgstr "Export do konfigurátoru Nginx"
 
-#: includes/modules/redirections/class-import-export.php:40
+#: includes/modules/redirections/class-import-export.php:62
 msgid "Export to .htaccess"
 msgstr "Exportovat do .htaccess"
 
@@ -5472,6 +5469,7 @@ msgstr "Aktivovat"
 
 #: includes/module/class-manager.php:255
 #: includes/modules/redirections/class-form.php:135
+#: includes/modules/analytics/assets/js/stats.js:1
 msgid "Status"
 msgstr "Stav"
 
@@ -6701,7 +6699,6 @@ msgid "Post Title"
 msgstr "Název příspěvku"
 
 #. translators: 1: current page number, 2: total number of pages.
-#. translators: current page and page count
 #: includes/replace-variables/class-advanced-variables.php:209
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Page %1$d of %2$d"
@@ -6775,26 +6772,26 @@ msgstr "Povolte podporu pro strukturovaná data, která přidává kód schémat
 msgid "Records the URLs on which visitors & search engines run into 404 Errors. You can also turn on Redirections to redirect the error causing URLs to other URLs."
 msgstr "Zaznamenává adresy URL, na kterých návštěvníci & vyhledávače narazí na chyby 404. Můžete také zapnout přesměrování a přesměrovat chybu způsobující adresy URL na jiné adresy URL."
 
-#: includes/class-installer.php:348
+#: includes/class-installer.php:349
 #: includes/settings/general/breadcrumbs.php:121
 msgid "404 Error: page not found"
 msgstr "Chyba 404: Stránka nebyla nalezena"
 
 #. translators: Search query term
 #. translators: placeholder
-#: includes/class-installer.php:347
+#: includes/class-installer.php:348
 #: includes/settings/general/breadcrumbs.php:110
 msgid "Results for %s"
 msgstr "Výsledky pro %s"
 
 #. translators: Archive title
 #. translators: placeholder
-#: includes/class-installer.php:345
+#: includes/class-installer.php:346
 #: includes/settings/general/breadcrumbs.php:98
 msgid "Archives for %s"
 msgstr "Archivy pro %s"
 
-#: includes/class-installer.php:343
+#: includes/class-installer.php:344
 #: includes/settings/general/breadcrumbs.php:65
 msgid "Home"
 msgstr "Domů"
@@ -6955,7 +6952,8 @@ msgstr "Vaše webové stránky: %s"
 #: includes/admin/wizard/class-sitemap.php:37
 #: includes/admin/wizard/views/google-connect.php:37
 #: includes/admin/wizard/views/rank-math-connect.php:39
-#: includes/admin/wizard/views/search-console-ui.php:313
+#: includes/admin/wizard/views/search-console-ui.php:108
+#: includes/admin/wizard/views/search-console-ui.php:330
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 msgid "Learn more."
 msgstr "Zjistit více."
@@ -7031,7 +7029,7 @@ msgstr "Přidejte se na FREE Facebook Group"
 #: includes/admin/class-option-center.php:270
 #: includes/admin/wizard/views/ready.php:45
 #: includes/modules/404-monitor/class-admin.php:170
-#: includes/modules/analytics/class-analytics.php:445
+#: includes/modules/analytics/class-analytics.php:475
 #: includes/modules/image-seo/class-admin.php:47
 #: includes/modules/instant-indexing/class-instant-indexing.php:196
 #: includes/modules/instant-indexing/class-instant-indexing.php:204
@@ -7201,7 +7199,7 @@ msgstr "Více"
 msgid "Your website is compatible to run Rank Math SEO"
 msgstr "Vaše webové stránky jsou kompatibilní pro spuštění Rank Math SEO"
 
-#: includes/admin/wizard/views/search-console-ui.php:206
+#: includes/admin/wizard/views/search-console-ui.php:223
 msgid "Click here."
 msgstr "Klikněte zde."
 
@@ -7241,7 +7239,7 @@ msgid "Settings File"
 msgstr "Soubor nastavení"
 
 #: includes/admin/views/import-export/import-export-panel.php:66
-#: includes/modules/redirections/class-import-export.php:54
+#: includes/modules/redirections/class-import-export.php:76
 msgid "Export"
 msgstr "Exportovat"
 
@@ -7690,7 +7688,7 @@ msgstr "Xml Sitemaps pomáhají vyhledávačům efektivněji indexovat obsah va�
 msgid "Sitemaps"
 msgstr "Mapy stránek"
 
-#: includes/admin/wizard/views/search-console-ui.php:74
+#: includes/admin/wizard/views/search-console-ui.php:76
 #: includes/modules/analytics/google/class-permissions.php:107
 #: includes/modules/seo-analysis/seo-analysis-tests.php:104
 msgid "Search Console"

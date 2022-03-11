@@ -97,7 +97,8 @@ class AdminScriptManager extends ScriptManager {
                     'bookingStatuses'        => MPHB()->postTypes()->booking()->statuses()->getLabels(),
                     'displayImport'          => __( 'Display imported bookings.', 'motopress-hotel-booking' ),
                     'processing'             => __( 'Processing...', 'motopress-hotel-booking' ),
-                    'cancelling'             => __( 'Cancelling...', 'motopress-hotel-booking' )
+                    'cancelling'             => __( 'Cancelling...', 'motopress-hotel-booking' ),
+					'deleteConfirmation'     => __( 'Want to delete?', 'motopress-hotel-booking' )
 				),
 				'settings'			 => array(
 					'firstDay'					 => MPHB()->settings()->dateTime()->getFirstDay(),

@@ -356,10 +356,23 @@
 
 			return null;
 		};
+                
+                // check if displaye in an iframe
+                this.inIframe = function () {
+                    try {
+                        return window.self !== window.top;
+                    } catch (e) {
+                        return true;
+                    }
+                }
 
 		// initialize
 		this.init = function () {
 			var _this = this;
+                        
+                        // bail if in iframe
+                        if ( this.inIframe() === true )
+                            return;
 
 			this.cookiesAccepted = this.getStatus( true );
 			this.noticeContainer = document.getElementById( 'cookie-notice' );
@@ -413,7 +426,7 @@
 			}
 			
 			// handle close icon
-			if ( closeIcon !== 'null' ) {
+			if ( closeIcon !== null ) {
 				closeIcon.addEventListener( 'click', function ( e ) {
 					e.preventDefault();
 					// Chrome double click event fix

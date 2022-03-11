@@ -5,7 +5,7 @@ Tags: elementor, polylang, multilingual, language switcher, languages, templates
 Requires at least: 5.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 2.0.3
+Stable tag: 2.0.6
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -194,6 +194,16 @@ There are quite a few:
 
 == Changelog ==
 
+= 2.0.6 =
+* Fixed Elementor Search Form url with correct language.
+
+= 2.0.5 =
+* Use Polylang custom flags.
+
+= 2.0.4 =
+* Added better info of template instances for translations on Theme Editor and WP admin list.
+* Minor tweaks on Language Switcher dropdown styles.
+
 = 2.0.3 =
 * Updated language switcher dropdown animated & toogle on mobile.
 * Added Elementor icon in posts list status.
@@ -282,7 +292,7 @@ Fixed critical error loading plugin classes when there are uppercase letters in 
 
 == Upgrade Notice ==
 
-= 2.0.3 =
+= 2.0.4 =
 **Warning** breaking changes with v1. Language Switcher and Dynamic Tags has been renamed and neeed to re-added again in your templates.
 
 = 1.0.2 =

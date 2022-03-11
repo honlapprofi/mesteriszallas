@@ -18,6 +18,38 @@ class BookingRepository extends AbstractPostRepository {
 	public function findById( $id, $force = false ){
 		return parent::findById( $id, $force );
 	}
+	
+	/**
+	 * 
+	 * @param int $customerId
+	 * @param array $atts
+	 * @param bool $all
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return array [ ID ] | [ \MPHB\Entity\Booking ]
+	 */
+	public function findAllByCustomer( $customerId, $atts = [], $all = true ) {
+		$requestAtts = array_merge( 
+			array(
+				'meta_query' => array(
+					array(
+						'key'   => 'mphb_customer_id',
+						'value' => $customerId
+					)
+				)
+			),
+			$atts
+		);
+		
+		$ids = $this->persistence->getPosts( $requestAtts );
+		
+		if( ! $all ) {
+			return $ids;
+		}
+		
+		return $this->mapPostsToEntity( $ids );
+	}
 
 	/**
 	 *
@@ -165,6 +197,7 @@ class BookingRepository extends AbstractPostRepository {
 		$bookingAtts['reserved_rooms'] = MPHB()->getReservedRoomRepository()->findAllByBooking( $postId );
 
 		$customerDetails = array(
+			'customer_id' => get_post_meta( $postId, 'mphb_customer_id', true ),
 			'email'		 => get_post_meta( $postId, 'mphb_email', true ),
 			'first_name' => get_post_meta( $postId, 'mphb_first_name', true ),
 			'last_name'	 => get_post_meta( $postId, 'mphb_last_name', true ),
@@ -232,6 +265,7 @@ class BookingRepository extends AbstractPostRepository {
 			'mphb_check_in_date'	 => $entity->getCheckInDate()->format( 'Y-m-d' ),
 			'mphb_check_out_date'	 => $entity->getCheckOutDate()->format( 'Y-m-d' ),
 			'mphb_note'				 => $entity->getNote(),
+			'mphb_customer_id'		 => $entity->getCustomer()->getCustomerId(),
 			'mphb_email'			 => $entity->getCustomer()->getEmail(),
 			'mphb_first_name'		 => $entity->getCustomer()->getFirstName(),
 			'mphb_last_name'		 => $entity->getCustomer()->getLastName(),
