@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice & Compliance for GDPR / CCPA
 Description: Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.
-Version: 2.2.1
+Version: 2.2.3
 Author: Hu-manity.co
 Author URI: https://hu-manity.co/
 Plugin URI: https://hu-manity.co/
@@ -12,7 +12,7 @@ Text Domain: cookie-notice
 Domain Path: /languages
 
 Cookie Notice
-Copyright (C) 2021, Hu-manity.co - info@hu-manity.co
+Copyright (C) 2022, Hu-manity.co - info@hu-manity.co
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) )
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	2.2.1
+ * @version	2.2.3
  */
 class Cookie_Notice {
 
@@ -86,7 +86,7 @@ class Cookie_Notice {
 			'update_notice'				=> true,
 			'update_delay_date'			=> 0
 		),
-		'version'	=> '2.2.1'
+		'version'	=> '2.2.3'
 	);
 	private $deactivaion_url = '';
 	
@@ -116,6 +116,7 @@ class Cookie_Notice {
 			self::$_instance->includes();
 
 			self::$_instance->bot_detect = new Cookie_Notice_Bot_Detect();
+			self::$_instance->dashboard = new Cookie_Notice_Dashboard();
 			self::$_instance->frontend = new Cookie_Notice_Frontend();
 			self::$_instance->settings = new Cookie_Notice_Settings();
 			self::$_instance->welcome = new Cookie_Notice_Welcome();
@@ -177,6 +178,7 @@ class Cookie_Notice {
 	 */
 	private function includes() {
 		include_once( plugin_dir_path( __FILE__ ) . 'includes/bot-detect.php' );
+		include_once( plugin_dir_path( __FILE__ ) . 'includes/dashboard.php' );
 		include_once( plugin_dir_path( __FILE__ ) . 'includes/frontend.php' );
 		include_once( plugin_dir_path( __FILE__ ) . 'includes/functions.php' );
 		include_once( plugin_dir_path( __FILE__ ) . 'includes/settings.php' );
@@ -245,14 +247,14 @@ class Cookie_Notice {
 		
 		// if visiting settings, mark notice as read
 		if ( ! empty( $_GET['page'] ) && $_GET['page'] === 'cookie-notice' && ! empty( $_GET['welcome'] ) ) {
-			$this->options['general'] = wp_parse_args( array( 'update_notice' => true ), $this->options['general'] );
+			$this->options['general'] = wp_parse_args( array( 'update_notice' => false ), $this->options['general'] );
 			update_option( 'cookie_notice_options', $this->options['general'] );
 		}
 		
 		// show notice, if no compliance only
 		if ( $this->options['general']['update_notice'] === true && empty( $this->status ) ) {
 			// set_transient( 'cn_show_welcome', 1 );
-			$this->add_notice( '<div class="cn-notice-text"><h2>' . __( 'Make sure your website complies with the latest cookie consent laws', 'cookie-notice' ) . '</h2><p>' . __( 'Run compliance check to learn if your website complies with the lastes consent record storage and cookie blocking requirements.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . admin_url( 'admin.php' ) . '?page=cookie-notice&welcome=1' . '" class="button button-primary">' . __( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . __( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', '', 'div' );
+			$this->add_notice( '<div class="cn-notice-text"><h2>' . __( 'Compliance fines exceeded &euro;1.3 BILLION in 2021. Avoid the risk by making sure your website complies with the latest cookie consent laws.', 'cookie-notice' ) . '</h2><p>' . __( 'Run compliance check to learn if your website complies with the latest consent record storage and cookie blocking requirements.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . admin_url( 'admin.php' ) . '?page=cookie-notice&welcome=1' . '" class="button button-primary cn-button">' . __( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . __( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', 'error', 'div' );
 		}
 	}
 

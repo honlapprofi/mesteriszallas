@@ -2,8 +2,13 @@
 
 namespace MPHB\Entities;
 
-class Customer
-{
+class Customer {
+    /**
+     * 
+     * @var int
+     */
+    private $customerId;
+    
     /**
      *
      * @var string
@@ -66,6 +71,7 @@ class Customer
 
     /**
      * @param array $atts
+     * @param string $atts['id'] - @since 4.2.0
      * @param string $atts['email']
      * @param string $atts['first_name']
      * @param string $atts['last_name'] Optional.
@@ -79,6 +85,7 @@ class Customer
     public function __construct($atts = array())
     {
         $defaultAtts = array(
+            'customer_id' => null,
             'email'      => '',
             'last_name'  => '',
             'first_name' => '',
@@ -98,6 +105,7 @@ class Customer
 
         $atts = array_merge($defaultAtts, $atts);
 
+        $this->customerId = (int) $atts['customer_id'];
         $this->email        = $atts['email'];
         $this->firstName    = $atts['first_name'];
         $this->lastName     = $atts['last_name'];
@@ -108,6 +116,26 @@ class Customer
         $this->zip          = $atts['zip'];
         $this->address1     = $atts['address1'];
         $this->customFields = $customAtts;
+    }
+    
+    /**
+     * 
+     * @since 4.2.0
+     * 
+     * @return int
+     */
+    public function getCustomerId() {
+        return $this->customerId;
+    }
+    
+    /**
+     * 
+     * @param int $id
+     * 
+     * @since 4.2.0
+     */
+    public function setCustomerId( $id ) {
+        $this->customerId = (int) $id;
     }
 
     /**

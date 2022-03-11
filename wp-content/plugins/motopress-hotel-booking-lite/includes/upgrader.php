@@ -31,6 +31,12 @@ class Upgrader {
 
 	/**
 	 *
+	 * @var Upgrades\BackgroundBookingUpgrader_4_2_0
+	 */
+	private $bgBookingUpgrader4_2_0;
+
+	/**
+	 *
 	 * @var Upgrades\BackgroundUpgrader
 	 */
 	private $bgUpgrader;
@@ -92,6 +98,12 @@ class Upgrader {
 		),
 		'4.1.0' => array(
 			'createTableApiKeys'
+		),
+		'4.2.0' => array(
+			'createTableCustomers',
+			'addMyAccountPage',
+			'fixForV4_2_0',
+			'flushRewriteRules'
 		)
 	);
 
@@ -100,6 +112,7 @@ class Upgrader {
 		$this->bgBookingUpgrader2_0_0	 = new Upgrades\BackgroundBookingUpgrader_2_0_0();
 		$this->bgBookingUpgrader2_2_0	 = new Upgrades\BackgroundBookingUpgrader_2_2_0();
 		$this->bgBookingUpgrader2_3_0	 = new Upgrades\BackgroundBookingUpgrader_2_3_0();
+		$this->bgBookingUpgrader4_2_0	 = new Upgrades\BackgroundBookingUpgrader_4_2_0();
 		$this->bgUpgrader				 = new Upgrades\BackgroundUpgrader();
 
 		$this->checkVersion();
@@ -168,6 +181,7 @@ class Upgrader {
         do_action($this->bgBookingUpgrader2_0_0->getIdentifier() . '_cron');
         do_action($this->bgBookingUpgrader2_2_0->getIdentifier() . '_cron');
         do_action($this->bgBookingUpgrader2_3_0->getIdentifier() . '_cron');
+		do_action($this->bgBookingUpgrader4_2_0->getIdentifier() . '_cron');
 
 		if (!$this->bgUpgrader->isInProgress()) {
             MPHB()->notices()->hideNotice('force_upgrade');
@@ -387,6 +401,52 @@ class Upgrader {
 		$this->bgUpgrader->waitAction( $this->bgBookingUpgrader2_3_0->getIdentifier() . '_complete' );
 
 		$this->bgBookingUpgrader2_3_0->dispatch();
+
+		$this->bgUpgrader->pause();
+
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function fixForV4_2_0() {
+		if ( $this->bgBookingUpgrader4_2_0->isInProgress() ) {
+			$this->bgUpgrader->pause();
+			return __FUNCTION__;
+		}
+		
+		$atts = array(
+			'fields' => 'ids',
+			'status' => 'confirmed',
+			'meta_query' => array(
+				array(
+					'key'   => '_mphb_sync_id',
+					'compare' => "NOT EXISTS"
+				)
+			),
+			'order' => 'ASC',
+			'orderby' => 'date'
+		);
+		
+		$bookings = MPHB()->getBookingPersistence()->getPosts( $atts );
+		
+		if( empty( $bookings ) ) {
+			return false;
+		}
+		
+		$bookingsChunked = array_chunk( $bookings, Upgrades\BackgroundBookingUpgrader_4_2_0::BATCH_SIZE );
+
+		foreach ( $bookingsChunked as $bookingIds ) {
+			$this->bgBookingUpgrader4_2_0->data( $bookingIds )->save();
+		}
+		
+		$this->setTotalQueueSize( $this->getTotalQueueSize() + 1 );
+
+		$this->bgUpgrader->waitAction( $this->bgBookingUpgrader4_2_0->getIdentifier() . '_complete' );
+
+		$this->bgBookingUpgrader4_2_0->dispatch();
 
 		$this->bgUpgrader->pause();
 
@@ -660,6 +720,75 @@ class Upgrader {
 		           . " KEY consumer_secret (consumer_secret)"
 		           . ") CHARSET=utf8 AUTO_INCREMENT=1" );
 
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function createTableCustomers() {
+		global $wpdb;
+		
+		$customers = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mphb_customers ("
+			. " customer_id INT NOT NULL AUTO_INCREMENT,"
+			. " user_id INT NULL UNIQUE,"
+			. " email VARCHAR(60) NOT NULL UNIQUE,"
+			. " first_name VARCHAR(60) NOT NULL,"	
+			. " last_name VARCHAR(60) NOT NULL,"
+			. " phone VARCHAR(20) NOT NULL,"
+			. " country VARCHAR(2) NOT NULL,"
+			. " state VARCHAR(20) NOT NULL,"
+			. " city VARCHAR(20) NOT NULL,"
+			. " address1 text NOT NULL,"
+			. " zip VARCHAR(10) NOT NULL,"
+			. " bookings INT NOT NULL,"
+			. " date_registered DATETIME DEFAULT CURRENT_TIMESTAMP,"
+			. " last_active DATETIME NULL,"
+			. " KEY customer_id (customer_id)"
+			. ") CHARSET=utf8 AUTO_INCREMENT=1";
+			
+			$customersMeta = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mphb_customers_meta ("
+			. " meta_id INT NOT NULL AUTO_INCREMENT,"
+			. " customer_id INT NULL,"
+			. " meta_key varchar(255) NULL,"
+			. " meta_value longtext NULL,"
+			. " KEY meta_id (meta_id)"
+			. ") CHARSET=utf8 AUTO_INCREMENT=1";
+		
+		$wpdb->query($customers);
+		$wpdb->query($customersMeta);
+		
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function addMyAccountPage() {
+		global $user_ID;
+		
+		$myAccountPage = MPHB()->settings()->pages()->getMyAccountPageId();
+		
+		if( empty( $myAccountPage ) ) {
+			$title	 = __( 'My Account', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getAccount()->generateShortcode();
+
+			$page = array(
+				'post_type'		 => 'page',
+				'post_author'	 => $user_ID,
+				'post_status'	 => 'publish',
+				'post_content'	 => $content,
+				'post_title'	 => $title
+			);
+
+			$pageid = wp_insert_post( $page );
+			if ( !is_wp_error( $pageid ) ) {
+				MPHB()->settings()->pages()->setMyAccountPageId( $pageid );
+			}
+		}
+		
 		return false;
 	}
 	

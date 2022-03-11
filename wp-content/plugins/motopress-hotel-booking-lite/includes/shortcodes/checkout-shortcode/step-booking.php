@@ -6,6 +6,9 @@ use \MPHB\Entities;
 use \MPHB\Shortcodes\CheckoutShortcode;
 use \MPHB\Utils\ParseUtils;
 use \MPHB\Utils\ValidateUtils;
+use \MPHB\UsersAndRoles\Customers;
+use \MPHB\UsersAndRoles\Customer;
+use \MPHB\UsersAndRoles\User;
 
 class StepBooking extends Step {
 
@@ -118,6 +121,13 @@ class StepBooking extends Step {
 		// Generate price breakdown before save: save() will trigger some emails,
 		// which require price breakdown in their text. See MB-1027 for more details
 		$this->booking->getPriceBreakdown();
+		
+		$isCustomerCreated = $this->createCustomer();
+		
+		if( ! is_wp_error( $isCustomerCreated ) ) {
+			$this->customer->setCustomerId( $isCustomerCreated );
+			$this->booking->setCustomer( $this->customer );
+		}
 
 		$isCreated = MPHB()->getBookingRepository()->save( $this->booking );
 
@@ -403,10 +413,10 @@ class StepBooking extends Step {
     {
         $input = $_POST;
         $customerData = ParseUtils::parseCustomer($input, $errors);
-
-        if ($customerData !== false) {
-            $this->customer = new Entities\Customer($customerData);
-        } else {
+		
+		if( $customerData !== false ) {
+			$this->customer = new Entities\Customer($customerData);
+		} else {
             $this->errors += $errors;
             $this->customer = null;
         }
@@ -521,5 +531,16 @@ class StepBooking extends Step {
 
 		MPHB()->getBookingRepository()->delete( $this->unfinishedBooking );
 	}
-
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return int|\WP_Error
+	 */
+	protected function createCustomer() {
+		$bookingCustomer = $this->booking->getCustomer();
+		
+		return MPHB()->customers()->createCustomerOnBooking( $bookingCustomer );
+	}
 }

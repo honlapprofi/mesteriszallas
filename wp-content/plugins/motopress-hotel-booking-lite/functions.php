@@ -107,6 +107,18 @@ function mphb_has_cookie( $name ){
 	return isset( $_COOKIE[$name] );
 }
 
+/**
+ * 
+ * @param string $name
+ * 
+ * @since 4.2.0
+ */
+function mphb_unset_cookie( $name ) {
+	if( isset( $_COOKIE[$name] ) ) {
+		unset( $_COOKIE[$name] );
+	}
+}
+
 function mphb_is_checkout_page(){
 	$checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
 	return $checkoutPageId && is_page( $checkoutPageId );
@@ -1701,4 +1713,47 @@ function mphb_help_tip( $tip, $allow_html = false ) {
 	}
 
 	return '<span class="mphb-help-tip" data-tip="' . $tip . '"></span>';
+}
+
+/**
+ *
+ * @param  string $endpoint  Endpoint slug.
+ * @param  string $value     Query param value.
+ * @param  string $permalink Permalink.
+ * 
+ * @since 4.2.0
+ *
+ * @return string
+ */
+function mphb_create_url( $endpoint, $value = '', $permalink = '' ) {
+	global $wp;
+	
+	if ( ! $permalink ) {
+		$permalink = get_permalink();
+	}
+
+	$query_vars = $wp->query_vars;
+	$endpoint   = ! empty( $query_vars[ $endpoint ] ) ? $query_vars[ $endpoint ] : $endpoint;
+	
+	if ( get_option( 'permalink_structure' ) ) {
+		if ( strstr( $permalink, '?' ) ) {
+			$query_string = '?' . wp_parse_url( $permalink, PHP_URL_QUERY );
+			$permalink    = current( explode( '?', $permalink ) );
+		} else {
+			$query_string = '';
+		}
+		$url = trailingslashit( $permalink );
+
+		if ( $value ) {
+			$url .= trailingslashit( $endpoint ) . user_trailingslashit( $value );
+		} else {
+			$url .= user_trailingslashit( $endpoint );
+		}
+
+		$url .= $query_string;
+	} else {
+		$url = add_query_arg( $endpoint, $value, $permalink );
+	}
+
+	return $url;
 }

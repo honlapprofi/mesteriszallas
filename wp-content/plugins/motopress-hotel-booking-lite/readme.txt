@@ -3,8 +3,8 @@ Contributors: MotoPress
 Donate link: https://motopress.com/
 Requires at least: 4.7
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
-Tested up to: 5.8
-Stable tag: 4.1.1
+Tested up to: 5.9
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,8 @@ The #1 Hotel Booking and Vacation Rental Plugin for WordPress. Online payments, 
 The WordPress Hotel Booking plugin by MotoPress is the ultimate WordPress property rental system with a real lodging business in mind.
 
 * [Plugin Demo](https://hbdemo.getmotopress.com/) with the Dashboard access.
-* [40+ Video Guides](https://www.youtube.com/playlist?list=PLbDImkyrISyKQccIsVDp98UXLIc1Yc3mn)
+* [Video Overview](https://www.youtube.com/watch?v=TmKqVH7o8ds)
+* [30+ Video Guides](https://www.youtube.com/playlist?list=PLbDImkyrISyKQccIsVDp98UXLIc1Yc3mn)
 * [Docs](https://motopress.com/documentation/wordpress/plugins/hotel-booking/) - step-by-step guides to set up and manage the plugin.
 * [Free Elementor WordPress hotel template](https://wordpress.org/themes/albatross/)
 
@@ -26,11 +27,7 @@ This WordPress booking system was developed for hotel and vacation rental owners
 
 The admin dashboard of WordPress hotel plugin is absolutely user-friendly making it easy to create a hotel or property renting website for non-tech people.
 
-Get a better sense of how the Hotel Booking plugin for WordPress works:
-
-[youtube https://www.youtube.com/watch?v=TmKqVH7o8ds]
-
-### wp hotel booking plugin features:
+### wp hotel booking plugin features
 
 * It can handle **unlimited properties** (unlimited rooms in a hotel, bedspace in a hostel) as well can be easily optimized for just **one property** (a villa, an apartment, etc.).
 * Structured property details: description, a photo gallery, amenities, services, a view, bed types, max occupancy, property size and more.
@@ -49,13 +46,13 @@ Get a better sense of how the Hotel Booking plugin for WordPress works:
 * Currency support.
 * Professional localization into 14 languages: Portuguese, Polish, Russian, Spanish, Turkish, Swedish, Italian, Hungarian, Czech, Chinese, Dutch, French, Arabic and German. Additionally, the plugin is officially compatible with WPML and is custom translations ready.
 
-### Property management system:
+### Property management system
 
 * **Inventory control**: if the property is booked, it automatically becomes unavailable for reservations, no manual control is needed.
 * Edit **amenities and services** available for a property in clicks.
 * **Block all or individual accommodations** for a certain period of time (maintenance, special events) by setting not check-in, not check-out or not stay-in rules.
 
-### Handling bookings:
+### Handling bookings
 
 * 3 booking **confirmation modes**:
  1. by **admin manually**;
@@ -75,7 +72,23 @@ Get a better sense of how the Hotel Booking plugin for WordPress works:
 * Handy backoffice for managing bookings.
 * Customizable booking widget.
 
-### Hotel Booking Plugin Addons:
+### User roles and capabilities
+
+You can restrict or grant access to the Hotel Booking plugin, thus, for example, allow some people to only view bookings and others to perform more tasks with payments, clients, and more. The Hotel Booking plugin provides two custom user roles for this task:
+
+* Hotel Manager
+* Hotel Worker
+* Hotel Customer
+
+### User area for customers
+
+The user area for customers allows them to log in, view bookings and speed up all future reservations thanks to the saved and pre-populated customer info at checkout. Website admins can set the plugin to create user accounts automatically at checkout or let customers create ones manually.
+
+### REST API
+
+The Hotel Booking REST API is built on top of the WordPress REST API, ensuring a robust and secure code, thus helping you use our product in any application and create new experiences.
+
+### Hotel Booking Plugin Addons
 
 [Hotel Booking plugin addons](https://motopress.com/products/category/hotel-booking-addons/?utm_source=wp-org-hb-lite-page&utm_medium=text-link&utm_content=hotel-booking-addons) are available for adding custom functionality to your rental website:
 
@@ -87,7 +100,7 @@ Get a better sense of how the Hotel Booking plugin for WordPress works:
 * [Hotel Booking Notifier](https://motopress.com/products/hotel-booking-notifier?utm_source=wp_org_hb_page&utm_medium=hotel-booking-notifier) addon - create automated event-driven emails before and after arrival/departure.
 * [Hotel Booking Checkout Fields](https://motopress.com/products/hotel-booking-checkout-fields/) addon - edit the form at the checkout by customizing current fields or adding new ones.
 
-### Pro Features:
+### Pro Features
 
 * **Automatic bookings synchronization with OTAs** (exchange calendars via iCal) like Booking.com, Airbnb, TripAdvisor or HomeAway. This will help you rent out accommodations on different platforms simultaneously and avoid overbooking.
 * Priority updates (new features released regularly).
@@ -137,6 +150,12 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
+= 4.2.1, Feb 21 2022 =
+* Improved compatibility with the image lazy-loading feature.
+
+= 4.2.0, Feb 16 2022 =
+* Added the user area for customers that allows them to log in, view bookings and speed up reservations with pre-populated info at checkout. Website admins can set the plugin to create user accounts automatically or let customers create ones manually.
+
 = 4.1.1, Dec 22 2021 =
 * Minor bugfixes and improvements.
 
@@ -150,9 +169,6 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 * New: Added the new Hotel Manager and Hotel Worker user roles that define access to the Hotel Booking plugin settings and menus. Note: you might need to change user roles you used before this update.
 * Added the ability to translate default option in the select field of Attributes.
 * Improved ical synchronization logs removal from database.
-
-= 3.9.14, Oct 13 2021 =
-* Added support for Hotel Booking Multi-Currency addon.
 
 --------
 

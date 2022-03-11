@@ -77,6 +77,7 @@ class Wizard {
 		$this->addBookingCanceledPage( $checkoutPageId );
 		$this->addReservationReceivedPage( $checkoutPageId );
 		$this->addFailedTransactionPage( $checkoutPageId );
+		$this->addMyAccountPage();
 		$this->pass();
 	}
 
@@ -171,6 +172,23 @@ class Wizard {
 		$id		 = $this->createPage( $title, $content, $parentId );
 		if ( !is_wp_error( $id ) ) {
 			MPHB()->settings()->pages()->setPaymentFailedPage( $id );
+		}
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function addMyAccountPage() {
+		$title	 = __( 'My Account', 'motopress-hotel-booking' );
+		$content = MPHB()->getShortcodes()->getAccount()->generateShortcode();
+		$id = $this->createPage( $title, $content );
+		
+		if ( !is_wp_error( $id ) ) {
+			MPHB()->settings()->pages()->setMyAccountPageId( $id );
+			return $id;
+		} else {
+			return 0;
 		}
 	}
 

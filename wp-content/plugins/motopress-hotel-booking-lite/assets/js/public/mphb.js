@@ -2227,6 +2227,20 @@ MPHB.GuestsChooser = can.Control.extend(
     }
 );
 
+( function( $ ) {
+    $( '#mphb-render-checkout-login' ).click( function( e ) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        var form = $( this ).parents( '.mphb-login-form-wrap' ).find( '.mphb-login-form' );
+        
+        if( form.hasClass( 'mphb-hide' ) ) {
+            form.removeClass( 'mphb-hide' );
+        } else {
+            form.addClass( 'mphb-hide' );
+        }
+    } );
+} )( jQuery );
 /**
  * @requires ./gateway.js
  *

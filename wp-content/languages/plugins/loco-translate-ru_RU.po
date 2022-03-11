@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-08 09:23:52+0000\n"
+"PO-Revision-Date: 2022-03-08 14:25:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,24 +68,20 @@ msgstr "PO файл сохранен, созданы файлы MO/JSON"
 msgid "JSON compilation failed for %s"
 msgstr "Компиляция JSON не удалась для %s"
 
-#: src/data/Settings.php:179
-msgid "Loco Translate 2.5 adds supports for JSON language pack generation."
-msgstr "Loco Translate 2.5 добавляет поддержку для генерации языкового пакета JSON."
-
-#: tpl/admin/config/version.php:75
+#: tpl/admin/config/version.php:74
 msgid "Update Now"
 msgstr "Обновить сейчас"
 
 #. translators: Where %s is the full version number of WordPress
-#: tpl/admin/config/version.php:69
+#: tpl/admin/config/version.php:68
 msgid "WordPress %s"
 msgstr "WordPress %s"
 
 #. translators: (1) Name of software, e.g. "WordPress" (2) Version number, e.g.
 #. "5.6"
-#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:72
-msgid "Your version of %1$s is very old. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
-msgstr "Ваша версия %1$s очень старая. Мы рекомендуем вам обновиться как минимум до %2$s, но желательно до последней стабильной версии."
+#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:71
+msgid "Your version of %1$s is out of date. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
+msgstr "Ваша версия %1$s устарела. Мы рекомендуем вам обновить ее как минимум до v%2$s, но желательно до последней стабильной версии."
 
 #. translators: Where %s is the full version number of PHP
 #: tpl/admin/config/version.php:49
@@ -244,15 +240,15 @@ msgstr[0] "%s строка c пометкой НЕ ТОЧНАЯ"
 msgstr[1] "%s строки с пометкой НЕ ТОЧНЫЕ"
 msgstr[2] "%s строк с пометкой НЕ ТОЧНЫЕ"
 
-#: tpl/admin/config/apis.php:142
+#: tpl/admin/config/apis.php:121
 msgid "See full disclaimer"
 msgstr "Посмотреть полную оговорку"
 
-#: tpl/admin/config/apis.php:141
+#: tpl/admin/config/apis.php:120
 msgid "Third party services are subject to their own terms of use and may incur costs from the provider"
 msgstr "Услуги третьих сторон подлежат их собственным условиям использования и могут понести расходы от поставщика"
 
-#: tpl/admin/config/apis.php:139
+#: tpl/admin/config/apis.php:118
 msgid "Important"
 msgstr "Важно"
 
@@ -386,7 +382,7 @@ msgstr "Доступ к файлу запрещен"
 msgid "View template"
 msgstr "Посмотреть шаблон"
 
-#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:76
+#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:75
 msgid "Install manually"
 msgstr "Установить вручную"
 
@@ -572,10 +568,10 @@ msgid "See all core translations"
 msgstr "См. все переводы ядра"
 
 #: src/admin/bundle/LocaleController.php:130
-#: src/admin/file/EditController.php:166 src/data/Settings.php:180
-#: tpl/admin/common/inc-fsconn.php:16 tpl/admin/common/inc-fsconn.php:41
-#: tpl/admin/config/apis.php:149 tpl/admin/config/prefs.php:45
-#: tpl/admin/config/settings.php:234 tpl/admin/errors/no-backups.php:22
+#: src/admin/file/EditController.php:166 tpl/admin/common/inc-fsconn.php:16
+#: tpl/admin/common/inc-fsconn.php:41 tpl/admin/config/apis.php:128
+#: tpl/admin/config/prefs.php:45 tpl/admin/config/settings.php:234
+#: tpl/admin/errors/no-backups.php:22
 msgid "Documentation"
 msgstr "Документация"
 
@@ -608,7 +604,7 @@ msgid "Creating this file requires permission"
 msgstr "Создание это файла требует дополнительные разрешения"
 
 #. Translators: Plural category for zero quantity
-#: src/Locale.php:414
+#: src/Locale.php:405
 msgctxt "Plural category"
 msgid "Zero"
 msgstr "Ноль"
@@ -644,37 +640,37 @@ msgid "Child theme declares the same Text Domain as the parent theme"
 msgstr "Дочерняя тема объявляет тот же текст домена, что и родительская"
 
 #. Translators: General plural category not covered by other forms
-#: src/Locale.php:424
+#: src/Locale.php:415
 msgctxt "Plural category"
 msgid "Other"
 msgstr "Мн. число (для 5, 6 ...)"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:422
+#: src/Locale.php:413
 msgctxt "Plural category"
 msgid "Many"
 msgstr "Мн. число (2 ...)"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:420
+#: src/Locale.php:411
 msgctxt "Plural category"
 msgid "Few"
 msgstr "2, 3, 4"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:418
+#: src/Locale.php:409
 msgctxt "Plural category"
 msgid "Two"
 msgstr "Два"
 
 #. Translators: Plural category for singular quantity
-#: src/Locale.php:416
+#: src/Locale.php:407
 msgctxt "Plural category"
 msgid "One"
 msgstr "1, 21, 31"
 
 #. Translators: Plural category for languages that have no plurals
-#: src/Locale.php:406
+#: src/Locale.php:397
 msgctxt "Plural category"
 msgid "All forms"
 msgstr "Все формы"
@@ -1413,16 +1409,16 @@ msgstr "Ядро WordPress"
 msgid "Loco interrupted by output from %s:%u"
 msgstr "Вывод информации из %s:%u прервал Loco"
 
-#: src/mvc/FileParams.php:151
+#: src/mvc/FileParams.php:153
 msgid "%s ago"
 msgstr "%s назад"
 
 #. translators: relative time when something happened in the last 30 seconds
-#: src/mvc/FileParams.php:149
+#: src/mvc/FileParams.php:151
 msgid "Just now"
 msgstr "Только что"
 
-#: src/mvc/FileParams.php:145
+#: src/mvc/FileParams.php:147
 msgid "Y/m/d"
 msgstr "Y/m/d"
 
@@ -1684,7 +1680,7 @@ msgstr "Файл PO сохранён, но не удалось скомпили�
 msgid "PO file saved and MO file compiled"
 msgstr "Файл PO сохранен, файл MO скомпилирован"
 
-#: src/fs/Revisions.php:220
+#: src/fs/Revisions.php:221
 msgid "Failed to create backup file in \"%s\". Check file permissions or disable backups"
 msgstr "Не удалось создать резервную копию файла в «%s». Проверьте права доступа к файлу или отключите создание резервных копий."
 
@@ -1997,7 +1993,7 @@ msgstr "Темы"
 msgid "Invalid locale"
 msgstr "Неверный язык"
 
-#: loco.php:143
+#: loco.php:141
 msgid "Loco Translate requires the \"%s\" PHP extension. Ask your hosting provider to install it"
 msgstr "Loco Translate требует расширения PHP \"%s\". Попросите хостинг-провайдера установить его"
 
@@ -2020,7 +2016,7 @@ msgstr "Поиск фразы"
 msgid "Template file"
 msgstr "Файл шаблона"
 
-#: tpl/admin/config/apis.php:148 tpl/admin/config/prefs.php:44
+#: tpl/admin/config/apis.php:127 tpl/admin/config/prefs.php:44
 #: tpl/admin/config/settings.php:233
 msgid "Save settings"
 msgstr "Сохранить настройки"

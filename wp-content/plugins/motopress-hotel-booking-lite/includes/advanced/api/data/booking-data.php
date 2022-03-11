@@ -330,7 +330,7 @@ class BookingData extends AbstractPostData {
 						),
 						'status'   => array(
 							'description' => 'Payment status.',
-							'type'        => 'integer',
+							'type'        => 'string',
 							'context'     => array( 'view', 'edit' ),
 							'readonly'    => true,
 						),
@@ -396,7 +396,7 @@ class BookingData extends AbstractPostData {
 						'date_utc' => array(
 							'description' => 'Note date in UTC.',
 							'type'        => 'string',
-							'format'      => 'date',
+							'format'      => 'date-time',
 						),
 					),
 				),

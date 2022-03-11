@@ -100,12 +100,19 @@ class Emails {
 		);
 
 		$emails[] = new Booking\Customer\ApprovedEmail( array(
-			'id' => 'customer_approved_booking',
+			'id' => 'customer_approved_booking'
 			), Templaters\EmailTemplater::create( array(
 				'booking'			 => true,
                 'booking_details'    => true,
 				'user_cancellation'	 => true,
                 'payment'            => true
+			) )
+		);
+		
+		$emails[] = new Booking\Customer\RegistrationEmail( array(
+			'id' => 'customer_registration',
+			), Templaters\EmailTemplater::create( array(
+				'customer_registration' => true
 			) )
 		);
 
@@ -137,7 +144,8 @@ class Emails {
 		add_action( 'mphb_booking_confirmed_with_payment', array( $this, 'sendBookingConfirmedWithPaymentEmail' ), 10, 2 );
 		add_action( 'mphb_customer_confirmed_booking', array( $this->getEmail( 'admin_customer_confirmed_booking' ), 'trigger' ) );
 		add_action( 'mphb_customer_cancelled_booking', array( $this->getEmail( 'admin_customer_cancelled_booking' ), 'trigger' ) );
-
+		add_action( 'mphb_send_customer_registration_email', array( $this->getEmail( 'customer_registration' ), 'triggerCustomerRegistration' ), 10, 2 );
+		
 		add_action( 'current_screen', array( $this, 'showDeprecatedTagsNotice' ) );
 	}
 
@@ -247,6 +255,10 @@ class Emails {
 	 */
 	public function getCancellationTemplater(){
 		return $this->cancellationTemplater;
+	}
+	
+	public function getCustomerRegistrationTemplater() {
+		return $this->customerRegistrationTemplater;
 	}
 
 }

@@ -32,7 +32,15 @@ abstract class Step {
 	 */
 	protected function parseCheckInDate(){
 		$this->checkInDate	 = null;
+		
 		$dateString			 = filter_input( INPUT_POST, 'mphb_check_in_date' );
+		
+		if( empty( $dateString ) ) {
+			$dateString = filter_input( INPUT_COOKIE, 'mphb_check_in_date' );
+		}
+		
+		mphb_set_cookie( 'mphb_check_in_date', $dateString );
+		
 		$checkInDate		 = \DateTime::createFromFormat( MPHB()->settings()->dateTime()->getDateTransferFormat(), $dateString );
 		$todayDate			 = \DateTime::createFromFormat( 'Y-m-d', mphb_current_time( 'Y-m-d' ) );
 
@@ -61,6 +69,13 @@ abstract class Step {
 	protected function parseCheckOutDate(){
 		$this->checkOutDate	 = null;
 		$dateString			 = filter_input( INPUT_POST, 'mphb_check_out_date' );
+		
+		if( empty( $dateString ) ) {
+			$dateString			 = filter_input( INPUT_COOKIE, 'mphb_check_out_date' );
+		}
+		
+		mphb_set_cookie( 'mphb_check_out_date', $dateString );
+		
 		$checkOutDate		 = \MPHB\Utils\DateUtils::createCheckOutDate( MPHB()->settings()->dateTime()->getDateTransferFormat(), $dateString );
 
         $checkOutDate = apply_filters('mphb_sc_checkout_parse_check_out_date', $checkOutDate, $dateString, $this->checkInDate);

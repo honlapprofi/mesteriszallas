@@ -90,13 +90,14 @@ function cpel_is_translation( $post_id = null ) {
  * Flag code
  *
  * @since 2.0.0
+ * @since 2.0.5 don't return code for custom flags
  *
  * @param  string $flag_url
  * @return string|bool  flag code or false
  */
 function cpel_flag_code( $flag_url ) {
 
-	return preg_match( '/polylang(?:\/flags)?\/(\w+).(?:jpg|png|svg)$/i', $flag_url, $matchs ) ? $matchs[1] : false;
+	return preg_match( '/polylang\/flags\/(\w+).(?:jpg|png|svg)$/i', $flag_url, $matchs ) ? $matchs[1] : false;
 
 }
 

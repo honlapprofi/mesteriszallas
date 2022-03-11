@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-03 11:57:45+0000\n"
+"PO-Revision-Date: 2022-02-16 09:49:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,321 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
+
+#: modules/library/documents/page.php:65
+msgid "Add New Page Template"
+msgstr "Přidat novou šablonu"
+
+#: modules/usage/usage-reporter.php:21
+msgid "Elements Usage"
+msgstr "Použitím Elements"
+
+#: modules/favorites/module.php:58
+msgid "Mark widgets as favorites by right clicking them. Favorite widgets will always appear at the top of the editor panel for easy access."
+msgstr "Kliknutím pravým tlačítkem přidáte widget do Oblíbených, které se vždy zobrazují v horní části panelu. "
+
+#: modules/favorites/module.php:57
+msgid "Favorite Widgets"
+msgstr "Oblíbené widgety"
+
+#. translators: 1: Integration settings link open tag, 2: Create API key link
+#. open tag, 3: Link close tag.
+#: includes/widgets/google-maps.php:117
+msgid "Set your Google Maps API Key in Elementor's %1$sIntegrations Settings%3$s page. Create your key %2$shere.%3$s"
+msgstr "Vložte Google Maps API Klíč do stránek Elementoru na %1$sIntegrations Settings%3$s. Klíč vytvoříte %2$shere.%3$s "
+
+#: includes/widgets/common.php:788
+msgid "Y Anchor Point"
+msgstr "Y kotevní bod"
+
+#: includes/widgets/common.php:760
+msgid "X Anchor Point"
+msgstr "X kotevní bod"
+
+#: includes/widgets/common.php:688 includes/widgets/common.php:692
+msgid "Flip Vertical"
+msgstr "Převrátit svisle"
+
+#: includes/widgets/common.php:669 includes/widgets/common.php:673
+msgid "Flip Horizontal"
+msgstr "Převrátit vodorovně"
+
+#: includes/widgets/common.php:646
+msgid "Skew Y"
+msgstr "Zkosit Y"
+
+#: includes/widgets/common.php:625
+msgid "Skew X"
+msgstr "Zkosit X"
+
+#: includes/widgets/common.php:613
+msgid "Skew"
+msgstr "Zkosit"
+
+#: includes/widgets/common.php:588
+msgid "Scale Y"
+msgstr "Měřítko Y"
+
+#: includes/widgets/common.php:565
+msgid "Scale X"
+msgstr "Měřítko X"
+
+#: includes/widgets/common.php:531
+msgid "Keep Proportions"
+msgstr "Zachovat proporce"
+
+#: includes/widgets/common.php:465
+msgid "Offset X"
+msgstr "Odsazení X"
+
+#: includes/widgets/common.php:491
+msgid "Offset Y"
+msgstr "Odsazení Y"
+
+#: includes/widgets/common.php:429
+msgid "Perspective"
+msgstr "Perspektiva"
+
+#: includes/widgets/common.php:407
+msgid "Rotate Y"
+msgstr "Otočit Y"
+
+#: includes/widgets/common.php:385
+msgid "Rotate X"
+msgstr "Otočit X"
+
+#: includes/widgets/common.php:369
+msgid "3D Rotate"
+msgstr "Otočit 3D"
+
+#: includes/widgets/common.php:313
+msgid "Transform"
+msgstr "Transformace"
+
+#: includes/settings/settings.php:647
+msgid "Custom Code is a tool gives you one place where you can insert scripts, rather than dealing with dozens of different plugins and deal with code."
+msgstr "Vlastní kód je nástroj, pomocí kterého snadno můžete do kódu vkládat Vaše vlastní skripty. "
+
+#: includes/settings/settings.php:646
+msgid "Add Your Custom Code"
+msgstr "Vložit Váš vlastní kód"
+
+#: includes/settings/settings.php:164 includes/settings/settings.php:165
+msgid "Custom Code"
+msgstr "Vlastní kód"
+
+#: includes/editor-templates/panel-elements.php:34
+msgid "For easy access, favorite the widgets you use most often by right clicking > Add to Favorites."
+msgstr "Pravým tlačítkem přidáte často používaný Widget do Oblíbených.  "
+
+#: includes/controls/groups/typography.php:221
+msgctxt "Typography Control"
+msgid "Word Spacing"
+msgstr "Mezery mezi slovy"
+
+#: includes/controls/groups/text-stroke.php:112
+msgctxt "Text Stroke Control"
+msgid "Text Stroke"
+msgstr "Síla textu"
+
+#: includes/controls/groups/text-stroke.php:86
+msgid "Stroke Color"
+msgstr "Síla barvy"
+
+#: includes/controls/groups/text-stroke.php:60
+msgid "Text Stroke"
+msgstr "Síla textu"
+
+#: includes/admin-templates/beta-tester.php:53
+msgid "Privacy Policy"
+msgstr "Zásady ochrany osobních údajů"
+
+#: includes/admin-templates/beta-tester.php:48
+msgid "Terms of Service"
+msgstr "Podmínky služby"
+
+#. translators: 1. "Terms of service" link, 2. "Privacy policy" link
+#: includes/admin-templates/beta-tester.php:44
+msgid "By clicking Sign Up, you agree to Elementor's %1$s and %2$s"
+msgstr "Kliknutím na Přihlášení souhlasíte s Elementorem %1$s a %2$s"
+
+#: core/logger/log-reporter.php:24
+msgid "Log"
+msgstr "Log"
+
+#: core/experiments/manager.php:481
+msgid "Ongoing Experiments"
+msgstr "Experimentální funkce"
+
+#: core/experiments/manager.php:436
+msgid "Stable Features"
+msgstr "Stabilní doporučení"
+
+#: core/experiments/manager.php:311
+msgid "WordPress widgets will not be shown when searching in the editor panel. Instead, these widgets can be found in the “WordPress” dropdown at the bottom of the panel."
+msgstr "WordPress Widgety najdete v rozevíracím seznamu „WordPress“ ve spodní části panelu. "
+
+#: core/experiments/manager.php:310
+msgid "Hide native WordPress widgets from search results"
+msgstr "Skrýt ve vyhledávání nativní widgety WordPress "
+
+#: core/experiments/manager.php:260
+msgid "The “Inline Font Icons” will render the icons as inline SVG without loading the Font-Awsome and the eicons libraries and its related CSS files and fonts. Learn More."
+msgstr "„Inline Font Icons“ vykreslí ikony SVG do řady bez načítání knihoven Font-Awsome a eicons a souvisejících souborů CSS a písem. Více zde. "
+
+#: core/experiments/manager.php:259
+msgid "Inline Font Icons"
+msgstr "Inline Font Icons"
+
+#: core/experiments/experiments-reporter.php:21
+#: core/experiments/manager.php:450
+msgid "Elementor Experiments"
+msgstr "Experimenty Elementoru"
+
+#: core/editor/data/globals/endpoints/base.php:46
+msgid "Invalid title"
+msgstr "Neplatný název"
+
+#: includes/settings/tools.php:134
+msgid "Not allowed to rollback versions"
+msgstr "Není povolen návrat k předešlým verzím"
+
+#: modules/page-templates/module.php:311
+msgid "The default page template as defined in Elementor Panel → Hamburger Menu → Site Settings."
+msgstr "Výchozí stránku šablony lze nastavit menu Elementor → Nabídka → Nastavení stránek."
+
+#. translators: 1: Link open tag, 2: Link close tag.
+#: modules/shapes/widgets/text-path.php:132
+msgid "Want to create custom text paths with SVG? %1$sLearn More%2$s"
+msgstr "Chcete vytvořit vlastní textovou vrstvu pomocí SVG? %1$sVíceZde%2$s"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/safe-mode/module.php:323
+msgid "Please note! We couldn't deactivate all of your plugins on Safe Mode. Please %1$sread more%2$s about this issue"
+msgstr "Poznámka! V nouzovém režimu nelze deaktivovat všechny Vaše pluginy. Více o tomto problému je zde %1$sčíst dál%2$s "
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/safe-mode/module.php:294 modules/safe-mode/module.php:307
+msgid "%1$sClick here%2$s to troubleshoot"
+msgstr "Klikněte %1$szde%2$s pro odstranění problémů "
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/landing-pages/module.php:203
+msgid "Or view %1$sTrashed Items%1$s"
+msgstr "Nebo zobrazit %1$sPoložky v koši%1$s"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/history/views/revisions-panel-template.php:39
+msgid "Learn more about %1$sWordPress revisions%2$s"
+msgstr "Více info o WordPress revizích %1$sje zde%2$s "
+
+#. translators: 1: Function argument, 2: Elementor version number.
+#: modules/dev-tools/deprecation.php:291
+msgid "The %1$s argument is deprecated since version %2$s!"
+msgstr "Argument %1$s je již od verze %2$s zastaralý! "
+
+#. translators: 1: Function argument, 2: Elementor version number, 3:
+#. Replacement argument name.
+#: modules/dev-tools/deprecation.php:287
+msgid "The %1$s argument is deprecated since version %2$s! Use %3$s instead."
+msgstr "Argument %1$s je již od verze %2$s zastaralý! Použijte verzi %3$s"
+
+#. translators: 1: Link open tag, 2: Link close tag.
+#: includes/widgets/common.php:1043
+msgid "Explore additional Premium Shape packs and use them in your site. %1$sLearn More%2$s"
+msgstr "Prozkoumejte a použijte na svém webu další balíčky Premium Shape. %1$sVíce informací%2$s "
+
+#. translators: 1: Link open tag, 2: Link close tag.
+#: includes/settings/tools.php:354
+msgid "%1$sClick here%2$s to join our first-to-know email updates."
+msgstr "Kliknutím %1$szde%2$s získáte prvním e-mailové aktualizace. "
+
+#: includes/settings/settings.php:507
+msgid "You can use the Site Settings to make changes and see them live!"
+msgstr "Nastavení webu můžete provádět také naživo v Live módu! "
+
+#. translators: 1: Bold open tag, 2: Bold close tag
+#: includes/settings/settings.php:502
+msgid "The Style settings changed its location and can now be found within Elementor Editor's %1$sPanel > Hamburger Menu > Site Settings%2$s."
+msgstr "Nastavení stylu najdete nyní v editoru Elementor %1$s Panel > Menu > Nastavení webu%2$s. "
+
+#: includes/managers/controls.php:1036
+msgid "Meet Page Transitions"
+msgstr "Přechody stránek"
+
+#: includes/managers/controls.php:1024
+msgid "Page Transitions let you style entrance and exit animations between pages as well as display loader until your page assets load."
+msgstr "Vstupní a výstupní animace zobrazení stránek včetně zavaděče upravíte, dokud se nenačtou podklady stránky. "
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: includes/maintenance-mode.php:375
+msgid "Select one or go ahead and %1$screate one%2$s now."
+msgstr "Vyberte si nějakou nebo si vytvořte novou %1$szde%2$s. "
+
+#: includes/elements/column.php:418 includes/elements/section.php:709
+msgid "Luminosity"
+msgstr "Zářivost"
+
+#: includes/elements/column.php:416 includes/elements/section.php:707
+msgid "Saturation"
+msgstr "Nasycení"
+
+#: includes/elements/column.php:415 includes/elements/section.php:706
+msgid "Color Dodge"
+msgstr "Zesvětlit barvy"
+
+#: includes/elements/column.php:414 includes/elements/section.php:705
+msgid "Lighten"
+msgstr "Zesvětlit"
+
+#: includes/elements/column.php:413 includes/elements/section.php:704
+msgid "Darken"
+msgstr "Ztmavit"
+
+#: includes/elements/column.php:412 includes/elements/section.php:703
+msgid "Overlay"
+msgstr "Překrytí"
+
+#: includes/elements/column.php:411 includes/elements/section.php:702
+msgid "Screen"
+msgstr "Obrazovka"
+
+#: includes/elements/column.php:410 includes/elements/section.php:701
+msgid "Multiply"
+msgstr "Násobit"
+
+#: includes/editor-templates/responsive-bar.php:27
+msgid "Widescreen <br> Settings added for the Widescreen device will apply to screen sizes %dpx and up"
+msgstr "Širokoúhlé <br> Nastavení pro širokoúhlá zařízení budou aplikována od velikosti obrazovky %dpx a vyšší "
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: includes/editor-templates/panel.php:172
+msgid "You can enable it from the %1$sElementor settings page%2$s."
+msgstr "Zapnout to lze přímo v nastavení %1$sStránky Elementoru%2$s."
+
+#. translators: %s: Device name.
+#: includes/base/element-base.php:684
+msgid "Hide On %s"
+msgstr "Skrýt v %s"
+
+#. translators: %1$s Span open tag, %2$s: Span close tag.
+#: includes/admin-templates/new-template.php:44
+msgid "Templates Help You %1$sWork Efficiently%2$s"
+msgstr "Pomocí šablon %1$spracujte efektivněji%2$s"
+
+#. translators: 1: Link open tag, 2: Link close tag.
+#: core/kits/documents/tabs/tab-base.php:79
+msgid "In order for Theme Style to affect all relevant Elementor elements, please disable Default Colors and Fonts from the %1$sSettings Page%2$s."
+msgstr "Aby se styl motivu projevil na všech relevantních prvcích Elementoru, je třeba deaktivovat Výchozí barvy a písma na stránce %1$sNastavení%2$s. "
+
+#: core/kits/documents/tabs/settings-page-transitions.php:19
+#: includes/managers/controls.php:1018
+msgid "Page Transitions"
+msgstr "Přechod stránky"
+
+#: core/kits/documents/tabs/settings-layout.php:318
+msgid "Widescreen breakpoint settings will apply from the selected value and up."
+msgstr "Nastavení bodu zlomu pro širokoúhlé zařízení se použije od této vybrané hodnoty a výše."
 
 #: includes/settings/settings.php:592
 msgid "Optional"

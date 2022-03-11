@@ -179,6 +179,24 @@ class PageSettings {
 	public function getTermsAndConditionsPageId(){
 		return $this->getPageId( 'terms_and_conditions' );
 	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function getMyAccountPageId() {
+		return $this->getPageId( 'my_account' );
+	}
+	
+	/**
+	 * 
+	 * @param int $id
+	 * 
+	 * @since 4.2.0
+	 */
+	public function setMyAccountPageId( $id ) {
+		return update_option( 'mphb_my_account_page', $id );
+	}
 
 	/**
 	 *

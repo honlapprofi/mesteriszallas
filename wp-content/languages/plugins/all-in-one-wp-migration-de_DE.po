@@ -148,7 +148,7 @@ msgstr "Vorbereitung der Optionen beendet."
 msgid "%s is not the latest version. You must update the plugin before you can use it. "
 msgstr "%s ist nicht die neueste Version. Du musst das Plugin aktualisieren, bevor du es verwenden kannst. "
 
-#: lib/model/import/class-ai1wm-import-confirm.php:65
+#: lib/model/import/class-ai1wm-import-confirm.php:91
 msgid "Your backup is from a PHP 5 but the site that you are importing to is PHP 7. This could cause the import to fail. Technical details: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 msgstr "Das Backup stammt von einem PHP 5, aber die Website, in die du importierst, hat PHP 7. Dies kann dazu führen, dass der Import fehlschlägt. Technische Einzelheiten: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 
@@ -238,7 +238,7 @@ msgstr "Die Archivdatei ist defekt. Folge <a href=\"https://help.servmask.com/kn
 msgid "Your PHP is 32-bit. In order to import your file, please change your PHP version to 64-bit and try again. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "Dein PHP ist 32-bit. Um deine Datei zu importieren, ändere deine PHP-Version auf 64-bit und versuche es erneut. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technische Details</a>"
 
-#: lib/model/import/class-ai1wm-import-confirm.php:71
+#: lib/model/import/class-ai1wm-import-confirm.php:96
 msgid "<i class=\"ai1wm-import-info\">Your backup is from a PHP 5 but the site that you are importing to is PHP 7. This could cause the import to fail. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Technical details</a></i>"
 msgstr "<i class=\"ai1wm-import-info\">Dein Backup stammt von einem PHP 5, aber die Website, in die du importierst, ist PHP 7. Dies kann dazu führen, dass der Import fehlschlägt. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Technische Details</a></i>"
 
@@ -841,8 +841,7 @@ msgstr "Ich brauche Hilfe bei diesem Plugin."
 msgid "I have ideas to improve this plugin"
 msgstr "Ich habe Ideen zur Verbesserung dieses Plugins."
 
-#: lib/view/backups/index.php:81 lib/view/export/index.php:73
-#: lib/view/import/index.php:69
+#: lib/view/common/sidebar-right.php:39
 msgid "Leave Feedback"
 msgstr "Einen Kommentar schreiben"
 

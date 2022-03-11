@@ -74,6 +74,12 @@ class SettingsMenuPage extends AbstractMenuPage {
 				'label'			 => __( 'Terms & Conditions', 'motopress-hotel-booking' ),
 				'description'	 => __( 'If you define a "Terms" page the customer will be asked if they accept them when checking out.', 'motopress-hotel-booking' ),
 				'default'		 => ''
+			) ),
+			Fields\FieldFactory::create( 'mphb_my_account_page', array(
+				'type' 			 => 'page-select',
+				'label' 		 => esc_html__( 'My Account Page', 'motopress-hotel-booking' ),
+				'description'	 => esc_html__( 'Select a page to display user account. Use the customer account shortcode on this page.', 'motopress-hotel-booking' ),
+				'default'		 => ''
 			) )
 		);
 
@@ -237,12 +243,36 @@ class SettingsMenuPage extends AbstractMenuPage {
                 'label' => __('Price Breakdown', 'motopress-hotel-booking'),
                 'inner_label' => __('Price breakdown unfolded by default.', 'motopress-hotel-booking'),
                 'default' => false
-            ))
+			))
 		);
-
-        $this->filterGroupFields($bookingConfirmationFields, $bookingConfirmationGroup->getName());
+		
+		$this->filterGroupFields($bookingConfirmationFields, $bookingConfirmationGroup->getName());
 		$bookingConfirmationGroup->addFields( $bookingConfirmationFields );
+		
+		$checkoutGroup = new Groups\SettingsGroup( 'mphb_checkout_group', __( 'Accounts', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
+		$checkoutFields = array(
+			Fields\FieldFactory::create('mphb_automatically_create_user', array(
+                'type' => 'checkbox',
+                'label' => esc_html__('Account creation', 'motopress-hotel-booking'),
+                'inner_label' => esc_html__('Automatically create an account for a user at checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			)),
+			Fields\FieldFactory::create('mphb_allow_customers_create_account', array(
+                'type' => 'checkbox',
+                'inner_label' => esc_html__('Allow customers to create an account during checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			)),			
+			Fields\FieldFactory::create('mphb_allow_customers_log_in', array(
+                'type' => 'checkbox',
+                'inner_label' => esc_html__('Allow customers to log into their existing account during checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			))
+		);
+		
+		$this->filterGroupFields($checkoutFields, $checkoutGroup->getName());
+		$checkoutGroup->addFields( $checkoutFields );
+		
 		$bookingCancellationGroup = new Groups\SettingsGroup( 'mphb_cancellation_group', __( 'Booking Cancellation', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
 		$bookingCancellationFields = array(
@@ -469,6 +499,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 		$generalTab->addGroup( $pagesGroup );
 		$generalTab->addGroup( $bookingConfirmationGroup );
 		$generalTab->addGroup( $bookingCancellationGroup );
+		$generalTab->addGroup( $checkoutGroup );
 		$generalTab->addGroup( $searchParametersGroup );
 		$generalTab->addGroup( $miscGroup );
 		$generalTab->addGroup( $bookingDisablingGroup );
@@ -531,6 +562,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 		) );
 
 		$tab->addGroup( $groupCancellationDetails );
+		
+		do_action( 'mphb_generate_settings_customer_registration_emails', $tab );
 
 		return $tab;
 	}

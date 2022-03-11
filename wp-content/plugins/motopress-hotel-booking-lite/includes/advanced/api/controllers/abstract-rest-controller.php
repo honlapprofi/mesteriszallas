@@ -32,20 +32,6 @@ abstract class AbstractRestController extends WP_REST_Controller {
 	protected $rest_base = '';
 
 	/**
-	 * Used to cache computed return fields.
-	 *
-	 * @var null|array
-	 */
-	private $_fields = null;
-
-	/**
-	 * Used to verify if cached fields are for correct request object.
-	 *
-	 * @var null|WP_REST_Request
-	 */
-	private $_request = null;
-
-	/**
 	 * Add the schema from additional fields to an schema array.
 	 *
 	 * The type of object is inferred from the passed schema.

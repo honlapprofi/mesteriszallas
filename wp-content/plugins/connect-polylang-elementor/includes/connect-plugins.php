@@ -36,6 +36,10 @@ class ConnectPlugins {
 		add_filter( 'pll_home_url_white_list', array( $this, 'elementor_home_url_white_list' ) );
 		add_filter( 'home_url', array( $this, 'home_url_language_dir_slash' ), 11, 2 );
 
+		// Fix search url for Search Form widget.
+		add_action( 'elementor/frontend/widget/before_render', array( $this, 'add_search_form_home_url_filter' ) );
+		add_action( 'elementor/frontend/widget/after_render', array( $this, 'remove_search_form_home_url_filter' ) );
+
 		if ( is_admin() ) {
 
 			// All langs for template conditions & global widgets.
@@ -45,23 +49,29 @@ class ConnectPlugins {
 			add_filter( 'get_post_metadata', array( $this, 'elementor_conditions_empty_on_translations' ), 10, 3 );
 			add_filter( 'pre_update_option_elementor_pro_theme_builder_conditions', array( $this, 'theme_builder_conditions_remove_empty' ) );
 
-			// Update template conditions on language terms change.
-			add_action( 'set_object_terms', array( $this, 'update_conditions_on_term_change' ), 10, 4 );
-
 			// Global widgets hide language column.
 			add_action( 'manage_elementor_library_posts_custom_column', array( $this, 'hide_language_column_pre' ), 9, 2 );
 			add_action( 'manage_elementor_library_posts_custom_column', array( $this, 'hide_language_column_pos' ), 11, 2 );
+
+			if ( cpel_is_elementor_pro_active() ) {
+				// Update template conditions on language terms change.
+				add_action( 'set_object_terms', array( $this, 'update_conditions_on_term_change' ), 10, 4 );
+
+				// Translations conditions column.
+				add_action( 'manage_elementor_library_posts_custom_column', array( $this, 'instances_column_pre' ), 9, 2 );
+				add_action( 'manage_elementor_library_posts_custom_column', array( $this, 'instances_column_pos' ), 11, 2 );
+			}
 
 			// Don't add "_elementor_css" meta.
 			add_filter( 'update_post_metadata', array( $this, 'prevent_elementor_css_meta' ), 10, 3 );
 
 		}
 
-		// Elementor editor menu lins to translations
+		// Elementor editor menu links to translations
 		add_action( 'elementor/editor/after_enqueue_scripts', array( $this, 'elementor_editor_script' ) );
 
-		// Elementor Theme Editor show template language
-		add_filter( 'elementor-pro/site-editor/data/template', array( $this, 'elementor_theme_editor_title' ) );
+		// Elementor Site Editor template tweaks
+		add_filter( 'elementor-pro/site-editor/data/template', array( $this, 'elementor_site_editor_template' ) );
 
 	}
 
@@ -143,13 +153,7 @@ class ConnectPlugins {
 	 */
 	function elementor_conditions_empty_on_translations( $null, $post_id, $meta_key ) {
 
-		if ( '_elementor_conditions' === $meta_key ) {
-
-			return cpel_is_translation( $post_id ) ? array( array() ) : $null;
-
-		}
-
-		return $null;
+		return '_elementor_conditions' === $meta_key && cpel_is_translation( $post_id ) ? array( array() ) : $null;
 
 	}
 
@@ -241,9 +245,10 @@ class ConnectPlugins {
 	 */
 	function update_conditions_on_term_change( $post_id, $terms, $tt_ids, $taxonomy ) {
 
-		if ( cpel_is_elementor_pro_active() && 'post_translations' === $taxonomy && 'elementor_library' === get_post_type( $post_id ) ) {
+		if ( 'post_translations' === $taxonomy && 'elementor_library' === get_post_type( $post_id ) ) {
 
-			\ElementorPro\Modules\ThemeBuilder\Module::instance()->get_conditions_manager()->get_cache()->regenerate();
+			$theme_builder = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'theme-builder' );
+			$theme_builder->get_conditions_manager()->get_cache()->regenerate();
 
 		}
 
@@ -262,11 +267,9 @@ class ConnectPlugins {
 	 */
 	function hide_language_column_pre( $column, $post_id ) {
 
-		if ( false === strpos( $column, 'language_' ) || 'widget' !== get_post_meta( $post_id, '_elementor_template_type', true ) ) {
-			return;
+		if ( false !== strpos( $column, 'language_' ) && 'widget' === get_post_meta( $post_id, '_elementor_template_type', true ) ) {
+			echo '<span aria-hidden="true">—</span><div class="hidden" aria-hidden="true">';
 		}
-
-		echo '<span aria-hidden="true">—</span><div class="hidden" aria-hidden="true">';
 
 	}
 
@@ -283,11 +286,50 @@ class ConnectPlugins {
 	 */
 	function hide_language_column_pos( $column, $post_id ) {
 
-		if ( false === strpos( $column, 'language_' ) || 'widget' !== get_post_meta( $post_id, '_elementor_template_type', true ) ) {
-			return;
+		if ( false !== strpos( $column, 'language_' ) && 'widget' === get_post_meta( $post_id, '_elementor_template_type', true ) ) {
+			echo '</div>';
 		}
 
-		echo '</div>';
+	}
+
+	/**
+	 * Show default language instances in translations
+	 *
+	 * (Also wrap "None" with a hidden div)
+	 *
+	 * @since  2.0.4
+	 *
+	 * @param  string $column
+	 * @param  int    $post_id
+	 * @return void
+	 */
+	function instances_column_pre( $column, $post_id ) {
+
+		if ( 'instances' === $column && cpel_is_translation( $post_id ) ) {
+
+			$conditions_manager = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'theme-builder' )->get_conditions_manager();
+			$instances          = $conditions_manager->get_document_instances( pll_get_post( $post_id, pll_default_language() ) );
+
+			echo '<span style="opacity:.4">' . esc_html( implode( ', ', $instances ) ) . '</span><div class="hidden" aria-hidden="true">';
+
+		}
+
+	}
+
+	/**
+	 * Show default language instances in translations (close)
+	 *
+	 * @since  2.0.4
+	 *
+	 * @param  string $column
+	 * @param  int    $post_id
+	 * @return void
+	 */
+	function instances_column_pos( $column, $post_id ) {
+
+		if ( 'instances' === $column && cpel_is_translation( $post_id ) ) {
+			echo '</div>';
+		}
 
 	}
 
@@ -344,6 +386,55 @@ class ConnectPlugins {
 	function home_url_language_dir_slash( $url, $path ) {
 
 		return empty( $path ) && function_exists( 'PLL' ) && 1 === PLL()->options['force_lang'] ? trailingslashit( $url ) : $url;
+
+	}
+
+	/**
+	 * Replace home_url with correct language search url
+	 *
+	 * Only for Elementor Search Form that uses home_url() in form action.
+	 *
+	 * @since 2.0.6
+	 *
+	 * @param  string $url
+	 * @param  string $path
+	 * @return string
+	 */
+	function search_form_home_url_filter( $url, $path ) {
+
+		return function_exists( 'PLL' ) ? PLL()->curlang->search_url : $url;
+
+	}
+
+	/**
+	 * Add home_url() filter before render Search Form
+	 *
+	 * @since 2.0.6
+	 *
+	 * @param  Element_Base $element
+	 * @return void
+	 */
+	function add_search_form_home_url_filter( $element ) {
+
+		if ( 'search-form' === $element->get_name() ) {
+			add_filter( 'home_url', array( $this, 'search_form_home_url_filter' ), 10, 2 );
+		}
+
+	}
+
+	/**
+	 * Remove home_url() filter after render Search Form
+	 *
+	 * @since 2.0.6
+	 *
+	 * @param  Element_Base $element
+	 * @return void
+	 */
+	function remove_search_form_home_url_filter( $element ) {
+
+		if ( 'search-form' === $element->get_name() ) {
+			remove_filter( 'home_url', array( $this, 'search_form_home_url_filter' ) );
+		}
 
 	}
 
@@ -428,16 +519,40 @@ class ConnectPlugins {
 	}
 
 	/**
-	 * Elementor Theme Editor language on template title
+	 * Elementor Site Editor template changes
 	 *
-	 * @since  2.0.0
+	 * at 2.0.0 named "elementor_theme_editor_title"
+	 *
+	 * @since  2.0.4
 	 *
 	 * @param  array $data
 	 * @return array
 	 */
-	function elementor_theme_editor_title( $data ) {
+	function elementor_site_editor_template( $data ) {
 
-		$data['title'] = sprintf( '%s (%s)', $data['title'], pll_get_post_language( $data['id'], 'slug' ) );
+		$post_id = $data['id'];
+
+		// Add lang info to title.
+		$data['title'] = sprintf( '%s / %s', $data['title'], strtoupper( pll_get_post_language( $post_id ) ) );
+
+		// Show default language instances in translations (and recalc isActive).
+		if ( cpel_is_translation( $post_id ) ) {
+
+			$language = pll_default_language();
+
+			$conditions_manager = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'theme-builder' )->get_conditions_manager();
+			$instances          = $conditions_manager->get_document_instances( pll_get_post( $post_id, $language ) );
+
+			if ( empty( $instances ) ) {
+				$instances = array( 'no_instances' => esc_html__( 'No instances', 'elementor-pro' ) );
+				$is_active = false;
+			} else {
+				$is_active = 'publish' === $data['status'];
+			}
+
+			$data['instances'] = array( 'cpel' => sprintf( esc_html__( '(from %s)', 'connect-polylang-elementor' ), strtoupper( $language ) ) ) + $instances;
+			$data['isActive']  = $is_active;
+		}
 
 		return $data;
 

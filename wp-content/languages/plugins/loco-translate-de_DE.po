@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-28 19:32:42+0000\n"
+"PO-Revision-Date: 2022-03-08 14:25:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,24 +64,20 @@ msgstr "Die PO-Datei wurde gespeichert und die MO/JSON-Dateien wurden kompiliert
 msgid "JSON compilation failed for %s"
 msgstr "JSON-Kompilierung fehlgeschlagen für %s"
 
-#: src/data/Settings.php:179
-msgid "Loco Translate 2.5 adds supports for JSON language pack generation."
-msgstr "Loco Translate 2.5 unterstützt die Erstellung von JSON-Sprachpaketen."
-
-#: tpl/admin/config/version.php:75
+#: tpl/admin/config/version.php:74
 msgid "Update Now"
 msgstr "Jetzt aktualisieren"
 
 #. translators: Where %s is the full version number of WordPress
-#: tpl/admin/config/version.php:69
+#: tpl/admin/config/version.php:68
 msgid "WordPress %s"
 msgstr "WordPress %s"
 
 #. translators: (1) Name of software, e.g. "WordPress" (2) Version number, e.g.
 #. "5.6"
-#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:72
-msgid "Your version of %1$s is very old. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
-msgstr "Deine Version von %1$s ist ziemlich alt. Wir empfehlen dringend, mindestens auf die Version v%2$s, jedoch möglichst auf die aktuellste stabile Version zu aktualisieren."
+#: tpl/admin/config/version.php:53 tpl/admin/config/version.php:71
+msgid "Your version of %1$s is out of date. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
+msgstr "Deine Version von %1$s ist ziemlich alt. Wir empfehlen dir dringend, mindestens auf die Version v%2$s, jedoch möglichst auf die aktuellste stabile Version zu aktualisieren."
 
 #. translators: Where %s is the full version number of PHP
 #: tpl/admin/config/version.php:49
@@ -104,7 +100,7 @@ msgstr "JSON-Dateien werden kompiliert"
 #. Example language code
 #: tpl/admin/init/upload.php:50
 msgid "Your file must be named as shown above where %1$s is the language code, e.g. %2$s"
-msgstr "Deine Datei muss wie oben gezeigt benannt werden, wobei %1$s der Sprachen-Code (z.B. %2$s) ist."
+msgstr "Deine Datei muss wie oben gezeigt benannt werden, wobei %1$s der Sprachen-Code (z.B. %2$s) ist"
 
 #: tpl/admin/init/upload.php:45
 msgid "Upload PO file"
@@ -236,15 +232,15 @@ msgid_plural "%s strings marked Fuzzy"
 msgstr[0] "%s Zeichenfolge wurde als noch zu überprüfen/undeutlich markiert"
 msgstr[1] "%s Zeichenfolgen wurde als noch zu überprüfen/undeutlich markiert"
 
-#: tpl/admin/config/apis.php:142
+#: tpl/admin/config/apis.php:121
 msgid "See full disclaimer"
 msgstr "Vollständigen Haftungsausschluss anzeigen"
 
-#: tpl/admin/config/apis.php:141
+#: tpl/admin/config/apis.php:120
 msgid "Third party services are subject to their own terms of use and may incur costs from the provider"
-msgstr "Übersetzungsdienste von Drittanbietern unterliegen ihren eigenen Nutzungsbedingungen. Möglicherweise erhebt der Anbieter Gebühren für die Nutzung der Übersetzungs-API."
+msgstr "Übersetzungsdienste von Drittanbietern unterliegen ihren eigenen Nutzungsbedingungen. Möglicherweise erhebt der Anbieter Gebühren für die Nutzung der Übersetzungs-API"
 
-#: tpl/admin/config/apis.php:139
+#: tpl/admin/config/apis.php:118
 msgid "Important"
 msgstr "Wichtig"
 
@@ -344,7 +340,7 @@ msgstr "Dieser Vorgang benötigt eine entsprechende Berechtigung"
 
 #: src/ajax/FsConnectController.php:127
 msgid "This directory is managed by WordPress. Removed files may be restored during updates"
-msgstr "Dieses Verzeichnis wird von WordPress verwaltet. Möglicherweise werden gelöschte Dateien bei einem Update wiederhergestellt."
+msgstr "Dieses Verzeichnis wird von WordPress verwaltet. Möglicherweise werden gelöschte Dateien bei einem Update wiederhergestellt"
 
 #: src/admin/file/MoveController.php:106 src/admin/file/MoveController.php:133
 msgid "Move %s"
@@ -376,7 +372,7 @@ msgstr "Dateizugriff gesperrt"
 msgid "View template"
 msgstr "Template (.POT) anzeigen"
 
-#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:76
+#: tpl/admin/config/version.php:18 tpl/admin/config/version.php:75
 msgid "Install manually"
 msgstr "Manuell installieren"
 
@@ -398,7 +394,7 @@ msgstr "Schreibgeschützt (read only)"
 
 #: tpl/admin/config/settings.php:43
 msgid "Scan JavaScript files with extensions:"
-msgstr "JavaScript-Dateien mit folgenden Endungen scannen"
+msgstr "JavaScript-Dateien mit folgenden Endungen scannen:"
 
 #: src/admin/init/InitPoController.php:243
 msgid "Assign template"
@@ -420,7 +416,7 @@ msgstr "Administratoren und Auditoren können die <a href=\"%s\">Datenschutzerkl
 
 #: src/hooks/AdminHooks.php:64
 msgid "This plugin doesn't collect any data from public website visitors."
-msgstr "Dieses Plugin sammelt keinerlei Daten von Besuchern dieser Website"
+msgstr "Dieses Plugin sammelt keinerlei Daten von Besuchern dieser Website."
 
 #: tpl/admin/bundle/inc-po-table.php:51 tpl/admin/bundle/locale.php:66
 msgid "View"
@@ -562,10 +558,10 @@ msgid "See all core translations"
 msgstr "Alle Core-Übersetzungen anzeigen"
 
 #: src/admin/bundle/LocaleController.php:130
-#: src/admin/file/EditController.php:166 src/data/Settings.php:180
-#: tpl/admin/common/inc-fsconn.php:16 tpl/admin/common/inc-fsconn.php:41
-#: tpl/admin/config/apis.php:149 tpl/admin/config/prefs.php:45
-#: tpl/admin/config/settings.php:234 tpl/admin/errors/no-backups.php:22
+#: src/admin/file/EditController.php:166 tpl/admin/common/inc-fsconn.php:16
+#: tpl/admin/common/inc-fsconn.php:41 tpl/admin/config/apis.php:128
+#: tpl/admin/config/prefs.php:45 tpl/admin/config/settings.php:234
+#: tpl/admin/errors/no-backups.php:22
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -598,7 +594,7 @@ msgid "Creating this file requires permission"
 msgstr "Das Erstellen dieser Datei benötigt entsprechende Berechtigungen"
 
 #. Translators: Plural category for zero quantity
-#: src/Locale.php:414
+#: src/Locale.php:405
 msgctxt "Plural category"
 msgid "Zero"
 msgstr "Null/Keine"
@@ -633,37 +629,37 @@ msgid "Child theme declares the same Text Domain as the parent theme"
 msgstr "Das Child-Theme benutzt die gleiche Text-Domain wie das übergeordnete Parent-Theme"
 
 #. Translators: General plural category not covered by other forms
-#: src/Locale.php:424
+#: src/Locale.php:415
 msgctxt "Plural category"
 msgid "Other"
 msgstr "Alle anderen bzw. nicht definierten Pluralformen"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:422
+#: src/Locale.php:413
 msgctxt "Plural category"
 msgid "Many"
 msgstr "Viele"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:420
+#: src/Locale.php:411
 msgctxt "Plural category"
 msgid "Few"
 msgstr "Wenige"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:418
+#: src/Locale.php:409
 msgctxt "Plural category"
 msgid "Two"
 msgstr "Zwei"
 
 #. Translators: Plural category for singular quantity
-#: src/Locale.php:416
+#: src/Locale.php:407
 msgctxt "Plural category"
 msgid "One"
 msgstr "Eins - Singular - Einzahl"
 
 #. Translators: Plural category for languages that have no plurals
-#: src/Locale.php:406
+#: src/Locale.php:397
 msgctxt "Plural category"
 msgid "All forms"
 msgstr "Alle Pluralformen"
@@ -690,7 +686,7 @@ msgstr "Diese Plugins haben vor kurzem Übersetzungsdateien in den Admin-Bereich
 
 #: tpl/admin/root.php:47
 msgid "Running plugins:"
-msgstr "Aktivierte/Laufende Plugins"
+msgstr "Aktivierte/Laufende Plugins:"
 
 #: src/admin/bundle/LocaleController.php:142 tpl/admin/root.php:39
 msgid "See all themes"
@@ -698,7 +694,7 @@ msgstr "Alle Themes anzeigen"
 
 #: tpl/admin/root.php:35
 msgid "Active theme:"
-msgstr "Aktives Theme"
+msgstr "Aktives Theme:"
 
 #: tpl/admin/root.php:26
 msgid "Translations have been recently modified in the following bundles"
@@ -745,8 +741,8 @@ msgstr "Strings werden extrahiert in:"
 #: tpl/admin/init/init-pot.php:24
 msgid "Excludes %1$s file over %2$s"
 msgid_plural "Excludes %1$s files over %2$s"
-msgstr[0] "Es wurde %1$s Datei mit mehr als %2$s nicht bearbeitet."
-msgstr[1] "Es wurden %1$s Dateien mit mehr als %2$s nicht bearbeitet."
+msgstr[0] "Es wurde %1$s Datei mit mehr als %2$s nicht bearbeitet"
+msgstr[1] "Es wurden %1$s Dateien mit mehr als %2$s nicht bearbeitet"
 
 #. Translators: Where %s is the size of a file
 #: tpl/admin/init/init-pot.php:16
@@ -845,7 +841,7 @@ msgstr "Die Datei ist im binären MO-Format"
 #. Translators: Where %s is the name (or number) of an operating system user
 #: tpl/admin/file/info.php:96
 msgid "To create new files here you'll have to connect to the remote file system, or make the directory writeable by %s"
-msgstr "Um hier neue Dateien zu erstellen, musst du dich mit dem entfernten Dateisystem verbinden oder das Verzeichnis mit Schreibrechten für den Benutzer „%s“ versehen."
+msgstr "Um hier neue Dateien zu erstellen, musst du dich mit dem entfernten Dateisystem verbinden oder das Verzeichnis mit Schreibrechten für den Benutzer „%s“ versehen"
 
 #: tpl/admin/file/info.php:92
 msgid "This directory can't be written to directly by the web server"
@@ -858,7 +854,7 @@ msgstr "Aufgrund von zusätzlichen Zugriffsberechtigungen könnte die Datei nich
 #. Translators: Where %s is the name (or number) of an operating system user
 #: tpl/admin/file/info.php:73
 msgid "The containing directory is writeable by %s, so you can add new files in the same location"
-msgstr "Der Benutzer „%s“ auf dem Webserver besitzt die notwendigen Schreibrechte für das Verzeichnis, in dem die Datei gespeichert wird - es können also neue Dateien hinzugefügt werden."
+msgstr "Der Benutzer „%s“ auf dem Webserver besitzt die notwendigen Schreibrechte für das Verzeichnis, in dem die Datei gespeichert wird - es können also neue Dateien hinzugefügt werden"
 
 #: tpl/admin/file/info.php:69
 msgid "Directory is writeable"
@@ -877,7 +873,7 @@ msgstr "Das Verzeichnis existiert nicht"
 #. Translators: Where %s is the name (or number) of an operating system user
 #: tpl/admin/file/info.php:43
 msgid "To make changes you'll have to connect to the remote file system, or make the file writeable by %s"
-msgstr "Um Änderungen durchzuführen musst du direkt auf das Dateisystem des Servers zugreifen oder die Datei mit Schreibrechten für den Benutzer „%s“ versehen."
+msgstr "Um Änderungen durchzuführen musst du direkt auf das Dateisystem des Servers zugreifen oder die Datei mit Schreibrechten für den Benutzer „%s“ versehen"
 
 #: tpl/admin/file/info.php:39
 msgid "This file can't be updated directly by the web server"
@@ -890,7 +886,7 @@ msgstr "Du kannst diese Übersetzungen direkt aus dem Editor im Dateisystem aktu
 #. Translators: Where %s is the type of file, e.g. "po"
 #: tpl/admin/file/info.php:24
 msgid "%s file is writeable"
-msgstr "Die Schreibrechte für die %s-Datei  sind korrekt gesetzt"
+msgstr "Die Schreibrechte für die %s-Datei sind korrekt gesetzt"
 
 #: tpl/admin/file/info.php:14
 msgid "File doesn't exist"
@@ -1040,11 +1036,11 @@ msgstr "PO/POT-Dateien speichern"
 
 #: tpl/admin/config/settings.php:37
 msgid "Scan PHP files with extensions:"
-msgstr "PHP-Dateien mit folgenden Endungen scannen"
+msgstr "PHP-Dateien mit folgenden Endungen scannen:"
 
 #: tpl/admin/config/settings.php:31
 msgid "Skip PHP files larger than:"
-msgstr "Überspringen von PHP-Dateien größer als"
+msgstr "Überspringen von PHP-Dateien größer als:"
 
 #: tpl/admin/config/settings.php:21 tpl/admin/config/settings.php:27
 msgid "Extracting strings"
@@ -1057,7 +1053,7 @@ msgstr "Übersetzer-Signatur"
 #. translators: text field placeholder
 #: tpl/admin/common/inc-table-filter.php:6
 msgid "Filter..."
-msgstr "Filtern&nbsp;&hellip;"
+msgstr "Filtern..."
 
 #: tpl/admin/common/inc-fsconn.php:60
 msgid "Connect"
@@ -1182,7 +1178,7 @@ msgid ""
 "If we know your bundle, we'll configure it for you automatically"
 msgstr ""
 "Wir pflegen eine Datenbank mit Paketen, die nicht-standardmäßige Konfigurationen benötigen.\n"
-"Falls dieses Paket dort bereits bekannt ist, wird die Konfiguration automatisch vorgenommen."
+"Falls dieses Paket dort bereits bekannt ist, wird die Konfiguration automatisch vorgenommen"
 
 #: tpl/admin/bundle/setup/conf.php:12
 msgid "Check config repository"
@@ -1191,7 +1187,7 @@ msgstr "Konfigurations-Datenbank durchsuchen"
 #: tpl/admin/bundle/setup/author.php:15 tpl/admin/bundle/setup/core.php:14
 #: tpl/admin/bundle/setup/meta.php:15
 msgid "You can make changes in the Advanced tab if you need to override the current settings"
-msgstr "Falls du die aktuellen Einstellungen überschreiben oder anpassen möchtest, kannst du über die Registerkarte „Erweitert“ Änderungen durchführen."
+msgstr "Falls du die aktuellen Einstellungen überschreiben oder anpassen möchtest, kannst du über die Registerkarte „Erweitert“ Änderungen durchführen"
 
 #: tpl/admin/bundle/setup/author.php:14
 msgid "This bundle's configuration is provided by the author"
@@ -1399,22 +1395,22 @@ msgstr "WordPress-Kern"
 msgid "Loco interrupted by output from %s:%u"
 msgstr "Loco wurde unterbrochen durch eine Ausgabe von %s:%u"
 
-#: src/mvc/FileParams.php:151
+#: src/mvc/FileParams.php:153
 msgid "%s ago"
 msgstr "vor %s"
 
 #. translators: relative time when something happened in the last 30 seconds
-#: src/mvc/FileParams.php:149
+#: src/mvc/FileParams.php:151
 msgid "Just now"
 msgstr "Gerade eben"
 
-#: src/mvc/FileParams.php:145
+#: src/mvc/FileParams.php:147
 msgid "Y/m/d"
 msgstr "d.m.Y"
 
 #: src/mvc/Controller.php:49
 msgid "You do not have sufficient permissions to access this page."
-msgstr "Du hast nicht ausreichend Rechte, um diese Seite zu betreten"
+msgstr "Du hast nicht ausreichend Rechte, um diese Seite zu betreten."
 
 #: src/mvc/AjaxRouter.php:202
 msgid "Download controller returned empty output"
@@ -1519,7 +1515,7 @@ msgstr "Text in der Ursprungssprache"
 
 #: src/js/Strings.php:114
 msgid "Server returned invalid data"
-msgstr "Der Server gibt  ungültige Daten zurück"
+msgstr "Der Server gibt ungültige Daten zurück"
 
 #: src/js/Strings.php:117
 msgid "Check console output for debugging information"
@@ -1670,7 +1666,7 @@ msgstr "Die PO-Datei wurde erfolgreich gespeichert aber die Kompilierung der MO-
 msgid "PO file saved and MO file compiled"
 msgstr "Die PO-Datei wurde erfolgreich gespeichert und die MO-Datei wurde kompiliert"
 
-#: src/fs/Revisions.php:220
+#: src/fs/Revisions.php:221
 msgid "Failed to create backup file in \"%s\". Check file permissions or disable backups"
 msgstr "Die Backup-Datei im Verzeichnis „%s“ konnte nicht erstellt werden. Du solltest die Berechtigungen für die Datei überprüfen oder Backups deaktivieren"
 
@@ -1801,7 +1797,7 @@ msgstr "Hinzufügen"
 
 #: src/admin/file/EditController.php:117
 msgid "Translations don't match template. Run sync to update from %s"
-msgstr "Die Übersetzungen passen nicht zur Template-Datei (.POT). Du solltest eine Synchronisierung von %s durchführen, bevor du Änderungen vornimmst."
+msgstr "Die Übersetzungen passen nicht zur Template-Datei (.POT). Du solltest eine Synchronisierung von %s durchführen, bevor du Änderungen vornimmst"
 
 #. translators: %1$s is the file name, %2$s is the bundle name
 #: src/admin/file/EditController.php:18
@@ -1978,7 +1974,7 @@ msgstr "Themes"
 msgid "Invalid locale"
 msgstr "ungültige Sprache (Locale)"
 
-#: loco.php:143
+#: loco.php:141
 msgid "Loco Translate requires the \"%s\" PHP extension. Ask your hosting provider to install it"
 msgstr "Loco Translate benötigt die PHP-Erweiterung „%s“. Bitte deinen Hosting-Anbieter, diese zu installieren"
 
@@ -2001,14 +1997,14 @@ msgstr "Übersetzungen filtern"
 msgid "Template file"
 msgstr "Template-Datei (.POT)"
 
-#: tpl/admin/config/apis.php:148 tpl/admin/config/prefs.php:44
+#: tpl/admin/config/apis.php:127 tpl/admin/config/prefs.php:44
 #: tpl/admin/config/settings.php:233
 msgid "Save settings"
 msgstr "Einstellungen speichern"
 
 #: tpl/admin/config/settings.php:62
 msgid "Number of backups to keep of each file:"
-msgstr "Anzahl der Backup-Versionen, die pro Datei gespeichert werden sollen"
+msgstr "Anzahl der Backup-Versionen, die pro Datei gespeichert werden sollen:"
 
 #: tpl/admin/config/settings.php:137
 msgid "Include Fuzzy strings"

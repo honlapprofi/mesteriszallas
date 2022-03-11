@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Two package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 13:02:11+0000\n"
+"PO-Revision-Date: 2022-02-28 13:17:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +18,15 @@ msgstr "A szilárd alapokra épülő Twenty Twenty-Two (2022) azt az elképzelé
 #. Theme Name of the theme
 msgid "Twenty Twenty-Two"
 msgstr "Twenty Twenty-Two"
+
+#: inc/patterns/hidden-404.php:14
+msgid "Search"
+msgstr "Keresés"
+
+#: inc/patterns/hidden-404.php:14
+msgctxt "label"
+msgid "Search"
+msgstr "Keresés"
 
 #: theme.json
 msgctxt "Template part name"
@@ -192,6 +201,10 @@ msgstr "Bejegyzésrács"
 msgid "Default posts"
 msgstr "Alapértelmezett bejegyzések"
 
+#: inc/patterns/page-sidebar-poster.php:56
+msgid "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
+msgstr "Nagy Színház<br>154 Eastern Avenue<br>Maryland NY, 12345"
+
 #: inc/patterns/page-sidebar-poster.php:52
 msgid "Location"
 msgstr "Hely"
@@ -260,6 +273,11 @@ msgstr "Szűrés"
 msgid "Page layout with image, text and video"
 msgstr "Oldalelrendezés képpel, szöveggel és videóval"
 
+#: inc/patterns/page-layout-image-and-text.php:27
+#: inc/patterns/page-layout-two-columns.php:36
+msgid "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalog extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favorite."
+msgstr "Szia! A nevem Angelo, és én vezetem ezt a blogot. Portlandben születtem, jelenleg pedig New York állam felső részén élek. Felismerhetsz olyan kiadványokról, mint az <a href=\"#\">Eagle Beagle</a> és a <a href=\"#\">Mourning Dive</a> . A megélhetésért írok.<br><br> Ezt a blogot általában arra használom, hogy kiterjedt listákat soroljak fel madarakról és egyéb érdekes dolgokról. Ha hibát találsz valamelyik listában, tartsd meg magadnak.<br><br> Ha nem ez a teád, <a href=\"#\">akkor mindenképpen ezt ajánlom</a>. A kedvencem."
+
 #: inc/patterns/page-layout-image-and-text.php:15
 msgctxt "Short for to be determined"
 msgid "TBD"
@@ -276,11 +294,6 @@ msgstr "Oldalelrendezés képpel és szöveggel"
 #: inc/patterns/page-about-solid-color.php:22
 msgid "Oh hello. My name’s Edvard, and you’ve found your way to my website. I’m an avid bird watcher, and I also broadcast my own radio show every Tuesday evening at 11PM EDT. Listen in sometime!"
 msgstr "Ó, szia! A nevem Edvard, és megtaláltad az utat a webhelyemre. Lelkes madárleső vagyok, és minden kedd este 23:00-kor közvetítem a saját rádióműsoromat. Hallgass bele valamikor!"
-
-#: inc/patterns/page-layout-image-and-text.php:27
-#: inc/patterns/page-layout-two-columns.php:36
-msgid "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalog extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favorite."
-msgstr "Szia! A nevem Angelo, és én vezetem ezt a blogot. Portlandben születtem, jelenleg pedig New York állam felső részén élek. Felismerhetsz olyan kiadványokról, mint az <a href=\"#\">Eagle Beagle</a> és a <a href=\"#\">Mourning Dive</a> . A megélhetésért írok.<br><br> Ezt a blogot általában arra használom, hogy kiterjedt listákat soroljak fel madarakról és egyéb érdekes dolgokról. Ha hibát találsz valamelyik listában, tartsd meg magadnak.<br><br> Ha nem ez a teád, <a href=\"#\">akkor mindenképpen ezt ajánlom</a>. A kedvencem."
 
 #: inc/patterns/page-about-solid-color.php:14
 msgid "Edvard<br>Smith"
@@ -313,10 +326,6 @@ msgstr "Emery<br>Driscoll"
 #: inc/patterns/page-about-media-right.php:9
 msgid "An image of a bird flying"
 msgstr "Egy repülő madár képe"
-
-#: inc/patterns/page-sidebar-poster.php:56
-msgid "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
-msgstr "Nagy Színház<br>154 Eastern Avenue<br>Maryland NY, 12345"
 
 #: inc/patterns/page-about-media-right.php:6
 msgid "About page with media on the right"
@@ -557,6 +566,11 @@ msgstr "Jesús Rodriguez<br>Doug Stilton<br>Emery Driscoll<br>Megan Perry<br>Row
 msgid "Featuring"
 msgstr "Közreműködik"
 
+#: inc/patterns/general-video-header-details.php:11
+#: inc/patterns/page-layout-image-text-and-video.php:11
+msgid "<em>Warble</em>, a film about <br>hobbyist bird watchers."
+msgstr "<em>Csicsergés</em>, egy film <br>hobbimadarászokról."
+
 #: inc/patterns/general-video-header-details.php:6
 msgid "Video with header and details"
 msgstr "Videó fejléccel és részletekkel"
@@ -699,6 +713,10 @@ msgstr "Jesús Rodriguez"
 #: inc/patterns/general-list-events.php:25
 msgid "May 14th, 2022, 6 PM"
 msgstr "2022. május 14., 18 óra"
+
+#: inc/patterns/general-list-events.php:11
+msgid "Speaker Series"
+msgstr "Előadás-sorozat"
 
 #: inc/patterns/general-list-events.php:6
 msgid "List of events"
@@ -866,19 +884,14 @@ msgstr "Láblécek"
 msgid "Featured"
 msgstr "Kiemelt"
 
-#: inc/patterns/general-video-header-details.php:11
-#: inc/patterns/page-layout-image-text-and-video.php:11
-msgid "<em>Warble</em>, a film about <br>hobbyist bird watchers."
-msgstr "<em>Csicsergés</em>, egy film <br>hobbimadarászokról."
-
-#. Author of the theme
-msgid "the WordPress team"
-msgstr "a WordPress csapata"
+#. Theme URI of the theme
+msgid "https://wordpress.org/themes/twentytwentytwo/"
+msgstr "https://wordpress.org/themes/twentytwentytwo/"
 
 #. Author URI of the theme
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#. Theme URI of the theme
-msgid "https://github.com/wordpress/twentytwentytwo/"
-msgstr "https://github.com/wordpress/twentytwentytwo/"
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "a WordPress csapata"

@@ -62,6 +62,12 @@ class Shortcodes {
 	 * @var \MPHB\Shortcodes\BookingCancellationShortcode
 	 */
 	private $bookingCancellation;
+	
+	/**
+	 * 
+	 * @var \MPHB\Shortcodes\CustomerAccountShortcode
+	 */
+	private $account;
 
     private $shortcodes = array();
 
@@ -77,6 +83,7 @@ class Shortcodes {
 		$this->bookingConfirmation	 = new Shortcodes\BookingConfirmationShortcode();
 		$this->availabilityCalendar	 = new Shortcodes\AvailabilityCalendarShortcode();
 		$this->bookingCancellation 	 = new Shortcodes\BookingCancellationShortcode();
+		$this->account 				 = new Shortcodes\AccountShortcode();
 
         foreach ($this as $shortcode) {
             if (!is_a($shortcode, 'MPHB\Shortcodes\AbstractShortcode')) {
@@ -169,6 +176,10 @@ class Shortcodes {
 
 	public function getBookingCancellation() {
 		return $this->bookingCancellation;
+	}
+	
+	public function getAccount() {
+		return $this->account;
 	}
 
     public function getShortcodeByName($name)

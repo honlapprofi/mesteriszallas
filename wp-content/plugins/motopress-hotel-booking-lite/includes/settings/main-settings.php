@@ -479,6 +479,36 @@ class MainSettings {
 	{
 		return (bool) get_option( 'mphb_unfold_price_breakdown', false );
 	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */
+	public function automaticallyCreateUser() {
+		return (bool) get_option( 'mphb_automatically_create_user', false );
+	}
+
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */
+	public function allowCustomersCreateAccount() {
+		return (bool) get_option( 'mphb_allow_customers_create_account', false );
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */	
+	public function allowCustomersLogIn() {
+		return (bool) get_option( 'mphb_allow_customers_log_in', false );
+	}
 
 	/**
 	 * @return bool

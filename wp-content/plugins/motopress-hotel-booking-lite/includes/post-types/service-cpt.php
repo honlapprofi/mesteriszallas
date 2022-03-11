@@ -19,6 +19,8 @@ class ServiceCPT extends EditableCPT {
 		add_action( 'loop_start', array( $this, 'setupPseudoTemplate' ) );
 
         add_filter( 'use_block_editor_for_post_type', array( $this, 'useBlockEditor' ), 10, 2 );
+
+        add_action( 'template_redirect', array( $this, 'maybeRedirect' ) );
 	}
 
     public function useBlockEditor($useBlockEditor, $postType)
@@ -116,7 +118,7 @@ class ServiceCPT extends EditableCPT {
 			'register_meta_box_cb'	 => array( $this, 'registerMetaBoxes' ),
 			'rewrite'				 => array(
 				//translators: do not translate
-				'slug'		 => _x( 'service', 'slug', 'motopress-hotel-booking' ),
+				'slug'		 => _x( 'services', 'slug', 'motopress-hotel-booking' ),
 				'with_front' => false,
 				'feeds'		 => true
 			),
@@ -249,4 +251,30 @@ class ServiceCPT extends EditableCPT {
 		return $classes;
 	}
 
+	/**
+	 * Redirects services from /service/service-slug to /services/service-slug.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @global \WP_Query $wp_query
+	 */
+	public function maybeRedirect(){
+		global $wp_query;
+
+		if (is_404()
+			&& isset($wp_query->query['post_type'])
+			&& $wp_query->query['post_type'] === 'mpa_service'
+			&& isset($wp_query->query['mpa_service'])
+		) {
+			$post = get_page_by_path($wp_query->query['mpa_service'], OBJECT, MPHB()->postTypes()->service()->getPostType());
+
+			if (!is_null($post)) {
+				$postUrl = get_post_permalink($post);
+
+				if (wp_redirect($postUrl, 301)) { // 301: Moved Permanently
+					exit;
+				}
+			}
+		}
+	}
 }

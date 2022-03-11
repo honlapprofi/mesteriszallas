@@ -74,8 +74,7 @@ class Cookie_Notice_Welcome {
 	 * @return string
 	 */
 	public function admin_body_class( $classes ) {
-		if ( isset( $_GET['page'] ) && $_GET['page'] === 'cookie-notice-welcome' )
-			$classes .= ' folded';
+		$classes .= ' folded';
 		
 		return $classes;
 	}
@@ -104,7 +103,7 @@ class Cookie_Notice_Welcome {
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'admin_footer', array( $this, 'admin_footer' ) );
 		
-		add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
+		// add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
 	}
 		
 	/**
