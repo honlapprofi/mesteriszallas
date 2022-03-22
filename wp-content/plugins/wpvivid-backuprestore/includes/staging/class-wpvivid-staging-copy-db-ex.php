@@ -357,6 +357,14 @@ class WPvivid_Staging_Copy_DB
                 $error=$db->last_error;
                 $wpvivid_plugin->staging->log->WriteLog($error, 'Warning');
             }
+
+            $delete_query = $db->prepare("DELETE FROM {$prefix}options WHERE option_name = %s", 'wpvivid_backup_list');
+            $wpvivid_plugin->staging->log->WriteLog($delete_query, 'notice');
+            if ($db->get_results($delete_query)===false)
+            {
+                $error=$db->last_error;
+                $wpvivid_plugin->staging->log->WriteLog($error, 'Warning');
+            }
         }
 
         if(!$this->task->is_restore())

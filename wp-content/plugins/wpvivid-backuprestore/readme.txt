@@ -1,14 +1,14 @@
-=== Migration, Backup, Staging - WPvivid Backup and Migration Plugin ===
+=== Migration, Backup, Staging - WPvivid ===
 Contributors: wpvivid
 Tags: move, clone, migrate, staging, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
-Tested up to: 5.8.2
+Tested up to: 5.9.2
 Requires PHP: 5.3
-Stable tag: 0.9.69
+Stable tag: 0.9.70
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Auto migrate, move, duplicate, clone, back up WP. Create staging sites. All-in-one backup, migration & staging plugin. Schedule, offsite backup.
+Migrate, staging, back up WP.
 
 == Description ==
 WPvivid Backup Plugin offers backup, migration, and staging as basic features, and is integrating more and more elegant features, such as unused images cleaner etc.
@@ -192,6 +192,13 @@ Thank you for translating WPvivid Backup Plugin to your languages!
 * [Nima](https://profiles.wordpress.org/nima78600/) (Persian)
 
 == Changelog ==
+= 0.9.70 =
+- Fixed: There was no notification after restoration in some environments.
+- Fixed some vulnerabilities in the plugin code.
+- Fixed: Backup information of live site would be copied to the staging site when creating a staging site.
+- Changed staging site creation time to local time.
+- Fixed some bugs in the plugin code.
+- Successfully tested with WordPress 5.9.2.
 = 0.9.69 =
 - Updated: For security reasons, adding Google Drive, Dropbox, OneDrive now needs to get authentication first.
 - Updated: Changed time in a log file to local time.

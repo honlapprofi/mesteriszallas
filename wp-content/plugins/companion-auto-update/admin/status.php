@@ -1,11 +1,21 @@
 <?php
+	
+	// Define globals
+	global $wpdb;
+
+	// Define variables
+	$dateFormat 	= get_option( 'date_format' );
+	$dateFormat 	.= ' '.get_option( 'time_format' );
+	$table_name 	= $wpdb->prefix . "auto_updates"; 
+	$schedules 		= wp_get_schedules();
+	$interval_names = cau_wp_get_schedules();
 
 	// Update the database
 	if( isset( $_GET['run'] ) && $_GET['run'] == 'db_update' ) {
 		cau_manual_update();
 		echo '<div id="message" class="updated"><p><b>'.__( 'Database update completed' ).'</b></p></div>';
 	}
-	
+
 	if( isset( $_GET['run'] ) && $_GET['run'] == 'db_info_update' ) {
 		cau_savePluginInformation();
 		echo '<div id="message" class="updated"><p><b>'.__( 'Database information update completed' ).'</b></p></div>';
@@ -17,158 +27,125 @@
 		$allowedValues 		= array( 'seo', 'cron' );
 
 		if( !in_array( $report_to_ignore, $allowedValues ) ) {
+
 			wp_die( 'Trying to cheat eh?' );
+
 		} else {
-			global $wpdb;
+
 			$table_name = $wpdb->prefix . "auto_updates"; 
 			$wpdb->query( $wpdb->prepare( "UPDATE {$table_name} SET onoroff = %s WHERE name = 'ignore_$report_to_ignore'", 'yes' ) );
-			$__ignored = __( 'This report will now be ignored', 'companion-auto-update' );
+			$__ignored 	= __( 'This report will now be ignored', 'companion-auto-update' );
 			echo "<div id='message' class='updated'><p><b>$__ignored</b></p></div>";
+
 		}
 
 	}
 
-
-	
-	// Variables
-	$dateFormat 	= get_option( 'date_format' );
-	$dateFormat 	.= ' '.get_option( 'time_format' );
-	global $wpdb;
-	$table_name 	= $wpdb->prefix . "auto_updates"; 
-	$schedules 		= wp_get_schedules();
-	$interval_names = cau_wp_get_schedules();
-
 ?>
+
+
 
 <div class="cau_status_page">
 
-	<table class="cau_status_list widefat striped">
+	<?php 
 
-		<thead>
-			<tr>
-				<th class="cau_status_name"><strong><?php _e( 'Auto Updater', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_active_state"><strong><?php _e( 'Status', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_interval"><strong><?php _e( 'Interval', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_next"><strong><?php _e( 'Next', 'companion-auto-update' ); ?></strong></th>
-			</tr>
-		</thead>
+	$events = array(
+		0 => array( 
+			'name' 		=> __( 'Events', 'companion-auto-update' ),
+			'fields' 	=> array(
+				'plugins' 		=> __( 'Plugins', 'companion-auto-update' ),
+				'themes' 		=> __( 'Themes', 'companion-auto-update' ),
+				'minor' 		=> __( 'Core (Minor)', 'companion-auto-update' ),
+				'major' 		=> __( 'Core (Major)', 'companion-auto-update' ),
+				'send' 			=> __( 'Update available', 'companion-auto-update' ),
+				'sendupdate' 	=> __( 'Successful update', 'companion-auto-update' ),
+				'wpemails' 		=> __( 'Core notifications', 'companion-auto-update' ),
+				'update_delay'	=> __( 'Log updater', 'companion-auto-update' ),
+			),
+			'values'	=> array(
+				'plugins' 		=> 'wp_update_plugins',
+				'themes' 		=> 'wp_update_themes',
+				'minor' 		=> 'wp_version_check',
+				'major' 		=> 'wp_version_check',
+				'send' 			=> 'cau_set_schedule_mail',
+				'sendupdate' 	=> 'cau_set_schedule_mail',
+				'wpemails' 		=> 'cau_set_schedule_mail',
+				'update_delay'	=> 'cau_log_updater',
+			),
+			'explain'	=> array(
+				'plugins' 		=> __('Auto update plugins?', 'companion-auto-update'),
+				'themes' 		=> __('Auto update themes?', 'companion-auto-update'),
+				'minor' 		=> __('Auto update minor core updates?', 'companion-auto-update'),
+				'major' 		=> __('Auto update major core updates?', 'companion-auto-update'),
+				'send' 			=> __( 'Will notify you of available updates.', 'companion-auto-update' ),
+				'sendupdate' 	=> __( 'Will notify you after successful updates.', 'companion-auto-update' ),
+				'wpemails' 		=> __( 'The default WordPress notifications.', 'companion-auto-update' ),
+				'update_delay'	=> __( 'Will keep track of the update log and make sure updates are delayed when needed.', 'companion-auto-update' ),
+			)
+		),
+	);
 
-		<tbody id="the-list">
-			<?php 
+	$__sta 	= __( 'Status', 'companion-auto-update' );
+	$__int 	= __( 'Interval', 'companion-auto-update' );
+	$__nxt 	= __( 'Next', 'companion-auto-update' );
 
-			$auto_updaters = array(
-				'plugins' 	=> __( 'Plugins', 'companion-auto-update' ),
-				'themes' 	=> __( 'Themes', 'companion-auto-update' ),
-				'minor' 	=> __( 'Core (Minor)', 'companion-auto-update' ),
-				'major' 	=> __( 'Core (Major)', 'companion-auto-update' )
-			);
+	foreach( $events as $event => $info ) {
 
-			$eventNames = array(
-				'plugins' 	=> 'wp_update_plugins',
-				'themes' 	=> 'wp_update_themes',
-				'minor' 	=> 'wp_version_check',
-				'major' 	=> 'wp_version_check'
-			);
+		echo "<table class='cau_status_list widefat striped'>
 
-			foreach ( $auto_updaters as $key => $value ) {
+			<thead>
+				<tr>
+					<th class='cau_status_name' colspan='2'><strong>{$info['name']}</strong></th>
+					<th class='cau_status_active_state'><strong>{$__sta}</strong></th>
+					<th class='cau_status_interval'><strong>{$__int}</strong></th>
+					<th class='cau_status_next'><strong>{$__nxt}</strong></th>
+				</tr>
+			</thead>
 
-				if( cau_get_db_value( $key ) == 'on' ) {
-					$__status  		= 'enabled';
-					$__icon  		= 'yes-alt';
-					$__text 		= __( 'Enabled', 'companion-auto-update' );
-					$__interval 	= $interval_names[wp_get_schedule( $eventNames[$key] )];
-					$__next 		= date_i18n( $dateFormat, wp_next_scheduled( $eventNames[$key] ) );
-				} else {
-					$__status  		= 'disabled';
-					$__icon  		= 'marker';
-					$__text 		= __( 'Disabled', 'companion-auto-update' );
-					$__interval 	= '&dash;';
-					$__next 		= '&dash;';
-				}
+			<tbody id='the-list'>";
 
-				$__nxt 	= __( 'Next', 'companion-auto-update' );
+				foreach ( $info['fields'] as $key => $value ) {
 
-				echo "<tr>
-					<td class='cau_status_name'>$value</td>
-					<td class='cau_status_active_state'><span class='cau_$__status'><span class='dashicons dashicons-$__icon'></span> $__text</span></td>
-					<td class='cau_status_interval'>$__interval</td>
-					<td class='cau_status_next'><span class='cau_mobile_prefix'>$__nxt: </span>$__next</td>
-				</tr>";
-			} 
+					$is_on 			= ( cau_get_db_value( $key ) == 'on' && wp_get_schedule( $info['values'][$key] ) ) ? true : false;
+					$__status  		= $is_on ? 'enabled' : 'warning';
+					$__icon  		= $is_on ? 'yes-alt' : 'marker';
+					$__text 		= $is_on ? __( 'Enabled', 'companion-auto-update' ) : __( 'Disabled', 'companion-auto-update' );
+					$__interval 	= $is_on ? $interval_names[wp_get_schedule( $info['values'][$key] )] : '&dash;';
+					$__next 		= $is_on ? date_i18n( $dateFormat, wp_next_scheduled( $info['values'][$key] ) ) : '&dash;';
+					$__exp 			= !empty( $info['explain'][$key] ) ? '<br /><small>'.$info['explain'][$key].'</small>' : '';
+					$__nxt 			= __( 'Next', 'companion-auto-update' );
 
-			?>
-		</tbody>
+					echo "<tr>
+						<td class='cau_status_icon'><span class='dashicons dashicons-$__icon cau_$__status'></span></td>
+						<td class='cau_status_name'><strong>$value</strong>$__exp</td>
+						<td class='cau_status_active_state'><span class='cau_$__status'>$__text</span></td>
+						<td class='cau_status_interval'>$__interval</td>
+						<td class='cau_status_next'><span class='cau_mobile_prefix'>$__nxt: </span>$__next</td>
+					</tr>";
 
-	</table>
+				} 
 
-	<table class="cau_status_list widefat striped">
+			echo "</tbody>
 
-		<thead>
-			<tr>
-				<th class="cau_status_name"><strong><?php _e( 'Email Notifications', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_active_state"><strong><?php _e( 'Status', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_interval"><strong><?php _e( 'Interval', 'companion-auto-update' ); ?></strong></th>
-				<th class="cau_status_next"><strong><?php _e( 'Next', 'companion-auto-update' ); ?></strong></th>
-			</tr>
-		</thead>
+		</table>";
 
-		<tbody id="the-list">
-		<?php
+	}
 
-		$other_events = array(
-			'send' 			=> __( 'Update available', 'companion-auto-update' ),
-			'sendupdate' 	=> __( 'Successful update', 'companion-auto-update' ),
-			'wpemails' 		=> __( 'Core notifications', 'companion-auto-update' )
-		);
-
-		$other_eventNames = array(
-			'send' 			=> 'cau_set_schedule_mail',
-			'sendupdate' 	=> 'cau_set_schedule_mail',
-			'wpemails' 		=> 'cau_set_schedule_mail',
-		);
-
-		foreach ( $other_events as $key => $value ) {
-
-			if( cau_get_db_value( $key ) == 'on' ) {
-				$__status  		= 'enabled';
-				$__icon  		= 'yes-alt';
-				$__text 		= __( 'Enabled', 'companion-auto-update' );
-				$__interval 	= $interval_names[wp_get_schedule( $other_eventNames[$key] )];
-				$__next 		= date_i18n( $dateFormat, wp_next_scheduled( $other_eventNames[$key] ) );
-			} else {
-				$__status  		= 'warning';
-				$__icon  		= 'marker';
-				$__text 		= __( 'Disabled', 'companion-auto-update' );
-				$__interval 	= '&dash;';
-				$__next 		= '&dash;';
-			}
-
-			$__nxt 	= __( 'Next', 'companion-auto-update' );
-
-			echo "<tr>
-				<td class='cau_status_name'>$value</td>
-				<td class='cau_status_active_state'><span class='cau_$__status'><span class='dashicons dashicons-$__icon'></span> $__text</span></td>
-				<td class='cau_status_interval'>$__interval</td>
-				<td class='cau_status_next'><span class='cau_mobile_prefix'>$__nxt: </span>$__next</td>
-			</tr>";
-		} 
-
-		?>
-		</tbody>
-
-	</table>
+	?>
 
 	<table class="cau_status_list widefat striped cau_status_warnings">
 
 		<thead>
 			<tr>
-				<th class="cau_plugin_issue_name" colspan="4"><strong><?php _e( 'Status' ); ?></strong></th>
+				<th class="cau_plugin_issue_name" colspan="5"><strong><?php _e( 'Status' ); ?></strong></th>
 			</tr>
 		</thead>
 
 		<tbody id="the-list">
 
-			<tr>
+			<!-- checkAutomaticUpdaterDisabled -->
+			<tr>	
+				<td class='cau_status_icon'><span class="dashicons dashicons-update"></span></td>
 				<td><?php _e( 'Auto updates', 'companion-auto-update' ); ?></td>
 				<?php if ( checkAutomaticUpdaterDisabled() ) { ?>
 					<td class="cau_status_active_state"><span class='cau_disabled'><span class="dashicons dashicons-no"></span> <?php _e( 'All automatic updates are disabled', 'companion-auto-update' ); ?></span></td>
@@ -185,8 +162,10 @@
 				<?php } ?>
 				<td></td>
 			</tr>
-			
-			<tr>
+
+			<!-- Connection with WP.org -->
+			<tr>	
+				<td class='cau_status_icon'><span class="dashicons dashicons-wordpress"></span></td>
 				<td><?php _e( 'Connection with WordPress.org', 'companion-auto-update' ); ?></td>
 				<?php if( wp_http_supports( array( 'ssl' ) ) == '1' ) {
 					$__text		= __( 'No issues detected', 'companion-auto-update' );
@@ -194,10 +173,13 @@
 				} else {
 					$__text		= __( 'Disabled', 'companion-auto-update' );
 					echo "<td colspan='3' class='cau_status_active_state'><span class='cau_disabled'><span class='dashicons dashicons-no'></span> $__text</span></td>";
-				} ?>
+				} 
+				?>
 			</tr>
-			
+
+			<!-- ignore_seo check -->
 			<tr <?php if( cau_get_db_value( 'ignore_seo' ) == 'yes' ) { echo "class='report_hidden'"; } ?> >
+				<td class='cau_status_icon'><span class="dashicons dashicons-search"></span></td>
 				<td><?php _e( 'Search Engine Visibility', 'companion-auto-update' ); ?></td>
 				<?php if( get_option( 'blog_public' ) == 0 ) { ?>
 					<td colspan="2" class="cau_status_active_state">
@@ -212,8 +194,10 @@
 					<td colspan="3" class="cau_status_active_state"><span class='cau_enabled'><span class="dashicons dashicons-yes-alt"></span> <?php _e( 'No issues detected', 'companion-auto-update' ); ?></span></td>
 				<?php } ?>
 			</tr>
-			
+
+			<!-- ignore_cron check -->
 			<tr <?php if( cau_get_db_value( 'ignore_cron' ) == 'yes' ) { echo "class='report_hidden'"; } ?> >
+				<td class='cau_status_icon'><span class="dashicons dashicons-admin-generic"></span></td>
 				<td><?php _e( 'Cronjobs', 'companion-auto-update' ); ?></td>
 				<?php if( checkCronjobsDisabled() ) { ?>
 					<td class="cau_status_active_state"><span class='cau_warning'><span class="dashicons dashicons-warning"></span> <?php _e( 'Disabled', 'companion-auto-update' ); ?></span></td>
@@ -227,7 +211,9 @@
 				<?php } ?>
 			</tr>
 
+			<!-- wp_version_check -->
 			<tr>
+				<td class='cau_status_icon'><span class="dashicons dashicons-wordpress-alt"></span></td>
 				<td>wp_version_check</td>
 				<?php if ( !has_filter( 'wp_version_check', 'wp_version_check' ) ) { ?>
 					<td colspan="2" class="cau_status_active_state"><span class='cau_disabled'><span class="dashicons dashicons-no"></span> <?php _e( 'A plugin has prevented updates by disabling wp_version_check', 'companion-auto-update' ); ?></span></td>
@@ -237,7 +223,9 @@
 				<?php } ?>
 			</tr>
 
+			<!-- VCD -->
 			<tr>
+				<td class='cau_status_icon'><span class="dashicons dashicons-open-folder"></span></td>
 				<td>VCS</td>
 				<td colspan="3" class="cau_status_active_state"><span class='cau_<?php echo cau_test_is_vcs_checkout( ABSPATH )['status']; ?>'><span class="dashicons dashicons-<?php echo cau_test_is_vcs_checkout( ABSPATH )['icon']; ?>"></span> <?php echo cau_test_is_vcs_checkout( ABSPATH )['description']; ?></span></td>
 			</tr>
@@ -247,48 +235,56 @@
 	</table>
 
 	<table class="autoupdate cau_status_list widefat striped cau_status_warnings">
-
 		<thead>
 			<tr>
-				<th colspan="4"><strong><?php _e( 'Systeminfo', 'companion-auto-update' ); ?></strong></th>
+				<th colspan="5"><strong><?php _e( 'Systeminfo', 'companion-auto-update' ); ?></strong></th>
 			</tr>
 		</thead>
 
 		<tbody id="the-list">
+
 			<tr>
+				<td class='cau_status_icon'><span class="dashicons dashicons-wordpress"></span></td>
 				<td>WordPress</td>
 				<td><?php echo get_bloginfo( 'version' ); ?></td>
 				<td></td>
 				<td></td>
 			</tr>
-			<tr>
+
+			<tr <?php if( version_compare( PHP_VERSION, '5.1.0', '<' ) ) { echo "class='inactive'"; } ?>>
+				<td class='cau_status_icon'><span class="dashicons dashicons-media-code"></span></td>
 				<td>PHP</td>
-				<td><?php echo phpversion(); ?></td>
+				<td><?php echo phpversion(); ?> <code>(Required: 5.1.0 or up)</code></td>
 				<td></td>
 				<td></td>
 			</tr>
+
 			<tr <?php if( cau_incorrectDatabaseVersion() ) { echo "class='inactive'"; } ?>>
+				<td class='cau_status_icon'><span class="dashicons dashicons-database"></span></td>
 				<td>Database</td>
 				<td><?php echo get_option( "cau_db_version" ); ?> <code>(Latest: <?php echo cau_db_version(); ?>)</code></td>
 				<td></td>
 				<td></td>
 			</tr>
+
 			<tr>
+				<td class='cau_status_icon'><span class="dashicons dashicons-calendar"></span></td>
 				<td class="cau_status_name"><?php _e( 'Timezone' ); ?></td>
 				<td class="cau_status_active_state"><?php echo cau_get_proper_timezone(); ?> (GMT <?php echo get_option('gmt_offset'); ?>) - <?php echo date_default_timezone_get(); ?></td>
 				<td></td>
 				<td></td>
 			</tr>
+
 		</tbody>
 
 	</table>
-	
+
 	<?php 
+
 	// If has incomptable plugins
 	if( cau_incompatiblePlugins() ) { ?>
 
 		<table class="cau_status_list no_column_width widefat striped cau_status_warnings">
-
 			<thead>
 				<tr>
 					<th class="cau_plugin_issue_name" colspan="4"><strong><?php _e( 'Possible plugin issues', 'companion-auto-update' ); ?></strong></th>
@@ -297,6 +293,7 @@
 
 			<tbody id="the-list">
 				<?php
+
 				foreach ( cau_incompatiblePluginlist() as $key => $value ) {
 					if( is_plugin_active( $key ) ) {
 						echo '<tr>
@@ -306,6 +303,7 @@
 						</tr>';
 					}
 				}
+
 				?>
 			</tbody>
 
@@ -313,6 +311,7 @@
 
 	<?php } ?>
 
+	<!-- Advanced info -->
 	<table class="autoupdate cau_status_list widefat striped cau_status_warnings">
 
 		<thead>
@@ -320,36 +319,69 @@
 				<th><strong><?php _e( 'Advanced info', 'companion-auto-update' ); ?></strong> &dash; <?php _e( 'For when you need our help fixing an issue.', 'companion-auto-update' ); ?></th>
 			</tr>
 		</thead>
+
 		<tbody id="the-list">
 			<tr>
 				<td>
 					<div class='button button-primary toggle_advanced_button'><?php _e( 'Toggle', 'companion-auto-update' ); ?></div>
-				
 					<div class='toggle_advanced_content' style='display: none;'>
 						<?php 
-						global $wpdb;
-						$autoupdates 	= $wpdb->prefix."auto_updates"; 
-						$cau_configs 	= $wpdb->get_results( "SELECT * FROM $autoupdates" ); 
+						$cau_configs 	= $wpdb->get_results( "SELECT * FROM $table_name" ); 
 						array_push( $cau_configs, "WordPress: ".get_bloginfo( 'version' ) );
 						array_push( $cau_configs, "PHP: ".phpversion() );
 						array_push( $cau_configs, "DB: ".get_option( "cau_db_version" ).' / '.cau_db_version() );
-
 						echo "<textarea style='width: 100%; height: 750px;'>";
-						print_r( $cau_configs );
+							print_r( $cau_configs );
 						echo "</textarea>";
 						?>
 					</div>
 				</td>
 			</tr>
 		</tbody>
+
 	</table>
 
 	<script>jQuery( '.toggle_advanced_button' ).click( function() { jQuery( '.toggle_advanced_content' ).toggle(); });</script>
 
+	<!-- Delay updates -->
+	<table class="autoupdate cau_status_list widefat striped cau_status_warnings">
+
+		<thead>
+			<tr>
+				<th><strong><?php _e( 'Delay updates', 'companion-auto-update' ); ?></strong> &dash; <?php echo ( cau_get_db_value( 'update_delay' ) == 'on' ) ? __( 'Enabled', 'companion-auto-update' ).' ('.sprintf( esc_html__( '%s days', 'companion-auto-update' ).')', cau_get_db_value( 'update_delay_days' ) ) : __( 'Disabled', 'companion-auto-update' ); ?></th>
+				<th><?php _e( 'Till', 'companion-auto-update' ); ?></th>
+			</tr>
+		</thead>
+
+		<tbody id="the-list">
+			<?php 
+
+			$updateLog 		= "{$wpdb->prefix}update_log"; 
+			$put_on_hold 	= $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$updateLog} WHERE put_on_hold <> '%s'", '0' ) );
+
+			foreach ( $put_on_hold as $plugin ) {
+
+				$__name 		= $plugin->slug;
+				$__poh 			= $plugin->put_on_hold;
+				$__udd 			= ( cau_get_db_value( 'update_delay_days' ) != '' ) ? cau_get_db_value( 'update_delay_days' ) : '2';
+				$__date 		= date_i18n( $dateFormat, strtotime( "+".$__udd." days", $__poh ) );
+
+				echo "<tr>
+					<td>{$__name}</td>
+					<td>{$__date}</td>
+				</tr>";
+			}
+
+			echo empty( $put_on_hold ) ? "<tr><td>".__( 'No plugins have been put on hold.', 'companion-auto-update' )."</td></tr>" : "";
+
+			?>
+		</tbody>
+
+	</table>
+
 </div>
 
 <?php 
-
 // Remove the line
 if( isset( $_POST['fixit'] ) ) {
 	check_admin_referer( 'cau_fixit' );
@@ -397,9 +429,7 @@ function cau_removeErrorLine() {
 	    }
 
 	}
-	
+
 	echo "<div id='message' class='$meldingS'><p><strong>$melding</strong></p></div>";
 
 }
-
-?>

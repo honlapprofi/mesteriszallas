@@ -4,7 +4,7 @@ Donate link: https://motopress.com/
 Requires at least: 4.7
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
 Tested up to: 5.9
-Stable tag: 4.2.1
+Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ Hotel Booking Lite plugin, Copyright (C) 2016, MotoPress https://motopress.com/
 Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+
+= 4.2.2, Mar 16 2022 =
+* Improved ical synchronization logs removal from database.
 
 = 4.2.1, Feb 21 2022 =
 * Improved compatibility with the image lazy-loading feature.

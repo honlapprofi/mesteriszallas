@@ -423,7 +423,13 @@ class SettingsMenuPage extends AbstractMenuPage {
                 'type'           => 'checkbox',
                 'default'        => true,
                 'inner_label'    => __( "Do not export imported bookings.", 'motopress-hotel-booking' )
-            ) )
+            ) ),
+			Fields\FieldFactory::create( 'mphb_ical_minimize_logs', array(
+				'type'           => 'checkbox',
+				'default'        => true,
+				'label'          => esc_html__( 'Minimize Logs', 'motopress-hotel-booking' ),
+				'inner_label'    => esc_html__( 'Enable the plugin to record only important messages.', 'motopress-hotel-booking' ),
+			) ),
         );
 
         $this->filterGroupFields( $iCalFields, $iCalGroup->getName() );

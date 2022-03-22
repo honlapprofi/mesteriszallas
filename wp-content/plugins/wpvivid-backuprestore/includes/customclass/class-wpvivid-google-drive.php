@@ -76,116 +76,119 @@ class Wpvivid_Google_drive extends WPvivid_Remote
     {
         if(isset($_GET['action']))
         {
-            if($_GET['action']=='wpvivid_google_drive_auth')
+            if($_GET['page'] === 'WPvivid')
             {
-                $auth_id = uniqid('wpvivid-auth-');
-                $res = $this -> compare_php_version();
-                if($res['result'] == WPVIVID_FAILED){
-                    echo '<div class="notice notice-warning is-dismissible"><p>'.$res['error'].'</p></div>';
-                    return ;
-                }
-                try {
-                    include_once WPVIVID_PLUGIN_DIR . '/vendor/autoload.php';
-                    $client = new Google_Client();
-                    $client->setAuthConfig($this->google_drive_secrets);
-                    $client->setApprovalPrompt('force');
-                    $client->addScope(Google_Service_Drive::DRIVE_FILE);
-                    $client->setAccessType('offline');
-                    $client->setState(admin_url() . 'admin.php?page=WPvivid' . '&action=wpvivid_google_drive_finish_auth&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&auth_id='.$auth_id);
-                    $auth_url = $client->createAuthUrl();
-                    $remote_options['auth_id']=$auth_id;
-                    update_option('wpvivid_tmp_remote_options',$remote_options);
-                    header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
-                }
-                catch (Exception $e){
-                    if($e->getMessage() === 'file does not exist'){
-                        $error_msg = __('Authentication failed, the client_secrets.json file is missing. Please make sure the client_secrets.json file is in wpvivid-backuprestore\includes\customclass directory.', 'wpvivid-backuprestore');
-                        echo '<div class="notice notice-error"><p>'.$error_msg.'</p></div>';
-                    }
-                    else if($e->getMessage() === 'invalid json for auth config'){
-                        $error_msg = __('Authentication failed, the format of the client_secrets.json file is incorrect. Please delete and re-install the plugin to recreate the file.', 'wpvivid-backuprestore');
-                        echo '<div class="notice notice-error"><p>'.$error_msg.'</p></div>';
-                    }
-                    else{
-                        echo '<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>';
-                    }
-                }
-            }
-            else if($_GET['action']=='wpvivid_google_drive_finish_auth')
-            {
-                try
+                if($_GET['action']=='wpvivid_google_drive_auth')
                 {
-                    if(isset($_GET['error']))
-                    {
-                        header('Location: '.admin_url().'admin.php?page='.WPVIVID_PLUGIN_SLUG.'&action=wpvivid_google_drive&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&result=error&resp_msg='.sanitize_text_field($_GET['error']));
-                        return;
+                    $auth_id = uniqid('wpvivid-auth-');
+                    $res = $this -> compare_php_version();
+                    if($res['result'] == WPVIVID_FAILED){
+                        echo '<div class="notice notice-warning is-dismissible"><p>'.$res['error'].'</p></div>';
+                        return ;
                     }
-
-                    $remoteslist = WPvivid_Setting::get_all_remote_options();
-                    foreach ($remoteslist as $key => $value)
-                    {
-                        if (isset($value['auth_id']) && isset($_GET['auth_id']) && $value['auth_id'] == sanitize_text_field($_GET['auth_id']))
-                        {
-                            _e('<div class="notice notice-success is-dismissible"><p>You have authenticated the Google Drive account as your remote storage.</p></div>');
-                            return;
+                    try {
+                        include_once WPVIVID_PLUGIN_DIR . '/vendor/autoload.php';
+                        $client = new Google_Client();
+                        $client->setAuthConfig($this->google_drive_secrets);
+                        $client->setApprovalPrompt('force');
+                        $client->addScope(Google_Service_Drive::DRIVE_FILE);
+                        $client->setAccessType('offline');
+                        $client->setState(admin_url() . 'admin.php?page=WPvivid' . '&action=wpvivid_google_drive_finish_auth&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&auth_id='.$auth_id);
+                        $auth_url = $client->createAuthUrl();
+                        $remote_options['auth_id']=$auth_id;
+                        update_option('wpvivid_tmp_remote_options',$remote_options);
+                        header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
+                    }
+                    catch (Exception $e){
+                        if($e->getMessage() === 'file does not exist'){
+                            $error_msg = __('Authentication failed, the client_secrets.json file is missing. Please make sure the client_secrets.json file is in wpvivid-backuprestore\includes\customclass directory.', 'wpvivid-backuprestore');
+                            echo '<div class="notice notice-error"><p>'.$error_msg.'</p></div>';
+                        }
+                        else if($e->getMessage() === 'invalid json for auth config'){
+                            $error_msg = __('Authentication failed, the format of the client_secrets.json file is incorrect. Please delete and re-install the plugin to recreate the file.', 'wpvivid-backuprestore');
+                            echo '<div class="notice notice-error"><p>'.$error_msg.'</p></div>';
+                        }
+                        else{
+                            echo '<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>';
                         }
                     }
-
-                    $tmp_options=get_option('wpvivid_tmp_remote_options',false);
-                    if($tmp_options===false)
+                }
+                else if($_GET['action']=='wpvivid_google_drive_finish_auth')
+                {
+                    try
                     {
-                        return;
-                    }
-                    else
-                    {
-                        if($tmp_options['auth_id']===$_GET['auth_id'])
+                        if(isset($_GET['error']))
                         {
-                            if(empty($_POST['refresh_token']))
-                            {
-                                if(empty($tmp_options['token']['refresh_token']))
-                                {
-                                    $err = 'No refresh token was received from Google, which means that you entered client secret incorrectly, or that you did not re-authenticated yet after you corrected it. Please authenticate again.';
-                                    header('Location: '.admin_url().'admin.php?page='.WPVIVID_PLUGIN_SLUG.'&action=wpvivid_google_drive&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&result=error&resp_msg='.$err);
+                            header('Location: '.admin_url().'admin.php?page='.WPVIVID_PLUGIN_SLUG.'&action=wpvivid_google_drive&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&result=error&resp_msg='.sanitize_text_field($_GET['error']));
+                            return;
+                        }
 
-                                    return;
-                                }
-                            }
-                            else
+                        $remoteslist = WPvivid_Setting::get_all_remote_options();
+                        foreach ($remoteslist as $key => $value)
+                        {
+                            if (isset($value['auth_id']) && isset($_GET['auth_id']) && $value['auth_id'] == sanitize_text_field($_GET['auth_id']))
                             {
-                                $tmp_options['type'] = WPVIVID_REMOTE_GOOGLEDRIVE;
-                                $tmp_options['token']['access_token'] = sanitize_text_field($_POST['access_token']);
-                                $tmp_options['token']['expires_in'] = sanitize_text_field($_POST['expires_in']);
-                                $tmp_options['token']['refresh_token'] = sanitize_text_field($_POST['refresh_token']);
-                                $tmp_options['token']['scope'] = sanitize_text_field($_POST['scope']);
-                                $tmp_options['token']['token_type'] = sanitize_text_field($_POST['token_type']);
-                                $tmp_options['token']['created'] = sanitize_text_field($_POST['created']);
-                                update_option('wpvivid_tmp_remote_options',$tmp_options);
+                                _e('<div class="notice notice-success is-dismissible"><p>You have authenticated the Google Drive account as your remote storage.</p></div>');
+                                return;
                             }
-                            $this->add_remote=true;
+                        }
+
+                        $tmp_options=get_option('wpvivid_tmp_remote_options',false);
+                        if($tmp_options===false)
+                        {
+                            return;
                         }
                         else
                         {
-                            return;
+                            if($tmp_options['auth_id']===$_GET['auth_id'])
+                            {
+                                if(empty($_POST['refresh_token']))
+                                {
+                                    if(empty($tmp_options['token']['refresh_token']))
+                                    {
+                                        $err = 'No refresh token was received from Google, which means that you entered client secret incorrectly, or that you did not re-authenticated yet after you corrected it. Please authenticate again.';
+                                        header('Location: '.admin_url().'admin.php?page='.WPVIVID_PLUGIN_SLUG.'&action=wpvivid_google_drive&main_tab=storage&sub_tab=googledrive&sub_page=storage_account_google_drive&result=error&resp_msg='.$err);
+
+                                        return;
+                                    }
+                                }
+                                else
+                                {
+                                    $tmp_options['type'] = WPVIVID_REMOTE_GOOGLEDRIVE;
+                                    $tmp_options['token']['access_token'] = sanitize_text_field($_POST['access_token']);
+                                    $tmp_options['token']['expires_in'] = sanitize_text_field($_POST['expires_in']);
+                                    $tmp_options['token']['refresh_token'] = sanitize_text_field($_POST['refresh_token']);
+                                    $tmp_options['token']['scope'] = sanitize_text_field($_POST['scope']);
+                                    $tmp_options['token']['token_type'] = sanitize_text_field($_POST['token_type']);
+                                    $tmp_options['token']['created'] = sanitize_text_field($_POST['created']);
+                                    update_option('wpvivid_tmp_remote_options',$tmp_options);
+                                }
+                                $this->add_remote=true;
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                     }
-                }
-                catch (Exception $e){
-                    echo '<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>';
-                }
-            }
-            else if($_GET['action']=='wpvivid_google_drive')
-            {
-                try {
-                    if (isset($_GET['result'])) {
-                        if ($_GET['result'] == 'success') {
-                            add_action('show_notice', array($this, 'wpvivid_show_notice_add_google_drive_success'));
-                        } else if ($_GET['result'] == 'error') {
-                            add_action('show_notice', array($this, 'wpvivid_show_notice_add_google_drive_error'));
-                        }
+                    catch (Exception $e){
+                        echo '<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>';
                     }
                 }
-                catch (Exception $e){
-                    _e('<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>');
+                else if($_GET['action']=='wpvivid_google_drive')
+                {
+                    try {
+                        if (isset($_GET['result'])) {
+                            if ($_GET['result'] == 'success') {
+                                add_action('show_notice', array($this, 'wpvivid_show_notice_add_google_drive_success'));
+                            } else if ($_GET['result'] == 'error') {
+                                add_action('show_notice', array($this, 'wpvivid_show_notice_add_google_drive_error'));
+                            }
+                        }
+                    }
+                    catch (Exception $e){
+                        _e('<div class="notice notice-error"><p>'.$e->getMessage().'</p></div>');
+                    }
                 }
             }
         }

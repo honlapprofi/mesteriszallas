@@ -18,6 +18,8 @@ class AccountShortcode extends AbstractShortcode {
     public function addActions() {
         parent::addActions();
         add_action( 'init', array( $this, 'onInit' ) );
+        add_action( 'wp_login_failed', array( $this, 'redirectOnFailedLogin' ) );
+        add_action( 'wp_logout', array( $this, 'redirectAfterLogout' ) );
     }
     
     public function onInit() {
@@ -190,6 +192,12 @@ class AccountShortcode extends AbstractShortcode {
                 <?php
             }
         }
+        
+        if( isset( $_GET['login_failed'] ) && $_GET['login_failed'] == 'error' ) {
+            ?>
+            <p class="mphb-data-incorrect"><?php echo esc_html__( 'Invalid login or password.', 'motopress-hotel-booking' ); ?></p>
+            <?php
+        }
     }
     
     protected function successMessage() {
@@ -276,6 +284,39 @@ class AccountShortcode extends AbstractShortcode {
             	<?php wp_login_form(); ?>
 			</div>
 			<?php
+        }
+    }
+    
+    /**
+     * 
+     * @since 4.2.1
+     */
+    public function redirectOnFailedLogin() {
+        $referrer = $_SERVER['HTTP_REFERER'];
+        $accountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
+        $page = get_post( $accountPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            $redirectTo = add_query_arg( 'login_failed', 'error', $referrer );
+            wp_safe_redirect( $redirectTo );
+            exit;
+        }
+    }
+    
+    /**
+     * 
+     * @since 4.2.1
+     */
+    public function redirectAfterLogout() {
+        $referrer = $_SERVER['HTTP_REFERER'];
+        $accountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
+        $page = get_post( $accountPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            wp_safe_redirect( $referrer );
+            exit;
         }
     }
 }

@@ -217,11 +217,26 @@ and (min-width: 768px) {
 #mphb-customer-details input#mphb_first_name,
 #mphb-customer-details input#mphb_last_name,
 #mphb-customer-details input#mphb_email,
-#mphb-customer-details input#mphb_phone {width: 99%;}
+#mphb-customer-details input#mphb_phone,
+#mphb-customer-details input#mphb_country,
+#mphb-customer-details input#mphb_address1,
+#mphb-customer-details input#mphb_city,
+#mphb-customer-details input#mphb_state {width: 99%;}
 #mphb-customer-details .mphb-customer-name,
 #mphb-customer-details .mphb-customer-last-name,
 #mphb-customer-details .mphb-customer-email,
-#mphb-customer-details .mphb-customer-phone {width: 50%; float: left;}
+#mphb-customer-details .mphb-customer-phone,
+#mphb-customer-details .mphb-customer-country,
+#mphb-customer-details .mphb-customer-address1 {width: 50%; float: left;}
+}
+@media only screen
+and (min-width: 768px) {
+#mphb-customer-details input#mphb_city,
+#mphb-customer-details input#mphb_state,
+#mphb-customer-details input#mphb_zip {width: 98%;}
+#mphb-customer-details .mphb-customer-city,
+#mphb-customer-details .mphb-customer-state,
+#mphb-customer-details .mphb-customer-zip {width: 33.33%; float: left;}
 }
 .mphb_sc_checkout-submit-wrapper .button {
   color: #fff;

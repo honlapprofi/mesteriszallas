@@ -529,6 +529,16 @@ class MainSettings {
 	}
 
 	/**
+	 * @since 4.2.2
+	 *
+	 * @return boolean
+	 */
+	public function isMinimizedSyncLogs()
+	{
+		return (bool) get_option( 'mphb_ical_minimize_logs', true );
+	}
+
+	/**
 	 * @param null|int $userId Optional. Current user by default.
 	 * @param null|bool $setValue Optional. If set, will update the value.
 	 * @return bool

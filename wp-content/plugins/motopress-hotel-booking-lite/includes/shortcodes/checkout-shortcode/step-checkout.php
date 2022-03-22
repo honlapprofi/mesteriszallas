@@ -35,6 +35,8 @@ class StepCheckout extends Step {
 
 	public function __construct(){
 		add_action( 'init', array( $this, 'addInitActions' ) );
+		add_action( 'wp_login_failed', array( $this, 'redirectOnFailedLogin' ) );
+		add_action( 'wp_logout', array( $this, 'redirectAfterLogout' ) );
 	}
 
 	public function addInitActions(){
@@ -315,6 +317,39 @@ class StepCheckout extends Step {
 		MPHB()->getPublicScriptManager()->enqueue();
 
         do_action('mphb_enqueue_checkout_scripts');
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.1
+	 */
+	public function redirectOnFailedLogin() {
+		$referrer = $_SERVER['HTTP_REFERER'];
+        $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
+        $page = get_post( $checkoutPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            $redirectTo = add_query_arg( 'login_failed', 'error', $referrer );
+            wp_safe_redirect( $redirectTo );
+            exit;
+        }
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.1
+	 */
+	public function redirectAfterLogout() {
+		$referrer = $_SERVER['HTTP_REFERER'];
+        $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
+        $page = get_post( $checkoutPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            wp_safe_redirect( $referrer );
+            exit;
+        }
 	}
 
 }

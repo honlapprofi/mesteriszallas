@@ -99,13 +99,17 @@ class WPvivid_mail_report
         $status=$task['status']['str'];
         if($status=='completed')
         {
-            $status='succeeded';
+            $status='Succeeded';
         }
         else
         {
-            $status='failed. '.$task['status']['error'];
+            $status='Failed. '.$task['status']['error'];
         }
         $type=$task['type'];
+        if($type === 'Cron')
+        {
+            $type = 'Cron-Schedule';
+        }
         $offset=get_option('gmt_offset');
         $start_time=date("m-d-Y H:i:s",$task['status']['start_time']+$offset*60*60);
         $end_time=date("m-d-Y H:i:s",time()+$offset*60*60);
@@ -313,37 +317,37 @@ class WPvivid_mail_report
                                                     <tbody>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup:</label><label>'.$status.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup: </label><label>'.$status.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup Type:</label><label>'.$type.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup Type: </label><label>'.$type.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Start Time:</label><label>'.$start_time.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Start Time: </label><label>'.$start_time.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>End Time:</label><label>'.$end_time.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>End Time: </label><label>'.$end_time.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Running Time:</label><label>'.$running_time.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Running Time: </label><label>'.$running_time.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Back up to:</label><label>'.$remote.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backed up to: </label><label>'.$remote.'</label></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" align="left" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup Content:</label><label>'.$content.'</label></p>
+                                                            <p style="text-align:left;Margin-top:0px;Margin-bottom:0px;gdsherpa-regular;font-size:14px;line-height:24px"><label>Backup Content: </label><label>'.$content.'</label></p>
                                                         </td>
                                                     </tr>
                                                     </tbody>

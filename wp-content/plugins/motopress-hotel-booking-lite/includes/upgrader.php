@@ -2,8 +2,6 @@
 
 namespace MPHB;
 
-use MPHB\iCal\BackgroundProcesses\QueuedSynchronizer;
-
 class Upgrader {
 
 	const OPTION_DB_VERSION			 = 'mphb_db_version';
@@ -74,6 +72,7 @@ class Upgrader {
             'fixForV3_2_0'
         ),
         '3.4.0' => array(
+            'stopSynchronization',
             'markImported',
             'improveStats',
             'moveSyncUrls'
@@ -104,7 +103,11 @@ class Upgrader {
 			'addMyAccountPage',
 			'fixForV4_2_0',
 			'flushRewriteRules'
-		)
+		),
+		'4.2.2' => array(
+			'stopSynchronization', // Stop active sync to reset the queue with the next start
+			'alterTableSyncLogs',  // Remove "log_context" and change "log_message"
+		),
 	);
 
 	public function __construct(){
@@ -553,6 +556,16 @@ class Upgrader {
 		return false;
     }
 
+	/**
+	 * @since 4.2.2
+	 */
+	public function stopSynchronization()
+	{
+		if (MPHB()->getQueuedSynchronizer()->isInProgress()) {
+			MPHB()->getQueuedSynchronizer()->abortAll();
+		}
+	}
+
     /**
      * Mark imported bookings in version 3.4.0.
      */
@@ -789,6 +802,27 @@ class Upgrader {
 			}
 		}
 		
+		return false;
+	}
+
+	/**
+	 * Removes column "log_context" from wp_mphb_sync_logs and changes the type
+	 * of the column "log_message".
+	 *
+	 * @since 4.2.2
+	 *
+	 * @return false
+	 *
+	 * @global \wpdb $wpdb
+	 */
+	public function alterTableSyncLogs() {
+		global $wpdb;
+
+		$wp_mphb_sync_logs = $wpdb->prefix . \MPHB\iCal\Logger::TABLE_NAME;
+
+		$wpdb->query( "ALTER TABLE {$wp_mphb_sync_logs} DROP COLUMN log_context" );
+		$wpdb->query( "ALTER TABLE {$wp_mphb_sync_logs} MODIFY COLUMN log_message VARCHAR(150)" );
+
 		return false;
 	}
 	

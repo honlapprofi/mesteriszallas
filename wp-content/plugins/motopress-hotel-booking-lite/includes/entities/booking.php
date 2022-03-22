@@ -794,4 +794,13 @@ class Booking {
         return !empty($this->syncId);
     }
 
+	/**
+	 * @return bool
+	 *
+	 * @since 4.2.2
+	 */
+	public function isPending()
+	{
+		return in_array($this->getStatus(), MPHB()->postTypes()->booking()->statuses()->getPendingRoomStatuses());
+	}
 }

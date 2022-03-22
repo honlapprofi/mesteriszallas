@@ -1757,3 +1757,13 @@ function mphb_create_url( $endpoint, $value = '', $permalink = '' ) {
 
 	return $url;
 }
+
+/**
+ * @since 4.2.2
+ *
+ * @param string $queueItem Sync queue item, like "%Timestamp%_%Room ID%".
+ * @return int Room ID.
+ */
+function mphb_parse_queue_room_id( $queueItem ) {
+	return (int)preg_replace( '/^\d+_(\d+)/', '$1', $queueItem );
+}
