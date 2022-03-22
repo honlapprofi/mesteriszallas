@@ -2,8 +2,6 @@
 
 namespace MPHB\Shortcodes;
 
-use \MPHB\Entities;
-
 class CheckoutShortcode extends AbstractShortcode {
 
 	protected $name = 'mphb_checkout';
@@ -88,9 +86,26 @@ class CheckoutShortcode extends AbstractShortcode {
 			$checkoutId = isset( $_REQUEST[self::BOOKING_CID_NAME] ) ? mphb_clean( wp_unslash( $_REQUEST[self::BOOKING_CID_NAME] )) : '';
 			$unfinishedBooking = ( $checkoutId != '' ) ? MPHB()->getBookingRepository()->findByCheckoutId( $checkoutId ) : null;
 
-			if ( empty( $unfinishedBooking ) ) {
-				// Nope, just go to the next step, as it was in previous versions
+			if ( MPHB()->settings()->main()->getConfirmationMode() !== 'payment' ) {
+				// No, don't even try to rebook, when paymens are disabled
 				$step = self::STEP_COMPLETE;
+
+			} else if ( empty( $unfinishedBooking ) ) {
+				// No, just go to the next step, as it was in previous versions
+				$step = self::STEP_COMPLETE;
+
+			} else {
+				$expectPaymentId = $unfinishedBooking->getExpectPaymentId();
+				$expectPayment = $expectPaymentId !== false ? MPHB()->getPaymentRepository()->findById( $expectPaymentId ) : null;
+
+				if ( !$unfinishedBooking->isPending()
+					|| is_null($expectPayment)
+					|| $expectPayment->isFinished()
+					|| $expectPayment->isAuthorized()
+				) {
+					// No, the booking with such checkout ID is not "unfinished"
+					$step = self::STEP_COMPLETE;
+				}
 			}
 
 		}
@@ -108,9 +123,19 @@ class CheckoutShortcode extends AbstractShortcode {
 
 		if ( $this->currentStep === self::STEP_CHECKOUT ) {
 			
-			// Skip nonce verification for logged in users during checkout. Because nonce fields are different before and after authorization.
-			if( get_current_user_id() ) {
+			$this->isCorrectNonce = true;
 				
+			return $this->isCorrectNonce;
+			
+			// Skip nonce verification for logged in users during checkout. Because nonce fields are different before and after authorization.
+			/*if( get_current_user_id() ) {
+				
+				$this->isCorrectNonce = true;
+				
+				return $this->isCorrectNonce;
+			}
+			
+			if( isset( $_GET['login_failed'] ) && $_GET['login_failed'] == 'error' ) {
 				$this->isCorrectNonce = true;
 				
 				return $this->isCorrectNonce;
@@ -125,7 +150,7 @@ class CheckoutShortcode extends AbstractShortcode {
 			} else if ( isset( $_POST[self::RECOMMENDATION_NONCE_NAME] ) ) {
 
 				$nonce = sanitize_text_field( wp_unslash( $_POST[self::RECOMMENDATION_NONCE_NAME] ));
-			}
+			}*/
 		} else if ( $this->currentStep === self::STEP_BOOKING ) {
 			
 			$nonceAction = self::NONCE_ACTION_BOOKING;
@@ -137,6 +162,11 @@ class CheckoutShortcode extends AbstractShortcode {
 			if ( isset( $_POST[self::NONCE_NAME] ) ) {
 				$nonce = sanitize_text_field( wp_unslash( $_POST[ self::NONCE_NAME ] ));
 			}
+		} else if ( $this->currentStep === self::STEP_COMPLETE ) {
+			
+			$this->isCorrectNonce = true;
+
+			return $this->isCorrectNonce;
 		}
 
 		$this->isCorrectNonce = wp_verify_nonce( $nonce, $nonceAction );

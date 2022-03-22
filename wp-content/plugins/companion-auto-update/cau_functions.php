@@ -143,15 +143,19 @@ function cau_pluginIssueCount() {
 	
 	$count = 0;
 
-	if( get_option( 'blog_public' ) == 0 ) {
-		$count++;
-	}
-	if( checkAutomaticUpdaterDisabled() ) {
-		$count++;
-	}
-	if( checkCronjobsDisabled() ) {
-		$count++;
-	}
+	// blog_public check
+	if( get_option( 'blog_public' ) == 0 ) $count++;
+
+	// checkAutomaticUpdaterDisabled
+	if( checkAutomaticUpdaterDisabled() ) $count++;
+
+	// checkCronjobsDisabled
+	if( checkCronjobsDisabled() ) $count++;
+
+	// cau_incorrectDatabaseVersion
+	if( cau_incorrectDatabaseVersion() ) $count++;
+
+	// cau_incompatiblePlugins
 	if( cau_incompatiblePlugins() ) {
 		foreach ( cau_incompatiblePluginlist() as $key => $value ) {
 			if( is_plugin_active( $key ) ) {
@@ -1392,8 +1396,7 @@ function cau_hold_updates() {
 		foreach ( (array)$plugins as $plugin_file => $plugin_data ) {
 			if( !in_array( $plugin_file, cau_delayed_updates() ) ) {
 				global $wpdb;
-				$updateDB 		= "update_log";
-				$updateLog 		= $wpdb->prefix.$updateDB; 
+				$updateLog = "{$wpdb->prefix}update_log"; 
 				$wpdb->query( $wpdb->prepare( "UPDATE $updateLog SET put_on_hold = '%s' WHERE slug = '%s'", strtotime( "now" ), $plugin_file ) );
 			}
 		}
@@ -1403,16 +1406,12 @@ function cau_hold_updates() {
 // Remove plugins from "put on hold" after x days
 function cau_unhold_updates() {
 
-	if( cau_get_db_value( 'update_delay_days' ) != '' ) {
-		$after_x_days = cau_get_db_value( 'update_delay_days' );
-	} else {
-		$after_x_days = '2';
-	}
 
 	global $wpdb;
 
+	$after_x_days 	= ( cau_get_db_value( 'update_delay_days' ) != '' ) ? cau_get_db_value( 'update_delay_days' ) : '2';
 	$today 			= strtotime( "now" );
-	$updateLog 		= $wpdb->prefix."update_log"; 
+	$updateLog 		= "{$wpdb->prefix}update_log"; 
 	$put_on_hold 	= $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$updateLog} WHERE put_on_hold <> '%s'", '0' ) );
 
 	foreach ( $put_on_hold as $plugin ) {
@@ -1432,7 +1431,7 @@ function cau_unhold_updates() {
 // Remove all plugins from "put on hold" if option is disabled
 function cau_unhold_all_updates() {
 	global $wpdb;
-	$updateLog 		= $wpdb->prefix."update_log"; 
+	$updateLog 		= "{$wpdb->prefix}update_log"; 
 	$put_on_hold 	= $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$updateLog} WHERE put_on_hold <> '%s'", '0' ) );
 	foreach ( $put_on_hold as $plugin ) {
 		$plugin_file 		= $plugin->slug;

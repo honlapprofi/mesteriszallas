@@ -559,11 +559,14 @@ function wpvivid_cron_task(){
 
 function wpvivid_clear_notice(notice_id){
     var t = document.getElementById(notice_id);
-    var oDiv = t.getElementsByTagName("div");
-    var count = oDiv.length;
-    for (count; count > 0; count--) {
-        var i = count - 1;
-        oDiv[i].parentNode.removeChild(oDiv[i]);
+    if(t !== null)
+    {
+        var oDiv = t.getElementsByTagName("div");
+        var count = oDiv.length;
+        for (count; count > 0; count--) {
+            var i = count - 1;
+            oDiv[i].parentNode.removeChild(oDiv[i]);
+        }
     }
     jQuery('#'+notice_id).hide();
 }

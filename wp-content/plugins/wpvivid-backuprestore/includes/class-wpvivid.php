@@ -3642,7 +3642,7 @@ class WPvivid {
      */
     public function restore()
     {
-        check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+        //check_ajax_referer( 'wpvivid_ajax', 'nonce' );
 
         $this->end_shutdown_function=false;
         register_shutdown_function(array($this,'deal_restore_shutdown_error'));
@@ -3851,7 +3851,7 @@ class WPvivid {
     {
         try
         {
-            check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+            //check_ajax_referer( 'wpvivid_ajax', 'nonce' );
             if(!isset($_POST['backup_id'])||empty($_POST['backup_id'])||!is_string($_POST['backup_id']))
             {
                 $this->end_shutdown_function=true;
@@ -5415,7 +5415,7 @@ class WPvivid {
                 <td>'.__($value['des'], 'wpvivid-backuprestore').'</td>
                 <td>'.__($value['file_name'], 'wpvivid-backuprestore').'</td>
                 <td>
-                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['path'].'\')" style="cursor:pointer;">
+                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['file_name'].'\', \''.'backup'.'\', \''.$value['result'].'\')" style="cursor:pointer;">
                     <img src="'.esc_url(WPVIVID_PLUGIN_URL.$pic_log).'" style="vertical-align:middle;">Log
                     </a>
                 </td>
@@ -5494,6 +5494,14 @@ class WPvivid {
                 $log_file['path']=$file;
                 $log_file['des']='';
                 $log_file['time']='';
+                if(preg_match('/error/', $file))
+                {
+                    $log_file['result']='failed';
+                }
+                else
+                {
+                    $log_file['result']='success';
+                }
                 $line = fgets($handle);
                 if($line!==false)
                 {
@@ -5549,7 +5557,45 @@ class WPvivid {
         $this->ajax_check_security();
         try {
             if (isset($_POST['path']) && !empty($_POST['path']) && is_string($_POST['path'])) {
-                $path = sanitize_text_field($_POST['path']);
+                $file_name = sanitize_text_field($_POST['path']);
+                if(isset($_POST['log_type']))
+                {
+                    $log_type = sanitize_text_field($_POST['log_type']);
+                }
+                else
+                {
+                    $log_type = 'backup';
+                }
+
+                if(isset($_POST['log_result']))
+                {
+                    $log_result = sanitize_text_field($_POST['log_result']);
+                }
+                else
+                {
+                    $log_result = 'success';
+                }
+
+                if($log_type === 'backup')
+                {
+                    $general_setting=WPvivid_Setting::get_setting(true, "");
+                    $log_dir = WP_CONTENT_DIR.DIRECTORY_SEPARATOR.$general_setting['options']['wpvivid_local_setting']['path'].DIRECTORY_SEPARATOR.'wpvivid_log'.DIRECTORY_SEPARATOR;
+                }
+                else
+                {
+                    $log_dir = WP_CONTENT_DIR.DIRECTORY_SEPARATOR.'wpvivid_staging'.DIRECTORY_SEPARATOR;
+                }
+
+                if($log_result === 'success')
+                {
+                    $res_dir = '';
+                }
+                else
+                {
+                    $res_dir = 'error'.DIRECTORY_SEPARATOR;
+                }
+
+                $path = $log_dir.$res_dir.$file_name;
                 if (!file_exists($path)) {
                     $json['result'] = 'failed';
                     $json['error'] = __('The log not found.', 'wpvivid-backuprestore');
@@ -6014,7 +6060,7 @@ class WPvivid {
                    </label><br>
                    <label title="">
                         <input type="radio" option="schedule" name="save_local_remote" value="remote" '.$backup_remote.' />
-                        <span>'.__( 'Send backups to remote storage (choose this option, the local backup will be deleted after uploading to remote storage completely)', 'wpvivid-backuprestore' ).'</span>
+                        <span>'.__( 'Send backups to remote storage (You can choose whether to keep the backup in localhost after it is uploaded to cloud storage in Settings.)', 'wpvivid-backuprestore' ).'</span>
                    </label>
                    <label style="display: none;">
                         <input type="checkbox" option="schedule" name="lock" value="0" />

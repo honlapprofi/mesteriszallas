@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-16 09:49:51+0000\n"
+"PO-Revision-Date: 2022-02-28 13:14:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -587,7 +587,7 @@ msgstr "Vyplnit"
 msgid "Download"
 msgstr "Stáhnout"
 
-#: core/settings/editor-preferences/model.php:38 assets/js/editor.js:27098
+#: core/settings/editor-preferences/model.php:38 assets/js/editor.js:27106
 msgid "User Preferences"
 msgstr "Uživatelské předvolby"
 
@@ -620,7 +620,7 @@ msgid "Click the media icon to upload file"
 msgstr "Kliknutím na ikonu média nahrát soubor"
 
 #: includes/settings/settings.php:571 assets/js/common.js:2572
-#: assets/js/editor.js:28977
+#: assets/js/editor.js:28985
 msgid "Enable Unfiltered File Uploads"
 msgstr "Povolit nefiltrovaná nahrávání souborů"
 
@@ -859,7 +859,7 @@ msgstr "Zvolit video"
 msgid "Template not exist."
 msgstr "Šablona neexistuje."
 
-#: includes/base/widget-base.php:984
+#: includes/base/widget-base.php:1009
 msgid "Deprecated"
 msgstr "Zastaralé"
 
@@ -1114,7 +1114,7 @@ msgstr "Externí adresa URL"
 #: core/app/modules/site-editor/module.php:31
 #: core/common/modules/finder/categories/general.php:72
 #: includes/template-library/sources/local.php:1631
-#: assets/js/app-packages.js:11434 assets/js/editor.js:39153
+#: assets/js/app-packages.js:11434 assets/js/editor.js:39160
 msgid "Theme Builder"
 msgstr "Tvůrce šablon"
 
@@ -1195,7 +1195,7 @@ msgid "Homepage"
 msgstr "Domovská stránka"
 
 #: core/common/modules/finder/categories/create.php:27
-#: assets/js/editor.js:37431
+#: assets/js/editor.js:37438
 msgid "Create"
 msgstr "Vytvořit"
 
@@ -1264,7 +1264,7 @@ msgstr "Plakát"
 msgid "Enter your URL"
 msgstr "Vložte URL"
 
-#: includes/widgets/inner-section.php:35 assets/js/editor.js:18780
+#: includes/widgets/inner-section.php:35 assets/js/editor.js:18788
 msgid "Inner Section"
 msgstr "Vnitřní část"
 
@@ -1322,8 +1322,8 @@ msgstr "Debug Bar"
 #: includes/editor-templates/hotkeys.php:126
 #: includes/editor-templates/navigator.php:12
 #: includes/editor-templates/panel.php:69
-#: includes/editor-templates/panel.php:71 assets/js/editor-document.js:15531
-#: assets/js/editor.js:21364
+#: includes/editor-templates/panel.php:71 assets/js/editor-document.js:15239
+#: assets/js/editor.js:21387
 msgid "Navigator"
 msgstr "Navigátor"
 
@@ -1432,8 +1432,8 @@ msgstr "Určete čas zahájení (v sekundách)"
 msgid "Start Time"
 msgstr "Čas zahájení"
 
-#: includes/editor-templates/hotkeys.php:35 assets/js/editor-document.js:14784
-#: assets/js/editor.js:20617
+#: includes/editor-templates/hotkeys.php:35 assets/js/editor-document.js:14492
+#: assets/js/editor.js:20640
 msgid "Copy"
 msgstr "Kopírovat"
 
@@ -1611,7 +1611,7 @@ msgstr "Vytvořte své první %s"
 msgid "All"
 msgstr "Vše"
 
-#: includes/frontend.php:1305 includes/widgets/video.php:951
+#: includes/frontend.php:1305 includes/widgets/video.php:954
 msgid "Play Video"
 msgstr "Přehrát video"
 
@@ -1882,8 +1882,8 @@ msgid "Remove"
 msgstr "Odstranit"
 
 #: includes/editor-templates/hotkeys.php:67
-#: includes/editor-templates/repeater.php:21 assets/js/editor-document.js:14769
-#: assets/js/editor.js:20602 assets/js/editor.js:42668
+#: includes/editor-templates/repeater.php:21 assets/js/editor-document.js:14477
+#: assets/js/editor.js:20625 assets/js/editor.js:42672
 msgid "Duplicate"
 msgstr "Duplikovat"
 
@@ -1896,8 +1896,8 @@ msgstr "Drag & Drop"
 msgid "Hide Panel"
 msgstr "Skrýt panel"
 
-#: includes/editor-templates/panel.php:119 assets/js/editor-document.js:16237
-#: assets/js/editor.js:22685
+#: includes/editor-templates/panel.php:119 assets/js/editor-document.js:15945
+#: assets/js/editor.js:22708
 msgid "Save as Template"
 msgstr "Uložit jako šablonu"
 
@@ -2060,19 +2060,19 @@ msgstr "https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm
 
 #: modules/history/views/history-panel-template.php:10
 #: modules/history/views/revisions-panel-template.php:26
-#: assets/js/editor.js:42357
+#: assets/js/editor.js:42361
 msgid "Revisions"
 msgstr "Revize"
 
 #: includes/editor-templates/hotkeys.php:117
 #: includes/editor-templates/panel.php:73
-#: includes/editor-templates/panel.php:75 assets/js/editor.js:43042
+#: includes/editor-templates/panel.php:75 assets/js/editor.js:43046
 msgid "History"
 msgstr "Historie"
 
 #: includes/editor-templates/hotkeys.php:14
 #: includes/editor-templates/templates.php:124
-#: modules/history/views/history-panel-template.php:9 assets/js/editor.js:42354
+#: modules/history/views/history-panel-template.php:9 assets/js/editor.js:42358
 msgid "Actions"
 msgstr "Akce"
 
@@ -2082,7 +2082,7 @@ msgid "UI Color"
 msgstr "Barva UI"
 
 #: core/kits/documents/tabs/settings-lightbox.php:152
-#: includes/widgets/video.php:764
+#: includes/widgets/video.php:765
 msgid "UI Hover Color"
 msgstr "Barva UI při přejetí myší"
 
@@ -2260,7 +2260,7 @@ msgstr "Zakázat"
 #: core/debug/inspector.php:55 includes/settings/settings.php:565
 #: includes/settings/settings.php:577 includes/settings/tools.php:367
 #: modules/safe-mode/module.php:48 assets/js/app-packages.js:4166
-#: assets/js/app.js:4946 assets/js/common.js:2572 assets/js/editor.js:28977
+#: assets/js/app.js:4946 assets/js/common.js:2572 assets/js/editor.js:28985
 msgid "Enable"
 msgstr "Povolit"
 
@@ -2293,7 +2293,7 @@ msgid "Coming Soon returns HTTP 200 code, meaning the site is ready to be indexe
 msgstr "Již brzy vrátí HTTP 200 kódu, což znamená web je připraven k indexování."
 
 #: core/kits/documents/kit.php:168 includes/maintenance-mode.php:215
-#: assets/js/editor.js:42667
+#: assets/js/editor.js:42671
 msgid "Disabled"
 msgstr "Zakázaný"
 
@@ -2370,8 +2370,8 @@ msgstr "Kdo má přístup"
 msgid "Set your entire website as MAINTENANCE MODE, meaning the site is offline temporarily for maintenance, or set it as COMING SOON mode, meaning the site is offline until it is ready to be launched."
 msgstr "Nastavení módu údržby dočasně zobrazí místo webu stránku s informací o údržbě, nastavení Již brzy zobrazí informaci o brzkém spuštění webu."
 
-#: includes/editor-templates/hotkeys.php:51 assets/js/editor-document.js:14808
-#: assets/js/editor.js:20641
+#: includes/editor-templates/hotkeys.php:51 assets/js/editor-document.js:14516
+#: assets/js/editor.js:20664
 msgid "Paste Style"
 msgstr "Styl stránky"
 
@@ -2682,7 +2682,7 @@ msgid "Get more with Elementor Pro"
 msgstr "Získejte více s Elementor Pro"
 
 #: includes/editor-templates/panel-elements.php:11
-#: assets/js/editor-document.js:6924 assets/js/editor.js:26284
+#: assets/js/editor-document.js:6924 assets/js/editor.js:26307
 msgid "Global"
 msgstr "Globální"
 
@@ -2746,7 +2746,7 @@ msgstr "Zlepšit Elementor"
 msgid "Invalid Data: The Template ID cannot be the same as the currently edited template. Please choose a different one."
 msgstr "Neplatná Data: ID šablony nemůže být stejný jako aktuálně upravené šablony. Prosím zvolte jinou."
 
-#: includes/base/widget-base.php:283 includes/base/widget-base.php:292
+#: includes/base/widget-base.php:296 includes/base/widget-base.php:305
 msgid "Skin"
 msgstr "Vzhled"
 
@@ -2825,7 +2825,7 @@ msgstr "Vyskytla se chyba"
 #: assets/js/app-packages.js:3119 assets/js/app-packages.js:5681
 #: assets/js/app-packages.js:6299 assets/js/app-packages.js:10124
 #: assets/js/app.js:3899 assets/js/app.js:6168 assets/js/app.js:6634
-#: assets/js/app.js:10234 assets/js/editor.js:39464
+#: assets/js/app.js:10234 assets/js/editor.js:39471
 msgid "Close"
 msgstr "Zavřít"
 
@@ -2978,7 +2978,7 @@ msgstr "Pro editaci zdrojového kódu template, doporučujeme použit tzv. <a hr
 #: core/kits/documents/tabs/global-typography.php:28
 #: core/kits/documents/tabs/global-typography.php:47
 #: assets/js/app-packages.js:9595 assets/js/app.js:9705
-#: assets/js/editor.js:39191
+#: assets/js/editor.js:39198
 msgid "Global Fonts"
 msgstr "Globální písma"
 
@@ -3002,8 +3002,8 @@ msgstr "Globální písma"
 #: assets/js/app.js:4815 assets/js/app.js:8108 assets/js/app.js:8524
 #: assets/js/app.js:8630 assets/js/app.js:9186 assets/js/app.js:9369
 #: assets/js/app.js:9410 assets/js/app.js:10233 assets/js/editor.js:15890
-#: assets/js/editor.js:19322 assets/js/editor.js:19354
-#: assets/js/editor.js:29579
+#: assets/js/editor.js:19330 assets/js/editor.js:19362
+#: assets/js/editor.js:29587
 #: assets/js/kit-library.79bbce90dedf8ef30a5c.bundle.js:980
 #: assets/js/kit-library.79bbce90dedf8ef30a5c.bundle.js:3656
 msgid "Learn More"
@@ -3055,7 +3055,7 @@ msgid "Default Fonts"
 msgstr "Výchozí písma"
 
 #: includes/elements/column.php:830 includes/elements/section.php:1266
-#: includes/widgets/common.php:268 includes/widgets/video.php:814
+#: includes/widgets/common.php:268 includes/widgets/video.php:816
 msgid "Entrance Animation"
 msgstr "Vstupní animace"
 
@@ -3220,10 +3220,10 @@ msgstr "Obecné"
 msgid "Wider"
 msgstr "Širší"
 
-#: includes/editor-templates/hotkeys.php:43 assets/js/editor-document.js:14796
-#: assets/js/editor-document.js:15865 assets/js/editor-document.js:17382
-#: assets/js/editor.js:20629 assets/js/editor.js:22313
-#: assets/js/editor.js:31612 assets/js/editor.js:32574
+#: includes/editor-templates/hotkeys.php:43 assets/js/editor-document.js:14504
+#: assets/js/editor-document.js:15573 assets/js/editor-document.js:17090
+#: assets/js/editor.js:20652 assets/js/editor.js:22336
+#: assets/js/editor.js:31620 assets/js/editor.js:32580
 msgid "Paste"
 msgstr "Vložit"
 
@@ -3418,11 +3418,11 @@ msgstr "Pojo schéma"
 
 #: includes/editor-templates/panel-elements.php:10
 #: assets/js/editor-document.js:5930 assets/js/editor-document.js:8113
-#: assets/js/editor-document.js:8644 assets/js/editor.js:26281
+#: assets/js/editor-document.js:8644 assets/js/editor.js:26304
 msgid "Elements"
 msgstr "Prvky"
 
-#: includes/widgets/wordpress.php:230
+#: includes/widgets/wordpress.php:234
 msgid "Form"
 msgstr "Form"
 
@@ -3436,8 +3436,8 @@ msgstr "Doporučujeme použít php 5.4 nebo vyšší"
 #: core/dynamic-tags/base-tag.php:171 includes/editor-templates/panel.php:65
 #: includes/editor-templates/responsive-bar.php:61
 #: includes/managers/controls.php:304 includes/settings/settings.php:413
-#: assets/js/editor.js:10300 assets/js/editor.js:27094
-#: assets/js/editor.js:39615
+#: assets/js/editor.js:10300 assets/js/editor.js:27102
+#: assets/js/editor.js:39622
 msgid "Settings"
 msgstr "Nastavení"
 
@@ -3529,7 +3529,7 @@ msgstr "Přidat novou sekci"
 #: core/dynamic-tags/tag.php:88 includes/elements/column.php:718
 #: includes/elements/section.php:1175 includes/managers/controls.php:301
 #: includes/settings/settings.php:541 includes/widgets/common.php:175
-#: assets/js/editor.js:10306 assets/js/editor.js:26120
+#: assets/js/editor.js:10306 assets/js/editor.js:26143
 msgid "Advanced"
 msgstr "Pokročilé"
 
@@ -3859,7 +3859,7 @@ msgstr "Vyberte postranní panel"
 #: includes/widgets/star-rating.php:178 includes/widgets/tabs.php:175
 #: includes/widgets/tabs.php:205 includes/widgets/tabs.php:376
 #: includes/widgets/testimonial.php:194 includes/widgets/text-editor.php:196
-#: includes/widgets/video.php:799 modules/shapes/widgets/text-path.php:165
+#: includes/widgets/video.php:801 modules/shapes/widgets/text-path.php:165
 msgid "Center"
 msgstr "Na střed"
 
@@ -3893,8 +3893,8 @@ msgstr "Kroužek"
 #: modules/shapes/widgets/text-path.php:508
 #: modules/shapes/widgets/text-path.php:528
 #: modules/shapes/widgets/text-path.php:574
-#: modules/shapes/widgets/text-path.php:594 assets/js/editor.js:39756
-#: assets/js/editor.js:39802
+#: modules/shapes/widgets/text-path.php:594 assets/js/editor.js:39763
+#: assets/js/editor.js:39809
 msgid "Color"
 msgstr "Barva"
 
@@ -3934,16 +3934,16 @@ msgstr "Mezera sloupců"
 #: includes/widgets/tabs.php:396 includes/widgets/testimonial.php:95
 #: includes/widgets/testimonial.php:224 includes/widgets/toggle.php:111
 #: includes/widgets/toggle.php:463 assets/js/app-packages.js:9585
-#: assets/js/app.js:9695 assets/js/editor.js:26114
+#: assets/js/app.js:9695 assets/js/editor.js:26137
 msgid "Content"
 msgstr "Obsah"
 
-#: includes/widgets/video.php:795
+#: includes/widgets/video.php:797
 msgid "Content Position"
 msgstr "Pozice obsahu"
 
 #: core/kits/documents/tabs/settings-layout.php:55
-#: includes/elements/section.php:245 includes/widgets/video.php:776
+#: includes/elements/section.php:245 includes/widgets/video.php:778
 msgid "Content Width"
 msgstr "Šířka obsahu"
 
@@ -3966,7 +3966,7 @@ msgstr "Počítadlo"
 #: includes/widgets/image-carousel.php:558
 #: includes/widgets/image-gallery.php:195 includes/widgets/social-icons.php:190
 #: includes/widgets/social-icons.php:348 modules/shapes/module.php:29
-#: assets/js/editor.js:37251
+#: assets/js/editor.js:37258
 msgid "Custom"
 msgstr "Vlastní"
 
@@ -3981,7 +3981,7 @@ msgstr "Přerušovaný"
 
 #: core/experiments/manager.php:325
 #: core/settings/editor-preferences/model.php:132
-#: includes/base/widget-base.php:268 includes/controls/animation.php:152
+#: includes/base/widget-base.php:281 includes/controls/animation.php:152
 #: includes/controls/font.php:66 includes/controls/groups/background.php:715
 #: includes/controls/groups/background.php:734
 #: includes/controls/groups/typography.php:132
@@ -4007,17 +4007,17 @@ msgstr "Přerušovaný"
 #: includes/widgets/image.php:362 includes/widgets/progress.php:113
 #: includes/widgets/text-editor.php:131 includes/widgets/text-editor.php:266
 #: modules/page-templates/module.php:296
-#: modules/shapes/widgets/text-path.php:187 assets/js/editor.js:37242
-#: assets/js/editor.js:37254
+#: modules/shapes/widgets/text-path.php:187 assets/js/editor.js:37249
+#: assets/js/editor.js:37261
 msgid "Default"
 msgstr "Výchozí hodnota"
 
 #: core/kits/views/trash-kit-confirmation.php:30
 #: includes/editor-templates/hotkeys.php:60
 #: includes/editor-templates/templates.php:185
-#: assets/js/editor-document.js:14850 assets/js/editor.js:11259
-#: assets/js/editor.js:15592 assets/js/editor.js:19015
-#: assets/js/editor.js:20683 assets/js/editor.js:39814
+#: assets/js/editor-document.js:14558 assets/js/editor.js:11259
+#: assets/js/editor.js:15592 assets/js/editor.js:19023
+#: assets/js/editor.js:20706 assets/js/editor.js:39821
 msgid "Delete"
 msgstr "Odstranit"
 
@@ -4275,7 +4275,7 @@ msgstr "Velký obrázek"
 #: core/kits/documents/tabs/settings-layout.php:24
 #: includes/elements/column.php:113 includes/elements/section.php:227
 #: includes/managers/controls.php:303 includes/widgets/icon-list.php:95
-#: assets/js/editor.js:26123
+#: assets/js/editor.js:26146
 msgid "Layout"
 msgstr "Rozvržení"
 
@@ -4490,7 +4490,7 @@ msgstr "Plus"
 msgid "Post Types"
 msgstr "Typy příspěvků"
 
-#: includes/editor-templates/templates.php:172 assets/js/editor.js:25476
+#: includes/editor-templates/templates.php:172 assets/js/editor.js:25499
 msgid "Preview"
 msgstr "Náhled"
 
@@ -4681,7 +4681,7 @@ msgstr "Struktura"
 
 #: includes/managers/controls.php:300 includes/settings/settings.php:492
 #: includes/widgets/divider.php:363 includes/widgets/icon-list.php:275
-#: assets/js/editor.js:10303 assets/js/editor.js:26117
+#: assets/js/editor.js:10303 assets/js/editor.js:26140
 msgid "Style"
 msgstr "CSS"
 
@@ -4837,7 +4837,7 @@ msgstr "Titulek k přepnutí"
 #: includes/widgets/common.php:1468 includes/widgets/icon-box.php:193
 #: includes/widgets/icon-box.php:496 includes/widgets/image-box.php:170
 #: includes/widgets/image-box.php:430 includes/widgets/testimonial.php:172
-#: includes/widgets/video.php:800
+#: includes/widgets/video.php:802
 msgid "Top"
 msgstr "Nahoru"
 
@@ -4860,7 +4860,7 @@ msgstr "Typ"
 #: core/kits/documents/tabs/theme-style-typography.php:221
 #: core/schemes/typography.php:64 includes/elements/column.php:628
 #: includes/elements/section.php:1086 assets/js/editor-modules.js:2605
-#: assets/js/editor.js:32225
+#: assets/js/editor.js:32231
 msgid "Typography"
 msgstr "Písmo"
 

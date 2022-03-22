@@ -26,10 +26,10 @@ if( isset( $_POST['submit'] ) ) {
 	$table_name = $wpdb->prefix . "auto_updates"; 
 
 	// Auto updater
-	$plugins 			= isset( $_POST['plugins'] ) ? sanitize_text_field( $_POST['plugins'] ) : '';
-	$themes 			= isset( $_POST['themes'] ) ? sanitize_text_field( $_POST['themes'] ) : '';
-	$minor 				= isset( $_POST['minor'] ) ? sanitize_text_field( $_POST['minor'] ) : '';
-	$major 				= isset( $_POST['major'] ) ? sanitize_text_field( $_POST['major'] ) : '';
+	$plugins 		= isset( $_POST['plugins'] ) ? sanitize_text_field( $_POST['plugins'] ) : '';
+	$themes 		= isset( $_POST['themes'] ) ? sanitize_text_field( $_POST['themes'] ) : '';
+	$minor 			= isset( $_POST['minor'] ) ? sanitize_text_field( $_POST['minor'] ) : '';
+	$major 			= isset( $_POST['major'] ) ? sanitize_text_field( $_POST['major'] ) : '';
 	$translations 		= isset( $_POST['translations'] ) ? sanitize_text_field( $_POST['translations'] ) : '';
 
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'plugins'", $plugins ) );
@@ -39,11 +39,11 @@ if( isset( $_POST['submit'] ) ) {
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'translations'", $translations ) );
 
 	// Emails
-	$send 				= isset( $_POST['cau_send'] ) ? sanitize_text_field( $_POST['cau_send'] ) : '';
+	$send 			= isset( $_POST['cau_send'] ) ? sanitize_text_field( $_POST['cau_send'] ) : '';
 	$sendupdate 		= isset( $_POST['cau_send_update'] ) ? sanitize_text_field( $_POST['cau_send_update'] ) : '';
 	$sendoutdated 		= isset( $_POST['cau_send_outdated'] ) ? sanitize_text_field( $_POST['cau_send_outdated'] ) : '';
-	$wpemails 			= isset( $_POST['wpemails'] ) ? sanitize_text_field( $_POST['wpemails'] ) : '';
-	$email 				= isset( $_POST['cau_email'] ) ? sanitize_text_field( $_POST['cau_email'] ) : '';
+	$wpemails 		= isset( $_POST['wpemails'] ) ? sanitize_text_field( $_POST['wpemails'] ) : '';
+	$email 			= isset( $_POST['cau_email'] ) ? sanitize_text_field( $_POST['cau_email'] ) : '';
 	$html_or_text 		= isset( $_POST['html_or_text'] ) ? sanitize_text_field( $_POST['html_or_text'] ) : 'html';
 	$dbupdateemails 	= isset( $_POST['dbupdateemails'] ) ? sanitize_text_field( $_POST['dbupdateemails'] ) : '';
 
@@ -56,8 +56,8 @@ if( isset( $_POST['submit'] ) ) {
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'dbupdateemails'", $dbupdateemails ) );
 
 	// Advanced
-	$allow_editor 			= isset( $_POST['allow_editor'] ) ? sanitize_text_field( $_POST['allow_editor'] ) : '';
-	$allow_author 			= isset( $_POST['allow_author'] ) ? sanitize_text_field( $_POST['allow_author'] ) : '';
+	$allow_editor 		= isset( $_POST['allow_editor'] ) ? sanitize_text_field( $_POST['allow_editor'] ) : '';
+	$allow_author 		= isset( $_POST['allow_author'] ) ? sanitize_text_field( $_POST['allow_author'] ) : '';
 	$advanced_info_emails 	= isset( $_POST['advanced_info_emails'] ) ? sanitize_text_field( $_POST['advanced_info_emails'] ) : '';
 	$plugin_links_emails 	= isset( $_POST['plugin_links_emails'] ) ? sanitize_text_field( $_POST['plugin_links_emails'] ) : '';
 
@@ -67,8 +67,8 @@ if( isset( $_POST['submit'] ) ) {
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'plugin_links_emails'", $plugin_links_emails ) );
 
 	// Delay
-	$update_delay 			= isset( $_POST['update_delay'] ) ? sanitize_text_field( $_POST['update_delay'] ) : '';
-	$update_delay_days 		= isset( $_POST['update_delay_days'] ) ? sanitize_text_field( $_POST['update_delay_days'] ) : '';
+	$update_delay 		= isset( $_POST['update_delay'] ) ? sanitize_text_field( $_POST['update_delay'] ) : '';
+	$update_delay_days 	= isset( $_POST['update_delay_days'] ) ? sanitize_text_field( $_POST['update_delay_days'] ) : '';
 
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'update_delay'", $update_delay ) );
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'update_delay_days'", $update_delay_days ) );
@@ -76,9 +76,9 @@ if( isset( $_POST['submit'] ) ) {
 	// Intervals
 
 	// Set variables
-	$plugin_sc 			= sanitize_text_field( $_POST['plugin_schedule'] );
-	$theme_sc 			= sanitize_text_field( $_POST['theme_schedule'] );
-	$core_sc 			= sanitize_text_field( $_POST['core_schedule'] );
+	$plugin_sc 		= sanitize_text_field( $_POST['plugin_schedule'] );
+	$theme_sc 		= sanitize_text_field( $_POST['theme_schedule'] );
+	$core_sc 		= sanitize_text_field( $_POST['core_schedule'] );
 	$schedule_mail 		= sanitize_text_field( $_POST['update_notifications'] );
 	$outdated_notifier 	= sanitize_text_field( $_POST['outdated_notifier'] );
 
@@ -97,11 +97,11 @@ if( isset( $_POST['submit'] ) ) {
 	// Plugins
 	if( $plugin_sc == 'daily' ) {
 
-		$date 				= date( 'Y-m-d' );
-		$hours 				= sanitize_text_field( $_POST['plugin_schedule-sethour'] );
-		$minutes 			= sanitize_text_field( $_POST['plugin_schedule-setminutes'] );
-		$seconds 			= date( 's' );
-		$fullDate 			= $date.' '.$hours.':'.$minutes.':'.$seconds;
+		$date 			= date( 'Y-m-d' );
+		$hours 			= sanitize_text_field( $_POST['plugin_schedule-sethour'] );
+		$minutes 		= sanitize_text_field( $_POST['plugin_schedule-setminutes'] );
+		$seconds 		= date( 's' );
+		$fullDate 		= $date.' '.$hours.':'.$minutes.':'.$seconds;
 		$pluginSetTime 		= strtotime( $fullDate );
 
 		wp_schedule_event( $pluginSetTime, $plugin_sc, 'wp_update_plugins' );
@@ -119,11 +119,11 @@ if( isset( $_POST['submit'] ) ) {
 	// Themes
 	if( $theme_sc == 'daily' ) {
 
-		$dateT 				= date( 'Y-m-d' );
-		$hoursT 			= sanitize_text_field( $_POST['theme_schedule-sethour'] );
-		$minutesT 			= sanitize_text_field( $_POST['theme_schedule-setminutes'] );
-		$secondsT 			= date( 's' );
-		$fullDateT 			= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
+		$dateT 			= date( 'Y-m-d' );
+		$hoursT 		= sanitize_text_field( $_POST['theme_schedule-sethour'] );
+		$minutesT 		= sanitize_text_field( $_POST['theme_schedule-setminutes'] );
+		$secondsT 		= date( 's' );
+		$fullDateT 		= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
 		$themeSetTime 		= strtotime( $fullDateT );
 
 		wp_schedule_event( $themeSetTime, $theme_sc, 'wp_update_themes' );
@@ -139,11 +139,11 @@ if( isset( $_POST['submit'] ) ) {
 	// Core
 	if( $core_sc == 'daily' ) {
 
-		$dateC 				= date( 'Y-m-d' );
-		$hoursC 			= sanitize_text_field( $_POST['core_schedule-sethour'] );
-		$minutesC 			= sanitize_text_field( $_POST['core_schedule-setminutes'] );
-		$secondsC 			= date( 's' );
-		$fullDateC 			= $dateC.' '.$hoursC.':'.$minutesC.':'.$secondsC;
+		$dateC 			= date( 'Y-m-d' );
+		$hoursC 		= sanitize_text_field( $_POST['core_schedule-sethour'] );
+		$minutesC 		= sanitize_text_field( $_POST['core_schedule-setminutes'] );
+		$secondsC 		= date( 's' );
+		$fullDateC 		= $dateC.' '.$hoursC.':'.$minutesC.':'.$secondsC;
 		$coreSetTime 		= strtotime( $fullDateC );
 
 		wp_schedule_event( $coreSetTime, $core_sc, 'wp_version_check' );
@@ -157,11 +157,11 @@ if( isset( $_POST['submit'] ) ) {
 	// Update notifications
 	if( $schedule_mail == 'daily' ) {
 
-		$dateT 				= date( 'Y-m-d' );
-		$hoursT 			= sanitize_text_field( $_POST['update_notifications-sethour'] );
-		$minutesT 			= sanitize_text_field( $_POST['update_notifications-setminutes'] );
-		$secondsT 			= date( 's' );
-		$fullDateT 			= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
+		$dateT 			= date( 'Y-m-d' );
+		$hoursT 		= sanitize_text_field( $_POST['update_notifications-sethour'] );
+		$minutesT 		= sanitize_text_field( $_POST['update_notifications-setminutes'] );
+		$secondsT 		= date( 's' );
+		$fullDateT 		= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
 		$emailSetTime 		= strtotime( $fullDateT );
 
 		wp_schedule_event( $emailSetTime, $schedule_mail, 'cau_set_schedule_mail' );
@@ -175,11 +175,11 @@ if( isset( $_POST['submit'] ) ) {
 	// Outdated notifications
 	if( $outdated_notifier == 'daily' ) {
 
-		$dateT 				= date( 'Y-m-d' );
-		$hoursT 			= sanitize_text_field( $_POST['outdated_notifier-sethour'] );
-		$minutesT 			= sanitize_text_field( $_POST['outdated_notifier-setminutes'] );
-		$secondsT 			= date( 's' );
-		$fullDateT 			= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
+		$dateT 			= date( 'Y-m-d' );
+		$hoursT 		= sanitize_text_field( $_POST['outdated_notifier-sethour'] );
+		$minutesT 		= sanitize_text_field( $_POST['outdated_notifier-setminutes'] );
+		$secondsT 		= date( 's' );
+		$fullDateT 		= $dateT.' '.$hoursT.':'.$minutesT.':'.$secondsT;
 		$emailSetTime 		= strtotime( $fullDateT );
 
 		wp_schedule_event( $emailSetTime, $outdated_notifier, 'cau_outdated_notifier' );
@@ -464,6 +464,7 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 						<td>
 							<input type="number" min="0" max="31" name="update_delay_days" id="update_delay_days" class="regular-text" value="<?php echo cau_get_db_value( 'update_delay_days' ); ?>" />
 							<p><?php _e( 'For how many days should updates be put on hold?', 'companion-auto-update' ); ?></p>
+							<p><small><strong>Please note:</strong> Delaying updates does not work with WordPress updates yet.</small></p>
 						</td>
 					</tr>
 				</tbody>

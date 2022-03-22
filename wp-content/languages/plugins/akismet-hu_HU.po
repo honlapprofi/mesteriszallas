@@ -75,7 +75,7 @@ msgstr ""
 msgid "Checking for Spam (%1$s%)"
 msgstr ""
 
-#: class.akismet.php:635
+#: class.akismet.php:631
 msgid "Akismet is not configured. Please enter an API key."
 msgstr "Az Akismet nincs konfigurálva. Adjon meg egy API-kulcsot."
 
@@ -152,7 +152,7 @@ msgstr "Akismet adatvédelmi nyilatkozat"
 msgid "Privacy"
 msgstr "Adatvédelem"
 
-#: class.akismet.php:1737
+#: class.akismet.php:1727
 msgid "This site uses Akismet to reduce spam. <a href=\"%s\" target=\"_blank\" rel=\"nofollow noopener\">Learn how your comment data is processed</a>."
 msgstr "Ez az oldal az Akismet szolgáltatást használja a spam csökkentésére. <a href=\"%s\" target=\"_blank\" rel=\"nofollow noopener\">Ismerje meg a hozzászólás adatainak feldolgozását</a> ."
 
@@ -185,7 +185,7 @@ msgstr "Ha igaz, akkor az Akismet automatikusan törli a legrosszabb spamet, ahe
 msgid "A 12-character Akismet API key. Available at akismet.com/get/"
 msgstr "12 karakter hosszúságú Akismet API-kulcs, amely az akismet.com/get oldalról kérhető le"
 
-#: class.akismet.php:272
+#: class.akismet.php:268
 msgid "Comment discarded."
 msgstr "Hozzászólás elvetve."
 
@@ -285,7 +285,7 @@ msgstr "Nincs ellenőrzésre váró megjegyzés. Az Akismet csak a moderálásra
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
 
-#: class.akismet.php:641
+#: class.akismet.php:637
 msgid "Comment not found."
 msgstr "Hozzászólás nem található."
 
@@ -672,11 +672,11 @@ msgstr[1] "Blokkolt spam"
 msgid "Past six months"
 msgstr "Az elmúlt hat hónapban"
 
-#: class.akismet.php:1496
+#: class.akismet.php:1486
 msgid "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
 msgstr "Kérjük, <a href=\"%1$s\">frissítse a WordPresst</a> az aktuális verzióra, vagy <a href=\"%2$s\">térjen vissza az Akismet bővítmény 2.4-es verziójához</a>."
 
-#: class.akismet.php:1496
+#: class.akismet.php:1486
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Az Akismet %s használatához WordPress %s, vagy frissebb verzió szükséges."
 

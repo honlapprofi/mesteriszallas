@@ -264,7 +264,13 @@ foreach ($page_array as $page_name){
                 {
                     $sub_tab=isset($_GET['sub_tab'])?$_GET['sub_tab']:'googledrive';
                     $sub_page=isset($_GET['sub_page'])?$_GET['sub_page']:'storage_account_google_drive';
-                    echo "switchstorageTabs('$sub_tab','$sub_page');";
+                    if($sub_tab === 'googledrive' || $sub_tab === 'dropbox' || $sub_tab === 'one_drive')
+                    {
+                        if($sub_page === 'storage_account_google_drive' || $sub_page === 'storage_account_dropbox' || $sub_page === 'storage_account_one_drive')
+                        {
+                            echo "switchstorageTabs('$sub_tab','$sub_page');";
+                        }
+                    }
                 }
             }
         ?>

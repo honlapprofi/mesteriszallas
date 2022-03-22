@@ -5,7 +5,7 @@ Tags: auto, automatic, background, update, updates, updating, automatic updates,
 Requires at least: 3.6.0
 Tested up to: 5.9
 Requires PHP: 5.1
-Stable tag: 3.8.3
+Stable tag: 3.8.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,13 @@ So obviously, some of you wondered what the difference would be between the defa
 4. Keep track of updates with the update log
 
 == Changelog ==
+
+= 3.8.5 (March 17, 2022) =
+* New: Added more checks on the status page and added an explanation to some of them.
+* New: Added an list of delayed updates on the status page to help with troubleshooting.
+* Tweak: Made some improvements to the update delay feature.
+* Tweak: Added a notice to explain that update delay does not work with WordPress update currently.
+* Tweak: Improved code on the status page to be more reliable.
 
 = 3.8.4 (February 2, 2022) =
 * Tweak: Fixed a few styling errors with WP5.9

@@ -486,7 +486,7 @@ class WPvivid_Staging_Log_Page_Free
                 <td>'.__($value['des'], 'wpvivid-backuprestore').'</td>
                 <td>'.__($value['file_name'], 'wpvivid-backuprestore').'</td>
                 <td>
-                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['path'].'\')" style="cursor:pointer;">
+                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['file_name'].'\', \''.'staging'.'\', \''.$value['result'].'\')" style="cursor:pointer;">
                     <img src="'.esc_url(WPVIVID_PLUGIN_URL.$pic_log).'" style="vertical-align:middle;">Log
                     </a>
                 </td>
@@ -642,6 +642,14 @@ class WPvivid_Staging_Log_Page_Free
                 $log_file['des']='';
                 $log_file['time']='';
                 $log_file['error']=false;
+                if(preg_match('/error/', $file))
+                {
+                    $log_file['result']='failed';
+                }
+                else
+                {
+                    $log_file['result']='success';
+                }
                 $line = fgets($handle);
                 if($line!==false)
                 {

@@ -199,8 +199,16 @@ class Customers {
         
         $order = isset( $atts['order'] ) ? $atts['order'] : 'DESC';
         
-        $orderby = isset( $atts['orderby'] ) ? $wpdb->prepare( "ORDER BY %1s %1s", $atts['orderby'], $order ) : '';
+        $orderby = '';
         
+        if( isset( $atts['orderby'] ) ) {
+            if( $atts['orderby'] == 'full_name' ) {
+                $orderby = $wpdb->prepare( "ORDER BY last_name %1s, first_name %2s", $order, $order );
+            } else {
+                $orderby = $wpdb->prepare( "ORDER BY %1s %1s", $atts['orderby'], $order );
+            }
+        }
+
         $paged = isset( $atts['paged'] ) ? (int) $atts['paged'] : 1;
         
         $per_page = isset( $atts['per_page'] ) ? (int) $atts['per_page'] : 99999;

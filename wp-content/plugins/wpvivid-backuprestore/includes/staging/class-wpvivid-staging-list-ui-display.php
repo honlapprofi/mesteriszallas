@@ -158,7 +158,7 @@ class WPvivid_Staging_List_UI_Display_Free
                         {
                             $staging_create_time = $staging['create_time'];
                             $offset=get_option('gmt_offset');
-                            $utc_time = $staging_create_time - $offset * 60 * 60;
+                            $utc_time = $staging_create_time + $offset * 60 * 60;
                             $staging_create_time = date('M-d-Y H:i', $utc_time);
                         }
                         else
@@ -170,7 +170,7 @@ class WPvivid_Staging_List_UI_Display_Free
                         {
                             $staging_copy_time = $staging['copy_time'];
                             $offset=get_option('gmt_offset');
-                            $utc_time = $staging_copy_time - $offset * 60 * 60;
+                            $utc_time = $staging_copy_time + $offset * 60 * 60;
                             $staging_copy_time = date('M-d-Y H:i', $utc_time);
                         }
                         else

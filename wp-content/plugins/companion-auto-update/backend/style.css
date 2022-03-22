@@ -295,6 +295,13 @@ table.cau_status_list:not(.no_column_width) th, table.cau_status_list:not(.no_co
 .cau_mobile_prefix {
 	display: none;
 }
+table.cau_status_list .cau_status_icon {
+	width: 50px!important;
+}
+table.cau_status_list .cau_status_icon .dashicons, table.cau_status_list .cau_status_icon .dashicons-before:before {
+	height: 25px;
+	font-size: 2em;
+}
 
 /* Rollback list */
 table.rollbacklist {

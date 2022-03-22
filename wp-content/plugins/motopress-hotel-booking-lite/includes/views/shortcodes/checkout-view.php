@@ -15,6 +15,14 @@ class CheckoutView {
 	 * @since 4.2.0
 	 */
 	public static function renderCustomerErrors() {
+		if( isset( $_GET['login_failed'] ) && $_GET['login_failed'] == 'error' ) {
+			?>
+			<p class="mphb-errors-wrapper">
+			<?php echo esc_html__( 'Invalid login or password.', 'motopress-hotel-booking' ); ?>
+			</p>
+			<?php
+		}
+		
 		if( isset( $_GET['customer_error'] ) ) {
 			if( $_GET['customer_error'] == 'wp_user_exists' ) {
 				?>
