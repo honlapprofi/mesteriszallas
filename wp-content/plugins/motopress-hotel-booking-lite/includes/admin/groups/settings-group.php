@@ -77,7 +77,7 @@ class SettingsGroup extends InputGroup {
 
 		foreach ( $this->fields as $field ) {
 
-			if ( isset( $_POST[$field->getName()] ) ) {
+			if ( isset( $_POST[$field->getName()] ) && !$field->isDisabled() ) {
 
 				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 				$value = wp_unslash( $_POST[ $field->getName() ] );

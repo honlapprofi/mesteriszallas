@@ -10,20 +10,41 @@ if ( ! defined( 'ABSPATH' ) )
  */
 class Cookie_Notice_Welcome {
 	
-	private $app_login_url = '';
+	private $app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
+	
+	private $pricing_monthly = array();
+	private $pricing_yearly = array();
 
 	public function __construct() {
 		// actions
+		add_action( 'admin_init', array( $this, 'init' ) );
 		add_action( 'admin_init', array( $this, 'welcome' ) );
 		add_action( 'wp_ajax_cn_welcome_screen', array( $this, 'welcome_screen' ) );
-		
-		$this->app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
+	}
+	
+	/**
+	 * Init.
+	 */
+	public function init() {
+		$this->pricing_monthly = array(
+			'compliance_monthly_notrial' => '14.95',
+			'compliance_monthly_5' => '29.95',
+			'compliance_monthly_10' => '49.95',
+			'compliance_monthly_20' => '69.95'
+		);
+
+		$this->pricing_yearly = array(
+			'compliance_yearly_notrial' => '149.50',
+			'compliance_yearly_5' => '299.50',
+			'compliance_yearly_10' => '499.50',
+			'compliance_yearly_20' => '699.50'
+		);
 	}
 
 	/**
 	 * Load scripts and styles - admin.
 	 */
-	public function admin_enqueue_scripts( $page ) {
+	public function admin_enqueue_scripts( $page ) {		
 		if ( in_array( Cookie_Notice()->get_status(), array( 'active', 'pending' ) ) )
 			return;
 		
@@ -49,9 +70,14 @@ class Cookie_Notice_Welcome {
 			'error'			=> __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ),
 			'statusPassed'	=> __( 'Passed', 'cookie-notice' ),
 			'statusFailed'	=> __( 'Failed', 'cookie-notice' ),
+			'paidMonth'	=> __( 'monthly', 'cookie-notice' ),
+			'paidYear'	=> __( 'yearly', 'cookie-notice' ),
+			'pricingMonthly' => $this->pricing_monthly,
+			'pricingYearly' => $this->pricing_yearly,
 			'complianceStatus' => Cookie_Notice()->get_status(),
 			'complianceFailed' => __( '<em>Compliance Failed!</em>Your website does not achieve minimum viable compliance. <b><a href="#" class="cn-sign-up">Sign up to Cookie Compliance</a></b> to bring your site into compliance with the latest data privacy rules and regulations.', 'cookie-notice' ),
 			'compliancePassed' => __( '<em>Compliance Passed!</em>Congratulations. Your website meets minimum viable compliance.', 'cookie-notice' ),
+			'licensesAvailable' => __( 'available', 'cookie-notice' ),
 			'invalidFields'	=> __( 'Please fill all the required fields.', 'cookie-notice' )
 		);
 		
@@ -255,9 +281,17 @@ class Cookie_Notice_Welcome {
 
 				$html .= '	
 							<h3 class="cn-pricing-select">' . __( 'Compliance Plans', 'cookie-notice' ) . ':</h3>
+							<div class="cn-pricing-type cn-radio-wrapper">
+								<div>
+									<label for="pricing-type-monthly"><input id="pricing-type-monthly" type="radio" name="cn_pricing_type" value="monthly" checked><span class="cn-pricing-toggle toggle-left"><span class="cn-label">' . __( 'Monthly', 'cookie-notice' ) . '</span></span></label>
+								</div>
+								<div>
+									<label for="pricing-type-yearly"><input id="pricing-type-yearly" type="radio" name="cn_pricing_type" value="yearly"><span class="cn-pricing-toggle toggle-right"><span class="cn-label">' . __( 'Yearly', 'cookie-notice' ) . '<span class="cn-badge">' . __( 'Save 12%', 'cookie-notice' ) . '</span></span></span></label>
+								</div>
+							</div>
 							<div class="cn-pricing-table">
-								<label class="cn-pricing-item" for="cn_pricing_plan_free">
-									<input id="cn_pricing_plan_free" type="radio" name="cn_pricing_plan" value="free">
+								<label class="cn-pricing-item cn-pricing-plan-free" for="cn-pricing-plan-free">
+									<input id="cn-pricing-plan-free" type="radio" name="cn_pricing" value="free">
 									<div class="cn-pricing-info">
 										<div class="cn-pricing-head">
 											<h4>' . __( 'Basic', 'cookie-notice' ) . '</h4>
@@ -272,37 +306,25 @@ class Cookie_Notice_Welcome {
 											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>Basic</b> Support', 'cookie-notice' ) . '</p>
 										</div>
 										<div class="cn-pricing-footer">
-											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Select Plan', 'cookie-notice' ) . '</button>
+											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Start Basic', 'cookie-notice' ) . '</button>
 										</div>
 									</div>
 								</label>
-								<label class="cn-pricing-item" for="cn_pricing_plan_monthly">
-									<input id="cn_pricing_plan_monthly" type="radio" name="cn_pricing_plan" value="monthly">
+								<label class="cn-pricing-item cn-pricing-plan-pro" for="cn-pricing-plan-pro">
+									<input id="cn-pricing-plan-pro" type="radio" name="cn_pricing" value="pro">
 									<div class="cn-pricing-info">
 										<div class="cn-pricing-head">
-											<h4>' . __( 'Professional Monthly', 'cookie-notice' ) . '</h4>
-											<span class="cn-plan-pricing"><span class="cn-plan-price"><sup>$</sup>14.95</span> / ' . __( 'month', 'cookie-notice' ) . '</span>
-										</div>
-										<div class="cn-pricing-body">
-											<p class="cn-included"><span class="cn-icon"></span>' . __( 'GDPR, CCPA, ePrivacy, PECR compliance', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( 'Consent Analytics Dashboard', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Unlimited</b> visits', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Lifetime</b> consent storage', 'cookie-notice' ) . '</p>	
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Unlimited</b> languages', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Regular</b> Support', 'cookie-notice' ) . '</p>
-										</div>
-										<div class="cn-pricing-footer">
-											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Select Plan', 'cookie-notice' ) . '</button>
-										</div>
-									</div>
-								</label>
-								<label class="cn-pricing-item" for="cn_pricing_plan_yearly">
-									<input id="cn_pricing_plan_yearly" type="radio" name="cn_pricing_plan" value="yearly">
-									<div class="cn-pricing-info">
-										<div class="cn-pricing-head">
-											<h4>' . __( 'Professional Yearly', 'cookie-notice' ) . '</h4>
-											<span class="cn-plan-pricing"><span class="cn-plan-price"><sup>$</sup>149.50</span> / ' . __( 'year', 'cookie-notice' ) . '</span>
-											<span class="cn-plan-promo">' . __( 'Best Value', 'cookie-notice' ) . '</span>
+											<h4>' . __( 'Professional', 'cookie-notice' ) . '</h4>
+											<span class="cn-plan-pricing"><span class="cn-plan-price"><sup>$</sup><span class="cn-plan-amount">14.95</span></span> / <span class="cn-plan-period">' . __( 'monthly', 'cookie-notice' ) . '</span></span>
+											<span class="cn-plan-promo">' . __( 'Recommended', 'cookie-notice' ) . '</span>
+											<div class="cn-select-wrapper">
+												<select name="cn_pricing_plan" class="form-select" aria-label="' . __( 'Pricing options', 'df' ) . '" id="cn-pricing-plans">
+													<option value="compliance_monthly_notrial" data-price="' . $this->pricing_monthly['compliance_monthly_notrial'] . '">' . sprintf( _n( '%s domain license', '%s domains license', 1, 'cookie-notice' ), 1 ) . '</option>
+													<option value="compliance_monthly_5" data-price="' . $this->pricing_monthly['compliance_monthly_5'] . '">' . sprintf( _n( '%s domain license', '%s domains license', 5, 'cookie-notice' ), 5 ) . '</option>
+													<option value="compliance_monthly_10" data-price="' . $this->pricing_monthly['compliance_monthly_10'] . '">' . sprintf( _n( '%s domain license', '%s domains license', 10, 'cookie-notice' ), 10 ) . '</option>
+													<option value="compliance_monthly_20" data-price="' . $this->pricing_monthly['compliance_monthly_20'] . '">' . sprintf( _n( '%s domain license', '%s domains license', 20, 'cookie-notice' ), 20 ) . '</option>
+												</select>
+											</div>
 										</div>
 										<div class="cn-pricing-body">
 											<p class="cn-included"><span class="cn-icon"></span>' . __( 'GDPR, CCPA, ePrivacy, PECR compliance', 'cookie-notice' ) . '</p>
@@ -313,7 +335,7 @@ class Cookie_Notice_Welcome {
 											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Premium</b> Support', 'cookie-notice' ) . '</p>
 										</div>
 										<div class="cn-pricing-footer">
-											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Select Plan', 'cookie-notice' ) . '</button>
+											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Start Premium', 'cookie-notice' ) . '</button>
 										</div>
 									</div>
 								</label>
@@ -545,15 +567,15 @@ class Cookie_Notice_Welcome {
 										<div class="cn-form-feedback cn-hidden"></div>
 										<div class="cn-field cn-field-radio">
 											<div class="cn-radio-wrapper cn-plan-wrapper">
-												<label for="cn_field_plan_free"><input id="cn_field_plan_free" type="radio" name="plan" value="free" checked><span><span class="cn-plan-description">' . __( 'Basic', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">Free</span></span><span class="cn-plan-overlay"></span></span></label>
-												<label for="cn_field_plan_monthly"><input id="cn_field_plan_monthly" type="radio" name="plan" value="monthly"><span><span class="cn-plan-description">' . __( '<b>Professional</b> Monthly', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">$14.50</span>' . __( '/mo', 'cookie-notice' ) . '</span><span class="cn-plan-overlay"></span></span></label>
-												<label for="cn_field_plan_yearly"><input id="cn_field_plan_yearly" type="radio" name="plan" value="yearly"><span><span class="cn-plan-description">' . __( '<b>Professional</b> Yearly', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">$149.50</span>' . __( '/yr', 'cookie-notice' ) . '</span><span class="cn-plan-overlay"></span></span></label>
+												<label for="cn-field-plan-free" class="cn-pricing-plan-free"><input id="cn-field-plan-free" type="radio" name="plan" value="free" checked><span><span class="cn-plan-description">' . __( 'Basic', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">Free</span></span><span class="cn-plan-overlay"></span></span></label>
+												<label for="cn-field-plan-pro" class="cn-pricing-plan-pro"><input id="cn-field-plan-pro" type="radio" name="plan" value="compliance_monthly_notrial"><span><span class="cn-plan-description">' . __( '<b>Professional</b>', 'cookie-notice' ) . ' - <span class="cn-plan-period">' . __( 'monthly', 'cookie-notice' ) . '</span></span><span class="cn-plan-pricing"><span class="cn-plan-price">$<span class="cn-plan-amount">14.95</span></span></span><span class="cn-plan-overlay"></span></span></label>
 											</div>
 										</div>
 										<div class="cn-field cn-fieldset" id="cn_submit_free">
 											<button type="submit" class="cn-btn cn-screen-button" tabindex="4" data-screen="4"><span class="cn-spinner"></span>' . __( 'Confirm', 'cookie-notice' ) . '</button>
 										</div>
-										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_paid">
+										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_pro">
+											<input type="hidden" name="cn_payment_identifier" value="" />
 											<div class="cn-field cn-field-radio">
 												<label>' . __( 'Payment Method', 'cookie-notice' ) . '</label>
 												<div class="cn-radio-wrapper cn-horizontal-wrapper">
@@ -647,15 +669,20 @@ class Cookie_Notice_Welcome {
 										<div class="cn-form-feedback cn-hidden"></div>
 										<div class="cn-field cn-field-radio">
 											<div class="cn-radio-wrapper cn-plan-wrapper">
-												<label for="cn_field_plan_free"><input id="cn_field_plan_free" type="radio" name="plan" value="free" checked><span><span class="cn-plan-description">' . __( 'Basic', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">Free</span></span><span class="cn-plan-overlay"></span></span></label>
-												<label for="cn_field_plan_monthly"><input id="cn_field_plan_monthly" type="radio" name="plan" value="monthly"><span><span class="cn-plan-description">' . __( '<b>Professional</b> Monthly', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">$14.50</span>' . __( '/mo', 'cookie-notice' ) . '</span><span class="cn-plan-overlay"></span></span></label>
-												<label for="cn_field_plan_yearly"><input id="cn_field_plan_yearly" type="radio" name="plan" value="yearly"><span><span class="cn-plan-description">' . __( '<b>Professional</b> Yearly', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">$149.50</span>' . __( '/yr', 'cookie-notice' ) . '</span><span class="cn-plan-overlay"></span></span></label>
+												<label for="cn-field-plan-free" class="cn-pricing-plan-free"><input id="cn-field-plan-free" type="radio" name="plan" value="free" checked><span><span class="cn-plan-description">' . __( 'Basic', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price">Free</span></span><span class="cn-plan-overlay"></span></span></label>
+												<label for="cn-field-plan-pro" class="cn-pricing-plan-pro"><input id="cn-field-plan-pro" type="radio" name="plan" value="compliance_monthly_notrial"><span><span class="cn-plan-description">' . __( '<b>Professional</b>', 'cookie-notice' ) . ' - <span class="cn-plan-period">' . __( 'monthly', 'cookie-notice' ) . '</span></span><span class="cn-plan-pricing"><span class="cn-plan-price">$<span class="cn-plan-amount">14.95</span></span></span><span class="cn-plan-overlay"></span></span></label>
+												<label for="cn-field-plan-license" class="cn-pricing-plan-license cn-disabled">
+													<input id="cn-field-plan-license" type="radio" name="plan" value="license"><span><span class="cn-plan-description">' . __( 'Use License', 'cookie-notice' ) . '</span><span class="cn-plan-pricing"><span class="cn-plan-price"><span class="cn-plan-amount">0</span> ' . __( 'available', 'df' ) . '</span></span><span class="cn-plan-overlay"></span></span>
+												</label>
 											</div>
 										</div>
+
 										<div class="cn-field cn-fieldset" id="cn_submit_free">
 											<button type="submit" class="cn-btn cn-screen-button" tabindex="4" data-screen="4"><span class="cn-spinner"></span>' . __( 'Confirm', 'cookie-notice' ) . '</button>
 										</div>
-										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_paid">
+										
+										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_pro">
+											<input type="hidden" name="cn_payment_identifier" value="" />
 											<div class="cn-field cn-field-radio">
 												<label>' . __( 'Payment Method', 'cookie-notice' ) . '</label>
 												<div class="cn-radio-wrapper cn-horizontal-wrapper">
@@ -684,6 +711,15 @@ class Cookie_Notice_Welcome {
 											<div class="cn-fieldset" id="cn_payment_method_paypal" style="display: none;">
 												<div id="cn_paypal_button"></div>
 											</div>
+										</div>
+										
+										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_license">
+											<div class="cn-field cn-field-select" id="cn-subscriptions-list">
+												<label for="cn-subscription-select">' . __( 'Select subscription', 'cookie-notice' ) . '​</label>
+												<select  name="cn_subscription_id" class="form-select" aria-label="' . __( 'Licenses', 'df' ) . '" id="cn-subscription-select">
+												</select>
+											</div><br>
+											<button type="submit" class="cn-btn cn-screen-button" tabindex="4" data-screen="4"><span class="cn-spinner"></span>' . __( 'Confirm', 'cookie-notice' ) . '</button>
 										</div>';
 
 				$html .= wp_nonce_field( 'cn_api_payment', 'cn_payment_nonce', true, false );

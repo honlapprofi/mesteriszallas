@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) )
  * @class Cookie_Notice_Settings
  */
 class Cookie_Notice_Settings {
-	private $app_login_url = '';
+	private $app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
 	
 	public $positions = array();
 	public $styles = array();
@@ -36,8 +36,6 @@ class Cookie_Notice_Settings {
 		add_action( 'admin_print_styles', array( $this, 'admin_print_styles' ) );
 		add_action( 'wp_ajax_cn_purge_cache', array( $this, 'ajax_purge_cache' ) );
 		add_action( 'admin_notices', array( $this, 'settings_errors' ) );
-		
-		$this->app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
 	}
 	
 	/**
@@ -214,7 +212,7 @@ class Cookie_Notice_Settings {
 									<p>' . __( 'A free web application to help you deliver better consent experiences and comply with GDPR, CCPA and other data privacy laws more effectively.', 'cookie-notice' ) . '</p>
 								</div>
 								<img src="//cns2-53eb.kxcdn.com/screen-dashboard-small.png">
-								<a href="' . esc_url( admin_url( 'index.php?page=cookie-notice' ) ) . '" class="button button-primary button-hero cn-button cn-run-upgrade">' . __( 'Free Upgrade', 'cookie-notice' ) . '</a>';
+								<a href="https://cookie-compliance.co/" class="button button-primary button-hero cn-button" target="_blank">' . __( 'Learn more', 'cookie-notice' ) . '</a>';
 			}
 
 			echo '
@@ -241,6 +239,11 @@ class Cookie_Notice_Settings {
 								<input id="cn-faq-3" type="checkbox" />
 								<span class="cn-toggle-heading">' . __( 'Is Cookie Compliance free?', 'cookie-notice' ) . '</span>
 								<span class="cn-toggle-body">' . __( 'Yes, but with limits. Cookie Compliance includes both free and paid plans to choose from depending on your needs and your website monthly traffic.', 'cookie-notice' ) . '</span>
+							</label>
+							<label for="cn-faq-4" class="cn-toggle-item">
+								<input id="cn-faq-4" type="checkbox" />
+								<span class="cn-toggle-heading">' . __( 'Where can I find pricing options?', 'cookie-notice' ) . '</span>
+								<span class="cn-toggle-body">' . __( 'You can learn more about the features and pricing by visiting the Cookie Compliance website here:', 'cookie-notice' ) . ' <a href="https://cookie-compliance.co/" target="_blank">https://cookie-compliance.co/</a></span>
 							</label>
 						</div>
 					</div>';

@@ -697,6 +697,8 @@ class Wpvivid_S3Compat extends WPvivid_Remote{
             $ret['error']="Warning: The storage secret key is required.";
             return $ret;
         }
+        $this->options['secret'] = base64_encode($this->options['secret']);
+        $this->options['is_encrypt'] = 1;
 
         if(empty($this->options['bucket']))
         {

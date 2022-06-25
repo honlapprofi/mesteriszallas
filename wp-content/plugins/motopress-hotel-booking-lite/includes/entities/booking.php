@@ -311,7 +311,6 @@ class Booking {
      * @return array|null
      *
      * @since 3.5.1
-     * @since 3.7.0 added new filter - "mphb_booking_price_breakdown".
      * @since 3.7.1 added optional parameter $load.
      */
     public function getLastPriceBreakdown($load = true)
@@ -320,7 +319,7 @@ class Booking {
             $prices = get_post_meta($this->id, '_mphb_booking_price_breakdown', true);
 
             if (!empty($prices)) {
-                $prices = json_decode($prices, true);
+                $prices = json_decode(mphb_strip_price_breakdown_json($prices), true);
             }
 
             if (!empty($prices)) {

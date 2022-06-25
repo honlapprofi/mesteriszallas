@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.9.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-23 07:29:28+0000\n"
+"PO-Revision-Date: 2022-03-30 19:47:03+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 #. translators: Use this to specify the proper Google Font name and variants to
 #. load that is supported by your language. Do not translate. Set to 'off' to
 #. disable loading.
-#: wp-includes/script-loader.php:1514
+#: wp-includes/script-loader.php:1524
 msgctxt "Google Font Name and Variants"
 msgid "Noto Serif:400,400i,700,700i"
 msgstr "Noto Serif:400,400i,700,700i"
@@ -44,7 +44,7 @@ msgstr "on"
 #. Asian characters), enter 'characters_excluding_spaces' or
 #. 'characters_including_spaces'. Otherwise, enter 'words'. Do not translate
 #. into your own language.
-#: wp-includes/formatting.php:3930 wp-includes/script-loader.php:1751
+#: wp-includes/formatting.php:3930 wp-includes/script-loader.php:1761
 #: wp-includes/js/dist/editor.js:10717
 msgctxt "Word count type. Do not translate!"
 msgid "words"
@@ -60,7 +60,7 @@ msgstr "https://cs.wordpress.org/"
 #. translators: If there are characters in your language that are not supported
 #. by Open Sans, translate this to 'off'. Do not translate into your own
 #. language.
-#: wp-includes/script-loader.php:1424
+#: wp-includes/script-loader.php:1434
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "zap"
@@ -115,6 +115,20 @@ msgstr ","
 #: wp-includes/js/dist/edit-post.js:5209 wp-admin/includes/upgrade.php:158
 msgid "Uncategorized"
 msgstr "Nezařazené"
+
+#: wp-includes/script-loader.php:1230
+msgid "Use Site Editor"
+msgstr "Používat webový editor"
+
+#. translators: 1: Link to Site Editor documentation on HelpHub, 2: HTML
+#. button.
+#: wp-includes/script-loader.php:1225
+msgid "Hurray! Your theme supports Full Site Editing with blocks. <a href=\"%1$s\">Tell me more</a>. %2$s"
+msgstr "Hurá! Vaše šablona podporuje úplné úpravy webu s bloky. <a href=\"%1$s\">Řekněte mi více</a>. %2$s"
+
+#: wp-includes/script-loader.php:1226 wp-includes/js/dist/edit-site.js:2966
+msgid "https://wordpress.org/support/article/site-editor/"
+msgstr "https://wordpress.org/support/article/site-editor/"
 
 #: wp-includes/blocks/site-logo.php:89
 msgid "Site icon."
@@ -260,7 +274,7 @@ msgctxt "block description"
 msgid "Display content in multiple columns, with blocks added to each column."
 msgstr "Zobrazte obsah ve více sloupcích s přidanými bloky do každého sloupce."
 
-#: wp-includes/js/dist/edit-site.js:7684 wp-admin/site-editor.php:27
+#: wp-includes/js/dist/edit-site.js:8460 wp-admin/site-editor.php:27
 msgid "Editor (beta)"
 msgstr "Editor (beta)"
 
@@ -780,7 +794,7 @@ msgstr "Část nadřazené šablony:"
 msgid "Search Template Parts"
 msgstr "Hledat části šablony"
 
-#: wp-includes/post.php:403 wp-includes/js/dist/edit-site.js:5780
+#: wp-includes/post.php:403 wp-includes/js/dist/edit-site.js:6553
 msgid "Template Parts"
 msgstr "Části šablony"
 
@@ -838,7 +852,7 @@ msgstr "Nepřiřazeno"
 
 #. translators: 1: Function name, 2: A variable type, like "boolean" or
 #. "integer".
-#: wp-includes/functions.php:8299
+#: wp-includes/functions.php:8306
 msgid "%1$s only accepts a non-empty path string, received %2$s."
 msgstr "%1$s přijímá pouze řetězec cesty, který není prázdný, přijato %2$s."
 
@@ -2025,7 +2039,7 @@ msgid "Type / to choose a block"
 msgstr "Typ / vybrat blok"
 
 #: wp-includes/js/dist/block-editor.js:45357
-#: wp-includes/js/dist/edit-site.js:3947 wp-includes/js/dist/edit-site.js:4820
+#: wp-includes/js/dist/edit-site.js:4720 wp-includes/js/dist/edit-site.js:5593
 #: wp-admin/includes/class-wp-screen.php:1204 wp-admin/includes/theme.php:342
 #: wp-admin/includes/theme.php:378 wp-admin/index.php:70
 msgid "Layout"
@@ -2574,7 +2588,7 @@ msgctxt "Template"
 msgid "Add New"
 msgstr "Vytvořit novou"
 
-#: wp-includes/post.php:343 wp-includes/js/dist/edit-site.js:5772
+#: wp-includes/post.php:343 wp-includes/js/dist/edit-site.js:6545
 msgid "Templates"
 msgstr "Šablony"
 
@@ -2920,7 +2934,7 @@ msgid "Filter by category"
 msgstr "Filtrovat podle rubriky"
 
 #. translators: Documentation explaining HTTPS and why it should be used.
-#: wp-includes/functions.php:8104
+#: wp-includes/functions.php:8111
 msgid "https://wordpress.org/support/article/why-should-i-use-https/"
 msgstr "https://wordpress.org/support/article/why-should-i-use-https/"
 
@@ -3528,15 +3542,15 @@ msgid "There is a new version of %s available, but it doesn&#8217;t work with yo
 msgstr "K dispozici je nová verze %s, ale není kompatibilní s používanou verzí PHP a WordPressu."
 
 #: wp-includes/customize/class-wp-customize-theme-control.php:220
-#: wp-admin/includes/theme.php:996 wp-admin/theme-install.php:335
-#: wp-admin/theme-install.php:521 wp-admin/themes.php:501
+#: wp-admin/includes/theme.php:996 wp-admin/theme-install.php:336
+#: wp-admin/theme-install.php:524 wp-admin/themes.php:501
 #: wp-admin/themes.php:860 wp-admin/themes.php:1008
 msgid "This theme doesn&#8217;t work with your version of PHP."
 msgstr "Tato šablona nepodporuje aktuálně používanou verzi PHP."
 
 #: wp-includes/customize/class-wp-customize-theme-control.php:209
-#: wp-admin/includes/theme.php:985 wp-admin/theme-install.php:324
-#: wp-admin/theme-install.php:510 wp-admin/themes.php:492
+#: wp-admin/includes/theme.php:985 wp-admin/theme-install.php:325
+#: wp-admin/theme-install.php:513 wp-admin/themes.php:492
 #: wp-admin/themes.php:849 wp-admin/themes.php:997
 msgid "This theme doesn&#8217;t work with your version of WordPress."
 msgstr "Tato šablona nepodporuje tuto verzi WordPressu."
@@ -3554,9 +3568,9 @@ msgstr "Tato šablona nepodporuje tuto verzi WordPressu."
 #: wp-admin/includes/theme.php:931 wp-admin/includes/theme.php:977
 #: wp-admin/includes/theme.php:1000 wp-admin/includes/update-core.php:1036
 #: wp-admin/includes/update.php:745 wp-admin/includes/update.php:772
-#: wp-admin/install.php:244 wp-admin/theme-install.php:316
-#: wp-admin/theme-install.php:339 wp-admin/theme-install.php:502
-#: wp-admin/theme-install.php:525 wp-admin/themes.php:426
+#: wp-admin/install.php:244 wp-admin/theme-install.php:317
+#: wp-admin/theme-install.php:340 wp-admin/theme-install.php:505
+#: wp-admin/theme-install.php:528 wp-admin/themes.php:426
 #: wp-admin/themes.php:453 wp-admin/themes.php:486 wp-admin/themes.php:505
 #: wp-admin/themes.php:777 wp-admin/themes.php:808 wp-admin/themes.php:841
 #: wp-admin/themes.php:864 wp-admin/themes.php:989 wp-admin/themes.php:1012
@@ -3579,8 +3593,8 @@ msgstr "<a href=\"%s\">Podrobnější informace o aktualizaci PHP</a>."
 #: wp-admin/includes/theme.php:894 wp-admin/includes/theme.php:916
 #: wp-admin/includes/theme.php:971 wp-admin/includes/theme.php:989
 #: wp-admin/includes/update.php:739 wp-admin/includes/update.php:759
-#: wp-admin/theme-install.php:310 wp-admin/theme-install.php:328
-#: wp-admin/theme-install.php:496 wp-admin/theme-install.php:514
+#: wp-admin/theme-install.php:311 wp-admin/theme-install.php:329
+#: wp-admin/theme-install.php:499 wp-admin/theme-install.php:517
 #: wp-admin/themes.php:420 wp-admin/themes.php:440 wp-admin/themes.php:480
 #: wp-admin/themes.php:496 wp-admin/themes.php:771 wp-admin/themes.php:793
 #: wp-admin/themes.php:835 wp-admin/themes.php:853 wp-admin/themes.php:983
@@ -3595,8 +3609,8 @@ msgstr "<a href=\"%s\">Aktualizujte WordPress</a>."
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:678
 #: wp-admin/includes/class-wp-plugins-list-table.php:1279
 #: wp-admin/includes/theme.php:886 wp-admin/includes/theme.php:963
-#: wp-admin/includes/update.php:731 wp-admin/theme-install.php:302
-#: wp-admin/theme-install.php:488 wp-admin/themes.php:412
+#: wp-admin/includes/update.php:731 wp-admin/theme-install.php:303
+#: wp-admin/theme-install.php:491 wp-admin/themes.php:412
 #: wp-admin/themes.php:472 wp-admin/themes.php:763 wp-admin/themes.php:827
 #: wp-admin/themes.php:975 wp-admin/themes.php:1042
 #: wp-admin/update-core.php:688
@@ -3604,8 +3618,8 @@ msgid "<a href=\"%1$s\">Please update WordPress</a>, and then <a href=\"%2$s\">l
 msgstr "<a href=\"%1$s\">Aktualizujte WordPress</a> a <a href=\"%2$s\">zjistěte více o aktualizaci PHP</a>."
 
 #: wp-includes/customize/class-wp-customize-theme-control.php:183
-#: wp-admin/includes/theme.php:959 wp-admin/theme-install.php:298
-#: wp-admin/theme-install.php:484 wp-admin/themes.php:468
+#: wp-admin/includes/theme.php:959 wp-admin/theme-install.php:299
+#: wp-admin/theme-install.php:487 wp-admin/themes.php:468
 #: wp-admin/themes.php:823 wp-admin/themes.php:971
 msgid "This theme doesn&#8217;t work with your versions of WordPress and PHP."
 msgstr "Tato šablona nepodporuje tuto verzi WordPressu a PHP."
@@ -4116,7 +4130,7 @@ msgid "Cannot delete an active plugin. Please deactivate it first."
 msgstr "Nelze smazat aktivní plugin. Nejdříve jej deaktivujte."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:507
-#: wp-admin/includes/ajax-actions.php:4574 wp-admin/plugins.php:269
+#: wp-admin/includes/ajax-actions.php:4597 wp-admin/plugins.php:269
 msgid "Sorry, you are not allowed to delete plugins for this site."
 msgstr "Nemáte dostatečné oprávnění pro mazání pluginů na tomto webu."
 
@@ -4125,12 +4139,12 @@ msgid "Unable to determine what plugin was installed."
 msgstr "Není možné zjistit, které pluginy byly nainstalovány."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:349
-#: wp-admin/includes/ajax-actions.php:4108
-#: wp-admin/includes/ajax-actions.php:4238
-#: wp-admin/includes/ajax-actions.php:4302
-#: wp-admin/includes/ajax-actions.php:4402
-#: wp-admin/includes/ajax-actions.php:4529
-#: wp-admin/includes/ajax-actions.php:4598
+#: wp-admin/includes/ajax-actions.php:4128
+#: wp-admin/includes/ajax-actions.php:4261
+#: wp-admin/includes/ajax-actions.php:4325
+#: wp-admin/includes/ajax-actions.php:4425
+#: wp-admin/includes/ajax-actions.php:4552
+#: wp-admin/includes/ajax-actions.php:4621
 msgid "Unable to connect to the filesystem. Please confirm your credentials."
 msgstr "Nelze se připojit k souborovému systému. Potvrďte své přihlašovací údaje."
 
@@ -4139,7 +4153,7 @@ msgid "Sorry, you are not allowed to activate plugins."
 msgstr "Nemáte dostatečné oprávnění pro aktivaci pluginů."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:245
-#: wp-admin/includes/ajax-actions.php:4355 wp-admin/plugin-install.php:19
+#: wp-admin/includes/ajax-actions.php:4378 wp-admin/plugin-install.php:19
 #: wp-admin/update.php:107 wp-admin/update.php:152 wp-admin/update.php:186
 msgid "Sorry, you are not allowed to install plugins on this site."
 msgstr "Nemáte dostatečné oprávnění pro instalaci pluginů na tomto webu."
@@ -4153,8 +4167,8 @@ msgstr "Plugin nenalezen."
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:166
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:429
 #: wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:499
-#: wp-admin/includes/ajax-actions.php:4650
-#: wp-admin/includes/ajax-actions.php:4702 wp-admin/plugins.php:13
+#: wp-admin/includes/ajax-actions.php:4673
+#: wp-admin/includes/ajax-actions.php:4725 wp-admin/plugins.php:13
 msgid "Sorry, you are not allowed to manage plugins for this site."
 msgstr "Nemáte dostatečné oprávnění pro správu pluginů na tomto webu."
 
@@ -4813,7 +4827,7 @@ msgstr "Mřížka"
 #: wp-includes/js/dist/block-library.js:17910
 #: wp-includes/js/dist/block-library.js:29878
 #: wp-includes/js/dist/block-library.js:32595
-#: wp-includes/js/dist/edit-post.js:6798 wp-includes/js/dist/edit-site.js:7024
+#: wp-includes/js/dist/edit-post.js:6798 wp-includes/js/dist/edit-site.js:7797
 #: wp-includes/js/dist/edit-widgets.js:3083
 #: wp-admin/includes/class-wp-media-list-table.php:44
 msgid "List view"
@@ -4895,7 +4909,7 @@ msgid "Block name must be a string."
 msgstr "Název bloku musí být řetězec."
 
 #. translators: Documentation explaining debugging in WordPress.
-#: wp-includes/functions.php:5757
+#: wp-includes/functions.php:5764
 #: wp-admin/includes/class-wp-site-health.php:1459
 msgid "https://wordpress.org/support/article/debugging-in-wordpress/"
 msgstr "https://wordpress.org/support/article/debugging-in-wordpress/"
@@ -4928,7 +4942,7 @@ msgstr "K vytvoření tohoto uživatele není dostatek dat."
 msgid "Sorry, marking a user as spam is only supported on Multisite."
 msgstr "Označit uživatele jako spam lze provést jen v síti webů."
 
-#: wp-includes/media.php:5096
+#: wp-includes/media.php:5099
 msgid "User&#8217;s media data."
 msgstr "Údaje o médiích uživatele."
 
@@ -5278,7 +5292,7 @@ msgstr "Obnovit z koše"
 #: wp-admin/includes/translation-install.php:66
 #: wp-admin/includes/translation-install.php:80
 #: wp-admin/includes/translation-install.php:92
-#: wp-admin/includes/update.php:141 wp-admin/theme-install.php:64
+#: wp-admin/includes/update.php:141 wp-admin/theme-install.php:65
 msgid "https://wordpress.org/support/forums/"
 msgstr "https://cs.wordpress.org/podpora/"
 
@@ -5299,7 +5313,7 @@ msgstr "[%s] Žádost o změnu e-mailu administrátora sítě webů"
 
 #. translators: Site admin email change notification email subject. %s: Site
 #. title.
-#: wp-includes/functions.php:7617
+#: wp-includes/functions.php:7624
 msgid "[%s] Admin Email Changed"
 msgstr "[%s] Byl změněn e-mail administrátora"
 
@@ -5499,8 +5513,8 @@ msgstr "https://wordpress.org/support/article/cookies/"
 msgid "Missing confirm key."
 msgstr "Chybí potvrzovací klíč."
 
-#: wp-login.php:1137 wp-admin/includes/ajax-actions.php:4765
-#: wp-admin/includes/ajax-actions.php:4955
+#: wp-login.php:1137 wp-admin/includes/ajax-actions.php:4788
+#: wp-admin/includes/ajax-actions.php:4978
 msgid "Missing request ID."
 msgstr "Chybí ID žádosti."
 
@@ -5508,7 +5522,7 @@ msgstr "Chybí ID žádosti."
 msgid "Usage of the title attribute on the login logo is not recommended for accessibility reasons. Use the link text instead."
 msgstr "Použití parametru title u loga na stránce s přihlášením není doporučeno z důvodu přístupnosti. Místo toho použijte textový odkaz."
 
-#: wp-includes/functions.php:8045
+#: wp-includes/functions.php:8052
 msgid "Update PHP"
 msgstr "Aktualizovat PHP"
 
@@ -5617,11 +5631,11 @@ msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
 #. translators: %s: Default Update PHP page URL.
-#: wp-includes/functions.php:7988
+#: wp-includes/functions.php:7995
 msgid "This resource is provided by your web host, and is specific to your site. For more information, <a href=\"%s\" target=\"_blank\">see the official WordPress documentation</a>."
 msgstr "Tento prostředek je poskytován webhostingem a je specifický pro váš web. Více informací se dozvíte v <a href=\"%s\" target=\"_blank\">oficiální dokumentaci WordPressu</a> (anglicky)."
 
-#: wp-includes/functions.php:7945
+#: wp-includes/functions.php:7952
 msgctxt "localized PHP upgrade information page"
 msgid "https://wordpress.org/support/update-php/"
 msgstr "https://cs.wordpress.org/support/update-php/"
@@ -5700,7 +5714,7 @@ msgid "Sorry, you are not allowed to view autosaves of this post."
 msgstr "Nemáte dostatečné oprávnění k prohlížení automaticky uložených verzí tohoto příspěvku."
 
 #: wp-includes/js/dist/block-library.js:39166
-#: wp-includes/js/dist/edit-post.js:8143 wp-includes/js/dist/edit-site.js:6076
+#: wp-includes/js/dist/edit-post.js:8143 wp-includes/js/dist/edit-site.js:6849
 #: wp-admin/options-privacy.php:268
 msgid "Create"
 msgstr "Vytvořit"
@@ -5798,11 +5812,11 @@ msgstr "Položka byla přidána."
 #: wp-includes/class-wp-customize-manager.php:5666
 #: wp-includes/class-wp-customize-manager.php:5687
 #: wp-includes/customize/class-wp-customize-nav-menu-locations-control.php:58
-#: wp-includes/functions.php:8047 wp-includes/media-template.php:167
+#: wp-includes/functions.php:8054 wp-includes/media-template.php:167
 #: wp-includes/widgets/class-wp-widget-custom-html.php:318 wp-login.php:648
 #: wp-includes/js/dist/components.js:48318
 #: wp-includes/js/dist/customize-widgets.js:805
-#: wp-includes/js/dist/edit-post.js:4107 wp-includes/js/dist/edit-site.js:2200
+#: wp-includes/js/dist/edit-post.js:4107 wp-includes/js/dist/edit-site.js:2973
 #: wp-includes/js/dist/edit-widgets.js:2677 wp-includes/js/dist/editor.js:7332
 #: wp-admin/includes/class-wp-privacy-policy-content.php:364
 #: wp-admin/includes/class-wp-site-health.php:753
@@ -6232,7 +6246,7 @@ msgstr "ID uživatele"
 msgid "WordPress User"
 msgstr "Uživatel WordPressu"
 
-#: wp-includes/media.php:5039
+#: wp-includes/media.php:5042
 msgid "WordPress Media"
 msgstr "Média WordPressu"
 
@@ -6272,12 +6286,12 @@ msgid "User Requests"
 msgstr "Uživatelské žádosti"
 
 #. translators: Deleted long text.
-#: wp-includes/functions.php:7768
+#: wp-includes/functions.php:7775
 msgid "This content was deleted by the author."
 msgstr "Tento obsah byl odstraněn autorem."
 
 #. translators: Deleted text.
-#: wp-includes/functions.php:7764
+#: wp-includes/functions.php:7771
 msgid "[deleted]"
 msgstr "[smazáno]"
 
@@ -6461,7 +6475,7 @@ msgstr "Plánováno"
 #: wp-includes/customize/class-wp-customize-theme-control.php:284
 #: wp-admin/includes/class-wp-theme-install-list-table.php:325
 #: wp-admin/includes/class-wp-theme-install-list-table.php:484
-#: wp-admin/theme-install.php:291
+#: wp-admin/theme-install.php:292
 msgctxt "theme"
 msgid "Installed"
 msgstr "Nainstalováno"
@@ -6613,7 +6627,7 @@ msgid "View Location"
 msgstr "Zobrazit polohu zobrazení"
 
 #: wp-includes/customize/class-wp-customize-themes-section.php:97
-#: wp-admin/theme-install.php:69 wp-admin/theme-install.php:252
+#: wp-admin/theme-install.php:70 wp-admin/theme-install.php:253
 #: wp-admin/themes.php:236 wp-admin/themes.php:577
 msgid "No themes found. Try a different search."
 msgstr "Nebyly nalezeny žádné šablony. Zkuste to znovu s nějakým dalším klíčovým slovem."
@@ -7131,7 +7145,7 @@ msgstr "Kontrola Scrape key se nezdařila. Zkuste to prosím znovu."
 
 #. translators: Do not translate OLD_EMAIL, NEW_EMAIL, SITENAME, SITEURL: those
 #. are placeholders.
-#: wp-includes/functions.php:7600
+#: wp-includes/functions.php:7607
 msgid ""
 "Hi,\n"
 "\n"
@@ -7157,7 +7171,7 @@ msgstr ""
 "Web ###SITENAME###\n"
 "###SITEURL###"
 
-#: wp-includes/functions.php:7519
+#: wp-includes/functions.php:7526
 msgid "Only UUID V4 is supported at this time."
 msgstr "V současné době je podporováno pouze UUID V4."
 
@@ -9890,8 +9904,8 @@ msgstr "Neexistující položky."
 
 #. translators: %s: Theme name.
 #: wp-includes/customize/class-wp-customize-theme-control.php:252
-#: wp-admin/includes/theme.php:1046 wp-admin/theme-install.php:365
-#: wp-admin/theme-install.php:428 wp-admin/themes.php:548
+#: wp-admin/includes/theme.php:1046 wp-admin/theme-install.php:366
+#: wp-admin/theme-install.php:431 wp-admin/themes.php:548
 #: wp-admin/themes.php:908 wp-admin/themes.php:1129 wp-admin/js/updates.js:1400
 msgctxt "theme"
 msgid "Activate %s"
@@ -9979,7 +9993,7 @@ msgstr "Nelze načíst chybovou zprávu z MySQL"
 msgid "Edit Menu"
 msgstr "Upravit menu"
 
-#: wp-includes/script-loader.php:1805 wp-admin/includes/dashboard.php:1002
+#: wp-includes/script-loader.php:1815 wp-admin/includes/dashboard.php:1002
 msgid "Today"
 msgstr "Dnes"
 
@@ -10214,14 +10228,14 @@ msgstr "<strong>CHYBA</strong>: Neplatné uživatelské jméno, e-mailová adres
 msgid "%1$s %2$s %3$s %4$s Feed"
 msgstr "%1$s %2$s %3$s %4$s RSS"
 
-#: wp-includes/functions.php:7083 wp-includes/media-template.php:199
+#: wp-includes/functions.php:7090 wp-includes/media-template.php:199
 #: wp-includes/media-template.php:347 wp-includes/js/dist/components.js:53073
 msgid "Close dialog"
 msgstr "Zavřít dialogové okno"
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: Version number,
 #. 4: __construct() method.
-#: wp-includes/functions.php:5403
+#: wp-includes/functions.php:5410
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "Volaná metoda konstruktoru třídy pro %1$s v %2$s je <strong>zastaralá</strong> od verze %3$s! Místo toho použijte %4$s."
 
@@ -10349,7 +10363,7 @@ msgid "(Currently set to: %s)"
 msgstr "(Aktuální umístění: %s)"
 
 #. translators: %s: Documentation URL.
-#: wp-includes/functions.php:5756
+#: wp-includes/functions.php:5763
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "Další informace o testování programu a hledání chyb naleznete v manuálu na stránce <a href=\"%s\">Ladění ve WordPressu</a> (anglicky)."
 
@@ -10944,7 +10958,7 @@ msgid "Live Preview: %s"
 msgstr "Aktuální náhled: %s"
 
 #: wp-includes/class-wp-customize-manager.php:580
-#: wp-admin/includes/ajax-actions.php:4287 wp-admin/includes/file.php:435
+#: wp-admin/includes/ajax-actions.php:4310 wp-admin/includes/file.php:435
 #: wp-admin/includes/file.php:445 wp-admin/theme-editor.php:70
 #: wp-admin/theme-editor.php:74 wp-admin/themes.php:28 wp-admin/themes.php:71
 msgid "The requested theme does not exist."
@@ -11073,7 +11087,7 @@ msgid "Hide header image"
 msgstr "Skrýt obrázek v záhlaví"
 
 #: wp-includes/class-wp-customize-manager.php:5163
-#: wp-includes/js/dist/edit-post.js:5713 wp-includes/js/dist/edit-site.js:5867
+#: wp-includes/js/dist/edit-post.js:5713 wp-includes/js/dist/edit-site.js:6640
 #: wp-includes/js/dist/editor.js:8893 wp-admin/includes/template.php:2343
 msgid "Site Icon"
 msgstr "Ikona webu"
@@ -11104,7 +11118,7 @@ msgid "Username may not be longer than 60 characters."
 msgstr "Uživatelské jméno nesmí obsahovat více než 60 znaků."
 
 #. translators: 1: PHP class name, 2: Version number, 3: __construct() method.
-#: wp-includes/functions.php:5415
+#: wp-includes/functions.php:5422
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "Aktuální metoda pro konstruktor třídy %1$s <strong>není podporována</strong> už od verze %2$s! Použijte prosím raději funkci %3$s."
 
@@ -11376,7 +11390,7 @@ msgstr "Uživatelské odkazy"
 #: wp-includes/customize/class-wp-customize-themes-section.php:130
 #: wp-includes/customize/class-wp-customize-themes-section.php:145
 #: wp-admin/plugin-install.php:103 wp-admin/plugins.php:547
-#: wp-admin/theme-install.php:110 wp-admin/themes.php:138
+#: wp-admin/theme-install.php:111 wp-admin/themes.php:138
 msgid "The search results will be updated as you type."
 msgstr "Výsledky vyhledávání budou průběžně aktualizovány podle zadaného výrazu."
 
@@ -11808,7 +11822,7 @@ msgstr "Text odkazu"
 #: wp-admin/includes/class-theme-upgrader-skin.php:103
 #: wp-admin/includes/class-wp-themes-list-table.php:223
 #: wp-admin/includes/theme.php:1053 wp-admin/includes/theme.php:1055
-#: wp-admin/theme-install.php:376 wp-admin/theme-install.php:392
+#: wp-admin/theme-install.php:378 wp-admin/theme-install.php:395
 #: wp-admin/themes.php:556 wp-admin/themes.php:565 wp-admin/themes.php:916
 #: wp-admin/themes.php:925 wp-admin/themes.php:1135 wp-admin/themes.php:1146
 #: wp-admin/js/updates.js:1415
@@ -11924,7 +11938,7 @@ msgstr "Koš"
 msgid "Edit Selection"
 msgstr "Upravit výběr"
 
-#: wp-includes/script-loader.php:1809
+#: wp-includes/script-loader.php:1819
 #: wp-includes/js/dist/block-library.js:27870
 #: wp-includes/js/dist/components.js:53273
 msgid "Previous"
@@ -12062,7 +12076,7 @@ msgstr "Vlastní barva"
 #: wp-includes/js/dist/block-library.js:33336
 #: wp-includes/js/dist/block-library.js:33340
 #: wp-includes/js/dist/block-library.js:36286
-#: wp-includes/js/dist/edit-site.js:3600
+#: wp-includes/js/dist/edit-site.js:4373
 msgid "Color"
 msgstr "Barva"
 
@@ -12807,8 +12821,8 @@ msgstr "Vytvořit nový audio seznam"
 #: wp-includes/customize/class-wp-customize-themes-panel.php:70
 #: wp-includes/media.php:4450 wp-includes/js/dist/components.js:54130
 #: wp-includes/js/dist/edit-post.js:4430 wp-includes/js/dist/edit-post.js:5738
-#: wp-includes/js/dist/edit-site.js:6405 wp-admin/includes/ms.php:49
-#: wp-admin/theme-install.php:60
+#: wp-includes/js/dist/edit-site.js:7178 wp-admin/includes/ms.php:49
+#: wp-admin/theme-install.php:61
 msgid "Back"
 msgstr "Zpět"
 
@@ -12867,7 +12881,7 @@ msgstr "Rozšířené možnosti"
 #: wp-includes/js/dist/block-editor.js:11716
 #: wp-includes/js/dist/block-library.js:21691
 #: wp-includes/js/dist/customize-widgets.js:785
-#: wp-includes/js/dist/edit-post.js:4036 wp-includes/js/dist/edit-site.js:2186
+#: wp-includes/js/dist/edit-post.js:4036 wp-includes/js/dist/edit-site.js:2959
 #: wp-includes/js/dist/edit-widgets.js:2657 wp-admin/menu.php:345
 #: wp-admin/tools.php:43
 msgid "Tools"
@@ -12906,7 +12920,7 @@ msgstr "Buňka v záhlaví"
 #: wp-includes/block-template-utils.php:86
 #: wp-includes/js/dist/block-library.js:39637
 #: wp-includes/js/dist/customize-widgets.js:3979
-#: wp-includes/js/dist/edit-post.js:3146 wp-includes/js/dist/edit-site.js:10547
+#: wp-includes/js/dist/edit-post.js:3146 wp-includes/js/dist/edit-site.js:11324
 #: wp-includes/js/dist/edit-widgets.js:4917
 msgid "Footer"
 msgstr "Zápatí"
@@ -13075,8 +13089,8 @@ msgstr "Zrušit formátování"
 #. translators: Text label for the Block Settings Sidebar tab.
 #: wp-includes/widgets/class-wp-widget-block.php:45
 #: wp-includes/js/dist/edit-post.js:6860 wp-includes/js/dist/edit-post.js:6879
-#: wp-includes/js/dist/edit-post.js:6881 wp-includes/js/dist/edit-site.js:5388
-#: wp-includes/js/dist/edit-site.js:5403 wp-includes/js/dist/edit-site.js:5405
+#: wp-includes/js/dist/edit-post.js:6881 wp-includes/js/dist/edit-site.js:6161
+#: wp-includes/js/dist/edit-site.js:6176 wp-includes/js/dist/edit-site.js:6178
 #: wp-includes/js/dist/edit-widgets.js:2209
 msgid "Block"
 msgstr "Blok"
@@ -13254,14 +13268,14 @@ msgstr "Přehled vytvořených stránek."
 #: wp-admin/includes/translation-install.php:65
 #: wp-admin/includes/translation-install.php:79
 #: wp-admin/includes/translation-install.php:91
-#: wp-admin/includes/update.php:140 wp-admin/theme-install.php:63
+#: wp-admin/includes/update.php:140 wp-admin/theme-install.php:64
 msgid "An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href=\"%s\">support forums</a>."
 msgstr "Objevila se neočekávaná chyba. Patrně došlo k nějakému výpadku na straně WordPress.org nebo to může souviset s aktuálně používaným hostingem. Pokud bude nadále docházet k podobným problémům, zkuste prosím kontaktovat oficiální <a href=\"%s\">fórum podpory</a> (anglicky)."
 
 #. translators: To add an additional Open Sans character subset specific to
 #. your language, translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not
 #. translate into your own language.
-#: wp-includes/script-loader.php:1431
+#: wp-includes/script-loader.php:1441
 msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
@@ -13501,7 +13515,7 @@ msgstr "Zvolený web %s zatím neexistuje, ale můžete ho snadno a rychle vytvo
 msgid "Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not receive your email."
 msgstr "Opravdu byla e-mailová adresa zadána správně? Aktivační e-mail byl odeslán na adresu %s a pokud byla špatně vyplněna (překlep), tak už nebude e-mail nikdy doručen."
 
-#: wp-includes/functions.php:7103
+#: wp-includes/functions.php:7110
 msgid "The login page will open in a new tab. After logging in you can close it and return to this page."
 msgstr "Přihlašovací stránka bude zobrazena v nové záložce. Po přihlášení můžete záložku zavřít a vrátit se zpět na stávající stránku."
 
@@ -13526,7 +13540,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Hledat &hellip;"
 
-#: wp-includes/functions.php:7101 wp-includes/script-loader.php:1182
+#: wp-includes/functions.php:7108 wp-includes/script-loader.php:1182
 msgid "Session expired"
 msgstr "Aktuální přihlašovací relace právě vypršela"
 
@@ -13581,7 +13595,7 @@ msgstr "Náhodně"
 
 #: wp-includes/media-template.php:1475 wp-includes/media.php:4472
 #: wp-admin/includes/ajax-actions.php:2189
-#: wp-admin/includes/ajax-actions.php:3810
+#: wp-admin/includes/ajax-actions.php:3830
 #: wp-admin/includes/class-wp-list-table.php:339
 #: wp-admin/includes/class-wp-themes-list-table.php:93
 msgid "No items found."
@@ -13907,8 +13921,8 @@ msgstr "Napojení zvolené položky taxonomie k příslušnému obsahu se nepoda
 
 #: wp-includes/media-template.php:756 wp-includes/js/dist/components.js:39623
 #: wp-includes/js/dist/components.js:40749
-#: wp-includes/js/dist/components.js:48224 wp-admin/theme-install.php:217
-#: wp-admin/theme-install.php:239 wp-admin/js/color-picker.js:154
+#: wp-includes/js/dist/components.js:48224 wp-admin/theme-install.php:218
+#: wp-admin/theme-install.php:240 wp-admin/js/color-picker.js:154
 msgid "Clear"
 msgstr "Vymazat"
 
@@ -14001,7 +14015,7 @@ msgid "Header Text Color"
 msgstr "Barva textu v záhlaví"
 
 #: wp-includes/class-wp-customize-manager.php:5227
-#: wp-includes/js/dist/edit-site.js:3944 wp-includes/js/dist/edit-site.js:4417
+#: wp-includes/js/dist/edit-site.js:4717 wp-includes/js/dist/edit-site.js:5190
 msgid "Colors"
 msgstr "Barvy"
 
@@ -14025,7 +14039,7 @@ msgstr "Vybrat soubor"
 #: wp-admin/customize.php:206
 #: wp-admin/includes/class-theme-upgrader-skin.php:92
 #: wp-admin/includes/theme.php:1035 wp-admin/menu.php:224
-#: wp-admin/theme-install.php:378 wp-admin/themes.php:543
+#: wp-admin/theme-install.php:381 wp-admin/themes.php:543
 #: wp-admin/themes.php:902 wp-admin/themes.php:1122
 msgid "Customize"
 msgstr "Přizpůsobit"
@@ -14249,9 +14263,9 @@ msgstr "Kaskádové styly (CSS)"
 #: wp-includes/class-wp-xmlrpc-server.php:566
 #: wp-includes/js/dist/edit-post.js:5382 wp-includes/js/dist/edit-post.js:6861
 #: wp-includes/js/dist/edit-post.js:6873 wp-includes/js/dist/edit-post.js:6874
-#: wp-includes/js/dist/edit-post.js:8252 wp-includes/js/dist/edit-site.js:5385
-#: wp-includes/js/dist/edit-site.js:5396 wp-includes/js/dist/edit-site.js:5398
-#: wp-includes/js/dist/edit-site.js:8536
+#: wp-includes/js/dist/edit-post.js:8252 wp-includes/js/dist/edit-site.js:6158
+#: wp-includes/js/dist/edit-site.js:6169 wp-includes/js/dist/edit-site.js:6171
+#: wp-includes/js/dist/edit-site.js:9313
 #: wp-admin/includes/class-wp-posts-list-table.php:1810
 #: wp-admin/includes/meta-boxes.php:979
 msgid "Template"
@@ -14581,12 +14595,12 @@ msgstr "Manuál (anglicky)"
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:5251 wp-includes/ms-load.php:471
+#: wp-includes/functions.php:5258 wp-includes/ms-load.php:471
 #: wp-includes/wp-db.php:1801
 msgid "Error establishing a database connection"
 msgstr "Během připojování k databázovému serveru došlo k chybě"
 
-#: wp-includes/functions.php:5251
+#: wp-includes/functions.php:5258
 msgid "Database Error"
 msgstr "Chyba databáze"
 
@@ -14776,12 +14790,12 @@ msgstr "Uživatel už byl úspěšně aktivován."
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: WordPress version number.
-#: wp-includes/functions.php:5763
+#: wp-includes/functions.php:5770
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "Funkce %1$s <strong>nebyla použita správným způsobem</strong>. %2$s %3$s"
 
 #. translators: %s: Version number.
-#: wp-includes/functions.php:5751
+#: wp-includes/functions.php:5758
 msgid "(This message was added in version %s.)"
 msgstr "(Tato zpráva se nově zobrazuje od verze %s.)"
 
@@ -15791,7 +15805,7 @@ msgid "%s is your new username"
 msgstr "Registrovaný uživatelský účet: %s"
 
 #: wp-includes/class-wp-customize-nav-menus.php:1112
-#: wp-includes/script-loader.php:1808 wp-signup.php:626
+#: wp-includes/script-loader.php:1818 wp-signup.php:626
 #: wp-includes/js/dist/block-library.js:27870
 #: wp-includes/js/dist/components.js:53276
 msgid "Next"
@@ -15913,7 +15927,7 @@ msgstr "<strong>CHYBA</strong>: WordPress %1$s vyžaduje alespoň MySQL %2$s"
 msgid "Sidebar %d"
 msgstr "Postranní panel %d"
 
-#: wp-includes/functions.php:7102 wp-includes/user.php:295
+#: wp-includes/functions.php:7109 wp-includes/user.php:295
 msgid "Please log in again."
 msgstr "Přihlaste se prosím znovu."
 
@@ -16464,7 +16478,7 @@ msgstr "Celá obrazovka"
 
 #: wp-includes/admin-bar.php:1036 wp-includes/js/dist/block-editor.js:42864
 #: wp-includes/js/dist/block-library.js:22312
-#: wp-includes/js/dist/edit-site.js:4363 wp-includes/js/dist/edit-site.js:4673
+#: wp-includes/js/dist/edit-site.js:5136 wp-includes/js/dist/edit-site.js:5446
 #: wp-includes/js/dist/format-library.js:1698
 #: wp-admin/includes/class-custom-background.php:65 wp-admin/menu.php:238
 msgid "Background"
@@ -16536,7 +16550,7 @@ msgstr "Svislé okraje"
 #: wp-includes/class-wp-editor.php:1222
 #: wp-includes/js/dist/block-editor.js:12496
 #: wp-includes/js/dist/block-editor.js:12554
-#: wp-includes/js/dist/edit-site.js:3753
+#: wp-includes/js/dist/edit-site.js:4526
 msgid "Dimensions"
 msgstr "Rozměry"
 
@@ -16544,7 +16558,7 @@ msgstr "Rozměry"
 #: wp-includes/js/dist/block-editor.js:12499
 #: wp-includes/js/dist/block-editor.js:12557
 #: wp-includes/js/dist/block-editor.js:42397
-#: wp-includes/js/dist/edit-site.js:3584
+#: wp-includes/js/dist/edit-site.js:4357
 msgid "Border"
 msgstr "Rámeček"
 
@@ -17020,34 +17034,34 @@ msgstr "Odhlásit se"
 msgid "Log in"
 msgstr "Přihlásit se"
 
-#: wp-includes/functions.php:6400
+#: wp-includes/functions.php:6407
 msgid "Manual Offsets"
 msgstr "Ruční nastavení časového posunu"
 
-#: wp-includes/functions.php:6391 wp-includes/functions.php:6396
+#: wp-includes/functions.php:6398 wp-includes/functions.php:6403
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:6346
+#: wp-includes/functions.php:6353
 msgid "Select a city"
 msgstr "Vyberte město"
 
 #. translators: 1: PHP function name, 2: Version number.
-#: wp-includes/functions.php:5606
+#: wp-includes/functions.php:5613
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "Funkce %1$s byla použita s parametrem, který <strong>není podporován</strong> už od verze %2$s a v aktuální verzi WordPressu není dostupné ani žádné náhradní řešení."
 
 #. translators: 1: PHP function name, 2: Version number, 3: Optional message
 #. regarding the change.
-#: wp-includes/functions.php:5595
+#: wp-includes/functions.php:5602
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "Funkce %1$s byla použita s parametrem, který <strong>není podporován</strong> už od verze %2$s! %3$s"
 
 #. translators: 1: PHP function name, 2: Version number.
 #. translators: 1: PHP file name, 2: Version number.
 #. translators: 1: WordPress hook name, 2: Version number.
-#: wp-includes/functions.php:5322 wp-includes/functions.php:5512
-#: wp-includes/functions.php:5697
+#: wp-includes/functions.php:5329 wp-includes/functions.php:5519
+#: wp-includes/functions.php:5704
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "Funkce %1$s <strong>není podporována</strong> už od verze %2$s a v aktuální verzi WordPressu není dostupné ani žádné náhradní řešení."
 
@@ -17056,8 +17070,8 @@ msgstr "Funkce %1$s <strong>není podporována</strong> už od verze %2$s a v ak
 #. translators: 1: PHP file name, 2: Version number, 3: Alternative file name.
 #. translators: 1: WordPress hook name, 2: Version number, 3: Alternative hook
 #. name.
-#: wp-includes/functions.php:5311 wp-includes/functions.php:5501
-#: wp-includes/functions.php:5686
+#: wp-includes/functions.php:5318 wp-includes/functions.php:5508
+#: wp-includes/functions.php:5693
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "Funkce %1$s <strong>není podporována</strong> už od verze %2$s! Použijte prosím raději funkci %3$s."
 
@@ -17246,8 +17260,8 @@ msgstr "Automaticky vytvářet odstavce"
 #: wp-includes/widgets/class-wp-widget-text.php:43
 #: wp-includes/js/dist/block-editor.js:42860
 #: wp-includes/js/dist/block-library.js:22308 wp-includes/js/dist/blocks.js:247
-#: wp-includes/js/dist/edit-site.js:4214 wp-includes/js/dist/edit-site.js:4244
-#: wp-includes/js/dist/edit-site.js:4385 wp-includes/js/dist/edit-site.js:4725
+#: wp-includes/js/dist/edit-site.js:4987 wp-includes/js/dist/edit-site.js:5017
+#: wp-includes/js/dist/edit-site.js:5158 wp-includes/js/dist/edit-site.js:5498
 #: wp-includes/js/dist/format-library.js:1695
 msgid "Text"
 msgstr "Text"
@@ -17512,7 +17526,7 @@ msgstr "Komentáře k tomuto příspěvku nejsou bohužel povoleny."
 
 #: wp-includes/admin-bar.php:1014
 #: wp-includes/class-wp-customize-widgets.php:418
-#: wp-includes/functions.php:5198 wp-includes/js/dist/blocks.js:256
+#: wp-includes/functions.php:5199 wp-includes/js/dist/blocks.js:256
 #: wp-includes/js/dist/core-data.js:1932
 #: wp-includes/js/dist/customize-widgets.js:1886
 #: wp-includes/js/dist/edit-widgets.js:2784
@@ -17566,7 +17580,7 @@ msgstr "Název:"
 #: wp-includes/js/dist/components.js:47093
 #: wp-includes/js/dist/components.js:51508
 #: wp-includes/js/dist/edit-post.js:6419 wp-includes/js/dist/edit-post.js:6548
-#: wp-includes/js/dist/edit-site.js:4481 wp-includes/js/dist/edit-site.js:4535
+#: wp-includes/js/dist/edit-site.js:5254 wp-includes/js/dist/edit-site.js:5308
 #: wp-admin/js/color-picker.js:149
 msgid "Default"
 msgstr "Výchozí"
@@ -17609,7 +17623,7 @@ msgid "Site Title"
 msgstr "Název webu"
 
 #: wp-includes/taxonomy.php:194 wp-includes/js/dist/blocks.js:259
-#: wp-includes/js/dist/edit-site.js:4475 wp-includes/js/dist/edit-site.js:4529
+#: wp-includes/js/dist/edit-site.js:5248 wp-includes/js/dist/edit-site.js:5302
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:331
 msgid "Theme"
 msgstr "Šablona"
@@ -17624,7 +17638,7 @@ msgstr "První příspěvek"
 #: wp-includes/js/dist/block-library.js:33927
 #: wp-includes/js/dist/customize-widgets.js:3973
 #: wp-includes/js/dist/edit-post.js:3140 wp-includes/js/dist/edit-post.js:8401
-#: wp-includes/js/dist/edit-site.js:5608 wp-includes/js/dist/edit-site.js:10541
+#: wp-includes/js/dist/edit-site.js:6381 wp-includes/js/dist/edit-site.js:11318
 #: wp-includes/js/dist/edit-widgets.js:2215
 #: wp-includes/js/dist/edit-widgets.js:4911 wp-admin/includes/ms.php:1082
 #: wp-admin/menu.php:359 wp-admin/options.php:22 wp-admin/network/menu.php:109
@@ -17685,7 +17699,7 @@ msgstr "Ukazatel bezpečnosti hesla"
 #. translators: Network menu item.
 #: wp-includes/admin-bar.php:401 wp-includes/admin-bar.php:542
 #: wp-includes/admin-bar.php:649 wp-includes/deprecated.php:2812
-#: wp-includes/deprecated.php:2814 wp-includes/js/dist/edit-site.js:5757
+#: wp-includes/deprecated.php:2814 wp-includes/js/dist/edit-site.js:6530
 #: wp-admin/index.php:33 wp-admin/menu.php:24 wp-admin/my-sites.php:128
 #: wp-admin/user/menu.php:10
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:708
@@ -17713,7 +17727,7 @@ msgstr "<strong>CHYBA</strong>: Zadejte prosím uživatelské jméno."
 #: wp-includes/js/dist/block-library.js:27590
 #: wp-includes/js/dist/block-library.js:33094
 #: wp-includes/js/dist/block-library.js:36617
-#: wp-includes/js/dist/edit-site.js:3590
+#: wp-includes/js/dist/edit-site.js:4363
 #: wp-includes/js/dist/format-library.js:611 wp-admin/options-media.php:62
 msgid "Width"
 msgstr "Šířka"
@@ -17771,7 +17785,7 @@ msgstr "Černá"
 #: wp-includes/customize/class-wp-customize-nav-menus-panel.php:82
 #: wp-includes/customize/class-wp-customize-themes-panel.php:83
 #: wp-includes/js/dist/customize-widgets.js:801
-#: wp-includes/js/dist/edit-post.js:4103 wp-includes/js/dist/edit-site.js:2196
+#: wp-includes/js/dist/edit-post.js:4103 wp-includes/js/dist/edit-site.js:2969
 #: wp-includes/js/dist/edit-widgets.js:2673 wp-admin/customize.php:233
 #: wp-admin/includes/class-wp-screen.php:976
 msgid "Help"
@@ -17814,7 +17828,7 @@ msgstr "Vybrat"
 #: wp-includes/class-wp-customize-manager.php:5694
 #: wp-includes/class-wp-editor.php:1179 wp-includes/class-wp-editor.php:1858
 #: wp-includes/script-loader.php:862 wp-includes/script-loader.php:1175
-#: wp-includes/script-loader.php:1804 wp-includes/js/dist/block-editor.js:11832
+#: wp-includes/script-loader.php:1814 wp-includes/js/dist/block-editor.js:11832
 #: wp-includes/js/dist/block-editor.js:49480
 #: wp-includes/js/dist/block-library.js:20644
 #: wp-includes/js/dist/block-library.js:25453
@@ -17823,12 +17837,12 @@ msgstr "Vybrat"
 #: wp-includes/js/dist/customize-widgets.js:715
 #: wp-includes/js/dist/edit-post.js:4842 wp-includes/js/dist/edit-post.js:5497
 #: wp-includes/js/dist/edit-post.js:5870 wp-includes/js/dist/edit-post.js:8110
-#: wp-includes/js/dist/edit-site.js:1905 wp-includes/js/dist/edit-site.js:6008
-#: wp-includes/js/dist/edit-site.js:8158
+#: wp-includes/js/dist/edit-site.js:2678 wp-includes/js/dist/edit-site.js:6781
+#: wp-includes/js/dist/edit-site.js:8934
 #: wp-includes/js/dist/edit-widgets.js:2592
 #: wp-includes/js/dist/reusable-blocks.js:459
 #: wp-admin/includes/class-wp-theme-install-list-table.php:394
-#: wp-admin/theme-install.php:421
+#: wp-admin/theme-install.php:424
 msgid "Close"
 msgstr "Zavřít"
 
@@ -17846,8 +17860,8 @@ msgid "Email: %s"
 msgstr "E-mail: %s"
 
 #: wp-includes/widgets/class-wp-widget-links.php:29
-#: wp-includes/js/dist/edit-site.js:4219 wp-includes/js/dist/edit-site.js:4248
-#: wp-includes/js/dist/edit-site.js:4407 wp-includes/js/dist/edit-site.js:4778
+#: wp-includes/js/dist/edit-site.js:4992 wp-includes/js/dist/edit-site.js:5021
+#: wp-includes/js/dist/edit-site.js:5180 wp-includes/js/dist/edit-site.js:5551
 #: wp-admin/includes/class-wp-terms-list-table.php:200
 #: wp-admin/link-manager.php:50 wp-admin/menu.php:80
 msgid "Links"
@@ -17876,8 +17890,8 @@ msgstr "Obrázky"
 #: wp-admin/includes/class-wp-theme-install-list-table.php:369
 #: wp-admin/includes/class-wp-theme-install-list-table.php:501
 #: wp-admin/includes/class-wp-themes-list-table.php:263
-#: wp-admin/includes/theme.php:845 wp-admin/theme-install.php:353
-#: wp-admin/theme-install.php:452 wp-admin/themes.php:523
+#: wp-admin/includes/theme.php:845 wp-admin/theme-install.php:354
+#: wp-admin/theme-install.php:455 wp-admin/themes.php:523
 #: wp-admin/themes.php:882 wp-admin/themes.php:963
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:720
 msgid "By %s"
@@ -17978,7 +17992,7 @@ msgstr "OK"
 msgid "Image URL"
 msgstr "URL obrázku"
 
-#: wp-includes/js/dist/edit-site.js:8249 wp-includes/js/dist/edit-site.js:8542
+#: wp-includes/js/dist/edit-site.js:9025 wp-includes/js/dist/edit-site.js:9319
 #: wp-admin/includes/media.php:2584
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:370
 msgid "Actions"
@@ -17987,7 +18001,7 @@ msgstr "Akce"
 #. translators: Default privacy policy heading.
 #: wp-includes/block-template-utils.php:165
 #: wp-includes/class-wp-editor.php:1229 wp-includes/media.php:4441
-#: wp-includes/media.php:5095 wp-includes/js/dist/block-editor.js:9601
+#: wp-includes/media.php:5098 wp-includes/js/dist/block-editor.js:9601
 #: wp-includes/js/dist/blocks.js:250 wp-includes/js/dist/core-data.js:1901
 #: wp-admin/export.php:293
 #: wp-admin/includes/class-wp-privacy-policy-content.php:504
@@ -18100,7 +18114,7 @@ msgstr "Náhled"
 
 #: wp-includes/class-wp-editor.php:1175
 #: wp-includes/js/dist/customize-widgets.js:881
-#: wp-includes/js/dist/edit-site.js:2313
+#: wp-includes/js/dist/edit-site.js:3086
 #: wp-includes/js/dist/edit-widgets.js:2338 wp-includes/js/dist/editor.js:4904
 #: wp-admin/includes/image-edit.php:81
 msgid "Redo"
@@ -18141,7 +18155,7 @@ msgstr "Postranní panel"
 #: wp-includes/admin-bar.php:1050 wp-includes/block-template-utils.php:77
 #: wp-includes/js/dist/block-library.js:39628
 #: wp-includes/js/dist/customize-widgets.js:3964
-#: wp-includes/js/dist/edit-post.js:3131 wp-includes/js/dist/edit-site.js:10532
+#: wp-includes/js/dist/edit-post.js:3131 wp-includes/js/dist/edit-site.js:11309
 #: wp-includes/js/dist/edit-widgets.js:4902
 #: wp-admin/includes/class-custom-image-header.php:73 wp-admin/menu.php:233
 msgid "Header"
@@ -18185,7 +18199,7 @@ msgstr "Štítky"
 #. translators: accessibility text for the content landmark region.
 #: wp-includes/revision.php:33 wp-includes/js/dist/block-editor.js:26362
 #: wp-includes/js/dist/customize-widgets.js:3967
-#: wp-includes/js/dist/edit-post.js:3134 wp-includes/js/dist/edit-site.js:10535
+#: wp-includes/js/dist/edit-post.js:3134 wp-includes/js/dist/edit-site.js:11312
 #: wp-includes/js/dist/edit-widgets.js:4905 wp-admin/includes/dashboard.php:576
 #: wp-admin/index.php:104
 msgid "Content"
@@ -18201,8 +18215,8 @@ msgstr "Obsah"
 #: wp-includes/js/dist/block-library.js:25467
 #: wp-includes/js/dist/block-library.js:39146
 #: wp-includes/js/dist/block-library.js:39161
-#: wp-includes/js/dist/edit-post.js:8138 wp-includes/js/dist/edit-site.js:6071
-#: wp-includes/js/dist/edit-site.js:8182 wp-includes/js/dist/editor.js:9201
+#: wp-includes/js/dist/edit-post.js:8138 wp-includes/js/dist/edit-site.js:6844
+#: wp-includes/js/dist/edit-site.js:8958 wp-includes/js/dist/editor.js:9201
 #: wp-includes/js/dist/reusable-blocks.js:486 wp-admin/comment.php:247
 #: wp-admin/includes/class-walker-nav-menu-edit.php:305
 #: wp-admin/includes/class-wp-posts-list-table.php:2011
@@ -18221,7 +18235,7 @@ msgid "Cancel"
 msgstr "Zrušit"
 
 #: wp-includes/admin-bar.php:585 wp-includes/js/dist/core-data.js:2025
-#: wp-includes/js/dist/edit-post.js:6082 wp-includes/js/dist/edit-site.js:2180
+#: wp-includes/js/dist/edit-post.js:6082 wp-includes/js/dist/edit-site.js:2953
 #: wp-admin/plugins.php:602 wp-admin/update-core.php:458
 #: wp-admin/update-core.php:477 wp-admin/network/menu.php:103
 #: wp-admin/network/settings.php:487
@@ -18246,9 +18260,9 @@ msgstr "Nejnovější komentáře"
 #: wp-admin/includes/class-wp-posts-list-table.php:1483
 #: wp-admin/includes/class-wp-theme-install-list-table.php:345
 #: wp-admin/includes/meta-boxes.php:73 wp-admin/includes/post.php:1802
-#: wp-admin/theme-install.php:381 wp-admin/theme-install.php:394
-#: wp-admin/theme-install.php:404 wp-admin/theme-install.php:411
-#: wp-admin/theme-install.php:547
+#: wp-admin/theme-install.php:384 wp-admin/theme-install.php:397
+#: wp-admin/theme-install.php:407 wp-admin/theme-install.php:414
+#: wp-admin/theme-install.php:550
 msgid "Preview"
 msgstr "Náhled"
 
@@ -18334,8 +18348,8 @@ msgstr "Popis"
 #: wp-includes/comment-template.php:2368
 #: wp-includes/js/dist/block-library.js:32456
 #: wp-includes/js/dist/block-library.js:39152
-#: wp-includes/js/dist/edit-post.js:8122 wp-includes/js/dist/edit-site.js:6026
-#: wp-includes/js/dist/edit-site.js:8169
+#: wp-includes/js/dist/edit-post.js:8122 wp-includes/js/dist/edit-site.js:6799
+#: wp-includes/js/dist/edit-site.js:8945
 #: wp-includes/js/dist/reusable-blocks.js:474 wp-admin/edit-form-comment.php:49
 #: wp-admin/includes/class-wp-application-passwords-list-table.php:29
 #: wp-admin/includes/class-wp-debug-data.php:1129
@@ -18369,8 +18383,8 @@ msgstr "Zobrazení odkazu"
 msgid "Categories"
 msgstr "Rubriky"
 
-#: wp-includes/class-wp-editor.php:1247 wp-includes/js/dist/edit-site.js:2256
-#: wp-includes/js/dist/edit-site.js:8185 wp-includes/js/dist/editor.js:5423
+#: wp-includes/class-wp-editor.php:1247 wp-includes/js/dist/edit-site.js:3029
+#: wp-includes/js/dist/edit-site.js:8961 wp-includes/js/dist/editor.js:5423
 #: wp-includes/js/dist/editor.js:9489
 #: wp-includes/js/dist/reusable-blocks.js:489
 #: wp-includes/js/dist/widgets.js:392 wp-admin/edit-form-comment.php:90
@@ -18419,7 +18433,7 @@ msgstr "Stručný výpis příspěvku"
 #: wp-includes/script-loader.php:1162
 #: wp-includes/js/dist/customize-widgets.js:3976
 #: wp-includes/js/dist/edit-post.js:3143 wp-includes/js/dist/edit-post.js:6952
-#: wp-includes/js/dist/edit-site.js:10544
+#: wp-includes/js/dist/edit-site.js:11321
 #: wp-includes/js/dist/edit-widgets.js:4914 wp-includes/js/dist/editor.js:7750
 #: wp-includes/js/dist/editor.js:7941 wp-admin/customize.php:193
 #: wp-admin/includes/meta-boxes.php:359 wp-admin/includes/meta-boxes.php:360
@@ -18457,7 +18471,7 @@ msgstr "Použít"
 #. translators: %s: Number of comments.
 #: wp-includes/class-wp-editor.php:1174
 #: wp-includes/js/dist/customize-widgets.js:869
-#: wp-includes/js/dist/edit-site.js:1113 wp-includes/js/dist/edit-site.js:2284
+#: wp-includes/js/dist/edit-site.js:1113 wp-includes/js/dist/edit-site.js:3057
 #: wp-includes/js/dist/edit-widgets.js:2309 wp-includes/js/dist/editor.js:4946
 #: wp-admin/edit-comments.php:297 wp-admin/edit-comments.php:308
 #: wp-admin/edit.php:436 wp-admin/includes/image-edit.php:80
@@ -18541,7 +18555,7 @@ msgstr "Komentář"
 #: wp-includes/media-template.php:837 wp-includes/media-template.php:1063
 #: wp-includes/media-template.php:1186 wp-includes/media-template.php:1260
 #: wp-includes/media-template.php:1351 wp-includes/media.php:4442
-#: wp-includes/media.php:5088
+#: wp-includes/media.php:5091
 #: wp-includes/sitemaps/class-wp-sitemaps-stylesheet.php:61
 #: wp-includes/sitemaps/class-wp-sitemaps-stylesheet.php:175
 #: wp-includes/widgets/class-wp-widget-media-image.php:113
@@ -18629,7 +18643,7 @@ msgstr "Publikováno"
 #: wp-includes/class-wp-editor.php:1205 wp-includes/media-template.php:484
 #: wp-includes/media-template.php:713 wp-includes/revision.php:32
 #: wp-includes/js/dist/block-library.js:39356
-#: wp-includes/js/dist/edit-post.js:6428 wp-includes/js/dist/edit-site.js:2663
+#: wp-includes/js/dist/edit-post.js:6428 wp-includes/js/dist/edit-site.js:3436
 #: wp-includes/js/dist/editor.js:4627 wp-includes/js/dist/editor.js:5269
 #: wp-includes/js/dist/widgets.js:1481 wp-admin/includes/ajax-actions.php:2192
 #: wp-admin/includes/class-wp-posts-list-table.php:1631
@@ -18667,8 +18681,8 @@ msgstr "Registrovaný účet byl úspěšně aktivován!"
 #: wp-admin/includes/class-wp-plugins-list-table.php:601
 #: wp-admin/includes/class-wp-plugins-list-table.php:869
 #: wp-admin/includes/class-wp-themes-list-table.php:216
-#: wp-admin/includes/theme.php:1049 wp-admin/theme-install.php:369
-#: wp-admin/theme-install.php:431 wp-admin/themes.php:550
+#: wp-admin/includes/theme.php:1049 wp-admin/theme-install.php:370
+#: wp-admin/theme-install.php:434 wp-admin/themes.php:550
 #: wp-admin/themes.php:910 wp-admin/themes.php:1132 wp-admin/js/updates.js:765
 #: wp-admin/js/updates.js:1404
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:711

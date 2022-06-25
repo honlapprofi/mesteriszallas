@@ -13,5 +13,10 @@
       "email": "help@publishpress.com"
     }
   ],
+  "autoload": {
+    "files": [
+      "BannersMain.php"
+    ]
+  },
   "minimum-stability": "dev"
 }

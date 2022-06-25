@@ -17,8 +17,8 @@ if( $user->ID ) {
 
 	$allowed_html = array(
 		'a' => array(
-			'href' => array(),
-		),
+			'href' => array()
+		)
 	);
 
     ?>
@@ -29,7 +29,7 @@ if( $user->ID ) {
 				$allowed_html
 			),
             '<strong>' . esc_html( $userDisplayName ) . '</strong>',
-            esc_url( wp_logout_url() ),
+            esc_url( wp_logout_url() )
         );
 	?></p>
 	<p><?php 
@@ -39,7 +39,7 @@ if( $user->ID ) {
 				$allowed_html
 			),
             esc_url( $bookingsUrl ),
-            esc_url( $detailsUrl ),
+            esc_url( $detailsUrl )
         );
 	?></p>
     <?php

@@ -1,0 +1,3221 @@
+# Translation of Plugins - Migration, Backup, Staging &#8211; WPvivid - Stable (latest release) in Hungarian
+# This file is distributed under the same license as the Plugins - Migration, Backup, Staging &#8211; WPvivid - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-04-02 15:24:44+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-rc.2\n"
+"Language: hu\n"
+"Project-Id-Version: Plugins - Migration, Backup, Staging &#8211; WPvivid - Stable (latest release)\n"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1077
+#, gp-priority: normal
+msgid ""
+"<div class=\"notice notice-warning inline\" style=\"margin: 10px 0 0 0;\"><p><strong>Warning:</strong> We detected that you use Jet Engine plugin on this site, \n"
+"                                                        it may have compatibility issues with our plugin, which can result in an inaccuracy of the scan result, \n"
+"                                                        so we recommend not using this feature yet.\n"
+"                                                          </p></div>"
+msgstr ""
+"<div class=\"notice notice-warning inline\" style=\"margin: 10px 0 0 0;\"><p><strong>Figyelmeztetés:</strong> Észrevettük, hogy Ön Jet Engine bővítményt használ ezen az oldalon, \n"
+"                                                        kompatibilitási problémái lehetnek a mi bővítményünkkel, ami a vizsgálat eredményének pontatlanságát eredményezheti, \n"
+"                                                        ezért javasoljuk, hogy még ne használja ezt a funkciót.\n"
+"                                                          </p></div>"
+
+#: includes/class-wpvivid.php:6065
+#, gp-priority: normal
+msgid "Send backups to remote storage (You can choose whether to keep the backup in localhost after it is uploaded to cloud storage in Settings.)"
+msgstr "Biztonsági mentések küldése távoli tárhelyre (A Beállításokban kiválaszthatja, hogy a biztonsági mentés a felhőalapú tárhelyre történő feltöltés után a localhoston maradjon-e.)"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1171
+#, gp-priority: normal
+msgid "Are you sure to remove the selected backups? These backups will be deleted permanently."
+msgstr "Biztos, hogy a kiválasztott biztonsági mentéseket el kell távolítani? Ezek a biztonsági mentések véglegesen törlődnek."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1119
+#, gp-priority: normal
+msgid "Are you sure to remove this backup? This backup will be deleted permanently."
+msgstr "Biztos, hogy el kell távolítani ezt a biztonsági mentést? Ez a biztonsági mentés véglegesen törlésre kerül."
+
+#: includes/customclass/class-wpvivid-one-drive.php:405
+#, gp-priority: normal
+msgid "Click to get Microsoft authentication."
+msgstr "Kattintson a Microsoft hitelesítéshez."
+
+#: includes/customclass/class-wpvivid-one-drive.php:393
+#, gp-priority: normal
+msgid "To add OneDrive, please get Microsoft authentication first. Once authenticated, you will be redirected to this page, then you can add storage information and save it"
+msgstr "A OneDrive hozzáadásához először kérje a Microsoft hitelesítést. A hitelesítés után átirányítjuk erre az oldalra, majd hozzáadhatja a tárolási adatokat, és elmentheti azokat."
+
+#: includes/customclass/class-wpvivid-google-drive.php:421
+#, gp-priority: normal
+msgid "Click to get Google authentication."
+msgstr "Kattintson a Google hitelesítéshez."
+
+#: includes/customclass/class-wpvivid-google-drive.php:409
+#, gp-priority: normal
+msgid "To add Google Drive, please get Google authentication first. Once authenticated, you will be redirected to this page, then you can add storage information and save it"
+msgstr "A Google Drive hozzáadásához először kérje a Google-hitelesítést. A hitelesítés után átirányítjuk erre az oldalra, majd hozzáadhatja a tárolási adatokat és elmentheti azokat"
+
+#: includes/customclass/class-wpvivid-google-drive.php:190
+#, gp-priority: normal
+msgid "<div class=\"notice notice-error\"><p>"
+msgstr "<div class=\"notice notice-error\"><p>"
+
+#: includes/customclass/class-wpvivid-dropbox.php:663
+#, gp-priority: normal
+msgid "To add Dropbox, please get Dropbox authentication first. Once authenticated, you will be redirected to this page, then you can add storage information and save it"
+msgstr "A Dropbox hozzáadásához először kérje a Dropbox-hitelesítést. A hitelesítés után átirányítjuk erre az oldalra, majd hozzáadhatja a tárolási adatokat és elmentheti azokat."
+
+#: includes/customclass/class-wpvivid-dropbox.php:641
+#, gp-priority: normal
+msgid "Click to get Dropbox authentication."
+msgstr "Kattintson a Dropbox-hitelesítéshez."
+
+#: includes/customclass/class-wpvivid-dropbox.php:515
+#: includes/customclass/class-wpvivid-google-drive.php:292
+#: includes/customclass/class-wpvivid-one-drive.php:276
+#, gp-priority: normal
+msgid "Click the button to add the storage."
+msgstr "Kattintson a gombra a tároló hozzáadásához."
+
+#: includes/customclass/class-wpvivid-dropbox.php:510
+#: includes/customclass/class-wpvivid-google-drive.php:287
+#: includes/customclass/class-wpvivid-one-drive.php:271
+#, gp-priority: normal
+msgid "Add Now"
+msgstr "Hozzáadás most"
+
+#: includes/class-wpvivid.php:5086 includes/class-wpvivid.php:5091
+#, gp-priority: normal
+msgid "The value of 'Delay Between Requests' can't be empty."
+msgstr "A 'Delay Between Requests' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5075 includes/class-wpvivid.php:5080
+#, gp-priority: normal
+msgid "The value of 'PHP Scripts Execution Timeout' can't be empty."
+msgstr "A 'PHP Scripts Execution Timeout' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5064 includes/class-wpvivid.php:5069
+#, gp-priority: normal
+msgid "The value of 'Staging Memeory Limit' can't be empty."
+msgstr "A 'Staging Memeory Limit' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5053 includes/class-wpvivid.php:5058
+#, gp-priority: normal
+msgid "The value of 'Max Files Size' can't be empty."
+msgstr "A 'Max Files Size' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5042 includes/class-wpvivid.php:5047
+#, gp-priority: normal
+msgid "The value of 'File Copy Count' can't be empty."
+msgstr "A 'File Copy Count' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5031 includes/class-wpvivid.php:5036
+#, gp-priority: normal
+msgid "The value of 'DB Replace Count' can't be empty."
+msgstr "A 'DB Replace Count' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5020 includes/class-wpvivid.php:5025
+#, gp-priority: normal
+msgid "The value of 'DB Copy Count' can't be empty."
+msgstr "A 'DB Copy Count' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:5009 includes/class-wpvivid.php:5014
+#, gp-priority: normal
+msgid "The value of 'Media Files Quantity Processed Per Request' can't be empty."
+msgstr "A 'Media Files Quantity Processed Per Request' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4998 includes/class-wpvivid.php:5003
+#, gp-priority: normal
+msgid "The value of 'Posts Quantity Processed Per Request' can't be empty."
+msgstr "A 'Posts Quantity Processed Per Request' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4987 includes/class-wpvivid.php:4992
+#, gp-priority: normal
+msgid "The value of 'Chunk Size' can't be empty."
+msgstr "A 'Chunk Size' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4976 includes/class-wpvivid.php:4981
+#, gp-priority: normal
+msgid "The value of 'PHP memory limit for restoration' can't be empty."
+msgstr "A 'PHP memory limit for restoration' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4965 includes/class-wpvivid.php:4970
+#, gp-priority: normal
+msgid "The value of 'PHP memory limit for backup' can't be empty."
+msgstr "A 'PHP memory limit for backup' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4954 includes/class-wpvivid.php:4959
+#, gp-priority: normal
+msgid "The value of 'PHP scripts execution timeout for restore' can't be empty."
+msgstr "A 'PHP scripts execution timeout for restore' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4940 includes/class-wpvivid.php:4947
+#, gp-priority: normal
+msgid "The value of 'PHP scripts execution timeout for backup' can't be empty."
+msgstr "A 'PHP scripts execution timeout for backup' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4927 includes/class-wpvivid.php:4934
+#, gp-priority: normal
+msgid "The value of 'Exclude files which are lager than' can't be empty."
+msgstr "A 'Exclude files which are lager than' értéke nem lehet üres."
+
+#: includes/class-wpvivid.php:4913 includes/class-wpvivid.php:4921
+#, gp-priority: normal
+msgid "The value of 'Compress file every' can't be empty."
+msgstr "A 'Compress file every' értéke nem lehet üres."
+
+#: includes/class-wpvivid-export-import.php:1563
+#, gp-priority: normal
+msgid "Back"
+msgstr "Vissza"
+
+#: admin/class-wpvivid-admin.php:638
+#, gp-priority: normal
+msgid "Because Dropbox has upgraded their API on September 30, 2021, the new API is no longer compatible with the previous app's settings. Please re-add your Dropbox storage to ensure that it works properly."
+msgstr "Mivel a Dropbox 2021. szeptember 30-án frissítette API-ját, az új API már nem kompatibilis a korábbi alkalmazás beállításaival. Kérjük, adja hozzá újra a Dropbox tárhelyét, hogy az megfelelően működjön."
+
+#: admin/class-wpvivid-admin.php:701
+#, gp-priority: normal
+msgid "In order to execute the scheduled backups properly, please set the DISABLE_WP_CRON constant to false. If you are using an external cron system, simply click 'X' to dismiss this message."
+msgstr "Az ütemezett biztonsági mentések megfelelő végrehajtásához állítsa a DISABLE_WP_CRON konstans értékét false-ra. Ha külső cron rendszert használ, egyszerűen kattintson az 'X' gombra az üzenet elutasításához."
+
+#: includes/class-wpvivid-migrate.php:1099
+#, gp-priority: normal
+msgid "<strong>Tips: </strong>Some web hosts may restrict the connection between the two sites, so you may get a 403 error or unstable connection issue when performing auto migration. In that case, it is recommended to manually transfer the site."
+msgstr "<strong>Tippek: </strong>Egyes webtárhelyek korlátozhatják a kapcsolatot a két webhely között, ezért előfordulhat, hogy 403-as hibát vagy instabil kapcsolatot kap az automatikus migráció során. Ebben az esetben ajánlott a webhely manuális áthelyezése."
+
+#: admin/class-wpvivid-admin.php:749
+#, gp-priority: normal
+msgid "We detected that you are using a lower version of %s Pro, please update it to 2.0.23 or higher to ensure backing up to Google Drive works properly."
+msgstr "Azt észleltük, hogy a %s Pro alacsonyabb verzióját használja, kérjük, frissítse azt a 2.0.23 vagy magasabb verzióra, hogy a Google Drive-ra történő biztonsági mentés megfelelően működjön."
+
+#: includes/staging/class-wpvivid-staging.php:218
+#: includes/staging/class-wpvivid-staging.php:231
+#, gp-priority: normal
+msgid "Staging"
+msgstr "Staging"
+
+#: includes/staging/class-wpvivid-staging.php:98
+#, gp-priority: normal
+msgid "Create A Fresh WordPress Install"
+msgstr "Létrehoz egy Fresh WordPress telepítést"
+
+#: includes/staging/class-wpvivid-staging.php:97
+#, gp-priority: normal
+msgid "Create A Staging Site"
+msgstr "Staging webhely létrehozása"
+
+#: includes/staging/class-wpvivid-staging-ui-display.php:1301
+#, gp-priority: normal
+msgid "WPvivid Plugins - Staging"
+msgstr "WPvivid bővítmények - Staging"
+
+#: includes/staging/class-wpvivid-staging-ui-display.php:1255
+#, gp-priority: normal
+msgid ""
+"<div class=\"notice notice-warning inline\"><p><strong>Warning:</strong> An inconsistency was detected between the site url, home url of the database and the actual website url. \n"
+"                                        This can cause inappropriate staging site url issues. Please change the site url and home url in the Options table of the database to the actual \n"
+"                                        url of your website. For example, if the site url and home url of the database is http://test.com, but the actual url of your website is https://test.com. \n"
+"                                        You’ll need to change the http to https.\n"
+"                                                                  </p></div>"
+msgstr ""
+"<div class=\"notice notice-warning inline\"><p><strong>Figyelem:</strong> Ellentmondást észleltünk a webhely url-je, az adatbázis kezdőlapjának url-je és a tényleges webhely url-je között. \n"
+"                                        Ez nem megfelelő staging site url problémákat okozhat. Kérjük, módosítsa a webhely url és a főoldal url-t az adatbázis Options táblájában a tényleges \n"
+"                                        az Ön weboldalának url címe. Például, ha az adatbázisban a webhely és a honlap url címe http://test.com, de a weboldal tényleges címe https://test.com.\n"
+"                                       A http-t https-re kell cserélnie.\n"
+"                                                                  </p></div>"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:437
+#: includes/staging/class-wpvivid-staging-sites-list.php:856
+#, gp-priority: normal
+msgid "Select %s"
+msgstr "%s kijelölése"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:404
+#: includes/staging/class-wpvivid-staging-sites-list.php:823
+#, gp-priority: normal
+msgid "Subsite Description"
+msgstr "Aloldal leírása"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:403
+#: includes/staging/class-wpvivid-staging-sites-list.php:822
+#, gp-priority: normal
+msgid "Subsite Title"
+msgstr "Aloldal címe"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:402
+#, gp-priority: normal
+msgid "Subsite Tables/Folders"
+msgstr "Aloldali táblázatok/mappák"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:401
+#: includes/staging/class-wpvivid-staging-sites-list.php:820
+#, gp-priority: normal
+msgid "Subsite URL"
+msgstr "Aloldal URL címe"
+
+#: includes/staging/class-wpvivid-staging-setting.php:199
+#: includes/staging/class-wpvivid-staging-setting.php:378
+#, gp-priority: normal
+msgid "Keep staging sites when deleting the plugin"
+msgstr "A bővítmény törlésekor a staging oldalak megtartása"
+
+#: includes/staging/class-wpvivid-staging-setting.php:188
+#: includes/staging/class-wpvivid-staging-setting.php:367
+#, gp-priority: normal
+msgid "Keep permalink when transferring website"
+msgstr "Tartsa meg a permalinket a weboldal átvitelekor"
+
+#: includes/staging/class-wpvivid-staging-setting.php:177
+#: includes/staging/class-wpvivid-staging-setting.php:356
+#, gp-priority: normal
+msgid "Anyone can visit the staging site"
+msgstr "Bárki meglátogathatja az átmeneti oldalt"
+
+#: includes/staging/class-wpvivid-staging-setting.php:171
+#: includes/staging/class-wpvivid-staging-setting.php:350
+#, gp-priority: normal
+msgid " times when encountering a time-out error"
+msgstr "időkorlátos hiba esetén"
+
+#: includes/staging/class-wpvivid-staging-setting.php:167
+#: includes/staging/class-wpvivid-staging-setting.php:346
+#, gp-priority: normal
+msgid "<option value=\""
+msgstr "<option value=\""
+
+#: includes/staging/class-wpvivid-staging-setting.php:164
+#: includes/staging/class-wpvivid-staging-setting.php:343
+#, gp-priority: normal
+msgid "<option selected=\"selected\" value=\""
+msgstr "<option selected=\"selected\" value=\""
+
+#: includes/staging/class-wpvivid-staging-setting.php:155
+#: includes/staging/class-wpvivid-staging-setting.php:334
+#, gp-priority: normal
+msgid "A lower value will help speed up the process of creating a staging site. However, if your server has a limit on the number of requests, a higher value is recommended."
+msgstr "Egy alacsonyabb érték segít felgyorsítani a staging site létrehozásának folyamatát. Ha azonban a szervere korlátozza a kérések számát, magasabb érték ajánlott."
+
+#: includes/staging/class-wpvivid-staging-setting.php:149
+#: includes/staging/class-wpvivid-staging-setting.php:328
+#, gp-priority: normal
+msgid "Delay Between Requests"
+msgstr "Késleltetés a kérelmek között"
+
+#: includes/staging/class-wpvivid-staging-setting.php:144
+#: includes/staging/class-wpvivid-staging-setting.php:323
+#, gp-priority: normal
+msgid ""
+"The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut down the progress of \n"
+"                creating a staging site. If the progress  encounters a time-out, that means you have a medium or large sized website. Please try to \n"
+"                scale the value bigger."
+msgstr ""
+"Az időkorlát nem a szerver PHP-időzítése. A futási idő lejártával a bővítményünk leállítja a folyamatot a\n"
+"                staging site létrehozását. Ha a haladás időtúllépéssel találkozik, az azt jelenti, hogy közepes vagy nagy méretű webhelye van. Kérjük, próbálja meg\n"
+"                az értéket nagyobbra méretezni."
+
+#: includes/staging/class-wpvivid-staging-setting.php:138
+#: includes/staging/class-wpvivid-staging-setting.php:317
+#, gp-priority: normal
+msgid "PHP Script Execution Timeout"
+msgstr "PHP Script futtatási időkorlát"
+
+#: includes/staging/class-wpvivid-staging-setting.php:133
+#: includes/staging/class-wpvivid-staging-setting.php:312
+#, gp-priority: normal
+msgid ""
+"Adjust this value to apply for a temporary PHP memory limit for the plugin to create a staging site. \n"
+"                We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some \n"
+"                web hosting providers may not support this."
+msgstr ""
+"Állítsa be ezt az értéket, hogy a plugin ideiglenes PHP-memória korlátot alkalmazzon egy staging site létrehozásához.\n"
+"                 Ezt az értéket alapértelmezés szerint 256M-ra állítjuk be. Növelje az értéket, ha a memória kimerült hibával találkozik. Megjegyzés: Néhány\n"
+"                webtárhely-szolgáltatók nem feltétlenül támogatják ezt."
+
+#: includes/staging/class-wpvivid-staging-setting.php:127
+#: includes/staging/class-wpvivid-staging-setting.php:306
+#, gp-priority: normal
+msgid "Staging Memory Limit"
+msgstr "Staging memória korlát"
+
+#: includes/staging/class-wpvivid-staging-setting.php:124
+#: includes/staging/class-wpvivid-staging-setting.php:303
+#, gp-priority: normal
+msgid "Maximum size of the files copied to a staging site. All files larger than this value will be ignored. If you set the value of 0 MB, all files will be copied to a staging site."
+msgstr "A staging site-ra másolt fájlok maximális mérete. Az ennél az értéknél nagyobb fájlokat a rendszer figyelmen kívül hagyja. Ha 0 MB értéket állít be, akkor az összes fájl másolásra kerül az előkészítő webhelyre."
+
+#: includes/staging/class-wpvivid-staging-setting.php:118
+#: includes/staging/class-wpvivid-staging-setting.php:297
+#, gp-priority: normal
+msgid "Max File Size"
+msgstr "Maximális fájlméret"
+
+#: includes/staging/class-wpvivid-staging-setting.php:114
+#: includes/staging/class-wpvivid-staging-setting.php:293
+#, gp-priority: normal
+msgid ""
+"Number of files to copy that will be copied within one ajax request. The higher value makes the file file copy process faster. \n"
+"                Please try a high value to find out the highest possible value. If you encounter timeout errors, try lower values until no more errors occur."
+msgstr ""
+"A másolandó fájlok száma, melyeket egy ajax-kérésen belül másolnak. A magasabb érték gyorsabbá teszi a fájlfájlok másolási folyamatát.\n"
+"                 Kérjük, próbáljon ki egy magas értéket, hogy megtudja a lehető legmagasabb értéket. Ha időkorlátozási hibákkal találkozik, próbálkozzon alacsonyabb értékekkel, amíg nem jelentkezik több hiba."
+
+#: includes/staging/class-wpvivid-staging-setting.php:108
+#: includes/staging/class-wpvivid-staging-setting.php:287
+#, gp-priority: normal
+msgid "File Copy Count"
+msgstr "File Copy Count (Fájlmásolatok száma)"
+
+#: includes/staging/class-wpvivid-staging-setting.php:104
+#: includes/staging/class-wpvivid-staging-setting.php:283
+#, gp-priority: normal
+msgid ""
+"Number of DB rows, that are processed within one ajax query. The higher value makes the DB replacement process faster. \n"
+"                If timeout erros occur, decrease the value because this process consumes a lot of memory."
+msgstr ""
+"A DB sorok száma, melyeket egy ajax lekérdezésen belül feldolgoz. A magasabb érték gyorsabbá teszi a DB-csere folyamatát. \n"
+"                Ha időkorlátozási hibák fordulnak elő, csökkentse az értéket, mert ez a folyamat sok memóriát fogyaszt."
+
+#: includes/staging/class-wpvivid-staging-setting.php:98
+#: includes/staging/class-wpvivid-staging-setting.php:277
+#, gp-priority: normal
+msgid "DB Replace Count"
+msgstr "DB csere szám"
+
+#: includes/staging/class-wpvivid-staging-setting.php:93
+#: includes/staging/class-wpvivid-staging-setting.php:272
+#, gp-priority: normal
+msgid ""
+"Number of DB rows, that are copied within one ajax query. The higher value makes the database copy process faster. \n"
+"                Please try a high value to find out the highest possible value. If you encounter timeout errors, try lower values until no \n"
+"                more errors occur."
+msgstr ""
+"A DB sorok száma, amelyek egy ajax-lekérdezésen belül másolódnak. A magasabb érték gyorsabbá teszi az adatbázis-másolási folyamatot.\n"
+"                Kérjük, próbáljon ki egy magas értéket, hogy megtudja a lehető legmagasabb értéket. Ha időkorlátozási hibákkal találkozik, próbáljon ki alacsonyabb értékeket, amíg \n"
+"                nincs több hiba."
+
+#: includes/staging/class-wpvivid-staging-setting.php:87
+#: includes/staging/class-wpvivid-staging-setting.php:266
+#, gp-priority: normal
+msgid "DB Copy Count"
+msgstr "DB másolatszám"
+
+#: includes/staging/class-wpvivid-staging-setting.php:29
+#, gp-priority: normal
+msgid "Staging Settings"
+msgstr "Staging beállítások"
+
+#: includes/staging/class-wpvivid-staging-log-page.php:1143
+#, gp-priority: normal
+msgid " file not found. please <a href=\""
+msgstr "fájl nem található. kérjük <a href=\""
+
+#: includes/staging/class-wpvivid-staging-log-page.php:343
+#, gp-priority: normal
+msgid "Staging Logs"
+msgstr "Létrehozási naplók"
+
+#: includes/staging/class-wpvivid-staging-log-page.php:56
+#, gp-priority: normal
+msgid "Action\t"
+msgstr "Művelet\t"
+
+#: includes/staging/class-wpvivid-staging-log-page.php:55
+#, gp-priority: normal
+msgid "Log File Name\t"
+msgstr "Naplófájl Neve\t"
+
+#: admin/class-wpvivid-admin.php:844
+#, gp-priority: normal
+msgid "Backup Logs"
+msgstr "biztonsági másolat naplók"
+
+#: admin/class-wpvivid-admin.php:1455
+#, gp-priority: normal
+msgid "Up to 50 domains"
+msgstr "Legfeljebb 50 domain"
+
+#: admin/class-wpvivid-admin.php:1446
+#, gp-priority: normal
+msgid "Up to 10 domains"
+msgstr "Legfeljebb 10 domain"
+
+#: admin/class-wpvivid-admin.php:1437
+#, gp-priority: normal
+msgid "2 domains"
+msgstr "2 Domain"
+
+#: admin/class-wpvivid-admin.php:1434
+#, gp-priority: normal
+msgid "Roles & Capabilities"
+msgstr "Szerepek & képességek"
+
+#: admin/class-wpvivid-admin.php:1433
+#, gp-priority: normal
+msgid "White Label"
+msgstr "White Label"
+
+#: admin/class-wpvivid-admin.php:1432
+#, gp-priority: normal
+msgid "Staging Pro"
+msgstr "Staging Pro"
+
+#: admin/class-wpvivid-admin.php:1431
+#, gp-priority: normal
+msgid "Mulitsite Support"
+msgstr "Több oldalas támogatás"
+
+#: admin/class-wpvivid-admin.php:1430
+#, gp-priority: normal
+msgid "Image Optimization Pro (Unlimited/domain)"
+msgstr "Képoptimalizálás Pro (Korlátlan/domain)"
+
+#: admin/class-wpvivid-admin.php:1429
+#, gp-priority: normal
+msgid "Backup & Migration Pro"
+msgstr "Backup & Migration Pro"
+
+#: admin/class-wpvivid-admin.php:1428
+#, gp-priority: normal
+msgid "Domains"
+msgstr "Domainok"
+
+#: admin/class-wpvivid-admin.php:1421
+#, gp-priority: normal
+msgid "Small Business"
+msgstr "Kisvállalkozás"
+
+#: admin/class-wpvivid-admin.php:1419
+#, gp-priority: normal
+msgid "Blogger"
+msgstr "Blogger"
+
+#: admin/class-wpvivid-admin.php:1418
+#, gp-priority: normal
+msgid "Features"
+msgstr "Funkciók"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1279
+#, gp-priority: normal
+msgid "If you are migrating a website, the source domain will be replaced with the target domain automatically. For example, if you are migrating a.com to b.com, then a.com will be replaced with b.com during the restore."
+msgstr "Ha egy webhely áttelepítéséről van szó, a forrásdomain automatikusan lecserélődik a céldomainre. Ha például az a.com-ot a b.com-ra migrálja, akkor a visszaállítás során az a.com helyébe a b.com lép."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2267
+#, gp-priority: normal
+msgid "Compress images with our image optimization plugin, it's free"
+msgstr "Képek tömörítése a képoptimalizáló bővítményünkkel, ingyenes"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:92
+#, gp-priority: normal
+msgid "File not found"
+msgstr "A fájl nem található"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:88
+#: admin/partials/wpvivid-backup-restore-page-display.php:96
+#: admin/partials/wpvivid-backup-restore-page-display.php:113
+#: admin/partials/wpvivid-backup-restore-page-display.php:122
+#: includes/class-wpvivid.php:2611 includes/class-wpvivid.php:2616
+#: includes/class-wpvivid.php:2625
+#, gp-priority: normal
+msgid "File Size: "
+msgstr "Fájlméret:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:75
+#, gp-priority: normal
+msgid "File"
+msgstr "Fájl"
+
+#: includes/customclass/class-wpvivid-one-drive.php:119
+#, gp-priority: normal
+msgid "<div class=\"notice notice-success is-dismissible\"><p>You have authenticated the Microsoft OneDrive account as your remote storage.</p></div>"
+msgstr "<div class=\"notice notice-success is-dismissible\"><p>Hitelesítette a Microsoft OneDrive fiókját távoli tárolóként.</p></div>"
+
+#: includes/customclass/class-wpvivid-dropbox.php:361
+#, gp-priority: normal
+msgid "<div class=\"notice notice-success is-dismissible\"><p>You have authenticated the Dropbox account as your remote storage.</p></div>"
+msgstr "<div class=\"notice notice-success is-dismissible\"><p>Hitelesítette a Dropbox fiókját távoli tárolóként.</p></div>"
+
+#: includes/customclass/class-wpvivid-google-drive.php:131
+#, gp-priority: normal
+msgid "<div class=\"notice notice-success is-dismissible\"><p>You have authenticated the Google Drive account as your remote storage.</p></div>"
+msgstr "<div class=\"notice notice-success is-dismissible\"><p>Hitelesítette a Google Drive fiókot távoli tárolóként.</p></div>"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2645
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2732
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2788
+#, gp-priority: normal
+msgid "Total Folders:"
+msgstr "Összes mappa:"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2431
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2562
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2649
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2736
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2792
+#, gp-priority: normal
+msgid "Scanned:"
+msgstr "Beolvasott:"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2427
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:2558
+#, gp-priority: normal
+msgid "Total Posts:"
+msgstr "Összes bejegyzés:"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1191
+#, gp-priority: normal
+msgid "Please don't refresh the page while running a scan."
+msgstr "Kérjük, ne frissítse az oldalt a beolvasás futtatása közben."
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1179
+#, gp-priority: normal
+msgid "Scan"
+msgstr "Beolvasás"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1104
+#, gp-priority: normal
+msgid "WPvivid Image Cleaner"
+msgstr "WPvivid Image Cleaner"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1030
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1043
+#, gp-priority: normal
+msgid "Image Cleaner"
+msgstr "Kép tisztító"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:865
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:903
+#, gp-priority: normal
+msgid "Once deleted, images will be lost permanently. The action cannot be undone, unless you have <a href=\""
+msgstr "A törlés után a képek véglegesen elvesznek. A művelet nem vonható vissza, kivéve, ha <a href=\""
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:101
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:556
+#, gp-priority: normal
+msgid "Size"
+msgstr "Méret"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:99
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:554
+#, gp-priority: normal
+msgid "Path"
+msgstr "Elérési út"
+
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:98
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:553
+#, gp-priority: normal
+msgid "Thumbnail"
+msgstr "Bélyegkép"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:939
+#, gp-priority: normal
+msgid "Set how many media files to process per request. The value should be set depending on your server performance and the recommended value is 100."
+msgstr "Állítsa be, hogy hány médiafájlt dolgozzon fel kérésenként. Az értéket a kiszolgáló teljesítményétől függően kell beállítani, az ajánlott érték 100."
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:934
+#, gp-priority: normal
+msgid "Media Files Quantity Processed Per Request"
+msgstr "Médiafájlok feldolgozott mennyisége kérésenként"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:932
+#, gp-priority: normal
+msgid "Set how many posts to process per request. The value should be set depending on your server performance and the recommended value is 20."
+msgstr "Állítsa be, hogy hány bejegyzés kerüljön feldolgozásra kérésenként. Az értéket a szerver teljesítményétől függően érdemes beállítani, az ajánlott érték 20."
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:927
+#, gp-priority: normal
+msgid "Posts Quantity Processed Per Request"
+msgstr "Kérésenként feldolgozott bejegyzések mennyisége"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:922
+#, gp-priority: normal
+msgid "With this option checked, when the image is deleted, the corresponding image url in the database that is not used anywhere on your website will also be deleted."
+msgstr "Ha ez az opció be van jelölve, a kép törlésekor az adatbázisban lévő, a weboldalon sehol nem használt megfelelő kép url-je is törlődik."
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:918
+#, gp-priority: normal
+msgid "Delete Image URL"
+msgstr "Kép URL törlése"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:913
+#, gp-priority: normal
+msgid "Checking this option will speed up your scans but may produce lower accuracy."
+msgstr "Az opció bejelölése felgyorsítja a beolvasást, de alacsonyabb pontosságot eredményezhet."
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:909
+#, gp-priority: normal
+msgid "Enable Quick Scan"
+msgstr "Gyorsellenőrzés engedélyezése"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:835
+#, gp-priority: normal
+msgid "Media Cleaner Settings"
+msgstr "Médiatisztító beállításai"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:474
+#, gp-priority: normal
+msgid "Post Type"
+msgstr "Bejegyzés típus"
+
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:96
+#, gp-priority: normal
+msgid "File Regex"
+msgstr "Fájl Regex"
+
+#: includes/staging/class-wpvivid-staging-sites-list.php:819
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:95
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:473
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:97
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:552
+#, gp-priority: normal
+msgid " "
+msgstr " "
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2499
+#, gp-priority: normal
+msgid "Tip:"
+msgstr "Tipp:"
+
+#: includes/class-wpvivid.php:6238
+#, gp-priority: normal
+msgid "Please enter a valid email address."
+msgstr "Kérjük, adjon meg egy érvényes e-mail címet."
+
+#: includes/class-wpvivid.php:6233
+#, gp-priority: normal
+msgid "User's email address is required."
+msgstr "A felhasználó e-mail címe szükséges."
+
+#: includes/class-wpvivid.php:6061
+#, gp-priority: normal
+msgid "Save backups on localhost (web server)"
+msgstr "Biztonsági mentések mentése localhoston (webszerver)"
+
+#: includes/class-wpvivid.php:5907
+#, gp-priority: normal
+msgid "Type:"
+msgstr "Típus:"
+
+#: includes/class-wpvivid.php:5271
+#, gp-priority: normal
+msgid "Invalid email address"
+msgstr "Érvénytelen e-mail cím"
+
+#: includes/class-wpvivid.php:5249
+#, gp-priority: normal
+msgid "The selected file is not the setting file for WPvivid. Please upload the right file."
+msgstr "A kiválasztott fájl nem a WPvivid beállítási fájlja. Kérjük, töltse fel a megfelelő fájlt."
+
+#: includes/class-wpvivid.php:5124 includes/class-wpvivid.php:5128
+#, gp-priority: normal
+msgid "The pdo_mysql extension is not detected. Please install the extension first or choose wpdb option for Database connection method."
+msgstr "A pdo_mysql kiterjesztés nem érzékelhető. Kérjük, először telepítse a bővítményt, vagy válassza a wpdb opciót az Adatbáziskapcsolat módjához."
+
+#: includes/class-wpvivid.php:5115
+#, gp-priority: normal
+msgid "An email address is required."
+msgstr "Egy e-mail cím megadása szükséges."
+
+#: includes/class-wpvivid.php:5098 includes/class-wpvivid.php:5105
+#, gp-priority: normal
+msgid "The local storage path is required."
+msgstr "A helyi tároló elérési útja szükséges."
+
+#: includes/class-wpvivid.php:4648
+#, gp-priority: normal
+msgid "Choose one storage from the list to be the default storage."
+msgstr "Válasszon ki egy tárolót a listából az alapértelmezett tárolónak."
+
+#: includes/class-wpvivid.php:4477
+#, gp-priority: normal
+msgid "The selected junk flies have been deleted."
+msgstr "A kiválasztott levélszemét törlésre került."
+
+#: includes/class-wpvivid.php:4403
+#, gp-priority: normal
+msgid "Choose at least one type of junk files for deleting."
+msgstr "Válasszon legalább egy típusú kéretlen fájlt a törléshez."
+
+#: includes/class-wpvivid.php:4208
+#, gp-priority: normal
+msgid "Getting backup directory failed. Please try again later."
+msgstr "A mentési könyvtár beszerzése sikertelen. Kérjük, próbálja meg később újra."
+
+#: includes/class-wpvivid.php:4115
+#, gp-priority: normal
+msgid "%d backup tasks have been completed. Please switch to <a href=\"#\" onclick=\"wpvivid_click_switch_page('wrap', 'wpvivid_tab_log', true);\">Log</a> page to check the details."
+msgstr "%d mentési feladat befejeződött. Kérjük, váltson át, <a href=\"#\" onclick=\"wpvivid_click_switch_page('wrap', 'wpvivid_tab_log', true);\">Log</a> oldalon ellenőrizheti a részleteket."
+
+#: includes/class-wpvivid.php:4018
+#, gp-priority: normal
+msgid "Last Backup: "
+msgstr "Utolsó biztonsági mentés:"
+
+#: includes/class-wpvivid.php:3998 includes/class-wpvivid.php:4015
+#, gp-priority: normal
+msgid "The last backup message not found."
+msgstr "Az utolsó biztonsági mentés üzenete nem található."
+
+#: includes/class-wpvivid.php:3882
+#, gp-priority: normal
+msgid "The restore file not found. Please verify the file exists."
+msgstr "A visszaállítási fájl nem található. Kérjük, ellenőrizze, hogy a fájl létezik-e."
+
+#: includes/class-wpvivid.php:3833
+#, gp-priority: normal
+msgid "restore failed error unknown"
+msgstr "a visszaállítás sikertelen, hiba ismeretlen"
+
+#: includes/class-wpvivid.php:3081
+#, gp-priority: normal
+msgid "Failed to get the remote storage information. Please try again later."
+msgstr "Nem sikerült lekérni a távoli tároló adatait. Kérjük, próbálja meg később újra."
+
+#: includes/class-wpvivid.php:3053
+#, gp-priority: normal
+msgid "Fail to delete the remote storage, can not retrieve the storage infomation. Please try again."
+msgstr "Nem sikerült törölni a távoli tárolót, nem tudja lekérni a tároló adatait. Kérjük, próbálja meg újra."
+
+#: includes/class-wpvivid.php:3001
+#: includes/customclass/class-wpvivid-dropbox.php:810
+#: includes/customclass/class-wpvivid-google-drive.php:1095
+#: includes/customclass/class-wpvivid-one-drive.php:1304
+#, gp-priority: normal
+msgid "You have successfully added a remote storage."
+msgstr "Sikeresen hozzáadott egy távoli tárolót."
+
+#: includes/class-wpvivid.php:2898
+#, gp-priority: normal
+msgid "Unable to delete the locked backup. Please unlock it first and try again."
+msgstr "Nem sikerült törölni a zárolt biztonsági másolatot. Kérjük, először oldja fel a zárolást, és próbálja meg újra."
+
+#: includes/class-wpvivid.php:2888
+#, gp-priority: normal
+msgid "Retrieving the backup(s) information failed while deleting the selected backup(s). Please try again later."
+msgstr "A biztonsági másolat(ok) adatainak lekérdezése sikertelen volt a kiválasztott biztonsági másolat(ok) törlése közben. Kérjük, próbálja meg később újra."
+
+#: includes/class-wpvivid.php:1697 includes/class-wpvivid.php:1817
+#, gp-priority: normal
+msgid "Task timed out."
+msgstr "A feladat időzített."
+
+#: includes/class-wpvivid.php:1516 includes/class-wpvivid.php:1538
+#: includes/class-wpvivid.php:1564 includes/class-wpvivid.php:1689
+#: includes/class-wpvivid.php:1809
+#, gp-priority: normal
+msgid "Too many resumption attempts."
+msgstr "Túl sok újraindítási kísérlet történt."
+
+#: includes/class-wpvivid.php:561 includes/class-wpvivid.php:5150
+#, gp-priority: normal
+msgid "There is no default remote storage configured. Please set it up first."
+msgstr "Nincs konfigurálva alapértelmezett távoli tároló. Kérjük, először állítsa be."
+
+#: includes/class-wpvivid.php:541 includes/class-wpvivid.php:550
+#, gp-priority: normal
+msgid "Choose at least one storage location for backups."
+msgstr "Válasszon legalább egy tárolási helyet a biztonsági mentésekhez."
+
+#: includes/class-wpvivid.php:527 includes/class-wpvivid.php:535
+#, gp-priority: normal
+msgid "A backup type is required."
+msgstr "Szükség van egy biztonsági másolat típusra."
+
+#: includes/class-wpvivid-schedule.php:282
+#: includes/class-wpvivid-schedule.php:296
+#, gp-priority: normal
+msgid "Creating scheduled tasks failed. Please try again later."
+msgstr "Az ütemezett feladatok létrehozása nem sikerült. Kérjük, próbálja meg később újra."
+
+#: includes/class-wpvivid-schedule.php:91
+#, gp-priority: normal
+msgid "12Hours"
+msgstr "12órai"
+
+#: includes/class-wpvivid-schedule.php:58
+#: includes/class-wpvivid-schedule.php:103
+#, gp-priority: normal
+msgid "Monthly"
+msgstr "Havi"
+
+#: includes/class-wpvivid-schedule.php:52
+#: includes/class-wpvivid-schedule.php:100
+#, gp-priority: normal
+msgid "Fortnightly"
+msgstr "Kétheti"
+
+#: includes/class-wpvivid-schedule.php:46
+#: includes/class-wpvivid-schedule.php:97
+#, gp-priority: normal
+msgid "Weekly"
+msgstr "Heti"
+
+#: includes/class-wpvivid-schedule.php:40
+#: includes/class-wpvivid-schedule.php:94
+#, gp-priority: normal
+msgid "Daily"
+msgstr "Napi"
+
+#: includes/class-wpvivid-schedule.php:34
+#, gp-priority: normal
+msgid "12 Hours"
+msgstr "12 óra"
+
+#: includes/class-wpvivid-export-import.php:1560
+#, gp-priority: normal
+msgid "With this option checked, Pages/posts already existing will be overwritten with the updated ones in an import."
+msgstr "Ha ez a beállítás be van jelölve, akkor a már meglévő oldalak/bejegyzések felülíródnak a frissítettekkel az importálás során."
+
+#: includes/class-wpvivid-export-import.php:1556
+#, gp-priority: normal
+msgid "Overwrite existing pages"
+msgstr "Meglévő oldalak felülírása"
+
+#: includes/class-wpvivid-export-import.php:1552
+#, gp-priority: normal
+msgid "Import Setting"
+msgstr "Import beállítása"
+
+#: includes/class-wpvivid-export-import.php:1550
+#, gp-priority: normal
+msgid "- Select -"
+msgstr "- Kijelölés -"
+
+#: includes/class-wpvivid-export-import.php:1549
+#, gp-priority: normal
+msgid "Select an existing author:"
+msgstr "Egy meglévő szerző kiválasztása:"
+
+#: includes/class-wpvivid-export-import.php:1547
+#, gp-priority: normal
+msgid "Assign author"
+msgstr "Szerző hozzárendelése"
+
+#: includes/class-wpvivid-export-import.php:1544
+#, gp-priority: normal
+msgid "The importing file info"
+msgstr "Az importáló fájl adatai"
+
+#: includes/class-wpvivid-export-import.php:1540
+#, gp-priority: normal
+msgid "Scan Uploaded Exports"
+msgstr "Feltöltött exportok beolvasása"
+
+#: includes/class-wpvivid-export-import.php:1539
+#, gp-priority: normal
+msgid "Or you can use ftp to upload the export to the directory %s. Then click the button below to scan the file to import."
+msgstr "Vagy ftp segítségével feltöltheti az exportot a %s könyvtárba. Ezután kattintson az alábbi gombra az importálandó fájl beolvasásához."
+
+#: includes/class-wpvivid-export-import.php:1536
+#, gp-priority: normal
+msgid "Upload and Import"
+msgstr "Feltöltés és importálás"
+
+#: includes/class-wpvivid-export-import.php:1535
+#, gp-priority: normal
+msgid "Choose an export from your computer to import: "
+msgstr "Az importáláshoz választható exportált fájlokat a számítógépről kell kiválasztani: "
+
+#: includes/class-wpvivid-export-import.php:1530
+#, gp-priority: normal
+msgid "Delete Exported Files In Folder"
+msgstr "Exportált fájlok törlése a mappából"
+
+#: includes/class-wpvivid-export-import.php:1529
+#, gp-priority: normal
+msgid "Imported files will be temporarily stored in directory %s"
+msgstr "Az importált fájlok ideiglenesen a %s könyvtárban lesznek tárolva."
+
+#: includes/class-wpvivid-export-import.php:1520
+#, gp-priority: normal
+msgid "To properly display the imported content, please make sure that the importing and exporting sites have the same environment, for example, same theme or pages built with the same page builder."
+msgstr "Az importált tartalom megfelelő megjelenítéséhez győződjön meg arról, hogy az importáló és az exportáló oldal azonos környezetben van, például azonos sablonnal vagy azonos oldalépítővel rendelkezik."
+
+#: includes/class-wpvivid-export-import.php:1514
+#, gp-priority: normal
+msgid "Import posts or pages with images in bulk."
+msgstr "Képekkel ellátott bejegyzések vagy oldalak tömeges importálása."
+
+#: includes/class-wpvivid-export-import.php:1489
+#, gp-priority: normal
+msgid "File not found. please retry again."
+msgstr "Fájl nem található. kérjük, próbálja újra."
+
+#: includes/class-wpvivid-export-import.php:1483
+#, gp-priority: normal
+msgid "File size not match. please retry again."
+msgstr "A fájl mérete nem egyezik. kérjük, próbálja meg újra."
+
+#: includes/class-wpvivid-export-import.php:1376
+#, gp-priority: normal
+msgid "Task time out."
+msgstr "A feladat ideje lejárt."
+
+#: includes/class-wpvivid-export-import.php:1342
+#, gp-priority: normal
+msgid "Export error:"
+msgstr "Exportálási hiba:"
+
+#: includes/class-wpvivid-export-import.php:1317
+#, gp-priority: normal
+msgid "The export task is not responding."
+msgstr "Az exportálási feladat nem válaszol."
+
+#: includes/class-wpvivid-export-import.php:1305
+#, gp-priority: normal
+msgid "Ready to export. Progress: 0%, running time: 0second."
+msgstr "Készen áll az exportálásra. Haladás: 0%, futási idő: 0 másodperc."
+
+#: includes/class-wpvivid-export-import.php:1150
+#, gp-priority: normal
+msgid "Error occurred while parsing the request data. Please try to run export task again."
+msgstr "Hiba lépett fel a kérés adatainak elemzése során. Kérjük, próbálja meg újra futtatni az exportálási feladatot."
+
+#: includes/class-wpvivid-export-import.php:1117
+#, gp-priority: normal
+msgid "Empty post id"
+msgstr "Üres bejegyzés azonosító"
+
+#: includes/class-wpvivid-export-import.php:812
+#, gp-priority: normal
+msgid "Export and Download"
+msgstr "Exportálás és letöltés"
+
+#: includes/class-wpvivid-export-import.php:803
+#, gp-priority: normal
+msgid "Sample:"
+msgstr "Minta:"
+
+#: includes/class-wpvivid-export-import.php:799
+#, gp-priority: normal
+msgid "Only letters (except for wpvivid) and numbers are allowed."
+msgstr "Csak betűk (a wpvivid kivételével) és számok engedélyezettek."
+
+#: includes/class-wpvivid-export-import.php:795
+#, gp-priority: normal
+msgid "Comment the export: "
+msgstr "Megjegyzés az exportáláshoz:"
+
+#: includes/class-wpvivid-export-import.php:790
+#, gp-priority: normal
+msgid "Comment the export (optional)"
+msgstr "Az exportálás megjegyzése (opcionális)"
+
+#: includes/class-wpvivid-export-import.php:777
+#, gp-priority: normal
+msgid "Search for %s according to the above rules."
+msgstr "Keresés a %s után a fenti szabályok szerint."
+
+#: includes/class-wpvivid-export-import.php:734
+#, gp-priority: normal
+msgid "Export %s published before this date."
+msgstr "Exportálás az ezen dátum előtt %s megjelent."
+
+#: includes/class-wpvivid-export-import.php:713
+#, gp-priority: normal
+msgid "Export %s published after this date."
+msgstr "Az ezen időpont után közzétett %s exportálása."
+
+#: includes/class-wpvivid-export-import.php:704
+#: includes/class-wpvivid-export-import.php:725
+#, gp-priority: normal
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Kijelölés &mdash;"
+
+#: includes/class-wpvivid-export-import.php:692
+#, gp-priority: normal
+msgid "Export %s of all authors or a specific author."
+msgstr "Az összes szerző vagy egy adott %s szerző exportálása."
+
+#: includes/class-wpvivid-export-import.php:681
+#, gp-priority: normal
+msgid "All Authors"
+msgstr "Szerzők"
+
+#: includes/class-wpvivid-export-import.php:661
+#, gp-priority: normal
+msgid "Export %s of all categories or a specific category."
+msgstr "Az összes kategória vagy egy adott %s kategória exportálása."
+
+#: includes/class-wpvivid-export-import.php:651
+#, gp-priority: normal
+msgid "All Categories"
+msgstr "Összes kategória"
+
+#: includes/class-wpvivid-export-import.php:632
+#, gp-priority: normal
+msgid "Filter Posts/Pages"
+msgstr "Hozzászólások/oldalak szűrése"
+
+#: includes/class-wpvivid-export-import.php:624
+#, gp-priority: normal
+msgid "Choose what to export"
+msgstr "Kiválasztás exportálásra"
+
+#: includes/class-wpvivid-export-import.php:158
+#: includes/class-wpvivid-export-import.php:181
+#, gp-priority: normal
+msgid "Next Step"
+msgstr "Következő lépés"
+
+#: includes/class-wpvivid-export-import.php:153
+#, gp-priority: normal
+msgid "More post types coming soon..."
+msgstr "További poszttípusok hamarosan..."
+
+#: includes/class-wpvivid-export-import.php:150
+#, gp-priority: normal
+msgid "Page"
+msgstr "Oldal"
+
+#: includes/class-wpvivid-export-import.php:147
+#, gp-priority: normal
+msgid "Post"
+msgstr "Bejegyzés"
+
+#: includes/class-wpvivid-export-import.php:141
+#, gp-priority: normal
+msgid "Choose post type"
+msgstr "A bejegyzés típusának kiválasztása"
+
+#: includes/class-wpvivid-export-import.php:135
+#, gp-priority: normal
+msgid "Exported files will be temporarily stored in %s directory"
+msgstr "Az exportált fájlok ideiglenesen a %s könyvtárban lesznek tárolva"
+
+#: includes/class-wpvivid-export-import.php:125
+#, gp-priority: normal
+msgid "Try to select fewer items when you are facing a shortage of server resources (typically presented as a timeout error)."
+msgstr "A szerver erőforrásainak szűkössége esetén próbáljon meg kevesebb elemet kiválasztani (ez általában időkorlát hiba formájában jelentkezik)."
+
+#: includes/class-wpvivid-export-import.php:125
+#: includes/class-wpvivid-export-import.php:1519
+#, gp-priority: normal
+msgid "Note:"
+msgstr "Megjegyzés:"
+
+#: includes/class-wpvivid-export-import.php:124
+#, gp-priority: normal
+msgid "This will contain all of your posts, pages, comments, terms and images (original images, featured images and thumbnails)."
+msgstr "Ez tartalmazza az összes bejegyzést, oldalt, hozzászólást, megjegyzést és képet (eredeti képek, kiemelt képek és miniatűrök)."
+
+#: includes/class-wpvivid-export-import.php:121
+#: includes/class-wpvivid-export-import.php:1516
+#, gp-priority: normal
+msgid "Learn more"
+msgstr "További információk"
+
+#: includes/class-wpvivid-export-import.php:119
+#, gp-priority: normal
+msgid "Export posts or pages with images in bulk."
+msgstr "Képekkel ellátott bejegyzések vagy oldalak exportálása tömegesen."
+
+#: includes/class-wpvivid-export-import.php:65
+#: includes/class-wpvivid-export-import.php:78
+#, gp-priority: normal
+msgid "Export & Import"
+msgstr "Exportálás & importálás"
+
+#: includes/class-wpvivid-exporter.php:290
+#, gp-priority: normal
+msgid "Last Modified"
+msgstr "Utoljára módosítva"
+
+#: includes/class-wpvivid-exporter.php:287
+#, gp-priority: normal
+msgid "Scheduled"
+msgstr "Időzített"
+
+#: includes/class-wpvivid-exporter.php:285
+#, gp-priority: normal
+msgid "Missed schedule"
+msgstr "Hibás időzítés"
+
+#: includes/class-wpvivid-exporter.php:282
+#, gp-priority: normal
+msgid "Published"
+msgstr "Közzétéve"
+
+#: includes/class-wpvivid-exporter.php:275
+#, gp-priority: normal
+msgid "%s ago"
+msgstr "%s óta"
+
+#: includes/class-wpvivid-exporter.php:265
+#, gp-priority: normal
+msgid "Unpublished"
+msgstr "Nincs közzétéve"
+
+#: includes/class-wpvivid-exporter.php:150
+#, gp-priority: normal
+msgid "Comments"
+msgstr "Hozzászólások"
+
+#: includes/class-wpvivid-exporter.php:118
+#, gp-priority: normal
+msgid "Author"
+msgstr "Szerző"
+
+#: includes/class-wpvivid-exporter.php:115
+#, gp-priority: normal
+msgctxt "column name"
+msgid "Title"
+msgstr "Cím"
+
+#: includes/class-wpvivid-migrate.php:1259
+#, gp-priority: normal
+msgid "Note: The files you want to upload must be a backup created by WPvivid backup plugin. Make sure that uploading every part of a backup to the directory if the backup is split into many parts"
+msgstr "Megjegyzés: A feltölteni kívánt fájloknak a WPvivid backup bővítmény által készített biztonsági mentésnek kell lenniük. Győződjön meg róla, hogy a mentés minden részét feltölti a könyvtárba, ha a mentés több részre van osztva."
+
+#: includes/class-wpvivid-migrate.php:1256
+#, gp-priority: normal
+msgid "The backups will be uploaded to %s directory."
+msgstr "A biztonsági mentések feltöltésre kerülnek a %s könyvtárba."
+
+#: includes/class-wpvivid-migrate.php:1246
+#, gp-priority: normal
+msgid "Upload"
+msgstr "Feltöltés"
+
+#: includes/class-wpvivid-migrate.php:1186
+#, gp-priority: normal
+msgid "Transfer succeeded. Please scan the backup list on the destination site to display the backup, then restore the backup."
+msgstr "Az átvitel sikeres volt. Kérjük, vizsgálja át a céloldalon a biztonsági másolat listáját a biztonsági másolat megjelenítéséhez, majd állítsa vissza a biztonsági másolatot."
+
+#: includes/class-wpvivid-migrate.php:1125
+#, gp-priority: normal
+msgid "Choose what to migrate"
+msgstr "Válassza ki, mit szeretne migrálni"
+
+#: includes/class-wpvivid-migrate.php:1105
+#, gp-priority: normal
+msgid "3. Once done, the backup appears in backups list. Then, restore the backup."
+msgstr "3. Ha ez megtörtént, a biztonsági mentés megjelenik a biztonsági mentések listájában. Ezután állítsa vissza a biztonsági másolatot."
+
+#: includes/class-wpvivid-migrate.php:1104
+#, gp-priority: normal
+msgid "2.2 Upload the backup with FTP client to backup directory %s in destination site, then click <strong>Scan uploaded backup or received backup</strong> button."
+msgstr "2.2 Töltse fel a biztonsági másolatot FTP klienssel a céloldalon lévő %s biztonsági másolat könyvtárba, majd kattintson a <strong>Feltöltött vagy kapott biztonsági másolat beolvasása</strong> gombra."
+
+#: includes/class-wpvivid-migrate.php:1103
+#, gp-priority: normal
+msgid "2.1 Upload the backup to the upload section of WPvivid backup plugin in destination site."
+msgstr "2.1 Töltse fel a biztonsági másolatot a WPvivid backup bővítmény feltöltési szakaszába a céloldalon."
+
+#: includes/class-wpvivid-migrate.php:1102
+#, gp-priority: normal
+msgid "2. Upload the backup to destination site. There are two ways available to use:"
+msgstr "2. Töltse fel a biztonsági másolatot a célhelyre. Kétféle módon lehet ezt megtenni:"
+
+#: includes/class-wpvivid-migrate.php:1101
+#, gp-priority: normal
+msgid "1. Download a backup in backups list to your computer."
+msgstr "1. Töltse le a biztonsági másolatok listájában található biztonsági másolatot a számítógépére."
+
+#: includes/class-wpvivid-migrate.php:1100
+#, gp-priority: normal
+msgid "How to migrate Wordpress site manually to a new domain(site) with WPvivid backup plugin?"
+msgstr "Hogyan lehet a WordPress webhelyet manuálisan egy új domainre (webhelyre) migrálni a WPvivid biztonsági mentési bővítménnyel?"
+
+#: includes/class-wpvivid-migrate.php:1093
+#, gp-priority: normal
+msgid "2. Please migrate website with the manual way when using <strong>Local by Flywheel</strong> environment."
+msgstr "2. Kérjük, migrálja a weboldalt manuális módon, ha használja a <strong>Local by Flywheel</strong> környezetet."
+
+#: includes/class-wpvivid-migrate.php:1092
+#, gp-priority: normal
+msgid "1. In order to successfully complete the migration, you'd better deactivate <a href=\"https://wpvivid.com/best-redirect-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">301 redirect plugin</a>, <a href=\"https://wpvivid.com/8-best-wordpress-firewall-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">firewall and security plugin</a>, and <a href=\"https://wpvivid.com/best-free-wordpress-caching-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">caching plugin</a> (if they exist) before transferring website."
+msgstr "1. Az áttelepítés sikeres befejezéséhez jobb, ha kikapcsolja a <a href=\"https://wpvivid.com/best-redirect-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">301 redirect bővítményt,</a>, <a href=\"https://wpvivid.com/8-best-wordpress-firewall-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">a tűzfal és biztonsági bővítményt</a>, és a <a href=\"https://wpvivid.com/best-free-wordpress-caching-plugins.html\" target=\"_blank\" style=\"text-decoration: none;\">caching bővítményt</a> (ha van ilyen) a weboldal átadása előtt."
+
+#: includes/class-wpvivid-migrate.php:1091
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:864
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:902
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1190
+#, gp-priority: normal
+msgid "Note: "
+msgstr "Megjegyzés:"
+
+#: includes/class-wpvivid-migrate.php:996
+#, gp-priority: normal
+msgid "Choose the content you want to transfer"
+msgstr "Kiválasztani az átvinni kívánt tartalmat"
+
+#: includes/class-wpvivid-migrate.php:986
+#, gp-priority: normal
+msgid "The feature can help you transfer a Wordpress site to a new domain(site). It would be a convenient way to migrate your WP site from dev environment to live server or from old server to the new."
+msgstr "A funkció segíthet egy WordPress oldal átvitelében egy új domainre(oldalra). Ez egy kényelmes módja lenne a WP webhelyének a fejlesztői környezetből az élő szerverre vagy a régi szerverről az újra való áttelepítésének."
+
+#: admin/class-wpvivid-admin.php:231
+#, gp-priority: normal
+msgid "3. Go back to this page and paste the key in key box below. Lastly, click Save button."
+msgstr "3. Visszalépés erre az oldalra, és a kulcs beillesztése az alábbi kulcsmezőbe. Végül kattintás a Mentés gombra."
+
+#: admin/class-wpvivid-admin.php:230
+#, gp-priority: normal
+msgid "2. Generate a key by clicking Generate button and copy it."
+msgstr "2. Generáljon egy kulcsot a Generálás gombra kattintva, és másolja le azt."
+
+#: admin/class-wpvivid-admin.php:229
+#, gp-priority: normal
+msgid "1. Visit Key tab page of WPvivid backup plugin of destination site."
+msgstr "1. Látogasson el a WPvivid backup bővítmény kulcs lapjára a céloldalon."
+
+#: includes/class-wpvivid-migrate.php:851
+#, gp-priority: normal
+msgid "How to get a site key?"
+msgstr "Hogyan lehet webhelykulcsot szerezni?"
+
+#: includes/class-wpvivid-migrate.php:851
+#, gp-priority: normal
+msgid "Please paste the key below."
+msgstr "Kérjük, illessze be az alábbi kulcsot."
+
+#: includes/class-wpvivid-export-import.php:1124
+#: includes/class-wpvivid-export-import.php:1160
+#: includes/class-wpvivid-migrate.php:668 includes/class-wpvivid.php:613
+#: includes/class-wpvivid.php:926 includes/class-wpvivid.php:1153
+#, gp-priority: normal
+msgid "A task is already running. Please wait until the running task is complete, and try again."
+msgstr "Egy feladat már fut. Kérjük, várjon, amíg a futó feladat befejeződik, és próbálja meg újra."
+
+#: includes/class-wpvivid-migrate.php:402
+#, gp-priority: normal
+msgid "Generate"
+msgstr "Generálás"
+
+#: includes/class-wpvivid-migrate.php:400
+#, gp-priority: normal
+msgid "Tips: For security reason, please choose an appropriate expiration time for the key."
+msgstr "Tippek: Biztonsági okokból, kérjük, válasszon megfelelő lejárati időt a kulcshoz."
+
+#: includes/class-wpvivid-migrate.php:393
+#, gp-priority: normal
+msgid "The key will expire in "
+msgstr "A kulcs érvényessége a következő időpontban jár le"
+
+#: includes/class-wpvivid-migrate.php:391
+#, gp-priority: normal
+msgid "In order to allow another site to send a backup to this site, please generate a key below. Once the key is generated, this site is ready to receive a backup from another site. Then, please copy and paste the key in sending site and save it."
+msgstr "Ahhoz, hogy egy másik webhely biztonsági mentést küldhessen erre a webhelyre, kérjük, generáljon egy kulcsot az alábbiakban. A kulcs generálása után ez a webhely készen áll arra, hogy biztonsági mentést fogadjon egy másik webhelytől. Ezután másolja be a kulcsot a küldő webhelyre, és mentse el."
+
+#: includes/class-wpvivid-migrate.php:55
+#, gp-priority: normal
+msgid "Key"
+msgstr "Kulcs"
+
+#: includes/class-wpvivid-migrate.php:49
+#, gp-priority: normal
+msgid "Auto-Migration"
+msgstr "Automatikus migráció"
+
+#: includes/class-wpvivid-mail-report.php:582 includes/class-wpvivid.php:5279
+#, gp-priority: normal
+msgid "Unable to send email. Please check the configuration of email server."
+msgstr "Nem sikerült e-mailt küldeni. Kérjük, ellenőrizze az e-mail szerver konfigurációját."
+
+#. translators: %s: directory path
+#: includes/class-wpvivid-restore-site.php:272
+#: includes/staging/class-wpvivid-staging.php:2728
+#, gp-priority: normal
+msgid "Unable to create directory %s. Is its parent directory writable by the server?"
+msgstr "Nem sikerült létrehozni a %s könyvtárat. A szülő könyvtár írható a szerver által?"
+
+#: includes/class-wpvivid-function-realize.php:100
+#: includes/class-wpvivid-function-realize.php:112
+#: includes/class-wpvivid-function-realize.php:129
+#: includes/class-wpvivid.php:660 includes/class-wpvivid.php:720
+#: includes/class-wpvivid.php:775 includes/class-wpvivid.php:5603
+#: includes/staging/class-wpvivid-staging-log-page.php:881
+#: includes/staging/class-wpvivid-staging-log-page.php:891
+#: includes/staging/class-wpvivid-staging-log-page.php:1086
+#: includes/staging/class-wpvivid-staging-log-page.php:1095
+#, gp-priority: normal
+msgid "The log not found."
+msgstr "A napló nem található."
+
+#: includes/class-wpvivid-function-realize.php:95
+#: includes/class-wpvivid-function-realize.php:123
+#: includes/class-wpvivid.php:652 includes/class-wpvivid.php:766
+#, gp-priority: normal
+msgid "Retrieving the backup information failed while showing log. Please try again later."
+msgstr "A biztonsági mentési információk lekérdezése sikertelen volt a napló megjelenítése közben. Kérjük, próbálja meg később újra."
+
+#: includes/class-wpvivid-interface-mainwp.php:246
+#: includes/class-wpvivid-public-interface.php:225
+#: includes/class-wpvivid.php:687 includes/class-wpvivid.php:711
+#: includes/class-wpvivid.php:800 includes/class-wpvivid.php:5628
+#: includes/staging/class-wpvivid-staging-log-page.php:916
+#: includes/staging/class-wpvivid-staging-log-page.php:1148
+#, gp-priority: normal
+msgid "Reading the log failed. Please try again."
+msgstr "A naplófájl beolvasása sikertelen volt. Kérjük, próbálja meg újra."
+
+#: includes/class-wpvivid-interface-mainwp.php:184
+#: includes/class-wpvivid-interface-mainwp.php:255
+#: includes/class-wpvivid-interface-mainwp.php:308
+#: includes/class-wpvivid-public-interface.php:204
+#: includes/class-wpvivid-public-interface.php:234
+#: includes/class-wpvivid-public-interface.php:263
+#: includes/class-wpvivid.php:670 includes/class-wpvivid.php:729
+#: includes/class-wpvivid.php:784 includes/class-wpvivid.php:5612
+#: includes/staging/class-wpvivid-staging-log-page.php:900
+#, gp-priority: normal
+msgid "Unable to open the log file."
+msgstr "Nem sikerült megnyitni a naplófájlt."
+
+#: includes/class-wpvivid-interface-mainwp.php:140
+#: includes/class-wpvivid-migrate.php:713
+#: includes/class-wpvivid-public-interface.php:60
+#: includes/class-wpvivid.php:604
+#, gp-priority: normal
+msgid "Error occurred while parsing the request data. Please try to run backup again."
+msgstr "Hiba lépett fel a kérési adatok elemzése során. Kérjük, próbálja meg újra futtatni a biztonsági mentést."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:148
+#, gp-priority: normal
+msgid "Click the button to connect to SFTP server and add it to the storage list below."
+msgstr "Kattintson a gombra az SFTP szerverhez való csatlakozáshoz, és adja hozzá az alábbi tárolási listához."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:121
+#: includes/customclass/class-wpvivid-sftpclass.php:236
+#, gp-priority: normal
+msgid "Enter an absolute path and a custom subdirectory (optional) for holding the backups of current website. For example, /var/customfolder/"
+msgstr "Az aktuális weboldal biztonsági másolatainak tárolására szolgáló abszolút elérési útvonal és egy egyedi alkönyvtár (opcionális) megadása. Például: /var/customfolder/"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:116
+#: includes/customclass/class-wpvivid-sftpclass.php:231
+#, gp-priority: normal
+msgid "Absolute path must exist(e.g. /var)"
+msgstr "Az abszolút elérési útvonalnak léteznie kell (pl. /var)."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:109
+#: includes/customclass/class-wpvivid-sftpclass.php:224
+#, gp-priority: normal
+msgid "Enter the server port."
+msgstr "A szerver portjának megadása."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:104
+#: includes/customclass/class-wpvivid-sftpclass.php:219
+#, gp-priority: normal
+msgid "Port"
+msgstr "Port"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:97
+#: includes/customclass/class-wpvivid-sftpclass.php:212
+#, gp-priority: normal
+msgid "Enter the user password."
+msgstr "A felhasználó jelszavának megadása."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:92
+#: includes/customclass/class-wpvivid-sftpclass.php:207
+#, gp-priority: normal
+msgid "User Password"
+msgstr "A felhasználó jelszava"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:85
+#: includes/customclass/class-wpvivid-sftpclass.php:200
+#, gp-priority: normal
+msgid "Enter the user name."
+msgstr "A felhasználónév megadása."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:80
+#: includes/customclass/class-wpvivid-sftpclass.php:195
+#, gp-priority: normal
+msgid "User Name"
+msgstr "Felhasználónév"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:73
+#: includes/customclass/class-wpvivid-sftpclass.php:188
+#, gp-priority: normal
+msgid "Enter the server address."
+msgstr "A szerver címének megadása."
+
+#: includes/customclass/class-wpvivid-sftpclass.php:68
+#: includes/customclass/class-wpvivid-sftpclass.php:183
+#, gp-priority: normal
+msgid "Server Address"
+msgstr "Szerver címe"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:56
+#: includes/customclass/class-wpvivid-sftpclass.php:171
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. SFTP-001"
+msgstr "Egyedi álnév megadása: pl. SFTP-001"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:48
+#: includes/customclass/class-wpvivid-sftpclass.php:163
+#, gp-priority: normal
+msgid "Enter Your SFTP Account"
+msgstr "Az SFTP fiók megadása"
+
+#: includes/customclass/class-wpvivid-sftpclass.php:38
+#, gp-priority: normal
+msgid "SFTP"
+msgstr "SFTP"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:187
+#, gp-priority: normal
+msgid "The simplexml extension is not detected. Please install the extension first."
+msgstr "A simplexml kiterjesztést a rendszer nem észleli. Kérjük, először telepítse a kiterjesztést."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:178
+#, gp-priority: normal
+msgid "Click the button to connect to Amazon S3 storage and add it to the storage list below."
+msgstr "Kattintson a gombra az Amazon S3 tárolóhoz való csatlakozáshoz, és adja hozzá az alábbi tárolólistához."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:165
+#: includes/customclass/class-wpvivid-amazons3-plus.php:289
+#, gp-priority: normal
+msgid "Check the option to use Amazon S3 server-side encryption to protect data."
+msgstr "Jelölje be az Amazon S3 kiszolgálóoldali titkosítás használatára vonatkozó opciót az adatok védelmére."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:159
+#: includes/customclass/class-wpvivid-amazons3-plus.php:283
+#, gp-priority: normal
+msgid "Server-side encryption."
+msgstr "Kiszolgálóoldali titkosítás."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:151
+#: includes/customclass/class-wpvivid-amazons3-plus.php:275
+#, gp-priority: normal
+msgid "Check the option to use Amazon S3 Standard-Infrequent Access (S3 Standard-IA) storage class for data transfer."
+msgstr "Jelölje be az Amazon S3 Standard-Infrequent Access (S3 Standard-IA) tárolási osztály használatára vonatkozó opciót az adatátvitelhez."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:145
+#: includes/customclass/class-wpvivid-amazons3-plus.php:269
+#, gp-priority: normal
+msgid "Storage class: Standard (infrequent access)."
+msgstr "Tárolási osztály: Standard (ritka hozzáférés)."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:123
+#: includes/customclass/class-wpvivid-amazons3-plus.php:261
+#, gp-priority: normal
+msgid "Customize the directory where you want to store backups within the Bucket."
+msgstr "Testreszabhatja a könyvtárat, ahol a biztonsági mentéseket a Bucketen belül tárolni kívánja."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:111
+#: includes/customclass/class-wpvivid-amazons3-plus.php:249
+#, gp-priority: normal
+msgid "Enter an existed Bucket to create a custom backup storage directory."
+msgstr "Egy meglévő Bucket megadása egy egyedi biztonsági mentési tárolási könyvtár létrehozásához."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:106
+#: includes/customclass/class-wpvivid-amazons3-plus.php:244
+#, gp-priority: normal
+msgid "Amazon S3 Bucket Name(e.g. test)"
+msgstr "Amazon S3 Bucket neve (pl. test)"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:99
+#: includes/customclass/class-wpvivid-amazons3-plus.php:237
+#, gp-priority: normal
+msgid "How to get an AmazonS3 secret key."
+msgstr "Hogyan szerezzen egy AmazonS3 titkos kulcsot."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:99
+#: includes/customclass/class-wpvivid-amazons3-plus.php:237
+#, gp-priority: normal
+msgid "Enter your Amazon S3 secret key."
+msgstr "Adja meg az Amazon S3 titkos kulcsát."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:94
+#: includes/customclass/class-wpvivid-amazons3-plus.php:232
+#, gp-priority: normal
+msgid "Amazon S3 secret key"
+msgstr "Amazon S3 titkos kulcs"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:87
+#: includes/customclass/class-wpvivid-amazons3-plus.php:225
+#, gp-priority: normal
+msgid "How to get an AmazonS3 access key."
+msgstr "Hogyan szerezzen AmazonS3 hozzáférési kulcsot."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:87
+#: includes/customclass/class-wpvivid-amazons3-plus.php:225
+#, gp-priority: normal
+msgid "Enter your Amazon S3 access key."
+msgstr "Adja meg az Amazon S3 hozzáférési kulcsát."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:82
+#: includes/customclass/class-wpvivid-amazons3-plus.php:220
+#, gp-priority: normal
+msgid "Amazon S3 access key"
+msgstr "Amazon S3 hozzáférési kulcs"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:70
+#: includes/customclass/class-wpvivid-amazons3-plus.php:208
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. Amazon S3-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. Amazon S3-001"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:62
+#: includes/customclass/class-wpvivid-amazons3-plus.php:200
+#, gp-priority: normal
+msgid "Enter Your Amazon S3 Account"
+msgstr "Adja meg az Amazon S3 fiókját"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:44
+#, gp-priority: normal
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: includes/customclass/class-wpvivid-one-drive.php:400
+#, gp-priority: normal
+msgid "Authenticate with Microsoft OneDrive"
+msgstr "Hitelesítés a Microsoft OneDrive segítségével"
+
+#: includes/customclass/class-wpvivid-one-drive.php:221
+#: includes/customclass/class-wpvivid-one-drive.php:434
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. OneDrive-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. OneDrive-001"
+
+#: includes/customclass/class-wpvivid-one-drive.php:214
+#: includes/customclass/class-wpvivid-one-drive.php:427
+#, gp-priority: normal
+msgid "Enter Your Microsoft OneDrive Information"
+msgstr "Adja meg a saját Microsoft OneDrive adatait"
+
+#: includes/customclass/class-wpvivid-one-drive.php:208
+#: includes/customclass/class-wpvivid-one-drive.php:390
+#, gp-priority: normal
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Microsoft OneDrive authorization app (none of your backup data is sent to us)."
+msgstr "Kérjük, olvassa el <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">ezt az adatvédelmi szabályzatot</a> a Microsoft OneDrive engedélyező alkalmazásunk használatához ( az Ön biztonsági mentési adatai közül egyik sem kerül elküldésre hozzánk)."
+
+#: includes/customclass/class-wpvivid-one-drive.php:194
+#, gp-priority: normal
+msgid "Microsoft OneDrive"
+msgstr "Microsoft OneDrive"
+
+#: includes/customclass/class-wpvivid-one-drive.php:182
+#, gp-priority: normal
+msgid "You have authenticated the Microsoft OneDrive account as your remote storage."
+msgstr "Ön hitelesítette a Microsoft OneDrive fiókot távoli tárolóként."
+
+#: includes/customclass/class-wpvivid-google-drive.php:416
+#, gp-priority: normal
+msgid "Authenticate with Google Drive"
+msgstr "Google Drive hitelesítés"
+
+#: includes/customclass/class-wpvivid-google-drive.php:237
+#: includes/customclass/class-wpvivid-google-drive.php:451
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. Google Drive-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. Google Drive-001"
+
+#: includes/customclass/class-wpvivid-google-drive.php:230
+#: includes/customclass/class-wpvivid-google-drive.php:444
+#, gp-priority: normal
+msgid "Enter Your Google Drive Information"
+msgstr "Adja meg a saját Google Drive adatait"
+
+#: includes/customclass/class-wpvivid-google-drive.php:224
+#: includes/customclass/class-wpvivid-google-drive.php:406
+#, gp-priority: normal
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Google Drive authorization app (none of your backup data is sent to us)."
+msgstr "Kérjük, olvassa el <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">ezt az adatvédelmi szabályzatot</a> a Google Drive engedélyező alkalmazásunk használatához (az Ön biztonsági mentési adatai közül egyik sem kerül elküldésre hozzánk)."
+
+#: includes/customclass/class-wpvivid-google-drive.php:210
+#, gp-priority: normal
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: includes/customclass/class-wpvivid-google-drive.php:198
+#, gp-priority: normal
+msgid "You have authenticated the Google Drive account as your remote storage."
+msgstr "A Google Drive fiókot távoli tárolóként hitelesítette."
+
+#: includes/customclass/class-wpvivid-google-drive.php:108
+#, gp-priority: normal
+msgid "Authentication failed, the format of the client_secrets.json file is incorrect. Please delete and re-install the plugin to recreate the file."
+msgstr "A hitelesítés sikertelen, a client_secrets.json fájl formátuma helytelen. Kérjük, törölje és telepítse újra a bővítményt a fájl újbóli létrehozásához."
+
+#: includes/customclass/class-wpvivid-google-drive.php:104
+#, gp-priority: normal
+msgid "Authentication failed, the client_secrets.json file is missing. Please make sure the client_secrets.json file is in wpvivid-backuprestore\\includes\\customclass directory."
+msgstr "A hitelesítés sikertelen, a client_secrets.json fájl hiányzik. Kérjük, ellenőrizze, hogy a client_secrets.json fájl a wpvivid-backuprestore\\includes\\customclass könyvtárban található-e."
+
+#: includes/customclass/class-wpvivid-s3compat.php:518
+#, gp-priority: normal
+msgid "Click the button to connect to DigitalOcean Spaces storage and add it to the storage list below."
+msgstr "Kattintson a gombra a DigitalOcean Spaces tárolóhoz való csatlakozáshoz, és adja hozzá az alábbi tárolólistához."
+
+#: includes/customclass/class-wpvivid-s3compat.php:491
+#: includes/customclass/class-wpvivid-s3compat.php:606
+#, gp-priority: normal
+msgid "Enter the DigitalOcean Endpoint for the storage"
+msgstr "A DigitalOcean Endpoint megadása a tárolóhoz"
+
+#: includes/customclass/class-wpvivid-s3compat.php:486
+#: includes/customclass/class-wpvivid-s3compat.php:601
+#, gp-priority: normal
+msgid "region.digitaloceanspaces.com"
+msgstr "region.digitaloceanspaces.com"
+
+#: includes/customclass/class-wpvivid-s3compat.php:479
+#: includes/customclass/class-wpvivid-s3compat.php:594
+#, gp-priority: normal
+msgid "Customize the directory where you want to store backups within the Space."
+msgstr "Testreszabhatja azt a könyvtárat, ahol a biztonsági mentéseket tárolni kívánja a Space-en belül."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:118
+#: includes/customclass/class-wpvivid-amazons3-plus.php:256
+#: includes/customclass/class-wpvivid-s3compat.php:474
+#: includes/customclass/class-wpvivid-s3compat.php:589
+#, gp-priority: normal
+msgid "Custom Path"
+msgstr "Egyedi útvonal"
+
+#: includes/customclass/class-wpvivid-s3compat.php:467
+#: includes/customclass/class-wpvivid-s3compat.php:582
+#, gp-priority: normal
+msgid "Enter an existed Space to create a custom backup storage directory."
+msgstr "Adjon meg egy létező helyet egy egyedi biztonsági mentési tárolási könyvtár létrehozásához."
+
+#: includes/customclass/class-wpvivid-s3compat.php:462
+#: includes/customclass/class-wpvivid-s3compat.php:577
+#, gp-priority: normal
+msgid "Space Name(e.g. test)"
+msgstr "Tér neve (pl. test)"
+
+#: includes/customclass/class-wpvivid-s3compat.php:455
+#: includes/customclass/class-wpvivid-s3compat.php:570
+#, gp-priority: normal
+msgid "Enter your DigitalOcean Spaces secret key"
+msgstr "Adja meg a DigitalOcean Spaces titkos kulcsát"
+
+#: includes/customclass/class-wpvivid-s3compat.php:450
+#: includes/customclass/class-wpvivid-s3compat.php:565
+#, gp-priority: normal
+msgid "DigitalOcean Spaces secret key"
+msgstr "DigitalOcean Spaces titkos kulcs"
+
+#: includes/customclass/class-wpvivid-s3compat.php:443
+#: includes/customclass/class-wpvivid-s3compat.php:558
+#, gp-priority: normal
+msgid "Enter your DigitalOcean Spaces access key"
+msgstr "Adja meg a DigitalOcean Spaces hozzáférési kulcsát"
+
+#: includes/customclass/class-wpvivid-s3compat.php:438
+#: includes/customclass/class-wpvivid-s3compat.php:553
+#, gp-priority: normal
+msgid "DigitalOcean Spaces access key"
+msgstr "DigitalOcean Spaces hozzáférési kulcs"
+
+#: includes/customclass/class-wpvivid-s3compat.php:426
+#: includes/customclass/class-wpvivid-s3compat.php:541
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. DOS-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. DOS-001"
+
+#: includes/customclass/class-wpvivid-s3compat.php:418
+#: includes/customclass/class-wpvivid-s3compat.php:533
+#, gp-priority: normal
+msgid "Enter Your DigitalOcean Spaces Account"
+msgstr "Adja meg a DigitalOcean Spaces fiókját"
+
+#: includes/customclass/class-wpvivid-s3compat.php:409
+#, gp-priority: normal
+msgid "DigitalOcean Spaces"
+msgstr "DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:158
+#, gp-priority: normal
+msgid "Click the button to connect to FTP server and add it to the storage list below."
+msgstr "Kattintson a gombra az FTP szerverhez való csatlakozáshoz, és adja hozzá az alábbi tárolólistához."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:173
+#: includes/customclass/class-wpvivid-ftpclass.php:153
+#: includes/customclass/class-wpvivid-s3compat.php:513
+#: includes/customclass/class-wpvivid-sftpclass.php:143
+#, gp-priority: normal
+msgid "Test and Add"
+msgstr "Tesztelés és hozzáadás"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:145
+#: includes/customclass/class-wpvivid-ftpclass.php:246
+#, gp-priority: normal
+msgid "Uncheck the option to use FTP active mode when transferring files. Make sure the FTP server you are configuring supports the active FTP mode."
+msgstr "Törölje a jelölőnégyzetet az FTP aktív üzemmód használatára a fájlok átvitelekor. Győződjön meg róla, hogy a konfigurálandó FTP kiszolgáló támogatja az aktív FTP módot."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:139
+#: includes/customclass/class-wpvivid-ftpclass.php:240
+#, gp-priority: normal
+msgid "Uncheck this to enable FTP active mode."
+msgstr "Vegye ki ezt a jelölést az FTP aktív üzemmód engedélyezéséhez."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:117
+#: includes/customclass/class-wpvivid-ftpclass.php:232
+#, gp-priority: normal
+msgid "Enter an absolute path and a custom subdirectory (optional) for holding the backups of current website. For example, /home/username/customfolder"
+msgstr "Adjon meg egy abszolút elérési utat és egy egyedi alkönyvtárat (opcionális) az aktuális weboldal biztonsági mentéseinek tárolására. Például: /home/username/customfolder"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:112
+#: includes/customclass/class-wpvivid-ftpclass.php:227
+#, gp-priority: normal
+msgid "Absolute path must exist(e.g. /home/username)"
+msgstr "Az abszolút elérési útnak léteznie kell(pl. /home/felhasználónév)"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:105
+#: includes/customclass/class-wpvivid-ftpclass.php:220
+#, gp-priority: normal
+msgid "Enter the FTP server password."
+msgstr "Az FTP szerver jelszavának a megadása."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:100
+#: includes/customclass/class-wpvivid-ftpclass.php:215
+#, gp-priority: normal
+msgid "FTP password"
+msgstr "FTP jelszó"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:93
+#: includes/customclass/class-wpvivid-ftpclass.php:208
+#, gp-priority: normal
+msgid "Enter your FTP server user name."
+msgstr "Adja meg az FTP szerver felhasználónevét."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:88
+#: includes/customclass/class-wpvivid-ftpclass.php:203
+#, gp-priority: normal
+msgid "FTP login"
+msgstr "FTP bejelentkezés"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:81
+#, gp-priority: normal
+msgid "Pro feature: Change the FTP default port number"
+msgstr "Pro funkció: Az FTP alapértelmezett portszámának módosítása"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:69
+#: includes/customclass/class-wpvivid-ftpclass.php:196
+#, gp-priority: normal
+msgid "Enter the FTP server."
+msgstr "Az FTP kiszolgáló megadása."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:64
+#: includes/customclass/class-wpvivid-ftpclass.php:191
+#, gp-priority: normal
+msgid "FTP server (server's port 21)"
+msgstr "FTP kiszolgáló (a kiszolgáló 21-es portja)"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:52
+#: includes/customclass/class-wpvivid-ftpclass.php:179
+#, gp-priority: normal
+msgid "Enter an unique alias: e.g. FTP-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. FTP-001"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:45
+#: includes/customclass/class-wpvivid-ftpclass.php:172
+#, gp-priority: normal
+msgid "Enter Your FTP Account"
+msgstr "Adja meg az FTP fiókját"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:36
+#, gp-priority: normal
+msgid "FTP"
+msgstr "FTP"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:302
+#: includes/customclass/class-wpvivid-dropbox.php:687
+#: includes/customclass/class-wpvivid-ftpclass.php:259
+#: includes/customclass/class-wpvivid-google-drive.php:468
+#: includes/customclass/class-wpvivid-one-drive.php:451
+#: includes/customclass/class-wpvivid-s3compat.php:619
+#: includes/customclass/class-wpvivid-sftpclass.php:249
+#, gp-priority: normal
+msgid "Click the button to save the changes."
+msgstr "A gombra kattintva mentse a módosításokat."
+
+#: includes/customclass/class-wpvivid-dropbox.php:636
+#, gp-priority: normal
+msgid "Authenticate with Dropbox"
+msgstr "Dropbox hitelesítés"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:137
+#: includes/customclass/class-wpvivid-dropbox.php:503
+#: includes/customclass/class-wpvivid-ftpclass.php:131
+#: includes/customclass/class-wpvivid-google-drive.php:280
+#: includes/customclass/class-wpvivid-one-drive.php:264
+#: includes/customclass/class-wpvivid-s3compat.php:505
+#: includes/customclass/class-wpvivid-sftpclass.php:135
+#, gp-priority: normal
+msgid "Once checked, all this sites backups sent to a remote storage destination will be uploaded to this storage by default."
+msgstr "Ha bejelölte, a webhely összes távoli tárolóhelyre küldött biztonsági mentése alapértelmezés szerint erre a tárolóhelyre kerül feltöltésre."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:131
+#: includes/customclass/class-wpvivid-dropbox.php:497
+#: includes/customclass/class-wpvivid-ftpclass.php:125
+#: includes/customclass/class-wpvivid-google-drive.php:274
+#: includes/customclass/class-wpvivid-one-drive.php:258
+#: includes/customclass/class-wpvivid-s3compat.php:499
+#: includes/customclass/class-wpvivid-sftpclass.php:129
+#, gp-priority: normal
+msgid "Set as the default remote storage."
+msgstr "Alapértelmezett távoli tárolóként van beállítva."
+
+#: includes/customclass/class-wpvivid-dropbox.php:489
+#: includes/customclass/class-wpvivid-google-drive.php:266
+#: includes/customclass/class-wpvivid-one-drive.php:250
+#, gp-priority: normal
+msgid "Pro feature: Create a directory for storing the backups of the site"
+msgstr "Pro funkció: Hozzon létre egy könyvtárat a webhely biztonsági mentéseinek tárolására."
+
+#: includes/customclass/class-wpvivid-dropbox.php:477
+#: includes/customclass/class-wpvivid-google-drive.php:254
+#: includes/customclass/class-wpvivid-one-drive.php:238
+#, gp-priority: normal
+msgid "All backups will be uploaded to this directory."
+msgstr "Minden biztonsági mentés ebbe a könyvtárba kerül feltöltésre."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:75
+#: includes/customclass/class-wpvivid-amazons3-plus.php:213
+#: includes/customclass/class-wpvivid-dropbox.php:465
+#: includes/customclass/class-wpvivid-dropbox.php:675
+#: includes/customclass/class-wpvivid-ftpclass.php:57
+#: includes/customclass/class-wpvivid-ftpclass.php:184
+#: includes/customclass/class-wpvivid-google-drive.php:242
+#: includes/customclass/class-wpvivid-google-drive.php:456
+#: includes/customclass/class-wpvivid-one-drive.php:226
+#: includes/customclass/class-wpvivid-one-drive.php:439
+#: includes/customclass/class-wpvivid-s3compat.php:431
+#: includes/customclass/class-wpvivid-s3compat.php:546
+#: includes/customclass/class-wpvivid-sftpclass.php:61
+#: includes/customclass/class-wpvivid-sftpclass.php:176
+#, gp-priority: normal
+msgid "A name to help you identify the storage if you have multiple remote storage connected."
+msgstr "Egy név, amely segít a tároló azonosításában, ha több távoli tároló van csatlakoztatva."
+
+#: includes/customclass/class-wpvivid-dropbox.php:460
+#: includes/customclass/class-wpvivid-dropbox.php:670
+#, gp-priority: normal
+msgid "Enter a unique alias: e.g. Dropbox-001"
+msgstr "Adjon meg egy egyedi álnevet: pl. Dropbox-001"
+
+#: includes/customclass/class-wpvivid-dropbox.php:453
+#: includes/customclass/class-wpvivid-dropbox.php:629
+#, gp-priority: normal
+msgid "Enter Your Dropbox Information"
+msgstr "Dropbox adatainak megadása"
+
+#: includes/customclass/class-wpvivid-dropbox.php:447
+#: includes/customclass/class-wpvivid-dropbox.php:626
+#, gp-priority: normal
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Dropbox authorization app (none of your backup data is sent to us)."
+msgstr "Kérjük, olvassa el <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">ezen adatvédelmi szabályzatot</a> a Dropbox-engedélyező alkalmazásunk használatára vonatkozóan (a biztonsági mentések adatairól semmit sem küldünk el)."
+
+#: includes/customclass/class-wpvivid-dropbox.php:433
+#, gp-priority: normal
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: includes/customclass/class-wpvivid-dropbox.php:422
+#, gp-priority: normal
+msgid "You have authenticated the Dropbox account as your remote storage."
+msgstr "A Dropbox fiókot távoli tárolóként hitelesítette."
+
+#: includes/class-wpvivid-backup.php:2341
+#, gp-priority: normal
+msgid "Backing up %s finished."
+msgstr "A mentés %s befejeződött."
+
+#: includes/class-wpvivid-backup.php:2333
+#, gp-priority: normal
+msgid "Start backing up %s."
+msgstr "A mentés megkezdése %s."
+
+#: includes/class-wpvivid-backup.php:1160
+#: includes/class-wpvivid-backup.php:1177
+#: includes/class-wpvivid-function-realize.php:72
+#, gp-priority: normal
+msgid "The backup will be canceled after backing up the current chunk ends."
+msgstr "A biztonsági mentés az aktuális darab biztonsági mentésének befejezése után törlődik."
+
+#: includes/class-wpvivid-backup.php:1141
+#: includes/class-wpvivid-backup.php:1154
+#: includes/class-wpvivid-export-import.php:1309
+#, gp-priority: normal
+msgid "running time: "
+msgstr "Futási idő:"
+
+#: includes/class-wpvivid-backup.php:1141
+#: includes/class-wpvivid-backup.php:1154
+#: includes/class-wpvivid-export-import.php:1309
+#, gp-priority: normal
+msgid "Progress: "
+msgstr "Haladás:"
+
+#: includes/class-wpvivid-backup.php:1106
+#, gp-priority: normal
+msgid "Ready to backup. Progress: 0%, running time: 0second."
+msgstr "Készen áll a mentésre. Haladás: 0%, futási idő: 0másodperc."
+
+#: includes/class-wpvivid-importer.php:1925
+#: includes/class-wpvivid-importer.php:1930
+#: includes/class-wpvivid-importer.php:2155
+#: includes/class-wpvivid-importer.php:2351
+#, gp-priority: normal
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr "Úgy tűnik, ez nem egy helyes WXR fájl, vagy hiányzik/érvénytelen a verziószám"
+
+#: includes/class-wpvivid-importer.php:1878
+#, gp-priority: normal
+msgid "Details are shown above. The importer will now try again with a different parser..."
+msgstr "A részletek fent olvashatóak. Az importáló most egy másik elemzővel fog próbálkozni…"
+
+#: includes/class-wpvivid-importer.php:1877
+#: includes/class-wpvivid-importer.php:1913
+#: includes/class-wpvivid-importer.php:1921
+#, gp-priority: normal
+msgid "There was an error when reading this WXR file"
+msgstr "Hiba történt a WXR fájl olvasásakor"
+
+#: includes/class-wpvivid-importer.php:1782
+#, gp-priority: normal
+msgid "File not exist file:"
+msgstr "Nem létező fájl:"
+
+#: includes/class-wpvivid-importer.php:1737
+#, gp-priority: normal
+msgid "Invalid file type"
+msgstr "Érvénytelen fájltípus"
+
+#: includes/class-wpvivid-importer.php:1724
+#, gp-priority: normal
+msgid "Fetching attachments is not enabled"
+msgstr "A mellékletek lekérése nem engedélyezett"
+
+#: includes/class-wpvivid-importer.php:1676
+#: includes/class-wpvivid-importer.php:1777
+#, gp-priority: normal
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr "Sajnáljuk, ez a fájltípus biztonsági okokból nem engedélyezett."
+
+#: includes/class-wpvivid-importer.php:1669
+#, gp-priority: normal
+msgid "File not exist, file:"
+msgstr "Fájl nem létezik, fájl:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:309
+#: includes/class-wpvivid-exporter.php:594
+#: includes/class-wpvivid-importer.php:350
+#: includes/staging/class-wpvivid-staging-log-page.php:278
+#: includes/staging/class-wpvivid-staging-sites-list.php:651
+#: includes/staging/class-wpvivid-staging-sites-list.php:1070
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:286
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:664
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:351
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:806
+#, gp-priority: normal
+msgid "Last page"
+msgstr "Utolsó oldal"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:299
+#: includes/class-wpvivid-exporter.php:584
+#: includes/class-wpvivid-importer.php:340
+#: includes/staging/class-wpvivid-staging-log-page.php:268
+#: includes/staging/class-wpvivid-staging-sites-list.php:641
+#: includes/staging/class-wpvivid-staging-sites-list.php:1060
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:276
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:654
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:341
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:796
+#, gp-priority: normal
+msgid "Next page"
+msgstr "Következő oldal"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:291
+#: includes/class-wpvivid-exporter.php:576
+#: includes/class-wpvivid-importer.php:332
+#: includes/staging/class-wpvivid-staging-log-page.php:260
+#: includes/staging/class-wpvivid-staging-sites-list.php:633
+#: includes/staging/class-wpvivid-staging-sites-list.php:1052
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:268
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:646
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:333
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:788
+#, gp-priority: normal
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr "%1$s a %2$s-ból"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:281
+#: admin/partials/wpvivid-backup-restore-page-display.php:285
+#: includes/class-wpvivid-exporter.php:566
+#: includes/class-wpvivid-exporter.php:570
+#: includes/class-wpvivid-importer.php:322
+#: includes/class-wpvivid-importer.php:326
+#: includes/staging/class-wpvivid-staging-log-page.php:250
+#: includes/staging/class-wpvivid-staging-log-page.php:254
+#: includes/staging/class-wpvivid-staging-sites-list.php:623
+#: includes/staging/class-wpvivid-staging-sites-list.php:627
+#: includes/staging/class-wpvivid-staging-sites-list.php:1042
+#: includes/staging/class-wpvivid-staging-sites-list.php:1046
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:258
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:262
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:636
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:640
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:323
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:327
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:778
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:782
+#, gp-priority: normal
+msgid "Current Page"
+msgstr "Jelenlegi oldal"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:274
+#: includes/class-wpvivid-exporter.php:559
+#: includes/class-wpvivid-importer.php:315
+#: includes/staging/class-wpvivid-staging-log-page.php:243
+#: includes/staging/class-wpvivid-staging-sites-list.php:616
+#: includes/staging/class-wpvivid-staging-sites-list.php:1035
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:251
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:629
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:316
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:771
+#, gp-priority: normal
+msgid "Previous page"
+msgstr "Előző oldal"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:263
+#: includes/class-wpvivid-exporter.php:548
+#: includes/class-wpvivid-importer.php:304
+#: includes/staging/class-wpvivid-staging-log-page.php:232
+#: includes/staging/class-wpvivid-staging-sites-list.php:605
+#: includes/staging/class-wpvivid-staging-sites-list.php:1024
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:240
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:618
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:305
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:760
+#, gp-priority: normal
+msgid "First page"
+msgstr "Első oldal"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:232
+#: includes/class-wpvivid-exporter.php:512
+#: includes/class-wpvivid-importer.php:268
+#: includes/staging/class-wpvivid-staging-log-page.php:201
+#: includes/staging/class-wpvivid-staging-sites-list.php:574
+#: includes/staging/class-wpvivid-staging-sites-list.php:993
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:209
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:587
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:274
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:729
+#, gp-priority: normal
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s elem"
+msgstr[1] "%s elem"
+
+#: includes/class-wpvivid-importer.php:167
+#, gp-priority: normal
+msgid "Type: "
+msgstr "Típus:"
+
+#: includes/class-wpvivid-importer.php:89
+#, gp-priority: normal
+msgid "Media Files Size"
+msgstr "Médiafájlok mérete"
+
+#: includes/class-wpvivid-importer.php:88
+#, gp-priority: normal
+msgid "Count"
+msgstr "Számláló"
+
+#: includes/class-wpvivid-importer.php:87
+#, gp-priority: normal
+msgid "Post Types"
+msgstr "Bejegyzéstípusok"
+
+#: includes/class-wpvivid-importer.php:86
+#, gp-priority: normal
+msgid "File Name"
+msgstr "Fájlnév"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:35
+#: includes/class-wpvivid-exporter.php:71
+#: includes/class-wpvivid-importer.php:50
+#: includes/staging/class-wpvivid-staging-sites-list.php:360
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:53
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:431
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:55
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:510
+#, gp-priority: normal
+msgid "Select All"
+msgstr "Összes kijelölése"
+
+#: includes/class-wpvivid-backup-uploader.php:508
+#, gp-priority: normal
+msgid "Select Files"
+msgstr "Fájlok kiválasztása"
+
+#: includes/class-wpvivid-backup-uploader.php:507
+#, gp-priority: normal
+msgctxt "Uploader: Drop files here - or - Select Files"
+msgid "or"
+msgstr " vagy"
+
+#: includes/class-wpvivid-backup-uploader.php:506
+#, gp-priority: normal
+msgid "Drop files here"
+msgstr "Húzza ide a fájlokat"
+
+#: includes/class-wpvivid-backup-uploader.php:459
+#, gp-priority: normal
+msgid "Scan uploaded backup or received backup"
+msgstr "Feltöltött vagy fogadott biztonsági mentés beolvasása"
+
+#: includes/class-wpvivid-backup-uploader.php:456
+#, gp-priority: normal
+msgid "Tips: Click the button below to scan all uploaded or received backups in directory"
+msgstr "Tippek: Kattintson az alábbi gombra az összes feltöltött vagy fogadott biztonsági mentés beolvasásához a könyvtárban."
+
+#: admin/partials/wpvivid-admin-display.php:63
+#, gp-priority: normal
+msgid "Warning: There is no default remote storage available for the scheduled backups, please set up it first."
+msgstr "Figyelmeztetés: Nincs alapértelmezett távoli tárolási lehetőség az ütemezett biztonsági mentésekhez, kérjük, először állítsa be."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2524
+#, gp-priority: normal
+msgid "Next Backup: "
+msgstr "Következő biztonsági mentés:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2522
+#, gp-priority: normal
+msgid "Server Time: "
+msgstr "Kiszolgáló ideje:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2520
+#, gp-priority: normal
+msgid "Schedule Status: "
+msgstr "Ütemezés állapota:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2518
+#, gp-priority: normal
+msgid "Backup Schedule"
+msgstr "Biztonsági mentés ütemezése"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2499
+#, gp-priority: normal
+msgid "The settings are only for manual backup, which won't affect schedule settings."
+msgstr "A beállítások csak a kézi mentésre vonatkoznak, amelyek nem befolyásolják az ütemezési beállításokat."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2323
+#, gp-priority: normal
+msgid "This backup can only be deleted manually"
+msgstr "Ez a biztonsági mentés csak manuálisan törölhető"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2318
+#, gp-priority: normal
+msgid "Backup Now"
+msgstr "Biztonsági mentés most"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2305
+#, gp-priority: normal
+msgid "Send Backup to Remote Storage:"
+msgstr "Biztonsági mentés küldése távoli tárolóba:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2301
+#, gp-priority: normal
+msgid "Save Backups to Local"
+msgstr "A biztonsági mentések mentése helye"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2272
+#, gp-priority: normal
+msgid "rename directory"
+msgstr "könyvtár átnevezése"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2270
+#, gp-priority: normal
+msgid "Local Storage Directory:"
+msgstr "Helyi tárolási könyvtár:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2265
+#, gp-priority: normal
+msgid "Back Up Manually"
+msgstr "Kézi biztonsági mentés"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2212
+#: includes/class-wpvivid-migrate.php:360
+#, gp-priority: normal
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2206
+#: includes/class-wpvivid-migrate.php:1172 includes/class-wpvivid.php:4097
+#, gp-priority: normal
+msgid "Network Connection:"
+msgstr "Hálózati kapcsolat:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2203
+#: includes/class-wpvivid-migrate.php:1169 includes/class-wpvivid.php:4094
+#, gp-priority: normal
+msgid "Speed:"
+msgstr "Sebesség:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2202
+#: includes/class-wpvivid-migrate.php:1168 includes/class-wpvivid.php:4093
+#, gp-priority: normal
+msgid "Uploaded:"
+msgstr "Feltöltve:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2198
+#, gp-priority: normal
+msgid "File Size:"
+msgstr "Fájlméret:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2197
+#, gp-priority: normal
+msgid "Database Size:"
+msgstr "Adatbázis mérete:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1287
+#, gp-priority: normal
+msgid "The backup is stored on the remote storage, click on the button to download it to localhost."
+msgstr "A biztonsági mentés a távoli adattárolón van tárolva, kattintson a gombra a mentés letöltéséhez a localhostra."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1286
+#, gp-priority: normal
+msgid "Retrieve the backup to localhost"
+msgstr "A biztonsági mentés visszakeresése a localhostra"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1284
+#, gp-priority: normal
+msgid "Rollback"
+msgstr "Rollback"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1283
+#, gp-priority: normal
+msgid "Terminate"
+msgstr "A  megszüntetése"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1279
+#, gp-priority: normal
+msgid "Tips:"
+msgstr "Tippek:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1275
+#, gp-priority: normal
+msgid "Restore and keep the original domain (URL) unchanged"
+msgstr "Visszaállítás és az eredeti domain (URL) változatlanul hagyása"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1272
+#, gp-priority: normal
+msgid "Restore and replace the original domain (URL) with %s (migration)"
+msgstr "Visszaállítás és az eredeti domain (URL) helyettesítése %s (migráció) címmel"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1269
+#, gp-priority: normal
+msgid "Restore function will replace the current site's themes, plugins, uploads, database and/or other content directories with the existing equivalents in the selected backup."
+msgstr "A visszaállítási funkció az aktuális oldal sablonjait, bővítményeit, feltöltéseit, adatbázisát és/vagy egyéb tartalmi könyvtárakat a kiválasztott biztonsági másolatban található már meglévő megfelelőre cseréli."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1268
+#, gp-priority: normal
+msgid "Please do not close the page or switch to other pages when a restore task is running, as it could trigger some unexpected errors."
+msgstr "Kérjük, ne zárja be az oldalt, és ne váltson más oldalakra, amikor a visszaállítási feladat fut, mert ez váratlan hibákat okozhat."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1267
+#, gp-priority: normal
+msgid "Restore backup from:"
+msgstr "Biztonsági mentés visszaállítása a következő helyről:"
+
+#: admin/class-wpvivid-admin.php:228
+#, gp-priority: normal
+msgid "Step Three: Click 'Restore' button"
+msgstr "Harmadik lépés: Kattintson a 'Visszaállítás' gombra"
+
+#: admin/class-wpvivid-admin.php:227
+#, gp-priority: normal
+msgid "Step Two: Choose an option to complete restore, if any"
+msgstr "Második lépés: Válassza ki a visszaállítás befejezéséhez szükséges opciót, ha van ilyen."
+
+#: admin/class-wpvivid-admin.php:226
+#, gp-priority: normal
+msgid "Step One: In the backup list, click the 'Restore' button on the backup you want to restore. This will bring up the restore tab"
+msgstr "Első lépés: A biztonsági mentések listájában kattintson a visszaállítani kívánt biztonsági mentésen a \"Restore\" gombra. Ekkor megjelenik a visszaállítás lap"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1168
+#, gp-priority: normal
+msgid "This request might delete the backup being downloaded, are you sure you want to continue?"
+msgstr "Ez a kérés törölheti a letöltött biztonsági másolatot, biztos, hogy folytatni szeretné?"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1163
+#, gp-priority: normal
+msgid "Please select at least one item."
+msgstr "Kérjük, válasszon ki legalább egy elemet."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1124
+#, gp-priority: normal
+msgid "This request will delete the backup being downloaded, are you sure you want to continue?"
+msgstr "Ez a kérés törli a letöltött biztonsági másolatot, biztos, hogy folytatni szeretné?"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1115
+#, gp-priority: normal
+msgid "This backup is locked, are you sure to remove it? This backup will be deleted permanently from your hosting (localhost) and remote storages."
+msgstr "Ez a biztonsági mentés le van zárva, biztosan el tudja távolítani? Ez a biztonsági mentés véglegesen törlődik a tárhelyéről (localhost) és a távoli adattárolókból."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:581
+#, gp-priority: normal
+msgid "Delete the selected backups"
+msgstr "Törli a kiválasztott biztonsági mentéseket"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:568
+#, gp-priority: normal
+msgid "Delete"
+msgstr "Törlés"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:565
+#, gp-priority: normal
+msgid "Storage"
+msgstr "Tárolás"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:564
+#, gp-priority: normal
+msgid "Backup"
+msgstr "Biztonsági mentés"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:518
+#: admin/partials/wpvivid-backup-restore-page-display.php:567
+#: admin/partials/wpvivid-backup-restore-page-display.php:1282
+#: includes/class-wpvivid.php:5926
+#, gp-priority: normal
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:500
+#, gp-priority: normal
+msgid "Backups"
+msgstr "Biztonsági mentések"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:485
+#, gp-priority: normal
+msgid "How to restore your website from a backup(scheduled, manual, uploaded and received backup)"
+msgstr "Hogyan állíthatja vissza weboldalát biztonsági mentésből (ütemezett, kézi, feltöltött és kapott biztonsági mentés)"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:479
+#, gp-priority: normal
+msgid "->If backups are stored in web server, the plugin will list all relevant files immediately."
+msgstr "->Ha a biztonsági másolatokat webszerverén tárolja, a bővítmény azonnal felsorolja az összes releváns fájlt."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:478
+#, gp-priority: normal
+msgid "->If backups are stored in remote storage, our plugin will retrieve the backup to your web server first. This may take a little time depending on the size of backup files. Please be patient. Then you can download them to your PC."
+msgstr "->Ha a biztonsági másolatokat távoli adattárolóban tároljuk, a bővítményünk először a biztonsági másolatot fogja lekérni a webszerverre. Ez a mentési fájlok méretétől függően egy kis időt vehet igénybe. Kérjük, legyen türelmes. Ezután letöltheti őket a számítógépére."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:476
+#, gp-priority: normal
+msgid "About backup download"
+msgstr "A biztonsági mentés letöltéséről"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:36
+#: admin/partials/wpvivid-remote-storage-page-display.php:337
+#, gp-priority: normal
+msgid "Actions"
+msgstr "Műveletek"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:35
+#: admin/partials/wpvivid-remote-storage-page-display.php:336
+#, gp-priority: normal
+msgid "Remote Storage Alias"
+msgstr "Alias távoli adattároló"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:34
+#: admin/partials/wpvivid-remote-storage-page-display.php:335
+#, gp-priority: normal
+msgid "Storage Provider"
+msgstr "Adattároló szolgáltató"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:26
+#: admin/partials/wpvivid-remote-storage-page-display.php:327
+#, gp-priority: normal
+msgid "Please choose one storage to save your backups (remote storage)"
+msgstr "Kérjük, válasszon egy adattárolót a biztonsági mentések mentéséhez (távoli tároló)."
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:14
+#: admin/partials/wpvivid-remote-storage-page-display.php:320
+#, gp-priority: normal
+msgid "Storage Edit"
+msgstr "Tárhely szerkesztése"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:6
+#: admin/partials/wpvivid-remote-storage-page-display.php:318
+#, gp-priority: normal
+msgid "Storages"
+msgstr "Tárhelyek"
+
+#: admin/partials/wpvivid-settings-page-display.php:696
+#, gp-priority: normal
+msgid "Advanced Settings"
+msgstr "További beállítások"
+
+#: admin/partials/wpvivid-settings-page-display.php:690
+#, gp-priority: normal
+msgid "General Settings"
+msgstr "Általános beállítások"
+
+#: admin/partials/wpvivid-settings-page-display.php:674
+#, gp-priority: normal
+msgid "<strong>Retrying </strong>%s<strong> times when encountering a time-out error</strong>"
+msgstr "<strong>Újra próbálkozás</strong>%s<strong> időkorlátos hiba esetén</strong>"
+
+#: admin/partials/wpvivid-settings-page-display.php:660
+#, gp-priority: normal
+msgid "e.g.  if you choose a chunk size of 2MB, a 8MB file will use 4 chunks. Decreasing this value will break the ISP's transmission limit, for example:512KB"
+msgstr "Ha például 2 MB-os csomagméretet választ, akkor egy 8 MB-os fájl 4 csomagot fog használni. Ha ezt az értéket csökkenti, akkor az internetszolgáltató átviteli korlátja megszűnik, például:512KB"
+
+#: admin/partials/wpvivid-settings-page-display.php:657
+#, gp-priority: normal
+msgid "Chunk Size"
+msgstr "Feltöltési csomagok mérete"
+
+#: admin/partials/wpvivid-settings-page-display.php:655
+#, gp-priority: normal
+msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin in restore process. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
+msgstr "Állítsa be ezt az értéket, hogy a WPvivid backup bővítmény számára ideiglenes PHP memóriakorlátot alkalmazzon a visszaállítási folyamat során. Ezt az értéket alapértelmezés szerint 256M-ra állítjuk be. Növelje az értéket, ha a memória kimerülése hibával találkozik. Megjegyzés: egyes webtárhely-szolgáltatók nem feltétlenül támogatják ezt a beállítást."
+
+#: admin/partials/wpvivid-settings-page-display.php:652
+#, gp-priority: normal
+msgid "PHP Memory Limit for restoration"
+msgstr "A helyreállításhoz szükséges PHP memória határértéke"
+
+#: admin/partials/wpvivid-settings-page-display.php:650
+#, gp-priority: normal
+msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin to run a backup. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
+msgstr "Állítsa be ezt az értéket, hogy a WPvivid backup bővítmény számára ideiglenes PHP memória korlátot alkalmazzon a biztonsági mentés futtatásához. Ezt az értéket alapértelmezés szerint 256M-ra állítjuk be. Növelje az értéket, ha a memória kimerülése hibát észlel. Megjegyzés: egyes webtárhely-szolgáltatók nem feltétlenül támogatják ezt a beállítást."
+
+#: admin/partials/wpvivid-settings-page-display.php:647
+#, gp-priority: normal
+msgid "PHP Memory Limit for backup"
+msgstr "A PHP memória korlátozása a biztonsági mentéshez"
+
+#: admin/partials/wpvivid-settings-page-display.php:645
+#, gp-priority: normal
+msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of restore down. If the progress of restore encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
+msgstr "Az időkorlát nem a kiszolgáló PHP-időkorlátja. A futtatási idő lejártával a bővítményünk leállítja a visszaállítási folyamatot. Ha a visszaállítás folyamata time-outtal találkozik, ez azt jelenti, hogy közepes vagy nagy méretű webhelye van, kérjük, próbálja meg nagyobbra méretezni az értéket."
+
+#: admin/partials/wpvivid-settings-page-display.php:642
+#, gp-priority: normal
+msgid "PHP script execution timeout for restore"
+msgstr "A PHP-szkript futási időkorlátja a visszaállításhoz"
+
+#: admin/partials/wpvivid-settings-page-display.php:640
+#, gp-priority: normal
+msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
+msgstr "Az időkorlát nem a kiszolgáló PHP-időkorlátja. A futtatási idő lejártával a bővítményünk leállítja a biztonsági mentés folyamatát. Ha a mentés előrehaladása time-outtal találkozik, ez azt jelenti, hogy közepes vagy nagy méretű webhelye van, kérjük, próbálja meg nagyobbra méretezni az értéket."
+
+#: admin/partials/wpvivid-settings-page-display.php:637
+#, gp-priority: normal
+msgid "PHP script execution timeout for backup"
+msgstr "PHP-szkript futtatási időkorlát a biztonsági mentésnél"
+
+#: admin/partials/wpvivid-settings-page-display.php:635
+#, gp-priority: normal
+msgid "Using the option will ignore the file larger than the certain size in MB when backing up, '0' (zero) means unlimited."
+msgstr "Az opció használatával a mentés során figyelmen kívül hagyja a bizonyos MB-ban megadott méretnél nagyobb fájlokat, a '0' (nulla) érték korlátlan mennyiséget jelent."
+
+#: admin/partials/wpvivid-settings-page-display.php:632
+#, gp-priority: normal
+msgid "Exclude the files which are larger than"
+msgstr "Kizárja az olyan fájlokat, amelyek nagyobbak, mint"
+
+#: admin/partials/wpvivid-settings-page-display.php:630
+#, gp-priority: normal
+msgid "Some web hosting providers limit large zip files (e.g. 200MB), and therefore splitting your backup into many parts is an ideal way to avoid hitting the limitation if you are running a big website.  Please try to adjust the value if you are encountering backup errors. If you use a value of 0 MB, any backup files won't be split."
+msgstr "Egyes webtárhely-szolgáltatók korlátozzák a nagy méretű zip-fájlokat (pl. 200 MB), ezért a biztonsági mentés több részre osztása ideális módja annak, hogy elkerülje a korlátozás elérését, ha nagy weboldalt üzemeltet.  Kérjük, próbálja meg módosítani az értéket, ha mentési hibákkal találkozik. Ha 0 MB-os értéket használ, akkor a biztonsági másolatfájlok nem lesznek felosztva."
+
+#: admin/partials/wpvivid-settings-page-display.php:627
+#, gp-priority: normal
+msgid "Compress Files Every"
+msgstr "Minden fájl tömörítése"
+
+#: admin/partials/wpvivid-settings-page-display.php:618
+#, gp-priority: normal
+msgid "Compress and Archive"
+msgstr "Tömörítés és archiválás"
+
+#: admin/partials/wpvivid-settings-page-display.php:618
+#, gp-priority: normal
+msgid "It will cause a higher CPU Usage and is recommended in a VPS/ dedicated hosting environment."
+msgstr "Ez magasabb CPU-használatot eredményez, és ajánlott VPS/ dedikált hosting környezetben."
+
+#: admin/partials/wpvivid-settings-page-display.php:614
+#, gp-priority: normal
+msgid "Only Archive without compressing"
+msgstr "Csak archiválás tömörítés nélkül"
+
+#: admin/partials/wpvivid-settings-page-display.php:614
+#, gp-priority: normal
+msgid "It will cause a lower CPU Usage and is recommended in a web hosting/ shared hosting environment."
+msgstr "Alacsonyabb CPU-használatot eredményez, és ajánlott webtárhely/megosztott tárhely környezetben."
+
+#: admin/partials/wpvivid-settings-page-display.php:606
+#, gp-priority: normal
+msgid "It is recommended to choose PDO option if pdo_mysql extension is installed on your server, which lets you backup and restore your site faster."
+msgstr "Ajánlott a PDO opciót választani, ha a pdo_mysql kiterjesztés telepítve van a szerveren, amely lehetővé teszi a webhely gyorsabb mentését és visszaállítását."
+
+#: admin/partials/wpvivid-settings-page-display.php:600
+#, gp-priority: normal
+msgid "WPDB option has a better compatibility, but the speed of backup and restore is slower."
+msgstr "A WPDB opció jobb kompatibilitással rendelkezik, de a mentés és a visszaállítás sebessége lassabb."
+
+#: admin/partials/wpvivid-settings-page-display.php:595
+#, gp-priority: normal
+msgid "Database access method."
+msgstr "Adatbázis elérési módszer."
+
+#: admin/partials/wpvivid-settings-page-display.php:588
+#, gp-priority: normal
+msgid "Enabling this option can improve the backup success rate, but it will take more time for backup."
+msgstr "Ennek az opciónak az engedélyezése javíthatja a biztonsági mentés sikerességi arányát, de a mentés több időt igényel."
+
+#: admin/partials/wpvivid-settings-page-display.php:585
+#, gp-priority: normal
+msgid "Enable optimization mode for web hosting/shared hosting"
+msgstr "Optimalizálási mód engedélyezése webtárhely/megosztott tárhely esetén"
+
+#: admin/partials/wpvivid-settings-page-display.php:581
+#, gp-priority: normal
+msgid "Special optimization for web hosting/shared hosting"
+msgstr "Speciális optimalizálás webtárhelyhez/megosztott tárhelyhez"
+
+#: admin/partials/wpvivid-settings-page-display.php:581
+#, gp-priority: normal
+msgid "Enable the option when backup failed."
+msgstr "Engedélyezze az opciót, ha a mentés sikertelen."
+
+#: admin/partials/wpvivid-settings-page-display.php:461
+#, gp-priority: normal
+msgid "Importing the json file can help you set WPvivid's configuration on another wordpress site quickly."
+msgstr "A json fájl importálásával gyorsan beállíthatja a WPvivid beállításait egy másik wordpress oldalon."
+
+#: admin/partials/wpvivid-settings-page-display.php:460
+#: includes/class-wpvivid-export-import.php:1562
+#: includes/class-wpvivid-importer.php:194
+#, gp-priority: normal
+msgid "Import"
+msgstr "Importálás"
+
+#: admin/partials/wpvivid-settings-page-display.php:456
+#, gp-priority: normal
+msgid "Click 'Export' button to save WPvivid settings on your local computer."
+msgstr "Kattintson az 'Exportálás' gombra a WPvivid beállítások helyi számítógépre történő mentéséhez."
+
+#: admin/partials/wpvivid-settings-page-display.php:455
+#, gp-priority: normal
+msgid "Export"
+msgstr "Exportálás"
+
+#: admin/partials/wpvivid-settings-page-display.php:348
+#, gp-priority: normal
+msgid "Empty"
+msgstr "Üres"
+
+#: admin/partials/wpvivid-settings-page-display.php:344
+#, gp-priority: normal
+msgid "Temporary Files are created by wpvivid when restoring a website."
+msgstr "Az ideiglenes fájlokat a wpvivid hozza létre a weboldal helyreállításakor."
+
+#: admin/partials/wpvivid-settings-page-display.php:342
+#, gp-priority: normal
+msgid "Temporary Files"
+msgstr "Ideiglenes fájlok"
+
+#: admin/partials/wpvivid-settings-page-display.php:335
+#, gp-priority: normal
+msgid "Junk"
+msgstr "Levélszemét"
+
+#: admin/partials/wpvivid-settings-page-display.php:331
+#, gp-priority: normal
+msgid "Backup Cache"
+msgstr "Biztonsági mentés"
+
+#: admin/partials/wpvivid-settings-page-display.php:325
+#: admin/partials/wpvivid-settings-page-display.php:336
+#: admin/partials/wpvivid-settings-page-display.php:343
+#, gp-priority: normal
+msgid "Path:"
+msgstr "Útvonal: "
+
+#: admin/partials/wpvivid-settings-page-display.php:324
+#, gp-priority: normal
+msgid "logs"
+msgstr "Naplók"
+
+#: admin/partials/wpvivid-settings-page-display.php:319
+#, gp-priority: normal
+msgid "Calculate Sizes"
+msgstr "Méretek kiszámítása"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2201
+#: admin/partials/wpvivid-settings-page-display.php:317
+#: includes/class-wpvivid-migrate.php:1167 includes/class-wpvivid.php:4092
+#, gp-priority: normal
+msgid "Total Size:"
+msgstr "Teljes méret:"
+
+#: admin/partials/wpvivid-settings-page-display.php:313
+#, gp-priority: normal
+msgid "Web-server disk space in use by WPvivid"
+msgstr "A WPvivid által használt tárhely a webszervereken"
+
+#: admin/partials/wpvivid-settings-page-display.php:258
+#, gp-priority: normal
+msgid "Pro feature: Add another email address to get report"
+msgstr "Pro funkció: Adjon hozzá egy másik e-mail címet a jelentés lekéréséhez"
+
+#: admin/partials/wpvivid-settings-page-display.php:254
+#, gp-priority: normal
+msgid "Only send an email notification when a backup fails"
+msgstr "Csak akkor küldjön e-mail értesítést, ha a biztonsági mentés sikertelenül végződik"
+
+#: admin/partials/wpvivid-settings-page-display.php:250
+#, gp-priority: normal
+msgid "Always send an email notification when a backup is complete"
+msgstr "Mindig küldjön e-mail értesítést, ha a mentés befejeződött"
+
+#: admin/partials/wpvivid-settings-page-display.php:245
+#, gp-priority: normal
+msgid "Test Email"
+msgstr "Teszt e-mail"
+
+#: admin/partials/wpvivid-settings-page-display.php:231
+#, gp-priority: normal
+msgid "Enable email report"
+msgstr "Az email jelentés engedélyezése"
+
+#: admin/partials/wpvivid-settings-page-display.php:226
+#, gp-priority: normal
+msgid "In order to use this function, please install a <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text-decoration: none;\">WordPress SMTP plugin</a></strong> of your preference and configure your SMTP server first. This is because WordPress uses the PHP Mail function to send its emails by default, which is not supported by many hosts and can cause issues if it is not set properly."
+msgstr "Ennek a funkciónak a használatához telepítsen egy <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text-decoration: none;\">WordPress SMTP bővítményt</a></strong> és először konfigurálja az SMTP-kiszolgálót. Ennek oka, hogy a WordPress alapértelmezés szerint a PHP Mail funkciót használja az e-mailek küldésére, melyet sok tárhelyszolgáltató nem támogat, és problémákat okozhat, ha nem megfelelően van beállítva."
+
+#: admin/partials/wpvivid-settings-page-display.php:166
+#, gp-priority: normal
+msgid "The action is irreversible! It will remove all backups are out-of-date (including local web server and remote storage) if they exist."
+msgstr "A művelet visszafordíthatatlan! Eltávolít minden biztonsági másolatot, amely elavult (beleértve a helyi webkiszolgálót és a távoli tárhelyet is), ha létezik."
+
+#: admin/partials/wpvivid-settings-page-display.php:165
+#, gp-priority: normal
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: admin/partials/wpvivid-settings-page-display.php:153
+#, gp-priority: normal
+msgid "Remote Storage Directory:"
+msgstr "Távoli tárolási könyvtár:"
+
+#: admin/partials/wpvivid-settings-page-display.php:152
+#, gp-priority: normal
+msgid "Web Server Directory:"
+msgstr "Webkiszolgáló könyvtár:"
+
+#: admin/partials/wpvivid-settings-page-display.php:148
+#, gp-priority: normal
+msgid "Remove out-of-date backups"
+msgstr "Az elavult biztonsági mentések eltávolítása"
+
+#: admin/partials/wpvivid-settings-page-display.php:143
+#, gp-priority: normal
+msgid "Display domain(url) of current site in backup name. (e.g. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
+msgstr "Az aktuális webhely tartományának(url) megjelenítése a biztonsági mentés nevében. (pl. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
+
+#: admin/partials/wpvivid-settings-page-display.php:138
+#, gp-priority: normal
+msgid "Local storage directory:"
+msgstr "Helyi tárolási könyvtár:"
+
+#: admin/partials/wpvivid-settings-page-display.php:136
+#, gp-priority: normal
+msgid "Name your folder, this folder must be writable for creating backup files."
+msgstr "Nevezze el a mappát, és írhatónak kell lennie a biztonsági mentés létrehozásához."
+
+#: admin/partials/wpvivid-settings-page-display.php:134
+#, gp-priority: normal
+msgid "Backup Folder"
+msgstr "Biztonsági mentés mappa"
+
+#: admin/partials/wpvivid-settings-page-display.php:123
+#, gp-priority: normal
+msgid "Keep storing the backups in localhost after uploading to remote storage"
+msgstr "Tartsa meg a mentések tárolását a helyi tárhelyen a távoli adattárolóra való feltöltés után is."
+
+#: admin/partials/wpvivid-settings-page-display.php:117
+#, gp-priority: normal
+msgid "Merge all the backup files into single package when a backup completes. This will save great disk spaces, though takes longer time. We recommended you check the option especially on sites with insufficient server resources."
+msgstr "Az összes mentési fájl egyesítése egyetlen csomagba, amikor a mentés befejeződik. Ez nagy lemezterületet takarít meg, bár hosszabb időt vesz igénybe. Javasoljuk, hogy különösen az olyan webhelyeken ellenőrizze ezt az opciót, ahol a szerver erőforrásai nem elegendőek."
+
+#: admin/partials/wpvivid-settings-page-display.php:111
+#, gp-priority: normal
+msgid "Show WPvivid backup plugin on top admin bar"
+msgstr "A WPvivid biztonsági mentés bővítmény megjelenítése a felső admin sávban"
+
+#: admin/partials/wpvivid-settings-page-display.php:105
+#, gp-priority: normal
+msgid "Calculate the size of files, folder and database before backing up"
+msgstr "A fájlok, mappák és adatbázisok méretének kiszámítása a biztonsági mentés előtt"
+
+#: admin/partials/wpvivid-settings-page-display.php:100
+#, gp-priority: normal
+msgid "Pro feature: Retain more backups"
+msgstr "Pro funkció: Több biztonsági mentés megtartása"
+
+#: admin/partials/wpvivid-settings-page-display.php:100
+#, gp-priority: normal
+msgid "backups retained"
+msgstr "biztonsági mentések megtartása"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:405
+#: admin/partials/wpvivid-schedule-page-display.php:142
+#: includes/class-wpvivid-schedule.php:113
+#, gp-priority: normal
+msgid "Custom"
+msgstr "Egyedi"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:400
+#: admin/partials/wpvivid-schedule-page-display.php:136
+#: includes/class-wpvivid-migrate.php:1120
+#, gp-priority: normal
+msgid "Only Database"
+msgstr "Csak adatbázis"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:396
+#: admin/partials/wpvivid-schedule-page-display.php:131
+#: includes/class-wpvivid-migrate.php:1116
+#, gp-priority: normal
+msgid "WordPress Files (Exclude Database)"
+msgstr "WordPress fájlok (adatbázis kizárása)"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:392
+#: admin/partials/wpvivid-schedule-page-display.php:126
+#: includes/class-wpvivid-migrate.php:1112
+#, gp-priority: normal
+msgid "Database + Files (WordPress Files)"
+msgstr "Adatbázis + fájlok (WordPress fájlok)"
+
+#: admin/partials/wpvivid-schedule-page-display.php:118
+#, gp-priority: normal
+msgid "Being subjected to mechanisms of PHP, a scheduled backup task for your site will be triggered only when the site receives at least a visit at any page."
+msgstr "Mivel a PHP működési mechanizmusainak van alávetve, a webhelye ütemezett biztonsági mentési feladata csak akkor fog elindulni, ha a webhelyre legalább egy látogatás érkezik bármelyik oldalról."
+
+#: admin/partials/wpvivid-schedule-page-display.php:117
+#, gp-priority: normal
+msgid "Scheduled job will start at <strong>UTC</strong> time:"
+msgstr "Az ütemezett feladat <strong>UTC</strong> időpontban indul:"
+
+#: admin/partials/wpvivid-schedule-page-display.php:95
+#, gp-priority: normal
+msgid "+ Add another schedule"
+msgstr "+ Egy másik ütemezés hozzáadása"
+
+#: admin/partials/wpvivid-schedule-page-display.php:85
+#, gp-priority: normal
+msgid "Highlighted icon illuminates that you have choosed a remote storage to store backups"
+msgstr "A kiemelt ikon azt jelzi, hogy a biztonsági mentések tárolásához távoli tárolót választott ki"
+
+#: admin/partials/wpvivid-schedule-page-display.php:32
+#, gp-priority: normal
+msgid "Advanced Schedule"
+msgstr "Speciális ütemezés"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:408
+#: admin/partials/wpvivid-schedule-page-display.php:24
+#: admin/partials/wpvivid-schedule-page-display.php:36
+#: admin/partials/wpvivid-schedule-page-display.php:98
+#: admin/partials/wpvivid-schedule-page-display.php:146
+#: includes/class-wpvivid-migrate.php:1128
+#: includes/class-wpvivid-schedule.php:117
+#, gp-priority: normal
+msgid "Pro feature: learn more"
+msgstr "Pro funkció: tudjon meg többet"
+
+#: admin/partials/wpvivid-schedule-page-display.php:20
+#, gp-priority: normal
+msgid "Enable Incremental Backup"
+msgstr "Incremental Backup (inkrementális biztonsági mentés) engedélyezése"
+
+#: admin/partials/wpvivid-schedule-page-display.php:15
+#, gp-priority: normal
+msgid "Enable backup schedule"
+msgstr "Biztonsági mentés ütemezése engedélyezése"
+
+#: admin/partials/wpvivid-schedule-page-display.php:7
+#, gp-priority: normal
+msgid "Schedule Settings"
+msgstr "Ütemterv beállítások"
+
+#: admin/class-wpvivid-admin.php:1477
+#, gp-priority: normal
+msgid "START 14-DAY FREE TRIAL"
+msgstr "INDÍTSON 14 NAPOS INGYENES PRÓBAIDŐSZAKOT"
+
+#: admin/class-wpvivid-admin.php:1476
+#, gp-priority: normal
+msgid "*No credit card needed. Trial starts with the Free Trial plan with 2 sites. You can choose a plan at the end of the trial."
+msgstr "*Nincs szükség hitelkártyára. A próbaverzió a 2 oldalt tartalmazó ingyenes próbacsomaggal kezdődik. A próbaidő végén kiválaszthatja a csomagot."
+
+#: admin/class-wpvivid-admin.php:1464
+#, gp-priority: normal
+msgid "Unlimited"
+msgstr "Korlátlan"
+
+#: admin/class-wpvivid-admin.php:1422
+#, gp-priority: normal
+msgid "Ultimate"
+msgstr "Ultimate"
+
+#: admin/class-wpvivid-admin.php:1420
+#, gp-priority: normal
+msgid "Freelancer"
+msgstr "Szabadúszó"
+
+#: admin/class-wpvivid-admin.php:1394
+#, gp-priority: normal
+msgid "5. Set up remote storage for child sites in bulk (for WPvivid Backup Pro only)"
+msgstr "5. Távoli tárolás beállítása az aloldalakhoz tömegesen (csak a WPvivid Backup Pro esetében)"
+
+#: admin/class-wpvivid-admin.php:1389
+#, gp-priority: normal
+msgid "4. Install, claim and update WPvivid Backup Pro for child sites in bulk"
+msgstr "4. A WPvivid Backup Pro telepítése, igénylése és frissítése az aloldalakhoz tömegesen"
+
+#: admin/class-wpvivid-admin.php:1384
+#, gp-priority: normal
+msgid "3. Set WPvivid Backup Free and Pro settings for all child sites"
+msgstr "3. WPvivid Backup Free és Pro beállítások megadása minden kapcsolódó aloldalhoz"
+
+#: admin/class-wpvivid-admin.php:1380
+#, gp-priority: normal
+msgid "2. Set backup schedules for all child sites"
+msgstr "2. Biztonsági mentés ütemezésének beállítása az összes aloldali webhely számára"
+
+#: admin/class-wpvivid-admin.php:1377
+#, gp-priority: normal
+msgid "1. Create and download backups for a specific child site"
+msgstr "1. Biztonsági mentés létrehozása és letöltése egy adott aloldalhoz"
+
+#: admin/class-wpvivid-admin.php:1374
+#, gp-priority: normal
+msgid "Download WPvivid Backup for MainWP"
+msgstr "A WPvivid Backup for MainWP letöltése"
+
+#: admin/class-wpvivid-admin.php:1371
+#, gp-priority: normal
+msgid "If you are a MainWP user, you can set up and control WPvivid Backup Free and Pro for every child site directly from your MainWP dashboard, using our WPvivid Backup for MainWP extension."
+msgstr "Ha MainWP felhasználó, akkor a WPvivid Backup for MainWP bővítményünk segítségével közvetlenül a MainWP irányítópultjáról állíthatja be és ellenőrizheti a WPvivid Backup Free és Pro biztonsági mentést minden aloldalához."
+
+#: admin/class-wpvivid-admin.php:1263
+#: includes/staging/class-wpvivid-staging-log-page.php:384
+#, gp-priority: normal
+msgid " Next page > "
+msgstr " Következő oldal > "
+
+#: admin/class-wpvivid-admin.php:1252
+#: includes/staging/class-wpvivid-staging-log-page.php:373
+#, gp-priority: normal
+msgid " < Pre page "
+msgstr " < Előző oldal "
+
+#: admin/class-wpvivid-admin.php:1240 includes/class-wpvivid-importer.php:90
+#: includes/staging/class-wpvivid-staging-log-page.php:361
+#, gp-priority: normal
+msgid "Action"
+msgstr "Művelet"
+
+#: admin/class-wpvivid-admin.php:1239
+#: includes/staging/class-wpvivid-staging-log-page.php:360
+#, gp-priority: normal
+msgid "Log File Name"
+msgstr "Naplófájl neve"
+
+#: admin/class-wpvivid-admin.php:1238
+#: includes/staging/class-wpvivid-staging-log-page.php:54
+#: includes/staging/class-wpvivid-staging-log-page.php:359
+#, gp-priority: normal
+msgid "Log Type"
+msgstr "Napló típusa"
+
+#: admin/class-wpvivid-admin.php:1237 includes/class-wpvivid-exporter.php:152
+#: includes/staging/class-wpvivid-staging-log-page.php:358
+#, gp-priority: normal
+msgid "Date"
+msgstr "Dátum"
+
+#: admin/class-wpvivid-admin.php:1124
+#, gp-priority: normal
+msgid "Website Info Value"
+msgstr "A webhely adatainak értéke"
+
+#: admin/class-wpvivid-admin.php:1123
+#, gp-priority: normal
+msgid "Website Info Key"
+msgstr "A webhely információs kulcsa"
+
+#: admin/class-wpvivid-admin.php:1119
+#: admin/partials/wpvivid-backup-restore-page-display.php:529
+#: admin/partials/wpvivid-backup-restore-page-display.php:566
+#: includes/class-wpvivid.php:5918
+#: includes/staging/class-wpvivid-staging-log-page.php:57
+#, gp-priority: normal
+msgid "Download"
+msgstr "Letöltés"
+
+#: admin/class-wpvivid-admin.php:1116
+#, gp-priority: normal
+msgid "If you didn’t configure SMTP on your site, click the button below to download the relevant information (website info and error logs) to your PC when you are encountering some errors. Sending the files to us will help us diagnose what happened."
+msgstr "Amennyiben nem konfigurálta az SMTP-t a webhelyén, kattintson az alábbi gombra, hogy letöltse a lényeges információkat (webhelyinformációk és hibanaplók) a számítógépére, ha hibákkal találkozik. A fájlok elküldése segít nekünk a probléma diagnosztizálásában."
+
+#: admin/class-wpvivid-admin.php:1116
+#, gp-priority: normal
+msgid "Method 2."
+msgstr "2. módszer"
+
+#: admin/class-wpvivid-admin.php:1112
+#, gp-priority: normal
+msgid "Send Debug Information to Us"
+msgstr "Küldjön hibakeresési információkat nekünk"
+
+#: admin/class-wpvivid-admin.php:1109
+#, gp-priority: normal
+msgid "Please describe your problem here."
+msgstr "Kérjük, ismertesse itt a problémáját."
+
+#: admin/class-wpvivid-admin.php:1100
+#, gp-priority: normal
+msgid "My web hosting provider is:"
+msgstr "A tárhelyszolgáltatóm a következő:"
+
+#: admin/class-wpvivid-admin.php:1088
+#, gp-priority: normal
+msgid "I am using:"
+msgstr "Használom:"
+
+#: admin/class-wpvivid-admin.php:1083
+#, gp-priority: normal
+msgid "Your email:"
+msgstr "E-mail címe:"
+
+#: admin/class-wpvivid-admin.php:1082
+#, gp-priority: normal
+msgid "WPvivid support email:"
+msgstr "WPvivid ügyfélszolgálati e-mail:"
+
+#: admin/class-wpvivid-admin.php:1079
+#, gp-priority: normal
+msgid "If you have configured SMTP on your site, enter your email address and click the button below to send us the relevant information (website info and errors logs) when you are encountering errors. This will help us figure out what happened. Once the issue is resolved, we will inform you by your email address."
+msgstr "Ha beállította az SMTP-t a webhelyén, adja meg az e-mail címét, és kattintson az alábbi gombra, hogy elküldje nekünk a releváns információkat (webhelyinformációk és hibanaplók), amikor hibákkal találkozik. Ez segítségünkre lesz abban, hogy kiderítsük, mi történt. Amint a probléma megoldódik, tájékoztatni fogjuk Önt a megadott e-mail címen."
+
+#: admin/class-wpvivid-admin.php:1079
+#, gp-priority: normal
+msgid "Method 1."
+msgstr "1. módszer."
+
+#: admin/class-wpvivid-admin.php:1077
+#, gp-priority: normal
+msgid "There are two ways available to send us the debug information. The first one is recommended."
+msgstr "A hibakeresési információk elküldésének két módja van. Az elsőt javasoljuk."
+
+#: admin/class-wpvivid-admin.php:914 admin/class-wpvivid-admin.php:1001
+#: admin/partials/wpvivid-remote-storage-page-display.php:48
+#: admin/partials/wpvivid-remote-storage-page-display.php:345
+#: includes/customclass/class-wpvivid-amazons3-plus.php:297
+#: includes/customclass/class-wpvivid-dropbox.php:682
+#: includes/customclass/class-wpvivid-ftpclass.php:254
+#: includes/customclass/class-wpvivid-google-drive.php:463
+#: includes/customclass/class-wpvivid-one-drive.php:446
+#: includes/customclass/class-wpvivid-s3compat.php:614
+#: includes/customclass/class-wpvivid-sftpclass.php:244
+#: includes/staging/class-wpvivid-staging-setting.php:386
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:855
+#, gp-priority: normal
+msgid "Save Changes"
+msgstr "Változások mentése"
+
+#: admin/class-wpvivid-admin.php:872
+#, gp-priority: normal
+msgid "Premium"
+msgstr "Prémium"
+
+#: admin/class-wpvivid-admin.php:862
+#, gp-priority: normal
+msgid "MainWP"
+msgstr "MainWP"
+
+#: admin/class-wpvivid-admin.php:851
+#: admin/partials/wpvivid-backup-restore-page-display.php:507
+#: admin/partials/wpvivid-backup-restore-page-display.php:2213
+#: includes/class-wpvivid.php:5908
+#, gp-priority: normal
+msgid "Log"
+msgstr "Napló"
+
+#: admin/class-wpvivid-admin.php:1046
+#, gp-priority: normal
+msgid "Logs"
+msgstr "Naplózás"
+
+#: admin/class-wpvivid-admin.php:838
+#, gp-priority: normal
+msgid "Debug"
+msgstr "Hibakeresés"
+
+#: admin/class-wpvivid-admin.php:826
+#, gp-priority: normal
+msgid "Remote Storage"
+msgstr "Távoli tárolás"
+
+#: admin/class-wpvivid-admin.php:820
+#, gp-priority: normal
+msgid "Schedule"
+msgstr "Időzítés"
+
+#: admin/class-wpvivid-admin.php:696
+#, gp-priority: normal
+msgid "Class PclZip is not detected. Please update or reinstall your WordPress."
+msgstr "A PclZip Class nem került felismerésre. Kérjük, frissítse vagy telepítse újra a WordPress-t."
+
+#: admin/class-wpvivid-admin.php:690
+#, gp-priority: normal
+msgid "The %s extensions are not detected. Please install the extensions first."
+msgstr "A %s kiterjesztés nem került felismerésre. Kérjük, először telepítse a kiterjesztést."
+
+#: admin/class-wpvivid-admin.php:687
+#, gp-priority: normal
+msgid "The %s extension is not detected. Please install the extension first."
+msgstr "A %s kiterjesztés nem került felismerésre. Kérjük, először telepítse a kiterjesztést."
+
+#: admin/class-wpvivid-admin.php:565
+#, gp-priority: normal
+msgid "As Amazon S3 and DigitalOcean Space have upgraded their connection methods, please delete the previous connections and re-add your Amazon S3/DigitalOcean Space accounts to make sure the connections work."
+msgstr "Mivel az Amazon S3 és a DigitalOcean Space frissítette a csatlakozási módszereit, kérjük, törölje a korábbi kapcsolatokat, és adja hozzá újra az Amazon S3/DigitalOcean Space fiókjait, hogy megbizonyosodjon arról, hogy a kapcsolatok működnek."
+
+#: admin/class-wpvivid-admin.php:421
+#, gp-priority: normal
+msgid "Restore completed successfully."
+msgstr "A helyreállítás sikeresen befejeződött."
+
+#: admin/class-wpvivid-admin.php:415
+#, gp-priority: normal
+msgid "Cheers! WPvivid Backup plugin has restored successfully your website. If you found WPvivid Backup plugin helpful, a 5-star rating would be highly appreciated, which motivates us to keep providing new features."
+msgstr "Üdv! A WPvivid Backup bővítmény sikeresen helyreállította a webhelyét. Ha hasznosnak találta a WPvivid Backup bővítményt, az 5 csillagos értékelést nagyra értékeljük, ami motivál bennünket, hogy folyamatosan új funkciókat biztosítsunk."
+
+#: admin/class-wpvivid-admin.php:400
+#, gp-priority: normal
+msgid "Migration is complete and htaccess file is replaced. In order to successfully complete the migration, you'd better reinstall 301 redirect plugin, firewall and security plugin, and caching plugin if they exist."
+msgstr "Az áttelepítés befejeződött és a htaccess fájl kicserélődött. A migráció sikeres befejezéséhez jobb, ha újra telepíti a 301 redirect bővítményt, a tűzfal- és biztonsági bővítményt, valamint a gyorsítótárazási bővítményt, ha van ilyen."
+
+#: admin/class-wpvivid-admin.php:225
+#, gp-priority: normal
+msgid "Calculating the size of files, folder and database timed out. If you continue to receive this error, please go to the plugin settings, uncheck 'Calculate the size of files, folder and database before backing up', save changes, then try again."
+msgstr "A fájlok, mappák és adatbázisok méretének kiszámítása időzített. Ha továbbra is ezt a hibát kapja, kérjük, lépjen be a bővítmény beállításaiba, vegye ki a jelölőnégyzetet a 'Fájlok, mappa és adatbázis méretének kiszámítása a biztonsági mentés előtt', mentse a módosításokat, majd próbálja meg újra."
+
+#: admin/class-wpvivid-admin.php:224
+#, gp-priority: normal
+msgid "Warning: The alias already exists in storage list."
+msgstr "Figyelmeztetés: Az alias már létezik a tárolók listájában."
+
+#: admin/class-wpvivid-admin.php:223
+#: includes/customclass/class-wpvivid-ftpclass.php:302
+#: includes/customclass/class-wpvivid-ftpclass.php:310
+#, gp-priority: normal
+msgid "Warning: An alias for remote storage is required."
+msgstr "Figyelmeztetés: Alias név szükséges a távoli tárolóhoz."
+
+#: admin/class-wpvivid-admin.php:222
+#, gp-priority: normal
+msgid "Error:"
+msgstr "Hiba:"
+
+#: admin/class-wpvivid-admin.php:221
+#, gp-priority: normal
+msgid "Warning:"
+msgstr "Figyelem:"
+
+#: admin/class-wpvivid-admin.php:183
+#, gp-priority: normal
+msgid "Migrate WordPress"
+msgstr "A WordPress áttelepítése"
+
+#: admin/class-wpvivid-admin.php:182
+#, gp-priority: normal
+msgid "Restore Your Site from a Backup"
+msgstr "A webhely visszaállítása biztonsági mentésből"
+
+#: admin/class-wpvivid-admin.php:181
+#, gp-priority: normal
+msgid "Create a Manual Backup"
+msgstr "Manuális biztonsági mentés létrehozása"
+
+#: admin/class-wpvivid-admin.php:180
+#, gp-priority: normal
+msgid "WPvivid Backup Settings"
+msgstr "WPvivid Backup Beállítások"
+
+#: admin/class-wpvivid-admin.php:176
+#: includes/staging/class-wpvivid-staging.php:93
+#, gp-priority: normal
+msgid "How-to"
+msgstr "Útmutató"
+
+#: admin/class-wpvivid-admin.php:169
+#, gp-priority: normal
+msgid "Adjust <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Advanced Settings</a> for higher task success rate."
+msgstr "Állítsa be a <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Hosszabb beállításokat</a> a feladatok nagyobb sikeressége céljából."
+
+#: admin/class-wpvivid-admin.php:166
+#: includes/staging/class-wpvivid-staging.php:86
+#, gp-priority: normal
+msgid "Read <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">Troubleshooting page</a> for faster solutions."
+msgstr "Olvassa el a <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">Hibaelhárítás oldalát</a> a gyorsabb megoldásokért."
+
+#: admin/class-wpvivid-admin.php:161
+#: includes/staging/class-wpvivid-staging.php:81
+#, gp-priority: normal
+msgid "Troubleshooting"
+msgstr "Hibaelhárítás"
+
+#: admin/class-wpvivid-admin.php:154
+#: includes/staging/class-wpvivid-staging.php:74
+#, gp-priority: normal
+msgid "ChangeLog"
+msgstr "Változásnapló"
+
+#: admin/class-wpvivid-admin.php:151
+#: includes/staging/class-wpvivid-staging.php:71
+#, gp-priority: normal
+msgid "Current Version:"
+msgstr "Jelenlegi verzió:"
+
+#: admin/class-wpvivid-admin.php:135 admin/class-wpvivid-admin.php:358
+#: admin/class-wpvivid-admin.php:364 admin/class-wpvivid-admin.php:832
+#, gp-priority: normal
+msgid "Settings"
+msgstr "Beállítások"
+
+#: admin/class-wpvivid-admin.php:112 admin/class-wpvivid-admin.php:126
+#: admin/class-wpvivid-admin.php:814
+#, gp-priority: normal
+msgid "Backup & Restore"
+msgstr "Adatmentés & Visszaállítás"
+
+#. Author URI of the plugin
+#, gp-priority: normal
+msgid "https://wpvivid.com"
+msgstr "https://wpvivid.com"
+
+#. Author of the plugin
+#, gp-priority: normal
+msgid "WPvivid Team"
+msgstr "WPvivid csapat"
+
+#. Description of the plugin
+#, gp-priority: normal
+msgid "Clone or copy WP sites then move or migrate them to new host (new domain), schedule backups, transfer backups to leading remote storage. All in one."
+msgstr "WP oldalak klónozása vagy másolása, majd áthelyezése vagy migrálása új tárhelyre (új domain), biztonsági mentések ütemezése, biztonsági mentések átvitele vezető távoli tárolóhelyre. Minden egy helyen."
+
+#. Plugin Name of the plugin
+#: admin/partials/wpvivid-admin-display.php:49
+#: includes/class-wpvivid-export-import.php:94
+#, gp-priority: normal
+msgid "WPvivid Backup Plugin"
+msgstr "WPvivid Backup Bővítmény"

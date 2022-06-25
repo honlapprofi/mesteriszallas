@@ -2,14 +2,52 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-11 19:49:35+0000\n"
+"PO-Revision-Date: 2022-06-15 08:08:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: de\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
+
+#. translators: placeholder is the plugin name
+#: modules/site-health/admin-site-health.php:331
+msgid "%s information"
+msgstr "%s-Informationen"
+
+#: modules/site-health/admin-site-health.php:323
+msgid "Not loaded. Contact your host provider."
+msgstr "Nicht geladen. Kontaktiere deinen Hosting-Anbieter."
+
+#: modules/site-health/admin-site-health.php:322
+msgid "PHP SimpleXML extension"
+msgstr "PHP SimpleXML Erweiterung"
+
+#: install/plugin-updater.php:256
+msgid "Update now."
+msgstr "Jetzt aktualisieren."
+
+#. translators: 1. and 4. are opening anchor tags 2. the new plugin version 3.
+#. and 5. are closing anchor tags.
+#: install/plugin-updater.php:245
+msgid "%1$sView version %2$s details%3$s or %4$supdate now%5$s."
+msgstr "%1$sDetails der Version %2$s anzeigen%3$s oder %4$sjetzt aktualisieren%5$s."
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin
+#. version 3. closing anchor tag, do not translate.
+#: install/plugin-updater.php:236
+msgid "%1$sView version %2$s details%3$s."
+msgstr "%1$sDetails der Version %2$s anzeigen %3$s. "
+
+#: install/plugin-updater.php:231
+msgid "Contact your network administrator to install the update."
+msgstr "Bitte kontaktiere einen Netzwerk-Administrator, um das Update zu installieren."
+
+#. translators: the plugin name.
+#: install/plugin-updater.php:225
+msgid "There is a new version of %1$s available."
+msgstr "Eine neuere Version von %1$s ist verfügbar."
 
 #: settings/settings-url.php:56
 msgid "Some themes or plugins may not be fully compatible with the language defined by the content or by domains."
@@ -23,51 +61,47 @@ msgstr "Aktiviere Sprachen und Übersetzungen für Medien nur dann, wenn du den 
 msgid "When the front page is visited, redirects to itself in the browser preferred language. As this doesn't work if it is cached, Polylang will attempt to disable the front page cache for known cache plugins."
 msgstr "Wenn die Startseite besucht wird, wird sie zu sich selbst in der vom Browser bevorzugten Sprache umgeleitet. Dies funktioniert nicht, wenn sie gecacht ist, deshalb wird Polylang versuchen, den Cache der Startseite für bekannte Cache-Plugins zu deaktivieren."
 
-#: modules/site-health/admin-site-health.php:313
-msgid "Polylang warnings"
-msgstr "Polylang-Warnungen"
-
-#: modules/site-health/admin-site-health.php:307
+#: modules/site-health/admin-site-health.php:311
 msgid "Terms without language"
 msgstr "Begriffe ohne Sprache"
 
-#: modules/site-health/admin-site-health.php:300
+#: modules/site-health/admin-site-health.php:304
 msgid "Posts without language"
 msgstr "Beiträge ohne Sprache"
 
-#: modules/site-health/admin-site-health.php:280
+#: modules/site-health/admin-site-health.php:283
 msgid "The homepage is not translated in all languages"
 msgstr "Die Homepage ist nicht in alle Sprachen übersetzt"
 
-#: modules/site-health/admin-site-health.php:270
+#: modules/site-health/admin-site-health.php:273
 msgid "It is mandatory to translate the static front page in all languages."
 msgstr "Es ist obligatorisch, die statische Startseite in alle Sprachen zu übersetzen."
 
-#: modules/site-health/admin-site-health.php:262
+#: modules/site-health/admin-site-health.php:265
 msgid "All languages have a translated homepage"
 msgstr "Alle Sprachen haben eine übersetzte Homepage"
 
-#: modules/site-health/admin-site-health.php:246
+#: modules/site-health/admin-site-health.php:249
 msgid "Homepage translated"
 msgstr "Homepage übersetzt"
 
-#: modules/site-health/admin-site-health.php:231
+#: modules/site-health/admin-site-health.php:234
 msgid "Undefined"
 msgstr "Nicht definiert"
 
 #. translators: placeholder is the flag image
-#: modules/site-health/admin-site-health.php:213
+#: modules/site-health/admin-site-health.php:216
 msgid "Flag used in the language switcher: %s"
 msgstr "Flagge, die im Sprachumschalter benutzt wird: %s"
 
 #. translators: placeholder is the language name
-#: modules/site-health/admin-site-health.php:211
+#: modules/site-health/admin-site-health.php:214
 msgid "Language: %s"
 msgstr "Sprache: %s"
 
 #. translators: placeholder is the plugin name
-#: modules/site-health/admin-site-health.php:173
-msgid "%s Options"
+#: modules/site-health/admin-site-health.php:176
+msgid "%s options"
 msgstr "%s Optionen"
 
 #: include/widget-calendar.php:248
@@ -382,7 +416,7 @@ msgstr "Inhalt ohne Sprache"
 msgid "Your license key has been disabled."
 msgstr "Dein Lizenzschlüssel wurde deaktiviert."
 
-#: admin/admin-filters.php:122
+#: admin/admin-filters.php:120
 msgid "Privacy Policy Page"
 msgstr "Seite für Datenschutzerklärung"
 
@@ -403,10 +437,10 @@ msgstr "Nordmazedonien"
 
 #. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
 #: include/license.php:334
-msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s."
+msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s"
 msgstr "Dein Lizenzschlüssel läuft bald ab! Genau genommen am %1$s. %2$sErneuere heute deinen Lizenzschlüssel!%3$s."
 
-#: settings/settings-module.php:317
+#: settings/settings-module.php:318
 msgid "To enable this feature, you need Polylang Pro."
 msgstr "Um diese Funktion zu aktivieren benötigst du Polylang Pro."
 
@@ -431,7 +465,7 @@ msgstr "Wir haben festgestellt, dass du Polylang schon seit einiger Zeit nutzt. 
 #. translators: %1$s is link start tag, %2$s is link end tag.
 #: admin/admin-notices.php:236
 msgid "We have noticed that you are using Polylang with WooCommerce. To ensure compatibility, we recommend you use %1$sPolylang for WooCommerce%2$s."
-msgstr "Wir haben festgestellt, dass du Polylang mit WooCommerce nutzt. Um Kompatibilität zu gewährleisten, empfehlen wir die Nutzung von%1$sPolylang for WooCommerce%2$s."
+msgstr "Wir haben festgestellt, dass du Polylang mit WooCommerce nutzt. Um Kompatibilität zu gewährleisten, empfehlen wir die Nutzung von %1$sPolylang for WooCommerce%2$s."
 
 #. translators: %1$s and %2$s are Polylang version numbers
 #: install/upgrade.php:91
@@ -461,16 +495,16 @@ msgstr "WP SYNTEX"
 msgid "Dismiss this notice."
 msgstr "Hinweis ausblenden."
 
-#: include/filters.php:390
+#: include/filters.php:408
 msgid "User"
 msgstr "Benutzer"
 
 #. translators: %s is a language native name
-#: include/filters.php:381
+#: include/filters.php:399
 msgid "User description - %s"
 msgstr "Benutzerbeschreibung - %s"
 
-#: include/filters.php:357
+#: include/filters.php:375
 msgid "Translated user descriptions"
 msgstr "Übersetzte Benutzerbeschreibungen"
 
@@ -488,7 +522,7 @@ msgstr "https://polylang.pro"
 msgid "Support and extra features are available to %1$sPolylang Pro%2$s users."
 msgstr "Hilfe und Extrafunktionen sind für %1$sPolylang Pro%2$s-Benutzer verfügbar."
 
-#: settings/settings-module.php:319
+#: settings/settings-module.php:320
 msgid "Upgrade now."
 msgstr "Upgrade jetzt."
 
@@ -551,25 +585,13 @@ msgstr "Erlaubt das Teilen derselben URL-Titelform zwischen Sprachen für Beitr�
 msgid "Share slugs"
 msgstr "Teile Titelformen"
 
-#: install/plugin-updater.php:507
+#: install/plugin-updater.php:488
 msgid "Error"
 msgstr "Fehler"
 
-#: install/plugin-updater.php:507
+#: install/plugin-updater.php:488
 msgid "You do not have permission to install plugin updates"
 msgstr "Du hast keine Berechtigung zum Installieren von Plugin-Updates"
-
-#. translators: %1$s plugin name, %3$s plugin version, %2$s and %5$s are link
-#. start tags, %4$s and %6$s are link end tags.
-#: install/plugin-updater.php:263
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
-msgstr "Eine neue Version von %1$s ist verfügbar. %2$sZeige Version %3$s Details%4$s oder %5$saktualisiere jetzt%6$s."
-
-#. translators: %1$s plugin name, %3$s plugin version, %2$s is link start tag,
-#. %4$s is link end tag.
-#: install/plugin-updater.php:254
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-msgstr "Eine neue Version von %1$s ist verfügbar. %2$sZeige Version %3$s Details%4$s."
 
 #. translators: Post calendar label. %s: Date.
 #: include/widget-calendar.php:221
@@ -1669,7 +1691,6 @@ msgid "Andorra"
 msgstr "Andorra"
 
 #. translators: accessibility text
-#. translators: accessibility text
 #: admin/view-translations-post.php:58 admin/view-translations-term.php:77
 msgid "Translation"
 msgstr "&Uuml;bersetzung"
@@ -1686,7 +1707,7 @@ msgstr "Startseite"
 msgid "Add to Menu"
 msgstr "Zum Menu hinzufügen"
 
-#: admin/admin-model.php:300 modules/wizard/wizard.php:487
+#: admin/admin-model.php:312 modules/wizard/wizard.php:487
 msgid "The flag does not exist"
 msgstr "Die Flagge existiert nicht"
 
@@ -1696,20 +1717,16 @@ msgid "Add a translation in %s"
 msgstr "Füge eine Übersetzung in %s hinzu"
 
 #. translators: accessibility text, %s is a native language name
-#. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:196 admin/admin-filters-columns.php:333
 msgid "This item is in %s"
 msgstr "Dieser Eintrag ist in %s"
 
-#. translators: accessibility text, %s is a native language name
-#. translators: accessibility text, %s is a native language name
 #. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:177 admin/admin-filters-columns.php:319
 #: admin/admin-links.php:54
 msgid "Edit the translation in %s"
 msgstr "Bearbeite die Übersetzung in %s"
 
-#. translators: accessibility text, %s is a native language name
 #. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:173 admin/admin-filters-columns.php:315
 msgid "Edit this item in %s"
@@ -2169,7 +2186,7 @@ msgstr "Benutzerdefinierte Felder"
 msgid "Taxonomies"
 msgstr "Taxonomien"
 
-#: settings/settings-licenses.php:113 settings/settings-module.php:258
+#: settings/settings-licenses.php:113 settings/settings-module.php:259
 msgid "Settings saved."
 msgstr "Einstellungen gespeichert."
 
@@ -2177,7 +2194,7 @@ msgstr "Einstellungen gespeichert."
 msgid "Translations updated."
 msgstr "Übersetzungen aktualisiert."
 
-#: admin/admin-base.php:123 include/mo.php:21 settings/settings.php:146
+#: admin/admin-base.php:126 include/mo.php:21 settings/settings.php:146
 msgid "Strings translations"
 msgstr "Übersetzungen von Zeichenketten"
 
@@ -2189,15 +2206,15 @@ msgstr "Über Polylang"
 msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
 msgstr "Die Sprache wurde erstellt, aber die WordPress Sprachdatei wurde nicht heruntergeladen. Bitte  händisch installieren."
 
-#: admin/admin-base.php:454 admin/admin-base.php:472
+#: admin/admin-base.php:467 admin/admin-base.php:485
 msgid "Filters content by language"
 msgstr "Filtert Inhalte nach der Sprache"
 
-#: admin/admin-base.php:445
+#: admin/admin-base.php:458
 msgid "Show all languages"
 msgstr "Alle Sprachen anzeigen"
 
-#: admin/admin-base.php:126 admin/admin.php:104
+#: admin/admin-base.php:129 admin/admin.php:104
 #: settings/settings-module.php:120
 msgid "Settings"
 msgstr "Einstellungen"
@@ -2215,19 +2232,19 @@ msgstr "Widget-Titel"
 msgid "Language switcher"
 msgstr "Sprachenumschalter"
 
-#: admin/admin-model.php:288 modules/wizard/wizard.php:486
+#: admin/admin-model.php:300 modules/wizard/wizard.php:486
 msgid "The language must have a name"
 msgstr "Die Sprache muss einen Namen haben"
 
-#: admin/admin-model.php:281 modules/wizard/wizard.php:485
+#: admin/admin-model.php:293 modules/wizard/wizard.php:485
 msgid "The language code must be unique"
 msgstr "Der Sprachcode muss eindeutig sein"
 
-#: admin/admin-model.php:275 modules/wizard/wizard.php:484
+#: admin/admin-model.php:287 modules/wizard/wizard.php:484
 msgid "The language code contains invalid characters"
 msgstr "Die Sprachenkodierung enthält ungültige Zeichen"
 
-#: admin/admin-model.php:270 modules/wizard/wizard.php:483
+#: admin/admin-model.php:282 modules/wizard/wizard.php:483
 msgid "Enter a valid WordPress locale"
 msgstr "Bitte gib eine gültige Sprachdatei an"
 
@@ -2247,7 +2264,7 @@ msgstr " Sprache hinzugefügt."
 msgid "Impossible to add the language."
 msgstr "Unmöglich, die Sprache hinzuzufügen."
 
-#: include/filters-widgets-options.php:51 include/translated-post.php:118
+#: include/filters-widgets-options.php:51 include/translated-post.php:136
 msgid "All languages"
 msgstr "Alle Sprachen"
 
@@ -2271,11 +2288,11 @@ msgstr "Bearbeiten"
 msgid "(no parent)"
 msgstr "(keine Eltern)"
 
-#: admin/admin-base.php:119 admin/admin-base.php:143
+#: admin/admin-base.php:122 admin/admin-base.php:146
 #: admin/admin-classic-editor.php:75 admin/admin-nav-menu.php:72
 #: admin/admin-nav-menu.php:75 admin/admin-nav-menu.php:108
 #: admin/admin-notices.php:110 include/nav-menu.php:71
-#: include/translated-post.php:116
+#: include/translated-post.php:134
 #: modules/wizard/view-wizard-step-languages.php:29
 #: modules/wizard/wizard.php:498 settings/settings.php:126
 msgid "Languages"
@@ -2283,7 +2300,7 @@ msgstr "Sprachen"
 
 #: admin/admin-classic-editor.php:127 admin/admin-filters-columns.php:234
 #: admin/admin-filters-media.php:62 admin/admin-filters-term.php:151
-#: admin/admin-filters-term.php:224 include/translated-post.php:117
+#: admin/admin-filters-term.php:224 include/translated-post.php:135
 #: modules/wizard/view-wizard-step-languages.php:67
 msgid "Language"
 msgstr "Sprache"

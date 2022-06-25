@@ -133,6 +133,11 @@ class BookingData extends AbstractPostData {
 							'minimum'     => MPHB()->settings()->main()->getMinChildren(),
 							'context'     => array( 'view', 'edit' ),
 						),
+						'guest_name'                     => array(
+							'description' => 'Guest name.',
+							'type'        => 'string',
+							'context'     => array( 'view', 'edit' ),
+						),
 						'services'                     => array(
 							'description' => 'Services.',
 							'type'        => 'array',
@@ -508,6 +513,7 @@ class BookingData extends AbstractPostData {
 			$reservedAccommodations[ $key ]['rate']               = $reservedAccommodation->getRateId();
 			$reservedAccommodations[ $key ]['adults']             = $reservedAccommodation->getAdults();
 			$reservedAccommodations[ $key ]['children']           = $reservedAccommodation->getChildren();
+			$reservedAccommodations[ $key ]['guest_name']         = $reservedAccommodation->getGuestName();
 			$reservedAccommodations[ $key ]['services']           = array_map(
 				function ( $service ){
 					$serviceResponse['id'] = $service->getId();

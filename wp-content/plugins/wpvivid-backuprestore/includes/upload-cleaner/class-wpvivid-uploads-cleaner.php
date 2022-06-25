@@ -1001,9 +1001,6 @@ class WPvivid_Uploads_Cleaner
         include_once WPVIVID_PLUGIN_DIR . '/includes/upload-cleaner/class-wpvivid-isolate-files.php';
         include_once WPVIVID_PLUGIN_DIR. '/includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php';
 
-        $scan=new WPvivid_Uploads_Scanner();
-        $scan->check_table_exist();
-        $scan->check_unused_uploads_files_table_exist();
         $iso=new WPvivid_Isolate_Files();
         $iso->check_folder();
 
@@ -1057,8 +1054,38 @@ class WPvivid_Uploads_Cleaner
         return implode(DIRECTORY_SEPARATOR,$values);
     }
 
+    public function wpvivid_check_jet_engine()
+    {
+        if (!function_exists('get_plugins'))
+        {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
+        $active_plugins = get_option('active_plugins');
+        $plugins=get_plugins();
+        $jet_engine_slug='jet-engine/jet-engine.php';
+
+        if(!empty($plugins))
+        {
+            if(isset($plugins[$jet_engine_slug]))
+            {
+                if(in_array($jet_engine_slug, $active_plugins))
+                {
+                    _e('<div class="notice notice-warning inline" style="margin: 10px 0 0 0;"><p><strong>Warning:</strong> We detected that you use Jet Engine plugin on this site, 
+                                                        it may have compatibility issues with our plugin, which can result in an inaccuracy of the scan result, 
+                                                        so we recommend not using this feature yet.
+                                                          </p></div>');
+                }
+            }
+        }
+    }
+
     public function display()
     {
+        $scan=new WPvivid_Uploads_Scanner();
+        $scan->check_table_exist();
+        $scan->check_unused_uploads_files_table_exist();
+
         $upload_dir=wp_upload_dir();
 
         $path=$this->transfer_path($upload_dir['basedir']);
@@ -1078,6 +1105,9 @@ class WPvivid_Uploads_Cleaner
                 echo __('WPvivid Image Cleaner', 'wpvivid');
                 ?>
             </h1>
+
+            <?php $this->wpvivid_check_jet_engine(); ?>
+
             <?php
 
             if(!class_exists('WPvivid_Tab_Page_Container'))

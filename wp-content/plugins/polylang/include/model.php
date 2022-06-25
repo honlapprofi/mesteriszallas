@@ -80,19 +80,23 @@ class PLL_Model {
 	 */
 	public function get_languages_list( $args = array() ) {
 		if ( false === $languages = $this->cache->get( 'languages' ) ) {
+			$languages = array();
 
 			// Create the languages from taxonomies.
 			if ( ( defined( 'PLL_CACHE_LANGUAGES' ) && ! PLL_CACHE_LANGUAGES ) || false === ( $languages = get_transient( 'pll_languages_list' ) ) ) {
-				$languages = get_terms( 'language', array( 'hide_empty' => false, 'orderby' => 'term_group' ) );
-				$languages = empty( $languages ) || is_wp_error( $languages ) ? array() : $languages;
+				$languages = array();
+
+				$post_languages = $this->get_language_terms();
 
 				$term_languages = get_terms( 'term_language', array( 'hide_empty' => false ) );
 				$term_languages = empty( $term_languages ) || is_wp_error( $term_languages ) ?
 					array() : array_combine( wp_list_pluck( $term_languages, 'slug' ), $term_languages );
 
-				if ( ! empty( $languages ) && ! empty( $term_languages ) ) {
-					foreach ( $languages as $k => $v ) {
-						$languages[ $k ] = new PLL_Language( $v, $term_languages[ 'pll_' . $v->slug ] );
+				if ( ! empty( $post_languages ) && ! empty( $term_languages ) ) {
+					foreach ( $post_languages as $k => $v ) {
+						if ( isset( $term_languages[ 'pll_' . $v->slug ] ) ) {
+							$languages[ $k ] = new PLL_Language( $v, $term_languages[ 'pll_' . $v->slug ] );
+						}
 					}
 
 					// We will need the languages list to allow its access in the filter below.
@@ -115,9 +119,6 @@ class PLL_Model {
 					 * @see https://wordpress.org/support/topic/fatal-error-pll_model_languages_list?replies=8#post-6782255
 					 */
 					set_transient( 'pll_languages_list', array_map( 'get_object_vars', $languages ) );
-				}
-				else {
-					$languages = array(); // In case something went wrong.
 				}
 			}
 
@@ -508,6 +509,8 @@ class PLL_Model {
 		$counts = wp_cache_get( $cache_key, 'counts' );
 
 		if ( false === $counts ) {
+			$counts = array();
+
 			$select = "SELECT pll_tr.term_taxonomy_id, COUNT( * ) AS num_posts FROM {$wpdb->posts}";
 			$join = $this->post->join_clause();
 			$where = sprintf( " WHERE post_status = '%s'", esc_sql( $q['post_status'] ) );
@@ -701,5 +704,53 @@ class PLL_Model {
 		}
 
 		return $term_ids;
+	}
+
+	/**
+	 * Filters the ORDERBY clause of the languages query.
+	 * This allows to order languages by `term_group` and `term_id`.
+	 *
+	 * @since 3.2.3
+	 *
+	 * @param  string   $orderby    `ORDERBY` clause of the terms query.
+	 * @param  array    $args       An array of term query arguments.
+	 * @param  string[] $taxonomies An array of taxonomy names.
+	 * @return string
+	 */
+	public function filter_language_terms_orderby( $orderby, $args, $taxonomies ) {
+		if ( ! is_array( $taxonomies ) || count( $taxonomies ) > 1 ) {
+			return $orderby;
+		}
+
+		if ( 'language' !== reset( $taxonomies ) ) {
+			return $orderby;
+		}
+
+		if ( empty( $orderby ) || ! is_string( $orderby ) ) {
+			return $orderby;
+		}
+
+		if ( ! preg_match( '@^(?<alias>[^.]+)\.term_group$@', $orderby, $matches ) ) {
+			return $orderby;
+		}
+
+		return sprintf( '%1$s.term_group, %1$s.term_id', $matches['alias'] );
+	}
+
+	/**
+	 * Returns the list of existing language terms.
+	 * - Returns all terms, that are or not assigned to posts.
+	 * - Terms are ordered by `term_group` and `term_id` (see `PLL_Model->filter_language_terms_orderby()`).
+	 *
+	 * @since 3.2.3
+	 *
+	 * @return array<WP_Term>
+	 */
+	protected function get_language_terms() {
+		add_filter( 'get_terms_orderby', array( $this, 'filter_language_terms_orderby' ), 10, 3 );
+		$post_languages = get_terms( array( 'taxonomy' => 'language', 'hide_empty' => false, 'orderby' => 'term_group' ) );
+		remove_filter( 'get_terms_orderby', array( $this, 'filter_language_terms_orderby' ) );
+
+		return empty( $post_languages ) || is_wp_error( $post_languages ) ? array() : $post_languages;
 	}
 }

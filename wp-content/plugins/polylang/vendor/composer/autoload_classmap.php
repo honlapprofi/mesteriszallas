@@ -43,6 +43,7 @@ return array(
     'PLL_Choose_Lang_Domain' => $baseDir . '/frontend/choose-lang-domain.php',
     'PLL_Choose_Lang_Url' => $baseDir . '/frontend/choose-lang-url.php',
     'PLL_Cookie' => $baseDir . '/include/cookie.php',
+    'PLL_Db_Tools' => $baseDir . '/include/db-tools.php',
     'PLL_Domain_Mapping' => $baseDir . '/integrations/domain-mapping/domain-mapping.php',
     'PLL_Duplicate_Post' => $baseDir . '/integrations/duplicate-post/duplicate-post.php',
     'PLL_Featured_Content' => $baseDir . '/integrations/jetpack/featured-content.php',

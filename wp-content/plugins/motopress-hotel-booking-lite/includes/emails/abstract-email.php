@@ -146,7 +146,7 @@ abstract class AbstractEmail {
         return $isSended;
     }
 	
-	public function triggerCustomerRegistration( $customer, $userAtts, $atts = array() ) {
+	public function triggerCustomerRegistration( $customer, $userAtts, $atts = array(), $booking = null ) {
 		$this->isTestMode = isset($atts['test_mode']) && $atts['test_mode'];
 
 		// Check if the email is disabled
@@ -155,6 +155,7 @@ abstract class AbstractEmail {
 		}
 
 		$this->setupCustomer( $customer, $userAtts );
+		$this->setupBooking( $booking );
 
 		// Do we have any receiver?
 		if (!$this->checkReceiver()) {

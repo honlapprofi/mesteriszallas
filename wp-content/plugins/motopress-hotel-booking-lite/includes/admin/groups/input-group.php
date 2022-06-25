@@ -56,7 +56,11 @@ abstract class InputGroup {
 		$index = is_numeric( $key ) ? intval( $key ) : $this->getIndexByName( $key );
 
 		if ( isset( $this->fields[$index] ) ) {
-			unset( $fields[$index] );
+			unset( $this->fields[$index] );
+
+			// Reset the indexes so that there are no gaps
+			$this->fields = array_values( $this->fields );
+
 			return true;
 		}
 
@@ -90,13 +94,26 @@ abstract class InputGroup {
 	 * @return int Field index or -1 if nothing found.
 	 */
 	public function getIndexByName( $name ){
-		for ( $i = 0, $count = count( $this->fields ); $i < $count; $i++ ) {
-			if ( $name == $this->fields[$i]->getName() ) {
+		// Don't use for() here - don't rely on the absence of gaps
+		// in $this->fields
+		foreach ( $this->fields as $i => $field ) {
+			if ( $field->getName() === $name ) {
 				return $i;
 			}
 		}
 
 		return -1;
+	}
+
+	/**
+	 * @since 4.2.4
+	 *
+	 * @param string $name
+	 *
+	 * @return bool
+	 */
+	public function hasField( $name ){
+		return $this->getIndexByName( $name ) >= 0;
 	}
 
 	public function getName(){
@@ -124,9 +141,16 @@ abstract class InputGroup {
 		$atts = array();
 
 		foreach ( $this->fields as $field ) {
+			// Skip read-only fields
 			if ( !$allowReadonly && $field->isReadonly() ) {
 				continue;
 			}
+
+			// Also skip the disabled ones
+			if ( $field->isDisabled() ) {
+				continue;
+			}
+
 			$fieldName = $field->getName();
 
 			if ( isset( $request[$fieldName] ) ) {

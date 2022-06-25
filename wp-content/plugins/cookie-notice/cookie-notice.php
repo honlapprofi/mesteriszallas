@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice & Compliance for GDPR / CCPA
 Description: Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.
-Version: 2.2.3
+Version: 2.3.0
 Author: Hu-manity.co
 Author URI: https://hu-manity.co/
 Plugin URI: https://hu-manity.co/
@@ -86,7 +86,7 @@ class Cookie_Notice {
 			'update_notice'				=> true,
 			'update_delay_date'			=> 0
 		),
-		'version'	=> '2.2.3'
+		'version'	=> '2.3.0'
 	);
 	private $deactivaion_url = '';
 	
@@ -738,9 +738,11 @@ class Cookie_Notice {
 	 * @return array
 	 */
 	public function check_legacy_params( $options, $params ) {
-		foreach ( $params as $param ) {
-			if ( array_key_exists( $param, $options ) && ! is_bool( $options[$param] ) )
-				$options[$param] = $options[$param] === 'yes';
+		if ( is_array( $options ) ) {
+			foreach ( $params as $param ) {
+				if ( array_key_exists( $param, $options ) && ! is_bool( $options[$param] ) )
+					$options[$param] = $options[$param] === 'yes';
+			}
 		}
 
 		return $options;

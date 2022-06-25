@@ -186,7 +186,7 @@ class WPvivid_Backuplist
         $oldest=0;
         foreach ($list as $k=>$backup)
         {
-            if(!array_key_exists('lock',$backup))
+            if(!array_key_exists('lock',$backup) || (isset($backup['lock']) && $backup['lock'] == '0'))
             {
                 if ($oldest == 0)
                 {

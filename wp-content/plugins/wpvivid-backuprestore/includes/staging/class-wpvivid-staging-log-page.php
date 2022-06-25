@@ -486,7 +486,7 @@ class WPvivid_Staging_Log_Page_Free
                 <td>'.__($value['des'], 'wpvivid-backuprestore').'</td>
                 <td>'.__($value['file_name'], 'wpvivid-backuprestore').'</td>
                 <td>
-                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['file_name'].'\', \''.'staging'.'\', \''.$value['result'].'\')" style="cursor:pointer;">
+                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['id'].'\', \''.'staging'.'\')" style="cursor:pointer;">
                     <img src="'.esc_url(WPVIVID_PLUGIN_URL.$pic_log).'" style="vertical-align:middle;">Log
                     </a>
                 </td>
@@ -638,6 +638,13 @@ class WPvivid_Staging_Log_Page_Free
             {
                 $log_file=array();
                 $log_file['file_name']=basename($file);
+                $log_file['id']='';
+                if(preg_match('/wpvivid-(.*?)_/', basename($file), $matches))
+                {
+                    $id= $matches[0];
+                    $id=substr($id,0,strlen($id)-1);
+                    $log_file['id']=$id;
+                }
                 $log_file['path']=$file;
                 $log_file['des']='';
                 $log_file['time']='';
@@ -718,6 +725,13 @@ class WPvivid_Staging_Log_Page_Free
             {
                 $log_file=array();
                 $log_file['file_name']=basename($file);
+                $log_file['id']='';
+                if(preg_match('/wpvivid-(.*?)_/', basename($file), $matches))
+                {
+                    $id= $matches[0];
+                    $id=substr($id,0,strlen($id)-1);
+                    $log_file['id']=$id;
+                }
                 $log_file['path']=$file;
                 $log_file['des']='';
                 $log_file['time']='';
@@ -1070,7 +1084,12 @@ class WPvivid_Staging_Log_Page_Free
                 else
                 {
                     $message= __('The log not found.', 'wpvivid');
-                    echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
+                    echo sprintf(
+                        __( $message. '%1$stry again%2$s.', 'wpvivid' ),
+                        '<a href="' . $admin_url . '">',
+                        '</a>'
+                    );
+                    //echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
                     die();
                 }
 
@@ -1079,7 +1098,12 @@ class WPvivid_Staging_Log_Page_Free
                 if (!file_exists($path))
                 {
                     $message= __('The log not found.', 'wpvivid');
-                    echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
+                    echo sprintf(
+                        __( $message. '%1$stry again%2$s.', 'wpvivid' ),
+                        '<a href="' . $admin_url . '">',
+                        '</a>'
+                    );
+                    //echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
                     die();
                 }
 
@@ -1126,13 +1150,23 @@ class WPvivid_Staging_Log_Page_Free
                 }
                 else
                 {
-                    echo __(' file not found. please <a href="'.$admin_url.'">retry</a> again.');
+                    echo sprintf(
+                        __( 'File not found. Please %1$stry again%2$s.', 'wpvivid' ),
+                        '<a href="' . $admin_url . '">',
+                        '</a>'
+                    );
+                    //echo __(' file not found. please <a href="'.$admin_url.'">retry</a> again.');
                     die();
                 }
 
             } else {
                 $message = __('Reading the log failed. Please try again.', 'wpvivid');
-                echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
+                echo sprintf(
+                    __( $message. '%1$stry again%2$s.', 'wpvivid' ),
+                    '<a href="' . $admin_url . '">',
+                    '</a>'
+                );
+                //echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
                 die();
             }
         }
@@ -1140,7 +1174,17 @@ class WPvivid_Staging_Log_Page_Free
         {
             $message = 'An exception has occurred. class: '.get_class($error).';msg: '.$error->getMessage().';code: '.$error->getCode().';line: '.$error->getLine().';in_file: '.$error->getFile().';';
             error_log($message);
-            echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
+            echo sprintf(
+                __( 'An exception has occurred. class: %1$s; msg: %2$s; code: %3$s; line: %4$s; in_file: %5$s. Please %6$stry again%7$s.', 'wpvivid' ),
+                get_class($error),
+                $error->getMessage(),
+                $error->getCode(),
+                $error->getLine(),
+                $error->getFile(),
+                '<a href="' . $admin_url . '">',
+                '</a>'
+            );
+            //echo __($message.' <a href="'.$admin_url.'">retry</a> again.');
             die();
         }
     }

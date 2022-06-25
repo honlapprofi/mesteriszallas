@@ -219,7 +219,25 @@ function mphb_format_price( $price, $atts = array() ){
 
 	if ( $atts['period'] ) {
 
-		$priceDescription	 = _nx( 'per night', 'for %d nights', $atts['period_nights'], 'Ex: $99 for 2 nights', 'motopress-hotel-booking' );
+		if ( 1 === $atts['period_nights'] ) {
+
+			//translators: Price per one night. Example: $99 per night
+			$priceDescription = _x( 'per night', 'Price per one night. Example: $99 per night', 'motopress-hotel-booking' );
+
+		} else {
+
+			/*
+			 * Translation will be used with numbers:
+			 *     21, 31, 41, 51, 61, 71, 81...
+			 *     2-4, 22-24, 32-34, 42-44, 52-54, 62...
+			 *     0, 5-19, 100, 1000, 10000...
+			 */
+
+			//translators: Price for X nights. Example: $99 for 2 nights, $99 for 21 nights
+			$priceDescription = _nx( 'for %d nights', 'for %d nights', $atts['period_nights'],
+				'Price for X nights. Example: $99 for 2 nights, $99 for 21 nights', 'motopress-hotel-booking' );
+		}
+
 		$priceDescription	 = sprintf( $priceDescription, $atts['period_nights'] );
 		$priceDescription	 = apply_filters( 'mphb_price_period_description', $priceDescription, $atts['period_nights'] );
 
@@ -891,6 +909,22 @@ function mphb_fix_blocks_autop()
 function mphb_escape_json_unicodes($json)
 {
     return preg_replace('/(\\\\u[0-9a-f]{4})/i', '\\\\$1', $json);
+}
+
+/**
+ * @param string $json JSON string with possibly escaped symbol '.
+ * @return string JSON string, ready to json_decode().
+ *
+ * @since 1.x
+ */
+function mphb_strip_price_breakdown_json($json)
+{
+	if (strpos($json, "\\'") !== false) {
+		// Unslash, not breaking the Unicode symbols
+		return wp_unslash(mphb_escape_json_unicodes($json));
+	} else {
+		return $json;
+	}
 }
 
 /**

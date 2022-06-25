@@ -45,7 +45,7 @@ class Cookie_Notice_Welcome_API {
 		if ( ( $_POST['request'] === 'payment' && ! empty( $_POST['cn_payment_nonce'] ) && ! wp_verify_nonce( $_POST['cn_payment_nonce'], 'cn_api_payment' ) ) || ( ! empty( $_POST['cn_nonce'] ) && ! wp_verify_nonce( $_POST['cn_nonce'], 'cn_api_' . $_POST['request'] ) ) )
 			wp_die( __( 'You do not have permission to access this page.', 'cookie-notice' ) );
 
-		$request = in_array( $_POST['request'], array( 'register', 'login', 'configure', 'select_plan', 'payment', 'get_bt_init_token' ), true ) ? $_POST['request'] : '';
+		$request = in_array( $_POST['request'], array( 'register', 'login', 'configure', 'select_plan', 'payment', 'get_bt_init_token', 'use_license' ), true ) ? $_POST['request'] : '';
 		$errors = array();
 		$response = false;
 
@@ -65,6 +65,26 @@ class Cookie_Notice_Welcome_API {
 		$params = array();
 
 		switch ($request) {
+			case 'use_license' :
+				$subscriptionID = (int) $_POST['subscriptionID'];
+
+				$result = $this->request( 'assign_subscription',
+						array(
+							'AppID' => $app_id,
+							'subscriptionID' => $subscriptionID
+						)
+				);
+
+				// errors?
+				if ( ! empty( $result->message ) ) {
+					$response = array( 'error' => $result->message );
+					break;
+				} else {
+					$response = $result;
+				};
+
+				break;
+
 			case 'get_bt_init_token':
 				$result = $this->request( 'get_token' );
 
@@ -83,9 +103,18 @@ class Cookie_Notice_Welcome_API {
 				}
 
 				// validate plan and payment method
-				$plan = in_array( $_POST['plan'], array( 'monthly', 'yearly' ), true ) ? $_POST['plan'] : false;
-				$plan = ! empty( $plan ) ? 'compliance_' . $plan . '_notrial' : false;
+				$available_plans = array(
+					'compliance_monthly_notrial',
+					'compliance_monthly_5',
+					'compliance_monthly_10',
+					'compliance_monthly_20',
+					'compliance_yearly_notrial',
+					'compliance_yearly_5',
+					'compliance_yearly_10',
+					'compliance_yearly_20'
+				);
 
+				$plan = in_array( $_POST['plan'], $available_plans, true ) ? $_POST['plan'] : false;
 				$method = in_array( $_POST['method'], array( 'credit_card', 'paypal' ), true ) ? $_POST['method'] : false;
 
 				// valid plan and payment method?
@@ -94,7 +123,12 @@ class Cookie_Notice_Welcome_API {
 					break;
 				}
 
-				$result = $this->request( 'get_customer', array( 'AppID' => $app_id ) );
+				$result = $this->request( 'get_customer',
+						array(
+							'AppID' => $app_id,
+							'PlanId' => $plan
+						)
+				);
 
 				// user found?
 				if ( ! empty( $result->id ) ) {
@@ -106,6 +140,7 @@ class Cookie_Notice_Welcome_API {
 							array(
 								'AppID' => $app_id,
 								'AdminID' => $admin_id, // remove later - AdminID from API response
+								'PlanId' => $plan,
 								'paymentMethodNonce' => sanitize_text_field( $_POST['payment_nonce'] )
 							)
 					);
@@ -123,13 +158,68 @@ class Cookie_Notice_Welcome_API {
 					break;
 				}
 
+				// selected payment method
+				$payment_method = false;
+
+				// get payment identifier
+				$identifier = isset( $_POST['cn_payment_identifier'] ) ? sanitize_text_field( $_POST['cn_payment_identifier'] ) : '';
+
+				// customer available payment methods
+				$payment_methods = ! empty( $customer->paymentMethods ) ? $customer->paymentMethods : array();
+				
+				$paypal_methods = array();
+				$cc_methods = array();
+
+				// try to find payment method
+				if ( ! empty( $payment_methods ) && is_array( $payment_methods ) ) {
+					foreach ( $payment_methods as $pm ) {
+						// paypal
+						if ( isset( $pm->email ) ) {
+							$paypal_methods[] = $pm;
+
+							if ( $pm->email === $identifier )
+								$payment_method = $pm;
+							// credit card
+						} else {
+							$cc_methods[] = $pm;
+
+							if ( isset( $pm->last4 ) && $pm->last4 === $identifier )
+								$payment_method = $pm;
+						}
+					}
+				}
+
+				// if payment method was not identified, create it
+				if ( ! $payment_method ) {
+					$result = $this->request(
+							'create_payment_method',
+							array(
+								'AppID' => $app_id,
+								'paymentMethodNonce' => sanitize_text_field( $_POST['payment_nonce'] )
+							)
+					);
+					
+					// payment method created successfully?
+					if ( ! empty( $result->success ) ) {
+						$payment_method = $result->paymentMethod;
+					} else {
+						$response = array( 'error' => __( 'Unable to create payment mehotd.', 'cookie-notice' ) );
+						break;
+					}
+				}
+
+				if ( ! isset( $payment_method->token ) ) {
+					$response = array( 'error' => __( 'No payment method token.', 'cookie-notice' ) );
+					break;
+				}
+
 				// @todo: check if subscribtion exists
 				$subscription = $this->request(
 						'create_subscription',
 						array(
 							'AppID' => $app_id,
 							'PlanId' => $plan,
-							'paymentMethodToken' => $customer->paymentMethods[0]->token
+							'paymentMethodToken' => $payment_method->token
 						)
 				);
 
@@ -139,6 +229,7 @@ class Cookie_Notice_Welcome_API {
 					break;
 				}
 
+				$response = $app_id;
 				break;
 
 			case 'register':
@@ -284,7 +375,7 @@ class Cookie_Notice_Welcome_API {
 				$params['AppID'] = $app_id;
 				// @todo When mutliple default languages are supported
 				$params['DefaultLanguage'] = 'en';
-				
+
 				// add translations if needed
 				if ( $locale_code[0] !== 'en' )
 					$params['Languages'] = array( $locale_code[0] );
@@ -382,7 +473,6 @@ class Cookie_Notice_Welcome_API {
 				// get apps and check if one for the current domain already exists	
 				$response = $this->request( 'list_apps', array() );
 
-				// echo '<pre>'; print_r( $response ); echo '</pre>'; exit;
 				// errors?
 				if ( ! empty( $response->message ) ) {
 					$response->error = $response->message;
@@ -449,6 +539,26 @@ class Cookie_Notice_Welcome_API {
 					break;
 				}
 
+				// get subscriptions
+				$subscriptions = array();
+
+				$params = array(
+					'AppID' => $app_exists->AppID
+				);
+
+				$response = $this->request( 'get_subscriptions', $params );
+
+				// errors?
+				if ( ! empty( $response->error ) ) {
+					$response->error = $response->error;
+					break;
+				} else {
+					$subscriptions = map_deep( (array) $response->data, 'sanitize_text_field' );
+				}
+
+				// set subscriptions data
+				set_transient( 'cookie_notice_app_subscriptions', $subscriptions, 24 * HOUR_IN_SECONDS );
+
 				// update options: app ID and secret key
 				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $app_exists->AppID, 'app_key' => $app_exists->SecretKey ), Cookie_Notice()->options['general'] );
 
@@ -462,7 +572,7 @@ class Cookie_Notice_Welcome_API {
 					'AppID' => $app_exists->AppID,
 					'DefaultLanguage' => 'en',
 				);
-				
+
 				// add translations if needed
 				if ( $locale_code[0] !== 'en' )
 					$params['Languages'] = array( $locale_code[0] );
@@ -513,6 +623,10 @@ class Cookie_Notice_Welcome_API {
 						break;
 					}
 				}
+
+				// all ok, return subscriptions
+				$response = (object) array();
+				$response->subscriptions = $subscriptions;
 
 				break;
 
@@ -819,10 +933,52 @@ class Cookie_Notice_Welcome_API {
 				);
 				break;
 
-			// braintree assign subscription to the customer
+			// braintree get subscriptions
+			case 'get_subscriptions':
+				$json = true;
+				$api_url = $this->account_api_url . '/api/account/braintree/subscriptionlists';
+				$api_args['method'] = 'POST';
+				$api_args['headers'] = array_merge(
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
+				);
+				break;
+
+			// braintree create subscription
 			case 'create_subscription':
 				$json = true;
 				$api_url = $this->account_api_url . '/api/account/braintree/createsubscription';
+				$api_args['method'] = 'POST';
+				$api_args['headers'] = array_merge(
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
+				);
+				break;
+
+			// braintree assign subscription
+			case 'assign_subscription':
+				$json = true;
+				$api_url = $this->account_api_url . '/api/account/braintree/assignsubscription';
+				$api_args['method'] = 'POST';
+				$api_args['headers'] = array_merge(
+						$api_args['headers'],
+						array(
+							'Authorization' => 'Bearer ' . $api_token,
+							'Content-Type' => 'application/json; charset=utf-8'
+						)
+				);
+				break;
+
+			// braintree create subscription
+			case 'create_payment_method':
+				$json = true;
+				$api_url = $this->account_api_url . '/api/account/braintree/createpaymentmethod';
 				$api_args['method'] = 'POST';
 				$api_args['headers'] = array_merge(
 						$api_args['headers'],
@@ -896,9 +1052,8 @@ class Cookie_Notice_Welcome_API {
 		);
 
 		$response = $this->request( 'get_analytics', $params );
-		
-		// echo '<pre>'; print_r( $response ); echo '</pre>';	exit;
 
+		// echo '<pre>'; print_r( $response ); echo '</pre>';	exit;
 		// get analytics
 		if ( ! empty( $response->data ) ) {
 			$result = ! empty( $response->data ) ? map_deep( (array) $response->data, 'sanitize_text_field' ) : array();

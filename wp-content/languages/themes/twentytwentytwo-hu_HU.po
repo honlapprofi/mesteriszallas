@@ -894,4 +894,4 @@ msgstr "https://wordpress.org/"
 
 #. Author of the theme
 msgid "the WordPress team"
-msgstr "a WordPPJ£CpU  PJ£Cp
+msgstr "a WordPress csapata"

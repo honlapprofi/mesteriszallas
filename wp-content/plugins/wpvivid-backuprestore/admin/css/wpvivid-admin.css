@@ -264,3 +264,7 @@
 	width:100%;
 	background-color:#f1f1f1;
 }
+
+.wpvivid-custom-table-manager.nav-tab-wrapper :nth-child(n+3):nth-child(-n+11) {
+	display:block;
+}

@@ -1486,7 +1486,7 @@ class WPvivid_Export_Import
                 }
 
                 $admin_url = admin_url();
-                echo '<a href="'.$admin_url.'admin.php?page=wpvivid-export-import">'.__('File not found. please retry again.', 'wpvivid-backuprestore').'</a>';
+                echo '<a href="'.$admin_url.'admin.php?page=wpvivid-export-import">'.__('File not found. Please retry again.', 'wpvivid-backuprestore').'</a>';
                 die();
             }
         }
@@ -1526,7 +1526,7 @@ class WPvivid_Export_Import
             <div style="clear: both;"></div>
 
             <div style="background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; margin-bottom: 10px; padding: 10px;">
-                <div style="margin-right: 10px; float: left; height: 28px; line-height: 28px;"><?php echo sprintf(__('Imported files will be temporarily stored in directory %s', 'wpvivid-backuprestore'), $import_dir) ?></div>
+                <div style="margin-right: 10px; float: left; height: 28px; line-height: 28px;"><?php echo sprintf(__('Imported files will be temporarily stored in %s directory', 'wpvivid-backuprestore'), $import_dir) ?></div>
                 <div style="float: left;"><input class="button" type="submit" id="wpvivid_empty_import_folder" value="<?php esc_attr_e('Delete Exported Files In Folder', 'wpvivid-backuprestore'); ?>" onclick="wpvivid_clean_import_folder();" /></div>
                 <div style="clear: both;"></div>
             </div>

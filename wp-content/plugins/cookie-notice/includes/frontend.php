@@ -9,16 +9,16 @@ if ( ! defined( 'ABSPATH' ) )
  * @class Cookie_Notice_Frontend
  */
 class Cookie_Notice_Frontend {
-	private $widget_url = '';
 	private $is_bot = false;
 	private $hide_banner = false;
 	
+	// api urls
+	private $widget_url = '//cdn.hu-manity.co/hu-banner.min.js';
+	private $app_url = 'https://app.hu-manity.co';
+
 	public function __construct() {
 		// actions
 		add_action( 'init', array( $this, 'init' ) );
-
-		$this->widget_url = '//cdn.hu-manity.co/hu-banner.min.js';
-		$this->app_url = 'https://app.hu-manity.co';
 	}
 
 	/**

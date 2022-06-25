@@ -341,7 +341,7 @@ function wpvivid_clean_junk()
                     <input type="checkbox" id="wpvivid_junk_temporary_file" option="junk-files" name="old_files" value="junk-temporary-files" />
                     <span class="wpvivid-element-space-right"><?php _e( 'Temporary Files', 'wpvivid-backuprestore' ); ?></span>
                     <span style="margin-right: 2px;"><?php _e('Path:', 'wpvivid-backuprestore'); ?></span><span id="wpvivid_restore_temp_file_path"><?php _e($junk_file['old_files_path'], 'wpvivid-backuprestore'); ?></span>
-                    <p><?php echo __('Temporary Files are created by wpvivid when restoring a website.', 'wpvivid-backuprestore'); ?></p>
+                    <p><?php echo __('Temporary Files are created by WPvivid when restoring a website.', 'wpvivid-backuprestore'); ?></p>
                 </label>
             </fieldset>
         </div>
@@ -496,7 +496,7 @@ function wpvivid_export_import_settings()
                         try {
                             var jsonarray = jQuery.parseJSON(data);
                             if (jsonarray.result === 'success') {
-                                alert('The plugin settings is imported successfully.');
+                                alert('The plugin settings were imported successfully.');
                                 location.reload();
                             }
                             else {
@@ -615,7 +615,7 @@ function wpvivid_advanced_settings()
             </label>
             <label>
                 <input type="radio" option="setting" name="no_compress" value="0" <?php esc_attr_e($wpvivid_setting_compress, 'wpvivid-backuprestore'); ?> />
-                <span class="wpvivid-element-space-right" title="<?php _e( 'It will cause a higher CPU Usage and is recommended in a VPS/ dedicated hosting environment.', 'wpvivid-backuprestore' ); ?>"><?php _e( 'Compress and Archive', 'wpvivid-backuprestore' ); ?></span>
+                <span class="wpvivid-element-space-right" title="<?php _e( 'It will cause a higher CPU usage and is recommended in a VPS or dedicated hosting environment.', 'wpvivid-backuprestore' ); ?>"><?php _e( 'Compress and Archive', 'wpvivid-backuprestore' ); ?></span>
             </label>
             <label style="display: none;">
                 <input type="radio" option="setting" name="compress_type" value="zip" checked />

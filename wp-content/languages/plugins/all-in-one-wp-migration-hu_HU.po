@@ -2,14 +2,23 @@
 # This file is distributed under the same license as the Plugins - All-in-One WP Migration - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-15 15:30:21+0000\n"
+"PO-Revision-Date: 2022-05-19 15:04:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: hu\n"
 "Project-Id-Version: Plugins - All-in-One WP Migration - Stable (latest release)\n"
+
+#: lib/view/backups/backups-list.php:93
+msgid "More"
+msgstr "Tovább"
+
+#: lib/controller/class-ai1wm-main-controller.php:779
+#: lib/controller/class-ai1wm-main-controller.php:1079
+msgid "You have %d backups"
+msgstr "%d biztonsági másolata van"
 
 #: lib/model/import/class-ai1wm-import-confirm.php:83
 msgid "<i class=\"ai1wm-import-info\">Your backup is from a PHP 7 but the site that you are importing to is PHP 8. This could cause the import to fail. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Technical details</a></i>"
@@ -27,6 +36,8 @@ msgstr "<i class=\"ai1wm-import-info\">A biztonsági mentés egy PHP 5-ről szá
 msgid "Your backup is from a PHP 5 but the site that you are importing to is PHP 8. This could cause the import to fail. Technical details: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 msgstr "A biztonsági másolata PHP 5-ös PHP-ről származik, de a webhely, ahová importálja, PHP 8-as. Ez az importálás sikertelenségét okozhatja. Technikai részletek: https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/"
 
+#: lib/controller/class-ai1wm-main-controller.php:778
+#: lib/controller/class-ai1wm-main-controller.php:1078
 #: lib/view/main/backups.php:31
 msgid "You have %d backup"
 msgid_plural "You have %d backups"
@@ -152,13 +163,13 @@ msgstr "Kész a WordPress médiafájlok listájának lekérése."
 msgid "Retrieving a list of WordPress media files..."
 msgstr "A WordPress médiafájlok listájának lekérése..."
 
-#: lib/controller/class-ai1wm-main-controller.php:926
-#: lib/controller/class-ai1wm-main-controller.php:1071
+#: lib/controller/class-ai1wm-main-controller.php:928
+#: lib/controller/class-ai1wm-main-controller.php:1073
 msgid "There is not enough space available on the disk.<br />Free up %s of disk space."
 msgstr "A lemezen nincs elérhető üres hely.<br />A lemez %s felszabadítása."
 
-#: lib/controller/class-ai1wm-main-controller.php:889
-#: lib/controller/class-ai1wm-main-controller.php:1061
+#: lib/controller/class-ai1wm-main-controller.php:891
+#: lib/controller/class-ai1wm-main-controller.php:1063
 msgid "I have enough disk space"
 msgstr "Elegendő tárhelyem van."
 
@@ -198,28 +209,16 @@ msgstr "All-in-One WP Migration: A jelenlegi profil szerepkörében nincs enged�
 msgid "To choose a file please go inside the link and click on the browse button."
 msgstr "Fájl kiválasztásához lépjen a linkre, és kattintson a Tallózás gombra."
 
-#: lib/view/backups/backups-list.php:100
-msgid "Delete backup"
-msgstr "Mentés törlése"
-
-#: lib/view/backups/backups-list.php:96
-msgid "Restore backup"
-msgstr "Helyreállítás mentésből"
-
-#: lib/view/backups/backups-list.php:92
-msgid "Download backup"
-msgstr "Mentés letöltése"
-
 #: lib/view/import/done.php:38
 msgid "» <a class=\"ai1wm-no-underline\" href=\"%s\" target=\"_blank\">Save permalinks structure</a>. (opens a new window)<br />» <a class=\"ai1wm-no-underline\" href=\"https://wordpress.org/support/view/plugin-reviews/all-in-one-wp-migration?rate=5#postform\" target=\"_blank\">Optionally, review the plugin</a>. (opens a new window)"
 msgstr "» <a class=\"ai1wm-no-underline\" href=\"%s\" target=\"_blank\">Állandó linkek struktúrájának a mentése</a>. (új ablakot nyit meg)<br />» <a class=\"ai1wm-no-underline\" href=\"https://wordpress.org/support/view/plugin-reviews/all-in-one-wp-migration?rate=5#postform\" target=\"_blank\">Opcionálisan tekintse át a beépülő modult</a>. (új ablakot nyit meg)"
 
-#: lib/controller/class-ai1wm-main-controller.php:1070
+#: lib/controller/class-ai1wm-main-controller.php:1072
 msgid "\"Restore\" functionality is available in a <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">paid extension</a>.<br />You could also download the backup and then use \"Import from file\"."
 msgstr "A „Restore” funkció elérhető a <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">fizetett kiterjesztésen</a>.<br />Letöltheti a biztonsági másolatot, majd használhatja az „Import fájlból” a lehetőséget."
 
-#: lib/controller/class-ai1wm-main-controller.php:886
-#: lib/controller/class-ai1wm-main-controller.php:1057
+#: lib/controller/class-ai1wm-main-controller.php:888
+#: lib/controller/class-ai1wm-main-controller.php:1059
 msgid "Finish"
 msgstr "A művelet befejeződött"
 
@@ -272,11 +271,11 @@ msgstr "Az importálási folyamat felülírja a webhelyet, beleértve az adatbá
 msgid "<strong>%s</strong> is not the latest version. You must <a href=\"%s\">update the plugin</a> before you can use it. <br />"
 msgstr "<strong>%s</strong> nem a legújabb verzió. A használat előtt <a href=\"%s\">frissítenie kell a bővítményt.</a> <br />"
 
-#: lib/controller/class-ai1wm-main-controller.php:918
+#: lib/controller/class-ai1wm-main-controller.php:920
 msgid "The file that you are trying to import is over the maximum upload file size limit of <strong>%s</strong>.<br />You can remove this restriction by purchasing our <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Unlimited Extension</a>."
 msgstr "Az importálni kívánt fájl meghaladja a feltöltési fájl maximális méretkorlátját <strong>%s</strong>.<br />Ezt a korlátozást a mi termékünk megvásárlásával távolíthatja el <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Korlátlan kiterjesztés</a>."
 
-#: lib/controller/class-ai1wm-main-controller.php:911
+#: lib/controller/class-ai1wm-main-controller.php:913
 #: lib/model/import/class-ai1wm-import-upload.php:55
 msgid "The file type that you have tried to upload is not compatible with this plugin. Please ensure that your file is a <strong>.wpress</strong> file that was created with the All-in-One WP migration plugin. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">Technical details</a>"
 msgstr "A feltölteni próbált fájltípus nem kompatibilis ezzel a bővítménnyel. Kérjük, ellenőrízze, hogy a fájl a <strong>.wpress</strong> az All-in-One WP migrációs beépülő modullal létrehozott fájl. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">Műszaki információk</a>"
@@ -317,15 +316,15 @@ msgstr "Maximálisan feltölthető fájl méret: <strong>%s</strong>."
 msgid "The file is too large for this server."
 msgstr "A fájl túl nagy ennek a szervernek."
 
-#: lib/controller/class-ai1wm-main-controller.php:906
+#: lib/controller/class-ai1wm-main-controller.php:908
 msgid "<a href=\"https://import.wp-migration.com\" target=\"_blank\">Get unlimited</a>"
 msgstr "<a href=\"https://import.wp-migration.com\" target=\"_blank\">Szerezz végtelent</a>"
 
-#: lib/controller/class-ai1wm-main-controller.php:902
+#: lib/controller/class-ai1wm-main-controller.php:904
 msgid "<a href=\"https://help.servmask.com/2018/10/27/how-to-increase-maximum-upload-file-size-in-wordpress/\" target=\"_blank\">How-to: Increase maximum upload file size</a> or "
 msgstr "<a href=\"https://help.servmask.com/2018/10/27/how-to-increase-maximum-upload-file-size-in-wordpress/\" target=\"_blank\">Útmutató: A feltöltési fájl maximális méretének a növelése</a> vagy "
 
-#: lib/controller/class-ai1wm-main-controller.php:897
+#: lib/controller/class-ai1wm-main-controller.php:899
 msgid "Your file exceeds the maximum upload size for this site: <strong>%s</strong><br />%s%s"
 msgstr "A fájl meghaladja a webhely maximális feltöltési méretét: <strong>%s</strong><br />%s%s"
 
@@ -338,7 +337,7 @@ msgstr "Húzd és dobd ide a bizonsági mentést az importáláshoz"
 msgid "Exporting database...<br />%d%% complete<br />%s records saved"
 msgstr "Adatbázis exportálása...<br />%d%% kész<br />%s rekord mentve"
 
-#: lib/controller/class-ai1wm-main-controller.php:1069
+#: lib/controller/class-ai1wm-main-controller.php:1071
 msgid "Restoring a backup is available via Unlimited extension. <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Get it here</a>"
 msgstr "A biztonsági másolat visszaállítása korlátlan kiterjesztésen keresztül érhető el. <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Szerezze meg itt</a>"
 
@@ -347,7 +346,7 @@ msgid "All-in-One WP Migration Command"
 msgstr "All-in-One WP Migration parancs"
 
 #: lib/controller/class-ai1wm-main-controller.php:766
-#: lib/controller/class-ai1wm-main-controller.php:1041
+#: lib/controller/class-ai1wm-main-controller.php:1043
 #: lib/model/export/class-ai1wm-export-init.php:43
 msgid "Preparing to export..."
 msgstr "Felkészülés az exportra ..."
@@ -356,162 +355,162 @@ msgstr "Felkészülés az exportra ..."
 msgid "%s ago"
 msgstr "%s ezelőtt"
 
-#: lib/controller/class-ai1wm-main-controller.php:1124
+#: lib/controller/class-ai1wm-main-controller.php:1128
 msgid "Your purchase ID is invalid, please <a href=\"mailto:support@servmask.com\">contact us</a>"
 msgstr "A vásárlási azonosító érvénytelen, kérjük<a href=\"mailto:support@servmask.com\">vegye fel velünk a kapcsolatot</a>"
 
-#: lib/controller/class-ai1wm-main-controller.php:1068
+#: lib/controller/class-ai1wm-main-controller.php:1070
 msgid "Are you sure you want to delete this file?"
 msgstr "Biztosan törölni szeretné ezt a fájlt?"
 
-#: lib/controller/class-ai1wm-main-controller.php:891
-#: lib/controller/class-ai1wm-main-controller.php:1063
+#: lib/controller/class-ai1wm-main-controller.php:893
+#: lib/controller/class-ai1wm-main-controller.php:1065
 msgid "Please do not close this browser window or your import will fail"
 msgstr "Kérjük, ne csukd be ezt a böngésző ablakot, különben az importálás nem fog sikerülni."
 
-#: lib/controller/class-ai1wm-main-controller.php:890
-#: lib/controller/class-ai1wm-main-controller.php:1062
+#: lib/controller/class-ai1wm-main-controller.php:892
+#: lib/controller/class-ai1wm-main-controller.php:1064
 msgid "Continue"
 msgstr "Folytatás"
 
-#: lib/controller/class-ai1wm-main-controller.php:888
-#: lib/controller/class-ai1wm-main-controller.php:1060
+#: lib/controller/class-ai1wm-main-controller.php:890
+#: lib/controller/class-ai1wm-main-controller.php:1062
 msgid "Proceed"
 msgstr "Tovább"
 
-#: lib/controller/class-ai1wm-main-controller.php:887
-#: lib/controller/class-ai1wm-main-controller.php:1059
+#: lib/controller/class-ai1wm-main-controller.php:889
+#: lib/controller/class-ai1wm-main-controller.php:1061
 msgid "Stop import"
 msgstr "Importálás megállítása"
 
-#: lib/controller/class-ai1wm-main-controller.php:884
-#: lib/controller/class-ai1wm-main-controller.php:1056
+#: lib/controller/class-ai1wm-main-controller.php:886
+#: lib/controller/class-ai1wm-main-controller.php:1058
 msgid "Please wait, stopping the import..."
 msgstr "Várj, az importálás megszakítás alatt van..."
 
-#: lib/controller/class-ai1wm-main-controller.php:883
-#: lib/controller/class-ai1wm-main-controller.php:1055
+#: lib/controller/class-ai1wm-main-controller.php:885
+#: lib/controller/class-ai1wm-main-controller.php:1057
 msgid "Unable to stop the import. Refresh the page and try again"
 msgstr "Nem lehet megállítani az importálást. Frissítse az oldalt, és próbálja újra"
 
-#: lib/controller/class-ai1wm-main-controller.php:882
-#: lib/controller/class-ai1wm-main-controller.php:1054
+#: lib/controller/class-ai1wm-main-controller.php:884
+#: lib/controller/class-ai1wm-main-controller.php:1056
 msgid "Unable to prepare blogs on import. Refresh the page and try again"
 msgstr "Nem lehet blogokat készíteni importáláskor. Frissítse az oldalt, és próbálja újra"
 
-#: lib/controller/class-ai1wm-main-controller.php:881
-#: lib/controller/class-ai1wm-main-controller.php:1053
+#: lib/controller/class-ai1wm-main-controller.php:883
+#: lib/controller/class-ai1wm-main-controller.php:1055
 msgid "Unable to confirm the import. Refresh the page and try again"
 msgstr "Nem sikerült megerősíteni az importálást. Frissítse az oldalt, és próbálja újra"
 
-#: lib/controller/class-ai1wm-main-controller.php:880
-#: lib/controller/class-ai1wm-main-controller.php:1052
+#: lib/controller/class-ai1wm-main-controller.php:882
+#: lib/controller/class-ai1wm-main-controller.php:1054
 msgid "Unable to start the import. Refresh the page and try again"
 msgstr "Nem sikerült elkezdeni az importálást. Az oldal fríssítése után próbálja újra"
 
-#: lib/controller/class-ai1wm-main-controller.php:877
-#: lib/controller/class-ai1wm-main-controller.php:1049
+#: lib/controller/class-ai1wm-main-controller.php:879
+#: lib/controller/class-ai1wm-main-controller.php:1051
 msgid "You are about to stop importing your website, are you sure?"
 msgstr "Leállítja a webhely importálását, biztos ebben?"
 
 #: lib/controller/class-ai1wm-main-controller.php:696
 #: lib/controller/class-ai1wm-main-controller.php:777
-#: lib/controller/class-ai1wm-main-controller.php:895
-#: lib/controller/class-ai1wm-main-controller.php:1067
+#: lib/controller/class-ai1wm-main-controller.php:897
+#: lib/controller/class-ai1wm-main-controller.php:1069
 msgid "Thanks for submitting your request!"
 msgstr "Köszönjük, hogy elküldte kérését!"
 
 #: lib/controller/class-ai1wm-main-controller.php:695
 #: lib/controller/class-ai1wm-main-controller.php:776
-#: lib/controller/class-ai1wm-main-controller.php:894
-#: lib/controller/class-ai1wm-main-controller.php:1066
+#: lib/controller/class-ai1wm-main-controller.php:896
+#: lib/controller/class-ai1wm-main-controller.php:1068
 msgid "Thanks for submitting your feedback!"
 msgstr "Köszönjük visszajelzését!"
 
 #: lib/controller/class-ai1wm-main-controller.php:694
 #: lib/controller/class-ai1wm-main-controller.php:775
-#: lib/controller/class-ai1wm-main-controller.php:893
-#: lib/controller/class-ai1wm-main-controller.php:1065
+#: lib/controller/class-ai1wm-main-controller.php:895
+#: lib/controller/class-ai1wm-main-controller.php:1067
 msgid "How may we help you?"
 msgstr "Hogyan segíthetünk?"
 
 #: lib/controller/class-ai1wm-main-controller.php:693
 #: lib/controller/class-ai1wm-main-controller.php:774
-#: lib/controller/class-ai1wm-main-controller.php:892
-#: lib/controller/class-ai1wm-main-controller.php:1064
+#: lib/controller/class-ai1wm-main-controller.php:894
+#: lib/controller/class-ai1wm-main-controller.php:1066
 msgid "Leave plugin developers any feedback here"
 msgstr "Itt hagyhat visszajelzést a bővítmény fejlesztőknek"
 
 #: lib/controller/class-ai1wm-main-controller.php:773
-#: lib/controller/class-ai1wm-main-controller.php:1048
+#: lib/controller/class-ai1wm-main-controller.php:1050
 msgid "Stop export"
 msgstr "Exportálás megállítása"
 
 #: lib/controller/class-ai1wm-main-controller.php:772
-#: lib/controller/class-ai1wm-main-controller.php:885
-#: lib/controller/class-ai1wm-main-controller.php:1047
-#: lib/controller/class-ai1wm-main-controller.php:1058
+#: lib/controller/class-ai1wm-main-controller.php:887
+#: lib/controller/class-ai1wm-main-controller.php:1049
+#: lib/controller/class-ai1wm-main-controller.php:1060
 msgid "Close"
 msgstr "Bezár"
 
 #: lib/controller/class-ai1wm-main-controller.php:771
-#: lib/controller/class-ai1wm-main-controller.php:1046
+#: lib/controller/class-ai1wm-main-controller.php:1048
 msgid "Please wait, stopping the export..."
 msgstr "Várj, az exportálás megszakítás alatt van..."
 
 #: lib/controller/class-ai1wm-main-controller.php:770
-#: lib/controller/class-ai1wm-main-controller.php:1045
+#: lib/controller/class-ai1wm-main-controller.php:1047
 msgid "Unable to stop the export. Refresh the page and try again"
 msgstr "Nem lehet leállítani az exportálást. Frissítse az oldalt, és próbálja újra"
 
 #: lib/controller/class-ai1wm-main-controller.php:769
-#: lib/controller/class-ai1wm-main-controller.php:1044
+#: lib/controller/class-ai1wm-main-controller.php:1046
 msgid "Unable to run the export. Refresh the page and try again"
 msgstr "Nem sikerült futtatni az exportálást. Frissítse az oldalt, és próbálja újra"
 
 #: lib/controller/class-ai1wm-main-controller.php:768
-#: lib/controller/class-ai1wm-main-controller.php:1043
+#: lib/controller/class-ai1wm-main-controller.php:1045
 msgid "Unable to start the export. Refresh the page and try again"
 msgstr "Nem lehet elindítani az exportálást. Frissítse az oldalt, és próbálja újra"
 
 #: lib/controller/class-ai1wm-main-controller.php:765
-#: lib/controller/class-ai1wm-main-controller.php:1040
+#: lib/controller/class-ai1wm-main-controller.php:1042
 msgid "You are about to stop exporting your website, are you sure?"
 msgstr "Le akarja állítani a webhelye exportálását, biztos ebben?"
 
-#: functions.php:1603
+#: functions.php:1615
 msgid "Unable to authenticate the secret key. <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">Technical details</a>"
 msgstr "Nem sikerült hitelesíteni a titkos kulcsot. <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">Műszaki információk</a>"
 
-#: functions.php:1469
+#: functions.php:1481
 msgid "Unable to get current pointer position of %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "Nem sikerült lekérni a(z) %s aktuális mutatóhelyét. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technikai információk</a>"
 
-#: functions.php:1452
+#: functions.php:1464
 msgid "Unable to seek to offset %d on %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "Nem lehet ellensúlyozni a(z) %d %s értékeket. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Műszaki információk</a>"
 
-#: functions.php:1430
+#: functions.php:1442
 msgid "Unable to read file: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "A %s fájl olvasása nem sikerült. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technikai részletek (angol)</a>"
 
-#: functions.php:1410
+#: functions.php:1422
 msgid "Out of disk space. Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">Technical details</a>"
 msgstr "Elfogyott a lemezterület. Nem lehet írni a következőnek: %s. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">Műszaki információk</a>"
 
-#: functions.php:1404 functions.php:1488
+#: functions.php:1416 functions.php:1500
 msgid "Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "Nem lehet írni a következőnek: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Műszaki információk</a>"
 
-#: functions.php:1385
+#: functions.php:1397
 msgid "Unable to open %s with mode %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "A %s fájlt nem sikerült %s móddal megnyitni. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technikai részletek (angol)</a>"
 
-#: functions.php:63 functions.php:82
+#: functions.php:63 functions.php:94
 msgid "Invalid archive path. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Technical details</a>"
 msgstr "Érvénytelen archív útvonal. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Műszaki információk</a>"
 
-#: functions.php:58 functions.php:77
+#: functions.php:58 functions.php:89
 msgid "Unable to locate archive path. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Technical details</a>"
 msgstr "Nem található az archív elérési útja. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Műszaki információk</a>"
 
@@ -576,16 +575,16 @@ msgstr "Kiterjesztések kompatibilitásának ellenőrzése..."
 msgid "Done restoring database."
 msgstr "Kész az adatbázis visszaállítása."
 
-#: lib/controller/class-ai1wm-main-controller.php:878
-#: lib/controller/class-ai1wm-main-controller.php:1050
+#: lib/controller/class-ai1wm-main-controller.php:880
+#: lib/controller/class-ai1wm-main-controller.php:1052
 msgid "Preparing to import..."
 msgstr "Előkészítés az importáláshoz..."
 
-#: lib/controller/class-ai1wm-main-controller.php:1224
+#: lib/controller/class-ai1wm-main-controller.php:1228
 msgid "Monthly"
 msgstr "Havi"
 
-#: lib/controller/class-ai1wm-main-controller.php:1220
+#: lib/controller/class-ai1wm-main-controller.php:1224
 msgid "Weekly"
 msgstr "Heti"
 
@@ -709,7 +708,7 @@ msgstr "A bővítmény/kiterjesztés legújabb verzióra történő frissítés�
 msgid "Enter your Purchase ID"
 msgstr "Írd be a vásárlási azonosítót"
 
-#: lib/controller/class-ai1wm-main-controller.php:1123
+#: lib/controller/class-ai1wm-main-controller.php:1127
 #: lib/view/updater/check.php:31
 msgid "Check for updates"
 msgstr "Frissítések ellenőrzése"
@@ -875,15 +874,15 @@ msgstr "Biztonsági mentés készítése"
 msgid "There are no backups available at this time, why not create a new one?"
 msgstr "Jelenleg nincs elérhető biztonsági mentés. Miért nem csinálsz egyet most?"
 
-#: lib/view/backups/backups-list.php:102
+#: lib/view/backups/backups-list.php:112 lib/view/backups/backups-list.php:114
 msgid "Delete"
 msgstr "Törlés"
 
-#: lib/view/backups/backups-list.php:98
+#: lib/view/backups/backups-list.php:99 lib/view/backups/backups-list.php:101
 msgid "Restore"
 msgstr "Visszaállítás"
 
-#: lib/view/backups/backups-list.php:94
+#: lib/view/backups/backups-list.php:105 lib/view/backups/backups-list.php:107
 msgid "Download"
 msgstr "Letöltés"
 
@@ -961,14 +960,14 @@ msgstr "Több oldal szerzése"
 
 #: lib/controller/class-ai1wm-import-controller.php:93
 #: lib/controller/class-ai1wm-import-controller.php:94
-#: lib/controller/class-ai1wm-main-controller.php:879
-#: lib/controller/class-ai1wm-main-controller.php:1051
+#: lib/controller/class-ai1wm-main-controller.php:881
+#: lib/controller/class-ai1wm-main-controller.php:1053
 msgid "Unable to import"
 msgstr "Nem lehet importálni"
 
 #: lib/controller/class-ai1wm-export-controller.php:85
 #: lib/controller/class-ai1wm-export-controller.php:86
 #: lib/controller/class-ai1wm-main-controller.php:767
-#: lib/controller/class-ai1wm-main-controller.php:1042
+#: lib/controller/class-ai1wm-main-controller.php:1044
 msgid "Unable to export"
 msgstr "Nem lehet exportálni"

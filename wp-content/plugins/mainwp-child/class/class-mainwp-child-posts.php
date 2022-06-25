@@ -564,6 +564,7 @@ class MainWP_Child_Posts {
 				'comment_status' => $post->comment_status,
 				'ping_status'    => $post->ping_status,
 				'post_type'      => $post->post_type,
+				'post_password'  => $post->post_password,
 			);
 
 			if ( null != $post_featured_image ) { // Featured image is set, retrieve URL.
@@ -615,6 +616,7 @@ class MainWP_Child_Posts {
 				'post_excerpt'   => $post->post_excerpt,
 				'comment_status' => $post->comment_status,
 				'ping_status'    => $post->ping_status,
+				'post_password'  => $post->post_password,
 			);
 
 			if ( null != $post_featured_image ) {

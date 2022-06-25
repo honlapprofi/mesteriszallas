@@ -134,12 +134,12 @@ function pp_capabilities_autobackup()
             $i++;
 
             if ($i > $max_auto_backups) {
-                $wpdb->query(
+        		$wpdb->query(
                     $wpdb->prepare(
                         "DELETE FROM $wpdb->options WHERE option_name = %s",
                         $option_name
                     )
-                );
+        		);
 
                 wp_cache_delete($option_name, 'options');
             }
@@ -251,7 +251,69 @@ function ppc_admin_feature_restrictions() {
     require_once ( dirname(CME_FILE) . '/includes/features/restrict-admin-features.php' );    
     PP_Capabilities_Admin_Features::adminFeaturedRestriction();
 }
-add_action('plugins_loaded', 'ppc_admin_feature_restrictions');
+add_action('init', 'ppc_admin_feature_restrictions', 999);
+
+/**
+ * Redirect user to configured role login redirect
+ *
+ * @param string $redirect_to URL to redirect to.
+ * @param string $request URL the user is coming from.
+ * @param object $user Logged user's data.
+ * @return string
+ */
+function ppc_roles_login_redirect($redirect_to, $request, $user) {
+
+    if (isset($user->roles) && is_array($user->roles)) {
+        foreach ($user->roles as $user_role) {
+            //get role option
+            $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+
+            if (is_array($role_option) && !empty($role_option) 
+                && !empty($role_option['custom_redirect']) && (int)$role_option['custom_redirect'] > 0
+                && !empty($role_option['login_redirect'])
+            ) {
+                //custom url redirect
+                $redirect_to = esc_url_raw($role_option['login_redirect']);
+                break;
+            } else if (is_array($role_option) && !empty($role_option) 
+                && !empty($role_option['referer_redirect']) && (int)$role_option['referer_redirect'] > 0
+                && wp_get_referer()
+            ) {
+                //referer url redirect
+                $redirect_to = esc_url_raw(wp_get_referer());
+                break;
+            }
+        }
+    }
+
+    return $redirect_to;
+}
+add_filter('login_redirect', 'ppc_roles_login_redirect', 10, 3);
+
+/**
+ * Redirect user to configured role logout redirect
+ *
+ * @param string $redirect_to URL to redirect to.
+ * @param string $request URL the user is coming from.
+ * @param object $user Logged user's data.
+ * @return string
+ */
+function ppc_roles_logout_redirect($redirect_to, $request, $user) {
+
+    if (isset($user->roles) && is_array($user->roles)) {
+        foreach ($user->roles as $user_role) {
+            //get role option
+            $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+            if (is_array($role_option) && !empty($role_option) && !empty($role_option['logout_redirect'])) {
+                $redirect_to = esc_url_raw($role_option['logout_redirect']);
+                break;
+            }
+        }
+    }
+
+    return $redirect_to;
+}
+add_filter('logout_redirect', 'ppc_roles_logout_redirect', 10, 3);
 
 /**
  * List of capabilities admin pages

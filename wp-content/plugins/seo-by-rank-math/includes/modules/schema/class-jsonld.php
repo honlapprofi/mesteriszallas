@@ -1,6 +1,6 @@
 <?php
 /**
- * Outputs schema code specific for Google's JSON LD stuff
+ * Output the Schema.org markup in JSON-LD format.
  *
  * @since      0.9.0
  * @package    RankMath
@@ -280,6 +280,14 @@ class JsonLD {
 			if ( is_array( $schema ) ) {
 				$new_schemas[ $key ] = $this->replace_variables( $schema, $object, $data );
 				continue;
+			}
+
+			// Need this conditions to convert date to valid ISO 8601 format.
+			if ( 'datePublished' === $key && '%date(Y-m-dTH:i:sP)%' === $schema ) {
+				$schema =  '%date(Y-m-d\TH:i:sP)%';
+			}
+			if ( 'dateModified' === $key && '%modified(Y-m-dTH:i:sP)%' === $schema ) {
+				$schema =  '%modified(Y-m-d\TH:i:sP)%';
 			}
 
 			$new_schemas[ $key ] = Str::contains( '%', $schema ) ? Helper::replace_vars( $schema, $object ) : $schema;

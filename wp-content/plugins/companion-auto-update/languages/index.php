@@ -1,4 +1,4 @@
-<?php
-/**
- * Nothing to see here
- */
+<?php
+/**
+ * Nothing to see here
+ */

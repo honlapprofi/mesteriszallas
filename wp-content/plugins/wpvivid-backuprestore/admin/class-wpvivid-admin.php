@@ -60,13 +60,14 @@ class WPvivid_Admin {
         add_filter('wpvivid_get_screen_ids',array($this,'get_screen_ids'),10);
         add_filter('wpvivid_get_toolbar_menus',array($this,'get_toolbar_menus'),10);
         add_filter('wpvivid_get_admin_menus',array($this,'get_admin_menus'),10);
-        add_filter('wpvivid_add_side_bar', array($this, 'wpvivid_add_side_bar'), 10, 2);
+        //add_filter('wpvivid_add_side_bar', array($this, 'wpvivid_add_side_bar'), 10, 2);
+        add_action('wpvivid_add_side_bar', array($this, 'wpvivid_add_side_bar'), 10, 2);
 
         add_action('wpvivid_before_setup_page',array($this,'migrate_notice'));
         add_action('wpvivid_before_setup_page',array($this,'show_add_my_review'));
         add_action('wpvivid_before_setup_page',array($this,'check_extensions'));
         add_action('wpvivid_before_setup_page',array($this,'check_amazons3'));
-        add_action('wpvivid_before_setup_page',array($this,'check_dropbox'));
+        //add_action('wpvivid_before_setup_page',array($this,'check_dropbox'));
         add_action('wpvivid_before_setup_page',array($this,'init_js_var'));
 
         add_filter('wpvivid_add_log_tab_page', array($this, 'add_log_tab_page'), 10);
@@ -146,7 +147,48 @@ class WPvivid_Admin {
         $wpvivid_version = WPVIVID_PLUGIN_VERSION;
         $wpvivid_version = apply_filters('wpvivid_display_pro_version', $wpvivid_version);
 
-        $html = '<div class="postbox">
+        ?>
+        <div class="postbox">
+            <h2>
+                <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0"><?php _e('Current Version: ', 'wpvivid-backuprestore'); ?><?php echo $wpvivid_version; ?></span></div>
+                <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">|</span></div>
+                <div style="float: left; margin-left: 0;">
+                    <span style="margin: 0; padding: 0"><a href="https://wordpress.org/plugins/wpvivid-backuprestore/#developers" target="_blank" style="text-decoration: none;"><?php _e('ChangeLog', 'wpvivid-backuprestore'); ?></a></span>
+                </div>
+                <div style="clear: both;"></div>
+            </h2>
+        </div>
+        <div id="wpvivid_backup_schedule_part"></div>
+        <div class="postbox">
+            <h2><span><?php _e('Troubleshooting', 'wpvivid-backuprestore'); ?></span></h2>
+            <div class="inside">
+                <table class="widefat" cellpadding="0">
+                    <tbody>
+                    <tr class="alternate">
+                        <td class="row-title"><?php _e('Read <a href="https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html" target="_blank">Troubleshooting page</a> for faster solutions.', 'wpvivid-backuprestore'); ?></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title"><?php _e('Adjust <a href="https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html" target="_blank">Advanced Settings</a> for higher task success rate.', 'wpvivid-backuprestore'); ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="postbox">
+            <h2><span><?php _e('How-to', 'wpvivid-backuprestore'); ?></span></h2>
+            <div class="inside">
+                <table class="widefat" cellpadding="0">
+                    <tbody>
+                    <tr class="alternate"><td class="row-title"><a href="https://docs.wpvivid.com/wpvivid-backup-free-general-settings.html" target="_blank"><?php _e('WPvivid Backup Settings', 'wpvivid-backuprestore'); ?></a></td></tr>
+                    <tr><td class="row-title"><a href="https://docs.wpvivid.com/get-started-create-manual-backup.html" target="_blank"><?php _e('Create a Manual Backup', 'wpvivid-backuprestore'); ?></a></td></tr>
+                    <tr class="alternate"><td class="row-title"><a href="https://docs.wpvivid.com/get-started-restore-site.html" target="_blank"><?php _e('Restore Your Site from a Backup', 'wpvivid-backuprestore'); ?></a></td></tr>
+                    <tr><td class="row-title"><a href="https://docs.wpvivid.com/get-started-transfer-site.html" target="_blank"><?php _e('Migrate WordPress', 'wpvivid-backuprestore'); ?></a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php
+        /*$html = '<div class="postbox">
                 <h2>
                     <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">'.__('Current Version:', 'wpvivid-backuprestore').' '.$wpvivid_version.'</span></div>
                     <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">|</span></div>
@@ -185,7 +227,7 @@ class WPvivid_Admin {
                     </table>
                 </div>
              </div>';
-        return $html;
+        return $html;*/
     }
 
     /**
@@ -1076,7 +1118,7 @@ class WPvivid_Admin {
             <table class="widefat">
                 <div style="padding: 0 0 20px 10px;"><?php _e('There are two ways available to send us the debug information. The first one is recommended.', 'wpvivid-backuprestore'); ?></div>
                 <div style="padding-left: 10px;">
-                    <strong><?php _e('Method 1.'); ?></strong> <?php _e('If you have configured SMTP on your site, enter your email address and click the button below to send us the relevant information (website info and errors logs) when you are encountering errors. This will help us figure out what happened. Once the issue is resolved, we will inform you by your email address.', 'wpvivid-backuprestore'); ?>
+                    <strong><?php _e('Method 1.', 'wpvivid-backuprestore'); ?></strong> <?php _e('If you have configured SMTP on your site, enter your email address and click the button below to send us the relevant information (website info and errors logs) when you are encountering errors. This will help us figure out what happened. Once the issue is resolved, we will inform you by your email address.', 'wpvivid-backuprestore'); ?>
                 </div>
                 <div style="padding:10px 10px 0">
                     <span class="wpvivid-element-space-right"><?php echo __('WPvivid support email:', 'wpvivid-backuprestore'); ?></span><input type="text" id="wpvivid_support_mail" value="support@wpvivid.com" readonly />
@@ -1113,7 +1155,7 @@ class WPvivid_Admin {
                 </div>
                 <div style="clear:both;"></div>
                 <div style="padding-left: 10px;">
-                    <strong><?php _e('Method 2.'); ?></strong> <?php _e('If you didn’t configure SMTP on your site, click the button below to download the relevant information (website info and error logs) to your PC when you are encountering some errors. Sending the files to us will help us diagnose what happened.', 'wpvivid-backuprestore'); ?>
+                    <strong><?php _e('Method 2.', 'wpvivid-backuprestore'); ?></strong> <?php _e('If you didn’t configure SMTP on your site, click the button below to download the relevant information (website info and error logs) to your PC when you are encountering some errors. Sending the files to us will help us diagnose what happened.', 'wpvivid-backuprestore'); ?>
                 </div>
                 <div class="schedule-tab-block">
                     <input class="button-primary" id="wpvivid_download_website_info" type="submit" name="download-website-info" value="<?php esc_attr_e( 'Download', 'wpvivid-backuprestore' ); ?>" />

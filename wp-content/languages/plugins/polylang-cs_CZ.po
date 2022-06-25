@@ -2,14 +2,52 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-28 11:14:43+0000\n"
+"PO-Revision-Date: 2022-04-12 08:49:25+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/3.0.0-rc.4\n"
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
+
+#. translators: placeholder is the plugin name
+#: modules/site-health/admin-site-health.php:331
+msgid "%s information"
+msgstr "%s informace"
+
+#: modules/site-health/admin-site-health.php:323
+msgid "Not loaded. Contact your host provider."
+msgstr "Nenačteno. Kontaktujte svého poskytovatele hostitele."
+
+#: modules/site-health/admin-site-health.php:322
+msgid "PHP SimpleXML extension"
+msgstr "PHP SimpleXML rozšíření"
+
+#: install/plugin-updater.php:256
+msgid "Update now."
+msgstr "Nyní aktualizovat."
+
+#. translators: 1. and 4. are opening anchor tags 2. the new plugin version 3.
+#. and 5. are closing anchor tags.
+#: install/plugin-updater.php:245
+msgid "%1$sView version %2$s details%3$s or %4$supdate now%5$s."
+msgstr "%1$sZobrazit podrobnosti o verzi %2$s%3$s nebo %4$saktualizovat %5$s."
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin
+#. version 3. closing anchor tag, do not translate.
+#: install/plugin-updater.php:236
+msgid "%1$sView version %2$s details%3$s."
+msgstr "%1$sZobrazit podrobnosti o verzi %2$s%3$s."
+
+#: install/plugin-updater.php:231
+msgid "Contact your network administrator to install the update."
+msgstr "Požádejte správce sítě o instalaci aktualizace."
+
+#. translators: the plugin name.
+#: install/plugin-updater.php:225
+msgid "There is a new version of %1$s available."
+msgstr "K dispozici je nová verze aplikace %1$s."
 
 #: settings/settings-url.php:56
 msgid "Some themes or plugins may not be fully compatible with the language defined by the content or by domains."
@@ -23,52 +61,48 @@ msgstr "Jazyky a překlady pro média aktivujte pouze v případě, že potřebu
 msgid "When the front page is visited, redirects to itself in the browser preferred language. As this doesn't work if it is cached, Polylang will attempt to disable the front page cache for known cache plugins."
 msgstr "Při návštěvě úvodní stránky dojde k přesměrování na preferovaný jazyk prohlížeče. Protože to nefunguje, pokud je uložen do mezipaměti, Polylang se pokusí deaktivovat mezipaměť úvodní stránky pro známé pluginy mezipaměti."
 
-#: modules/site-health/admin-site-health.php:313
-msgid "Polylang warnings"
-msgstr "Polylang varování"
-
-#: modules/site-health/admin-site-health.php:307
+#: modules/site-health/admin-site-health.php:311
 msgid "Terms without language"
 msgstr "Položky bez jazyka"
 
-#: modules/site-health/admin-site-health.php:300
+#: modules/site-health/admin-site-health.php:304
 msgid "Posts without language"
 msgstr "Příspěvky bez jazyka"
 
-#: modules/site-health/admin-site-health.php:280
+#: modules/site-health/admin-site-health.php:283
 msgid "The homepage is not translated in all languages"
 msgstr "Úvodní stránka není přeložena do všech jazyků"
 
-#: modules/site-health/admin-site-health.php:270
+#: modules/site-health/admin-site-health.php:273
 msgid "It is mandatory to translate the static front page in all languages."
 msgstr "Je povinné přeložit statickou úvodní stránku do všech jazyků."
 
-#: modules/site-health/admin-site-health.php:262
+#: modules/site-health/admin-site-health.php:265
 msgid "All languages have a translated homepage"
 msgstr "Všechny jazyky mají přeloženou úvodní stránku"
 
-#: modules/site-health/admin-site-health.php:246
+#: modules/site-health/admin-site-health.php:249
 msgid "Homepage translated"
 msgstr "Úvodní stránka přeložena"
 
-#: modules/site-health/admin-site-health.php:231
+#: modules/site-health/admin-site-health.php:234
 msgid "Undefined"
 msgstr "Nedefinováno"
 
 #. translators: placeholder is the flag image
-#: modules/site-health/admin-site-health.php:213
+#: modules/site-health/admin-site-health.php:216
 msgid "Flag used in the language switcher: %s"
 msgstr "Vlajka používaná v přepínači jazyků: %s"
 
 #. translators: placeholder is the language name
-#: modules/site-health/admin-site-health.php:211
+#: modules/site-health/admin-site-health.php:214
 msgid "Language: %s"
 msgstr "Jazyk: %s"
 
 #. translators: placeholder is the plugin name
-#: modules/site-health/admin-site-health.php:173
-msgid "%s Options"
-msgstr "%s Možnosti"
+#: modules/site-health/admin-site-health.php:176
+msgid "%s options"
+msgstr "%s možnosti"
 
 #: include/widget-calendar.php:248
 msgid "Previous and next months"
@@ -404,10 +438,10 @@ msgstr "Severní Makedonie"
 
 #. translators: %1$s is a date, %2$s is link start tag, %3$s is link end tag.
 #: include/license.php:334
-msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s."
-msgstr "Platnost Vašeho licenčního klíče brzy vyprší! Stane se tak přesně %1$s. %2$sObnovte svůj licenční klíč dnes!%3$s."
+msgid "Your license key will expire soon! Precisely, it will expire on %1$s. %2$sRenew your license key today!%3$s"
+msgstr "Platnost Vašeho licenčního klíče brzy vyprší! Stane se tak přesně %1$s. %2$sObnovte svůj licenční klíč dnes!%3$s"
 
-#: settings/settings-module.php:317
+#: settings/settings-module.php:318
 msgid "To enable this feature, you need Polylang Pro."
 msgstr "Pro zpřístupnění této funkce potřebujete Polylang Pro."
 
@@ -462,16 +496,16 @@ msgstr "WP SYNTEX"
 msgid "Dismiss this notice."
 msgstr "Skrýt toto upozornění."
 
-#: include/filters.php:390
+#: include/filters.php:408
 msgid "User"
 msgstr "Uživatel"
 
 #. translators: %s is a language native name
-#: include/filters.php:381
+#: include/filters.php:399
 msgid "User description - %s"
 msgstr "Popis uživatele - %s"
 
-#: include/filters.php:357
+#: include/filters.php:375
 msgid "Translated user descriptions"
 msgstr "Přeložené popisy uživatelů"
 
@@ -489,7 +523,7 @@ msgstr "https://polylang.pro"
 msgid "Support and extra features are available to %1$sPolylang Pro%2$s users."
 msgstr "Technická podpora a další nadstandardní funkce jsou dostupné %1$sPolylang Pro%2$s uživatelům."
 
-#: settings/settings-module.php:319
+#: settings/settings-module.php:320
 msgid "Upgrade now."
 msgstr "Aktualizovat nyní."
 
@@ -552,25 +586,13 @@ msgstr "Umožňuje Vám sdílet stejné názvy v URL skrz různé jazyky pro př
 msgid "Share slugs"
 msgstr "Sdílet názvy v URL"
 
-#: install/plugin-updater.php:507
+#: install/plugin-updater.php:488
 msgid "Error"
 msgstr "Chyba"
 
-#: install/plugin-updater.php:507
+#: install/plugin-updater.php:488
 msgid "You do not have permission to install plugin updates"
 msgstr "Nemáte oprávnění instalovat aktualizace pluginů"
-
-#. translators: %1$s plugin name, %3$s plugin version, %2$s and %5$s are link
-#. start tags, %4$s and %6$s are link end tags.
-#: install/plugin-updater.php:263
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
-msgstr "K dispozici je nová verze %1$s. %2$sZobrazit detaily verze %3$s%4$s nebo %5$sproveďte aktualizaci nyní%6$s."
-
-#. translators: %1$s plugin name, %3$s plugin version, %2$s is link start tag,
-#. %4$s is link end tag.
-#: install/plugin-updater.php:254
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-msgstr "K dispozici je nová verze %1$s. %2$sZobrazit detaily verze %3$s%4$s."
 
 #. translators: Post calendar label. %s: Date.
 #: include/widget-calendar.php:221
@@ -1670,7 +1692,6 @@ msgid "Andorra"
 msgstr "Andorra"
 
 #. translators: accessibility text
-#. translators: accessibility text
 #: admin/view-translations-post.php:58 admin/view-translations-term.php:77
 msgid "Translation"
 msgstr "Překlad"
@@ -1687,7 +1708,7 @@ msgstr "Úvodní stránka"
 msgid "Add to Menu"
 msgstr "Přidat do menu"
 
-#: admin/admin-model.php:300 modules/wizard/wizard.php:487
+#: admin/admin-model.php:312 modules/wizard/wizard.php:487
 msgid "The flag does not exist"
 msgstr "Vlaječka neexistuje"
 
@@ -1697,20 +1718,16 @@ msgid "Add a translation in %s"
 msgstr "Přidat překlad v %s"
 
 #. translators: accessibility text, %s is a native language name
-#. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:196 admin/admin-filters-columns.php:333
 msgid "This item is in %s"
 msgstr "Tahle položka je v %s"
 
-#. translators: accessibility text, %s is a native language name
-#. translators: accessibility text, %s is a native language name
 #. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:177 admin/admin-filters-columns.php:319
 #: admin/admin-links.php:54
 msgid "Edit the translation in %s"
 msgstr "Editujte překlad v %s"
 
-#. translators: accessibility text, %s is a native language name
 #. translators: accessibility text, %s is a native language name
 #: admin/admin-filters-columns.php:173 admin/admin-filters-columns.php:315
 msgid "Edit this item in %s"
@@ -2170,7 +2187,7 @@ msgstr "Uživatelská pole"
 msgid "Taxonomies"
 msgstr "Taxonomie"
 
-#: settings/settings-licenses.php:113 settings/settings-module.php:258
+#: settings/settings-licenses.php:113 settings/settings-module.php:259
 msgid "Settings saved."
 msgstr "Nastavení uloženo"
 
@@ -2178,7 +2195,7 @@ msgstr "Nastavení uloženo"
 msgid "Translations updated."
 msgstr "Překlad aktualizován"
 
-#: admin/admin-base.php:123 include/mo.php:21 settings/settings.php:146
+#: admin/admin-base.php:126 include/mo.php:21 settings/settings.php:146
 msgid "Strings translations"
 msgstr "Překlady textů"
 
@@ -2190,15 +2207,15 @@ msgstr "O Polylangu"
 msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
 msgstr "Jazyk byl vytvořen, ale WordPress jazykový soubor nebyl stažen. Prosím, nainstalujte jej manuálně."
 
-#: admin/admin-base.php:454 admin/admin-base.php:472
+#: admin/admin-base.php:467 admin/admin-base.php:485
 msgid "Filters content by language"
 msgstr "Filtruje obsah podle jazyka"
 
-#: admin/admin-base.php:445
+#: admin/admin-base.php:458
 msgid "Show all languages"
 msgstr "Zobrazit všechny jazyky"
 
-#: admin/admin-base.php:126 admin/admin.php:104
+#: admin/admin-base.php:129 admin/admin.php:104
 #: settings/settings-module.php:120
 msgid "Settings"
 msgstr "Nastavení"
@@ -2216,19 +2233,19 @@ msgstr "Název widgetu"
 msgid "Language switcher"
 msgstr "Přepínač jazyků"
 
-#: admin/admin-model.php:288 modules/wizard/wizard.php:486
+#: admin/admin-model.php:300 modules/wizard/wizard.php:486
 msgid "The language must have a name"
 msgstr "Jazyk musí mít název"
 
-#: admin/admin-model.php:281 modules/wizard/wizard.php:485
+#: admin/admin-model.php:293 modules/wizard/wizard.php:485
 msgid "The language code must be unique"
 msgstr "Kód jazyka musí být unikátní"
 
-#: admin/admin-model.php:275 modules/wizard/wizard.php:484
+#: admin/admin-model.php:287 modules/wizard/wizard.php:484
 msgid "The language code contains invalid characters"
 msgstr "Kód jazyka obsahuje nepovolené znaky"
 
-#: admin/admin-model.php:270 modules/wizard/wizard.php:483
+#: admin/admin-model.php:282 modules/wizard/wizard.php:483
 msgid "Enter a valid WordPress locale"
 msgstr "Zadejte platný WordPress locale"
 
@@ -2248,7 +2265,7 @@ msgstr "jazyk přidán"
 msgid "Impossible to add the language."
 msgstr "Jazyk není možné přidat."
 
-#: include/filters-widgets-options.php:51 include/translated-post.php:118
+#: include/filters-widgets-options.php:51 include/translated-post.php:136
 msgid "All languages"
 msgstr "Všechny jazyky"
 
@@ -2272,11 +2289,11 @@ msgstr "Upravit"
 msgid "(no parent)"
 msgstr "(bez nadřazení)"
 
-#: admin/admin-base.php:119 admin/admin-base.php:143
+#: admin/admin-base.php:122 admin/admin-base.php:146
 #: admin/admin-classic-editor.php:75 admin/admin-nav-menu.php:72
 #: admin/admin-nav-menu.php:75 admin/admin-nav-menu.php:108
 #: admin/admin-notices.php:110 include/nav-menu.php:71
-#: include/translated-post.php:116
+#: include/translated-post.php:134
 #: modules/wizard/view-wizard-step-languages.php:29
 #: modules/wizard/wizard.php:498 settings/settings.php:126
 msgid "Languages"
@@ -2284,7 +2301,7 @@ msgstr "Jazyky"
 
 #: admin/admin-classic-editor.php:127 admin/admin-filters-columns.php:234
 #: admin/admin-filters-media.php:62 admin/admin-filters-term.php:151
-#: admin/admin-filters-term.php:224 include/translated-post.php:117
+#: admin/admin-filters-term.php:224 include/translated-post.php:135
 #: modules/wizard/view-wizard-step-languages.php:67
 msgid "Language"
 msgstr "Jazyk"

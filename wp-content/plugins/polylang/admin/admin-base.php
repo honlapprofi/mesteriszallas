@@ -68,6 +68,8 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		// Adds the link to the languages panel in the WordPress admin menu
 		add_action( 'admin_menu', array( $this, 'add_menus' ) );
 
+		add_action( 'admin_menu', array( $this, 'remove_customize_submenu' ) );
+
 		// Setup js scripts and css styles
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'admin_print_footer_scripts', array( $this, 'admin_print_footer_scripts' ), 0 ); // High priority in case an ajax request is sent by an immediately invoked function
@@ -86,6 +88,9 @@ abstract class PLL_Admin_Base extends PLL_Base {
 
 		$this->notices = new PLL_Admin_Notices( $this );
 
+		$this->default_term = new PLL_Admin_Default_Term( $this );
+		$this->default_term->add_hooks();
+
 		if ( ! $this->model->get_languages_list() ) {
 			return;
 		}
@@ -93,8 +98,6 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		$this->links = new PLL_Admin_Links( $this ); // FIXME needed here ?
 		$this->static_pages = new PLL_Admin_Static_Pages( $this ); // FIXME needed here ?
 		$this->filters_links = new PLL_Filters_Links( $this ); // FIXME needed here ?
-		$this->default_term = new PLL_Admin_Default_Term( $this );
-		$this->default_term->add_hooks();
 
 		// Filter admin language for users
 		// We must not call user info before WordPress defines user roles in wp-settings.php
@@ -366,8 +369,18 @@ abstract class PLL_Admin_Base extends PLL_Base {
 			$this->curlang = $this->model->get_language( sanitize_key( $_REQUEST['lang'] ) ); // phpcs:ignore WordPress.Security.NonceVerification
 		}
 
+		/**
+		 * Filters the current language used by Polylang in the admin context.
+		 *
+		 * @since 3.2
+		 *
+		 * @param PLL_Language|false|null $curlang  Instance of the current language.
+		 * @param PLL_Admin_Base          $polylang Instance of the main Polylang's object.
+		 */
+		$this->curlang = apply_filters( 'pll_admin_current_language', $this->curlang, $this );
+
 		// Inform that the admin language has been set.
-		if ( $this->curlang ) {
+		if ( $this->curlang instanceof PLL_Language ) {
 			/** This action is documented in frontend/choose-lang.php */
 			do_action( 'pll_language_defined', $this->curlang->slug, $this->curlang );
 		} else {
@@ -495,6 +508,33 @@ abstract class PLL_Admin_Base extends PLL_Base {
 					'meta'   => 'all' === $lang->slug ? array() : array( 'lang' => esc_attr( $lang->get_locale( 'display' ) ) ),
 				)
 			);
+		}
+	}
+
+	/**
+	 * Remove the customize submenu when using a block theme.
+	 *
+	 * WordPress removes the Customizer menu if a block theme is activated and no other plugins interact with it.
+	 * As Polylang interacts with the Customizer, we have to delete this menu ourselves in the case of a block theme,
+	 * unless another plugin than Polylang interacts with the Customizer.
+	 *
+	 * @since 3.2
+	 *
+	 * @return void
+	 */
+	public function remove_customize_submenu() {
+		if ( ! $this->should_customize_menu_be_removed() ) {
+			return;
+		}
+
+		global $submenu;
+
+		if ( ! empty( $submenu['themes.php'] ) ) {
+			foreach ( $submenu['themes.php'] as $submenu_item ) {
+				if ( 'customize' === $submenu_item[1] ) {
+					remove_submenu_page( 'themes.php', $submenu_item[2] );
+				}
+			}
 		}
 	}
 }

@@ -42,16 +42,24 @@ class CustomersMenuPage extends AbstractMenuPage {
         add_action( 'init', array( $this, 'save' ) );
         
         add_action( 'admin_menu', array( $this, 'controlAccess' ), 1 );
-        
-        add_action( 'admin_enqueue_scripts', array( MPHB()->getAdminScriptManager(), 'enqueue') );
+
+        add_action( 'admin_enqueue_scripts', array( $this, 'enqueueAdminScripts' ) );
     }
-    
+
     public function controlAccess() {
         if( $this->isView && ! current_user_can( \MPHB\UsersAndRoles\CapabilitiesAndRoles::EDIT_CUSTOMER ) ) {
             wp_die( esc_html__( 'Sorry, you are not allowed to access this page.', 'motopress-hotel-booking' ) );
         }
     }
-    
+
+	public function enqueueAdminScripts() {
+		if ( ! $this->isCurrentPage() ) {
+			return;
+		}
+
+		MPHB()->getAdminScriptManager()->enqueue();
+	}
+
     public function save() {
           
         // Save customer

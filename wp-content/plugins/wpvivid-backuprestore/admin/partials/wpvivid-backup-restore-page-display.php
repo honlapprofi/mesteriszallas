@@ -708,14 +708,13 @@ function wpvivid_backuppage_add_page_backup(){
             }
         }
 
-        function wpvivid_read_log(action, param, log_type, log_result){
+        function wpvivid_read_log(action, param, log_type){
             var tab_id = '';
             var content_id = '';
             var ajax_data = '';
             var show_page = '';
             if(typeof param === 'undefined')    param = '';
             if(typeof log_type === 'undefined')    log_type = '';
-            if(typeof log_result === 'undefined')    log_result = '';
             switch(action){
                 case 'wpvivid_view_backup_task_log':
                     ajax_data = {
@@ -747,9 +746,8 @@ function wpvivid_backuppage_add_page_backup(){
                 case 'wpvivid_view_log':
                     var ajax_data={
                         'action':action,
-                        'path':param,
-                        'log_type':log_type,
-                        'log_result':log_result
+                        'id':param,
+                        'log_type':log_type
                     };
                     tab_id = 'wpvivid_tab_read_log';
                     content_id = 'wpvivid_read_log_content';

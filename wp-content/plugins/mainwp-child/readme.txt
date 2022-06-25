@@ -5,9 +5,9 @@ Author: mainwp
 Author URI: https://mainwp.com
 Plugin URI: https://mainwp.com
 Requires at least: 5.4
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 4.1.10
+Stable tag: 4.2.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,10 @@ The Child plugin connects your WordPress sites to the [MainWP WordPress Manager 
 The [MainWP WordPress Management](https://mainwp.com) system is self-hosted, open source, and private.  Connect and control all the WordPress sites you administer, even those on different hosts and servers.
 
 MainWP is the perfect solution for WordPress consultants, marketers, developers, WordPress shops, or anyone with multiple WordPress sites
+
+= Your Guarantee of Privacy =
+
+The MainWP plugins come with their own [privacy policies](https://mainwp.com/mainwp-plugin-privacy-policy/) to ensure you that the plugins do not collect any personally identifiable information (PII). Please review them before activating the plugin.
 
 = How does the MainWP system work? =
 
@@ -42,7 +46,7 @@ Still not sure how MainWP works? [Review these detailed steps on installing your
 = More Information =
 [MainWP Documentation](https://kb.mainwp.com/)
 
-[MainWP Community](https://meta.mainwp.com/)
+[MainWP Community](https://managers.mainwp.com/)
 
 [MainWP Support](https://mainwp.com/support/)
 
@@ -70,7 +74,7 @@ Yes, please review the [documentation site](https://kb.mainwp.com).
 Yes, please read the [Quick Start – Setting up your MainWP](https://kb.mainwp.com/docs/set-up-the-mainwp-plugin/) guide on the doc site.
 
 = Where do I go for support or to ask for help? =
-Please post in the [MainWP Community](https://meta.mainwp.com)
+Please post in the [MainWP Community](https://managers.mainwp.com)
 
 = What is the difference between ManageWP and MainWP? =
 Essentially MainWP and ManageWP provide the same type of service but with different philosophies on WordPress management.
@@ -88,7 +92,7 @@ We also participate in the [HackerOne](https://www.hackerone.com) bug bounty pro
 If you want to make some basic changes to the look of your Dashboard, you can use our prebuilt [Custom Dashbboard](https://mainwp.com/extension/mainwp-custom-dashboard-extension/) Extension, or if you want to dig in and build Extensions, you can learn all about Extension creation at [MainWP.dev](https://mainwp.dev/)
 
 = I have an idea for MainWP; how do I let you know? =
-Please follow the steps outlined in the [MainWP Feature Requests](https://meta.mainwp.com/c/feature/16) so you can add your idea to the MainWP Community to be voted on.
+Please follow the steps outlined in the [MainWP Feature Requests](https://managers.mainwp.com/c/feature/16) so you can add your idea to the MainWP Community to be voted on.
 
 = I have more questions, do you have any other information? =
 Sure we have a quick FAQ with a lot more questions and answers [here](https://mainwp.com/presales-faq/).
@@ -106,6 +110,32 @@ Sure we have a quick FAQ with a lot more questions and answers [here](https://ma
 9. Global Dashboard Screen
 
 == Changelog ==
+
+= 4.2.3 - 5-16-2022 =
+Added: Swift Performance Pro to the Purge Cache system
+
+= 4.2.2 - 5-10-2022 =
+* Fixed: An issue with detecting abandoned plugins and themes on specific setups
+* Fixed: An issue with running scheduled events on specific setups
+* Added: Nginx Helper to the Purge Cache system
+* Added: Nitropack to the Purge Cache system
+* Added: Autoptimize to the Purge Cache system
+* Updated: Tested up to tag to WP 6.0
+
+= 4.2.1 - 4-14-2022 =
+* Fixed: An issue with setting BackupBuddy plugin Settings
+* Fixed: An issue with generating client reports on setups with large amount of data
+* Updated: `meta.mainwp.com` URLs changed to `managers.mainwp.com`
+* Updated: `privacy-policy.txt` file
+
+= 4.2 - 4-5-2022 =
+* Fixed: An issue with detecting abandoned plugins and themes on some setups
+* Fixed: An issue with the update process getting stuck on specific server configurations
+* Fixed: An issue with syncing Wordfence extension data
+* Added: Plugin privacy policy file to the plugin directory
+* Added: Support for the Negative Search feature
+* Added: Support for the feature that prevents parent theme of active child theme from being deleted
+* Added: Support for the automatic cache clearing after updates feature
 
 = 4.1.10 - 2-16-2022 =
 * Fixed: Problem with loading UpdrafPlus data when `$updraftplus_admin` returns empty value

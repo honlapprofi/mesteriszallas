@@ -179,6 +179,16 @@ class PageSettings {
 	public function getTermsAndConditionsPageId(){
 		return $this->getPageId( 'terms_and_conditions' );
 	}
+
+	/**
+	 *
+	 * @return bool
+	 * @since 4.2.5
+	 */
+	public function getOpenTermsAndConditionsInNewWindow()
+	{
+		return (bool) get_option( 'mphb_open_terms_in_new_window', false );
+	}
 	
 	/**
 	 * 
