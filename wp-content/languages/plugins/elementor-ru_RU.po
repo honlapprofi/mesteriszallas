@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-19 17:23:32+0000\n"
+"PO-Revision-Date: 2022-06-08 08:54:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
-"X-Generator: GlotPress/3.0.0\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: ru\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
 
@@ -34,23 +34,23 @@ msgstr "Воспроизвести видео о"
 msgid "Pagination"
 msgstr "Пагинация"
 
-#: includes/elements/container.php:504
+#: includes/elements/container.php:503
 msgctxt "Flex Container Control"
 msgid "Elements Gap"
 msgstr "Отступ элементов"
 
-#: includes/elements/container.php:475
+#: includes/elements/container.php:474
 msgid "Don't use for nested links, this will cause semantic issues and unexpected behavior."
 msgstr "Не используйте для вложенных ссылок, это вызовет семантические проблемы и неожиданное поведение."
 
-#: includes/elements/container.php:411
+#: includes/elements/container.php:410
 msgid "To achieve full height Container use %s."
 msgstr "Чтобы получить контейнер полной высоты, используйте %s."
 
-#: includes/elements/container.php:67 includes/elements/container.php:288
+#: includes/elements/container.php:67 includes/elements/container.php:287
 #: modules/library/documents/container.php:52
 #: assets/js/editor-document.js:17391 assets/js/editor.js:11110
-#: assets/js/editor.js:33635
+#: assets/js/editor.js:33653
 msgid "Container"
 msgstr "Контейнер"
 
@@ -330,8 +330,8 @@ msgstr "Импорт и экспорт"
 msgid "Elementor Event Tracker"
 msgstr "Трекер событий Elementor"
 
-#: core/app/modules/onboarding/module.php:276
-#: core/app/modules/onboarding/module.php:359
+#: core/app/modules/onboarding/module.php:256
+#: core/app/modules/onboarding/module.php:339
 msgid "There was a problem uploading your file"
 msgstr "Не удалось загрузить файл"
 
@@ -592,42 +592,42 @@ msgstr "Переходы страниц позволяют стилизоват�
 msgid "Select one or go ahead and %1$screate one%2$s now."
 msgstr "Выберите имеющийся или продолжите и %1$sсоздайте%2$s."
 
-#: includes/elements/column.php:421 includes/elements/container.php:717
+#: includes/elements/column.php:421 includes/elements/container.php:716
 #: includes/elements/section.php:709
 msgid "Luminosity"
 msgstr "Яркость"
 
-#: includes/elements/column.php:416 includes/elements/container.php:715
+#: includes/elements/column.php:416 includes/elements/container.php:714
 #: includes/elements/section.php:707
 msgid "Saturation"
 msgstr "Насыщенность"
 
-#: includes/elements/column.php:415 includes/elements/container.php:714
+#: includes/elements/column.php:415 includes/elements/container.php:713
 #: includes/elements/section.php:706
 msgid "Color Dodge"
 msgstr "Осветление основы"
 
-#: includes/elements/column.php:414 includes/elements/container.php:713
+#: includes/elements/column.php:414 includes/elements/container.php:712
 #: includes/elements/section.php:705
 msgid "Lighten"
 msgstr "Осветление"
 
-#: includes/elements/column.php:413 includes/elements/container.php:712
+#: includes/elements/column.php:413 includes/elements/container.php:711
 #: includes/elements/section.php:704
 msgid "Darken"
 msgstr "Затемнение"
 
-#: includes/elements/column.php:412 includes/elements/container.php:711
+#: includes/elements/column.php:412 includes/elements/container.php:710
 #: includes/elements/section.php:703
 msgid "Overlay"
 msgstr "Перекрытие"
 
-#: includes/elements/column.php:411 includes/elements/container.php:710
+#: includes/elements/column.php:411 includes/elements/container.php:709
 #: includes/elements/section.php:702
 msgid "Screen"
 msgstr "Экран"
 
-#: includes/elements/column.php:410 includes/elements/container.php:709
+#: includes/elements/column.php:410 includes/elements/container.php:708
 #: includes/elements/section.php:701
 msgid "Multiply"
 msgstr "Умножение"
@@ -716,7 +716,7 @@ msgid "It seems like your site doesn't have any active Kit. The active Kit inclu
 msgstr "Похоже, на вашем сайте нет активного набора. Активный набор включает в себя все настройки вашего сайта. Пересоздав свой набор, вы вновь сможете начать редактировать настройки сайта."
 
 #: includes/settings/tools.php:399 includes/settings/tools.php:402
-#: assets/js/editor.js:24080
+#: assets/js/editor.js:24083
 msgid "Recreate Kit"
 msgstr "Пересоздать набор"
 
@@ -1046,11 +1046,11 @@ msgstr "Используете WooCommerce?"
 msgid "Love using Elementor?"
 msgstr "Любите Elementor?"
 
-#: core/app/modules/import-export/module.php:435
+#: core/app/modules/import-export/module.php:437
 msgid "Template Kits"
 msgstr "Наборы шаблонов"
 
-#: core/app/modules/import-export/module.php:432
+#: core/app/modules/import-export/module.php:434
 msgid "Import / Export Kit"
 msgstr "Импорт / Экспорт наборов"
 
@@ -1425,7 +1425,7 @@ msgstr "Добавляет новый тип содержимого Elementor, �
 #: modules/landing-pages/module.php:45 modules/landing-pages/module.php:150
 #: modules/landing-pages/module.php:169 modules/landing-pages/module.php:283
 #: modules/landing-pages/module.php:295 assets/js/app.js:13311
-#: assets/js/editor.js:47572
+#: assets/js/editor.js:47592
 msgid "Landing Pages"
 msgstr "Лендинги"
 
@@ -1497,13 +1497,13 @@ msgstr "Предупреждение: это сбросит ваши текущ�
 msgid "Rerun Update Script"
 msgstr "Повторить сценарий обновления"
 
-#: core/upgrade/elementor-3-re-migrate-globals.php:56 assets/js/admin.js:5588
+#: core/upgrade/elementor-3-re-migrate-globals.php:56 assets/js/admin.js:5373
 msgid "Migrate to v3.0"
 msgstr "Переход на версию 3.0"
 
 #: core/kits/documents/tabs/global-colors.php:24
 #: core/kits/documents/tabs/global-colors.php:43 assets/js/app.js:13319
-#: assets/js/editor.js:42532
+#: assets/js/editor.js:42552
 msgid "Global Colors"
 msgstr "Глобальные цвета"
 
@@ -1523,7 +1523,7 @@ msgstr "Отступы колонок"
 msgid "Apply Link On"
 msgstr "Применить ссылку на"
 
-#: includes/elements/container.php:492 includes/widgets/icon-list.php:159
+#: includes/elements/container.php:491 includes/widgets/icon-list.php:159
 msgid "Items"
 msgstr "Элементы"
 
@@ -1568,13 +1568,13 @@ msgstr "Последнее обновление включает в себя н�
 msgid "Heads up, Please backup before upgrade!"
 msgstr "Внимание, сделайте резервную копию перед обновлением!"
 
-#: core/settings/editor-preferences/model.php:38 assets/js/editor.js:32153
+#: core/settings/editor-preferences/model.php:38 assets/js/editor.js:32156
 msgid "User Preferences"
 msgstr "Пользовательские предпочтения"
 
 #: core/kits/manager.php:392 assets/js/app.js:13317 assets/js/app.js:13884
-#: assets/js/editor.js:42479 assets/js/editor.js:42483
-#: assets/js/editor.js:42493
+#: assets/js/editor.js:42499 assets/js/editor.js:42503
+#: assets/js/editor.js:42513
 msgid "Site Settings"
 msgstr "Настройки сайта"
 
@@ -1603,7 +1603,7 @@ msgid "Suggested image dimensions: 350 × 100 pixels."
 msgstr "Предлагаемые размеры изображения: 350 × 100 пикселей."
 
 #: core/kits/documents/tabs/settings-site-identity.php:87
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1213
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1167
 msgid "Site Logo"
 msgstr "Логотип сайта"
 
@@ -1620,7 +1620,7 @@ msgid "Choose name"
 msgstr "Введите название"
 
 #: core/kits/documents/tabs/settings-site-identity.php:65
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1209
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1163
 msgid "Site Name"
 msgstr "Название сайта"
 
@@ -1667,7 +1667,7 @@ msgstr "Познакомьтесь с Elementor, посмотрев серию �
 
 #: includes/settings/settings.php:548 assets/js/admin.js:867
 #: assets/js/admin.js:874 assets/js/common.js:2572 assets/js/common.js:2579
-#: assets/js/editor.js:34359 assets/js/editor.js:34366
+#: assets/js/editor.js:34377 assets/js/editor.js:34384
 msgid "Enable Unfiltered File Uploads"
 msgstr "Включить загрузку любых файлов"
 
@@ -1836,7 +1836,7 @@ msgid "Cover"
 msgstr "Перекрыть"
 
 #: includes/controls/groups/background.php:716
-#: includes/elements/container.php:430 includes/widgets/social-icons.php:276
+#: includes/elements/container.php:429 includes/widgets/social-icons.php:276
 msgid "Auto"
 msgstr "Авто"
 
@@ -1929,10 +1929,10 @@ msgstr "Очистить журнал"
 
 #: includes/frontend.php:1307 includes/widgets/image-carousel.php:832
 #: assets/js/app.js:9819 assets/js/app.js:11647 assets/js/app.js:12601
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1860
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1914
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2224
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2525
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1702
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1756
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2066
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2367
 msgid "Next"
 msgstr "Далее"
 
@@ -2153,7 +2153,7 @@ msgstr "Внимание! Разрешение загрузки любых фа�
 msgid "Template not exist."
 msgstr "Шаблон не существует."
 
-#: includes/elements/column.php:886 includes/elements/container.php:1565
+#: includes/elements/column.php:886 includes/elements/container.php:1564
 #: includes/elements/section.php:1348 includes/widgets/common.php:1632
 msgid "Responsive visibility will take effect only on preview or live page, and not while editing in Elementor."
 msgstr "Адаптивная видимость будет действовать только на странице предварительного просмотра или реальной странице, но не при редактировании в Elementor."
@@ -2162,11 +2162,11 @@ msgstr "Адаптивная видимость будет действоват�
 msgid "Deprecated"
 msgstr "Устарело"
 
-#: includes/managers/icons.php:527
+#: includes/managers/icons.php:553
 msgid "Hurray! The upgrade process to Font Awesome 5 was completed successfully."
 msgstr "Ура! Процесс обновления до Font Awesome 5 успешно завершен."
 
-#: includes/managers/icons.php:511
+#: includes/managers/icons.php:512
 msgid "Upgrade To Font Awesome 5"
 msgstr "Обновление до Font Awesome 5"
 
@@ -2249,35 +2249,35 @@ msgstr "Библиотека иконок"
 msgid "Document not found."
 msgstr "Документ не найден."
 
-#: includes/elements/container.php:1338 includes/widgets/common.php:468
+#: includes/elements/container.php:1337 includes/widgets/common.php:468
 msgid "Vertical Orientation"
 msgstr "Вертикальная ориентация"
 
-#: includes/elements/container.php:1260 includes/elements/container.php:1299
-#: includes/elements/container.php:1362 includes/elements/container.php:1400
+#: includes/elements/container.php:1259 includes/elements/container.php:1298
+#: includes/elements/container.php:1361 includes/elements/container.php:1399
 #: includes/widgets/common.php:390 includes/widgets/common.php:429
 #: includes/widgets/common.php:492 includes/widgets/common.php:530
 #: includes/widgets/common.php:812
 msgid "Offset"
 msgstr "Смещение"
 
-#: includes/elements/container.php:1235 includes/widgets/common.php:365
+#: includes/elements/container.php:1234 includes/widgets/common.php:365
 msgid "Horizontal Orientation"
 msgstr "Горизонтальная ориентация"
 
-#: includes/elements/container.php:1216 includes/widgets/common.php:351
+#: includes/elements/container.php:1215 includes/widgets/common.php:351
 msgid "Fixed"
 msgstr "Фиксированное"
 
-#: includes/elements/container.php:1215 includes/widgets/common.php:350
+#: includes/elements/container.php:1214 includes/widgets/common.php:350
 msgid "Absolute"
 msgstr "Абсолютное"
 
-#: includes/elements/container.php:1196 includes/widgets/common.php:332
+#: includes/elements/container.php:1195 includes/widgets/common.php:332
 msgid "Custom positioning is not considered best practice for responsive web design and should not be used too frequently."
 msgstr "Произвольное позиционирование не самая лучшая практика для адаптивного веб-дизайна. Не злоупотребляйте им."
 
-#: core/experiments/manager.php:265 includes/elements/container.php:1196
+#: core/experiments/manager.php:265 includes/elements/container.php:1195
 #: includes/widgets/common.php:332
 msgid "Please note!"
 msgstr "Внимание!"
@@ -2290,15 +2290,15 @@ msgstr "Суперадминистратор"
 msgid "Get Help"
 msgstr "Получить помощь"
 
-#: includes/elements/container.php:429 includes/elements/section.php:477
+#: includes/elements/container.php:428 includes/elements/section.php:477
 msgid "Hidden"
 msgstr "Скрыто"
 
-#: includes/elements/container.php:423 includes/elements/section.php:472
+#: includes/elements/container.php:422 includes/elements/section.php:472
 msgid "Overflow"
 msgstr "Overflow"
 
-#: includes/elements/column.php:825 includes/elements/container.php:1489
+#: includes/elements/column.php:825 includes/elements/container.php:1488
 #: includes/elements/section.php:1261 includes/widgets/common.php:617
 msgid "Motion Effects"
 msgstr "Эффекты движения"
@@ -2377,7 +2377,7 @@ msgstr "Продолжить чтение %s"
 msgid "(more&hellip;)"
 msgstr "(больше&hellip;)"
 
-#: includes/template-library/sources/local.php:1343
+#: includes/template-library/sources/local.php:1346
 msgctxt "Template Library"
 msgid "Filter by category"
 msgstr "Фильтр по рубрике"
@@ -2434,7 +2434,7 @@ msgid "Get Popup Builder"
 msgstr "Получить конструктор попапов"
 
 #: includes/settings/settings.php:183
-#: includes/template-library/sources/local.php:1640 assets/js/app.js:13302
+#: includes/template-library/sources/local.php:1643 assets/js/app.js:13302
 #: assets/js/kit-library.c7db5f02248493fe3f04.bundle.js:2147
 msgid "Popups"
 msgstr "Всплывающие окна"
@@ -2442,8 +2442,8 @@ msgstr "Всплывающие окна"
 #: core/app/app.php:40 core/app/app.php:41
 #: core/app/modules/site-editor/module.php:31
 #: core/common/modules/finder/categories/general.php:72
-#: includes/template-library/sources/local.php:1639
-#: assets/js/app-packages.js:7506 assets/js/editor.js:42504
+#: includes/template-library/sources/local.php:1642
+#: assets/js/app-packages.js:7506 assets/js/editor.js:42524
 msgid "Theme Builder"
 msgstr "Конструктор тем"
 
@@ -2590,7 +2590,7 @@ msgid "Type to find anything in Elementor"
 msgstr "Введите чтобы найти в Elementor"
 
 #: includes/editor-templates/hotkeys.php:92 assets/js/admin-top-bar.js:477
-#: assets/js/common.js:5506 assets/js/editor.js:32165
+#: assets/js/common.js:5506 assets/js/editor.js:32183
 msgid "Finder"
 msgstr "Поиск"
 
@@ -2611,7 +2611,7 @@ msgid "Homepage"
 msgstr "Главная"
 
 #: core/common/modules/finder/categories/create.php:27
-#: assets/js/editor.js:40782
+#: assets/js/editor.js:40802
 msgid "Create"
 msgstr "Создать"
 
@@ -2679,11 +2679,11 @@ msgid "Create Your First Page"
 msgstr "Создайте Вашу первую страницу"
 
 #: includes/settings/settings.php:200 includes/settings/settings.php:268
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:961
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:915
 msgid "Getting Started"
 msgstr "Приветствие"
 
-#: includes/widgets/inner-section.php:35 assets/js/editor.js:23150
+#: includes/widgets/inner-section.php:35 assets/js/editor.js:23153
 msgid "Inner Section"
 msgstr "Внутренняя секция"
 
@@ -2703,18 +2703,18 @@ msgstr "Пусто"
 #: includes/editor-templates/navigator.php:12
 #: includes/editor-templates/panel.php:69
 #: includes/editor-templates/panel.php:71 assets/js/editor-document.js:15576
-#: assets/js/editor.js:25810
+#: assets/js/editor.js:25813
 msgid "Navigator"
 msgstr "Навигатор"
 
 #: includes/editor-templates/library-layout.php:13
 #: includes/settings/settings.php:271 includes/settings/settings.php:272
 #: assets/js/app-packages.js:3787 assets/js/app.js:5273
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1485
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:1756
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2020
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2214
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2563
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1425
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1598
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:1862
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2056
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2405
 msgid "Skip"
 msgstr "Пропустить"
 
@@ -2819,13 +2819,13 @@ msgstr "Сайт"
 msgid "Pro"
 msgstr "Pro"
 
-#: includes/elements/column.php:406 includes/elements/container.php:705
+#: includes/elements/column.php:406 includes/elements/container.php:704
 #: includes/elements/section.php:697 includes/widgets/heading.php:266
 msgid "Blend Mode"
 msgstr "Режим наложения"
 
 #: includes/editor-templates/hotkeys.php:35 assets/js/editor-document.js:14778
-#: assets/js/editor.js:25012
+#: assets/js/editor.js:25015
 msgid "Copy"
 msgstr "Копировать"
 
@@ -2874,11 +2874,11 @@ msgstr "Укажите время начала (в секундах)"
 msgid "Start Time"
 msgstr "Время начала"
 
-#: core/admin/feedback.php:114
+#: core/admin/feedback.php:113
 msgid "Wait! Don't deactivate Elementor. You have to activate both Elementor and Elementor Pro in order for the plugin to work."
 msgstr "Подождите! Не деактивируйте Elementor. Вы должны активировать как Elementor, так и Elementor Pro, чтобы плагин работал."
 
-#: core/admin/feedback.php:112
+#: core/admin/feedback.php:111
 msgid "I have Elementor Pro"
 msgstr "У меня есть Elementor Pro"
 
@@ -2886,7 +2886,7 @@ msgstr "У меня есть Elementor Pro"
 msgid "Elementor Debugger"
 msgstr "Отладчик Debugger"
 
-#: core/admin/admin.php:174 assets/js/admin.js:5400 assets/js/gutenberg.js:796
+#: core/admin/admin.php:174 assets/js/admin.js:5175 assets/js/gutenberg.js:796
 msgid "Back to WordPress Editor"
 msgstr "Вернуться к редактору WordPress"
 
@@ -2898,7 +2898,7 @@ msgstr "Elementor %s"
 #. translators: %s: Template type label.
 #: core/base/document.php:173
 #: core/common/modules/finder/categories/create.php:86
-#: includes/template-library/sources/local.php:1317
+#: includes/template-library/sources/local.php:1320
 msgid "Add New %s"
 msgstr "Добавить новый %s"
 
@@ -2923,7 +2923,7 @@ msgstr "Холст Elementor"
 #: core/kits/documents/tabs/theme-style-images.php:95
 #: core/kits/documents/tabs/theme-style-images.php:166
 #: includes/elements/column.php:375 includes/elements/column.php:449
-#: includes/elements/container.php:659 includes/elements/container.php:771
+#: includes/elements/container.php:658 includes/elements/container.php:770
 #: includes/elements/section.php:651 includes/elements/section.php:755
 #: includes/widgets/image-box.php:322 includes/widgets/image-box.php:376
 #: includes/widgets/image.php:393 includes/widgets/image.php:427
@@ -2941,7 +2941,7 @@ msgstr "Что-то пошло не так."
 msgid "Max Width"
 msgstr "Макс. ширина"
 
-#: includes/elements/container.php:1210 includes/widgets/common.php:345
+#: includes/elements/container.php:1209 includes/widgets/common.php:345
 #: includes/widgets/common.php:1495 includes/widgets/divider.php:736
 #: includes/widgets/divider.php:876 includes/widgets/image-carousel.php:413
 #: includes/widgets/image-carousel.php:477 includes/widgets/tabs.php:152
@@ -2994,16 +2994,16 @@ msgstr "Разделитель"
 msgid "Add New"
 msgstr "Добавить новый"
 
-#: includes/template-library/sources/local.php:1277
+#: includes/template-library/sources/local.php:1280
 msgid "Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow."
 msgstr "Добавьте шаблоны и используйте их повторно на всём сайте. С лёгкостью экспортируйте и импортируйте их в любой другой проект и оптимизируйте рабочий процесс."
 
 #. translators: %s: Template type label.
-#: includes/template-library/sources/local.php:1310
+#: includes/template-library/sources/local.php:1313
 msgid "Create Your First %s"
 msgstr "Создайте ваш первый %s"
 
-#: includes/template-library/sources/local.php:1183
+#: includes/template-library/sources/local.php:1186
 msgid "All"
 msgstr "Все"
 
@@ -3227,8 +3227,8 @@ msgid "Select File"
 msgstr "Выберите файл"
 
 #: includes/editor-templates/templates.php:245
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2399
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2784
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2241
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2625
 msgid "or"
 msgstr "или"
 
@@ -3244,7 +3244,7 @@ msgstr "Импортируйте шаблон в библиотеку"
 #: includes/editor-templates/templates.php:250
 #: includes/editor-templates/templates.php:263
 #: includes/widgets/traits/button-trait.php:58
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:2796
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:2637
 msgid "Click here"
 msgstr "Нажмите здесь"
 
@@ -3302,7 +3302,7 @@ msgstr "Удалить"
 
 #: includes/editor-templates/hotkeys.php:67
 #: includes/editor-templates/repeater.php:21 assets/js/editor-document.js:14763
-#: assets/js/editor.js:24997 assets/js/editor.js:46044
+#: assets/js/editor.js:25000 assets/js/editor.js:46064
 msgid "Duplicate"
 msgstr "Дублировать"
 
@@ -3316,8 +3316,8 @@ msgid "Hide Panel"
 msgstr "Скрыть панель"
 
 #: includes/editor-templates/panel.php:119 assets/js/editor-document.js:16733
-#: assets/js/editor-document.js:17004 assets/js/editor.js:27438
-#: assets/js/editor.js:27709
+#: assets/js/editor-document.js:17004 assets/js/editor.js:27441
+#: assets/js/editor.js:27712
 msgid "Save as Template"
 msgstr "Сохранить как шаблон"
 
@@ -3330,7 +3330,7 @@ msgstr "Сохранить черновик"
 msgid "Save Options"
 msgstr "Сохранить настройки"
 
-#: includes/editor-templates/panel.php:95 assets/js/editor.js:22738
+#: includes/editor-templates/panel.php:95 assets/js/editor.js:22741
 msgid "Publish"
 msgstr "Опубликовать"
 
@@ -3469,19 +3469,19 @@ msgstr "Перейдите на вкладку «Редакции» для пр�
 
 #: modules/history/views/history-panel-template.php:10
 #: modules/history/views/revisions-panel-template.php:26
-#: assets/js/editor.js:45733
+#: assets/js/editor.js:45753
 msgid "Revisions"
 msgstr "Редакции"
 
 #: includes/editor-templates/hotkeys.php:14
 #: includes/editor-templates/templates.php:124
-#: modules/history/views/history-panel-template.php:9 assets/js/editor.js:45730
+#: modules/history/views/history-panel-template.php:9 assets/js/editor.js:45750
 msgid "Actions"
 msgstr "Действия"
 
 #: includes/editor-templates/hotkeys.php:117
 #: includes/editor-templates/panel.php:73
-#: includes/editor-templates/panel.php:75 assets/js/editor.js:46418
+#: includes/editor-templates/panel.php:75 assets/js/editor.js:46438
 msgid "History"
 msgstr "История"
 
@@ -3504,7 +3504,7 @@ msgstr "Тень"
 msgid "Mute"
 msgstr "Без звука"
 
-#: includes/template-library/sources/local.php:916
+#: includes/template-library/sources/local.php:919
 msgid "Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library."
 msgstr "Выберите шаблон в формате JSON или .zip архив с шаблонами Elementor и добавьте их в вашу библиотеку."
 
@@ -3569,16 +3569,16 @@ msgid "Sets the default space between widgets (Default: 20)"
 msgstr "Устанавливает пространство между виджетами (по умолчанию: 20)"
 
 #: includes/rollback.php:165 includes/settings/tools.php:167
-#: includes/settings/tools.php:339 assets/js/admin.js:5572
+#: includes/settings/tools.php:339 assets/js/admin.js:5357
 msgid "Rollback to Previous Version"
 msgstr "Откат к предыдущей версии"
 
-#: includes/elements/column.php:860 includes/elements/container.php:1524
+#: includes/elements/column.php:860 includes/elements/container.php:1523
 #: includes/elements/section.php:1296 includes/widgets/common.php:652
 msgid "Animation Delay"
 msgstr "Задержка анимации"
 
-#: includes/elements/column.php:761 includes/elements/container.php:1438
+#: includes/elements/column.php:761 includes/elements/container.php:1437
 #: includes/elements/section.php:1217 includes/widgets/common.php:568
 msgid "Z-Index"
 msgstr "Z-индекс"
@@ -3587,8 +3587,8 @@ msgstr "Z-индекс"
 #: core/kits/documents/tabs/theme-style-images.php:203
 #: includes/controls/groups/background.php:700 includes/elements/column.php:321
 #: includes/elements/column.php:480 includes/elements/column.php:587
-#: includes/elements/container.php:591 includes/elements/container.php:802
-#: includes/elements/container.php:923 includes/elements/section.php:600
+#: includes/elements/container.php:590 includes/elements/container.php:801
+#: includes/elements/container.php:922 includes/elements/section.php:600
 #: includes/elements/section.php:786 includes/elements/section.php:892
 #: includes/widgets/common.php:1224 includes/widgets/common.php:1338
 #: includes/widgets/google-maps.php:240 includes/widgets/image-box.php:340
@@ -3657,7 +3657,7 @@ msgstr "Для устранения конфликтов конфигураци�
 #: includes/settings/settings.php:554 includes/settings/tools.php:386
 #: modules/safe-mode/module.php:48 assets/js/admin.js:867
 #: assets/js/app-packages.js:3783 assets/js/app.js:5269
-#: assets/js/common.js:2572 assets/js/editor.js:34359
+#: assets/js/common.js:2572 assets/js/editor.js:34377
 msgid "Enable"
 msgstr "Включить"
 
@@ -3694,12 +3694,12 @@ msgid "Select"
 msgstr "Выбрать"
 
 #: includes/editor-templates/hotkeys.php:51 assets/js/editor-document.js:14802
-#: assets/js/editor.js:25036
+#: assets/js/editor.js:25039
 msgid "Paste Style"
 msgstr "Вставить стиль"
 
 #: core/common/modules/finder/categories/edit.php:118
-#: assets/js/editor-document.js:5268 assets/js/editor.js:18039
+#: assets/js/editor-document.js:5268 assets/js/editor.js:18042
 msgid "Template"
 msgstr "Шаблон"
 
@@ -3757,7 +3757,7 @@ msgid "Coming Soon"
 msgstr "Скоро открытие"
 
 #: core/kits/documents/kit.php:168 includes/maintenance-mode.php:215
-#: assets/js/editor.js:46043
+#: assets/js/editor.js:46063
 msgid "Disabled"
 msgstr "Отключен"
 
@@ -3774,7 +3774,7 @@ msgstr "Переведите веб-сайт в РЕЖИМ ТЕХОБСЛУЖИ�
 msgid "Maintenance Mode"
 msgstr "Режим обслуживания"
 
-#: includes/elements/container.php:1105 includes/elements/section.php:1067
+#: includes/elements/container.php:1104 includes/elements/section.php:1067
 msgid "Bring to Front"
 msgstr "На передний план"
 
@@ -3885,15 +3885,15 @@ msgctxt "Shapes"
 msgid "Mountains"
 msgstr "Горы"
 
-#: includes/elements/container.php:1092 includes/elements/section.php:1054
+#: includes/elements/container.php:1091 includes/elements/section.php:1054
 msgid "Invert"
 msgstr "Инвертировать"
 
-#: includes/elements/container.php:1078 includes/elements/section.php:1040
+#: includes/elements/container.php:1077 includes/elements/section.php:1040
 msgid "Flip"
 msgstr "Перевернуть"
 
-#: includes/elements/container.php:974 includes/elements/section.php:936
+#: includes/elements/container.php:973 includes/elements/section.php:936
 msgid "Shape Divider"
 msgstr "Разделитель секции"
 
@@ -3905,8 +3905,8 @@ msgstr "Ширина навигации"
 #: core/kits/documents/tabs/theme-style-images.php:134
 #: core/kits/documents/tabs/theme-style-typography.php:156
 #: includes/elements/column.php:306 includes/elements/column.php:434
-#: includes/elements/column.php:552 includes/elements/container.php:576
-#: includes/elements/container.php:748 includes/elements/container.php:888
+#: includes/elements/column.php:552 includes/elements/container.php:575
+#: includes/elements/container.php:747 includes/elements/container.php:887
 #: includes/elements/section.php:585 includes/elements/section.php:740
 #: includes/elements/section.php:857 includes/widgets/common.php:688
 #: includes/widgets/common.php:1209 includes/widgets/common.php:1303
@@ -3919,13 +3919,13 @@ msgstr "Ширина навигации"
 msgid "Hover"
 msgstr "Наведение"
 
-#: includes/elements/column.php:779 includes/elements/container.php:1456
+#: includes/elements/column.php:779 includes/elements/container.php:1455
 #: includes/elements/section.php:1235 includes/widgets/common.php:585
 #: includes/widgets/traits/button-trait.php:220
 msgid "Add your custom id WITHOUT the Pound key. e.g: my-id"
 msgstr "Добавьте свой собственный id БЕЗ решёточки. Например: my-id"
 
-#: includes/elements/column.php:773 includes/elements/container.php:1450
+#: includes/elements/column.php:773 includes/elements/container.php:1449
 #: includes/elements/section.php:1229 includes/widgets/common.php:579
 msgid "CSS ID"
 msgstr "CSS ID"
@@ -4088,17 +4088,14 @@ msgstr "С помощью этой функции вы можете сохран
 msgid "Meet Our Global Widget"
 msgstr "Знакомьтесь с нашим глобальным виджетом"
 
-#: core/admin/admin.php:302 core/admin/admin.php:504
-#: core/editor/notice-bar.php:29 core/role-manager/role-manager.php:171
-#: includes/editor-templates/panel-elements.php:23
-#: includes/editor-templates/panel-elements.php:63
+#: core/admin/admin.php:302 core/role-manager/role-manager.php:171
 #: includes/managers/controls.php:1058 includes/settings/settings.php:177
 #: includes/settings/settings.php:316 includes/settings/settings.php:338
 #: includes/settings/settings.php:360 includes/settings/settings.php:381
 #: includes/settings/settings.php:631 assets/js/app-packages.js:7138
 #: assets/js/app-packages.js:7428 assets/js/app-packages.js:7463
 #: assets/js/app.js:4678 assets/js/editor.js:9022
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:934
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:889
 msgid "Go Pro"
 msgstr "Перейти на Pro"
 
@@ -4107,7 +4104,7 @@ msgid "Get more with Elementor Pro"
 msgstr "Получите больше с Elementor Pro"
 
 #: includes/editor-templates/panel-elements.php:11
-#: assets/js/editor-document.js:6849 assets/js/editor.js:31346
+#: assets/js/editor-document.js:6849 assets/js/editor.js:31349
 msgid "Global"
 msgstr "Глобальные"
 
@@ -4204,15 +4201,15 @@ msgstr "Шорткод"
 msgid "Remote"
 msgstr "Удаленный"
 
-#: includes/template-library/sources/local.php:923
+#: includes/template-library/sources/local.php:926
 msgid "Import Now"
 msgstr "Импортировать"
 
-#: includes/template-library/sources/local.php:914
+#: includes/template-library/sources/local.php:917
 msgid "Import Templates"
 msgstr "Импортировать шаблоны"
 
-#: includes/template-library/sources/local.php:886
+#: includes/template-library/sources/local.php:889
 msgid "Export Template"
 msgstr "Экспорт шаблона"
 
@@ -4311,7 +4308,7 @@ msgid "Enter Template Name"
 msgstr "Введите название шаблона"
 
 #: includes/editor-templates/templates.php:190
-#: includes/template-library/sources/local.php:1101 assets/js/app.js:14351
+#: includes/template-library/sources/local.php:1104 assets/js/app.js:14351
 msgid "Export"
 msgstr "Экспорт"
 
@@ -4341,12 +4338,12 @@ msgstr "Библиотека"
 #: assets/js/app-packages.js:2910 assets/js/app-packages.js:5205
 #: assets/js/app-packages.js:5823 assets/js/app.js:4066 assets/js/app.js:6579
 #: assets/js/app.js:7045 assets/js/app.js:9488 assets/js/app.js:10488
-#: assets/js/app.js:14277 assets/js/editor.js:42815
+#: assets/js/app.js:14277 assets/js/editor.js:42835
 msgid "Close"
 msgstr "Закрыть"
 
 #: includes/template-library/sources/local.php:385
-#: includes/template-library/sources/local.php:1638 assets/js/app.js:13301
+#: includes/template-library/sources/local.php:1641 assets/js/app.js:13301
 msgid "Saved Templates"
 msgstr "Сохранённые шаблоны"
 
@@ -4383,9 +4380,9 @@ msgstr "Если вы хотите изменить код вашей темы, 
 #: assets/js/app-packages.js:3651 assets/js/app-packages.js:7226
 #: assets/js/app-packages.js:7362 assets/js/app.js:5137 assets/js/app.js:9828
 #: assets/js/app.js:11109 assets/js/app.js:12618 assets/js/app.js:12984
-#: assets/js/app.js:13024 assets/js/app.js:14276 assets/js/editor.js:14952
-#: assets/js/editor.js:23692 assets/js/editor.js:23724
-#: assets/js/editor.js:35001
+#: assets/js/app.js:13024 assets/js/app.js:14276 assets/js/editor.js:14955
+#: assets/js/editor.js:23695 assets/js/editor.js:23727
+#: assets/js/editor.js:35021
 #: assets/js/kit-library.c7db5f02248493fe3f04.bundle.js:1186
 #: assets/js/kit-library.c7db5f02248493fe3f04.bundle.js:3878
 msgid "Learn More"
@@ -4393,7 +4390,7 @@ msgstr "Узнать больше"
 
 #: core/kits/documents/tabs/global-typography.php:28
 #: core/kits/documents/tabs/global-typography.php:47 assets/js/app.js:13319
-#: assets/js/editor.js:42542
+#: assets/js/editor.js:42562
 msgid "Global Fonts"
 msgstr "Глобальные шрифты"
 
@@ -4410,12 +4407,12 @@ msgctxt "Background Control"
 msgid "Contain"
 msgstr "Поместить"
 
-#: includes/elements/column.php:848 includes/elements/container.php:1512
+#: includes/elements/column.php:848 includes/elements/container.php:1511
 #: includes/elements/section.php:1284 includes/widgets/common.php:640
 msgid "Fast"
 msgstr "Быстро"
 
-#: includes/elements/column.php:846 includes/elements/container.php:1510
+#: includes/elements/column.php:846 includes/elements/container.php:1509
 #: includes/elements/section.php:1282 includes/widgets/common.php:638
 msgid "Slow"
 msgstr "Медленно"
@@ -4432,7 +4429,7 @@ msgstr "Стандартные шрифты"
 msgid "Color Palettes"
 msgstr "Цветовые палитры"
 
-#: includes/elements/column.php:833 includes/elements/container.php:1497
+#: includes/elements/column.php:833 includes/elements/container.php:1496
 #: includes/elements/section.php:1269 includes/widgets/common.php:625
 #: includes/widgets/video.php:816
 msgid "Entrance Animation"
@@ -4532,7 +4529,7 @@ msgstr "Визуальный плеер"
 msgid "SoundCloud"
 msgstr "SoundCloud плеер"
 
-#: includes/elements/column.php:347 includes/elements/container.php:623
+#: includes/elements/column.php:347 includes/elements/container.php:622
 #: includes/elements/section.php:626
 msgid "Background Overlay"
 msgstr "Перекрытие фона"
@@ -4541,39 +4538,39 @@ msgstr "Перекрытие фона"
 msgid "Extended"
 msgstr "Расширенные"
 
-#: core/admin/feedback.php:134
+#: core/admin/feedback.php:133
 msgid "If you have a moment, please share why you are deactivating Elementor:"
 msgstr "Если у вас есть минута, поделитесь пожалуйста, почему вы деактивируете Elementor:"
 
-#: core/admin/feedback.php:126
+#: core/admin/feedback.php:125
 msgid "Quick Feedback"
 msgstr "Быстрая обратная связь"
 
-#: core/admin/feedback.php:118
+#: core/admin/feedback.php:117
 msgid "Please share the reason"
 msgstr "Пожалуйста, поделитесь причиной"
 
-#: core/admin/feedback.php:117
+#: core/admin/feedback.php:116
 msgid "Other"
 msgstr "Другое"
 
-#: core/admin/feedback.php:108
+#: core/admin/feedback.php:107
 msgid "It's a temporary deactivation"
 msgstr "Это временная деактивация"
 
-#: core/admin/feedback.php:104
+#: core/admin/feedback.php:103
 msgid "I couldn't get the plugin to work"
 msgstr "Я не смог работать с плагином"
 
-#: core/admin/feedback.php:101
+#: core/admin/feedback.php:100
 msgid "Please share which plugin"
 msgstr "Пожалуйста, поделитесь какой плагин"
 
-#: core/admin/feedback.php:100
+#: core/admin/feedback.php:99
 msgid "I found a better plugin"
 msgstr "Я нашёл(а) плагин лучше"
 
-#: core/admin/feedback.php:96
+#: core/admin/feedback.php:95
 msgid "I no longer need the plugin"
 msgstr "Плагин мне больше не нужен"
 
@@ -4598,13 +4595,13 @@ msgstr "Произвольная ссылка"
 
 #: includes/editor-templates/hotkeys.php:43 assets/js/editor-document.js:14790
 #: assets/js/editor-document.js:16279 assets/js/editor-document.js:18490
-#: assets/js/editor.js:25024 assets/js/editor.js:26984
-#: assets/js/editor.js:37106 assets/js/editor.js:38152
+#: assets/js/editor.js:25027 assets/js/editor.js:26987
+#: assets/js/editor.js:37126 assets/js/editor.js:38172
 msgid "Paste"
 msgstr "Вставить"
 
 #: core/kits/documents/tabs/settings-background.php:18
-#: includes/elements/column.php:273 includes/elements/container.php:538
+#: includes/elements/column.php:273 includes/elements/container.php:537
 #: includes/elements/section.php:553 includes/widgets/accordion.php:287
 #: includes/widgets/accordion.php:452 includes/widgets/common.php:1182
 #: includes/widgets/toggle.php:314 includes/widgets/toggle.php:471
@@ -4673,7 +4670,7 @@ msgstr "Растягивать изображение"
 msgid "Image Carousel"
 msgstr "Карусель"
 
-#: includes/elements/column.php:842 includes/elements/container.php:1506
+#: includes/elements/column.php:842 includes/elements/container.php:1505
 #: includes/elements/section.php:1278 includes/widgets/common.php:634
 #: includes/widgets/counter.php:159
 msgid "Animation Duration"
@@ -4799,7 +4796,7 @@ msgstr "HTML-тег заголовка"
 msgid "This is the heading"
 msgstr "Это заголовок"
 
-#: includes/elements/column.php:795 includes/elements/container.php:1472
+#: includes/elements/column.php:795 includes/elements/container.php:1471
 #: includes/elements/section.php:1251 includes/widgets/common.php:600
 msgid "Add your custom class WITHOUT the dot. e.g: my-class"
 msgstr "Добавьте свой собственный класс БЕЗ точки. Например: my-class"
@@ -4823,8 +4820,8 @@ msgstr "Рекомендуем использовать PHP 5.4 или выше"
 
 #: includes/editor-templates/panel-elements.php:10
 #: assets/js/editor-document.js:5857 assets/js/editor-document.js:8038
-#: assets/js/editor-document.js:8569 assets/js/editor.js:18628
-#: assets/js/editor.js:31343
+#: assets/js/editor-document.js:8569 assets/js/editor.js:18631
+#: assets/js/editor.js:31346
 msgid "Elements"
 msgstr "Элементы"
 
@@ -4834,7 +4831,7 @@ msgstr "Элементы"
 #: includes/editor-templates/responsive-bar.php:61
 #: includes/managers/controls.php:304 includes/settings/settings.php:414
 #: includes/settings/settings.php:593 assets/js/editor.js:10300
-#: assets/js/editor.js:32149 assets/js/editor.js:42965
+#: assets/js/editor.js:32152 assets/js/editor.js:42985
 msgid "Settings"
 msgstr "Настройки"
 
@@ -5130,7 +5127,7 @@ msgstr "Элемент списка #1"
 msgid "Icon List"
 msgstr "Список с иконками"
 
-#: includes/elements/container.php:471 includes/widgets/icon-box.php:176
+#: includes/elements/container.php:470 includes/widgets/icon-box.php:176
 #: includes/widgets/icon-list.php:152 includes/widgets/icon.php:160
 #: includes/widgets/image-box.php:153 includes/widgets/image-carousel.php:196
 #: includes/widgets/image.php:208 includes/widgets/social-icons.php:178
@@ -5179,7 +5176,7 @@ msgstr "H2"
 msgid "H1"
 msgstr "H1"
 
-#: includes/elements/column.php:261 includes/elements/container.php:457
+#: includes/elements/column.php:261 includes/elements/container.php:456
 #: includes/elements/section.php:518 includes/widgets/divider.php:525
 #: includes/widgets/heading.php:156
 msgid "HTML Tag"
@@ -5254,8 +5251,8 @@ msgstr "Отступы"
 #: core/kits/documents/tabs/theme-style-typography.php:163
 #: core/kits/documents/tabs/theme-style-typography.php:209
 #: includes/controls/box-shadow.php:104 includes/controls/text-shadow.php:97
-#: includes/elements/column.php:417 includes/elements/container.php:716
-#: includes/elements/container.php:1016 includes/elements/section.php:708
+#: includes/elements/column.php:417 includes/elements/container.php:715
+#: includes/elements/container.php:1015 includes/elements/section.php:708
 #: includes/elements/section.php:978 includes/widgets/accordion.php:298
 #: includes/widgets/accordion.php:400 includes/widgets/accordion.php:463
 #: includes/widgets/divider.php:576 includes/widgets/divider.php:711
@@ -5274,8 +5271,8 @@ msgstr "Отступы"
 #: modules/shapes/widgets/text-path.php:508
 #: modules/shapes/widgets/text-path.php:528
 #: modules/shapes/widgets/text-path.php:574
-#: modules/shapes/widgets/text-path.php:594 assets/js/editor.js:43118
-#: assets/js/editor.js:43164
+#: modules/shapes/widgets/text-path.php:594 assets/js/editor.js:43138
+#: assets/js/editor.js:43184
 msgid "Color"
 msgstr "Цвет"
 
@@ -5352,7 +5349,7 @@ msgstr "Выберите изображение"
 msgid "Image"
 msgstr "Изображение"
 
-#: includes/elements/column.php:505 includes/elements/container.php:837
+#: includes/elements/column.php:505 includes/elements/container.php:836
 #: includes/elements/section.php:812 includes/widgets/common.php:1256
 msgid "Border"
 msgstr "Граница"
@@ -5456,7 +5453,7 @@ msgstr "Редактировать"
 #: core/kits/documents/tabs/theme-style-images.php:83
 #: core/kits/documents/tabs/theme-style-images.php:154
 #: includes/elements/column.php:530 includes/elements/column.php:567
-#: includes/elements/container.php:864 includes/elements/container.php:903
+#: includes/elements/container.php:863 includes/elements/container.php:902
 #: includes/elements/section.php:836 includes/elements/section.php:872
 #: includes/widgets/common.php:1281 includes/widgets/common.php:1318
 #: includes/widgets/divider.php:953 includes/widgets/icon-box.php:459
@@ -5565,8 +5562,8 @@ msgid "Info"
 msgstr "Информация"
 
 #: includes/editor-templates/templates.php:113
-#: includes/elements/container.php:1005 includes/elements/section.php:967
-#: includes/template-library/sources/local.php:1609
+#: includes/elements/container.php:1004 includes/elements/section.php:967
+#: includes/template-library/sources/local.php:1612
 #: includes/widgets/alert.php:95 includes/widgets/progress.php:109
 #: includes/widgets/traits/button-trait.php:70
 msgid "Type"
@@ -5766,7 +5763,7 @@ msgstr "Навигация"
 msgid "Basic"
 msgstr "Базовый"
 
-#: includes/elements/container.php:1557 includes/elements/section.php:1339
+#: includes/elements/container.php:1556 includes/elements/section.php:1339
 msgid "Visibility"
 msgstr "Видимость"
 
@@ -5792,7 +5789,7 @@ msgstr "Позиция колонок"
 msgid "Minimum Height"
 msgstr "Минимальная высота"
 
-#: includes/elements/container.php:397 includes/elements/section.php:337
+#: includes/elements/container.php:396 includes/elements/section.php:337
 #: includes/elements/section.php:386
 msgid "Min Height"
 msgstr "Мин. высота"
@@ -5802,7 +5799,7 @@ msgid "Fit To Screen"
 msgstr "По размеру экрана"
 
 #: includes/controls/image-dimensions.php:100
-#: includes/elements/container.php:1059 includes/elements/section.php:331
+#: includes/elements/container.php:1058 includes/elements/section.php:331
 #: includes/elements/section.php:380 includes/elements/section.php:1021
 #: includes/widgets/google-maps.php:167 includes/widgets/icon-list.php:339
 #: includes/widgets/image.php:325 includes/widgets/progress.php:211
@@ -5826,22 +5823,22 @@ msgid "Columns Gap"
 msgstr "Отступы колонок"
 
 #: core/kits/documents/tabs/settings-layout.php:55
-#: includes/elements/container.php:309 includes/elements/section.php:245
+#: includes/elements/container.php:308 includes/elements/section.php:245
 #: includes/widgets/video.php:778
 msgid "Content Width"
 msgstr "Ширина макета"
 
-#: includes/elements/container.php:314 includes/elements/section.php:250
+#: includes/elements/container.php:313 includes/elements/section.php:250
 #: includes/widgets/common.php:222 includes/widgets/icon-list.php:195
 msgid "Full Width"
 msgstr "Во всю ширину"
 
-#: includes/elements/container.php:313 includes/elements/section.php:249
+#: includes/elements/container.php:312 includes/elements/section.php:249
 msgid "Boxed"
 msgstr "Ограниченная"
 
 #: includes/controls/image-dimensions.php:95
-#: includes/elements/container.php:328 includes/elements/container.php:1030
+#: includes/elements/container.php:327 includes/elements/container.php:1029
 #: includes/elements/section.php:259 includes/elements/section.php:992
 #: includes/widgets/common.php:217 includes/widgets/common.php:239
 #: includes/widgets/divider.php:421 includes/widgets/icon-list.php:321
@@ -5852,10 +5849,10 @@ msgid "Width"
 msgstr "Ширина"
 
 #: core/kits/documents/tabs/settings-layout.php:24
-#: includes/elements/column.php:113 includes/elements/container.php:1147
+#: includes/elements/column.php:113 includes/elements/container.php:1146
 #: includes/elements/section.php:227 includes/managers/controls.php:303
 #: includes/widgets/common.php:172 includes/widgets/icon-list.php:95
-#: assets/js/editor.js:31151
+#: assets/js/editor.js:31154
 msgid "Layout"
 msgstr "Макет"
 
@@ -5863,7 +5860,7 @@ msgstr "Макет"
 msgid "Column Width"
 msgstr "Ширина колонки"
 
-#: includes/elements/column.php:788 includes/elements/container.php:1465
+#: includes/elements/column.php:788 includes/elements/container.php:1464
 #: includes/elements/section.php:1244 includes/widgets/common.php:594
 msgid "CSS Classes"
 msgstr "CSS классы"
@@ -5871,7 +5868,7 @@ msgstr "CSS классы"
 #: core/document-types/page-base.php:132
 #: core/kits/documents/tabs/theme-style-buttons.php:244
 #: core/kits/documents/tabs/theme-style-form-fields.php:160
-#: includes/elements/column.php:749 includes/elements/container.php:1167
+#: includes/elements/column.php:749 includes/elements/container.php:1166
 #: includes/elements/section.php:1205 includes/widgets/accordion.php:355
 #: includes/widgets/accordion.php:496 includes/widgets/common.php:202
 #: includes/widgets/divider.php:822 includes/widgets/icon-box.php:386
@@ -5881,7 +5878,7 @@ msgstr "CSS классы"
 msgid "Padding"
 msgstr "Отступ внутри"
 
-#: includes/elements/column.php:730 includes/elements/container.php:1155
+#: includes/elements/column.php:730 includes/elements/container.php:1154
 #: includes/elements/section.php:1186 includes/widgets/common.php:190
 msgid "Margin"
 msgstr "Отступ снаружи"
@@ -5951,7 +5948,7 @@ msgstr "Цвет текста"
 #: core/kits/documents/tabs/theme-style-typography.php:221
 #: core/schemes/typography.php:64 includes/elements/column.php:631
 #: includes/elements/section.php:1089 assets/js/editor-modules.js:2605
-#: assets/js/editor.js:37803
+#: assets/js/editor.js:37823
 msgid "Typography"
 msgstr "Типографика"
 
@@ -5968,7 +5965,7 @@ msgstr "Секция"
 msgid "Structure"
 msgstr "Структура"
 
-#: includes/elements/column.php:878 includes/elements/container.php:1549
+#: includes/elements/column.php:878 includes/elements/container.php:1548
 #: includes/elements/section.php:1315 includes/managers/controls.php:302
 #: includes/widgets/common.php:1624
 msgid "Responsive"
@@ -5978,13 +5975,13 @@ msgstr "Адаптивность"
 #: core/dynamic-tags/tag.php:88 includes/elements/column.php:721
 #: includes/elements/section.php:1178 includes/managers/controls.php:301
 #: includes/settings/settings.php:518 assets/js/editor.js:10306
-#: assets/js/editor.js:31148
+#: assets/js/editor.js:31151
 msgid "Advanced"
 msgstr "Расширенные"
 
 #: includes/managers/controls.php:300 includes/widgets/divider.php:363
 #: includes/widgets/icon-list.php:275 assets/js/editor.js:10303
-#: assets/js/editor.js:31145
+#: assets/js/editor.js:31148
 msgid "Style"
 msgstr "Стиль"
 
@@ -5995,7 +5992,7 @@ msgstr "Стиль"
 #: includes/widgets/tabs.php:396 includes/widgets/testimonial.php:95
 #: includes/widgets/testimonial.php:224 includes/widgets/toggle.php:111
 #: includes/widgets/toggle.php:463 assets/js/app.js:13309
-#: assets/js/app.js:13888 assets/js/editor.js:31142
+#: assets/js/app.js:13888 assets/js/editor.js:31145
 msgid "Content"
 msgstr "Содержимое"
 
@@ -6033,7 +6030,7 @@ msgstr "Отказ"
 msgid "Reset"
 msgstr "Сброс"
 
-#: includes/editor-templates/templates.php:172 assets/js/editor.js:30502
+#: includes/editor-templates/templates.php:172 assets/js/editor.js:30505
 msgid "Preview"
 msgstr "Смотреть"
 
@@ -6093,7 +6090,7 @@ msgstr "Добавить секцию"
 #: includes/editor-templates/templates.php:50 modules/gutenberg/module.php:121
 #: assets/js/app-packages.js:6774
 #: assets/js/kit-library.c7db5f02248493fe3f04.bundle.js:243
-#: assets/js/onboarding.a7b6b26c425933f57bce.bundle.js:53
+#: assets/js/onboarding.e765531d9832473534bf.bundle.js:53
 msgid "Loading"
 msgstr "Загрузка"
 
@@ -6117,8 +6114,8 @@ msgstr "Добавить элемент"
 #: includes/editor-templates/hotkeys.php:60
 #: includes/editor-templates/templates.php:185
 #: assets/js/editor-document.js:14844 assets/js/editor.js:11262
-#: assets/js/editor.js:14654 assets/js/editor.js:23385
-#: assets/js/editor.js:25078 assets/js/editor.js:43176
+#: assets/js/editor.js:14655 assets/js/editor.js:23388
+#: assets/js/editor.js:25081 assets/js/editor.js:43196
 msgid "Delete"
 msgstr "Удалить"
 
@@ -6132,7 +6129,7 @@ msgstr "Выберите иконку"
 #: includes/widgets/common.php:1507 includes/widgets/image-carousel.php:585
 #: includes/widgets/image-gallery.php:195 includes/widgets/social-icons.php:190
 #: includes/widgets/social-icons.php:348 modules/shapes/module.php:29
-#: assets/js/editor.js:40602
+#: assets/js/editor.js:40622
 msgid "Custom"
 msgstr "Произвольно"
 
@@ -6158,9 +6155,9 @@ msgstr "Интерлиньяж"
 #: includes/controls/groups/typography.php:146 includes/elements/column.php:283
 #: includes/elements/column.php:360 includes/elements/column.php:409
 #: includes/elements/column.php:515 includes/elements/column.php:847
-#: includes/elements/container.php:551 includes/elements/container.php:636
-#: includes/elements/container.php:708 includes/elements/container.php:850
-#: includes/elements/container.php:1511 includes/elements/section.php:563
+#: includes/elements/container.php:550 includes/elements/container.php:635
+#: includes/elements/container.php:707 includes/elements/container.php:849
+#: includes/elements/container.php:1510 includes/elements/section.php:563
 #: includes/elements/section.php:636 includes/elements/section.php:700
 #: includes/elements/section.php:822 includes/elements/section.php:1283
 #: includes/widgets/common.php:639 includes/widgets/common.php:688
@@ -6230,7 +6227,7 @@ msgstr "Сплошной"
 #: core/kits/documents/tabs/settings-lightbox.php:116
 #: includes/controls/animation.php:153 includes/controls/groups/border.php:63
 #: includes/controls/hover-animation.php:125 includes/controls/icons.php:106
-#: includes/controls/icons.php:190 includes/elements/container.php:982
+#: includes/controls/icons.php:190 includes/elements/container.php:981
 #: includes/elements/section.php:944 includes/widgets/divider.php:479
 #: includes/widgets/image-carousel.php:171
 #: includes/widgets/image-carousel.php:184
@@ -6419,7 +6416,7 @@ msgid "System"
 msgstr "Системные"
 
 #: core/kits/documents/tabs/theme-style-typography.php:116
-#: includes/elements/container.php:466 includes/widgets/audio.php:103
+#: includes/elements/container.php:465 includes/widgets/audio.php:103
 #: includes/widgets/heading.php:124 includes/widgets/icon-box.php:171
 #: includes/widgets/icon-list.php:147 includes/widgets/icon.php:155
 #: includes/widgets/image-box.php:148 includes/widgets/image-carousel.php:180
@@ -6434,7 +6431,7 @@ msgid "Link"
 msgstr "Ссылка"
 
 #: includes/controls/dimensions.php:91 includes/elements/column.php:693
-#: includes/elements/container.php:1226 includes/elements/section.php:1150
+#: includes/elements/container.php:1225 includes/elements/section.php:1150
 #: includes/widgets/common.php:359 includes/widgets/common.php:360
 #: includes/widgets/common.php:1123 includes/widgets/divider.php:452
 #: includes/widgets/divider.php:740 includes/widgets/divider.php:880
@@ -6454,7 +6451,7 @@ msgid "Left"
 msgstr "Лево"
 
 #: includes/controls/dimensions.php:90 includes/elements/column.php:190
-#: includes/elements/container.php:991 includes/elements/container.php:1348
+#: includes/elements/container.php:990 includes/elements/container.php:1347
 #: includes/elements/section.php:428 includes/elements/section.php:451
 #: includes/elements/section.php:953 includes/widgets/common.php:478
 #: includes/widgets/common.php:1159 includes/widgets/icon-box.php:518
@@ -6463,7 +6460,7 @@ msgid "Bottom"
 msgstr "Низ"
 
 #: includes/controls/dimensions.php:89 includes/elements/column.php:701
-#: includes/elements/container.php:1227 includes/elements/section.php:1158
+#: includes/elements/container.php:1226 includes/elements/section.php:1158
 #: includes/widgets/common.php:359 includes/widgets/common.php:360
 #: includes/widgets/common.php:1131 includes/widgets/divider.php:460
 #: includes/widgets/divider.php:748 includes/widgets/divider.php:888
@@ -6483,7 +6480,7 @@ msgid "Right"
 msgstr "Право"
 
 #: includes/controls/dimensions.php:88 includes/elements/column.php:188
-#: includes/elements/container.php:990 includes/elements/container.php:1344
+#: includes/elements/container.php:989 includes/elements/container.php:1343
 #: includes/elements/section.php:426 includes/elements/section.php:449
 #: includes/elements/section.php:952 includes/widgets/common.php:474
 #: includes/widgets/common.php:1151 includes/widgets/icon-box.php:193
@@ -6504,8 +6501,8 @@ msgstr "Верх"
 #: includes/controls/groups/typography.php:181
 #: includes/editor-templates/panel.php:213 includes/elements/column.php:187
 #: includes/elements/column.php:215 includes/elements/column.php:255
-#: includes/elements/container.php:428 includes/elements/container.php:451
-#: includes/elements/container.php:1214 includes/elements/section.php:284
+#: includes/elements/container.php:427 includes/elements/container.php:450
+#: includes/elements/container.php:1213 includes/elements/section.php:284
 #: includes/elements/section.php:335 includes/elements/section.php:384
 #: includes/elements/section.php:448 includes/elements/section.php:476
 #: includes/elements/section.php:512 includes/settings/settings.php:565
@@ -6523,8 +6520,8 @@ msgstr "Верх"
 #: includes/widgets/text-editor.php:131 includes/widgets/text-editor.php:266
 #: includes/widgets/traits/button-trait.php:74
 #: modules/page-templates/module.php:296
-#: modules/shapes/widgets/text-path.php:187 assets/js/editor.js:40593
-#: assets/js/editor.js:40605
+#: modules/shapes/widgets/text-path.php:187 assets/js/editor.js:40613
+#: assets/js/editor.js:40625
 msgid "Default"
 msgstr "По умолчанию"
 
