@@ -7,7 +7,7 @@
 namespace MPHB\UsersAndRoles;
 class Roles
 {
-    const VERSION = 1; 
+    const VERSION = 2; 
     
     const MANAGER = 'mphb_manager';
     const WORKER = 'mphb_worker';
@@ -23,6 +23,10 @@ class Roles
         $this->fillRoles();
     }
 
+    /**
+     * 
+     * @since 4.2.0 - Hotel Customer role
+     */
     public function fillRoles()
     {
         $this->roles[self::MANAGER] = new Role(array(
@@ -34,6 +38,11 @@ class Roles
             'name' => self::WORKER,
             'description' => __('Hotel Worker', 'motopress-hotel-booking')
         ));
+        
+        $this->roles[self::CUSTOMER] = new Role(array(
+            'name' => self::CUSTOMER,
+            'description' => __('Hotel Customer', 'motopress-hotel-booking')
+        ));   
     }
 
     /**

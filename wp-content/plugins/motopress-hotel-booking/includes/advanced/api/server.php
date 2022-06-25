@@ -94,7 +94,7 @@ class Server {
 		$ver = $version;
 		if ( ! defined( 'self::NAMESPACE_V' . $version ) ||
 		     ! defined( 'self::CONTROLLERS_V' . $version ) ) {
-			wp_die( 'Version API of ' . $version . ' not found.' );
+			wp_die( 'Version API of ' . esc_html( $version ) . ' not found.' );
 		}
 
 		return array_map( function ( $controller ){

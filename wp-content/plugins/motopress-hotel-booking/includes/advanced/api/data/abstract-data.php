@@ -31,7 +31,7 @@ abstract class AbstractData {
 		} elseif ( method_exists( $this->entity, $getterCallback ) ) {
 			return $this->entity->{$getterCallback}();
 		} else {
-			throw new \Exception( sprintf( 'You need to implement method %s in class %s.'), $getterCallback, static::class );
+			throw new \Exception( sprintf( 'You need to implement method %s in class %s.', $getterCallback, static::class ) );
 		}
 	}
 

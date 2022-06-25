@@ -3,7 +3,7 @@
 namespace MPHB\Views\CreateBooking;
 
 class CheckoutView {
-
+	
 	/**
 	 * @param \MPHB\Entities\Booking $booking
 	 * @param array $details

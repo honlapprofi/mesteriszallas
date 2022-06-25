@@ -45,7 +45,8 @@ class EmailTemplater extends AbstractTemplater {
 			'booking_details'    => false,
 			'user_confirmation'	 => false,
 			'user_cancellation'	 => false,
-			'payment'			 => false
+			'payment'			 => false,
+			'customer_registration' => false
 		);
 
 		$this->tagGroups = array_merge( $defaultTagGroups, $tagGroups );
@@ -81,6 +82,10 @@ class EmailTemplater extends AbstractTemplater {
 
 		if ( $this->tagGroups['payment'] ) {
 			$this->_fillPaymentTags( $tags );
+		}
+		
+		if( $this->tagGroups['customer_registration'] ) {
+			$this->_fillRegistrationTags( $tags );
 		}
 
 		$tags = apply_filters( 'mphb_email_tags', $tags );
@@ -263,6 +268,63 @@ class EmailTemplater extends AbstractTemplater {
 
 		$tags = array_merge( $tags, $paymentTags );
 	}
+	
+	private function _fillRegistrationTags( &$tags ) {
+		$registrationTags = array(
+			array(
+				'name'			 => 'user_login',
+				'description'	 => __( 'User login', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'			 => 'user_pass',
+				'description'	 => __( 'User password', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'			 => 'customer_first_name',
+				'description'	 => __( 'Customer First Name', 'motopress-hotel-booking' ),
+			),
+			array(
+				'name'			 => 'customer_last_name',
+				'description'	 => __( 'Customer Last Name', 'motopress-hotel-booking' ),
+			),
+			array(
+				'name'			 => 'customer_email',
+				'description'	 => __( 'Customer Email', 'motopress-hotel-booking' ),
+			),
+			array(
+				'name'			 => 'customer_phone',
+				'description'	 => __( 'Customer Phone', 'motopress-hotel-booking' ),
+			),
+			array(
+				'name'           => 'customer_country',
+				'description'    => __( 'Customer Country', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'           => 'customer_address1',
+				'description'    => __( 'Customer Address', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'           => 'customer_city',
+				'description'    => __( 'Customer City', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'           => 'customer_state',
+				'description'    => __( 'Customer State/County', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'           => 'customer_zip',
+				'description'    => __( 'Customer Postcode', 'motopress-hotel-booking' )
+			),
+			array(
+				'name'           => 'customer_account_link',
+				'description'    => __( 'Link to My Account page', 'motopress-hotel-booking' )
+			)
+		);
+		
+		$registrationTags = apply_filters( 'mphb_email_customer_registration_tags', $registrationTags );
+
+		$tags = array_merge( $tags, $registrationTags );
+	}
 
 	/**
 	 *
@@ -270,6 +332,11 @@ class EmailTemplater extends AbstractTemplater {
 	 */
 	public function setupBooking( $booking ){
 		$this->booking = $booking;
+	}
+	
+	public function setupCustomer( $customer, $user ){
+		$this->customer = $customer;
+		$this->user = $user;
 	}
 
 	/**
@@ -378,47 +445,66 @@ class EmailTemplater extends AbstractTemplater {
 			case 'customer_first_name':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getFirstName();
+				} elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getFirstName();
 				}
 				break;
 			case 'customer_last_name':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getLastName();
+				}elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getLastName();
 				}
 				break;
 			case 'customer_email':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getEmail();
+				}elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getEmail();
 				}
 				break;
 			case 'customer_phone':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getPhone();
+				}elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getPhone();
 				}
 				break;
 			case 'customer_country':
 				if ( isset( $this->booking ) ) {
 					$countryCode = $this->booking->getCustomer()->getCountry();
 					$replaceText = MPHB()->settings()->main()->getCountriesBundle()->getCountryLabel( $countryCode );
+				}elseif( isset( $this->customer ) ) {
+					$countryCode = $this->customer->getCountry();
+					$replaceText = MPHB()->settings()->main()->getCountriesBundle()->getCountryLabel( $countryCode );
 				}
 				break;
 			case 'customer_address1':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getAddress1();
+				} elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getAddress1();
 				}
 				break;
 			case 'customer_city':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getCity();
+				} elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getCity();
 				}
 				break;
 			case 'customer_state':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getState();
+				} elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getState();
 				}
 				break;
 			case 'customer_zip':
 				if ( isset( $this->booking ) ) {
 					$replaceText = $this->booking->getCustomer()->getZip();
+				} elseif( isset( $this->customer ) ) {
+					$replaceText = $this->customer->getZip();
 				}
 				break;
 			case 'customer_note':
@@ -441,6 +527,24 @@ class EmailTemplater extends AbstractTemplater {
 				if ( isset( $this->booking ) && MPHB()->settings()->main()->canUserCancelBooking() ) {
 					$replaceText = MPHB()->emails()->getCancellationTemplater()->process( $this->booking );
 				}
+				break;
+				
+			// User details
+			case 'user_login':
+				if( isset( $this->user ) ) {
+					$replaceText = $this->user['user_login'];
+				}
+				break;
+
+			case 'user_pass':
+				if( isset( $this->user ) ) {
+					$replaceText = $this->user['user_pass'];
+				}
+				break;
+				
+			case 'customer_account_link': 
+				$myAccountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
+				$replaceText = sprintf( '<a href="%s" target="_blank">%s</a>', get_page_link( $myAccountPageId ), __( 'My Account', 'motopress-hotel-booking' ) );
 				break;
 
 			// Payment

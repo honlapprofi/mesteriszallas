@@ -1,5 +1,5 @@
-# Copyright (C) 2021 MotoPress
-# This file is distributed under the same license as the Hotel Booking plugin.
+# Copyright (C) 2022 MotoPress
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: hotel-booking-plugin\n"
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-22T20:11:18+00:00\n"
-"PO-Revision-Date: 2021-12-22 20:52\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"POT-Creation-Date: 2022-03-31T19:14:09+00:00\n"
+"PO-Revision-Date: 2022-03-31 20:31\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: motopress-hotel-booking\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: hotel-booking-plugin\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. translators: Name of the plugin, do not translate
 #: includes/script-managers/block-script-manager.php:21
 msgid "Hotel Booking"
-msgstr ""
+msgstr "Hotel Booking"
 
 #. Plugin URI of the plugin
 msgid "https://motopress.com/products/hotel-booking/"
@@ -53,24 +53,31 @@ msgctxt "Post Status"
 msgid "Auto Draft"
 msgstr ""
 
-#: functions.php:180
+#: functions.php:192
 msgctxt "Zero price"
 msgid "Free"
 msgstr "Gratis"
 
-#: functions.php:211
-msgctxt "Ex: $99 for 2 nights"
+#. translators: Price per one night. Example: $99 per night
+#: functions.php:226
+msgctxt "Price per one night. Example: $99 per night"
 msgid "per night"
+msgstr "per nacht"
+
+#. translators: Price for X nights. Example: $99 for 2 nights, $99 for 21 nights
+#: functions.php:238
+msgctxt "Price for X nights. Example: $99 for 2 nights, $99 for 21 nights"
+msgid "for %d nights"
 msgid_plural "for %d nights"
 msgstr[0] "per nacht"
 msgstr[1] "per %d nachten"
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:565
+#: functions.php:595
 msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr "U gebruikt twee exemplaren van de Hotel Booking-plug-in tegelijkertijd, <a href=\"%s\"> deactiveer een van hen </a>."
 
-#: functions.php:583
+#: functions.php:613
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr "<a href=\"%s\">Upgrade naar Premium</a> om deze optie te gebruiken."
 
@@ -91,6 +98,54 @@ msgstr "Bron-ID ontbreekt."
 #: includes/admin/sync-logs-list-table.php:83
 msgid "Error"
 msgstr "Fout"
+
+#: includes/admin/customers-list-table.php:133
+#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
+#: includes/admin/sync-rooms-list-table.php:140
+#: includes/post-types/room-type-cpt.php:319
+#: templates/account/bookings.php:78
+msgid "View"
+msgstr "Bekijk"
+
+#: includes/admin/customers-list-table.php:137
+#: includes/admin/fields/abstract-complex-field.php:25
+#: includes/admin/fields/rules-list-field.php:38
+#: includes/admin/sync-rooms-list-table.php:141
+msgid "Delete"
+msgstr "Wis"
+
+#: includes/admin/customers-list-table.php:194
+#: includes/post-types/attributes-cpt.php:293
+msgid "Name"
+msgstr "Naam"
+
+#: includes/admin/customers-list-table.php:195
+#: includes/admin/menu-pages/customers-menu-page.php:189
+#: includes/ajax.php:1069
+#: includes/bundles/customer-bundle.php:101
+#: includes/bundles/export-bundle.php:31
+#: includes/post-types/booking-cpt.php:89
+#: includes/post-types/payment-cpt.php:242
+#: includes/views/shortcodes/checkout-view.php:568
+#: templates/account/account-details.php:34
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/admin/customers-list-table.php:196
+#: includes/admin/menus.php:71
+#: includes/admin/menus.php:72
+#: includes/post-types/booking-cpt.php:200
+#: includes/shortcodes/account-shortcode.php:225
+msgid "Bookings"
+msgstr "Reserveringen"
+
+#: includes/admin/customers-list-table.php:197
+msgid "Date Registered"
+msgstr ""
+
+#: includes/admin/customers-list-table.php:198
+msgid "Last Active"
+msgstr ""
 
 #. translators: Terms are variations for Attributes and bear no relation to the Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:16
@@ -118,7 +173,7 @@ msgid "Configure terms"
 msgstr "Configureer voorwaarden"
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:20
-#: includes/ajax.php:1051
+#: includes/ajax.php:1054
 #: includes/post-types/reserved-room-cpt.php:22
 msgid "Reserved Accommodations"
 msgstr "Gereserveerde accommodaties"
@@ -290,12 +345,6 @@ msgstr "Beschikbare accommodaties:"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: includes/admin/fields/abstract-complex-field.php:25
-#: includes/admin/fields/rules-list-field.php:38
-#: includes/admin/sync-rooms-list-table.php:141
-msgid "Delete"
-msgstr "Wis"
-
 #: includes/admin/fields/amount-field.php:75
 msgid "Per adult:"
 msgstr "Per volwassene:"
@@ -314,12 +363,14 @@ msgstr "Per kind:"
 
 #: includes/admin/fields/complex-horizontal-field.php:49
 #: includes/admin/fields/rules-list-field.php:39
+#: templates/account/bookings.php:22
+#: templates/account/bookings.php:77
 #: templates/edit-booking/edit-reserved-rooms.php:47
 msgid "Actions"
 msgstr "Acties"
 
 #: includes/admin/fields/complex-vertical-field.php:17
-#: includes/admin/menu-pages/settings-menu-page.php:303
+#: includes/admin/menu-pages/settings-menu-page.php:333
 #: includes/settings/main-settings.php:25
 #: includes/settings/main-settings.php:43
 msgid "Default"
@@ -327,15 +378,17 @@ msgstr "Standaard"
 
 #: includes/admin/fields/dynamic-select-field.php:61
 #: includes/admin/fields/page-select-field.php:16
+#: includes/admin/menu-pages/customers-menu-page.php:242
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:37
-#: includes/admin/menu-pages/settings-menu-page.php:231
+#: includes/admin/menu-pages/settings-menu-page.php:237
 #: includes/post-types/booking-cpt.php:101
 #: includes/post-types/booking-cpt.php:146
 #: includes/post-types/payment-cpt.php:213
 #: includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:185
-#: includes/views/shortcodes/checkout-view.php:206
+#: includes/views/shortcodes/checkout-view.php:249
+#: includes/views/shortcodes/checkout-view.php:270
+#: templates/account/account-details.php:51
 #: templates/edit-booking/add-room-popup.php:30
 #: templates/edit-booking/add-room-popup.php:38
 msgid "— Select —"
@@ -373,7 +426,7 @@ msgstr "Deselecteer alles"
 
 #: includes/admin/fields/notes-list-field.php:23
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:68
-#: includes/bundles/export-bundle.php:50
+#: includes/bundles/export-bundle.php:52
 #: assets/blocks/blocks.js:457
 #: assets/blocks/blocks.js:793
 #: assets/blocks/blocks.js:977
@@ -394,7 +447,7 @@ msgstr "Bewerk"
 
 #: includes/admin/fields/rules-list-field.php:37
 #: includes/admin/sync-rooms-list-table.php:75
-#: includes/ajax.php:949
+#: includes/ajax.php:952
 #: includes/script-managers/admin-script-manager.php:92
 msgid "Done"
 msgstr "Klaar"
@@ -448,7 +501,7 @@ msgstr "Voeg verblijfsduur toe"
 #: includes/post-types/room-type-cpt.php:277
 #: includes/views/booking-view.php:93
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:177
+#: includes/views/shortcodes/checkout-view.php:241
 #: template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
 #: templates/shortcodes/search/search-form.php:74
@@ -572,7 +625,7 @@ msgstr "Nieuwe reservering"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:61
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:26
 #: includes/admin/menu-pages/shortcodes-menu-page.php:354
-#: includes/ajax.php:1037
+#: includes/ajax.php:1040
 #: includes/bundles/export-bundle.php:18
 #: includes/post-types/booking-cpt.php:38
 #: includes/post-types/payment-cpt.php:140
@@ -587,7 +640,7 @@ msgstr "Inchecken / Uitchecken"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:64
 #: includes/views/booking-view.php:95
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:179
+#: includes/views/shortcodes/checkout-view.php:243
 #: template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
@@ -604,8 +657,8 @@ msgstr "Klantgegevens"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:66
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:16
 #: includes/post-types/rate-cpt.php:52
-#: includes/post-types/service-cpt.php:131
-#: includes/post-types/service-cpt.php:135
+#: includes/post-types/service-cpt.php:133
+#: includes/post-types/service-cpt.php:137
 #: includes/views/single-service-view.php:18
 #: includes/widgets/rooms-widget.php:194
 #: assets/blocks/blocks.js:360
@@ -634,7 +687,7 @@ msgstr "Accommodatie"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:95
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:55
+#: includes/admin/menu-pages/create-booking/booking-step.php:62
 #: includes/bookings-calendar.php:525
 #: includes/script-managers/admin-script-manager.php:96
 msgid "Booking #%s"
@@ -690,6 +743,7 @@ msgid "Imported %s"
 msgstr "Geïmporteerde %s"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:27
+#: includes/admin/menu-pages/customers-menu-page.php:281
 msgid "Customer"
 msgstr "Klant"
 
@@ -711,6 +765,8 @@ msgstr "Bedrag"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:30
 #: includes/post-types/booking-cpt.php:201
+#: templates/account/bookings.php:18
+#: templates/account/bookings.php:64
 msgid "Booking"
 msgstr "Reservering"
 
@@ -809,7 +865,7 @@ msgstr "Type bed"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:330
 #: includes/post-types/room-cpt.php:25
 #: includes/post-types/room-cpt.php:35
-#: includes/wizard.php:99
+#: includes/wizard.php:100
 msgid "Accommodations"
 msgstr "Accommodaties"
 
@@ -876,41 +932,41 @@ msgid "Services are extra offers that you can sell or give for free. E.g. Thai m
 msgstr "Diensten zijn extra aanbiedingen die u kunt verkopen of kosteloos aanbieden. BV Thaise massage, overdracht, babysitten. Gasten kunnen ze bij het plaatsen van een boeking reeds bestellen."
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:17
-#: includes/post-types/service-cpt.php:147
+#: includes/post-types/service-cpt.php:149
 msgid "Periodicity"
 msgstr "Periodiciteit"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:18
-#: includes/post-types/service-cpt.php:196
+#: includes/post-types/service-cpt.php:198
 msgid "Charge"
 msgstr "Aanrekenen"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:41
 #: includes/entities/service.php:203
-#: includes/post-types/service-cpt.php:150
+#: includes/post-types/service-cpt.php:152
 msgid "Per Day"
 msgstr "Per dag"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:43
-#: includes/post-types/service-cpt.php:151
+#: includes/post-types/service-cpt.php:153
 msgid "Guest Choice"
 msgstr "Keuze gast"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:45
 #: includes/entities/service.php:207
-#: includes/post-types/service-cpt.php:149
+#: includes/post-types/service-cpt.php:151
 msgid "Once"
 msgstr "Eenmaal"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:213
-#: includes/post-types/service-cpt.php:199
+#: includes/post-types/service-cpt.php:201
 msgid "Per Guest"
 msgstr "Per gast"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
 #: includes/entities/service.php:215
-#: includes/post-types/service-cpt.php:198
+#: includes/post-types/service-cpt.php:200
 msgid "Per Accommodation"
 msgstr "Per accommodatie"
 
@@ -925,13 +981,14 @@ msgstr "Boekingsregels opgeslagen."
 #: includes/admin/menu-pages/booking-rules-menu-page.php:34
 #: includes/admin/menu-pages/booking-rules-menu-page.php:444
 #: includes/admin/menu-pages/booking-rules-menu-page.php:448
-#: includes/admin/menu-pages/settings-menu-page.php:334
+#: includes/admin/menu-pages/settings-menu-page.php:364
 msgid "Booking Rules"
 msgstr "Boekingsregels"
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:71
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:55
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:118
+#: templates/account/account-details.php:94
 msgid "Save Changes"
 msgstr "Bewaar wijzigingen"
 
@@ -1092,31 +1149,31 @@ msgstr "Zoekresultaten wissen"
 msgid "Note: booking rules are disabled in the plugin settings and are not taken into account."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:39
-#: includes/shortcodes/checkout-shortcode/step-booking.php:475
+#: includes/admin/menu-pages/create-booking/booking-step.php:46
+#: includes/shortcodes/checkout-shortcode/step-booking.php:485
 msgid "Unable to create booking. Please try again."
 msgstr "Onmogelijk te reserveren. Probeer opnieuw."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:63
-#: includes/shortcodes/checkout-shortcode/step-booking.php:107
+#: includes/admin/menu-pages/create-booking/booking-step.php:70
+#: includes/shortcodes/checkout-shortcode/step-booking.php:110
 msgid "Booking is blocked due to maintenance reason. Please try again later."
 msgstr "Boeking is geblokkeerd wegens onderhoud. Probeer het later nog eens."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:104
-#: includes/admin/menu-pages/create-booking/booking-step.php:244
+#: includes/admin/menu-pages/create-booking/booking-step.php:111
+#: includes/admin/menu-pages/create-booking/booking-step.php:251
 #: includes/admin/menu-pages/create-booking/checkout-step.php:105
 #: includes/admin/menu-pages/edit-booking/booking-control.php:34
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:50
 #: includes/admin/menu-pages/edit-booking/summary-control.php:45
-#: includes/shortcodes/checkout-shortcode/step-booking.php:176
-#: includes/shortcodes/checkout-shortcode/step-booking.php:335
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:131
+#: includes/shortcodes/checkout-shortcode/step-booking.php:186
+#: includes/shortcodes/checkout-shortcode/step-booking.php:345
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:151
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "Er zijn geen accommodaties geselecteerd voor reservering."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:135
+#: includes/admin/menu-pages/create-booking/booking-step.php:113
+#: includes/admin/menu-pages/create-booking/booking-step.php:142
 #: includes/admin/menu-pages/create-booking/checkout-step.php:107
 #: includes/admin/menu-pages/create-booking/checkout-step.php:126
 #: includes/admin/menu-pages/create-booking/checkout-step.php:149
@@ -1126,79 +1183,79 @@ msgstr "Er zijn geen accommodaties geselecteerd voor reservering."
 msgid "Selected accommodations are not valid."
 msgstr "Geselecteerde accommodaties zijn niet geldig."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:130
+#: includes/admin/menu-pages/create-booking/booking-step.php:137
 #: includes/admin/menu-pages/create-booking/checkout-step.php:121
 #: includes/admin/menu-pages/create-booking/step.php:147
-#: includes/ajax.php:591
-#: includes/shortcodes/checkout-shortcode/step-booking.php:190
-#: includes/shortcodes/checkout-shortcode/step-booking.php:196
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:146
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:158
+#: includes/ajax.php:594
+#: includes/shortcodes/checkout-shortcode/step-booking.php:200
+#: includes/shortcodes/checkout-shortcode/step-booking.php:206
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:168
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:180
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "Type accommodatie is ongeldig."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:140
-#: includes/admin/menu-pages/create-booking/booking-step.php:161
-#: includes/ajax.php:599
-#: includes/shortcodes/checkout-shortcode/step-booking.php:202
-#: includes/shortcodes/checkout-shortcode/step-booking.php:218
-#: includes/shortcodes/checkout-shortcode/step-booking.php:375
-#: includes/shortcodes/checkout-shortcode/step-booking.php:387
+#: includes/admin/menu-pages/create-booking/booking-step.php:147
+#: includes/admin/menu-pages/create-booking/booking-step.php:168
+#: includes/ajax.php:602
+#: includes/shortcodes/checkout-shortcode/step-booking.php:212
+#: includes/shortcodes/checkout-shortcode/step-booking.php:228
+#: includes/shortcodes/checkout-shortcode/step-booking.php:385
+#: includes/shortcodes/checkout-shortcode/step-booking.php:397
 #: includes/utils/parse-utils.php:253
 msgid "Rate is not valid."
 msgstr "Het tarief is ongeldig."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:166
+#: includes/admin/menu-pages/create-booking/booking-step.php:173
 #: includes/admin/menu-pages/create-booking/step.php:165
 #: includes/admin/menu-pages/create-booking/step.php:169
-#: includes/ajax.php:472
-#: includes/shortcodes/checkout-shortcode/step-booking.php:224
+#: includes/ajax.php:475
+#: includes/shortcodes/checkout-shortcode/step-booking.php:234
 #: includes/shortcodes/search-results-shortcode.php:539
 #: includes/utils/parse-utils.php:102
 #: includes/utils/parse-utils.php:257
 msgid "Adults number is not valid."
 msgstr "Aantal volwassenen is niet geldig."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:171
+#: includes/admin/menu-pages/create-booking/booking-step.php:178
 #: includes/admin/menu-pages/create-booking/step.php:187
 #: includes/admin/menu-pages/create-booking/step.php:191
-#: includes/ajax.php:488
-#: includes/shortcodes/checkout-shortcode/step-booking.php:230
+#: includes/ajax.php:491
+#: includes/shortcodes/checkout-shortcode/step-booking.php:240
 #: includes/shortcodes/search-results-shortcode.php:555
 #: includes/utils/parse-utils.php:127
 #: includes/utils/parse-utils.php:261
 msgid "Children number is not valid."
 msgstr "Aantal kinderen is niet geldig."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:176
-#: includes/ajax.php:608
-#: includes/shortcodes/checkout-shortcode/step-booking.php:235
+#: includes/admin/menu-pages/create-booking/booking-step.php:183
+#: includes/ajax.php:611
+#: includes/shortcodes/checkout-shortcode/step-booking.php:245
 #: includes/utils/parse-utils.php:265
 msgid "The total number of guests is not valid."
 msgstr "Het totaal aantal gasten is ongeldig"
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:181
+#: includes/admin/menu-pages/create-booking/booking-step.php:188
 #: includes/admin/menu-pages/create-booking/checkout-step.php:136
-#: includes/shortcodes/checkout-shortcode/step-booking.php:240
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:189
+#: includes/shortcodes/checkout-shortcode/step-booking.php:250
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:211
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr "Geselecteerde datums voldoen niet aan de boekingsregels voor type %s"
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:232
+#: includes/admin/menu-pages/create-booking/booking-step.php:239
 #: includes/admin/menu-pages/create-booking/checkout-step.php:141
 #: includes/utils/parse-utils.php:197
 msgid "Accommodations are not available."
 msgstr "Accommodaties zijn niet beschikbaar."
 
 #: includes/admin/menu-pages/create-booking/checkout-step.php:131
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:184
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:206
 msgid "There are no rates for requested dates."
 msgstr "Er zijn geen tarieven beschikbaar voor de geselecteerde data."
 
 #: includes/admin/menu-pages/create-booking/results-step.php:145
-#: includes/wizard.php:90
+#: includes/wizard.php:91
 msgid "Search Results"
 msgstr "Zoekresultaten"
 
@@ -1212,46 +1269,166 @@ msgid "Search parameters are not set."
 msgstr "Zoekparameters zijn niet ingesteld."
 
 #: includes/admin/menu-pages/create-booking/step.php:106
-#: includes/ajax.php:439
+#: includes/ajax.php:442
 #: includes/script-managers/public-script-manager.php:244
-#: includes/shortcodes/checkout-shortcode/step.php:42
+#: includes/shortcodes/checkout-shortcode/step.php:50
 #: includes/shortcodes/search-results-shortcode.php:570
 #: includes/utils/parse-utils.php:38
 msgid "Check-in date is not valid."
 msgstr "Incheckdatum is ongeldig"
 
 #: includes/admin/menu-pages/create-booking/step.php:108
-#: includes/shortcodes/checkout-shortcode/step.php:45
+#: includes/shortcodes/checkout-shortcode/step.php:53
 #: includes/shortcodes/search-results-shortcode.php:573
 #: includes/utils/parse-utils.php:40
 msgid "Check-in date cannot be earlier than today."
 msgstr "De incheckdatum kan niet in het verleden liggen."
 
 #: includes/admin/menu-pages/create-booking/step.php:127
-#: includes/ajax.php:456
+#: includes/ajax.php:459
 #: includes/script-managers/public-script-manager.php:245
-#: includes/shortcodes/checkout-shortcode/step.php:69
+#: includes/shortcodes/checkout-shortcode/step.php:84
 #: includes/shortcodes/search-results-shortcode.php:591
 #: includes/utils/parse-utils.php:71
 msgid "Check-out date is not valid."
 msgstr "Uitcheckdatum is ongeldig"
 
 #: includes/admin/menu-pages/create-booking/step.php:129
-#: includes/ajax.php:1181
-#: includes/ajax.php:1189
-#: includes/ajax.php:1250
-#: includes/shortcodes/checkout-shortcode/step.php:72
+#: includes/ajax.php:1184
+#: includes/ajax.php:1192
+#: includes/ajax.php:1253
+#: includes/shortcodes/checkout-shortcode/step.php:87
 #: includes/shortcodes/search-results-shortcode.php:598
 #: includes/utils/parse-utils.php:73
 msgid "Nothing found. Please try again with different search parameters."
 msgstr "Niets gevonden. Probeer het opnieuw met verschillende zoekparameters."
+
+#: includes/admin/menu-pages/customers-menu-page.php:51
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:142
+msgid "User ID"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:153
+#: templates/account/account-details.php:30
+msgid "Username"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:165
+#: includes/ajax.php:1061
+#: includes/bundles/customer-bundle.php:83
+#: includes/bundles/export-bundle.php:29
+#: includes/post-types/booking-cpt.php:77
+#: includes/post-types/payment-cpt.php:228
+#: includes/views/shortcodes/checkout-view.php:546
+#: templates/account/account-details.php:22
+msgid "First Name"
+msgstr "Voornaam"
+
+#: includes/admin/menu-pages/customers-menu-page.php:177
+#: includes/ajax.php:1065
+#: includes/bundles/customer-bundle.php:92
+#: includes/bundles/export-bundle.php:30
+#: includes/post-types/booking-cpt.php:83
+#: includes/post-types/payment-cpt.php:235
+#: includes/views/shortcodes/checkout-view.php:557
+#: templates/account/account-details.php:26
+msgid "Last Name"
+msgstr "Achternaam"
+
+#: includes/admin/menu-pages/customers-menu-page.php:201
+#: includes/ajax.php:1073
+#: includes/bundles/customer-bundle.php:110
+#: includes/bundles/export-bundle.php:32
+#: includes/post-types/booking-cpt.php:95
+#: includes/post-types/payment-cpt.php:249
+#: includes/views/shortcodes/checkout-view.php:579
+#: templates/account/account-details.php:38
+msgid "Phone"
+msgstr "Telefoonnummer"
+
+#: includes/admin/menu-pages/customers-menu-page.php:213
+#: includes/ajax.php:1081
+#: includes/bundles/customer-bundle.php:128
+#: includes/bundles/export-bundle.php:34
+#: includes/post-types/booking-cpt.php:108
+#: includes/views/shortcodes/checkout-view.php:613
+#: templates/account/account-details.php:42
+msgid "Address"
+msgstr "Adres"
+
+#: includes/admin/menu-pages/customers-menu-page.php:225
+#: includes/ajax.php:1089
+#: includes/bundles/customer-bundle.php:146
+#: includes/bundles/export-bundle.php:36
+#: includes/post-types/booking-cpt.php:120
+#: includes/post-types/payment-cpt.php:284
+#: includes/views/shortcodes/checkout-view.php:635
+#: templates/account/account-details.php:64
+msgid "State / County"
+msgstr "Staat/Provincie"
+
+#: includes/admin/menu-pages/customers-menu-page.php:237
+#: includes/ajax.php:1077
+#: includes/bundles/export-bundle.php:33
+#: includes/post-types/booking-cpt.php:102
+#: includes/post-types/payment-cpt.php:256
+#: templates/account/account-details.php:46
+msgid "Country"
+msgstr "Land"
+
+#: includes/admin/menu-pages/customers-menu-page.php:250
+#: includes/ajax.php:1085
+#: includes/bundles/customer-bundle.php:137
+#: includes/bundles/export-bundle.php:35
+#: includes/post-types/booking-cpt.php:114
+#: includes/post-types/payment-cpt.php:277
+#: includes/views/shortcodes/checkout-view.php:624
+#: templates/account/account-details.php:68
+msgid "City"
+msgstr "Stad"
+
+#: includes/admin/menu-pages/customers-menu-page.php:262
+#: includes/ajax.php:1093
+#: includes/bundles/customer-bundle.php:155
+#: includes/bundles/export-bundle.php:37
+#: includes/post-types/booking-cpt.php:126
+#: includes/views/shortcodes/checkout-view.php:646
+#: templates/account/account-details.php:72
+msgid "Postcode"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:296
+msgid "Customer data updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:302
+msgid "User account updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:309
+msgid "Edit User Profile"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:341
+#: includes/admin/menu-pages/i-cal-menu-page.php:148
+msgid "Update"
+msgstr "Bijwerken"
+
+#: includes/admin/menu-pages/customers-menu-page.php:347
+#: includes/admin/menu-pages/customers-menu-page.php:360
+#: includes/admin/menu-pages/customers-menu-page.php:364
+msgid "Customers"
+msgstr ""
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:66
 msgid "The booking is not set."
 msgstr "De boeking is niet afgerond."
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:74
-#: includes/ajax.php:1024
+#: includes/ajax.php:1027
 msgid "The booking not found."
 msgstr "De boeking niet gevonden."
 
@@ -1265,7 +1442,7 @@ msgid "Cancel"
 msgstr "Annuleer"
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:121
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:195
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:192
 #: includes/admin/menu-pages/i-cal-menu-page.php:149
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:41
 msgid "Back"
@@ -1285,7 +1462,7 @@ msgid "You cannot edit the imported booking. Please update the source booking an
 msgstr "Je kan geen geïmporteerde boeking aanpassen. Update de boeking in de originele bron en synchroniseer je kalender opnieuw."
 
 #: includes/admin/menu-pages/edit-booking/booking-control.php:22
-#: includes/ajax.php:190
+#: includes/ajax.php:193
 msgid "Request does not pass security verification. Please refresh the page and try one more time."
 msgstr "Verzoek voldoet niet aan veiligheidscontrole. U kunt de pagina vernieuwen en opnieuw proberen."
 
@@ -1329,7 +1506,7 @@ msgstr "— Voeg nieuwe toe —"
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:794
 msgid "Extensions"
 msgstr "Uitbreidingen"
 
@@ -1345,34 +1522,34 @@ msgstr "Download deze extensie"
 msgid "No extensions found."
 msgstr "Geen extensies gevonden."
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:80
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:77
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:60
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:102
 #: includes/i-cal/logs-handler.php:73
 msgid "Abort Process"
 msgstr "Onderbreek verwerking"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:81
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:78
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:61
 msgid "Aborting..."
 msgstr "Onderbreken..."
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:196
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:210
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:152
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:193
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:207
 #: includes/admin/room-list-table.php:161
 msgid "Import Calendar"
 msgstr "Importeer kalender"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
 msgid "Accommodation: %s"
 msgstr "Accommodatie: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:161
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
 msgid "Accommodation Type: %s"
 msgstr "Type accommodatie: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:168
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:165
 msgid "Please be patient while the calendars are imported. You will be notified via this page when the process is completed."
 msgstr "Even geduld terwijl de kalenders worden geïmporteerd. U wordt via deze pagina op de hoogte gebracht wanneer het proces is voltooid."
 
@@ -1401,10 +1578,6 @@ msgstr "Synchroniseer alle kalenders"
 #: includes/admin/menu-pages/i-cal-menu-page.php:121
 msgid "Sync your bookings across all online channels like Booking.com, TripAdvisor, Airbnb etc. via iCalendar file format."
 msgstr "Synchroniseer uw boekingen via alle online kanalen zoals Booking.com, TripAdvisor, Airbnb etc. via het bestandsformaat iCalendar."
-
-#: includes/admin/menu-pages/i-cal-menu-page.php:148
-msgid "Update"
-msgstr "Bijwerken"
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:212
 msgid "Calendar URL"
@@ -1583,12 +1756,6 @@ msgid_plural "%s accommodations generated."
 msgstr[0] "Accommodatie gegenereerd."
 msgstr[1] "%s accommodaties gegenereerd."
 
-#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
-#: includes/admin/sync-rooms-list-table.php:140
-#: includes/post-types/room-type-cpt.php:319
-msgid "View"
-msgstr "Bekijk"
-
 #: includes/admin/menu-pages/settings-menu-page.php:54
 msgid "General"
 msgstr "Algemeen"
@@ -1621,42 +1788,50 @@ msgstr "Algemene Voorwaarden"
 msgid "If you define a \"Terms\" page the customer will be asked if they accept them when checking out."
 msgstr "Als u een pagina 'Voorwaarden' definieert, wordt aan de klant gevraagd of deze deze accepteert bij het uitchecken."
 
-#: includes/admin/menu-pages/settings-menu-page.php:84
+#: includes/admin/menu-pages/settings-menu-page.php:80
+msgid "My Account Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:81
+msgid "Select a page to display user account. Use the customer account shortcode on this page."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:90
 msgid "Misc"
 msgstr "Diverse"
 
-#: includes/admin/menu-pages/settings-menu-page.php:89
+#: includes/admin/menu-pages/settings-menu-page.php:95
 msgid "Square Units"
 msgstr "Vierkante eenheden"
 
-#: includes/admin/menu-pages/settings-menu-page.php:95
+#: includes/admin/menu-pages/settings-menu-page.php:101
 #: includes/post-types/payment-cpt.php:190
 msgid "Currency"
 msgstr "Valuta"
 
-#: includes/admin/menu-pages/settings-menu-page.php:101
+#: includes/admin/menu-pages/settings-menu-page.php:107
 msgid "Currency Position"
 msgstr "Valutapositie"
 
-#: includes/admin/menu-pages/settings-menu-page.php:107
+#: includes/admin/menu-pages/settings-menu-page.php:113
 msgid "Datepicker Date Format"
 msgstr "Datumformaat in Datapicker"
 
-#: includes/admin/menu-pages/settings-menu-page.php:113
-#: includes/emails/templaters/email-templater.php:135
+#: includes/admin/menu-pages/settings-menu-page.php:119
+#: includes/emails/templaters/email-templater.php:140
 msgid "Check-out Time"
 msgstr "Uitchecktijd"
 
-#: includes/admin/menu-pages/settings-menu-page.php:118
-#: includes/emails/templaters/email-templater.php:131
+#: includes/admin/menu-pages/settings-menu-page.php:124
+#: includes/emails/templaters/email-templater.php:136
 msgid "Check-in Time"
 msgstr "Inchecktijd"
 
-#: includes/admin/menu-pages/settings-menu-page.php:123
+#: includes/admin/menu-pages/settings-menu-page.php:129
 msgid "Bed Types"
 msgstr "Types Bedden"
 
-#: includes/admin/menu-pages/settings-menu-page.php:128
+#: includes/admin/menu-pages/settings-menu-page.php:134
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:124
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:189
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:251
@@ -1666,15 +1841,15 @@ msgstr "Types Bedden"
 msgid "Type"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:132
+#: includes/admin/menu-pages/settings-menu-page.php:138
 msgid "Add Bed Type"
 msgstr "Type bed toevoegen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:137
+#: includes/admin/menu-pages/settings-menu-page.php:143
 msgid "Show Lowest Price for"
 msgstr "Toon de laagste prijs voor"
 
-#: includes/admin/menu-pages/settings-menu-page.php:138
+#: includes/admin/menu-pages/settings-menu-page.php:144
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:146
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:212
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:273
@@ -1682,341 +1857,369 @@ msgstr "Toon de laagste prijs voor"
 msgid "days"
 msgstr "dagen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:142
+#: includes/admin/menu-pages/settings-menu-page.php:148
 msgid "Lowest price of accommodation for selected number of days if check-in and check-out dates are not set. Example: set 0 to display today's lowest price, set 7 to display the lowest price for the next week."
 msgstr "De laagste prijzen voor accommodaties voor het aantal dagen die u gekozen hebt als aankomst- en vertrekdatum niet vastgesteld zijn. Voorbeeld: kies 0 op de laagste prijs van vandaag te zien, kies 7 om de laagste vrijs van het week te zien."
 
-#: includes/admin/menu-pages/settings-menu-page.php:146
+#: includes/admin/menu-pages/settings-menu-page.php:152
 msgid "Enable search form to recommend the best set of accommodations according to a number of guests."
 msgstr "Zoekformulier inschakelen om de beste accommodaties-set naargelang het aantal gasten aan te bevelen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:152
+#: includes/admin/menu-pages/settings-menu-page.php:158
 msgid "Enable the use of coupons."
 msgstr "Het gebruik van coupons inschakelen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:157
+#: includes/admin/menu-pages/settings-menu-page.php:163
 msgid "Text on Checkout"
 msgstr "Tekst bij het afrekenen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:158
+#: includes/admin/menu-pages/settings-menu-page.php:164
 msgid "This text will appear on the checkout page."
 msgstr "Deze tekst verschijnt op de betaalpagina."
 
-#: includes/admin/menu-pages/settings-menu-page.php:167
+#: includes/admin/menu-pages/settings-menu-page.php:173
 msgid "Disable Booking"
 msgstr "Reservering uitschakelen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:172
+#: includes/admin/menu-pages/settings-menu-page.php:178
 msgid "Hide reservation forms and buttons"
 msgstr "Boekingsformulieren en knoppen verbergen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:178
+#: includes/admin/menu-pages/settings-menu-page.php:184
 msgid "Text instead of reservation form while booking is disabled"
 msgstr "Tekst in plaats van boekingsformulier als reserveren uitgeschakeld is. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:187
+#: includes/admin/menu-pages/settings-menu-page.php:193
 #: includes/admin/menu-pages/shortcodes-menu-page.php:482
-#: includes/wizard.php:108
+#: includes/wizard.php:109
 #: assets/blocks/blocks.js:1423
 #: assets/blocks/blocks.js:1453
 msgid "Booking Confirmation"
 msgstr "Boekingsbevestiging"
 
-#: includes/admin/menu-pages/settings-menu-page.php:192
+#: includes/admin/menu-pages/settings-menu-page.php:198
 msgid "Confirmation Mode"
 msgstr "Bevestigingswijze"
 
-#: includes/admin/menu-pages/settings-menu-page.php:194
+#: includes/admin/menu-pages/settings-menu-page.php:200
 msgid "By customer via email"
 msgstr "Via e-mail door klant"
 
-#: includes/admin/menu-pages/settings-menu-page.php:195
+#: includes/admin/menu-pages/settings-menu-page.php:201
 msgid "By admin manually"
 msgstr "Handmatig door beheerder"
 
-#: includes/admin/menu-pages/settings-menu-page.php:196
+#: includes/admin/menu-pages/settings-menu-page.php:202
 msgid "Confirmation upon payment"
 msgstr "Bevestiging na betaling"
 
-#: includes/admin/menu-pages/settings-menu-page.php:202
+#: includes/admin/menu-pages/settings-menu-page.php:208
 msgid "Booking Confirmed Page"
 msgstr "Pagina 'Bevestigde boeking'"
 
-#: includes/admin/menu-pages/settings-menu-page.php:203
+#: includes/admin/menu-pages/settings-menu-page.php:209
 msgid "Page user will be redirected to once the booking is confirmed via email or by admin."
 msgstr "De gebruiker van de pagina wordt doorgestuurd zodra de boeking is bevestigd via e-mail of door de beheerder."
 
-#: includes/admin/menu-pages/settings-menu-page.php:208
+#: includes/admin/menu-pages/settings-menu-page.php:214
 msgid "Approval Time for User"
 msgstr "Goedkeuringstijd voor gebruiker"
 
-#: includes/admin/menu-pages/settings-menu-page.php:209
+#: includes/admin/menu-pages/settings-menu-page.php:215
 msgid "Period of time in minutes the user is given to confirm booking via email. Unconfirmed bookings become Abandoned and accommodation status changes to Available."
 msgstr "Tijdsperiode is minuten om reservering te bevestigen. Onbevestigde reserveringen wordt 'opgeheven' en boekingsstatus verandert in 'beschikbaar'.\t"
 
-#: includes/admin/menu-pages/settings-menu-page.php:216
+#: includes/admin/menu-pages/settings-menu-page.php:222
 msgid "Country of residence field is required for reservation."
 msgstr "Het land is vereist voor de reservering."
 
-#: includes/admin/menu-pages/settings-menu-page.php:221
+#: includes/admin/menu-pages/settings-menu-page.php:227
 msgid "Full address fields are required for reservation."
 msgstr "Volledig adresvelden zijn vereist voor de reservering."
 
-#: includes/admin/menu-pages/settings-menu-page.php:226
+#: includes/admin/menu-pages/settings-menu-page.php:232
 msgid "Customer information is required when placing admin bookings."
 msgstr "Klantinformatie is vereist bij het plaatsen van beheerder-boekingen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:232
+#: includes/admin/menu-pages/settings-menu-page.php:238
 msgid "Default Country on Checkout"
 msgstr "Standaardland bij het afrekenen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:237
-#: includes/emails/templaters/email-templater.php:186
+#: includes/admin/menu-pages/settings-menu-page.php:243
+#: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:397
+#: includes/views/shortcodes/checkout-view.php:461
 msgid "Price Breakdown"
 msgstr "Prijsopbouw"
 
-#: includes/admin/menu-pages/settings-menu-page.php:238
+#: includes/admin/menu-pages/settings-menu-page.php:244
 msgid "Price breakdown unfolded by default."
 msgstr "Prijsverdeling standaard uitgevouwen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:246
-#: includes/upgrader.php:646
-#: includes/wizard.php:145
-msgid "Booking Cancellation"
-msgstr "Annulering van reservering"
-
-#: includes/admin/menu-pages/settings-menu-page.php:251
-msgid "User can cancel booking via link provided inside email."
-msgstr "Een gebruiker kan een reservering annuleren alleen via link in een e-mail. "
-
-#: includes/admin/menu-pages/settings-menu-page.php:256
-msgid "Booking Cancelation Page"
+#: includes/admin/menu-pages/settings-menu-page.php:252
+msgid "Accounts"
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:257
-msgid "Page to confirm booking cancelation."
+msgid "Account creation"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:262
-msgid "Booking Canceled Page"
+#: includes/admin/menu-pages/settings-menu-page.php:258
+msgid "Automatically create an account for a user at checkout."
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:263
+msgid "Allow customers to create an account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:268
+msgid "Allow customers to log into their existing account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:276
+#: includes/upgrader.php:716
+#: includes/wizard.php:146
+msgid "Booking Cancellation"
+msgstr "Annulering van reservering"
+
+#: includes/admin/menu-pages/settings-menu-page.php:281
+msgid "User can cancel booking via link provided inside email."
+msgstr "Een gebruiker kan een reservering annuleren alleen via link in een e-mail. "
+
+#: includes/admin/menu-pages/settings-menu-page.php:286
+msgid "Booking Cancelation Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:287
+msgid "Page to confirm booking cancelation."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:292
+msgid "Booking Canceled Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:293
 msgid "Page to redirect to after a booking is canceled."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Search Options"
 msgstr "Zoekopties"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Maximum accommodation occupancy available in the Search Form."
 msgstr "Maximum bezetting accommodatie beschikbaar in het zoekformulier."
 
-#: includes/admin/menu-pages/settings-menu-page.php:278
+#: includes/admin/menu-pages/settings-menu-page.php:308
 msgid "Max Adults"
 msgstr "Max. volwassenen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:285
+#: includes/admin/menu-pages/settings-menu-page.php:315
 msgid "Max Children"
 msgstr "Max. kinderen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:290
+#: includes/admin/menu-pages/settings-menu-page.php:320
 msgid "Age of Child"
 msgstr "Leeftijd van het kind"
 
-#: includes/admin/menu-pages/settings-menu-page.php:291
+#: includes/admin/menu-pages/settings-menu-page.php:321
 msgid "Optional description of the \"Children\" field."
 msgstr "Optionele beschrijving van het veld \"Kinderen\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:296
+#: includes/admin/menu-pages/settings-menu-page.php:326
 msgid "Skip Search Results"
 msgstr "Zoekresultaten overslaan"
 
-#: includes/admin/menu-pages/settings-menu-page.php:297
+#: includes/admin/menu-pages/settings-menu-page.php:327
 msgid "Skip search results page and enable direct booking from accommodation pages."
 msgstr "Sla de pagina met zoekresultaten over en schakel direct boeken in vanaf accommodatiepagina's."
 
-#: includes/admin/menu-pages/settings-menu-page.php:301
+#: includes/admin/menu-pages/settings-menu-page.php:331
 msgid "Direct Booking Form"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:304
+#: includes/admin/menu-pages/settings-menu-page.php:334
 msgid "Show price for selected period"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:305
+#: includes/admin/menu-pages/settings-menu-page.php:335
 msgid "Show price together with adults and children fields"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:311
+#: includes/admin/menu-pages/settings-menu-page.php:341
 msgid "Book button behavior on the search results page"
 msgstr "Boek knop gedrag op zoekpagina"
 
-#: includes/admin/menu-pages/settings-menu-page.php:312
+#: includes/admin/menu-pages/settings-menu-page.php:342
 msgid "Redirect to the checkout page immediately after successful addition to reservation."
 msgstr "Stuur direct door naar de betaalpagina na het succesvol toevoegen van een reservering. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:318
+#: includes/admin/menu-pages/settings-menu-page.php:348
 msgid "Enable \"adults\" and \"children\" options for my website (default)."
 msgstr "Opties voor 'volwassenen' en 'kinderen' inschakelen voor mijn website (standaard)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:319
+#: includes/admin/menu-pages/settings-menu-page.php:349
 msgid "Disable \"children\" option for my website (hide \"children\" field and use Guests label instead)."
 msgstr "Schakel de optie \"kinderen\" uit voor mijn website (verberg het veld \"kinderen\" en gebruik in plaats daarvan het gastenlabel)."
 
-#: includes/admin/menu-pages/settings-menu-page.php:320
+#: includes/admin/menu-pages/settings-menu-page.php:350
 msgid "Disable \"adults\" and \"children\" options for my website."
 msgstr "Schakel de opties 'volwassenen' en 'kinderen' uit voor mijn website."
 
-#: includes/admin/menu-pages/settings-menu-page.php:323
+#: includes/admin/menu-pages/settings-menu-page.php:353
 msgid "Guest Management"
 msgstr "Gastenbeheer"
 
-#: includes/admin/menu-pages/settings-menu-page.php:329
+#: includes/admin/menu-pages/settings-menu-page.php:359
 msgid "Hide \"adults\" and \"children\" fields within search availability forms."
 msgstr "Verberg velden \"volwassenen\" en \"kinderen\" in zoekformulieren voor zoeken."
 
-#: includes/admin/menu-pages/settings-menu-page.php:335
+#: includes/admin/menu-pages/settings-menu-page.php:365
 msgid "Do not apply booking rules for admin bookings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:342
+#: includes/admin/menu-pages/settings-menu-page.php:372
 msgid "Display Options"
 msgstr "Weergaveopties"
 
-#: includes/admin/menu-pages/settings-menu-page.php:347
+#: includes/admin/menu-pages/settings-menu-page.php:377
 msgid "Display gallery images of accommodation page in lightbox."
 msgstr "Galerijafbeeldingen van accommodatie pagina in lightbox weergeven."
 
-#: includes/admin/menu-pages/settings-menu-page.php:353
+#: includes/admin/menu-pages/settings-menu-page.php:383
 msgid "Calendar Theme"
 msgstr "Kalender thema"
 
-#: includes/admin/menu-pages/settings-menu-page.php:354
+#: includes/admin/menu-pages/settings-menu-page.php:384
 msgid "Select theme for an availability calendar."
 msgstr "Kies een thema voor een beschikbaarheidskalender."
 
-#: includes/admin/menu-pages/settings-menu-page.php:358
+#: includes/admin/menu-pages/settings-menu-page.php:388
 msgid "Template Mode"
 msgstr "Sjabloonmodus"
 
-#: includes/admin/menu-pages/settings-menu-page.php:360
+#: includes/admin/menu-pages/settings-menu-page.php:390
 msgid "Developer Mode"
 msgstr "Ontwikkelaarmodus"
 
-#: includes/admin/menu-pages/settings-menu-page.php:361
+#: includes/admin/menu-pages/settings-menu-page.php:391
 msgid "Theme Mode"
 msgstr "Themamodus"
 
-#: includes/admin/menu-pages/settings-menu-page.php:363
+#: includes/admin/menu-pages/settings-menu-page.php:393
 msgid "Choose Theme Mode to display the content with the styles of your theme. Choose Developer Mode to control appearance of the content with custom page templates, actions and filters. This option can't be changed if your theme is initially integrated with the plugin."
 msgstr "Kies 'Themamodus' om de inhoud met uw themastijl te tonen. Kies 'Ontwikkelaarsmodus' om het uiterlijk van de inhoud te controleren met aangepaste paginasjablonen, acties en filters. Deze optie kunt niet wijzigen als uw thema aanvankelijk geïntegreerd is met de plugin. "
 
-#: includes/admin/menu-pages/settings-menu-page.php:373
+#: includes/admin/menu-pages/settings-menu-page.php:403
 msgid "More Styles"
 msgstr "Meer stijlen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:374
+#: includes/admin/menu-pages/settings-menu-page.php:404
 msgid "Extend the styling options of Hotel Booking plugin with the new free addon - Hotel Booking Styles."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:385
+#: includes/admin/menu-pages/settings-menu-page.php:415
 msgid "Calendars Synchronization"
 msgstr "Synchroniseer kalenders"
 
-#: includes/admin/menu-pages/settings-menu-page.php:390
+#: includes/admin/menu-pages/settings-menu-page.php:420
 msgid "Export admin blocks."
 msgstr "Exporteer beheerdersblokken."
 
-#: includes/admin/menu-pages/settings-menu-page.php:395
+#: includes/admin/menu-pages/settings-menu-page.php:425
 msgid "Do not export imported bookings."
 msgstr "Geïmporteerde boekingen niet exporteren."
 
-#: includes/admin/menu-pages/settings-menu-page.php:402
+#: includes/admin/menu-pages/settings-menu-page.php:430
+msgid "Minimize Logs"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:431
+msgid "Enable the plugin to record only important messages."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:438
 msgid "Calendars Synchronization Scheduler"
 msgstr "Kalenders synchronisatieplanner"
 
-#: includes/admin/menu-pages/settings-menu-page.php:411
+#: includes/admin/menu-pages/settings-menu-page.php:447
 msgid "Enable automatic external calendars synchronization"
 msgstr "Automatische synchronisatie van externe kalenders inschakelen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:417
+#: includes/admin/menu-pages/settings-menu-page.php:453
 msgid "Clock"
 msgstr "Klok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:418
+#: includes/admin/menu-pages/settings-menu-page.php:454
 msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr "Synchroniseer kalenders nu (UTC) of begin op elk interval hieronder."
 
-#: includes/admin/menu-pages/settings-menu-page.php:426
+#: includes/admin/menu-pages/settings-menu-page.php:462
 msgid "Interval"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:428
+#: includes/admin/menu-pages/settings-menu-page.php:464
 #: includes/crons/cron-manager.php:79
 msgid "Quarter an Hour"
 msgstr "Een kwartier"
 
-#: includes/admin/menu-pages/settings-menu-page.php:429
+#: includes/admin/menu-pages/settings-menu-page.php:465
 #: includes/crons/cron-manager.php:84
 msgid "Half an Hour"
 msgstr "Een half uur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:430
+#: includes/admin/menu-pages/settings-menu-page.php:466
 msgid "Once Hourly"
 msgstr "Eens per uur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:431
+#: includes/admin/menu-pages/settings-menu-page.php:467
 msgid "Twice Daily"
 msgstr "Tweemaal daags"
 
-#: includes/admin/menu-pages/settings-menu-page.php:432
+#: includes/admin/menu-pages/settings-menu-page.php:468
 msgid "Once Daily"
 msgstr "Eens per dag"
 
-#: includes/admin/menu-pages/settings-menu-page.php:440
+#: includes/admin/menu-pages/settings-menu-page.php:476
 msgid "Automatically delete sync logs older than"
 msgstr "Verwijder synchronisatielogboeken ouder dan"
 
-#: includes/admin/menu-pages/settings-menu-page.php:442
+#: includes/admin/menu-pages/settings-menu-page.php:478
 msgid "Day"
 msgstr "Dag"
 
-#: includes/admin/menu-pages/settings-menu-page.php:443
+#: includes/admin/menu-pages/settings-menu-page.php:479
 msgid "Week"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:444
+#: includes/admin/menu-pages/settings-menu-page.php:480
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "Maand"
 
-#: includes/admin/menu-pages/settings-menu-page.php:445
+#: includes/admin/menu-pages/settings-menu-page.php:481
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "Kwartaal"
 
-#: includes/admin/menu-pages/settings-menu-page.php:446
+#: includes/admin/menu-pages/settings-menu-page.php:482
 msgid "Half a Year"
 msgstr "Een half jaar"
 
-#: includes/admin/menu-pages/settings-menu-page.php:447
+#: includes/admin/menu-pages/settings-menu-page.php:483
 msgid "Never Delete"
 msgstr "Wis nooit"
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:492
 msgid "Block Editor"
 msgstr "Blok-editor"
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:497
+#: includes/admin/menu-pages/settings-menu-page.php:502
 msgid "Enable block editor for \"%s\"."
 msgstr "Blok-editor inschakelen voor \"%s\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:497
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -2024,211 +2227,211 @@ msgstr "Blok-editor inschakelen voor \"%s\"."
 msgid "Accommodation Types"
 msgstr "Typen accommodaties"
 
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:502
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
-#: includes/post-types/service-cpt.php:90
-#: includes/post-types/service-cpt.php:100
+#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:102
 #: includes/views/booking-view.php:170
 msgid "Services"
 msgstr "Diensten"
 
-#: includes/admin/menu-pages/settings-menu-page.php:494
+#: includes/admin/menu-pages/settings-menu-page.php:531
 msgid "Admin Emails"
 msgstr "E-mails van beheerder"
 
-#: includes/admin/menu-pages/settings-menu-page.php:507
+#: includes/admin/menu-pages/settings-menu-page.php:544
 msgid "Customer Emails"
 msgstr "E-mail van klanten"
 
-#: includes/admin/menu-pages/settings-menu-page.php:512
+#: includes/admin/menu-pages/settings-menu-page.php:549
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr "Zet passanten om in loyale klanten door ze automatisch op te nemen in marketing campagnes met de <a>Hotel Booking & Mailchimp Integratie</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:515
+#: includes/admin/menu-pages/settings-menu-page.php:552
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr "Zet passanten om in loyale klanten door ze automatisch op te nemen in marketing campagnes met de Hotel Booking & Mailchimp Integratie."
 
-#: includes/admin/menu-pages/settings-menu-page.php:530
+#: includes/admin/menu-pages/settings-menu-page.php:567
 msgid "Cancellation Details Template"
 msgstr "Annulering details-sjabloon"
 
-#: includes/admin/menu-pages/settings-menu-page.php:531
+#: includes/admin/menu-pages/settings-menu-page.php:568
 msgid "Used for %cancellation_details% tag."
 msgstr "Gebruikt voor %cancellation_details% tag."
 
-#: includes/admin/menu-pages/settings-menu-page.php:548
+#: includes/admin/menu-pages/settings-menu-page.php:587
 msgid "Email Settings"
 msgstr "E-mailinstellingen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:553
+#: includes/admin/menu-pages/settings-menu-page.php:592
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr "Stuur automatische email notificaties zoals sleutel instructies, huisregels voor en na aankomst/vertrek met <a>Hotel Booking Notifier</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:556
+#: includes/admin/menu-pages/settings-menu-page.php:595
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr "Stuur automatische email notificaties zoals sleutel instructies, huisregels voor en na aankomst/vertrek met Hotel Booking Notifier."
 
-#: includes/admin/menu-pages/settings-menu-page.php:564
+#: includes/admin/menu-pages/settings-menu-page.php:603
 msgid "Email Sender"
 msgstr "E-mail zender"
 
-#: includes/admin/menu-pages/settings-menu-page.php:569
+#: includes/admin/menu-pages/settings-menu-page.php:608
 msgid "Administrator Email"
 msgstr "Beheerder E-mail"
 
-#: includes/admin/menu-pages/settings-menu-page.php:575
+#: includes/admin/menu-pages/settings-menu-page.php:614
 msgid "From Email"
 msgstr "Van e-mail"
 
-#: includes/admin/menu-pages/settings-menu-page.php:581
+#: includes/admin/menu-pages/settings-menu-page.php:620
 msgid "From Name"
 msgstr "Van naam"
 
-#: includes/admin/menu-pages/settings-menu-page.php:588
+#: includes/admin/menu-pages/settings-menu-page.php:627
 msgid "Logo URL"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:595
+#: includes/admin/menu-pages/settings-menu-page.php:634
 msgid "Footer Text"
 msgstr "Voettekst"
 
-#: includes/admin/menu-pages/settings-menu-page.php:603
+#: includes/admin/menu-pages/settings-menu-page.php:642
 msgid "Reserved Accommodation Details Template"
 msgstr "Gereserveerde accommodatie details-sjabloon"
 
-#: includes/admin/menu-pages/settings-menu-page.php:604
+#: includes/admin/menu-pages/settings-menu-page.php:643
 msgid "Used for %reserved_rooms_details% tag."
 msgstr "Gebruikt voor %reserved_rooms_details% tag."
 
-#: includes/admin/menu-pages/settings-menu-page.php:615
+#: includes/admin/menu-pages/settings-menu-page.php:654
 msgid "Styles"
 msgstr "Stijlen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:620
+#: includes/admin/menu-pages/settings-menu-page.php:659
 msgid "Base Color"
 msgstr "Basiskleur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:626
+#: includes/admin/menu-pages/settings-menu-page.php:665
 msgid "Background Color"
 msgstr "Achtergrondkleur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:632
+#: includes/admin/menu-pages/settings-menu-page.php:671
 msgid "Body Background Color"
 msgstr "Body achtergrondkleur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:638
+#: includes/admin/menu-pages/settings-menu-page.php:677
 msgid "Body Text Color"
 msgstr "Body tekstkleur"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "Payment Gateways"
 msgstr "Betalingsgateways"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "General Settings"
 msgstr "Algemene Instellingen"
 
-#: includes/admin/menu-pages/settings-menu-page.php:663
+#: includes/admin/menu-pages/settings-menu-page.php:702
 msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr "Meer gateways nodig? Gebruik onze <a href=\"%s\" target=\"_blank\"> WooCommerce Payments </a> extensie voor hotelboekingen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:667
+#: includes/admin/menu-pages/settings-menu-page.php:706
 msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr "U kunt ook de link <a href=\"%s\" target=\"_blank\"> betalingsverzoek </a> naar uw gasten e-mailen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:676
+#: includes/admin/menu-pages/settings-menu-page.php:715
 msgid "User Pays"
 msgstr "Klant betaalt"
 
-#: includes/admin/menu-pages/settings-menu-page.php:678
+#: includes/admin/menu-pages/settings-menu-page.php:717
 msgid "Full Amount"
 msgstr "Totaalbedrag"
 
-#: includes/admin/menu-pages/settings-menu-page.php:679
+#: includes/admin/menu-pages/settings-menu-page.php:718
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "Aanbetaling"
 
-#: includes/admin/menu-pages/settings-menu-page.php:685
+#: includes/admin/menu-pages/settings-menu-page.php:724
 msgid "Deposit Type"
 msgstr "Type aanbetaling"
 
-#: includes/admin/menu-pages/settings-menu-page.php:687
+#: includes/admin/menu-pages/settings-menu-page.php:726
 msgid "Fixed"
 msgstr "Vastgesteld"
 
-#: includes/admin/menu-pages/settings-menu-page.php:688
+#: includes/admin/menu-pages/settings-menu-page.php:727
 msgid "Percent"
 msgstr "Procent"
 
-#: includes/admin/menu-pages/settings-menu-page.php:694
+#: includes/admin/menu-pages/settings-menu-page.php:733
 msgid "Deposit Amount"
 msgstr "Aanbetalingsbedrag"
 
-#: includes/admin/menu-pages/settings-menu-page.php:702
+#: includes/admin/menu-pages/settings-menu-page.php:741
 msgid "Deposit Time Frame (days)"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:703
+#: includes/admin/menu-pages/settings-menu-page.php:742
 msgid "Apply deposit to bookings made in at least the selected number of days prior to the check-in date. Otherwise, the full amount is charged."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:711
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Force Secure Checkout"
 msgstr "Veilige Betaling"
 
-#: includes/admin/menu-pages/settings-menu-page.php:713
+#: includes/admin/menu-pages/settings-menu-page.php:752
 msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
 msgstr "Schakel SSL (HTTPS) in op afrekenpagina's. Uw moet een  SSL certificate geïnstalleerd hebben."
 
-#: includes/admin/menu-pages/settings-menu-page.php:717
+#: includes/admin/menu-pages/settings-menu-page.php:756
 msgid "Reservation Received Page"
 msgstr "Pagina 'Ontvangen reservering'"
 
-#: includes/admin/menu-pages/settings-menu-page.php:722
+#: includes/admin/menu-pages/settings-menu-page.php:761
 msgid "Failed Transaction Page"
 msgstr "Mislukte Transactiepagina"
 
-#: includes/admin/menu-pages/settings-menu-page.php:727
+#: includes/admin/menu-pages/settings-menu-page.php:766
 msgid "Default Gateway"
 msgstr "Standaardgateway"
 
-#: includes/admin/menu-pages/settings-menu-page.php:735
+#: includes/admin/menu-pages/settings-menu-page.php:774
 msgid "Pending Payment Time"
 msgstr "Betalingstijd in afwachting"
 
-#: includes/admin/menu-pages/settings-menu-page.php:736
+#: includes/admin/menu-pages/settings-menu-page.php:775
 msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
 msgstr "Tijdsperiode is minuten om de betaling te voltooien. Onbetaalde reserveringen wordt 'opgeheven' en boekingsstatus verandert tot 'beschikbaar'."
 
-#: includes/admin/menu-pages/settings-menu-page.php:758
+#: includes/admin/menu-pages/settings-menu-page.php:797
 msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr "Installeer <a href=\"%s\" target=\"_blank\"> Add-ons voor hotelboekingen </a> om hun instellingen te beheren."
 
-#: includes/admin/menu-pages/settings-menu-page.php:760
+#: includes/admin/menu-pages/settings-menu-page.php:799
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr "Installeer Hotel Booking-add-ons om hun instellingen te beheren."
 
-#: includes/admin/menu-pages/settings-menu-page.php:778
+#: includes/admin/menu-pages/settings-menu-page.php:817
 msgid "Advanced"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:790
-#: includes/admin/menu-pages/settings-menu-page.php:792
+#: includes/admin/menu-pages/settings-menu-page.php:829
+#: includes/admin/menu-pages/settings-menu-page.php:831
 msgid "License"
 msgstr "Licentie"
 
-#: includes/admin/menu-pages/settings-menu-page.php:831
+#: includes/admin/menu-pages/settings-menu-page.php:870
 msgid "Settings saved."
 msgstr "Instellingen zijn opgeslagen."
 
-#: includes/admin/menu-pages/settings-menu-page.php:863
+#: includes/admin/menu-pages/settings-menu-page.php:902
 msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr "<strong> Opmerking: </strong> betaalmethoden worden alleen op de betaalpagina weergegeven wanneer 'Bevestiging bij betaling' is ingeschakeld in 'Accommodatie'> 'Instellingen'> 'Algemeen'> 'Bevestigingsmodus'."
 
-#: includes/admin/menu-pages/settings-menu-page.php:951
-#: includes/admin/menu-pages/settings-menu-page.php:955
+#: includes/admin/menu-pages/settings-menu-page.php:990
+#: includes/admin/menu-pages/settings-menu-page.php:994
 #: assets/blocks/blocks.js:54
 #: assets/blocks/blocks.js:186
 #: assets/blocks/blocks.js:293
@@ -2292,6 +2495,7 @@ msgstr "Door komma's gescheiden kenmerken van attributen."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:468
 #: includes/admin/menu-pages/shortcodes-menu-page.php:486
 #: includes/admin/menu-pages/shortcodes-menu-page.php:502
+#: includes/admin/menu-pages/shortcodes-menu-page.php:518
 msgid "Custom CSS class for shortcode wrapper"
 msgstr "Aanpasbare CSS class voor shortcode wrapper"
 
@@ -2306,6 +2510,7 @@ msgstr "Aanpasbare CSS class voor shortcode wrapper"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:469
 #: includes/admin/menu-pages/shortcodes-menu-page.php:487
 #: includes/admin/menu-pages/shortcodes-menu-page.php:503
+#: includes/admin/menu-pages/shortcodes-menu-page.php:519
 msgid "whitespace separated css classes"
 msgstr "spaties gescheiden css classes"
 
@@ -2484,7 +2689,7 @@ msgstr "aangepaste veldnaam"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:288
 #: includes/admin/menu-pages/shortcodes-menu-page.php:327
 #: includes/admin/menu-pages/shortcodes-menu-page.php:336
-#: includes/admin/menu-pages/shortcodes-menu-page.php:601
+#: includes/admin/menu-pages/shortcodes-menu-page.php:617
 msgid "empty string"
 msgstr "lege tekenreeks"
 
@@ -2660,49 +2865,62 @@ msgstr ""
 msgid "Use this shortcode on the Booking Cancelation page"
 msgstr ""
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:521
-#: includes/admin/menu-pages/shortcodes-menu-page.php:654
-#: includes/admin/menu-pages/shortcodes-menu-page.php:658
+#: includes/admin/menu-pages/shortcodes-menu-page.php:514
+msgid "Customer Account"
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:515
+msgid "Display log in form or customer account area."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+msgid "Use this shortcode to create the My Account page."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:537
+#: includes/admin/menu-pages/shortcodes-menu-page.php:670
+#: includes/admin/menu-pages/shortcodes-menu-page.php:674
 msgid "Shortcodes"
 msgstr "Shortcode's"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+#: includes/admin/menu-pages/shortcodes-menu-page.php:541
 msgid "Shortcode"
 msgstr ""
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:526
+#: includes/admin/menu-pages/shortcodes-menu-page.php:542
 #: includes/post-types/attributes-cpt.php:299
 msgid "Parameters"
 msgstr ""
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:527
+#: includes/admin/menu-pages/shortcodes-menu-page.php:543
 msgid "Example"
 msgstr "Voorbeeld"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:559
-#: includes/admin/menu-pages/shortcodes-menu-page.php:581
+#: includes/admin/menu-pages/shortcodes-menu-page.php:575
+#: includes/admin/menu-pages/shortcodes-menu-page.php:597
 msgid "Deprecated since %s"
 msgstr "Verouderd sinds %s"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:591
+#: includes/admin/menu-pages/shortcodes-menu-page.php:607
 msgid "Values:"
 msgstr "Waarden:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:596
+#: includes/admin/menu-pages/shortcodes-menu-page.php:612
 msgid "Default:"
 msgstr "Standaard:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:642
+#: includes/admin/menu-pages/shortcodes-menu-page.php:658
 msgid "Optional."
 msgstr "Optioneel."
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:650
+#: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:182
-#: includes/views/shortcodes/checkout-view.php:203
-#: includes/views/shortcodes/checkout-view.php:437
-#: includes/views/shortcodes/checkout-view.php:447
+#: includes/views/shortcodes/checkout-view.php:246
+#: includes/views/shortcodes/checkout-view.php:267
+#: includes/views/shortcodes/checkout-view.php:501
+#: includes/views/shortcodes/checkout-view.php:531
+#: templates/account/account-details.php:34
 msgid "Required"
 msgstr "Verplicht"
 
@@ -2717,7 +2935,7 @@ msgid "Taxes & Fees"
 msgstr "Belastingen & kosten"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:111
-#: includes/bundles/export-bundle.php:44
+#: includes/bundles/export-bundle.php:45
 #: includes/views/booking-view.php:222
 msgid "Fees"
 msgstr "Kosten"
@@ -2779,7 +2997,7 @@ msgid "Show accommodation rate with this charge included"
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:176
-#: includes/bundles/export-bundle.php:42
+#: includes/bundles/export-bundle.php:43
 #: includes/views/booking-view.php:146
 msgid "Accommodation Taxes"
 msgstr "Accommodatie belasting:"
@@ -2822,12 +3040,6 @@ msgstr ""
 msgid "Fee Taxes"
 msgstr "Kosten belastingen"
 
-#: includes/admin/menus.php:71
-#: includes/admin/menus.php:72
-#: includes/post-types/booking-cpt.php:200
-msgid "Bookings"
-msgstr "Reserveringen"
-
 #: includes/admin/room-list-table.php:100
 msgid "External Calendars"
 msgstr "Externe kalenders"
@@ -2869,12 +3081,12 @@ msgid "d/m/Y - H:i:s"
 msgstr "d/m/Y - H:i:s"
 
 #: includes/admin/sync-rooms-list-table.php:73
-#: includes/ajax.php:947
+#: includes/ajax.php:950
 msgid "Waiting"
 msgstr "Wachtend"
 
 #: includes/admin/sync-rooms-list-table.php:74
-#: includes/ajax.php:948
+#: includes/ajax.php:951
 msgid "Processing"
 msgstr "Verwerken"
 
@@ -3068,64 +3280,64 @@ msgstr ""
 msgid "QR Code"
 msgstr ""
 
-#: includes/ajax.php:251
+#: includes/ajax.php:254
 msgid "No bookings found for your request."
 msgstr "Geen boekingen gevonden voor uw vraag."
 
-#: includes/ajax.php:258
+#: includes/ajax.php:261
 msgid "Uploads directory is not writable."
 msgstr "Uploadmap is niet schrijfbaar."
 
-#: includes/ajax.php:323
+#: includes/ajax.php:326
 msgid "No enough data"
 msgstr "Niet voldoende data"
 
-#: includes/ajax.php:341
+#: includes/ajax.php:344
 #: includes/script-managers/admin-script-manager.php:88
 msgid "An error has occurred"
 msgstr "Er heeft zich een fout voorgedaan"
 
-#: includes/ajax.php:353
-#: includes/ajax.php:393
-#: includes/ajax.php:686
+#: includes/ajax.php:356
+#: includes/ajax.php:396
+#: includes/ajax.php:689
 #: includes/csv/bookings/bookings-query.php:77
 msgid "Please complete all required fields and try again."
 msgstr "Vul alle verplichte velden in en probeer opnieuw. "
 
-#: includes/ajax.php:379
+#: includes/ajax.php:382
 #: includes/script-managers/public-script-manager.php:220
 msgid "An error has occurred, please try again later."
 msgstr "Er is een fout opgetreden, probeer het later opnieuw."
 
-#: includes/ajax.php:505
-#: includes/ajax.php:574
+#: includes/ajax.php:508
+#: includes/ajax.php:577
 msgid "An error has occurred. Please try again later."
 msgstr "Er is een fout opgetreden. Probeer het later opnieuw."
 
-#: includes/ajax.php:702
+#: includes/ajax.php:705
 msgid "Sorry, the minimum allowed payment amount is %s to use this payment method."
 msgstr "Sorry, het minimale bedrag voor deze betaalmethode is %s. "
 
-#: includes/ajax.php:765
+#: includes/ajax.php:768
 msgid "Chosen payment method is not available. Please refresh the page and try one more time."
 msgstr "De gekozen betaalmethode is niet beschikbaar. Ververs de pagina en probeer het opnieuw. "
 
-#: includes/ajax.php:838
+#: includes/ajax.php:841
 msgid "Coupon applied successfully."
 msgstr "Coupon met succes toegepast."
 
-#: includes/ajax.php:844
+#: includes/ajax.php:847
 #: includes/entities/abstract-coupon.php:205
 msgid "Coupon is not valid."
 msgstr "Coupon is niet geldig."
 
-#: includes/ajax.php:1033
+#: includes/ajax.php:1036
 #: includes/post-types/booking-cpt.php:33
 msgid "Booking Information"
 msgstr "Boekingsgegevens"
 
-#: includes/ajax.php:1041
-#: includes/emails/templaters/email-templater.php:123
+#: includes/ajax.php:1044
+#: includes/emails/templaters/email-templater.php:128
 #: includes/post-types/booking-cpt.php:45
 #: template-functions.php:609
 #: template-functions.php:613
@@ -3137,8 +3349,8 @@ msgstr "Boekingsgegevens"
 msgid "Check-in Date"
 msgstr "Incheckdatum"
 
-#: includes/ajax.php:1045
-#: includes/emails/templaters/email-templater.php:127
+#: includes/ajax.php:1048
+#: includes/emails/templaters/email-templater.php:132
 #: includes/post-types/booking-cpt.php:52
 #: template-functions.php:618
 #: template-functions.php:622
@@ -3150,7 +3362,7 @@ msgstr "Incheckdatum"
 msgid "Check-out Date"
 msgstr "Uitcheckdatum"
 
-#: includes/ajax.php:1054
+#: includes/ajax.php:1057
 #: includes/post-types/booking-cpt.php:72
 #: templates/emails/customer-approved-booking.php:31
 #: templates/emails/customer-cancelled-booking.php:29
@@ -3159,123 +3371,50 @@ msgstr "Uitcheckdatum"
 msgid "Customer Information"
 msgstr "Klantinformatie"
 
-#: includes/ajax.php:1058
-#: includes/bundles/customer-bundle.php:83
-#: includes/bundles/export-bundle.php:29
-#: includes/post-types/booking-cpt.php:77
-#: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:462
-msgid "First Name"
-msgstr "Voornaam"
-
-#: includes/ajax.php:1062
-#: includes/bundles/customer-bundle.php:92
-#: includes/bundles/export-bundle.php:30
-#: includes/post-types/booking-cpt.php:83
-#: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:473
-msgid "Last Name"
-msgstr "Achternaam"
-
-#: includes/ajax.php:1066
-#: includes/bundles/customer-bundle.php:101
-#: includes/bundles/export-bundle.php:31
-#: includes/post-types/booking-cpt.php:89
-#: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:484
-msgid "Email"
-msgstr "E-mail"
-
-#: includes/ajax.php:1070
-#: includes/bundles/customer-bundle.php:110
-#: includes/bundles/export-bundle.php:32
-#: includes/post-types/booking-cpt.php:95
-#: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:495
-msgid "Phone"
-msgstr "Telefoonnummer"
-
-#: includes/ajax.php:1074
-#: includes/bundles/export-bundle.php:33
-#: includes/post-types/booking-cpt.php:102
-#: includes/post-types/payment-cpt.php:256
-msgid "Country"
-msgstr "Land"
-
-#: includes/ajax.php:1078
-#: includes/bundles/customer-bundle.php:128
-#: includes/bundles/export-bundle.php:34
-#: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:528
-msgid "Address"
-msgstr "Adres"
-
-#: includes/ajax.php:1082
-#: includes/bundles/customer-bundle.php:137
-#: includes/bundles/export-bundle.php:35
-#: includes/post-types/booking-cpt.php:114
-#: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:539
-msgid "City"
-msgstr "Stad"
-
-#: includes/ajax.php:1086
-#: includes/bundles/customer-bundle.php:146
-#: includes/bundles/export-bundle.php:36
-#: includes/post-types/booking-cpt.php:120
-#: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:550
-msgid "State / County"
-msgstr "Staat/Provincie"
-
-#: includes/ajax.php:1090
-#: includes/bundles/customer-bundle.php:155
-#: includes/bundles/export-bundle.php:37
-#: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:561
-msgid "Postcode"
-msgstr ""
-
-#: includes/ajax.php:1094
+#: includes/ajax.php:1097
 #: includes/bundles/export-bundle.php:38
-#: includes/emails/templaters/email-templater.php:176
+#: includes/emails/templaters/email-templater.php:181
 #: includes/post-types/booking-cpt.php:133
 msgid "Customer Note"
 msgstr "Opmerking van de klant"
 
-#: includes/ajax.php:1100
+#: includes/ajax.php:1103
 #: includes/post-types/booking-cpt.php:140
 msgid "Additional Information"
 msgstr "Extra informatie"
 
-#: includes/ajax.php:1104
+#: includes/ajax.php:1107
 #: includes/bundles/export-bundle.php:40
 #: includes/post-types/booking-cpt.php:145
 #: includes/post-types/coupon-cpt.php:124
 msgid "Coupon"
 msgstr ""
 
-#: includes/ajax.php:1108
+#: includes/ajax.php:1111
 #: includes/post-types/booking-cpt.php:152
 msgid "Total Booking Price"
 msgstr "Totaalprijs boeking"
 
-#: includes/ajax.php:1117
+#: includes/ajax.php:1120
 #: includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:572
+#: includes/views/shortcodes/checkout-view.php:657
 msgid "Notes"
 msgstr "Opmerkingen"
 
 #. translators: %1$s: note author, %1$s: note date
-#: includes/ajax.php:1132
+#: includes/ajax.php:1135
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: includes/ajax.php:1231
+#: includes/ajax.php:1234
 #: template-functions.php:78
 msgid "Based on your search parameters"
 msgstr "Gebaseerd op uw zoekcriteria"
+
+#: includes/ajax.php:1265
+msgid "You do not have permission to do this action."
+msgstr ""
 
 #: includes/attribute-functions.php:164
 #: includes/post-types/attributes-cpt.php:131
@@ -5103,7 +5242,7 @@ msgid "Phone is required."
 msgstr "Telefoon is verplicht."
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:508
+#: includes/views/shortcodes/checkout-view.php:592
 msgid "Country of residence"
 msgstr "Land van verblijf"
 
@@ -5132,6 +5271,8 @@ msgid "Note is required."
 msgstr "Opmerking verplicht."
 
 #: includes/bundles/export-bundle.php:20
+#: templates/account/bookings.php:19
+#: templates/account/bookings.php:68
 #: templates/create-booking/search/search-form.php:38
 #: templates/edit-booking/edit-dates.php:29
 #: templates/shortcodes/search/search-form.php:29
@@ -5139,6 +5280,8 @@ msgid "Check-in"
 msgstr "Inchecken"
 
 #: includes/bundles/export-bundle.php:21
+#: templates/account/bookings.php:20
+#: templates/account/bookings.php:71
 #: templates/create-booking/search/search-form.php:58
 #: templates/edit-booking/edit-dates.php:38
 #: templates/shortcodes/search/search-form.php:49
@@ -5158,37 +5301,49 @@ msgstr "Volwassenen/Gasten"
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
 #: includes/views/edit-booking/checkout-view.php:170
-#: includes/views/shortcodes/checkout-view.php:222
+#: includes/views/shortcodes/checkout-view.php:286
 msgid "Full Guest Name"
 msgstr "De volledige naam van de gast"
 
 #: includes/bundles/export-bundle.php:41
+#: includes/views/booking-view.php:138
+msgid "Accommodation Subtotal"
+msgstr "Subtotaal accommodatie"
+
+#: includes/bundles/export-bundle.php:42
 #: includes/views/booking-view.php:330
+#: templates/account/bookings.php:21
+#: templates/account/bookings.php:74
 msgid "Total"
 msgstr "Totaal"
 
-#: includes/bundles/export-bundle.php:43
+#: includes/bundles/export-bundle.php:44
 msgid "Total Accommodation Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:45
+#: includes/bundles/export-bundle.php:46
 #: includes/reports/earnings-report.php:97
 msgid "Total Fees"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:46
+#: includes/bundles/export-bundle.php:47
+#: includes/views/booking-view.php:189
+msgid "Services Subtotal"
+msgstr "Diensten Subtotaal"
+
+#: includes/bundles/export-bundle.php:48
 msgid "Total Service Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:47
+#: includes/bundles/export-bundle.php:49
 msgid "Total Fee Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:48
+#: includes/bundles/export-bundle.php:50
 msgid "Paid"
 msgstr "Afgerekend"
 
-#: includes/bundles/export-bundle.php:49
+#: includes/bundles/export-bundle.php:51
 #: includes/post-types/payment-cpt.php:125
 #: includes/shortcodes/booking-confirmation-shortcode.php:372
 msgid "Payment Details"
@@ -5251,35 +5406,35 @@ msgstr[1] "x %d keren"
 msgid "Please select columns to export."
 msgstr "Gelieve kolommen te kiezen om te exporteren."
 
-#: includes/emails/abstract-email.php:397
+#: includes/emails/abstract-email.php:418
 msgid "Disable this email notification"
 msgstr "E-mail meldingen uitschakelen"
 
-#: includes/emails/abstract-email.php:402
+#: includes/emails/abstract-email.php:423
 msgid "Subject"
 msgstr "Onderwerp"
 
-#: includes/emails/abstract-email.php:411
+#: includes/emails/abstract-email.php:432
 msgid "Header"
 msgstr "Koptekst"
 
-#: includes/emails/abstract-email.php:420
+#: includes/emails/abstract-email.php:441
 msgid "Email Template"
 msgstr "E-mail Sjabloon"
 
-#: includes/emails/abstract-email.php:503
+#: includes/emails/abstract-email.php:542
 msgid "\"%s\" email will not be sent: there is no customer email in the booking."
 msgstr "\"%s\" e-mail wordt niet verzonden: er is geen klant e-mail in de boeking."
 
-#: includes/emails/abstract-email.php:538
+#: includes/emails/abstract-email.php:577
 msgid "Deprecated tags in header of %s"
 msgstr "Afgekeurde tags in de kop van %s"
 
-#: includes/emails/abstract-email.php:541
+#: includes/emails/abstract-email.php:580
 msgid "Deprecated tags in subject of %s"
 msgstr "Afgekeurde tags in onderwerp van %s"
 
-#: includes/emails/abstract-email.php:544
+#: includes/emails/abstract-email.php:583
 msgid "Deprecated tags in template of %s"
 msgstr "Afgekeurde tags in een sjabloon van %s"
 
@@ -5318,7 +5473,7 @@ msgstr "Geannuleerde Boeking E-mail"
 
 #: includes/emails/booking/admin/confirmed-by-payment-email.php:8
 #: includes/emails/booking/admin/confirmed-email.php:8
-#: includes/wizard.php:123
+#: includes/wizard.php:124
 msgid "Booking Confirmed"
 msgstr "Boeking is bevestigd"
 
@@ -5372,11 +5527,11 @@ msgstr "%site_title% - Uw booking #%booking_id% is goedgekeurd"
 msgid "Email that will be sent to customer when booking is approved."
 msgstr "E-mail om naar een klant te sturen als een boeking is goedgekeurd."
 
-#: includes/emails/booking/customer/base-email.php:45
+#: includes/emails/booking/customer/base-email.php:51
 msgid "\"%s\" mail was sent to customer."
 msgstr "\"%s\" mail werd gestuurd aan de klant"
 
-#: includes/emails/booking/customer/base-email.php:47
+#: includes/emails/booking/customer/base-email.php:53
 msgid "\"%s\" mail sending is failed."
 msgstr "Het versturen van \"%s\" e-mail is mislukt"
 
@@ -5429,6 +5584,22 @@ msgstr "Dit e-mail werd gestruud toen \"Bevestigingsmode\" werd door admin inges
 msgid "New Booking Email (Confirmation by Admin)"
 msgstr "Nieuwe boeking e-mail (Bevestiging van beheerder) "
 
+#: includes/emails/booking/customer/registration-email.php:8
+msgid "Welcome"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:12
+msgid "%site_title% - account details"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:16
+msgid "Email that will be sent to a customer after they registered on your site."
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:20
+msgid "Customer Registration Email"
+msgstr ""
+
 #: includes/emails/templaters/abstract-templater.php:72
 msgid "Possible tags:"
 msgstr "Mogelijke tags:"
@@ -5446,97 +5617,124 @@ msgstr "geen"
 msgid "User Cancellation Link"
 msgstr "Annulering link"
 
-#: includes/emails/templaters/email-templater.php:97
+#: includes/emails/templaters/email-templater.php:102
 msgid "Site title (set in Settings > General)"
 msgstr "Website Titel (instellen in Instellingen > Algemeen)"
 
-#: includes/emails/templaters/email-templater.php:111
+#: includes/emails/templaters/email-templater.php:116
 #: includes/post-types/payment-cpt.php:214
 msgid "Booking ID"
 msgstr "Boeking ID"
 
-#: includes/emails/templaters/email-templater.php:115
+#: includes/emails/templaters/email-templater.php:120
 msgid "Booking Edit Link"
 msgstr "Reservering Bewerking Link"
 
-#: includes/emails/templaters/email-templater.php:119
+#: includes/emails/templaters/email-templater.php:124
 msgid "Booking Total Price"
 msgstr "Totaalprijs reservering"
 
-#: includes/emails/templaters/email-templater.php:140
+#: includes/emails/templaters/email-templater.php:145
+#: includes/emails/templaters/email-templater.php:284
 msgid "Customer First Name"
 msgstr "Voornaam van de klant"
 
-#: includes/emails/templaters/email-templater.php:144
+#: includes/emails/templaters/email-templater.php:149
+#: includes/emails/templaters/email-templater.php:288
 msgid "Customer Last Name"
 msgstr "Achternaam van de klant"
 
-#: includes/emails/templaters/email-templater.php:148
+#: includes/emails/templaters/email-templater.php:153
+#: includes/emails/templaters/email-templater.php:292
 msgid "Customer Email"
 msgstr "E-mail van de klant"
 
-#: includes/emails/templaters/email-templater.php:152
+#: includes/emails/templaters/email-templater.php:157
+#: includes/emails/templaters/email-templater.php:296
 msgid "Customer Phone"
 msgstr "Telefoonnummer van de klant"
 
-#: includes/emails/templaters/email-templater.php:156
+#: includes/emails/templaters/email-templater.php:161
+#: includes/emails/templaters/email-templater.php:300
 msgid "Customer Country"
 msgstr "Land klant"
 
-#: includes/emails/templaters/email-templater.php:160
+#: includes/emails/templaters/email-templater.php:165
+#: includes/emails/templaters/email-templater.php:304
 msgid "Customer Address"
 msgstr "Adres klant"
 
-#: includes/emails/templaters/email-templater.php:164
+#: includes/emails/templaters/email-templater.php:169
+#: includes/emails/templaters/email-templater.php:308
 msgid "Customer City"
 msgstr "Plaats klant"
 
-#: includes/emails/templaters/email-templater.php:168
+#: includes/emails/templaters/email-templater.php:173
+#: includes/emails/templaters/email-templater.php:312
 msgid "Customer State/County"
 msgstr "Staat klant"
 
-#: includes/emails/templaters/email-templater.php:172
+#: includes/emails/templaters/email-templater.php:177
+#: includes/emails/templaters/email-templater.php:316
 msgid "Customer Postcode"
 msgstr "Postcode klant"
 
-#: includes/emails/templaters/email-templater.php:181
+#: includes/emails/templaters/email-templater.php:186
 msgid "Reserved Accommodations Details"
 msgstr "Gereserveerde accommodatie details"
 
-#: includes/emails/templaters/email-templater.php:203
+#: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:94
+#: includes/views/shortcodes/checkout-view.php:158
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "Boekingsgegevens:"
 
-#: includes/emails/templaters/email-templater.php:216
+#: includes/emails/templaters/email-templater.php:221
 msgid "Confirmation Link"
 msgstr "Bevestigingslink"
 
-#: includes/emails/templaters/email-templater.php:220
+#: includes/emails/templaters/email-templater.php:225
 msgid "Confirmation Link Expiration Time ( UTC )"
 msgstr "Bevestigingslink verlooptijd ( UTC )"
 
-#: includes/emails/templaters/email-templater.php:233
+#: includes/emails/templaters/email-templater.php:238
 msgid "Cancellation Details (if enabled)"
 msgstr "Annulering details (indien ingeschakeld)"
 
-#: includes/emails/templaters/email-templater.php:246
+#: includes/emails/templaters/email-templater.php:251
 msgid "The total price of payment"
 msgstr "De totaalprijs van betaling"
 
-#: includes/emails/templaters/email-templater.php:250
+#: includes/emails/templaters/email-templater.php:255
 msgid "The unique ID of payment"
 msgstr "Unieke betaling ID"
 
-#: includes/emails/templaters/email-templater.php:254
+#: includes/emails/templaters/email-templater.php:259
 msgid "The method of payment"
 msgstr "Betalingswijze"
 
-#: includes/emails/templaters/email-templater.php:258
+#: includes/emails/templaters/email-templater.php:263
 msgid "Payment instructions"
 msgstr "Betalingsinstructies"
+
+#: includes/emails/templaters/email-templater.php:276
+msgid "User login"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:280
+msgid "User password"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:320
+msgid "Link to My Account page"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:547
+#: includes/upgrader.php:831
+#: includes/wizard.php:183
+msgid "My Account"
+msgstr ""
 
 #: includes/emails/templaters/reserved-rooms-templater.php:171
 msgid "Accommodation Type Link"
@@ -5623,11 +5821,11 @@ msgstr[1] "%d URL's ontnomen voor parseren."
 msgid "Skipped. No URLs found for parsing."
 msgstr "Overgeslagen. Geen URL's gevonden voor parseren."
 
-#: includes/i-cal/background-processes/background-uploader.php:66
+#: includes/i-cal/background-processes/background-uploader.php:64
 msgid "Cannot read uploaded file"
 msgstr "Kan het ge-uploade bestand niet lezen"
 
-#: includes/i-cal/background-processes/background-worker.php:275
+#: includes/i-cal/background-processes/background-worker.php:277
 msgid "We will need to check %d previous booking after importing and remove it if the booking is outdated."
 msgid_plural "We will need to check %d previous bookings after importing and remove the outdated ones."
 msgstr[0] "Na het importeren moeten we %d vorige boeking controleren en verwijderen als de boeking verouderd is."
@@ -5659,51 +5857,51 @@ msgctxt "%s - error description"
 msgid "Parse error. %s"
 msgstr "Parse fout. %s"
 
-#: includes/i-cal/background-processes/background-worker.php:435
+#: includes/i-cal/background-processes/background-worker.php:432
 msgid "Skipped. Outdated booking #%d already removed."
 msgstr "Overgeslagen. Verouderde boeking #%d is reeds verwijderd."
 
-#: includes/i-cal/background-processes/background-worker.php:442
+#: includes/i-cal/background-processes/background-worker.php:439
 msgid "Skipped. Booking #%d updated with new data."
 msgstr "Overgeslagen. Boeking #%d bijgewerkt met nieuwe gegevens."
 
-#: includes/i-cal/background-processes/background-worker.php:457
+#: includes/i-cal/background-processes/background-worker.php:454
 msgid "The outdated booking #%d has been removed."
 msgstr "De verouderde boeking #%d is verwijderd."
 
-#: includes/i-cal/importer.php:99
-msgid "Skipped. Event has passed."
-msgstr "Overgeslagen. Gebeurtenis is verstreken."
+#: includes/i-cal/importer.php:103
+msgid "Skipped. Event from %1$s to %2$s has passed."
+msgstr ""
 
-#: includes/i-cal/importer.php:112
-msgid "Success. New booking #%d."
-msgstr "Gelukt! Nieuwe boeking #%d."
+#: includes/i-cal/importer.php:119
+msgid "New booking #%1$d. The dates from %2$s to %3$s are now blocked."
+msgstr ""
 
-#: includes/i-cal/importer.php:128
+#: includes/i-cal/importer.php:139
 msgid "Success. Booking #%d updated with new data."
 msgstr "Gelukt. Boeking #%d bijgewerkt met nieuwe gegevens."
 
-#: includes/i-cal/importer.php:132
+#: includes/i-cal/importer.php:147
 msgid "Skipped. The dates from %1$s to %2$s are already blocked."
 msgstr "Overgeslagen. De data van %1$s tot %2$s zijn reeds geblokkeerd."
 
-#: includes/i-cal/importer.php:146
+#: includes/i-cal/importer.php:163
 msgid "Success. Booking #%1$d updated with new data. Removed %2$d outdated booking."
 msgid_plural "Success. Booking #%1$d updated with new data. Removed %2$d outdated bookings."
 msgstr[0] "Gelukt. Boeking #%1$d bijgewerkt met nieuwe gegevens. %2$d verouderde boeking verwijderd."
 msgstr[1] "Gelukt. Boeking #%1$d bijgewerkt met nieuwe gegevens. %2$d verouderde boekingen verwijderd."
 
-#: includes/i-cal/importer.php:148
+#: includes/i-cal/importer.php:165
 msgid "Success. Booking #%1$d updated with new data."
 msgstr "Gelukt. Boeking #%1$d bijgewerkt met nieuwe gegevens."
 
-#: includes/i-cal/importer.php:158
+#: includes/i-cal/importer.php:176
 msgid "Cannot import new event. Dates from %1$s to %2$s are partially blocked by booking %3$s."
 msgid_plural "Cannot import new event. Dates from %1$s to %2$s are partially blocked by bookings %3$s."
 msgstr[0] "Kan nieuwe gebeurtenis niet importeren. Data van %1$s tot %2$s worden gedeeltelijk geblokkeerd door de boeking %3$s."
 msgstr[1] "Kan nieuwe gebeurtenis niet importeren. Data van %1$s tot %2$s worden gedeeltelijk geblokkeerd door de boekingen %3$s."
 
-#: includes/i-cal/importer.php:208
+#: includes/i-cal/importer.php:229
 msgid "Booking imported with UID %1$s.<br />Summary: %2$s.<br />Description: %3$s.<br />Source: %4$s."
 msgstr "Boeking geïmporteerd met UID %1$s.<br />Samenvatting: %2$s.<br />Beschrijving: %3$s.<br />Bron: %4$s."
 
@@ -5739,13 +5937,13 @@ msgstr "Alles uitvouwen"
 msgid "Collapse All"
 msgstr "Alles inklappen"
 
-#: includes/i-cal/logs-handler.php:184
+#: includes/i-cal/logs-handler.php:135
 msgid "All done! %1$d booking was successfully added."
 msgid_plural "All done! %1$d bookings were successfully added."
 msgstr[0] "Helemaal klaar! %1$d boeking is succesvol toegevoegd."
 msgstr[1] "Helemaal klaar! %1$d boekingen zijn succesvol toegevoegd."
 
-#: includes/i-cal/logs-handler.php:185
+#: includes/i-cal/logs-handler.php:136
 msgid " There was %2$d failure."
 msgid_plural " There were %2$d failures."
 msgstr[0] "Er was %2$d mislukking."
@@ -6478,10 +6676,6 @@ msgstr "Nieuw %s"
 msgid "No &quot;%s&quot; found"
 msgstr "Geen &quot;%s&quot; gevonden"
 
-#: includes/post-types/attributes-cpt.php:293
-msgid "Name"
-msgstr "Naam"
-
 #: includes/post-types/attributes-cpt.php:294
 msgid "Name (numeric)"
 msgstr "Naam (numeriek)"
@@ -7053,7 +7247,7 @@ msgstr "Geüpload tot dit type accommodatie"
 #: includes/post-types/room-type-cpt.php:84
 msgctxt "slug"
 msgid "accommodation"
-msgstr ""
+msgstr "accommodation"
 
 #: includes/post-types/room-type-cpt.php:109
 msgid "Accommodation Categories"
@@ -7124,7 +7318,7 @@ msgstr "Categorieën"
 #: includes/post-types/room-type-cpt.php:139
 msgctxt "slug"
 msgid "accommodation-category"
-msgstr ""
+msgstr "accommodation-category"
 
 #: includes/post-types/room-type-cpt.php:164
 msgid "Accommodation Tags"
@@ -7195,7 +7389,7 @@ msgstr "Labels"
 #: includes/post-types/room-type-cpt.php:193
 msgctxt "slug"
 msgid "accommodation-tag"
-msgstr ""
+msgstr "accommodation-tag"
 
 #: includes/post-types/room-type-cpt.php:218
 #: includes/post-types/room-type-cpt.php:233
@@ -7262,7 +7456,7 @@ msgstr "Geen faciliteiten gevonden."
 #: includes/post-types/room-type-cpt.php:248
 msgctxt "slug"
 msgid "accommodation-facility"
-msgstr ""
+msgstr "accommodation-facility"
 
 #: includes/post-types/room-type-cpt.php:287
 msgid "State the age or disable children in <a href=\"%s\">settings</a>."
@@ -7372,71 +7566,71 @@ msgstr "Geüpload tot dit seizoen"
 msgid "This is where you can add new seasons."
 msgstr "Hiet kunt u nieuwe seizoenen toevoegen."
 
-#: includes/post-types/service-cpt.php:91
+#: includes/post-types/service-cpt.php:93
 #: includes/views/booking-view.php:174
 msgid "Service"
 msgstr "Dienst"
 
-#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:94
 msgctxt "Add New Service"
 msgid "Add New"
 msgstr "Nieuwe dienst toevoegen"
 
-#: includes/post-types/service-cpt.php:93
+#: includes/post-types/service-cpt.php:95
 msgid "Add New Service"
 msgstr "Een nieuwe dienst toevoegen"
 
-#: includes/post-types/service-cpt.php:94
+#: includes/post-types/service-cpt.php:96
 msgid "Edit Service"
 msgstr "Dienst bewerken"
 
-#: includes/post-types/service-cpt.php:95
+#: includes/post-types/service-cpt.php:97
 msgid "New Service"
 msgstr "Nieuwe dienst"
 
-#: includes/post-types/service-cpt.php:96
+#: includes/post-types/service-cpt.php:98
 msgid "View Service"
 msgstr "Dienst bekijken"
 
-#: includes/post-types/service-cpt.php:97
+#: includes/post-types/service-cpt.php:99
 msgid "Search Service"
 msgstr "Dienst zoeken"
 
-#: includes/post-types/service-cpt.php:98
+#: includes/post-types/service-cpt.php:100
 msgid "No services found"
 msgstr "Geen diensten gevonden"
 
-#: includes/post-types/service-cpt.php:99
+#: includes/post-types/service-cpt.php:101
 msgid "No services found in Trash"
 msgstr "Geen diensten gevonden in Prullenbak"
 
-#: includes/post-types/service-cpt.php:101
+#: includes/post-types/service-cpt.php:103
 msgid "Insert into service description"
 msgstr "Tot dienstbeschrijving toevoegen"
 
-#: includes/post-types/service-cpt.php:102
+#: includes/post-types/service-cpt.php:104
 msgid "Uploaded to this service"
 msgstr "Geüpload tot deze dienst"
 
 #. translators: do not translate
-#: includes/post-types/service-cpt.php:119
+#: includes/post-types/service-cpt.php:121
 msgctxt "slug"
-msgid "service"
-msgstr ""
+msgid "services"
+msgstr "services"
 
-#: includes/post-types/service-cpt.php:153
+#: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
 msgstr "Hoeveel keer zal de klant aangerekend worden."
 
-#: includes/post-types/service-cpt.php:163
+#: includes/post-types/service-cpt.php:165
 msgid "Minimum"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:175
+#: includes/post-types/service-cpt.php:177
 msgid "Maximum"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:185
+#: includes/post-types/service-cpt.php:187
 msgid "Empty means unlimited"
 msgstr "Leeg betekent onbeperkt"
 
@@ -7467,7 +7661,7 @@ msgstr ""
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:20
+#: includes/views/shortcodes/checkout-view.php:84
 msgid "Apply"
 msgstr "Toepassen"
 
@@ -7543,6 +7737,10 @@ msgstr "Verwerken..."
 #: includes/script-managers/admin-script-manager.php:100
 msgid "Cancelling..."
 msgstr "Annuleren..."
+
+#: includes/script-managers/admin-script-manager.php:101
+msgid "Want to delete?"
+msgstr ""
 
 #: includes/script-managers/public-script-manager.php:225
 msgid "Not available"
@@ -7658,6 +7856,39 @@ msgstr "Slateblauw"
 msgid "Turquoise"
 msgstr "Turkoois"
 
+#: includes/shortcodes/account-shortcode.php:198
+#: includes/views/shortcodes/checkout-view.php:21
+msgid "Invalid login or password."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:207
+msgid "Account data updated."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:213
+msgid "Password changed."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:224
+msgid "Dashboard"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:226
+msgid "Account"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:227
+msgid "Logout"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:263
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:266
+msgid "Please, provide a valid current password."
+msgstr ""
+
 #: includes/shortcodes/booking-confirmation-shortcode.php:375
 msgid "Payment:"
 msgstr "Betaling:"
@@ -7671,34 +7902,34 @@ msgstr "Betalingswijze:"
 msgid "Status:"
 msgstr "Gepubliceerd:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:144
+#: includes/shortcodes/checkout-shortcode/step-booking.php:154
 msgid "Checkout data is not valid."
 msgstr "Check-out gegevens zijn niet geldig."
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:446
+#: includes/shortcodes/checkout-shortcode/step-booking.php:456
 msgid "Payment method is not valid."
 msgstr "Betaalmethode is ongeldig."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:152
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:174
 msgid "Accommodation count is not valid."
 msgstr "Accommodatie-aantal is niet geldig."
 
-#: includes/shortcodes/checkout-shortcode/step.php:81
+#: includes/shortcodes/checkout-shortcode/step.php:96
 msgid "Accommodation is already booked."
 msgstr "Accommodatie is al gereserveerd."
 
-#: includes/shortcodes/checkout-shortcode/step.php:91
-#: includes/shortcodes/checkout-shortcode/step.php:100
-#: includes/shortcodes/checkout-shortcode/step.php:109
+#: includes/shortcodes/checkout-shortcode/step.php:106
+#: includes/shortcodes/checkout-shortcode/step.php:115
+#: includes/shortcodes/checkout-shortcode/step.php:124
 msgid "Reservation submitted"
 msgstr "Reservering is gemaakt"
 
-#: includes/shortcodes/checkout-shortcode/step.php:92
+#: includes/shortcodes/checkout-shortcode/step.php:107
 msgid "Details of your reservation have just been sent to you in a confirmation email. Please check your inbox to complete booking."
 msgstr "De details van uw reservering zijn zojuist per e-mail aan u verzonden. Controleer uw inbox om de boeking te voltooien."
 
-#: includes/shortcodes/checkout-shortcode/step.php:101
-#: includes/shortcodes/checkout-shortcode/step.php:110
+#: includes/shortcodes/checkout-shortcode/step.php:116
+#: includes/shortcodes/checkout-shortcode/step.php:125
 msgid "We received your booking request. Once it is confirmed we will notify you via email."
 msgstr "We hebben uw boekingsaanvraag ontvangen. Na goedkeuring versturen wij u per e-mail de bevestiging."
 
@@ -7763,12 +7994,63 @@ msgstr[1] "van %d accommodatie is beschikbaar."
 msgid "Book"
 msgstr "Reserveren"
 
-#: includes/users-and-roles/roles.php:30
+#: includes/users-and-roles/customers.php:289
+#: includes/users-and-roles/customers.php:379
+msgid "Please, provide a valid email."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:317
+msgid "Could not create a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:375
+msgid "Could not retrieve a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:528
+#: includes/users-and-roles/customers.php:574
+msgid "Please, provide a valid Customer ID."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:560
+msgid "A database error."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:580
+msgid "No customer was deleted."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:689
+#: includes/views/shortcodes/checkout-view.php:30
+msgid "An account with this email already exists. Please, log in."
+msgstr ""
+
+#: includes/users-and-roles/roles.php:34
 msgid "Hotel Manager"
 msgstr ""
 
-#: includes/users-and-roles/roles.php:35
+#: includes/users-and-roles/roles.php:39
 msgid "Hotel Worker"
+msgstr ""
+
+#: includes/users-and-roles/roles.php:44
+msgid "Hotel Customer"
+msgstr ""
+
+#: includes/users-and-roles/user.php:41
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: includes/users-and-roles/user.php:56
+msgid "Please enter a valid account username."
+msgstr ""
+
+#: includes/users-and-roles/user.php:60
+msgid "An account is already registered with that username. Please choose another."
+msgstr ""
+
+#: includes/users-and-roles/user.php:68
+msgid "Please enter an account password."
 msgstr ""
 
 #: includes/utils/date-utils.php:116
@@ -7853,10 +8135,6 @@ msgstr "Data subtotaal"
 msgid "Discount"
 msgstr "Korting"
 
-#: includes/views/booking-view.php:138
-msgid "Accommodation Subtotal"
-msgstr "Subtotaal accommodatie"
-
 #: includes/views/booking-view.php:158
 msgid "Accommodation Taxes Subtotal"
 msgstr "Subtotaal accommodtie taksen"
@@ -7870,10 +8148,6 @@ msgstr "Subtotaal accommodtie taksen"
 #: assets/blocks/blocks.js:1126
 msgid "Details"
 msgstr ""
-
-#: includes/views/booking-view.php:189
-msgid "Services Subtotal"
-msgstr "Diensten Subtotaal"
 
 #: includes/views/booking-view.php:211
 msgid "Service Taxes Subtotal"
@@ -7904,7 +8178,7 @@ msgid "Taxes"
 msgstr ""
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:19
+#: includes/views/shortcodes/checkout-view.php:83
 msgid "Coupon Code:"
 msgstr "Couponcode:"
 
@@ -7922,7 +8196,7 @@ msgid "Accommodation:"
 msgstr "Accommodatie:"
 
 #: includes/views/edit-booking/checkout-view.php:160
-#: includes/views/shortcodes/checkout-view.php:202
+#: includes/views/shortcodes/checkout-view.php:266
 #: template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
@@ -7993,64 +8267,82 @@ msgid_plural "x %d adults"
 msgstr[0] "x %d volwassene"
 msgstr[1] "x %d volwassenen"
 
-#: includes/views/shortcodes/checkout-view.php:112
+#: includes/views/shortcodes/checkout-view.php:48
+msgid "Returning customer?"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:49
+msgid "Click here to log in"
+msgstr ""
+
+#. translators: 1 - username;
+#: includes/views/shortcodes/checkout-view.php:65
+#: templates/account/dashboard.php:28
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)."
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:176
 msgid "Accommodation #%d"
 msgstr "Accommodatie #%d"
 
-#: includes/views/shortcodes/checkout-view.php:116
+#: includes/views/shortcodes/checkout-view.php:180
 msgid "Accommodation Type:"
 msgstr "Type accommodatie:"
 
-#: includes/views/shortcodes/checkout-view.php:256
+#: includes/views/shortcodes/checkout-view.php:320
 msgid "Choose Rate"
 msgstr "Kies tarief"
 
-#: includes/views/shortcodes/checkout-view.php:323
+#: includes/views/shortcodes/checkout-view.php:387
 msgid "Choose Additional Services"
 msgstr "Extra diensten kiezen"
 
-#: includes/views/shortcodes/checkout-view.php:352
+#: includes/views/shortcodes/checkout-view.php:416
 msgid "for "
 msgstr "voor"
 
-#: includes/views/shortcodes/checkout-view.php:363
+#: includes/views/shortcodes/checkout-view.php:427
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr "gast(en)"
 
-#: includes/views/shortcodes/checkout-view.php:384
+#: includes/views/shortcodes/checkout-view.php:448
 msgid "time(s)"
 msgstr "keer(keren)"
 
-#: includes/views/shortcodes/checkout-view.php:432
+#: includes/views/shortcodes/checkout-view.php:496
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr "algemene voorwaarden"
 
-#: includes/views/shortcodes/checkout-view.php:435
+#: includes/views/shortcodes/checkout-view.php:499
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr "Ik heb de %s gelezen en ga hiermee akkoord."
 
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:537
 msgid "Your Information"
 msgstr "Uw informatie"
 
-#: includes/views/shortcodes/checkout-view.php:456
+#: includes/views/shortcodes/checkout-view.php:540
 #: template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "Verplichte velden zijn gekenmerkt met %s"
 
-#: includes/views/shortcodes/checkout-view.php:589
+#: includes/views/shortcodes/checkout-view.php:673
+msgid "Create an account"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:692
 msgid "Payment Method"
 msgstr "Betalingsmethode"
 
-#: includes/views/shortcodes/checkout-view.php:594
+#: includes/views/shortcodes/checkout-view.php:697
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "Sorry, er zijn geen betaalmethoden beschikbaar."
 
-#: includes/views/shortcodes/checkout-view.php:688
+#: includes/views/shortcodes/checkout-view.php:791
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -8062,33 +8354,33 @@ msgstr "Sorry, er zijn geen betaalmethoden beschikbaar."
 msgid "Total Price:"
 msgstr "Totaalprijs:"
 
-#: includes/views/shortcodes/checkout-view.php:699
+#: includes/views/shortcodes/checkout-view.php:802
 msgid "Deposit:"
 msgstr "Aanbetaling:"
 
-#: includes/views/shortcodes/checkout-view.php:718
+#: includes/views/shortcodes/checkout-view.php:821
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "Inchecken"
 
-#: includes/views/shortcodes/checkout-view.php:725
+#: includes/views/shortcodes/checkout-view.php:828
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr "Van"
 
-#: includes/views/shortcodes/checkout-view.php:741
+#: includes/views/shortcodes/checkout-view.php:844
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "Uitchecken:"
 
-#: includes/views/shortcodes/checkout-view.php:748
+#: includes/views/shortcodes/checkout-view.php:851
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "tot"
 
-#: includes/views/shortcodes/checkout-view.php:822
+#: includes/views/shortcodes/checkout-view.php:927
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "Reserveer nu"
@@ -8126,7 +8418,7 @@ msgid "Book Button"
 msgstr "Boeking knop"
 
 #: includes/widgets/search-availability-widget.php:50
-#: includes/wizard.php:84
+#: includes/wizard.php:85
 msgid "Search Availability"
 msgstr "Zoeken wat vrij is"
 
@@ -8172,27 +8464,27 @@ msgstr "Uitchecken en Zoekresultaten Pagina's zijn verplichte om reserveringen t
 msgid "Install Pages"
 msgstr "Pagina's installeren"
 
-#: includes/wizard.php:132
+#: includes/wizard.php:133
 msgid "Booking Canceled"
 msgstr "Boeking geannuleerd"
 
-#: includes/wizard.php:133
+#: includes/wizard.php:134
 msgid "Your reservation is canceled."
 msgstr "Uw reservering is geannuleerd."
 
-#: includes/wizard.php:160
+#: includes/wizard.php:161
 msgid "Reservation Received"
 msgstr "Reservering ontvangen"
 
-#: includes/wizard.php:169
+#: includes/wizard.php:170
 msgid "Transaction Failed"
 msgstr "Transactie mislukt"
 
-#: includes/wizard.php:170
+#: includes/wizard.php:171
 msgid "Unfortunately, your transaction cannot be completed at this time. Please try again or contact us."
 msgstr "Helaas kan uw transactie op dit moment niet worden voltooid. Probeer het opnieuw of neem contact met ons op."
 
-#: plugin.php:1012
+#: plugin.php:1055
 msgid "Prices start at: %s"
 msgstr "Prijzen starten vanaf: %s"
 
@@ -8254,6 +8546,35 @@ msgstr "Betaling"
 #: template-functions.php:877
 msgid "Add Payment Manually"
 msgstr "Handmatige betaling toevoegen"
+
+#: templates/account/account-details.php:78
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/account-details.php:81
+msgid "Old Password"
+msgstr ""
+
+#: templates/account/account-details.php:85
+msgid "New Password"
+msgstr ""
+
+#: templates/account/account-details.php:89
+msgid "Confirm New Password"
+msgstr ""
+
+#: templates/account/account-details.php:99
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#: templates/account/bookings.php:114
+#: templates/account/bookings.php:119
+msgid "No bookings found."
+msgstr "Geen boekingen gevonden."
+
+#: templates/account/dashboard.php:38
+msgid "From your account dashboard you can view <a href=\"%1$s\">your recent bookings</a> or edit your <a href=\"%2$s\">password and account details</a>."
+msgstr ""
 
 #: templates/create-booking/results/reserve-rooms.php:37
 msgid "Base price"
@@ -8445,6 +8766,7 @@ msgstr ""
 #: templates/emails/customer-cancelled-booking.php:38
 #: templates/emails/customer-confirmation-booking.php:44
 #: templates/emails/customer-pending-booking.php:41
+#: templates/emails/customer-registration.php:26
 msgid "Thank you!"
 msgstr "Hartelijk dank!"
 
@@ -8483,6 +8805,30 @@ msgstr "Beste %1$s %2$s, uw reservering is in behandeling."
 #: templates/emails/customer-pending-booking.php:17
 msgid "We will notify you by email once it is confirmed by our staff."
 msgstr "Wij zullen na goedkeuring u hierover per e-mail op de hoogte stellen. "
+
+#: templates/emails/customer-registration.php:15
+msgid "Hi %1$s %2$s,"
+msgstr ""
+
+#: templates/emails/customer-registration.php:17
+msgid "Thanks for creating an account on %1$s."
+msgstr ""
+
+#: templates/emails/customer-registration.php:19
+msgid "You Account Details"
+msgstr ""
+
+#: templates/emails/customer-registration.php:20
+msgid "Login: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:21
+msgid "Password: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:22
+msgid "Log in here: %s"
+msgstr ""
 
 #: templates/emails/reserved-room-details.php:14
 msgid "Accommodation #%s"

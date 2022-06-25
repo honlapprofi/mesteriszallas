@@ -46,7 +46,7 @@ class ActionsHandler
             case 'handle_stripe_errors': $this->handleStripeErrors(); break;
             case 'force_upgrade': $this->forceUpgrader(); break;
             case 'update_confirmation_endpoints': $this->updateConfirmationEndpoints(); break;
-            case 'hide_notice': $this->hideNotice(); break;
+            case 'hide_notice': $this->hideNotice(); break; 
         }
     }
 

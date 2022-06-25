@@ -285,4 +285,39 @@ class Payment {
 		return $this->email;
 	}
 
+	/**
+	 * @return bool
+	 *
+	 * @since 4.2.2
+	 */
+	public function isFinished()
+	{
+		return in_array($this->status, MPHB()->postTypes()->payment()->statuses()->getFinishedStatuses());
+	}
+
+	/**
+	 * The customer went to the payment page (redirect) and authorized the
+	 * payment.
+	 *
+	 * Used for payment gateways with redirects: Stripe, PayPal,
+	 * WooCommerce.
+	 *
+	 * @since 4.2.2
+	 */
+	public function setAuthorized()
+	{
+		update_post_meta($this->id, '_mphb_is_authorized', true);
+	}
+
+	/**
+	 * @return bool
+	 *
+	 * @since 4.2.2
+	 */
+	public function isAuthorized()
+	{
+		$isAuthorized = get_post_meta($this->id, '_mphb_is_authorized', true);
+
+		return (bool)$isAuthorized;
+	}
 }

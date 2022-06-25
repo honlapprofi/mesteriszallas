@@ -2,9 +2,6 @@
 
 namespace MPHB\Admin\MenuPages;
 
-use \MPHB\Admin\Fields\FieldFactory;
-use \MPHB\Admin\Groups;
-use \MPHB\iCal\Importer;
 use \MPHB\iCal\LogsHandler;
 use \MPHB\iCal\Stats;
 

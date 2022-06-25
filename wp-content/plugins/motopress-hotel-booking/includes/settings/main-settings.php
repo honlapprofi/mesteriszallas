@@ -479,6 +479,36 @@ class MainSettings {
 	{
 		return (bool) get_option( 'mphb_unfold_price_breakdown', false );
 	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */
+	public function automaticallyCreateUser() {
+		return (bool) get_option( 'mphb_automatically_create_user', false );
+	}
+
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */
+	public function allowCustomersCreateAccount() {
+		return (bool) get_option( 'mphb_allow_customers_create_account', false );
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return bool
+	 */	
+	public function allowCustomersLogIn() {
+		return (bool) get_option( 'mphb_allow_customers_log_in', false );
+	}
 
 	/**
 	 * @return bool
@@ -496,6 +526,16 @@ class MainSettings {
 	public function exportImportedBookings()
 	{
 		return ! (bool) get_option( 'mphb_ical_dont_export_imports', true );
+	}
+
+	/**
+	 * @since 4.2.2
+	 *
+	 * @return boolean
+	 */
+	public function isMinimizedSyncLogs()
+	{
+		return (bool) get_option( 'mphb_ical_minimize_logs', true );
 	}
 
 	/**

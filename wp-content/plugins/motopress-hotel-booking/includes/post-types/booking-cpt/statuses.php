@@ -172,6 +172,12 @@ class Statuses extends AbstractCPT\Statuses {
 		$booking->addLog( sprintf( __( 'Status changed from %s to %s.', 'motopress-hotel-booking' ), mphb_get_status_label( $oldStatus ), mphb_get_status_label( $newStatus ) ) );
 
 		do_action( 'mphb_booking_status_changed', $booking, $oldStatus );
+		
+		$customerId = get_post_meta( $booking->getId(), 'mphb_customer_id', true );
+
+		if( $customerId ) { // Update bookings count for a customer
+			MPHB()->customers()->updateBookings( $customerId );
+		}
 
 		if ( $newStatus === self::STATUS_CONFIRMED ) {
 			do_action( 'mphb_booking_confirmed', $booking, $oldStatus );

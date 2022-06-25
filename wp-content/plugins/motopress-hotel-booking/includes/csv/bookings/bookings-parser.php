@@ -330,10 +330,56 @@ class BookingsParser
      * @param \MPHB\Entities\ReservedRoom $room
      * @return string
      */
-    protected function parsePrice($booking, $room)
+    protected function parseSubtotal($booking, $room)
     {
-        $price = mphb_format_price($booking->getTotalPrice(), array('as_html' => false));
-        return html_entity_decode($price); // Decode #&36; into $
+        $priceBreakdown = $booking->getLastPriceBreakdown();
+        $subtotal = 0;
+        
+        if( isset( $priceBreakdown['rooms'] ) && !empty( $priceBreakdown['rooms'] ) ) {
+            foreach( $priceBreakdown['rooms'] as $key => $roomBreakdown )
+            {
+                if( isset( $roomBreakdown['room']['total'] ) && ! empty( $roomBreakdown['room']['total'] ) ) {
+                    $subtotal += $roomBreakdown['room']['total'];
+                }
+            }
+        }
+        
+        return html_entity_decode( mphb_format_price( $subtotal, array('as_html' => false) ) );
+    }
+
+    /**
+     * @param \MPHB\Entities\Booking $booking
+     * @param \MPHB\Entities\ReservedRoom $room
+     * @return string
+     */
+    protected function parsePrice( $booking, $room )
+    {
+        $roomPriceBreakdown = $this->getRoomPriceBreakdown( $booking, $room );
+        
+        $price = mphb_format_price( $roomPriceBreakdown['total'], array('as_html' => false) );
+        return html_entity_decode( $price ); // Decode #&36; into $
+    }
+
+    /**
+     * @param \MPHB\Entities\Booking $booking
+     * @param \MPHB\Entities\ReservedRoom $room
+     * @return array
+     */
+    private function getRoomPriceBreakdown( $booking, $room )
+    {
+        $coupon = null;
+
+		if ( MPHB()->settings()->main()->isCouponsEnabled() && $booking->getCouponId() ) {
+
+			$coupon = MPHB()->getCouponRepository()->findById( $booking->getCouponId() );
+
+			if ( !$coupon || !$coupon->validate( $booking ) ) {
+
+				$coupon = null;
+			}
+		}
+
+        return $room->getPriceBreakdown( $booking->getCheckInDate(), $booking->getCheckOutDate(), $coupon, $booking->getLanguage() );
     }
 
     /**
@@ -355,7 +401,7 @@ class BookingsParser
                     if( isset( $roomBreakdown['taxes']['room']['list'] ) && !empty( $roomBreakdown['taxes']['room']['list'] ) ) {
                         foreach( $roomBreakdown['taxes']['room']['list'] as $roomTax ) {
                             $tax = html_entity_decode(mphb_format_price($roomTax['price'], array('as_html' => false)));
-                            $taxLabel = $roomTax['label'];;
+                            $taxLabel = $roomTax['label'];
                             $taxText[] = "{$tax},{$taxLabel}";
                         }
                     }
@@ -450,6 +496,28 @@ class BookingsParser
 
         return $taxText;
     }
+ 
+    /**
+     * @param \MPHB\Entities\Booking $booking
+     * @param \MPHB\Entities\ReservedRoom $room
+     * @return string
+     *
+     */
+    protected function parseSubtotalServices($booking, $room) {
+        $priceBreakdown = $booking->getLastPriceBreakdown();
+        $totalServices = 0;
+
+        if(isset($priceBreakdown['rooms']) && !empty($priceBreakdown['rooms'])) {
+            foreach( $priceBreakdown['rooms'] as $key => $roomBreakdown )
+            {
+                if(isset($roomBreakdown['services']['total']) && $roomBreakdown['services']['total'] > 0) {
+                    $totalServices += $roomBreakdown['services']['total'];
+                }
+            }
+        }
+        
+        return html_entity_decode(mphb_format_price($totalServices, array('as_html' => false)));
+    }
 
     /**
      * @param \MPHB\Entities\Booking $booking
@@ -511,18 +579,24 @@ class BookingsParser
      * @param \MPHB\Entities\ReservedRoom $room
      * @return string
      */
-    protected function parsePaid($booking, $room)
+    protected function parsePaid( $booking, $room )
     {
-        $payments = MPHB()->getPaymentRepository()->findAll(array('booking_id' => $booking->getId()));
-        $paid = 0.0;
+        $payments = MPHB()->getPaymentRepository()->findAll( array('booking_id' => $booking->getId()) );
+        $bookingPaid = 0.0;
 
-        foreach ($payments as $payment) {
-            if ($payment->getStatus() == PaymentStatuses::STATUS_COMPLETED) {
-                $paid += $payment->getAmount();
+        foreach( $payments as $payment ) {
+            if ( PaymentStatuses::STATUS_COMPLETED == $payment->getStatus() ) {
+
+                $bookingPaid += $payment->getAmount();
             }
         }
 
-        return html_entity_decode(mphb_format_price($paid, array('as_html' => false)));
+        $roomPriceBreakdown = $this->getRoomPriceBreakdown( $booking, $room );
+        $bookingPriceBreakdown = $booking->getLastPriceBreakdown();
+
+        $roomPaid = $roomPriceBreakdown['total'] / $bookingPriceBreakdown['total'] * $bookingPaid;
+
+        return html_entity_decode( mphb_format_price( $roomPaid, array('as_html' => false) ) );
     }
 
     /**

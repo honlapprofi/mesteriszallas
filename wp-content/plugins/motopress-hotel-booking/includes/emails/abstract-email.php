@@ -145,6 +145,28 @@ abstract class AbstractEmail {
 
         return $isSended;
     }
+	
+	public function triggerCustomerRegistration( $customer, $userAtts, $atts = array(), $booking = null ) {
+		$this->isTestMode = isset($atts['test_mode']) && $atts['test_mode'];
+
+		// Check if the email is disabled
+		if (!$this->isTestMode && ($this->isDisabled() || $this->isPrevented())) {
+			return false;
+		}
+
+		$this->setupCustomer( $customer, $userAtts );
+		$this->setupBooking( $booking );
+
+		// Do we have any receiver?
+		if (!$this->checkReceiver()) {
+			return false;
+		}
+
+		// Send an email
+		$isSended = $this->send();
+
+		return $isSended;
+	}
 
     /**
      * @return bool
@@ -455,6 +477,24 @@ abstract class AbstractEmail {
 	protected function setupBooking( $booking ){
 		$this->booking = $booking;
 		$this->templater->setupBooking( $booking );
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	protected function setupCustomer( $customerObj, $userAtts ){
+
+		$user = [];
+
+		$user['user_id'] = (int)$userAtts['user_id'];
+		$user['user_pass'] = isset( $userAtts['user_pass'] ) ? sanitize_text_field( $userAtts['user_pass'] ) : '';
+		$user['user_login']	= isset( $userAtts['user_login'] ) ? sanitize_text_field( $userAtts['user_login'] ) : '';
+
+		$this->customer = $customerObj;
+		$this->user = $user;
+		
+		$this->templater->setupCustomer( $customerObj, $user );
 	}
 
     /**

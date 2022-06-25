@@ -77,6 +77,7 @@ class Wizard {
 		$this->addBookingCanceledPage( $checkoutPageId );
 		$this->addReservationReceivedPage( $checkoutPageId );
 		$this->addFailedTransactionPage( $checkoutPageId );
+		$this->addMyAccountPage();
 		$this->pass();
 	}
 
@@ -87,11 +88,15 @@ class Wizard {
 	}
 
 	public function addResultsPage(){
-		$title	 = __( 'Search Results', 'motopress-hotel-booking' );
-		$content = MPHB()->getShortcodes()->getSearchResults()->generateShortcode();
-		$id		 = $this->createPage( $title, $content );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setSearchResultsPage( $id );
+		$searchResultsPage = MPHB()->settings()->pages()->getSearchResultsPageId();
+		
+		if( empty( $searchResultsPage ) ) {
+			$title	 = __( 'Search Results', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getSearchResults()->generateShortcode();
+			$id		 = $this->createPage( $title, $content );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setSearchResultsPage( $id );
+			}
 		}
 	}
 
@@ -105,14 +110,18 @@ class Wizard {
 	 * @return int Page ID or 0 (if error occur).
 	 */
 	public function addCheckoutPage(){
-		$title	 = __( 'Booking Confirmation', 'motopress-hotel-booking' );
-		$content = MPHB()->getShortcodes()->getCheckout()->generateShortcode();
-		$id		 = $this->createPage( $title, $content );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setCheckoutPage( $id );
-			return $id;
-		} else {
-			return 0;
+		$checkoutPage = MPHB()->settings()->pages()->getCheckoutPageId();
+		
+		if( empty( $checkoutPage ) ) {
+			$title	 = __( 'Booking Confirmation', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getCheckout()->generateShortcode();
+			$id		 = $this->createPage( $title, $content );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setCheckoutPage( $id );
+				return $id;
+			} else {
+				return 0;
+			}
 		}
 	}
 
@@ -120,21 +129,29 @@ class Wizard {
      * @since 3.7.0 the name was changed from "addBookingConfirmationPage".
      */
 	public function addBookingConfirmedPage( $parentId ){
-		$title	 = __( 'Booking Confirmed', 'motopress-hotel-booking' );
-		$content = MPHB()->getShortcodes()->getBookingConfirmation()->generateShortcode();
-		$id		 = $this->createPage( $title, $content, $parentId );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setBookingConfirmPage( $id );
+		$bookingConfirmedPage = MPHB()->settings()->pages()->getBookingConfirmedPageId();
+		
+		if( empty( $bookingConfirmedPage ) ) {
+			$title	 = __( 'Booking Confirmed', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getBookingConfirmation()->generateShortcode();
+			$id		 = $this->createPage( $title, $content, $parentId );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setBookingConfirmPage( $id );
+			}
 		}
 	}
 
 	public function addBookingCanceledPage( $parentId ){
-		$title	 = __( 'Booking Canceled', 'motopress-hotel-booking' );
-		$content = __( 'Your reservation is canceled.', 'motopress-hotel-booking' );
-		$id		 = $this->createPage( $title, $content, $parentId );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setUserCancelRedirectPage( $id );
-		}
+		$bookingCanceledPage = MPHB()->settings()->pages()->getUserCancelRedirectPageId();
+		
+		if( empty( $bookingCanceledPage ) ) {
+			$title	 = __( 'Booking Canceled', 'motopress-hotel-booking' );
+			$content = __( 'Your reservation is canceled.', 'motopress-hotel-booking' );
+			$id		 = $this->createPage( $title, $content, $parentId );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setUserCancelRedirectPage( $id );
+			}
+		}	
 	}
 
 	/**
@@ -142,14 +159,18 @@ class Wizard {
 	 * @since 3.9.9
 	 */
 	public function addBookingCancellationPage() {
-		$title	 = __( 'Booking Cancellation', 'motopress-hotel-booking' );
-		$content = MPHB()->getShortcodes()->getBookingCancellation()->generateShortcode();
-		$id		 = $this->createPage( $title, $content );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setBookingConfirmCancellationPage( $id );
-			return $id;
-		} else {
-			return 0;
+		$bookingCancellationPage = MPHB()->settings()->pages()->getBookingConfirmCancellationPage();
+		
+		if( empty( $bookingCancellationPage ) ) {
+			$title	 = __( 'Booking Cancellation', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getBookingCancellation()->generateShortcode();
+			$id		 = $this->createPage( $title, $content );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setBookingConfirmCancellationPage( $id );
+				return $id;
+			} else {
+				return 0;
+			}
 		}
 	}
 
@@ -157,20 +178,49 @@ class Wizard {
      * @since 3.7.0 the name was changed from "addPaymentSuccessPage".
      */
 	public function addReservationReceivedPage( $parentId ){
-		$title	 = __( 'Reservation Received', 'motopress-hotel-booking' );
-		$content = MPHB()->getShortcodes()->getBookingConfirmation()->generateShortcode();
-		$id		 = $this->createPage( $title, $content, $parentId );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setPaymentSuccessPage( $id );
+		$reservationReceivedPage = MPHB()->settings()->pages()->getPaymentSuccessPageId();
+		
+		if( empty( $reservationReceivedPage ) ) {
+			$title	 = __( 'Reservation Received', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getBookingConfirmation()->generateShortcode();
+			$id		 = $this->createPage( $title, $content, $parentId );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setPaymentSuccessPage( $id );
+			}
 		}
 	}
 
 	public function addFailedTransactionPage( $parentId ){
-		$title	 = __( 'Transaction Failed', 'motopress-hotel-booking' );
-		$content = __( 'Unfortunately, your transaction cannot be completed at this time. Please try again or contact us.', 'motopress-hotel-booking' );
-		$id		 = $this->createPage( $title, $content, $parentId );
-		if ( !is_wp_error( $id ) ) {
-			MPHB()->settings()->pages()->setPaymentFailedPage( $id );
+		$failedTransactionPage = MPHB()->settings()->pages()->getPaymentFailedPageId();
+		
+		if( empty( $failedTransactionPage ) ) {
+			$title	 = __( 'Transaction Failed', 'motopress-hotel-booking' );
+			$content = __( 'Unfortunately, your transaction cannot be completed at this time. Please try again or contact us.', 'motopress-hotel-booking' );
+			$id		 = $this->createPage( $title, $content, $parentId );
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setPaymentFailedPage( $id );
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function addMyAccountPage() {
+		$myAccountPage = MPHB()->settings()->pages()->getMyAccountPageId();
+		
+		if( empty( $myAccountPage ) ) {
+			$title	 = __( 'My Account', 'motopress-hotel-booking' );
+			$content = MPHB()->getShortcodes()->getAccount()->generateShortcode();
+			$id = $this->createPage( $title, $content );
+			
+			if ( !is_wp_error( $id ) ) {
+				MPHB()->settings()->pages()->setMyAccountPageId( $id );
+				return $id;
+			} else {
+				return 0;
+			}
 		}
 	}
 

@@ -10,6 +10,16 @@ use \MPHB\Utils\ThirdPartyPluginsUtils;
 
 class SettingsMenuPage extends AbstractMenuPage {
 
+	/** @since 4.2.4 */
+	const TAB_GENERAL			= 'general';
+	const TAB_ADMIN_EMAILS		= 'admin_emails';
+	const TAB_CUSTOMER_EMAILS	= 'customer_emails';
+	const TAB_EMAIL_SETTINGS	= 'global_emails';
+	const TAB_PAYMENTS			= 'payments';
+	const TAB_EXTENSIONS		= 'extensions';
+	const TAB_ADVANCED			= 'advanced';
+	const TAB_LICENSE			= 'license';
+
 	/**
 	 *
 	 * @var Tabs\SettingsTab[]
@@ -17,32 +27,65 @@ class SettingsMenuPage extends AbstractMenuPage {
 	protected $tabs = array();
 
 	public function initFields(){
+		$this->generateTabs();
+	}
 
-		$generalTab				 = $this->_generateGeneralTab();
-		$adminEmailsTab			 = $this->_generateAdminEmailsTab();
-		$customerEmailsTab		 = $this->_generateCustomerEmailsTab();
-		$globalEmailSettingsTab	 = $this->_generateGlobalEmailSettingsTab();
-		$paymentsTab			 = $this->_generatePaymentsTab();
-		$extensionsTab			 = $this->_generateExtensionsTab();
-
-		$this->tabs = array(
-			$generalTab->getName()				 => $generalTab,
-			$adminEmailsTab->getName()			 => $adminEmailsTab,
-			$customerEmailsTab->getName()		 => $customerEmailsTab,
-			$globalEmailSettingsTab->getName()	 => $globalEmailSettingsTab,
-			$paymentsTab->getName()				 => $paymentsTab,
-			$extensionsTab->getName()			 => $extensionsTab,
+	/**
+	 * @since 4.2.4
+	 */
+	protected function generateTabs(){
+		// Always public tabs
+		$generateTabs = array(
+			self::TAB_GENERAL,
+			self::TAB_ADMIN_EMAILS,
+			self::TAB_CUSTOMER_EMAILS,
+			self::TAB_EMAIL_SETTINGS,
+			self::TAB_PAYMENTS,
+			self::TAB_EXTENSIONS,
 		);
 
-		$currentUser = wp_get_current_user();
-		if ( user_can( $currentUser, 'manage_options' ) ) {
-			$advancedTab                           = $this->_generateAdvancedTab();
-			$this->tabs[ $advancedTab->getName() ] = $advancedTab;
+		// Protected and hidden tabs
+		if ( current_user_can( 'manage_options' ) ) {
+			$generateTabs[] = self::TAB_ADVANCED;
 		}
 
 		if ( MPHB()->settings()->license()->isEnabled() ) {
-			$licenseTab							 = $this->_generateLicenseTab();
-			$this->tabs[$licenseTab->getName()]	 = $licenseTab;
+			$generateTabs[] = self::TAB_LICENSE;
+		}
+
+		/**
+		 * @since 4.2.4
+		 *
+		 * @param string[] $generateTabs Tab names, like "general" or "admin_emails".
+		 */
+		$showTabs = apply_filters( 'mphb_generate_settings_tabs', $generateTabs );
+
+		foreach ( $showTabs as $tabName ) {
+			$tab = null;
+
+			switch ( $tabName ) {
+				case self::TAB_GENERAL:			$tab = $this->_generateGeneralTab(); break;
+				case self::TAB_ADMIN_EMAILS:	$tab = $this->_generateAdminEmailsTab(); break;
+				case self::TAB_CUSTOMER_EMAILS:	$tab = $this->_generateCustomerEmailsTab(); break;
+				case self::TAB_EMAIL_SETTINGS:	$tab = $this->_generateGlobalEmailSettingsTab(); break;
+				case self::TAB_PAYMENTS:		$tab = $this->_generatePaymentsTab(); break;
+				case self::TAB_EXTENSIONS:		$tab = $this->_generateExtensionsTab(); break;
+				case self::TAB_ADVANCED:		$tab = $this->_generateAdvancedTab(); break;
+				case self::TAB_LICENSE:			$tab = $this->_generateLicenseTab(); break;
+				default:
+					/**
+					 * @since 4.2.4
+					 *
+					 * @param Tabs\SettingsTab|null $settingsTab Null by default.
+					 * @param string $tabName
+					 */
+					$tab = apply_filters( 'mphb_custom_settings_tab', null, $tabName );
+					break;
+			}
+
+			if ( !is_null( $tab ) ) {
+				$this->tabs[$tabName] = $tab;
+			}
 		}
 	}
 
@@ -51,7 +94,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 * @return Tabs\SettingsTab
 	 */
 	private function _generateGeneralTab(){
-		$generalTab = new Tabs\SettingsTab( 'general', __( 'General', 'motopress-hotel-booking' ), $this->name );
+		$generalTab = new Tabs\SettingsTab( self::TAB_GENERAL, __( 'General', 'motopress-hotel-booking' ), $this->name );
 
 		// Pages
 		$pagesGroup = new Groups\SettingsGroup( 'mphb_pages', __( 'Pages', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
@@ -74,11 +117,23 @@ class SettingsMenuPage extends AbstractMenuPage {
 				'label'			 => __( 'Terms & Conditions', 'motopress-hotel-booking' ),
 				'description'	 => __( 'If you define a "Terms" page the customer will be asked if they accept them when checking out.', 'motopress-hotel-booking' ),
 				'default'		 => ''
+			) ),
+			Fields\FieldFactory::create( 'mphb_open_terms_in_new_window', array(
+				'type'			 => 'checkbox',
+				'inner_label'	 => esc_html__( 'Open the Terms & Conditions page in a new window', 'motopress-hotel-booking' ),
+				'description'	 => esc_html__( 'By enabling this option you can avoid errors related to displaying your terms & conditions inline for website pages created in page builders.', 'motopress-hotel-booking' ),
+				'default'		 => false
+			) ),
+			Fields\FieldFactory::create( 'mphb_my_account_page', array(
+				'type' 			 => 'page-select',
+				'label' 		 => esc_html__( 'My Account Page', 'motopress-hotel-booking' ),
+				'description'	 => esc_html__( 'Select a page to display user account. Use the customer account shortcode on this page.', 'motopress-hotel-booking' ),
+				'default'		 => ''
 			) )
 		);
 
-        $this->filterGroupFields($pagesGroupFields, $pagesGroup->getName());
 		$pagesGroup->addFields( $pagesGroupFields );
+		$this->filterGroupFields( $pagesGroup );
 
 		// Misc
 		$miscGroup = new Groups\SettingsGroup( 'mphb_misc', __( 'Misc', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
@@ -161,8 +216,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) ),
 		);
 
-        $this->filterGroupFields($miscGroupFields, $miscGroup->getName());
 		$miscGroup->addFields( $miscGroupFields );
+		$this->filterGroupFields( $miscGroup );
 
 		$bookingDisablingGroup = new Groups\SettingsGroup( 'mphb_disabling_group', __( 'Disable Booking', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
@@ -181,8 +236,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) )
 		);
 
-        $this->filterGroupFields($bookingDisablingFields, $bookingDisablingGroup->getName());
 		$bookingDisablingGroup->addFields( $bookingDisablingFields );
+		$this->filterGroupFields( $bookingDisablingGroup );
 
 		$bookingConfirmationGroup = new Groups\SettingsGroup( 'mphb_confirmation_group', __( 'Booking Confirmation', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
@@ -237,12 +292,36 @@ class SettingsMenuPage extends AbstractMenuPage {
                 'label' => __('Price Breakdown', 'motopress-hotel-booking'),
                 'inner_label' => __('Price breakdown unfolded by default.', 'motopress-hotel-booking'),
                 'default' => false
-            ))
+			))
 		);
-
-        $this->filterGroupFields($bookingConfirmationFields, $bookingConfirmationGroup->getName());
+		
 		$bookingConfirmationGroup->addFields( $bookingConfirmationFields );
+		$this->filterGroupFields( $bookingConfirmationGroup );
+		
+		$checkoutGroup = new Groups\SettingsGroup( 'mphb_checkout_group', __( 'Accounts', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
+		$checkoutFields = array(
+			Fields\FieldFactory::create('mphb_automatically_create_user', array(
+                'type' => 'checkbox',
+                'label' => esc_html__('Account creation', 'motopress-hotel-booking'),
+                'inner_label' => esc_html__('Automatically create an account for a user at checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			)),
+			Fields\FieldFactory::create('mphb_allow_customers_create_account', array(
+                'type' => 'checkbox',
+                'inner_label' => esc_html__('Allow customers to create an account during checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			)),			
+			Fields\FieldFactory::create('mphb_allow_customers_log_in', array(
+                'type' => 'checkbox',
+                'inner_label' => esc_html__('Allow customers to log into their existing account during checkout.', 'motopress-hotel-booking'),
+                'default' => false
+			))
+		);
+		
+		$checkoutGroup->addFields( $checkoutFields );
+		$this->filterGroupFields( $checkoutGroup );
+		
 		$bookingCancellationGroup = new Groups\SettingsGroup( 'mphb_cancellation_group', __( 'Booking Cancellation', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 
 		$bookingCancellationFields = array(
@@ -265,8 +344,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) )
 		);
 
-        $this->filterGroupFields($bookingCancellationFields, $bookingCancellationGroup->getName());
 		$bookingCancellationGroup->addFields( $bookingCancellationFields );
+		$this->filterGroupFields( $bookingCancellationGroup );
 
 		$searchParametersGroup	 = new Groups\SettingsGroup( 'mphb_search_parameters', __( 'Search Options', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName(), __( 'Maximum accommodation occupancy available in the Search Form.', 'motopress-hotel-booking' ) );
 		$searchParametersFields	 = array(
@@ -336,8 +415,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) )
 		);
 
-        $this->filterGroupFields($searchParametersFields, $searchParametersGroup->getName());
 		$searchParametersGroup->addFields( $searchParametersFields );
+		$this->filterGroupFields( $searchParametersGroup );
 
 		$displayGroup	 = new Groups\SettingsGroup( 'mphb_display_parameters', __( 'Display Options', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 		$displayFields	 = array(
@@ -379,8 +458,8 @@ class SettingsMenuPage extends AbstractMenuPage {
             ));
         }
 
-        $this->filterGroupFields($displayFields, $displayGroup->getName());
 		$displayGroup->addFields( $displayFields );
+		$this->filterGroupFields( $displayGroup );
 
         $iCalGroup = new Groups\SettingsGroup( 'mphb_ical_parameters', __( 'Calendars Synchronization', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
         $iCalFields = array(
@@ -393,11 +472,17 @@ class SettingsMenuPage extends AbstractMenuPage {
                 'type'           => 'checkbox',
                 'default'        => true,
                 'inner_label'    => __( "Do not export imported bookings.", 'motopress-hotel-booking' )
-            ) )
+            ) ),
+			Fields\FieldFactory::create( 'mphb_ical_minimize_logs', array(
+				'type'           => 'checkbox',
+				'default'        => true,
+				'label'          => esc_html__( 'Minimize Logs', 'motopress-hotel-booking' ),
+				'inner_label'    => esc_html__( 'Enable the plugin to record only important messages.', 'motopress-hotel-booking' ),
+			) ),
         );
 
-        $this->filterGroupFields( $iCalFields, $iCalGroup->getName() );
         $iCalGroup->addFields( $iCalFields );
+        $this->filterGroupFields( $iCalGroup );
 
 		$iCalSyncGroup = new Groups\SettingsGroup( 'mphb_ical_auto_sync_parameters', __( 'Calendars Synchronization Scheduler', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 		$iCalSyncFields = array(
@@ -439,8 +524,8 @@ class SettingsMenuPage extends AbstractMenuPage {
             ))
 		);
 
-        $this->filterGroupFields($iCalSyncFields, $iCalSyncGroup->getName());
 		$iCalSyncGroup->addFields( $iCalSyncFields );
+		$this->filterGroupFields( $iCalSyncGroup );
 
         // Block Editor
         $editorGroup = new Groups\SettingsGroup('mphb_block_editor', __('Block Editor', 'motopress-hotel-booking') . ' (WordPress 5.0)', $generalTab->getOptionGroupName());
@@ -458,12 +543,13 @@ class SettingsMenuPage extends AbstractMenuPage {
             ))
         );
 
-        $this->filterGroupFields($editorGroupFields, $editorGroup->getName());
         $editorGroup->addFields($editorGroupFields);
+        $this->filterGroupFields($editorGroup);
 
 		$generalTab->addGroup( $pagesGroup );
 		$generalTab->addGroup( $bookingConfirmationGroup );
 		$generalTab->addGroup( $bookingCancellationGroup );
+		$generalTab->addGroup( $checkoutGroup );
 		$generalTab->addGroup( $searchParametersGroup );
 		$generalTab->addGroup( $miscGroup );
 		$generalTab->addGroup( $bookingDisablingGroup );
@@ -481,7 +567,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 */
 	private function _generateAdminEmailsTab(){
 
-		$tab = new Tabs\SettingsTab( 'admin_emails', __( 'Admin Emails', 'motopress-hotel-booking' ), $this->name );
+		$tab = new Tabs\SettingsTab( self::TAB_ADMIN_EMAILS, __( 'Admin Emails', 'motopress-hotel-booking' ), $this->name );
 
 		do_action( 'mphb_generate_settings_admin_emails', $tab );
 
@@ -494,7 +580,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 */
 	private function _generateCustomerEmailsTab(){
 
-		$tab = new Tabs\SettingsTab( 'customer_emails', __( 'Customer Emails', 'motopress-hotel-booking' ), $this->name );
+		$tab = new Tabs\SettingsTab( self::TAB_CUSTOMER_EMAILS, __( 'Customer Emails', 'motopress-hotel-booking' ), $this->name );
 
         // Add notice about the MailChimp addon at the top of the page
         if ( !ThirdPartyPluginsUtils::isActiveMphbMailchimp() ) {
@@ -510,6 +596,7 @@ class SettingsMenuPage extends AbstractMenuPage {
             $tab->addGroup( $groupMailchimp );
         }
 
+		// See MPHB\Emails\Booking\Customer\BaseEmail::generateSettingsFields()
 		do_action( 'mphb_generate_settings_customer_emails', $tab );
 
 		$groupCancellationDetails = new Groups\SettingsGroup( 'mphb_email_cancallation_details', '', $tab->getOptionGroupName() );
@@ -526,6 +613,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 		) );
 
 		$tab->addGroup( $groupCancellationDetails );
+		
+		do_action( 'mphb_generate_settings_customer_registration_emails', $tab );
 
 		return $tab;
 	}
@@ -535,7 +624,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 * @return Tabs\SettingsTab
 	 */
 	private function _generateGlobalEmailSettingsTab(){
-		$tab = new Tabs\SettingsTab( 'global_emails', __( 'Email Settings', 'motopress-hotel-booking' ), $this->name );
+		$tab = new Tabs\SettingsTab( self::TAB_EMAIL_SETTINGS, __( 'Email Settings', 'motopress-hotel-booking' ), $this->name );
 
         // Add notice about the Notifier addon at the top of the page
         if ( !ThirdPartyPluginsUtils::isActiveMphbNotifier() ) {
@@ -598,8 +687,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) ),
 		);
 
-        $this->filterGroupFields($emailGroupFields, $emailGroup->getName());
 		$emailGroup->addFields( $emailGroupFields );
+		$this->filterGroupFields( $emailGroup );
 
 		// Style Group
 		$styleGroup = new Groups\SettingsGroup( 'mphb_global_emails_settings_style_group', __( 'Styles', 'motopress-hotel-booking' ), $tab->getOptionGroupName() );
@@ -631,8 +720,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) )
 		);
 
-        $this->filterGroupFields($styleGroupFields, $styleGroup->getName());
 		$styleGroup->addFields( $styleGroupFields );
+		$this->filterGroupFields( $styleGroup );
 
 		$tab->addGroup( $emailGroup );
 		$tab->addGroup( $styleGroup );
@@ -645,11 +734,11 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 * @return Tabs\SettingsTab
 	 */
 	private function _generatePaymentsTab(){
-		$tab = new Tabs\SettingsTab( 'payments', __( 'Payment Gateways', 'motopress-hotel-booking' ), $this->name, __( 'General Settings', 'motopress-hotel-booking' ) );
+		$tab = new Tabs\SettingsTab( self::TAB_PAYMENTS, __( 'Payment Gateways', 'motopress-hotel-booking' ), $this->name, __( 'General Settings', 'motopress-hotel-booking' ) );
 
         $mainGroupDescriptions = array();
 
-        if (!ThirdPartyPluginsUtils::isActiveMphbWoocommercePayments()) {
+        if (MPHB()->settings()->main()->showExtensionLinks() && !ThirdPartyPluginsUtils::isActiveMphbWoocommercePayments()) {
             $mainGroupDescriptions[] = sprintf(__('Need more gateways? Use our Hotel Booking <a href="%s" target="_blank">WooCommerce Payments</a> extension.', 'motopress-hotel-booking'), 'https://motopress.com/products/hotel-booking-woocommerce-payments/?utm_source=customer-website&utm_medium=payment-gateways-tab');
         }
 
@@ -730,8 +819,8 @@ class SettingsMenuPage extends AbstractMenuPage {
 			) )
 		);
 
-        $this->filterGroupFields($mainGroupFields, $mainGroup->getName());
 		$mainGroup->addFields( $mainGroupFields );
+		$this->filterGroupFields( $mainGroup );
 
 		$tab->addGroup( $mainGroup );
 
@@ -742,7 +831,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 
     private function _generateExtensionsTab()
     {
-        $tab = new Tabs\SettingsTab('extensions', __('Extensions', 'motopress-hotel-booking'), $this->name);
+        $tab = new Tabs\SettingsTab(self::TAB_EXTENSIONS, __('Extensions', 'motopress-hotel-booking'), $this->name);
 
         if (MPHB()->settings()->main()->showExtensionLinks()) {
             $mainGroupDescription = sprintf(__('Install <a href="%s" target="_blank">Hotel Booking addons</a> to manage their settings.', 'motopress-hotel-booking'), 'https://motopress.com/products/category/hotel-booking-addons/?utm_source=customer_website&utm_medium=hotel_booking_addons');
@@ -765,7 +854,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 */
 	private function _generateAdvancedTab()
 	{
-		$tab = new SettingsTabAdvanced('advanced', __('Advanced', 'motopress-hotel-booking'), $this->name);
+		$tab = new SettingsTabAdvanced(self::TAB_ADVANCED, __('Advanced', 'motopress-hotel-booking'), $this->name);
 
 		do_action( 'mphb_generate_settings_advanced', $tab );
 
@@ -777,7 +866,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 	 * @return Tabs\SettingsTab
 	 */
 	private function _generateLicenseTab(){
-		$tab = new Tabs\SettingsTab( 'license', __( 'License', 'motopress-hotel-booking' ), $this->name );
+		$tab = new Tabs\SettingsTab( self::TAB_LICENSE, __( 'License', 'motopress-hotel-booking' ), $this->name );
 
 		$licenseGroup = new Groups\LicenseSettingsGroup( 'mphb_license_group', __( 'License', 'motopress-hotel-booking' ), $tab->getOptionGroupName() );
 
@@ -786,14 +875,41 @@ class SettingsMenuPage extends AbstractMenuPage {
 		return $tab;
 	}
 
-    protected function filterGroupFields(&$groupFields, $groupSlug)
-    {
-        $customFields = apply_filters('mphb_custom_group_fields', array(), $groupSlug);
+	/**
+	 * @since 3.0.3
+	 * @since 4.2.4 filters the SettingsGroup object.
+	 *
+	 * @param Groups\SettingsGroup $fieldsGroup
+	 */
+	protected function filterGroupFields($fieldsGroup)
+	{
+		$groupName = $fieldsGroup->getName();
 
-        if (!empty($customFields)) {
-            $groupFields = array_merge($groupFields, $customFields);
-        }
-    }
+		// Support old hook
+
+		/**
+		 * The filter is deprecated. Use new action instead: "{$groupName}_fields".
+		 *
+		 * @since 3.0.3
+		 * @deprecated 4.x
+		 *
+		 * @param Fields\InputField[] $customFields [] by default.
+		 * @param string $groupName The slug, like "mphb_global_emails_settings_group".
+		 */
+		$customFields = apply_filters('mphb_custom_group_fields', array(), $groupName);
+
+		if (!empty($customFields)) {
+			$fieldsGroup->addFields($customFields);
+		}
+
+		/**
+		 * @since 4.2.4
+		 * @example "mphb_global_emails_settings_group_fields"
+		 *
+		 * @param Groups\SettingsGroup $fieldsGroup
+		 */
+		do_action("{$groupName}_fields", $fieldsGroup);
+	}
 
 	public function addActions(){
 		parent::addActions();
@@ -847,7 +963,7 @@ class SettingsMenuPage extends AbstractMenuPage {
         $activeTab = $this->detectTab();
         $paymentMethod = MPHB()->settings()->main()->getConfirmationMode();
 
-        if ($activeTab == 'payments' && $paymentMethod != 'payment') {
+        if ($activeTab == self::TAB_PAYMENTS && $paymentMethod != 'payment') {
             echo '<div class="notice notice-warning">';
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo '<p>', __('<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode.', 'motopress-hotel-booking'), '</p>';
@@ -859,7 +975,7 @@ class SettingsMenuPage extends AbstractMenuPage {
      * @since 3.7.0 Became public (was private before).
      */
 	public function detectTab(){
-		$defaultTab	 = 'general';
+		$defaultTab	 = self::TAB_GENERAL;
 		$tab		 = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] )) : $defaultTab;
 		return $tab;
 	}

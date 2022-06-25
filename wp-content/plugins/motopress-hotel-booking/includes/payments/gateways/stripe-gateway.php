@@ -416,7 +416,7 @@ class StripeGateway extends Gateway
                     $this->paymentFailed($payment);
                 }
 
-            } else if( $sourceType == 'sepa_debit' && $status == 'chargeable' ) { // In case of SEPA Debit payment a source object can be charged immediatelly without customer's conformation
+            } else if( $sourceType == 'sepa_debit' && $status == 'chargeable' ) { // In case of SEPA Debit payment a source object can be charged immediatelly without customer's confirmation
 
                 $this->paymentOnHold($payment);
 

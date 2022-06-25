@@ -5,7 +5,7 @@
   clear: both;
 }
 .mphb-preloader {
-  background-image: url("../../images/loading.gif?ver=4.1.1");
+  background-image: url("../../images/loading.gif?ver=4.2.5");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -226,6 +226,9 @@
   max-height: 200px;
   overflow: auto;
 }
+.mphb_sc_checkout-wrapper .mphb-login-form-wrap {
+  margin-bottom: 4em;
+}
 .mphb_cb_checkout_form > .mphb-checkout-section:not(:first-of-type) {
   margin-top: 0;
 }
@@ -315,6 +318,48 @@
 }
 .mphb_sc_booking_confirmation .mphb-booking-details-section .mphb-booking-details > li span.value {
   font-weight: bold;
+}
+.mphb_sc_account:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  .mphb_sc_account .mphb-account-menu {
+    float: left;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mphb_sc_account .mphb-account-content {
+    float: right;
+    width: 73%;
+  }
+}
+.mphb_sc_account .mphb-account-bookings {
+  table-layout: auto;
+  font-size: 0.85em;
+}
+@media screen and (max-width: 767px) {
+  .mphb_sc_account .mphb-account-bookings thead {
+    display: none;
+  }
+  .mphb_sc_account .mphb-account-bookings tr {
+    display: block;
+    margin-bottom: 1em;
+  }
+  .mphb_sc_account .mphb-account-bookings tr:last-child {
+    margin-bottom: 0;
+  }
+  .mphb_sc_account .mphb-account-bookings td {
+    display: block;
+    text-align: right;
+  }
+  .mphb_sc_account .mphb-account-bookings td:before {
+    content: attr(data-title) ": ";
+    float: left;
+    font-weight: 700;
+  }
 }
 #mphb-stripe-payment-methods > ul {
   cursor: pointer;

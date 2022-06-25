@@ -110,6 +110,30 @@ class Queue
         $wpdb->query($query);
     }
 
+	/**
+	 * @since 4.2.2
+	 *
+	 * @return int[]
+	 *
+	 * @global \wpdb $wpdb
+	 */
+	public function getQueuedRoomIds()
+	{
+		global $wpdb;
+
+		$queueItems = $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT queue_name FROM {$this->mphb_sync_queue} WHERE queue_status = %s OR queue_status = %s",
+				self::STATUS_IN_PROGRESS,
+				self::STATUS_WAIT
+			)
+		);
+
+		$roomIds = array_map('mphb_parse_queue_room_id', $queueItems);
+
+		return $roomIds;
+	}
+
     /**
      * @return string Key of the next room if exists, or empty string (the end
      *                of queue).
@@ -122,7 +146,7 @@ class Queue
         $itemIndex = array_search($nextItem, $queue);
 
         if ($itemIndex === false) {
-            $itemIndex = count($queue);
+            $itemIndex = count($queue); // The queue is broken, skip all items
         }
 
         $oldValue = $nextItem;
@@ -205,7 +229,11 @@ class Queue
         }
 
         // Remove item from queue
-        array_splice($queue, $itemIndex, 1);
+        if ($itemIndex === 0) {
+            array_shift($queue);
+        } else {
+            array_splice($queue, $itemIndex, 1);
+        }
 
         // Update next item, if required
         if ($this->getNextItem() == $item) {
@@ -235,7 +263,7 @@ class Queue
      *
      * @global \wpdb $wpdb
      */
-	public static function createItem($item)
+	public static function createUploaderItem($item)
 	{
 		global $wpdb;
 

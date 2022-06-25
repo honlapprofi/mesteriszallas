@@ -45,6 +45,23 @@ class SyncUrlsRepository
         $wpdb->query($sql);
     }
 
+	/**
+	 * @since 4.2.2
+	 *
+	 * @return int[]
+	 *
+	 * @global \wpdb $wpdb
+	 */
+	public function getAllRoomIds()
+	{
+		global $wpdb;
+
+		$roomIds = $wpdb->get_col("SELECT DISTINCT room_id FROM {$this->tableName}");
+		$roomIds = array_map('absint', $roomIds);
+
+		return $roomIds;
+	}
+
     public function getUrls($roomId)
     {
         global $wpdb;

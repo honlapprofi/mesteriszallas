@@ -45,6 +45,8 @@ class BookingConfirmationShortcode extends AbstractShortcode
 
         $this->payment = $payment;
 
+		$this->afterLoad();
+
         // Render shortcode
         $wrapperClass = apply_filters('mphb_sc_booking_confirmation_wrapper_class', 'mphb_sc_booking_confirmation');
         $wrapperClass = trim($wrapperClass . ' ' . $atts['class']);
@@ -309,8 +311,6 @@ class BookingConfirmationShortcode extends AbstractShortcode
             $output .= '</div>';
         }
 
-
-
         return $output;
     }
 
@@ -397,11 +397,20 @@ class BookingConfirmationShortcode extends AbstractShortcode
         return $output;
     }
 
-
     public function renderBottomInformation()
     {
         ob_start();
         do_action('mphb_sc_booking_confirmation_bottom');
         return ob_get_clean();
     }
+
+	/**
+	 * @since 4.2.2
+	 */
+	protected function afterLoad()
+	{
+		if (!is_null($this->payment) && $this->detectPaymentConfirmationStatus() !== false) {
+			$this->payment->setAuthorized();
+		}
+	}
 }

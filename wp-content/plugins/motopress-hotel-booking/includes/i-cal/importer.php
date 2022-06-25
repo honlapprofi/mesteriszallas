@@ -3,19 +3,24 @@
 namespace MPHB\iCal;
 
 use \MPHB\Entities;
+use \MPHB\iCal\Logger;
 use \MPHB\PostTypes\BookingCPT\Statuses;
-use \MPHB\Utils\DateUtils;
 
 class Importer
 {
+	/**
+	 * @since 4.2.2
+	 * @var Logger
+	 */
+	protected $logger = null;
+
     /** @var bool */
     protected $isImporting = false;
 
-    /** @var string */
-    protected $lastMessage = '';
-
-    public function __construct()
+    public function __construct($logger)
     {
+		$this->logger = $logger;
+
         add_filter('mphb_prevent_handle_booking_status_transition', array($this, 'preventStatusTransition'));
     }
 
@@ -92,11 +97,12 @@ class Importer
      */
     public function import($event, $syncId, $queueId)
     {
-        $this->lastMessage = '';
-
         // If the event is too old, then just skip it
         if ($this->isTooOld($event)) {
-            $this->lastMessage = __('Skipped. Event has passed.', 'motopress-hotel-booking');
+			$this->logger->info(
+				sprintf(__('Skipped. Event from %1$s to %2$s has passed.', 'motopress-hotel-booking'), $event['checkIn'], $event['checkOut'])
+			);
+
             return ImportStatus::SKIPPED;
         }
 
@@ -109,7 +115,10 @@ class Importer
             $wasCreated = $newId = $this->createBooking($event, $syncId, $queueId);
 
             if ($wasCreated) {
-                $this->lastMessage = sprintf(__('Success. New booking #%d.', 'motopress-hotel-booking'), $newId);
+				$this->logger->success(
+					sprintf(__('New booking #%1$d. The dates from %2$s to %3$s are now blocked.', 'motopress-hotel-booking'), $newId, $event['checkIn'], $event['checkOut'])
+				);
+
                 return ImportStatus::SUCCESS;
             } else {
                 return ImportStatus::FAILED;
@@ -125,11 +134,19 @@ class Importer
                 if ($this->isOutdatedBooking($booking, $syncId, $queueId)) {
                     // Update outdated booking with new information
                     $this->updateBooking($event, $booking, $syncId, $queueId);
-                    $this->lastMessage = sprintf(__('Success. Booking #%d updated with new data.', 'motopress-hotel-booking'), $booking->getId());
+
+					$this->logger->info(
+						sprintf(__('Success. Booking #%d updated with new data.', 'motopress-hotel-booking'), $booking->getId())
+					);
+
                     return ImportStatus::SUCCESS;
+
                 } else {
                     // Just inform that dates already blocked
-                    $this->lastMessage = sprintf(__('Skipped. The dates from %1$s to %2$s are already blocked.', 'motopress-hotel-booking'), $event['checkIn'], $event['checkOut']);
+					$this->logger->info(
+						sprintf(__('Skipped. The dates from %1$s to %2$s are already blocked.', 'motopress-hotel-booking'), $event['checkIn'], $event['checkOut'])
+					);
+
                     return ImportStatus::SKIPPED;
                 }
             }
@@ -148,7 +165,8 @@ class Importer
                 $message = __('Success. Booking #%1$d updated with new data.', 'motopress-hotel-booking');
             }
 
-            $this->lastMessage = sprintf($message, $updatedId, $removedCount);
+			$this->logger->info(sprintf($message, $updatedId, $removedCount));
+
             return ImportStatus::SUCCESS;
         }
 
@@ -156,7 +174,10 @@ class Importer
         $conflictIds = $this->filterConflictingIds($intersectingBookings, $outdatedBookings);
 
         $message = _n('Cannot import new event. Dates from %1$s to %2$s are partially blocked by booking %3$s.', 'Cannot import new event. Dates from %1$s to %2$s are partially blocked by bookings %3$s.', count($conflictIds), 'motopress-hotel-booking');
-        $this->lastMessage = sprintf($message, $event['checkIn'], $event['checkOut'], '#' . implode(', #', $conflictIds));
+
+		$this->logger->error(
+			sprintf($message, $event['checkIn'], $event['checkOut'], '#' . implode(', #', $conflictIds))
+		);
 
         return ImportStatus::FAILED;
     }
@@ -270,10 +291,5 @@ class Importer
         $this->updateBooking($event, $updateBooking, $syncId, $queueId);
 
         return $updateBooking->getId();
-    }
-
-    public function getLastMessage()
-    {
-        return $this->lastMessage;
     }
 }

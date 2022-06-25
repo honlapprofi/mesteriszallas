@@ -30,7 +30,7 @@ class ReportsMenuPage extends AbstractMenuPage
     }
 
     public function enqueueReportScripts() {
-        if ( $this->isCurrentPage() ) {
+        if ( $this->isCurrentPage() && $this->getCurrentTab() == 'reports' ) {
             $this->report->enqueueScripts();
         }
     }

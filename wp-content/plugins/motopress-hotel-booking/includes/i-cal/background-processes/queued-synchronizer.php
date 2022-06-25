@@ -70,15 +70,6 @@ class QueuedSynchronizer
         return (int)preg_replace('/^(\d+)_\d+/', '$1', $queueItem);
     }
 
-    /**
-     * @param string $queueItem "%Timestamp%_%Room ID%"
-     * @return int $roomId
-     */
-    public static function retrieveRoomIdFromItem($queueItem)
-    {
-        return (int)preg_replace('/^\d+_(\d+)/', '$1', $queueItem);
-    }
-
     public function removeItem($queueItem)
     {
         // Update current/next item, if required
@@ -160,8 +151,18 @@ class QueuedSynchronizer
     public function sync( $roomIds ){
         Logs::deleteGhosts();
 
-        $this->addToQueue( $roomIds );
-        $this->doNext();
+		// Skip rooms without calendars
+		$roomsToSync = array_intersect( $roomIds, MPHB()->getSyncUrlsRepository()->getAllRoomIds() );
+
+		// Skip rooms that are already waiting in queue
+		$roomsToSync = array_diff( $roomsToSync, $this->queue->getQueuedRoomIds() );
+
+		if ( !empty( $roomsToSync ) ) {
+			$this->addToQueue( array_values( $roomsToSync ) ); // Reset indexes
+			$this->doNext();
+		} else {
+			$this->synchronizer->touch();
+		}
     }
 
     public function doNext(){
@@ -180,13 +181,16 @@ class QueuedSynchronizer
 
         } else {
             $nextItem = $this->queue->next();
+
+            // Remove current item from the queue and set new current item
+            $this->queue->removeItem( $this->getCurrentItem() );
             $this->options->updateOption( 'current_item', $nextItem );
 
             $this->synchronizer->reset();
 
             if ( $nextItem ) {
                 $this->synchronizer->addPullUrlTask( array(
-                    'roomId' => self::retrieveRoomIdFromItem( $nextItem )
+                    'roomId' => mphb_parse_queue_room_id( $nextItem )
                 ) );
             }
         }

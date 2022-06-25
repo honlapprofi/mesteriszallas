@@ -3,7 +3,7 @@ Contributors: MotoPress
 Donate link: https://motopress.com/
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system
 Requires at least: 4.7
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,27 @@ Hotel Booking plugin, Copyright (C) 2016, MotoPress https://motopress.com/
 Hotel Booking plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+
+= 4.2.5, May 12 2022 =
+* Minor bugfixes and improvements.
+
+= 4.2.4, Apr 4 2022 =
+* Added two new columns to the CSV report: Total Accommodation and Total Services that display total revenue data from these sources respectively.
+* Fixed an issue with displaying the price breakdown table for accommodation types styled with quotation marks.
+* Fixed the per night / for x nights phrasing in several translation locales.
+* Fixed an issue that might have made some pages unavailable on websites in French and Spanish.
+
+= 4.2.3, Mar 23 2022 =
+* Minor bugfixes and improvements.
+
+= 4.2.2, Mar 16 2022 =
+* Improved ical synchronization logs removal from database.
+
+= 4.2.1, Feb 21 2022 =
+* Improved compatibility with the image lazy-loading feature.
+
+= 4.2.0, Feb 16 2022 =
+* Added the user area for customers that allows them to log in, view bookings and speed up reservations with pre-populated info at checkout. Website admins can set the plugin to create user accounts automatically or let customers create ones manually.
 
 = 4.1.1, Dec 22 2021 =
 * Minor bugfixes and improvements.

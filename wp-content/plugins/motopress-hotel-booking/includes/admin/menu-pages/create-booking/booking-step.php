@@ -32,6 +32,13 @@ class BookingStep extends Step {
         // Generate price breakdown before save: save() will trigger some emails,
         // which require price breakdown in their text. See MB-1027 for more details
 		$this->booking->getPriceBreakdown();
+		
+		$isCustomerCreated = $this->createCustomer();
+		
+		if( ! is_wp_error( $isCustomerCreated ) ) {
+			$this->customer->setCustomerId( $isCustomerCreated );
+			$this->booking->setCustomer( $this->customer );
+		}
 
 		$bookingSaved = MPHB()->getBookingRepository()->save( $this->booking );
 
@@ -273,6 +280,16 @@ class BookingStep extends Step {
 
 	protected function _exit(){
 		exit;
+	}
+
+	/**
+	 * 
+	 * @since 4.2.0
+	 * 
+	 * @return int|\WP_Error
+	 */
+	public function createCustomer() {
+		return MPHB()->customers()->createCustomerOnBooking( $this->booking, true );
 	}
 
 }
