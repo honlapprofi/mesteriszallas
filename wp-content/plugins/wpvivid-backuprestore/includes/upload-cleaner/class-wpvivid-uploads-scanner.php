@@ -270,7 +270,14 @@ class WPvivid_Uploads_Scanner
         if ( !empty( $widget_data[$instance_id]['ids'] ) )
         {
             $newIds = $widget_data[$instance_id]['ids'];
-            $ids = array_merge( $ids, $newIds );
+            if(is_array($newIds))
+            {
+                $ids = array_merge( $ids, $newIds );
+            }
+            else
+            {
+                $ids = array_merge( $ids, array($newIds) );
+            }
         }
         // Recent Blog Posts
         if ( !empty( $widget_data[$instance_id]['thumbnail'] ) )
@@ -962,6 +969,87 @@ class WPvivid_Uploads_Scanner
                     {
                         $element_image[]=$settings['background_image']['id'];
                         $attachment_added_ids[]=$settings['background_image']['id'];
+                    }
+                }
+            }
+
+            if(isset($settings['carousel']) && !empty($settings['carousel']))
+            {
+                foreach ($settings['carousel'] as $item)
+                {
+                    if(isset($item['id']))
+                    {
+                        if(!in_array($item['id'],$attachment_added_ids))
+                        {
+                            $element_image[]=$item['id'];
+                            $attachment_added_ids[]=$item['id'];
+                        }
+                    }
+                }
+            }
+
+            if(isset($settings['slides']) && !empty($settings['slides']))
+            {
+                foreach ($settings['slides'] as $item)
+                {
+                    if(isset($item['image']['id']))
+                    {
+                        if(!in_array($item['image']['id'],$attachment_added_ids))
+                        {
+                            $element_image[]=$item['image']['id'];
+                            $attachment_added_ids[]=$item['image']['id'];
+                        }
+                    }
+                }
+            }
+
+            if(isset($settings['poster']) && !empty($settings['poster']))
+            {
+                if(isset($settings['poster']['id']))
+                {
+                    if(!in_array($settings['poster']['id'],$attachment_added_ids))
+                    {
+                        $element_image[]=$settings['poster']['id'];
+                        $attachment_added_ids[]=$settings['poster']['id'];
+                    }
+                }
+            }
+
+            if(isset($settings['image_overlay']) && !empty($settings['image_overlay']))
+            {
+                if(isset($settings['image_overlay']['id']))
+                {
+                    if(!in_array($settings['image_overlay']['id'],$attachment_added_ids))
+                    {
+                        $element_image[]=$settings['image_overlay']['id'];
+                        $attachment_added_ids[]=$settings['image_overlay']['id'];
+                    }
+                }
+            }
+
+            if(isset($settings['background_video_fallback']))
+            {
+                if(isset($settings['background_video_fallback']['id']))
+                {
+                    if(!in_array($settings['background_video_fallback']['id'],$attachment_added_ids))
+                    {
+                        $element_image[]=$settings['background_video_fallback']['id'];
+                        $attachment_added_ids[]=$settings['background_video_fallback']['id'];
+                    }
+                }
+            }
+
+            if(isset($settings['background_slideshow_gallery']) && !empty($settings['background_slideshow_gallery']))
+            {
+                foreach ($settings['background_slideshow_gallery'] as $item)
+                {
+                    if(isset($item['id']))
+                    {
+                        if(!in_array($item['id'],$attachment_added_ids))
+                        {
+                            $element_image[]=$item['id'];
+                            $attachment_added_ids[]=$item['id'];
+                        }
                     }
                 }
             }

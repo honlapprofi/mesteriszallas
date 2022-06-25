@@ -1,10 +1,10 @@
-﻿=== Hotel Booking Lite ===
+=== Hotel Booking Lite ===
 Contributors: MotoPress
 Donate link: https://motopress.com/
 Requires at least: 4.7
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
 Tested up to: 5.9
-Stable tag: 4.2.2
+Stable tag: 4.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,10 @@ The user area for customers allows them to log in, view bookings and speed up al
 
 The Hotel Booking REST API is built on top of the WordPress REST API, ensuring a robust and secure code, thus helping you use our product in any application and create new experiences.
 
+### Hotel Booking mobile application
+
+We provide a free app for both [Android](https://play.google.com/store/apps/details?id=com.motopress.mphb_app) and [Apple](https://apps.apple.com/us/app/hotel-booking-for-wordpress/id1619328436) operating systems that will allow you to check the real-time availability of your accommodations, add bookings, and view guest and payment information on the go.
+
 ### Hotel Booking Plugin Addons
 
 [Hotel Booking plugin addons](https://motopress.com/products/category/hotel-booking-addons/?utm_source=wp-org-hb-lite-page&utm_medium=text-link&utm_content=hotel-booking-addons) are available for adding custom functionality to your rental website:
@@ -150,6 +154,18 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
+= 4.2.5, May 12 2022 =
+* Minor bugfixes and improvements.
+
+= 4.2.4, Apr 4 2022 =
+* Added two new columns to the CSV report: Total Accommodation and Total Services that display total revenue data from these sources respectively.
+* Fixed an issue with displaying the price breakdown table for accommodation types styled with quotation marks.
+* Fixed the per night / for x nights phrasing in several translation locales.
+* Fixed an issue that might have made some pages unavailable on websites in French and Spanish.
+
+= 4.2.3, Mar 23 2022 =
+* Minor bugfixes and improvements.
+
 = 4.2.2, Mar 16 2022 =
 * Improved ical synchronization logs removal from database.
 
@@ -158,20 +174,6 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 = 4.2.0, Feb 16 2022 =
 * Added the user area for customers that allows them to log in, view bookings and speed up reservations with pre-populated info at checkout. Website admins can set the plugin to create user accounts automatically or let customers create ones manually.
-
-= 4.1.1, Dec 22 2021 =
-* Minor bugfixes and improvements.
-
-= 4.1.0, Nov 19 2021 =
-* New: Implemented REST API. This will give developers more extensive control over the plugin data, help integrate third-party services, and build new frontend experiences for Hotel Booking in WordPress.
-
-= 4.0.1, Nov 10 2021 =
-* Security - sanitization and escaping.
-
-= 4.0.0, Nov 2 2021 =
-* New: Added the new Hotel Manager and Hotel Worker user roles that define access to the Hotel Booking plugin settings and menus. Note: you might need to change user roles you used before this update.
-* Added the ability to translate default option in the select field of Attributes.
-* Improved ical synchronization logs removal from database.
 
 --------
 

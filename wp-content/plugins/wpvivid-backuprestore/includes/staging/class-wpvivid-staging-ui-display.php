@@ -1238,6 +1238,8 @@ class WPvivid_Staging_UI_Display_Free
     {
         $site_url = site_url();
         $home_url = home_url();
+        $site_url = untrailingslashit($site_url);
+        $home_url = untrailingslashit($home_url);
         $db_site_url = '';
         $db_home_url = '';
         global $wpdb;

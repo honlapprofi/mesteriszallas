@@ -77,8 +77,16 @@ class WPvivid_Tab_Page_Container
                                         $side_bar = '0';
                                     }
                                     //$side_bar = '';
-                                    $side_bar = apply_filters('wpvivid_add_side_bar', $side_bar, false);
-                                    echo $side_bar;
+                                    if(get_current_screen()->id=='wpvivid-backup_page_wpvivid-staging')
+                                    {
+                                        do_action('wpvivid_add_staging_side_bar_ex' ,$side_bar, false);
+                                    }
+                                    else
+                                    {
+                                        do_action('wpvivid_add_side_bar' ,$side_bar, false);
+                                    }
+                                    //$side_bar = apply_filters('wpvivid_add_side_bar', $side_bar, false);
+                                    //echo $side_bar;
                                     ?>
                                 </div>
                             </div>

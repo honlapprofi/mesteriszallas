@@ -96,7 +96,7 @@ class WPvivid_AMAZONS3Class extends WPvivid_Remote{
                     </td>
                     <td class="column-description desc">
                         <div class="wpvivid-storage-form-desc">
-                            <i><?php _e('Enter your Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></i><a href="https://wpvivid.com/get-amazon-access-secret-key.html" target="_blank"> <?php _e('How to get an AmazonS3 secret key.', 'wpvivid-backuprestore'); ?></a>
+                            <i><?php _e('Enter your Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></i><a href="https://wpvivid.com/get-amazon-access-secret-key.html" target="_blank"> <?php _e('How to get an Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></a>
                         </div>
                     </td>
                 </tr>
@@ -234,7 +234,7 @@ class WPvivid_AMAZONS3Class extends WPvivid_Remote{
                     </td>
                     <td class="column-description desc">
                         <div class="wpvivid-storage-form-desc">
-                            <i><?php _e('Enter your Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></i><a href="https://wpvivid.com/get-amazon-access-secret-key.html" target="_blank"> <?php _e('How to get an AmazonS3 secret key.', 'wpvivid-backuprestore'); ?></a>
+                            <i><?php _e('Enter your Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></i><a href="https://wpvivid.com/get-amazon-access-secret-key.html" target="_blank"> <?php _e('How to get an Amazon S3 secret key.', 'wpvivid-backuprestore'); ?></a>
                         </div>
                     </td>
                 </tr>
@@ -401,6 +401,8 @@ class WPvivid_AMAZONS3Class extends WPvivid_Remote{
             $ret['error']="Warning: The storage secret key is required.";
             return $ret;
         }
+        $this->options['secret'] = base64_encode($this->options['secret']);
+        $this->options['is_encrypt'] = 1;
 
         if(!isset($this->options['bucket']))
         {

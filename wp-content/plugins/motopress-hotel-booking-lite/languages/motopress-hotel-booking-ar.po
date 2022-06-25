@@ -1,5 +1,5 @@
 # Copyright (C) 2022 MotoPress
-# This file is distributed under the same license as the Hotel Booking plugin.
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: hotel-booking-plugin\n"
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-02-16T09:10:20+00:00\n"
-"PO-Revision-Date: 2022-02-21 07:39\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"POT-Creation-Date: 2022-03-31T19:14:09+00:00\n"
+"PO-Revision-Date: 2022-03-31 20:31\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: motopress-hotel-booking\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Crowdin-Project: hotel-booking-plugin\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. translators: Name of the plugin, do not translate
 #: includes/script-managers/block-script-manager.php:21
 msgid "Hotel Booking"
-msgstr ""
+msgstr "Hotel Booking"
 
 #. Plugin URI of the plugin
 msgid "https://motopress.com/products/hotel-booking/"
@@ -58,23 +58,30 @@ msgctxt "Zero price"
 msgid "Free"
 msgstr "مجاني"
 
-#: functions.php:223
-msgctxt "Ex: $99 for 2 nights"
+#. translators: Price per one night. Example: $99 per night
+#: functions.php:226
+msgctxt "Price per one night. Example: $99 per night"
 msgid "per night"
+msgstr "لليلة الواحدة"
+
+#. translators: Price for X nights. Example: $99 for 2 nights, $99 for 21 nights
+#: functions.php:238
+msgctxt "Price for X nights. Example: $99 for 2 nights, $99 for 21 nights"
+msgid "for %d nights"
 msgid_plural "for %d nights"
-msgstr[0] "لليلة"
+msgstr[0] "لمدة %d ليالي"
 msgstr[1] "لمدة %d ليالي"
-msgstr[2] "لمدة %d ليالي"
+msgstr[2] ""
 msgstr[3] "لمدة %d ليالي"
 msgstr[4] "لمدة %d ليالي"
-msgstr[5] "لمدة %d ليالي"
+msgstr[5] ""
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:577
+#: functions.php:595
 msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr "أنت تستخدم مثالين من البرنامج المساعد للحجز في فندق في نفس الوقت، يرجى <a href=\"%s\">إلغاء تنشيط واحد منهم</a>."
 
-#: functions.php:595
+#: functions.php:613
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr "<a href=\"%s\">الترقية إلى مميز</a> لتفعيل هذه الخاصية."
 
@@ -123,7 +130,7 @@ msgstr "الاسم"
 #: includes/bundles/export-bundle.php:31
 #: includes/post-types/booking-cpt.php:89
 #: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:560
+#: includes/views/shortcodes/checkout-view.php:568
 #: templates/account/account-details.php:34
 msgid "Email"
 msgstr "البريد الإلكتروني"
@@ -132,7 +139,7 @@ msgstr "البريد الإلكتروني"
 #: includes/admin/menus.php:71
 #: includes/admin/menus.php:72
 #: includes/post-types/booking-cpt.php:200
-#: includes/shortcodes/account-shortcode.php:217
+#: includes/shortcodes/account-shortcode.php:225
 msgid "Bookings"
 msgstr "الحجوزات"
 
@@ -383,8 +390,8 @@ msgstr "افتراضي"
 #: includes/post-types/payment-cpt.php:213
 #: includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:241
-#: includes/views/shortcodes/checkout-view.php:262
+#: includes/views/shortcodes/checkout-view.php:249
+#: includes/views/shortcodes/checkout-view.php:270
 #: templates/account/account-details.php:51
 #: templates/edit-booking/add-room-popup.php:30
 #: templates/edit-booking/add-room-popup.php:38
@@ -423,7 +430,7 @@ msgstr "إلغاء تحديد الكل"
 
 #: includes/admin/fields/notes-list-field.php:23
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:68
-#: includes/bundles/export-bundle.php:50
+#: includes/bundles/export-bundle.php:52
 #: assets/blocks/blocks.js:457
 #: assets/blocks/blocks.js:793
 #: assets/blocks/blocks.js:977
@@ -498,7 +505,7 @@ msgstr "إضافة مدة الإقامة"
 #: includes/post-types/room-type-cpt.php:277
 #: includes/views/booking-view.php:93
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:233
+#: includes/views/shortcodes/checkout-view.php:241
 #: template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
 #: templates/shortcodes/search/search-form.php:74
@@ -637,7 +644,7 @@ msgstr "تسجيل إجراءات الوصول أو المغادرة"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:64
 #: includes/views/booking-view.php:95
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:235
+#: includes/views/shortcodes/checkout-view.php:243
 #: template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
@@ -1172,7 +1179,7 @@ msgstr "لايتوفر حجز وذلك لوجود اعمال الصيانة. ا�
 #: includes/admin/menu-pages/edit-booking/summary-control.php:45
 #: includes/shortcodes/checkout-shortcode/step-booking.php:186
 #: includes/shortcodes/checkout-shortcode/step-booking.php:345
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:149
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:151
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "لا توجد أماكن إقامة محددة للحجز."
@@ -1194,8 +1201,8 @@ msgstr "أماكن الإقامة المختارة غير صالحة."
 #: includes/ajax.php:594
 #: includes/shortcodes/checkout-shortcode/step-booking.php:200
 #: includes/shortcodes/checkout-shortcode/step-booking.php:206
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:166
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:178
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:168
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:180
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "نوع السكن غير صالح."
@@ -1243,7 +1250,7 @@ msgstr "إجمالي عدد الضيوف غير صالح."
 #: includes/admin/menu-pages/create-booking/booking-step.php:188
 #: includes/admin/menu-pages/create-booking/checkout-step.php:136
 #: includes/shortcodes/checkout-shortcode/step-booking.php:250
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:209
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:211
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr "التواريخ المحددة لا تستوفي قواعد الحجز للنوع %s"
@@ -1255,7 +1262,7 @@ msgid "Accommodations are not available."
 msgstr "أماكن الإقامة غير متاحة."
 
 #: includes/admin/menu-pages/create-booking/checkout-step.php:131
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:204
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:206
 msgid "There are no rates for requested dates."
 msgstr "السكن غير متوفر للتواريخ المطلوبة."
 
@@ -1327,7 +1334,7 @@ msgstr "اسم المستخدم"
 #: includes/bundles/export-bundle.php:29
 #: includes/post-types/booking-cpt.php:77
 #: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:538
+#: includes/views/shortcodes/checkout-view.php:546
 #: templates/account/account-details.php:22
 msgid "First Name"
 msgstr "الاسم الاول"
@@ -1338,7 +1345,7 @@ msgstr "الاسم الاول"
 #: includes/bundles/export-bundle.php:30
 #: includes/post-types/booking-cpt.php:83
 #: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:549
+#: includes/views/shortcodes/checkout-view.php:557
 #: templates/account/account-details.php:26
 msgid "Last Name"
 msgstr "الاسم الاخير"
@@ -1349,7 +1356,7 @@ msgstr "الاسم الاخير"
 #: includes/bundles/export-bundle.php:32
 #: includes/post-types/booking-cpt.php:95
 #: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:571
+#: includes/views/shortcodes/checkout-view.php:579
 #: templates/account/account-details.php:38
 msgid "Phone"
 msgstr "التلفون"
@@ -1359,7 +1366,7 @@ msgstr "التلفون"
 #: includes/bundles/customer-bundle.php:128
 #: includes/bundles/export-bundle.php:34
 #: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:605
+#: includes/views/shortcodes/checkout-view.php:613
 #: templates/account/account-details.php:42
 msgid "Address"
 msgstr "العنوان"
@@ -1370,7 +1377,7 @@ msgstr "العنوان"
 #: includes/bundles/export-bundle.php:36
 #: includes/post-types/booking-cpt.php:120
 #: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:627
+#: includes/views/shortcodes/checkout-view.php:635
 #: templates/account/account-details.php:64
 msgid "State / County"
 msgstr "الولاية / المقاطعة"
@@ -1390,7 +1397,7 @@ msgstr "الدولة"
 #: includes/bundles/export-bundle.php:35
 #: includes/post-types/booking-cpt.php:114
 #: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:616
+#: includes/views/shortcodes/checkout-view.php:624
 #: templates/account/account-details.php:68
 msgid "City"
 msgstr "المدينة"
@@ -1400,7 +1407,7 @@ msgstr "المدينة"
 #: includes/bundles/customer-bundle.php:155
 #: includes/bundles/export-bundle.php:37
 #: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:638
+#: includes/views/shortcodes/checkout-view.php:646
 #: templates/account/account-details.php:72
 msgid "Postcode"
 msgstr "الرمز البريدي"
@@ -1447,7 +1454,7 @@ msgid "Cancel"
 msgstr "إلغاء"
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:121
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:195
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:192
 #: includes/admin/menu-pages/i-cal-menu-page.php:149
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:41
 msgid "Back"
@@ -1511,7 +1518,7 @@ msgstr "- إضافة جديد -"
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:788
+#: includes/admin/menu-pages/settings-menu-page.php:794
 msgid "Extensions"
 msgstr "الإضافات"
 
@@ -1527,34 +1534,34 @@ msgstr "احصل على هذه الإضافة"
 msgid "No extensions found."
 msgstr "لم يتم العثور على إضافات."
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:80
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:77
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:60
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:102
 #: includes/i-cal/logs-handler.php:73
 msgid "Abort Process"
 msgstr "إلغاء العملية"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:81
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:78
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:61
 msgid "Aborting..."
 msgstr "جار الإلغاء..."
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:196
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:210
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:152
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:193
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:207
 #: includes/admin/room-list-table.php:161
 msgid "Import Calendar"
 msgstr "استيراد التقويم"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
 msgid "Accommodation: %s"
 msgstr "أماكن الإقامة: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:161
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
 msgid "Accommodation Type: %s"
 msgstr "نوع الإقامة: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:168
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:165
 msgid "Please be patient while the calendars are imported. You will be notified via this page when the process is completed."
 msgstr "يرجى الانتظار أثناء استيراد التقويم. سيتم إعلامك عبر هذه الصفحة عند اكتمال العملية."
 
@@ -1957,7 +1964,7 @@ msgstr "البلد الافتراضي عند الدفع والمغادرة"
 #: includes/admin/menu-pages/settings-menu-page.php:243
 #: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:461
 msgid "Price Breakdown"
 msgstr "تحطيم الاسعار"
 
@@ -1986,7 +1993,7 @@ msgid "Allow customers to log into their existing account during checkout."
 msgstr "السماح للعملاء بتسجيل الدخول إلى حسابهم الحالي أثناء إنهاء الطلب."
 
 #: includes/admin/menu-pages/settings-menu-page.php:276
-#: includes/upgrader.php:706
+#: includes/upgrader.php:716
 #: includes/wizard.php:146
 msgid "Booking Cancellation"
 msgstr "إلغاء الحجز"
@@ -2139,88 +2146,96 @@ msgstr "تصدير كتل المسؤول."
 msgid "Do not export imported bookings."
 msgstr "يرجى عدم تصدير الحجوزات المستوردة."
 
-#: includes/admin/menu-pages/settings-menu-page.php:432
+#: includes/admin/menu-pages/settings-menu-page.php:430
+msgid "Minimize Logs"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:431
+msgid "Enable the plugin to record only important messages."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:438
 msgid "Calendars Synchronization Scheduler"
 msgstr "جداول مزامنة التقويمات"
 
-#: includes/admin/menu-pages/settings-menu-page.php:441
+#: includes/admin/menu-pages/settings-menu-page.php:447
 msgid "Enable automatic external calendars synchronization"
 msgstr "تفعيل مزامنة التقويمات الخارجية التلقائية"
 
-#: includes/admin/menu-pages/settings-menu-page.php:447
+#: includes/admin/menu-pages/settings-menu-page.php:453
 msgid "Clock"
 msgstr "الساعة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:448
+#: includes/admin/menu-pages/settings-menu-page.php:454
 msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr "مزامنة التقويمات في هذا الوقت (UTC) أو بدءًا من هذا الوقت في كل فترة زمنية أدناه."
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:462
 msgid "Interval"
 msgstr "الفاصل الزمني"
 
-#: includes/admin/menu-pages/settings-menu-page.php:458
+#: includes/admin/menu-pages/settings-menu-page.php:464
 #: includes/crons/cron-manager.php:79
 msgid "Quarter an Hour"
 msgstr "ربع ساعة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:459
+#: includes/admin/menu-pages/settings-menu-page.php:465
 #: includes/crons/cron-manager.php:84
 msgid "Half an Hour"
 msgstr "نصف ساعة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:460
+#: includes/admin/menu-pages/settings-menu-page.php:466
 msgid "Once Hourly"
 msgstr "مرة واحدة في الساعة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:467
 msgid "Twice Daily"
 msgstr "مرتان يوميًا"
 
-#: includes/admin/menu-pages/settings-menu-page.php:462
+#: includes/admin/menu-pages/settings-menu-page.php:468
 msgid "Once Daily"
 msgstr "مرة يوميًا"
 
-#: includes/admin/menu-pages/settings-menu-page.php:470
+#: includes/admin/menu-pages/settings-menu-page.php:476
 msgid "Automatically delete sync logs older than"
 msgstr "حذف تلقائي لسجلات المزامنة الأقدم"
 
-#: includes/admin/menu-pages/settings-menu-page.php:472
+#: includes/admin/menu-pages/settings-menu-page.php:478
 msgid "Day"
 msgstr "يوم"
 
-#: includes/admin/menu-pages/settings-menu-page.php:473
+#: includes/admin/menu-pages/settings-menu-page.php:479
 msgid "Week"
 msgstr "أسبوع"
 
-#: includes/admin/menu-pages/settings-menu-page.php:474
+#: includes/admin/menu-pages/settings-menu-page.php:480
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "شهر"
 
-#: includes/admin/menu-pages/settings-menu-page.php:475
+#: includes/admin/menu-pages/settings-menu-page.php:481
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "جانب"
 
-#: includes/admin/menu-pages/settings-menu-page.php:476
+#: includes/admin/menu-pages/settings-menu-page.php:482
 msgid "Half a Year"
 msgstr "6 أشهر"
 
-#: includes/admin/menu-pages/settings-menu-page.php:477
+#: includes/admin/menu-pages/settings-menu-page.php:483
 msgid "Never Delete"
 msgstr "لا تحذف أبدًا"
 
-#: includes/admin/menu-pages/settings-menu-page.php:486
+#: includes/admin/menu-pages/settings-menu-page.php:492
 msgid "Block Editor"
 msgstr "محرر الكتل"
 
-#: includes/admin/menu-pages/settings-menu-page.php:491
-#: includes/admin/menu-pages/settings-menu-page.php:496
+#: includes/admin/menu-pages/settings-menu-page.php:497
+#: includes/admin/menu-pages/settings-menu-page.php:502
 msgid "Enable block editor for \"%s\"."
 msgstr "تفعيل محرر الكتل لـ \"%s\"."
 
-#: includes/admin/menu-pages/settings-menu-page.php:491
+#: includes/admin/menu-pages/settings-menu-page.php:497
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -2228,7 +2243,7 @@ msgstr "تفعيل محرر الكتل لـ \"%s\"."
 msgid "Accommodation Types"
 msgstr "أنواع السكن"
 
-#: includes/admin/menu-pages/settings-menu-page.php:496
+#: includes/admin/menu-pages/settings-menu-page.php:502
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
 #: includes/post-types/service-cpt.php:92
@@ -2237,202 +2252,202 @@ msgstr "أنواع السكن"
 msgid "Services"
 msgstr "الخدمات"
 
-#: includes/admin/menu-pages/settings-menu-page.php:525
+#: includes/admin/menu-pages/settings-menu-page.php:531
 msgid "Admin Emails"
 msgstr "مشرف رسائل البريد الإلكتروني"
 
-#: includes/admin/menu-pages/settings-menu-page.php:538
+#: includes/admin/menu-pages/settings-menu-page.php:544
 msgid "Customer Emails"
 msgstr "رسائل   العملاء الإلكتروني"
 
-#: includes/admin/menu-pages/settings-menu-page.php:543
+#: includes/admin/menu-pages/settings-menu-page.php:549
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr "تحويل الضيوف لمرة واحدة إلى عملاء مخلصين عن طريق إرسال حملات تسويق تلقائية مع <a>دمج الحجز في الفنادق و منصة Mailchimp</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:546
+#: includes/admin/menu-pages/settings-menu-page.php:552
 msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr "تحويل الضيوف لمرة واحدة إلى عملاء مخلصين عن طريق إرسال حملات تسويق تلقائية مع دمج الحجز في الفنادق ومنصة Mailchimp."
 
-#: includes/admin/menu-pages/settings-menu-page.php:561
+#: includes/admin/menu-pages/settings-menu-page.php:567
 msgid "Cancellation Details Template"
 msgstr "قالب نماذج تفاصيل الإلغاء"
 
-#: includes/admin/menu-pages/settings-menu-page.php:562
+#: includes/admin/menu-pages/settings-menu-page.php:568
 msgid "Used for %cancellation_details% tag."
 msgstr "تستخدام لأجل %cancellation_details% العلامة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:581
+#: includes/admin/menu-pages/settings-menu-page.php:587
 msgid "Email Settings"
 msgstr "إعدادات البريد الإلكتروني"
 
-#: includes/admin/menu-pages/settings-menu-page.php:586
+#: includes/admin/menu-pages/settings-menu-page.php:592
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr "إرسال إشعارات البريد الإلكتروني التلقائية، مثل تعليمات الاستلام الرئيسية، وقواعد الإقامة، قبل الوصول/المغادرة وبعدها مع <a>إشعار الحجز في الفنادق</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:589
+#: includes/admin/menu-pages/settings-menu-page.php:595
 msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr "إرسال إشعارات البريد الإلكتروني التلقائية، مثل تعليمات الاستلام الرئيسية، وقواعد الإقامة، قبل الوصول/المغادرة وبعدها مع إشعار الحجز في الفنادق."
 
-#: includes/admin/menu-pages/settings-menu-page.php:597
+#: includes/admin/menu-pages/settings-menu-page.php:603
 msgid "Email Sender"
 msgstr "مرسل البريد الإلكتروني"
 
-#: includes/admin/menu-pages/settings-menu-page.php:602
+#: includes/admin/menu-pages/settings-menu-page.php:608
 msgid "Administrator Email"
 msgstr "البريد الإلكتروني للمسؤول"
 
-#: includes/admin/menu-pages/settings-menu-page.php:608
+#: includes/admin/menu-pages/settings-menu-page.php:614
 msgid "From Email"
 msgstr "من البريد الإلكترونى"
 
-#: includes/admin/menu-pages/settings-menu-page.php:614
+#: includes/admin/menu-pages/settings-menu-page.php:620
 msgid "From Name"
 msgstr "الاسم"
 
-#: includes/admin/menu-pages/settings-menu-page.php:621
+#: includes/admin/menu-pages/settings-menu-page.php:627
 msgid "Logo URL"
 msgstr "رابط الشعار"
 
-#: includes/admin/menu-pages/settings-menu-page.php:628
+#: includes/admin/menu-pages/settings-menu-page.php:634
 msgid "Footer Text"
 msgstr "نص ذيل الصفحة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:636
+#: includes/admin/menu-pages/settings-menu-page.php:642
 msgid "Reserved Accommodation Details Template"
 msgstr "قالب نماذج تفاصيل الحجز"
 
-#: includes/admin/menu-pages/settings-menu-page.php:637
+#: includes/admin/menu-pages/settings-menu-page.php:643
 msgid "Used for %reserved_rooms_details% tag."
 msgstr "تستخدام لأجل %reserved_rooms_details% العلامة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:648
+#: includes/admin/menu-pages/settings-menu-page.php:654
 msgid "Styles"
 msgstr "الأنماط"
 
-#: includes/admin/menu-pages/settings-menu-page.php:653
+#: includes/admin/menu-pages/settings-menu-page.php:659
 msgid "Base Color"
 msgstr "اللون الأساسي"
 
-#: includes/admin/menu-pages/settings-menu-page.php:659
+#: includes/admin/menu-pages/settings-menu-page.php:665
 msgid "Background Color"
 msgstr "لون الخلفية"
 
-#: includes/admin/menu-pages/settings-menu-page.php:665
+#: includes/admin/menu-pages/settings-menu-page.php:671
 msgid "Body Background Color"
 msgstr "لون خلفية الـ Body"
 
-#: includes/admin/menu-pages/settings-menu-page.php:671
+#: includes/admin/menu-pages/settings-menu-page.php:677
 msgid "Body Text Color"
 msgstr "لون النص في الـ Body"
 
-#: includes/admin/menu-pages/settings-menu-page.php:691
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "Payment Gateways"
 msgstr "بوابات الدفع"
 
-#: includes/admin/menu-pages/settings-menu-page.php:691
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "General Settings"
 msgstr "الاعدادات العامة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:696
+#: includes/admin/menu-pages/settings-menu-page.php:702
 msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr "هل تحتاج إلى المزيد من البوابات؟ استخدم إضافة الحجز في الفنادق <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a>."
 
-#: includes/admin/menu-pages/settings-menu-page.php:700
+#: includes/admin/menu-pages/settings-menu-page.php:706
 msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr "يمكنك أيضًا إرسال رابط <a href=\"%s\" target=\"_blank\">طلب سداد الرصيد</a> إلى ضيوفك."
 
-#: includes/admin/menu-pages/settings-menu-page.php:709
+#: includes/admin/menu-pages/settings-menu-page.php:715
 msgid "User Pays"
 msgstr "يدفع المستخدم"
 
-#: includes/admin/menu-pages/settings-menu-page.php:711
+#: includes/admin/menu-pages/settings-menu-page.php:717
 msgid "Full Amount"
 msgstr "المبلغ الكامل"
 
-#: includes/admin/menu-pages/settings-menu-page.php:712
+#: includes/admin/menu-pages/settings-menu-page.php:718
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "الإيداع"
 
-#: includes/admin/menu-pages/settings-menu-page.php:718
+#: includes/admin/menu-pages/settings-menu-page.php:724
 msgid "Deposit Type"
 msgstr "نوع الإيداع"
 
-#: includes/admin/menu-pages/settings-menu-page.php:720
+#: includes/admin/menu-pages/settings-menu-page.php:726
 msgid "Fixed"
 msgstr "ثابت"
 
-#: includes/admin/menu-pages/settings-menu-page.php:721
+#: includes/admin/menu-pages/settings-menu-page.php:727
 msgid "Percent"
 msgstr "النسبة المئوية"
 
-#: includes/admin/menu-pages/settings-menu-page.php:727
+#: includes/admin/menu-pages/settings-menu-page.php:733
 msgid "Deposit Amount"
 msgstr "مبلغ الإيداع"
 
-#: includes/admin/menu-pages/settings-menu-page.php:735
+#: includes/admin/menu-pages/settings-menu-page.php:741
 msgid "Deposit Time Frame (days)"
 msgstr "إطار وقت الإيداع (الأيام)"
 
-#: includes/admin/menu-pages/settings-menu-page.php:736
+#: includes/admin/menu-pages/settings-menu-page.php:742
 msgid "Apply deposit to bookings made in at least the selected number of days prior to the check-in date. Otherwise, the full amount is charged."
 msgstr "تطبيق الإيداع على الحجز الذي يتم في عدد الأيام المحددة قبل تاريخ تسجيل الدخول. وإلا يتم دفع المبلغ الكامل."
 
-#: includes/admin/menu-pages/settings-menu-page.php:744
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Force Secure Checkout"
 msgstr "فرض الدفع الامن"
 
-#: includes/admin/menu-pages/settings-menu-page.php:746
+#: includes/admin/menu-pages/settings-menu-page.php:752
 msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
 msgstr "فرض استخدام SSL (HTTPS) على صفحة الدفع. يجب أن تمتلك شهادة SSL موثقة تسمح لك باستخدام هذا الخيار."
 
-#: includes/admin/menu-pages/settings-menu-page.php:750
+#: includes/admin/menu-pages/settings-menu-page.php:756
 msgid "Reservation Received Page"
 msgstr "صفحة استلام الحجز"
 
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:761
 msgid "Failed Transaction Page"
 msgstr "صفحة فشل التحويل"
 
-#: includes/admin/menu-pages/settings-menu-page.php:760
+#: includes/admin/menu-pages/settings-menu-page.php:766
 msgid "Default Gateway"
 msgstr "البوابة الافتراضية"
 
-#: includes/admin/menu-pages/settings-menu-page.php:768
+#: includes/admin/menu-pages/settings-menu-page.php:774
 msgid "Pending Payment Time"
 msgstr "وقت الدفع في انتظار المراجعة"
 
-#: includes/admin/menu-pages/settings-menu-page.php:769
+#: includes/admin/menu-pages/settings-menu-page.php:775
 msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
 msgstr "إعطاء المستخدم وقت محدود لغرض إكمال عملية الدفع. في حال لم يتم ذلك سوف يتم إلغاء الحجز وتغيير الحالة الى متوفر."
 
-#: includes/admin/menu-pages/settings-menu-page.php:791
+#: includes/admin/menu-pages/settings-menu-page.php:797
 msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr "قم بتثبيت <a href=\"%s\" target=\"_blank\">إضافات الحجز في الفنادق</a> لإدارة إعداداتها."
 
-#: includes/admin/menu-pages/settings-menu-page.php:793
+#: includes/admin/menu-pages/settings-menu-page.php:799
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr "قم بتثبيت إضافات الحجز في الفنادق لإدارة إعداداتها."
 
-#: includes/admin/menu-pages/settings-menu-page.php:811
+#: includes/admin/menu-pages/settings-menu-page.php:817
 msgid "Advanced"
 msgstr "متقدم"
 
-#: includes/admin/menu-pages/settings-menu-page.php:823
-#: includes/admin/menu-pages/settings-menu-page.php:825
+#: includes/admin/menu-pages/settings-menu-page.php:829
+#: includes/admin/menu-pages/settings-menu-page.php:831
 msgid "License"
 msgstr "الترخيص"
 
-#: includes/admin/menu-pages/settings-menu-page.php:864
+#: includes/admin/menu-pages/settings-menu-page.php:870
 msgid "Settings saved."
 msgstr "الإعدادات التي تم حفظها."
 
-#: includes/admin/menu-pages/settings-menu-page.php:896
+#: includes/admin/menu-pages/settings-menu-page.php:902
 msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr "<strong>ملاحظة:</strong> طرق الدفع ستظهر على صفحة الدفع فقط عندما يتم تفعيل التأكيد عند الدفع في الإقامة> الإعدادات > العامة > وضع التأكيد."
 
-#: includes/admin/menu-pages/settings-menu-page.php:984
-#: includes/admin/menu-pages/settings-menu-page.php:988
+#: includes/admin/menu-pages/settings-menu-page.php:990
+#: includes/admin/menu-pages/settings-menu-page.php:994
 #: assets/blocks/blocks.js:54
 #: assets/blocks/blocks.js:186
 #: assets/blocks/blocks.js:293
@@ -2917,10 +2932,10 @@ msgstr "اختياري."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:238
-#: includes/views/shortcodes/checkout-view.php:259
-#: includes/views/shortcodes/checkout-view.php:493
-#: includes/views/shortcodes/checkout-view.php:523
+#: includes/views/shortcodes/checkout-view.php:246
+#: includes/views/shortcodes/checkout-view.php:267
+#: includes/views/shortcodes/checkout-view.php:501
+#: includes/views/shortcodes/checkout-view.php:531
 #: templates/account/account-details.php:34
 msgid "Required"
 msgstr "مطلوب"
@@ -2936,7 +2951,7 @@ msgid "Taxes & Fees"
 msgstr "الضرائب والرسوم"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:111
-#: includes/bundles/export-bundle.php:44
+#: includes/bundles/export-bundle.php:45
 #: includes/views/booking-view.php:222
 msgid "Fees"
 msgstr "الرسوم"
@@ -2998,7 +3013,7 @@ msgid "Show accommodation rate with this charge included"
 msgstr "عرض سعر الإقامة مع هذه الرسوم المدرجة"
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:176
-#: includes/bundles/export-bundle.php:42
+#: includes/bundles/export-bundle.php:43
 #: includes/views/booking-view.php:146
 msgid "Accommodation Taxes"
 msgstr "معدل الإقامة:"
@@ -3399,7 +3414,7 @@ msgstr "السعر الإجمالي للحجز"
 #: includes/ajax.php:1120
 #: includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:649
+#: includes/views/shortcodes/checkout-view.php:657
 msgid "Notes"
 msgstr "الملاحظات"
 
@@ -5243,7 +5258,7 @@ msgid "Phone is required."
 msgstr "التلفون مطلوب."
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:584
+#: includes/views/shortcodes/checkout-view.php:592
 msgid "Country of residence"
 msgstr "بلد الإقامة"
 
@@ -5302,39 +5317,49 @@ msgstr "الكبار/الضيوف"
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
 #: includes/views/edit-booking/checkout-view.php:170
-#: includes/views/shortcodes/checkout-view.php:278
+#: includes/views/shortcodes/checkout-view.php:286
 msgid "Full Guest Name"
 msgstr "اسم الضيف الكامل"
 
 #: includes/bundles/export-bundle.php:41
+#: includes/views/booking-view.php:138
+msgid "Accommodation Subtotal"
+msgstr "المبلغ الإجمالي للإقامة"
+
+#: includes/bundles/export-bundle.php:42
 #: includes/views/booking-view.php:330
 #: templates/account/bookings.php:21
 #: templates/account/bookings.php:74
 msgid "Total"
 msgstr "المجموع"
 
-#: includes/bundles/export-bundle.php:43
+#: includes/bundles/export-bundle.php:44
 msgid "Total Accommodation Taxes"
 msgstr "إجمالي ضرائب الإقامة"
 
-#: includes/bundles/export-bundle.php:45
+#: includes/bundles/export-bundle.php:46
 #: includes/reports/earnings-report.php:97
 msgid "Total Fees"
 msgstr "إجمالي الرسوم"
 
-#: includes/bundles/export-bundle.php:46
+#: includes/bundles/export-bundle.php:47
+#: includes/views/booking-view.php:189
+msgid "Services Subtotal"
+msgstr "مجموع الخدمات الفرعية"
+
+#: includes/bundles/export-bundle.php:48
 msgid "Total Service Taxes"
 msgstr "إجمالي ضرائب الخدمة"
 
-#: includes/bundles/export-bundle.php:47
+#: includes/bundles/export-bundle.php:49
 msgid "Total Fee Taxes"
 msgstr "إجمالي رسوم الضرائب"
 
-#: includes/bundles/export-bundle.php:48
+#: includes/bundles/export-bundle.php:50
 msgid "Paid"
 msgstr "مدفوع"
 
-#: includes/bundles/export-bundle.php:49
+#: includes/bundles/export-bundle.php:51
 #: includes/post-types/payment-cpt.php:125
 #: includes/shortcodes/booking-confirmation-shortcode.php:372
 msgid "Payment Details"
@@ -5684,7 +5709,7 @@ msgstr "تفاصيل حجوزات الإقامة"
 
 #: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:150
+#: includes/views/shortcodes/checkout-view.php:158
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "تفاصيل الحجز"
@@ -5730,7 +5755,7 @@ msgid "Link to My Account page"
 msgstr "رابط إلى صفحة حسابي"
 
 #: includes/emails/templaters/email-templater.php:547
-#: includes/upgrader.php:821
+#: includes/upgrader.php:831
 #: includes/wizard.php:183
 msgid "My Account"
 msgstr "حسابي"
@@ -5840,11 +5865,11 @@ msgstr[5] "تم سحب %d عناوين الموقع الإلكتروني للت�
 msgid "Skipped. No URLs found for parsing."
 msgstr "تخطي. لم يتم العثور على عناوين الموقع الإلكتروني للتحليل."
 
-#: includes/i-cal/background-processes/background-uploader.php:66
+#: includes/i-cal/background-processes/background-uploader.php:64
 msgid "Cannot read uploaded file"
 msgstr "لا يمكن قراءة الملف المرفوع"
 
-#: includes/i-cal/background-processes/background-worker.php:275
+#: includes/i-cal/background-processes/background-worker.php:277
 msgid "We will need to check %d previous booking after importing and remove it if the booking is outdated."
 msgid_plural "We will need to check %d previous bookings after importing and remove the outdated ones."
 msgstr[0] "يجب عليك التحقق من %d الحجز السابق بعد استيراده وإزالته إذا كان الحجز قديمًا."
@@ -5884,35 +5909,35 @@ msgctxt "%s - error description"
 msgid "Parse error. %s"
 msgstr "خطا في التحليل.%s"
 
-#: includes/i-cal/background-processes/background-worker.php:435
+#: includes/i-cal/background-processes/background-worker.php:432
 msgid "Skipped. Outdated booking #%d already removed."
 msgstr "تم التخطي. تمت إزالة الحجز القديم #٪ d بالفعل."
 
-#: includes/i-cal/background-processes/background-worker.php:442
+#: includes/i-cal/background-processes/background-worker.php:439
 msgid "Skipped. Booking #%d updated with new data."
 msgstr "تخطي. تم تحديث الحجز #%d مع بيانات جديدة."
 
-#: includes/i-cal/background-processes/background-worker.php:457
+#: includes/i-cal/background-processes/background-worker.php:454
 msgid "The outdated booking #%d has been removed."
 msgstr "تم إزالة الحجز القديم #%d."
 
-#: includes/i-cal/importer.php:99
-msgid "Skipped. Event has passed."
-msgstr "تخطي. لقد انتهى الحدث."
+#: includes/i-cal/importer.php:103
+msgid "Skipped. Event from %1$s to %2$s has passed."
+msgstr ""
 
-#: includes/i-cal/importer.php:112
-msgid "Success. New booking #%d."
-msgstr "تم. حجز جديد #%d."
+#: includes/i-cal/importer.php:119
+msgid "New booking #%1$d. The dates from %2$s to %3$s are now blocked."
+msgstr ""
 
-#: includes/i-cal/importer.php:128
+#: includes/i-cal/importer.php:139
 msgid "Success. Booking #%d updated with new data."
 msgstr "تم بنجاح. تم تحديث #%d الحجز مع بيانات جديدة."
 
-#: includes/i-cal/importer.php:132
+#: includes/i-cal/importer.php:147
 msgid "Skipped. The dates from %1$s to %2$s are already blocked."
 msgstr "تخطي. تم حظر التواريخ من %1$s إلى %2$s بالفعل."
 
-#: includes/i-cal/importer.php:146
+#: includes/i-cal/importer.php:163
 msgid "Success. Booking #%1$d updated with new data. Removed %2$d outdated booking."
 msgid_plural "Success. Booking #%1$d updated with new data. Removed %2$d outdated bookings."
 msgstr[0] "تم بنجاح. تم تحديث الحجز #%1$d ببيانات جديدة. تمت إزالة %2$d من الحجز القديم."
@@ -5922,11 +5947,11 @@ msgstr[3] "تم بنجاح. تم تحديث بعض الحجوزات #%1$d ببي
 msgstr[4] "تم بنجاح. تم تحديث العديد من الحجوزات #%1$d ببيانات جديدة. تمت إزالة %2$d من الحجز القديم."
 msgstr[5] "تم بنجاح. تم تحديث الحجز #%1$d ببيانات جديدة. تمت إزالة %2$d من الحجز القديم."
 
-#: includes/i-cal/importer.php:148
+#: includes/i-cal/importer.php:165
 msgid "Success. Booking #%1$d updated with new data."
 msgstr "تم بنجاح. تم تحديث حجز%1$d باستخدام بيانات جديدة."
 
-#: includes/i-cal/importer.php:158
+#: includes/i-cal/importer.php:176
 msgid "Cannot import new event. Dates from %1$s to %2$s are partially blocked by booking %3$s."
 msgid_plural "Cannot import new event. Dates from %1$s to %2$s are partially blocked by bookings %3$s."
 msgstr[0] "لا يمكن استيراد حدث جديد. يتم حظر التواريخ من %1$s إلى %2$s جزئيًا عن طريق حجز %3$s."
@@ -5936,7 +5961,7 @@ msgstr[3] "لا يمكن استيراد بعض الأحداث الجديدة. ي
 msgstr[4] "لا يمكن استيراد العديد من الأحداث الجديدة. يتم حظر التواريخ من %1$s إلى %2$s جزئيًا عن طريق حجز %3$s."
 msgstr[5] "لا يمكن استيراد حدث جديد. يتم حظر التواريخ من %1$s إلى %2$s جزئيًا بواسطة حجز %3$s."
 
-#: includes/i-cal/importer.php:208
+#: includes/i-cal/importer.php:229
 msgid "Booking imported with UID %1$s.<br />Summary: %2$s.<br />Description: %3$s.<br />Source: %4$s."
 msgstr "الحجز المستورد باستخدام بطاقة تعريف فريدة %1$s.<br />الملخص: %2$s.<br />الوصف: %3$s.<br />المصدر: %4$s."
 
@@ -5972,7 +5997,7 @@ msgstr "توسيع الكل"
 msgid "Collapse All"
 msgstr "تصغير الكل"
 
-#: includes/i-cal/logs-handler.php:184
+#: includes/i-cal/logs-handler.php:135
 msgid "All done! %1$d booking was successfully added."
 msgid_plural "All done! %1$d bookings were successfully added."
 msgstr[0] "تم إجراء كل شيء! تمت إضافة الحجز %1$d بنجاح."
@@ -5982,7 +6007,7 @@ msgstr[3] "تم إجراء كل شيء! تمت إضافة بعض الحجوزا�
 msgstr[4] "تم إجراء كل شيء! تمت إضافة العديد من الحجوزات %1$d بنجاح."
 msgstr[5] "تم إجراء كل شيء! تم إضافة الحجز %1$d بنجاح."
 
-#: includes/i-cal/logs-handler.php:185
+#: includes/i-cal/logs-handler.php:136
 msgid " There was %2$d failure."
 msgid_plural " There were %2$d failures."
 msgstr[0] " حدث %2$d عطل."
@@ -7334,7 +7359,7 @@ msgstr "تم تحميل هذا النوع من السكن"
 #: includes/post-types/room-type-cpt.php:84
 msgctxt "slug"
 msgid "accommodation"
-msgstr ""
+msgstr "accommodation"
 
 #: includes/post-types/room-type-cpt.php:109
 msgid "Accommodation Categories"
@@ -7405,7 +7430,7 @@ msgstr "الاقسام"
 #: includes/post-types/room-type-cpt.php:139
 msgctxt "slug"
 msgid "accommodation-category"
-msgstr ""
+msgstr "accommodation-category"
 
 #: includes/post-types/room-type-cpt.php:164
 msgid "Accommodation Tags"
@@ -7476,7 +7501,7 @@ msgstr "الوسوم"
 #: includes/post-types/room-type-cpt.php:193
 msgctxt "slug"
 msgid "accommodation-tag"
-msgstr ""
+msgstr "accommodation-tag"
 
 #: includes/post-types/room-type-cpt.php:218
 #: includes/post-types/room-type-cpt.php:233
@@ -7543,7 +7568,7 @@ msgstr "لا توجد مرافق‬."
 #: includes/post-types/room-type-cpt.php:248
 msgctxt "slug"
 msgid "accommodation-facility"
-msgstr ""
+msgstr "accommodation-facility"
 
 #: includes/post-types/room-type-cpt.php:287
 msgid "State the age or disable children in <a href=\"%s\">settings</a>."
@@ -7703,7 +7728,7 @@ msgstr "تم التحميل على السيرفر"
 #: includes/post-types/service-cpt.php:121
 msgctxt "slug"
 msgid "services"
-msgstr ""
+msgstr "services"
 
 #: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
@@ -7748,7 +7773,7 @@ msgstr "الإيرادات (بيتا)"
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:76
+#: includes/views/shortcodes/checkout-view.php:84
 msgid "Apply"
 msgstr "تطبيق"
 
@@ -7951,31 +7976,36 @@ msgstr "أزرق داكن"
 msgid "Turquoise"
 msgstr "فيروزي"
 
-#: includes/shortcodes/account-shortcode.php:199
+#: includes/shortcodes/account-shortcode.php:198
+#: includes/views/shortcodes/checkout-view.php:21
+msgid "Invalid login or password."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:207
 msgid "Account data updated."
 msgstr "تم تحديث بيانات الحساب."
 
-#: includes/shortcodes/account-shortcode.php:205
+#: includes/shortcodes/account-shortcode.php:213
 msgid "Password changed."
 msgstr "تم تغيير كلمة المرور."
 
-#: includes/shortcodes/account-shortcode.php:216
+#: includes/shortcodes/account-shortcode.php:224
 msgid "Dashboard"
 msgstr "لوحة المعلومات"
 
-#: includes/shortcodes/account-shortcode.php:218
+#: includes/shortcodes/account-shortcode.php:226
 msgid "Account"
 msgstr "الحساب"
 
-#: includes/shortcodes/account-shortcode.php:219
+#: includes/shortcodes/account-shortcode.php:227
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: includes/shortcodes/account-shortcode.php:255
+#: includes/shortcodes/account-shortcode.php:263
 msgid "Passwords do not match."
 msgstr "كلمتا المرور غير متطابقتين."
 
-#: includes/shortcodes/account-shortcode.php:258
+#: includes/shortcodes/account-shortcode.php:266
 msgid "Please, provide a valid current password."
 msgstr "يرجى إدخال كلمة مرور صالحة."
 
@@ -8000,7 +8030,7 @@ msgstr "بيانات الدفع والمغادرة غير صالحة."
 msgid "Payment method is not valid."
 msgstr "طريقة الدفع غير صالحة."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:172
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:174
 msgid "Accommodation count is not valid."
 msgstr "الغرفة غير صالحة."
 
@@ -8104,34 +8134,34 @@ msgstr[5] "‫من %d الأقامة المتوفر."
 msgid "Book"
 msgstr "حجز"
 
-#: includes/users-and-roles/customers.php:281
-#: includes/users-and-roles/customers.php:371
+#: includes/users-and-roles/customers.php:289
+#: includes/users-and-roles/customers.php:379
 msgid "Please, provide a valid email."
 msgstr "يرجى إدخال عنوان بريد الكتروني صحيح."
 
-#: includes/users-and-roles/customers.php:309
+#: includes/users-and-roles/customers.php:317
 msgid "Could not create a customer."
 msgstr "تعذر إنشاء عميل."
 
-#: includes/users-and-roles/customers.php:367
+#: includes/users-and-roles/customers.php:375
 msgid "Could not retrieve a customer."
 msgstr "تعذر استرداد عميل."
 
-#: includes/users-and-roles/customers.php:520
-#: includes/users-and-roles/customers.php:566
+#: includes/users-and-roles/customers.php:528
+#: includes/users-and-roles/customers.php:574
 msgid "Please, provide a valid Customer ID."
 msgstr "يرجى إدخال معرِّف عميل صالح."
 
-#: includes/users-and-roles/customers.php:552
+#: includes/users-and-roles/customers.php:560
 msgid "A database error."
 msgstr "خطأ في قاعدة البيانات."
 
-#: includes/users-and-roles/customers.php:572
+#: includes/users-and-roles/customers.php:580
 msgid "No customer was deleted."
 msgstr "لم يتم حذف أي عميل."
 
-#: includes/users-and-roles/customers.php:681
-#: includes/views/shortcodes/checkout-view.php:22
+#: includes/users-and-roles/customers.php:689
+#: includes/views/shortcodes/checkout-view.php:30
 msgid "An account with this email already exists. Please, log in."
 msgstr "الحساب المسجل بهذا البريد الإلكتروني موجود بالفعل. يرجى تسجيل الدخول."
 
@@ -8245,10 +8275,6 @@ msgstr "جميع التواريخ"
 msgid "Discount"
 msgstr "الخصم"
 
-#: includes/views/booking-view.php:138
-msgid "Accommodation Subtotal"
-msgstr "المبلغ الإجمالي للإقامة"
-
 #: includes/views/booking-view.php:158
 msgid "Accommodation Taxes Subtotal"
 msgstr "إجمالي ضرائب الإقامة"
@@ -8262,10 +8288,6 @@ msgstr "إجمالي ضرائب الإقامة"
 #: assets/blocks/blocks.js:1126
 msgid "Details"
 msgstr "التفاصيل"
-
-#: includes/views/booking-view.php:189
-msgid "Services Subtotal"
-msgstr "مجموع الخدمات الفرعية"
 
 #: includes/views/booking-view.php:211
 msgid "Service Taxes Subtotal"
@@ -8296,7 +8318,7 @@ msgid "Taxes"
 msgstr "الضرائب"
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:75
+#: includes/views/shortcodes/checkout-view.php:83
 msgid "Coupon Code:"
 msgstr "رمز قسيمة الخصم:"
 
@@ -8314,7 +8336,7 @@ msgid "Accommodation:"
 msgstr "الإقامة:"
 
 #: includes/views/edit-booking/checkout-view.php:160
-#: includes/views/shortcodes/checkout-view.php:258
+#: includes/views/shortcodes/checkout-view.php:266
 #: template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
@@ -8389,82 +8411,82 @@ msgstr[3] "x %d  بالغين"
 msgstr[4] "x %d  بالغين"
 msgstr[5] "x %d  بالغين"
 
-#: includes/views/shortcodes/checkout-view.php:40
+#: includes/views/shortcodes/checkout-view.php:48
 msgid "Returning customer?"
 msgstr "عودة العميل؟"
 
-#: includes/views/shortcodes/checkout-view.php:41
+#: includes/views/shortcodes/checkout-view.php:49
 msgid "Click here to log in"
 msgstr "انقر هنا لتسجيل الدخول"
 
 #. translators: 1 - username;
-#: includes/views/shortcodes/checkout-view.php:57
+#: includes/views/shortcodes/checkout-view.php:65
 #: templates/account/dashboard.php:28
 msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)."
 msgstr "مرحبًا بك %1$s (لست %1$s? <a href=\"%2$s\">تسجيل الخروج</a>)."
 
-#: includes/views/shortcodes/checkout-view.php:168
+#: includes/views/shortcodes/checkout-view.php:176
 msgid "Accommodation #%d"
 msgstr "الإقامة #%d"
 
-#: includes/views/shortcodes/checkout-view.php:172
+#: includes/views/shortcodes/checkout-view.php:180
 msgid "Accommodation Type:"
 msgstr "نوع السكن:"
 
-#: includes/views/shortcodes/checkout-view.php:312
+#: includes/views/shortcodes/checkout-view.php:320
 msgid "Choose Rate"
 msgstr "اختر المعدل"
 
-#: includes/views/shortcodes/checkout-view.php:379
+#: includes/views/shortcodes/checkout-view.php:387
 msgid "Choose Additional Services"
 msgstr "اختر خدمات إضافية"
 
-#: includes/views/shortcodes/checkout-view.php:408
+#: includes/views/shortcodes/checkout-view.php:416
 msgid "for "
 msgstr "من أجل"
 
-#: includes/views/shortcodes/checkout-view.php:419
+#: includes/views/shortcodes/checkout-view.php:427
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr " الضيف (الضيوف)"
 
-#: includes/views/shortcodes/checkout-view.php:440
+#: includes/views/shortcodes/checkout-view.php:448
 msgid "time(s)"
 msgstr "الوقت (الأوقات)"
 
-#: includes/views/shortcodes/checkout-view.php:488
+#: includes/views/shortcodes/checkout-view.php:496
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr "الشروط والأحكام"
 
-#: includes/views/shortcodes/checkout-view.php:491
+#: includes/views/shortcodes/checkout-view.php:499
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr "لقد قرأت وقبلت %s"
 
-#: includes/views/shortcodes/checkout-view.php:529
+#: includes/views/shortcodes/checkout-view.php:537
 msgid "Your Information"
 msgstr "معلوماتك"
 
-#: includes/views/shortcodes/checkout-view.php:532
+#: includes/views/shortcodes/checkout-view.php:540
 #: template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "تليها الحقول المطلوبة %s"
 
-#: includes/views/shortcodes/checkout-view.php:665
+#: includes/views/shortcodes/checkout-view.php:673
 msgid "Create an account"
 msgstr "إنشاء حساب"
 
-#: includes/views/shortcodes/checkout-view.php:684
+#: includes/views/shortcodes/checkout-view.php:692
 msgid "Payment Method"
 msgstr "طريقة الدفع"
 
-#: includes/views/shortcodes/checkout-view.php:689
+#: includes/views/shortcodes/checkout-view.php:697
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "‫عذرا، ليس هناك طريقة دفع متاحة."
 
-#: includes/views/shortcodes/checkout-view.php:783
+#: includes/views/shortcodes/checkout-view.php:791
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -8476,33 +8498,33 @@ msgstr "‫عذرا، ليس هناك طريقة دفع متاحة."
 msgid "Total Price:"
 msgstr "السعر الكلي:"
 
-#: includes/views/shortcodes/checkout-view.php:794
+#: includes/views/shortcodes/checkout-view.php:802
 msgid "Deposit:"
 msgstr "الإيداع:"
 
-#: includes/views/shortcodes/checkout-view.php:813
+#: includes/views/shortcodes/checkout-view.php:821
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "تسجيل الوصول:"
 
-#: includes/views/shortcodes/checkout-view.php:820
+#: includes/views/shortcodes/checkout-view.php:828
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr "من"
 
-#: includes/views/shortcodes/checkout-view.php:836
+#: includes/views/shortcodes/checkout-view.php:844
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "إنهاء إجراءات المغادرة:"
 
-#: includes/views/shortcodes/checkout-view.php:843
+#: includes/views/shortcodes/checkout-view.php:851
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "حتى"
 
-#: includes/views/shortcodes/checkout-view.php:919
+#: includes/views/shortcodes/checkout-view.php:927
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "احجز الآن"

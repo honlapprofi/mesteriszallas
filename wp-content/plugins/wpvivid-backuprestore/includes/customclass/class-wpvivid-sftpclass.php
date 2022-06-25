@@ -365,6 +365,8 @@ class WPvivid_SFTPClass extends WPvivid_Remote{
             $ret['error']="Warning: The password is required.";
             return $ret;
         }
+        $this->options['password'] = base64_encode($this->options['password']);
+        $this->options['is_encrypt'] = 1;
 
         if(!isset($this->options['port']))
         {

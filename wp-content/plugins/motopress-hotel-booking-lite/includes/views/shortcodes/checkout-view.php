@@ -478,16 +478,24 @@ class CheckoutView {
 	}
 
 	public static function renderTermsAndConditions(){
+
 		$termsPageId = MPHB()->settings()->pages()->getTermsAndConditionsPageId();
+		$isOpenTermsInNewWindiw = MPHB()->settings()->pages()->getOpenTermsAndConditionsInNewWindow();
 		$termsHtml   = MPHB()->settings()->main()->getTermsAndConditionsText();
 
 		if ( !empty( $termsHtml ) ) {
 			?>
 			<section class="mphb-checkout-terms-wrapper mphb-checkout-section">
-				<div class="mphb-terms-and-conditions">
-					<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo $termsHtml; ?>
-				</div>
+
+				<?php if ( !$isOpenTermsInNewWindiw ) { ?>
+
+					<div class="mphb-terms-and-conditions">
+						<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo $termsHtml; ?>
+					</div>
+
+				<?php } ?>
+
 				<p class="mphb-terms-and-conditions-accept">
 					<label>
 						<input type="checkbox" id="mphb_accept_terms" name="mphb_accept_terms" value="1" required="required" />

@@ -26,6 +26,13 @@ class PLL_WPML_Config {
 	protected $xmls;
 
 	/**
+	 * The list of xml files.
+	 *
+	 * @var string[]
+	 */
+	protected $files;
+
+	/**
 	 * Constructor
 	 *
 	 * @since 1.0
@@ -41,7 +48,7 @@ class PLL_WPML_Config {
 	 *
 	 * @since 1.7
 	 *
-	 * @return object
+	 * @return PLL_WPML_Config
 	 */
 	public static function instance() {
 		if ( empty( self::$instance ) ) {
@@ -62,7 +69,6 @@ class PLL_WPML_Config {
 		$files = $this->get_files();
 
 		if ( ! empty( $files ) ) {
-			add_filter( 'site_status_test_php_modules', array( $this, 'site_status_test_php_modules' ) ); // Require simplexml in Site health.
 
 			// Read all files.
 			if ( extension_loaded( 'simplexml' ) ) {
@@ -113,7 +119,12 @@ class PLL_WPML_Config {
 	 *
 	 * @return array
 	 */
-	protected function get_files() {
+	public function get_files() {
+
+		if ( ! empty( $this->files ) ) {
+			return $this->files;
+		}
+
 		$files = array();
 
 		// Plugins
@@ -142,23 +153,9 @@ class PLL_WPML_Config {
 			$files['Polylang'] = $file;
 		}
 
-		return $files;
-	}
+		$this->files = $files;
 
-	/**
-	 * Requires the simplexml PHP module when a wpml-config.xml has been found.
-	 *
-	 * @since 3.1
-	 *
-	 * @param array $modules An associative array of modules to test for.
-	 * @return array
-	 */
-	public function site_status_test_php_modules( $modules ) {
-		$modules['simplexml'] = array(
-			'extension' => 'simplexml',
-			'required'  => true,
-		);
-		return $modules;
+		return $files;
 	}
 
 	/**
@@ -270,9 +267,9 @@ class PLL_WPML_Config {
 	 *
 	 * @since 2.8
 	 *
-	 * @param string $context The group in which the strings will be registered.
-	 * @param string $name    Option name.
-	 * @param object $key     XML node.
+	 * @param string           $context The group in which the strings will be registered.
+	 * @param string           $name    Option name.
+	 * @param SimpleXMLElement $key     XML node.
 	 * @return void
 	 */
 	protected function register_or_translate_option( $context, $name, $key ) {
@@ -285,8 +282,8 @@ class PLL_WPML_Config {
 	 *
 	 * @since 2.9
 	 *
-	 * @param object $key XML node.
-	 * @param array  $arr Array of option keys to translate.
+	 * @param SimpleXMLElement $key XML node.
+	 * @param array            $arr Array of option keys to translate.
 	 * @return array
 	 */
 	protected function xml_to_array( $key, &$arr = array() ) {

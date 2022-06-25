@@ -102,7 +102,7 @@ class WPvivid_Fresh_Install_Create_UI_Display_Free
                 $plugin_info[$slug] = $this->get_theme_plugin_info($path . DIRECTORY_SEPARATOR . $slug);
                 $plugin_info[$slug]['Name'] = $plugin['Name'];
                 $plugin_info[$slug]['slug'] = $slug;
-                if($slug=='wpvivid-staging')
+                if($slug=='wpvivid-backuprestore')
                 {
                     $plugin_info[$slug]['active'] = 1;
                     $plugin_info[$slug]['disable'] = 1;
@@ -183,6 +183,17 @@ class WPvivid_Fresh_Install_Create_UI_Display_Free
         return $size;
     }
 
+    public function get_database_home_url()
+    {
+        $home_url = home_url();
+        global $wpdb;
+        $home_url_sql = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->options WHERE option_name = %s", 'home' ) );
+        foreach ( $home_url_sql as $home ){
+            $home_url = $home->option_value;
+        }
+        return untrailingslashit($home_url);
+    }
+
     public function output_create_wp_page()
     {
         $options=get_option('wpvivid_staging_options',array());
@@ -197,7 +208,7 @@ class WPvivid_Fresh_Install_Create_UI_Display_Free
 
         update_option('wpvivid_current_running_staging_task','');
         update_option('wpvivid_staging_task_cancel', false);
-        $home_url   = home_url();
+        $home_url   = $this->get_database_home_url();
         $admin_url  = admin_url();
         $admin_name = basename($admin_url);
         $admin_name = trim($admin_name, '/');

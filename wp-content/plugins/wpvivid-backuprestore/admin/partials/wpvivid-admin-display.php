@@ -69,7 +69,7 @@ foreach ($page_array as $page_name){
     <?php do_action('wpvivid_add_schedule_notice'); ?>
     <div id="wpvivid_remote_notice"></div>
 </div>
-<h2 class="nav-tab-wrapper">
+<h2 class="nav-tab-wrapper wpvivid-custom-table-manager">
     <?php
     do_action('wpvivid_backuprestore_add_tab');
     ?>
@@ -89,7 +89,8 @@ foreach ($page_array as $page_name){
                 <div class="meta-box-sortables">
                     <?php
                     $html = '';
-                    echo apply_filters('wpvivid_add_side_bar' ,$html, true);
+                    //echo apply_filters('wpvivid_add_side_bar' ,$html, true);
+                    do_action('wpvivid_add_side_bar' ,$html, true);
                     ?>
                 </div>
             </div>

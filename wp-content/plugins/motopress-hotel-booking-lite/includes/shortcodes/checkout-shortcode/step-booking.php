@@ -539,8 +539,6 @@ class StepBooking extends Step {
 	 * @return int|\WP_Error
 	 */
 	protected function createCustomer() {
-		$bookingCustomer = $this->booking->getCustomer();
-		
-		return MPHB()->customers()->createCustomerOnBooking( $bookingCustomer );
+		return MPHB()->customers()->createCustomerOnBooking( $this->booking, false );
 	}
 }

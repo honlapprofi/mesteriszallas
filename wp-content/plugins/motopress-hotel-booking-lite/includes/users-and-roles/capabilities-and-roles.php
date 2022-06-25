@@ -150,7 +150,7 @@ class CapabilitiesAndRoles
         );
 
         $editor = get_role('editor'); // Get capabilities from Editor's \WP_Role
-        $capabilities = array_keys($editor->capabilities);
+        $capabilities = null != $editor ? array_keys($editor->capabilities) : [];
 
         if (!empty($capabilities)) {
             foreach ($capabilities as $cap) {
@@ -162,7 +162,7 @@ class CapabilitiesAndRoles
         }
 
         $contributor = get_role('subscriber'); // Get capabilities for Contributor's \WP_Role
-        $capabilities = array_keys($contributor->capabilities);
+        $capabilities = null != $contributor ? array_keys($contributor->capabilities) : [];
 
         if (!empty($capabilities)) {
             foreach ($capabilities as $cap) {

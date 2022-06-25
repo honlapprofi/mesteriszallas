@@ -36,11 +36,11 @@
 
 		var btInitToken = function () {
 			// payment screen?
-			var payment = $( '.cn-sidebar form[data-action="payment"]' );
+			var paymentEl = $( '.cn-sidebar form[data-action="payment"]' );
 
 			// init braintree
-			if ( payment.length ) {
-				payment.addClass( 'cn-form-disabled' );
+			if ( paymentEl.length ) {
+				paymentEl.addClass( 'cn-form-disabled' );
 
 				if ( typeof braintree !== 'undefined' ) {
 					return $.ajax( {
@@ -135,7 +135,7 @@
 
 				// check hosted fields
 				Object.keys( state.fields ).forEach( function ( field ) {
-					if ( !state.fields[field].isValid ) {
+					if ( ! state.fields[field].isValid ) {
 						$( state.fields[field].container ).addClass( 'braintree-hosted-fields-invalid' );
 
 						invalidForm = true;
@@ -155,6 +155,10 @@
 				}
 
 				hostedFieldsInstance.tokenize( function ( err, payload ) {
+					
+					console.log( 'btHostedFieldsInstance' );
+					console.log( payload );
+					
 					if ( err ) {
 						cnDisplayError( cnWelcomeArgs.error );
 
@@ -162,8 +166,9 @@
 					} else {
 						form.addClass( 'cn-payment-in-progress' );
 						form.find( 'input[name="payment_nonce"]' ).val( payload.nonce );
+						form.find( 'input[name="cn_payment_identifier"]' ).val( payload.details.lastFour );
 
-						$( '#cn_submit_paid' ).find( '.cn-screen-button[data-screen="4"]' ).trigger( 'click' );
+						$( '#cn_submit_pro' ).find( '.cn-screen-button[data-screen="4"]' ).trigger( 'click' );
 					}
 				} );
 
@@ -210,13 +215,18 @@
 					// console.log( 'onApprove' );
 
 					return paypalCheckoutInstance.tokenizePayment( data ).then( function ( payload ) {
+						
+						console.log( 'btPaypalCheckoutInstance' );
+						console.log( payload );
+						
 						form.addClass( 'cn-payment-in-progress' );
 						form.find( 'input[name="payment_nonce"]' ).val( payload.nonce );
+						form.find( 'input[name="cn_payment_identifier"]' ).val( payload.details.email );
 
 						// console.log( 'onApprove inside' );
-						// console.log( $( '#cn_submit_paid' ).find( '.cn-screen-button[data-screen="4"]' ) );
+						// console.log( $( '#cn_submit_pro' ).find( '.cn-screen-button[data-screen="4"]' ) );
 
-						$( '#cn_submit_paid' ).find( '.cn-screen-button[data-screen="4"]' ).trigger( 'click' );
+						$( '#cn_submit_pro' ).find( '.cn-screen-button[data-screen="4"]' ).trigger( 'click' );
 					} );
 				},
 				onCancel: function ( data ) {
@@ -256,10 +266,10 @@
 			form.find( '.cn-form-feedback' ).html( '<p class="cn-error">' + message + '</p>' ).removeClass( 'cn-hidden' );
 		}
 
-		var cnWelcomeScreen = function ( e ) {
-			var screen = $( e.target ).data( 'screen' );
-			var steps = [ 1, 2, 3, 4 ];
-			var sidebars = [ 'login', 'register', 'configure', 'payment' ];
+		var cnWelcomeScreen = function ( target ) {
+			var screen = $( target ).data( 'screen' );
+			var steps = [1, 2, 3, 4];
+			var sidebars = ['login', 'register', 'configure', 'payment'];
 
 			// continue with screen loading
 			var requestData = {
@@ -267,11 +277,11 @@
 				nonce: cnWelcomeArgs.nonce
 			};
 
-			if ( $.inArray( screen, steps ) != -1 ) {
+			if ( $.inArray( screen, steps ) != - 1 ) {
 				var container = $( '.cn-welcome-wrap' );
 
 				requestData.screen = screen;
-			} else if ( $.inArray( screen, sidebars ) != -1 ) {
+			} else if ( $.inArray( screen, sidebars ) != - 1 ) {
 				var container = $( '.cn-sidebar' );
 
 				requestData.screen = screen;
@@ -321,7 +331,7 @@
 			$( form[0] ).serializeArray().map( function ( x ) {
 				// exception for checkboxes
 				if ( x.name === 'cn_laws' ) {
-					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [ ];
+					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [];
 
 					arrayVal.push( x.value );
 
@@ -352,9 +362,9 @@
 
 			// no form?
 			if ( form.length === 0 )
-				return cnWelcomeScreen( e );
+				return cnWelcomeScreen( e.target );
 
-			var formData = { };
+			var formData = {};
 			var formDataset = $( form[0] ).data();
 			var formAction = formDataset.hasOwnProperty( 'action' ) ? formDataset.action : '';
 
@@ -362,7 +372,7 @@
 			$( form[0] ).serializeArray().map( function ( x ) {
 				// exception for checkboxes
 				if ( x.name === 'cn_laws' ) {
-					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [ ];
+					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [];
 
 					arrayVal.push( x.value );
 
@@ -372,27 +382,87 @@
 				}
 			} );
 
-			// console.log( form[0] );
-			// console.log( formData );
-			// console.log( formAction );
-
 			// payment?
 			if ( formAction === 'payment' ) {
-				if ( formData.plan !== 'free' ) {
+			
+				// free
+				if ( formData.plan === 'free' ) {
+					// load screen
+					cnWelcomeScreen( e.target );
+
+					return false;
+					// licesne
+				} else if ( formData.plan === 'license' ) {
+					// payment screen?
+					var paymentEl = $( '.cn-sidebar form[data-action="payment"]' );
+
+					// disable form
+					if ( paymentEl.length )
+						paymentEl.addClass( 'cn-form-disabled' );
+				
+					// get subscription ID
+					var subscriptionID = formData.hasOwnProperty( 'cn_subscription_id' ) ? parseInt( formData.cn_subscription_id ) : 0;
+
+					// assign license request
+					result = $.ajax( {
+						url: cnWelcomeArgs.ajaxURL,
+						type: 'POST',
+						dataType: 'json',
+						data: {
+							action: 'cn_api_request',
+							request: 'use_license',
+							subscriptionID: subscriptionID,
+							nonce: cnWelcomeArgs.nonce
+						}
+					} );
+					
+					// process license
+					result.done( function ( response ) {
+						// error
+						if ( response.hasOwnProperty( 'error' ) ) {
+							cnDisplayError( response.error, $( form[0] ) );
+							
+							// console.log( response.error );
+
+							return false;
+							// message
+						} else {
+							var targetEl = $( '#cn_submit_license' ).find( '.cn-screen-button[data-screen="4"]' );
+
+							// open next screen
+							cnWelcomeScreen( targetEl );
+
+							return result;
+						}
+					} );
+					
+					// remove spinner
+					result.always( function ( response ) {
+						if ( $( e.target ).find( '.cn-spinner' ).length )
+							$( e.target ).find( '.cn-spinner' ).removeClass( 'spin' );
+						
+						// enable form
+						if ( paymentEl.length )
+							paymentEl.removeClass( 'cn-form-disabled' );
+					} );
+						
+				// pro
+				} else {
 					// only credit cards
 					if ( $( form[0] ).find( 'input[name="payment_nonce"]' ).val() === '' ) {
 						form.trigger( 'submit' );
 
 						return false;
 					}
-				} else {
-					// load screen
-					cnWelcomeScreen( e );
-
-					return false;
 				}
+				
+			// other forms
 			} else
 				e.preventDefault();
+			
+			// break here on license payment
+			if ( formAction === 'payment' && formData.plan === 'license' )
+				return result;
 
 			// get form and process it
 			result = cnWelcomeForm( form );
@@ -415,6 +485,37 @@
 						case 'login' :
 						// register complete, go to success or billing
 						case 'register' :
+
+							// if there are any subscriptions
+							if ( response.hasOwnProperty( 'subscriptions' ) ) {
+								var subscriptions = response.subscriptions;
+
+								if ( subscriptions.length > 0 ) {
+									var available = 0;
+
+									for ( i = 0; i < subscriptions.length; i ++ ) {
+										var subscriptionID = subscriptions[i].subscriptionid;
+										var licensesAvailable = parseInt( subscriptions[i].availablelicense );
+										var subscriptionText = subscriptions[i].VendorSubscriptionID + ' - ' + licensesAvailable + ' ' + cnWelcomeArgs.licensesAvailable;
+
+										var subscriptionOption = $( '<option value="' + subscriptionID + '">' + subscriptionText + '</option>' );
+
+										if ( licensesAvailable == 0 ) {
+											$( subscriptionOption ).attr( 'disabled', 'true');
+										}
+
+										$( '#cn-subscription-select' ).append( subscriptionOption );
+
+										available += licensesAvailable;
+									}
+
+									if ( available > 0 ) {
+										$( '.cn-pricing-plan-license' ).removeClass( 'cn-disabled' );
+										$( '.cn-pricing-plan-license' ).find( '.cn-plan-amount' ).text( available );
+									}
+								}
+							}
+
 							var accountPlan = formData.hasOwnProperty( 'plan' ) ? formData.plan : 'free';
 
 							// trigger payment
@@ -435,7 +536,7 @@
 						case 'configure' :
 						default :
 							// load screen
-							cnWelcomeScreen( e );
+							cnWelcomeScreen( e.target );
 							break;
 					}
 				}
@@ -457,7 +558,7 @@
 
 		//
 		$( document ).on( 'screen-loaded', function () {
-			var configureFields = $( '#cn-form-configure' ).serializeArray() || [ ];
+			var configureFields = $( '#cn-form-configure' ).serializeArray() || [];
 			var frame = window.frames[ 'cn_iframe_id' ];
 
 			if ( configureFields.length > 0 ) {
@@ -496,11 +597,11 @@
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'position', value: val } );
+			frame.contentWindow.postMessage( {call: 'position', value: val} );
 		} );
-		
+
 		$( document ).on( 'change', 'input[name="cn_laws"]', function () {
-			var val = [ ];
+			var val = [];
 
 			$( 'input[name="cn_laws"]:checked' ).each( function () {
 				val.push( $( this ).val() );
@@ -508,11 +609,11 @@
 
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'laws', value: val } );
+			frame.contentWindow.postMessage( {call: 'laws', value: val} );
 		} );
-		
+
 		$( document ).on( 'change', 'input[name="cn_naming"]', function () {
-			var val = [ ];
+			var val = [];
 
 			$( 'input[name="cn_naming"]:checked' ).each( function () {
 				val.push( $( this ).val() );
@@ -520,109 +621,185 @@
 
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'naming', value: val } );
+			frame.contentWindow.postMessage( {call: 'naming', value: val} );
 		} );
-		
+
 		$( document ).on( 'change', 'input[name="cn_privacy_paper"]', function () {
 			var val = $( this ).prop( 'checked' );
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'privacy_paper', value: val } );
+			frame.contentWindow.postMessage( {call: 'privacy_paper', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_privacy_contact"]', function () {
 			var val = $( this ).prop( 'checked' );
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'privacy_contact', value: val } );
+			frame.contentWindow.postMessage( {call: 'privacy_contact', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_primary"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_primary', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_primary', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_background"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_background', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_background', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_border"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_border', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_border', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_text"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_text', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_text', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_heading"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_heading', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_heading', value: val} );
 		} );
 
 		$( document ).on( 'change', 'input[name="cn_color_button_text"]', function () {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
-			frame.contentWindow.postMessage( { call: 'color_button_text', value: val } );
+			frame.contentWindow.postMessage( {call: 'color_button_text', value: val} );
 		} );
 
-		// plan selection
-		$( document ).on( 'change', 'input[name="plan"]', function () {
-			var availablePlans = [ 'free', 'monthly', 'yearly' ];
+		// handle monthly / yearly payment plan
+		$( document ).on( 'change', 'input[name="cn_pricing_type"]', function () {
+			// pricing plans
+			var plansMonthly = cnWelcomeArgs.pricingMonthly;
+			var plansYearly = cnWelcomeArgs.pricingYearly;
+
+			var pricingOptions = $( '#cn-pricing-plans option' );
+			var checked = $( 'input[name="cn_pricing_type"]:checked' ).val();
+
+			var names = Object.keys( checked === 'yearly' ? plansYearly : plansMonthly );
+			var pricing = Object.values( checked === 'yearly' ? plansYearly : plansMonthly );
+
+			if ( checked === 'yearly' ) {
+				$( '.cn-plan-period' ).text( cnWelcomeArgs.paidYear );
+			} else {
+				$( '.cn-plan-period' ).text( cnWelcomeArgs.paidMonth );
+			}
+
+			// replace options
+			var i = 0;
+
+			for ( var property in pricing ) {
+				var option = pricingOptions[i];
+
+				// console.log( option );
+
+				$( option ).val( names[i] );
+				$( option ).attr( 'data-price', pricing[i] );
+				i ++;
+			}
+
+			// trigger plan selection
+			$( 'select[name="cn_pricing_plan"]' ).trigger( 'change' );
+
+		} );
+
+		// handle pro plan selection
+		$( document ).on( 'change', 'select[name="cn_pricing_plan"]', function () {
+			var el = $( '#cn-pricing-plans' );
+			var selected = $( el ).find( 'option:selected' );
+
+			// update price
+			$( '.cn-pricing-plan-pro .cn-plan-amount' ).text( $( selected ).attr( 'data-price' ) );
+
+			var availablePlans = ['free'];
+
+			// merge with pro plans
+			availablePlans = availablePlans.concat( Object.keys( cnWelcomeArgs.pricingMonthly ) );
+			availablePlans = availablePlans.concat( Object.keys( cnWelcomeArgs.pricingYearly ) );
 
 			var input = $( this ),
 				inputVal = input.val();
 
-			inputVal = availablePlans.indexOf( inputVal ) != -1 ? inputVal : 'free';
+			inputVal = availablePlans.indexOf( inputVal ) != - 1 ? inputVal : 'free';
+
+			// console.log( inputVal );
 
 			if ( inputVal === 'free' ) {
 				$( '#cn_submit_free' ).removeClass( 'cn-hidden' );
-				$( '#cn_submit_paid' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).addClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-field-plan-free' ).prop( 'checked', true );
+				$( document ).find( '#cn-pricing-plan-free' ).prop( 'checked', true );
 			} else {
 				$( '#cn_submit_free' ).addClass( 'cn-hidden' );
-				$( '#cn_submit_paid' ).removeClass( 'cn-hidden' );
-			}
+				$( '#cn_submit_pro' ).removeClass( 'cn-hidden' );
 
-			$( document ).find( '.cn-pricing-item input[value="' + inputVal + '"' ).prop( 'checked', true );
+				$( document ).find( '#cn-field-plan-pro' ).val( inputVal ).prop( 'checked', true );
+				$( document ).find( '#cn-pricing-plan-pro' ).prop( 'checked', true );
+			}
+		} );
+
+		// handle free / pro / license selection
+		$( document ).on( 'change', 'input[name="plan"]', function () {
+			var input = $( this ),
+				inputVal = input.val();
+
+			if ( inputVal === 'free' ) {
+				$( '#cn_submit_free' ).removeClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_license' ).addClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-pricing-plan-free' ).prop( 'checked', true );
+			} else if ( inputVal === 'license' ) {
+				$( '#cn_submit_free' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_license' ).removeClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-pricing-plan-free' ).prop( 'checked', false );
+				$( document ).find( '#cn-pricing-plan-pro' ).prop( 'checked', false );
+			} else {
+				$( '#cn_submit_free' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).removeClass( 'cn-hidden' );
+				$( '#cn_submit_license' ).addClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-pricing-plan-pro' ).prop( 'checked', true );
+			}
 		} );
 
 		// highlight form
-		$( document ).on( 'click', 'input[name="cn_pricing_plan"]', function () {
+		$( document ).on( 'click', 'input[name="cn_pricing"]', function () {
 			$( '.cn-accordion .cn-accordion-item:first-child:not(.cn-collapsed)' ).focus();
 		} );
 
-		// select plan
-		$( document ).on( 'change', 'input[name="cn_pricing_plan"]', function () {
-			var availablePlans = [ 'free', 'monthly', 'yearly' ];
-
+		// select plan payment
+		$( document ).on( 'change', 'input[name="cn_pricing"]', function () {
 			var input = $( this ),
 				inputVal = input.val();
 
-			inputVal = availablePlans.indexOf( inputVal ) != -1 ? inputVal : 'free';
-
 			if ( inputVal === 'free' ) {
 				$( '#cn_submit_free' ).removeClass( 'cn-hidden' );
-				$( '#cn_submit_paid' ).addClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).addClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-field-plan-free' ).prop( 'checked', true );
 			} else {
 				$( '#cn_submit_free' ).addClass( 'cn-hidden' );
-				$( '#cn_submit_paid' ).removeClass( 'cn-hidden' );
+				$( '#cn_submit_pro' ).removeClass( 'cn-hidden' );
+
+				$( document ).find( '#cn-field-plan-pro' ).prop( 'checked', true );
 			}
-
-			$( document ).find( '#cn_field_plan_' + inputVal ).prop( 'checked', true );
-
 
 		} );
 
@@ -807,9 +984,9 @@
 
 	$( document ).ready( function () {
 		var welcome = false;
-		
+
 		welcome = cnGetUrlParam( 'welcome' );
-		
+
 		if ( welcome ) {
 			// modal
 			initModal();
@@ -828,7 +1005,7 @@
 			parameterName,
 			i;
 
-		for ( i = 0; i < urlVars.length; i++ ) {
+		for ( i = 0; i < urlVars.length; i ++ ) {
 			parameterName = urlVars[i].split( '=' );
 
 			if ( parameterName[0] === parameter ) {

@@ -402,8 +402,8 @@ class WPvivid_Staging_Copy_DB
                 $current   = get_option('active_plugins',array());
             }
 
-            if(!in_array('wpvivid-staging/wpvivid-staging.php',$current))
-                $current[] = 'wpvivid-staging/wpvivid-staging.php';
+            if(!in_array('wpvivid-backuprestore/wpvivid-backuprestore.php',$current))
+                $current[] = 'wpvivid-backuprestore/wpvivid-backuprestore.php.php';
             sort( $current );
             $value=serialize($current);
             $update_query = $db->prepare("UPDATE {$prefix}options SET option_value=%s WHERE option_name='active_plugins'" , $value);

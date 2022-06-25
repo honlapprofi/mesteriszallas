@@ -561,9 +561,6 @@ class Upgrader {
 	 */
 	public function stopSynchronization()
 	{
-		if (MPHB()->getQueuedSynchronizer()->isInProgress()) {
-			MPHB()->getQueuedSynchronizer()->abortAll();
-		}
 	}
 
     /**
@@ -818,7 +815,8 @@ class Upgrader {
 	public function alterTableSyncLogs() {
 		global $wpdb;
 
-		$wp_mphb_sync_logs = $wpdb->prefix . \MPHB\iCal\Logger::TABLE_NAME;
+		// MPHB\iCal\Logger::TABLE_NAME - there are no Logger in Lite version
+		$wp_mphb_sync_logs = $wpdb->prefix . 'mphb_sync_logs';
 
 		$wpdb->query( "ALTER TABLE {$wp_mphb_sync_logs} DROP COLUMN log_context" );
 		$wpdb->query( "ALTER TABLE {$wp_mphb_sync_logs} MODIFY COLUMN log_message VARCHAR(150)" );

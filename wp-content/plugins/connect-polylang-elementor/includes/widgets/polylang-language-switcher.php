@@ -164,7 +164,7 @@ class PolylangLanguageSwitcher extends Widget_Base {
 	 *
 	 * @uses pll_the_languages()
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		/** Content: Layout etc. */
 		$this->start_controls_section(

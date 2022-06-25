@@ -259,14 +259,14 @@ function wpvivid_add_page_storage_list()
                     var jsonarray = jQuery.parseJSON(data);
                     if (jsonarray.result === 'success')
                     {
-                        jQuery('input:text[option=edit-'+jsonarray.type+']').each(function(){
+                        /*jQuery('input:text[option=edit-'+jsonarray.type+']').each(function(){
                             var key = jQuery(this).prop('name');
                             jQuery(this).val(jsonarray[key]);
                         });
                         jQuery('input:password[option=edit-'+jsonarray.type+']').each(function(){
                             var key = jQuery(this).prop('name');
                             jQuery(this).val(jsonarray[key]);
-                        });
+                        });*/
                         jQuery('input:checkbox[option=edit-'+jsonarray.type+']').each(function() {
                             var key = jQuery(this).prop('name');
                             var value;

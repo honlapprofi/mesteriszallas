@@ -365,12 +365,15 @@ class Customers {
     
     /**
      * 
-     * @param \MPHB\Entities\Customer $bookingCustomer
+     * @deprecated 4.2.5 \MPHB\Entities\Customer $bookingCustomer
+     * @param \MPHB\Entities\Booking $booking 
      * @param bool $isAdmin Is admin booking or not
      * 
      * @return int|\WP_Error
      */
-    public function createCustomerOnBooking( $bookingCustomer, $isAdmin = false ) {
+    public function createCustomerOnBooking( $booking, $isAdmin = false ) {
+        $bookingCustomer = $booking->getCustomer();
+        
         if( ! $bookingCustomer ) {
 			return new \WP_Error( 'invalid_customer_object', __( 'Could not retrieve a customer.', 'motopress-hotel-booking' ) );
 		}
@@ -380,10 +383,10 @@ class Customers {
         }   
         
         if( ! $isAdmin ) {
-            return $this->createCustomerOnFrontend( $bookingCustomer );
+            return $this->createCustomerOnFrontend( $bookingCustomer, $booking );
         }
         
-        return $this->createdCustomerFromAdmin( $bookingCustomer );
+        return $this->createdCustomerFromAdmin( $bookingCustomer, $booking );
     }
  
     /**
@@ -392,7 +395,7 @@ class Customers {
      * 
      * @return int
      */
-    protected function createdCustomerFromAdmin( $bookingCustomer ) {
+    protected function createdCustomerFromAdmin( $bookingCustomer, $booking = null ) {
         $email = $bookingCustomer->getEmail();
         
         $customer = MPHB()->customers()->findBy( 'email', $email );
@@ -413,7 +416,7 @@ class Customers {
      * 
      * @return int|\WP_Error
      */
-    protected function createCustomerOnFrontend( $bookingCustomer ) {
+    protected function createCustomerOnFrontend( $bookingCustomer, $booking = null ) {
         $email = $bookingCustomer->getEmail();
         
         $user = wp_get_current_user();
@@ -441,8 +444,7 @@ class Customers {
         if( $customer ) {
             
             if( ! $customer->getUserId() && ( $autoCreateNewAccount || $createAccount ) ) {
-                
-                $customerUserId = $this->assignAccountOnBooking( $user, $email, $customer );
+                $customerUserId = $this->assignAccountOnBooking( $user, $email, $customer, $booking );
                 
                 if( $customerUserId ) {
                     $customer->setUserId( $customerUserId );
@@ -459,7 +461,7 @@ class Customers {
         $customer = MPHB()->customers()->convertFromEntity( $bookingCustomer );
         
         if( $autoCreateNewAccount || $createAccount ) {
-            $customerUserId = $this->assignAccountOnBooking( $user, $email, $customer );
+            $customerUserId = $this->assignAccountOnBooking( $user, $email, $customer, $booking );
             
             if( $customerUserId ) {
                 $customer->setUserId( $customerUserId );
@@ -621,7 +623,7 @@ class Customers {
      * 
      * @return int|null
      */
-    public function assignAccountOnBooking( $user, $email, $customer ) {
+    public function assignAccountOnBooking( $user, $email, $customer, $booking = null ) {
         if( is_int( $user ) ) {
             $user = get_user_by( 'id', $user );
         }
@@ -639,7 +641,7 @@ class Customers {
                  * 
                  * @since 4.2.0
                  */
-                do_action( 'mphb_send_customer_registration_email', $customer, $userAtts );
+                do_action( 'mphb_send_customer_registration_email', $customer, $userAtts, array(), $booking );
                 
                 return (int) $userAtts['user_id'];
             }

@@ -44,6 +44,7 @@ class ComposerStaticInit57e007bdf76a1fe336cb43b59389545b
         'PLL_Choose_Lang_Domain' => __DIR__ . '/../..' . '/frontend/choose-lang-domain.php',
         'PLL_Choose_Lang_Url' => __DIR__ . '/../..' . '/frontend/choose-lang-url.php',
         'PLL_Cookie' => __DIR__ . '/../..' . '/include/cookie.php',
+        'PLL_Db_Tools' => __DIR__ . '/../..' . '/include/db-tools.php',
         'PLL_Domain_Mapping' => __DIR__ . '/../..' . '/integrations/domain-mapping/domain-mapping.php',
         'PLL_Duplicate_Post' => __DIR__ . '/../..' . '/integrations/duplicate-post/duplicate-post.php',
         'PLL_Featured_Content' => __DIR__ . '/../..' . '/integrations/jetpack/featured-content.php',

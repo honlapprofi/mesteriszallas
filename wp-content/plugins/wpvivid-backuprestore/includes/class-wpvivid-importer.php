@@ -1779,7 +1779,7 @@ class WPvivid_media_importer
 
         if(!file_exists($new_file))
         {
-            return new WP_Error( 'import_file_error', __('File not exist file:'.$new_file, 'wpvivid-backuprestore') );
+            return new WP_Error( 'import_file_error', __('File not exist, file:'.$new_file, 'wpvivid-backuprestore') );
         }
 
         return apply_filters(

@@ -2,10 +2,10 @@
 Contributors: rankmath
 Plugin link: https://rankmath.com/?utm_source=LP&utm_campaign=WP
 Tags: seo, sitemap, google search console, schema, redirection, WordPress SEO
-Tested up to: 5.9
+Tested up to: 6.0
 Requires at least: 5.6
 Requires PHP: 7.2
-Stable tag: 1.0.84
+Stable tag: 1.0.91
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -185,7 +185,7 @@ Even with significantly more features than other plugins, Rank Math SEO loads am
 ### Take a sneak peek into Rank Math SEO’s features ###
 
 #### Detailed Setup Tutorial ####
-[youtube https://www.youtube.com/watch?v=dTvZuMRzW4w]
+[youtube https://www.youtube.com/watch?v=cQLvCBVev3I]
 
 ### List of Best Rank Math SEO Features ###
 
@@ -580,15 +580,19 @@ Please drop us an email at support@rankmath.com and we would be more than happy 
 
 == Changelog ==
 
-= 1.0.84 [Mar 09, 2022] =
-* Added: [HUGE!] [Google URL Inspection API Integration](https://rankmath.com/kb/url-inspection-api-integration/) in our Analytics Module, now you can see current Index Staus, Earned Rich Results, Errors & Warnings from Google directly in your WordPress backend!
-* Improved: [Keyword in URL](https://rankmath.com/kb/score-100-in-tests/#focus-keyword-in-the-url-primary-focus-keyword-only) test now detects the Focus Keyword in the parent page slug and domain name
-* Improved: Made several code improvements
-* Fixed: [404 Monitor](https://rankmath.com/kb/advanced-404-monitor/) was not working on the Full Site Editing sites
-* Fixed: [Thumbnail Overlay](https://rankmath.com/kb/meta-box-social-tab/#add-icon-overlay-to-thumbnails) option was not working on some setups
-* Fixed: SEO data was not updating in the Divi Page Builder's editor on the sub-folder installation
-* Fixed: [SERP Preview](https://rankmath.com/kb/general-tab/#the-preview-section) was showing text from the commented code
-* Fixed: The `startDate` field in [Event schema](https://rankmath.com/kb/rich-snippets/#event) was not accepting the variables
-* Fixed: [Content AI](https://rankmath.com/content-ai/) style on RTL sites
+= 1.0.91 [Jun 15, 2022] =
+* Added: [HUGE!] Synced [Content Analysis tests](https://rankmath.com/kb/score-100-in-tests/) with the recommendations provided by the [Content AI](https://rankmath.com/kb/how-to-use-content-ai/)
+* Improved: Added a new column on the [Redirections page](https://rankmath.com/kb/setting-up-redirections/#redirections) to show the Created date of the redirect
+* Improved: [Search Preview & Mobile Search Preview](https://rankmath.com/kb/seo-analysis/#search-preview) shown in the SEO Analysis tool
+* Improved: Image SEO code to make it FASTER
+* Fixed: Some string translations were not working well
+* Fixed: Unable to connect account when WordPress is installed in a subfolder
+* Fixed: [Connect to Rank Math account](https://rankmath.com/kb/free-account-benefits/) was not working properly when the URL contained special characters
+* Fixed: [Debug Redirections option](https://rankmath.com/kb/general-settings/#debug-redirections) was not working well
+* Fixed: Some Schema properties were missing in the [EDD Product Schema](https://rankmath.com/kb/edd-product-schema/)
+* Fixed: Analytics data was not getting imported correctly when domain property was selected in the [Site Profile](https://rankmath.com/kb/general-settings/#search-console-settings)
+* Fixed: The maintenance page created using Elementor editor was not working well when the Rank Math plugin is active on the site
+* Fixed: Hash links added in the Elementor Accordion were counted as internal links
+* Fixed: JS errors on the Categories list page
 
 Full changelog can be found here - **[Rank Math SEO changelog](https://rankmath.com/changelog/?utm_source=Plugin&utm_medium=Changelog&utm_campaign=WP)**

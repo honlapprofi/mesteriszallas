@@ -144,7 +144,7 @@ class Emails {
 		add_action( 'mphb_booking_confirmed_with_payment', array( $this, 'sendBookingConfirmedWithPaymentEmail' ), 10, 2 );
 		add_action( 'mphb_customer_confirmed_booking', array( $this->getEmail( 'admin_customer_confirmed_booking' ), 'trigger' ) );
 		add_action( 'mphb_customer_cancelled_booking', array( $this->getEmail( 'admin_customer_cancelled_booking' ), 'trigger' ) );
-		add_action( 'mphb_send_customer_registration_email', array( $this->getEmail( 'customer_registration' ), 'triggerCustomerRegistration' ), 10, 2 );
+		add_action( 'mphb_send_customer_registration_email', array( $this->getEmail( 'customer_registration' ), 'triggerCustomerRegistration' ), 10, 4 );
 		
 		add_action( 'current_screen', array( $this, 'showDeprecatedTagsNotice' ) );
 	}

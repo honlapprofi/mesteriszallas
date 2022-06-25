@@ -144,7 +144,7 @@ td.cap-neg label span {
 color: red;
 }
 
-td.cap-neg input {
+td.cap-neg input:not(.excluded-input) {
 display:none;
 }
 
@@ -166,6 +166,20 @@ color: #080 !important;
 
 td.cap-locked a.neg-cap {
 display: none !important;
+}
+
+tr.cme-bulk-select td {
+padding-top: 8px;
+padding-bottom: 8px;
+color: black;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+tr.cme-bulk-select span {
+vertical-align: bottom;
 }
 
 a.type-off, a.neg-cap, a.cme-neg-all, a.neg-type-caps {
@@ -219,10 +233,6 @@ div.pressshack-admin-wrapper footer {
 padding-right: 5px;
 }
 
-.toplevel_page_pp-capabilities div.pressshack-admin-wrapper footer {
-padding-right: 270px;
-}
-
 #akmin div.publishpress-headline {
   line-height:25px;
 }
@@ -242,11 +252,11 @@ padding-right: 270px;
   font-weight:bold;
 }
 
-table#akmin td.sidebar li.publishpress-contact{
+table#akmin td li.publishpress-contact{
   text-align:center;
 }
 
-table#akmin td.sidebar li.publishpress-contact a{
+table#akmin td li.publishpress-contact a{
   padding:5px 0 5px 0;
 }
 
@@ -318,8 +328,6 @@ div.publishpress-caps-backup th {
   width: 140px;
 }
 
-div.publishpress-caps-backup p.description {max-width:620px !important;}
-
 div.publishpress-caps-backup #cme_select_restore_div {height:250px;}
 div.publishpress-caps-backup #cme_select_restore {
 list-style:none;
@@ -329,12 +337,10 @@ overflow:auto;
 padding:0;
 background-color: #eee;
 padding: 5px;
-width: min-content;
 text-indent:10px;
 }
 div.publishpress-caps-backup #cme_select_restore li {
 padding: 7px 15px 7px 7px;
-white-space: nowrap;
 background-color: #f4f4f4;
 margin: 0;
 line-height:25px;
@@ -349,7 +355,8 @@ div.publishpress-caps-backup #cme_select_restore li:nth-child(even){
 }
 
 div.cme-selected-backup-caption {
-  padding-left: 5px;
+	color: #686868;
+	font-size: 0.9em;
 }
 
 div.pp-caps-backup-button {
@@ -358,11 +365,15 @@ div.pp-caps-backup-button {
 
 div.cme-restore-button {
   margin-top: 25px;
-  padding-left: 5px;
 }
 
-div.publishpress-caps-backup td.cme-backup-info{
-  padding:0;
+#akmin div.cme-restore-button input.button-primary {
+  margin-right: 10px;
+}
+
+div.publishpress-caps-backup td.cme-backup-list,
+div.publishpress-caps-backup td.cme-backup-info {
+  padding: 0;
 }
 
 div.cme-show-backup {
@@ -422,11 +433,7 @@ div.publishpress-caps-backup td.cme-backup-info .cme-negate {
     content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIHZpZXdCb3g9IjAgMCAyMCAyMCIgc3R5bGU9Ii1tcy10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7IHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7Ij48cGF0aCBkPSJNMTQuOTUgNi40NkwxMS40MSAxMGwzLjU0IDMuNTRsLTEuNDEgMS40MUwxMCAxMS40MmwtMy41MyAzLjUzbC0xLjQyLTEuNDJMOC41OCAxMEw1LjA1IDYuNDdsMS40Mi0xLjQyTDEwIDguNThsMy41NC0zLjUzeiIgZmlsbD0iI2RjMTQzYyIvPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLCAwLCAwLCAwKSIgLz48L3N2Zz4=");
 }
 
-#ppcb-tab-reset p {
-  text-align:center;
-}
-
-#ppcb-tab-reset span.pp-caps-warning {
+.publishpress-caps-backup span.pp-caps-warning {
   color:red;
 }
 
@@ -585,6 +592,11 @@ body.capabilities_page_pp-capabilities-admin-features .pp-capability-menus-selec
   width: 70px !important;
 }
 
+.pp-column-right.capabilities-sidebar .button.button-primary {
+    color: #2271b1;
+    border-color: #2271b1;
+    background: #f6f7f7;
+}
 
 /* Filters */
 .ppc-filter-wrapper {
@@ -599,6 +611,21 @@ body.capabilities_page_pp-capabilities-admin-features .pp-capability-menus-selec
 
 .ppc-filter-no-results {
 	margin-top: 20px;
+}
+
+/* ====================================================== Backup screen */
+
+.publishpress-caps-backup table#akmin td.content {
+  padding: 0;
+}
+
+.ppc-postbox {
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.ppc-postbox > h2 {
+	margin-top: 0;
 }
 
 /* ====================================================== Main Screen */
@@ -650,6 +677,28 @@ body.capabilities_page_pp-capabilities-admin-features .pp-capability-menus-selec
 	display: inline-block;
 }
 
+#publishpress_caps_form table#akmin td .pp-sidebar-box p:not(:last-of-type) {
+	margin: 15px 0;
+	padding: 0;
+}
+
+.pp-capabilities-feature-count {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 1px 0 -1px 2px;
+    padding: 0 7px;
+    min-height: 17px;
+    border-radius: 9px;
+    background-color: #999;
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+    z-index: 26;
+    float: right;
+}
+
 @media (max-width: 1199px) {
 
 	#ppc-capabilities-wrapper {
@@ -681,6 +730,17 @@ body.capabilities_page_pp-capabilities-admin-features .pp-capability-menus-selec
 	}
 }
 
+@media (min-width: 783px) {
+
+	div.publishpress-caps-backup td.cme-backup-list {
+	  width: 50%;
+	}
+
+	div.publishpress-caps-backup td.cme-backup-info {
+	  padding: 0 0 0 20px;
+	}
+}
+
 @media (max-width: 782px) {
 
 	table.cme-checklist.form-table tr td {
@@ -700,4 +760,8 @@ body.capabilities_page_pp-capabilities-admin-features .pp-capability-menus-selec
       line-height: 24px;
   }
 
+	div.publishpress-caps-backup td.cme-backup-info{
+	  padding: 0;
+		margin-top: 30px;
+	}
 }

@@ -3050,7 +3050,7 @@ class WPvivid {
                 $ret['remote_storage'] = $remote_storage;
             } else {
                 $ret['result'] = 'failed';
-                $ret['error'] = __('Fail to delete the remote storage, can not retrieve the storage infomation. Please try again.', 'wpvivid-backuprestore');
+                $ret['error'] = __('Failed to delete the remote storage, can not retrieve the storage infomation. Please try again.', 'wpvivid-backuprestore');
             }
         }
         catch (Exception $error) {
@@ -4474,7 +4474,7 @@ class WPvivid {
             }
 
             $ret['result']='success';
-            $ret['msg']=__('The selected junk flies have been deleted.', 'wpvivid-backuprestore');
+            $ret['msg']=__('The selected junk files have been deleted.', 'wpvivid-backuprestore');
             $ret['data']=$this->_junk_files_info();
             $html = '';
             $html = apply_filters('wpvivid_get_log_list', $html);
@@ -5061,12 +5061,12 @@ class WPvivid {
 
         if(!isset($data['staging_memory_limit']))
         {
-            $ret['error']=__('The value of \'Staging Memeory Limit\' can\'t be empty.', 'wpvivid-backuprestore');
+            $ret['error']=__('The value of \'Staging Memory Limit\' can\'t be empty.', 'wpvivid-backuprestore');
         }
         $data['staging_memory_limit']=sanitize_text_field($data['staging_memory_limit']);
         if(empty($data['staging_memory_limit']) && $data['staging_memory_limit'] != '0')
         {
-            $ret['error']=__('The value of \'Staging Memeory Limit\' can\'t be empty.', 'wpvivid-backuprestore');
+            $ret['error']=__('The value of \'Staging Memory Limit\' can\'t be empty.', 'wpvivid-backuprestore');
             return $ret;
         }
 
@@ -5415,7 +5415,7 @@ class WPvivid {
                 <td>'.__($value['des'], 'wpvivid-backuprestore').'</td>
                 <td>'.__($value['file_name'], 'wpvivid-backuprestore').'</td>
                 <td>
-                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['file_name'].'\', \''.'backup'.'\', \''.$value['result'].'\')" style="cursor:pointer;">
+                    <a onclick="wpvivid_read_log(\''.'wpvivid_view_log'.'\', \''.$value['id'].'\', \''.'backup'.'\')" style="cursor:pointer;">
                     <img src="'.esc_url(WPVIVID_PLUGIN_URL.$pic_log).'" style="vertical-align:middle;">Log
                     </a>
                 </td>
@@ -5491,6 +5491,13 @@ class WPvivid {
             if ($handle)
             {
                 $log_file['file_name']=basename($file);
+                $log_file['id']='';
+                if(preg_match('/wpvivid-(.*?)_/', basename($file), $matches))
+                {
+                    $id= $matches[0];
+                    $id=substr($id,0,strlen($id)-1);
+                    $log_file['id']=$id;
+                }
                 $log_file['path']=$file;
                 $log_file['des']='';
                 $log_file['time']='';
@@ -5556,8 +5563,11 @@ class WPvivid {
     {
         $this->ajax_check_security();
         try {
-            if (isset($_POST['path']) && !empty($_POST['path']) && is_string($_POST['path'])) {
-                $file_name = sanitize_text_field($_POST['path']);
+            if (isset($_POST['id']) && !empty($_POST['id']) && is_string($_POST['id'])) {
+                $id = sanitize_text_field($_POST['id']);
+
+                $path = '';
+
                 if(isset($_POST['log_type']))
                 {
                     $log_type = sanitize_text_field($_POST['log_type']);
@@ -5566,36 +5576,28 @@ class WPvivid {
                 {
                     $log_type = 'backup';
                 }
-
-                if(isset($_POST['log_result']))
-                {
-                    $log_result = sanitize_text_field($_POST['log_result']);
-                }
-                else
-                {
-                    $log_result = 'success';
-                }
-
                 if($log_type === 'backup')
                 {
-                    $general_setting=WPvivid_Setting::get_setting(true, "");
-                    $log_dir = WP_CONTENT_DIR.DIRECTORY_SEPARATOR.$general_setting['options']['wpvivid_local_setting']['path'].DIRECTORY_SEPARATOR.'wpvivid_log'.DIRECTORY_SEPARATOR;
+                    $loglist=$this->get_log_list_ex();
                 }
                 else
                 {
-                    $log_dir = WP_CONTENT_DIR.DIRECTORY_SEPARATOR.'wpvivid_staging'.DIRECTORY_SEPARATOR;
+                    $log_page=new WPvivid_Staging_Log_Page_Free();
+                    $loglist=$log_page->get_log_list('staging');
                 }
 
-                if($log_result === 'success')
+                if(!empty($loglist['log_list']['file']))
                 {
-                    $res_dir = '';
-                }
-                else
-                {
-                    $res_dir = 'error'.DIRECTORY_SEPARATOR;
+                    foreach ($loglist['log_list']['file'] as $value)
+                    {
+                        if($value['id'] === $id)
+                        {
+                            $path = str_replace('\\', '/', $value['path']);
+                            break;
+                        }
+                    }
                 }
 
-                $path = $log_dir.$res_dir.$file_name;
                 if (!file_exists($path)) {
                     $json['result'] = 'failed';
                     $json['error'] = __('The log not found.', 'wpvivid-backuprestore');

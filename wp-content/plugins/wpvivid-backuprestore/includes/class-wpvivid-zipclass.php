@@ -1316,6 +1316,18 @@ function wpvivid_function_per_add_callback($p_event, &$p_header)
         return 0;
     }
 
+    $plugins = substr(WP_PLUGIN_DIR, strpos(WP_PLUGIN_DIR, 'wp-content/'));
+
+    if(strpos($p_header['filename'],$plugins.'/wpvivid-backuprestore')!==false)
+    {
+        return 0;
+    }
+
+    if(strpos($p_header['filename'],$plugins.'/wpvivid-backup-pro')!==false)
+    {
+        return 0;
+    }
+
     global $wpvivid_old_time;
     if(time()-$wpvivid_old_time>30)
     {

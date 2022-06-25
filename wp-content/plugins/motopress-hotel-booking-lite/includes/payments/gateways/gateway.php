@@ -87,11 +87,20 @@ abstract class Gateway implements GatewayInterface {
 	 */
 	protected $showOptions = true;
 
+	/**
+	 * @since 4.2.4
+	 *
+	 * @var bool
+	 */
+	protected $isSuspended = false;
+
 	public function __construct(){
 		$this->id				 = $this->initId();
 		$this->defaultOptions	 = $this->initDefaultOptions();
 		$this->setupProperties();
 		$this->setupPaymentFields();
+
+		add_action( 'mphb_register_gateways', array( $this, 'preRegister' ) );
 		add_action( 'mphb_init_gateways', array( $this, 'register' ) );
 	}
 
@@ -154,7 +163,7 @@ abstract class Gateway implements GatewayInterface {
 	 * @return boolean
 	 */
 	public function isActive(){
-		return $this->enabled;
+		return $this->enabled && !$this->isSuspended;
 	}
 
 	/**
@@ -236,11 +245,22 @@ abstract class Gateway implements GatewayInterface {
 	}
 
 	/**
+	 * @since 4.2.4
+	 *
+	 * @param string[] $suspendPayments
+	 */
+	public function preRegister( $suspendPayments ){
+		$this->isSuspended = in_array( $this->id, $suspendPayments );
+	}
+
+	/**
 	 *
 	 * @param \MPHB\Payments\Gateways\GatewayManager $gatewayManager
 	 */
 	public function register( GatewayManager $gatewayManager ){
-		$gatewayManager->addGateway( $this );
+		if ( !$this->isSuspended ) {
+			$gatewayManager->addGateway( $this );
+		}
 	}
 
 	/**

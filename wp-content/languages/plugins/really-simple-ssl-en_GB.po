@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-10 09:57:02+0000\n"
+"PO-Revision-Date: 2022-04-01 11:18:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: grid/templates/other-plugins.php:40
+msgid "Self-hosted, Privacy-friendly analytics tool"
+msgstr "Self-hosted, privacy-friendly analytics tool"
 
 #: upgrade/upgrade-to-pro.php:549
 msgid "Your license key has reached its activation limit."
@@ -1434,10 +1438,6 @@ msgstr "The Really Simple SSL plugin folder in the /wp-content/plugins/ director
 #: class-site-health.php:75
 msgid "Not all recommended security headers are installed"
 msgstr "Not all recommended security headers are installed"
-
-#: grid/templates/other-plugins.php:40
-msgid "Beautiful recipes optimized for Google "
-msgstr "Beautiful recipes optimised for Google "
 
 #: class-site-health.php:63
 msgid "The recommended security headers are detected on your site."

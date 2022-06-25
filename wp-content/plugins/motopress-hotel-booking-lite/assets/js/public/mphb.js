@@ -1161,12 +1161,16 @@ MPHB.TermsSwitcher = can.Construct.extend(
 		 * @param {Object} element .mphb-checkout-terms-wrapper
 		 */
 		init: function( element, args ) {
+
 			var terms = element.children( '.mphb-terms-and-conditions' );
 
-			element.find( '.mphb-terms-and-conditions-link' ).on( 'click', function( event ){
-				event.preventDefault();
-				terms.toggleClass( 'mphb-active' );
-			} );
+			if ( terms.length > 0 ) {
+
+				element.find( '.mphb-terms-and-conditions-link' ).on( 'click', function( event ){
+					event.preventDefault();
+					terms.toggleClass( 'mphb-active' );
+				} );
+			}
 		}
 	}
 );

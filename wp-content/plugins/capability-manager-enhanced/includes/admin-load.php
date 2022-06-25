@@ -18,10 +18,10 @@ class PP_Capabilities_Admin_UI {
          */
         require_once (dirname(CME_FILE) . '/classes/pp-capabilities-notices.php');
 
-        add_action('init', [$this, 'featureRestrictionsGutenberg']);
+        add_action('init', [$this, 'featureRestrictionsGutenberg'], PHP_INT_MAX - 1);
 
         if (is_admin()) {
-            add_action('admin_init', [$this, 'featureRestrictionsClassic']);
+            add_action('admin_init', [$this, 'featureRestrictionsClassic'], PHP_INT_MAX - 1);
         }
 
         add_action('admin_enqueue_scripts', [$this, 'adminScripts'], 100);
@@ -39,7 +39,7 @@ class PP_Capabilities_Admin_UI {
 
         || (!empty($_REQUEST['action']) && in_array($_REQUEST['action'], ['pp-roles-add-role', 'pp-roles-delete-role', 'pp-roles-hide-role', 'pp-roles-unhide-role']))
         || ( ! empty($_SERVER['SCRIPT_NAME']) && strpos(sanitize_text_field($_SERVER['SCRIPT_NAME']), 'p-admin/plugins.php' ) && ! empty($_REQUEST['action'] ) ) 
-        || ( isset($_GET['action']) && 'reset-defaults' == $_GET['action'] )
+        || ( isset($_GET['action']) && ('reset-defaults' == $_GET['action']) && isset($_REQUEST['_wpnonce']) && wp_verify_nonce(sanitize_key($_REQUEST['_wpnonce']), 'capsman-reset-defaults') )
         || in_array( $pagenow, array( 'users.php', 'user-edit.php', 'profile.php', 'user-new.php' ) )
         ) ) {
             global $capsman;
@@ -80,11 +80,97 @@ class PP_Capabilities_Admin_UI {
 
 
         add_filter('pp_capabilities_feature_post_types', [$this, 'fltEditorFeaturesPostTypes'], 5);
+        add_filter('block_editor_settings_all', [$this, 'filterCodeEditingStatus'], 999);
+        add_filter('classic_editor_enabled_editors_for_post_type', [$this, 'filterRolePostTypeEditor'], 10, 2);
+        add_filter('classic_editor_plugin_settings', [$this, 'filterRoleEditorSettings']);
+    }
+
+    /**
+     * Filters the editors that are enabled for the post type.
+     *
+     * @param array $editors    Associative array of the editors and whether they are enabled for the post type.
+     * @param string $post_type The post type.
+     */
+    public function filterRolePostTypeEditor($editors, $post_type) {
+      $user = wp_get_current_user();
+
+      if (is_object($user) && isset($user->roles)) {
+          $current_user_editors = [];
+          foreach ($user->roles as $user_role) {
+              //get role option
+              $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+              if (is_array($role_option) && !empty($role_option) && !empty($role_option['role_editor'])) {
+                  $current_user_editors = array_merge($current_user_editors, $role_option['role_editor']);
+              }
+          }
+
+          if (!empty($current_user_editors)) {
+              $current_user_editors = array_unique($current_user_editors);
+              $editors = array(
+                  'classic_editor' => in_array('classic_editor', $current_user_editors) ? true : false,
+                  'block_editor'   => in_array('block_editor', $current_user_editors) ? true : false,
+              );
+          }
+      }
+
+      return $editors;
+  }
+
+  /**
+   * Override the classic editor plugin's settings.
+   *
+   * @param bool $settings
+   * @return mixed
+   */
+  public function filterRoleEditorSettings($settings) {
+      $user = wp_get_current_user();
+
+      if (is_object($user) && isset($user->roles)) {
+          $current_user_editors = [];
+          foreach ($user->roles as $user_role) {
+              //get role option
+              $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+              if (is_array($role_option) && !empty($role_option) && !empty($role_option['role_editor'])) {
+                  $current_user_editors = array_merge($current_user_editors, $role_option['role_editor']);
+              }
+          }
+
+          if (!empty($current_user_editors)) {
+              $current_user_editors = array_unique($current_user_editors);
+              $settings = [];
+              $settings['editor'] = ($current_user_editors[0] === 'classic_editor') ? 'classic' : 'block';
+              $settings['allow-users'] = count($current_user_editors) > 1 ? true : false;
+          }
+      }
+
+      return $settings;
+  }
+
+    public function filterCodeEditingStatus($settings) {
+        $user = wp_get_current_user();
+
+        if (is_object($user) && isset($user->roles)) {
+            foreach ($user->roles as $user_role) {
+                //get role option
+                $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+                if (is_array($role_option) && !empty($role_option) && !empty($role_option['disable_code_editor']) && (int)$role_option['disable_code_editor'] > 0) {
+                    $settings['codeEditingEnabled'] = false;
+                    break;
+                }
+            }
+        }
+
+        return $settings;
     }
 
     public function fltEditorFeaturesPostTypes($def_post_types) {
-        $type_args = defined('PP_CAPABILITIES_PRIVATE_TYPES') ? [] : ['public' => true];
-        $def_post_types = array_merge($def_post_types, get_post_types($type_args));
+        if((int)get_option('cme_editor_features_private_post_type') > 0 || defined('PP_CAPABILITIES_PRIVATE_TYPES')){
+            $private_cpt = get_post_types(['public' => true, 'show_ui' => true], 'names', 'or');
+            $public_cpt  = get_post_types(['public' => true, 'show_ui' => true], 'names', 'or');
+            $def_post_types =  array_unique(array_merge($def_post_types, $private_cpt, $public_cpt));
+        }else{
+            $def_post_types = array_merge($def_post_types, get_post_types(['public' => true], 'names'));
+        }
 
         unset($def_post_types['attachment']);
 
@@ -104,6 +190,10 @@ class PP_Capabilities_Admin_UI {
 
     private function applyFeatureRestrictions($editor = 'gutenberg') {
         global $pagenow;
+
+        if (is_multisite() && is_super_admin() && !defined('PP_CAPABILITIES_RESTRICT_SUPER_ADMIN')) {
+            return;
+        }
 
         // Return if not a post editor request
         if (!in_array($pagenow, ['post.php', 'post-new.php'])) {
@@ -164,6 +254,13 @@ class PP_Capabilities_Admin_UI {
                 );
 
                 wp_enqueue_script(
+                    'pp-capabilities-jquery-ui',
+                    plugin_dir_url(CME_FILE) . 'common/libs/jquery/jquery-ui.js',
+                    ['jquery'],
+                    CAPSMAN_VERSION
+                );
+
+                wp_enqueue_script(
                     'pp-capabilities-roles-profile-js',
                     plugin_dir_url(CME_FILE) . 'common/js/profile.js',
                     ['jquery', 'pp-capabilities-chosen-js'],
@@ -193,7 +290,8 @@ class PP_Capabilities_Admin_UI {
                     'pp-capabilities-roles-profile-js',
                     'ppCapabilitiesProfileData',
                     [
-                        'selected_roles' => $roles
+                        'role_description' => esc_html__('Drag multiple roles selection to change order.', 'capsman-enhanced'),
+                        'selected_roles'   => $roles
                     ]
                 );
             }
@@ -201,10 +299,27 @@ class PP_Capabilities_Admin_UI {
     }
 
     function adminPrintScripts() {
+
+
+        /**
+         * Update capabilities top level slug from roles to capabilities
+         */
+        $menu_inline_script = "
+            jQuery(document).ready( function($) {
+                if (jQuery('li#toplevel_page_pp-capabilities-roles a.toplevel_page_pp-capabilities-roles').length > 0) {
+                    var toplevel_page = jQuery('li#toplevel_page_pp-capabilities-roles a.toplevel_page_pp-capabilities-roles');
+                    var toplevel_page_link = toplevel_page.attr('href');
+                    if (toplevel_page_link) {
+                        toplevel_page.attr('href', toplevel_page_link.replace('pp-capabilities-roles', 'pp-capabilities'));
+                    }
+                }
+            });";
+        ppc_add_inline_script($menu_inline_script);
+
         // Counteract overzealous menu icon styling in PublishPress <= 3.2.0 :)
         if (defined('PUBLISHPRESS_VERSION') && version_compare(constant('PUBLISHPRESS_VERSION'), '3.2.0', '<=') && defined('PP_CAPABILITIES_FIX_ADMIN_ICON')):?>
         <style type="text/css">
-        #toplevel_page_pp-capabilities .dashicons-before::before, #toplevel_page_pp-capabilities .wp-has-current-submenu .dashicons-before::before {
+        #toplevel_page_pp-capabilities-roles .dashicons-before::before, #toplevel_page_pp-capabilities-roles .wp-has-current-submenu .dashicons-before::before {
             background-image: inherit !important;
             content: "\f112" !important;
         }
@@ -248,21 +363,19 @@ class PP_Capabilities_Admin_UI {
                 return;
             }
 
-            // Remove unselected roles
+            // Remove all roles
             foreach ($currentRoles as $role) {
                 // Check if it is a bbPress rule. If so, don't remove it.
                 $isBBPressRole = preg_match('/^bbp_/', $role);
 
-                if (!in_array($role, $newRoles) && !$isBBPressRole) {
+                if (!$isBBPressRole) {
                     $user->remove_role($role);
                 }
             }
 
-            // Add new roles
+            // Add new roles in order
             foreach ($newRoles as $role) {
-                if (!in_array($role, $currentRoles)) {
-                    $user->add_role($role);
-                }
+                $user->add_role($role);
             }
         }
     }
@@ -295,26 +408,27 @@ class PP_Capabilities_Admin_UI {
             $permissions_title,
             $permissions_title,
             $cap_name,
-            'pp-capabilities',
+            'pp-capabilities-roles',
             'cme_fakefunc',
             'dashicons-admin-network',
             $menu_order
         );
 
-        add_submenu_page('pp-capabilities',  __('Roles', 'capsman-enhanced'), __('Roles', 'capsman-enhanced'), $cap_name, 'pp-capabilities-roles', 'cme_fakefunc');
-        add_submenu_page('pp-capabilities',  __('Editor Features', 'capsman-enhanced'), __('Editor Features', 'capsman-enhanced'), $cap_name, 'pp-capabilities-editor-features', 'cme_fakefunc');
-        add_submenu_page('pp-capabilities',  __('Admin Features', 'capsman-enhanced'), __('Admin Features', 'capsman-enhanced'), $cap_name, 'pp-capabilities-admin-features', 'cme_fakefunc');
-        add_submenu_page('pp-capabilities',  __('Admin Menus', 'capsman-enhanced'), __('Admin Menus', 'capsman-enhanced'), $cap_name, 'pp-capabilities-admin-menus', 'cme_fakefunc');
-        add_submenu_page('pp-capabilities',  __('Nav Menus', 'capsman-enhanced'), __('Nav Menus', 'capsman-enhanced'), $cap_name, 'pp-capabilities-nav-menus', 'cme_fakefunc');
-        add_submenu_page('pp-capabilities',  __('Backup', 'capsman-enhanced'), __('Backup', 'capsman-enhanced'), $cap_name, 'pp-capabilities-backup', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Roles', 'capsman-enhanced'), __('Roles', 'capsman-enhanced'), $cap_name, 'pp-capabilities-roles', 'cme_fakefunc');
+		add_submenu_page('pp-capabilities-roles',  $permissions_title, $permissions_title, $cap_name, 'pp-capabilities', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Editor Features', 'capsman-enhanced'), __('Editor Features', 'capsman-enhanced'), $cap_name, 'pp-capabilities-editor-features', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Admin Features', 'capsman-enhanced'), __('Admin Features', 'capsman-enhanced'), $cap_name, 'pp-capabilities-admin-features', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Admin Menus', 'capsman-enhanced'), __('Admin Menus', 'capsman-enhanced'), $cap_name, 'pp-capabilities-admin-menus', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Nav Menus', 'capsman-enhanced'), __('Nav Menus', 'capsman-enhanced'), $cap_name, 'pp-capabilities-nav-menus', 'cme_fakefunc');
+        add_submenu_page('pp-capabilities-roles',  __('Backup', 'capsman-enhanced'), __('Backup', 'capsman-enhanced'), $cap_name, 'pp-capabilities-backup', 'cme_fakefunc');
         
         if (defined('PUBLISHPRESS_CAPS_PRO_VERSION')) {
-        	add_submenu_page('pp-capabilities',  __('Settings', 'capsman-enhanced'), __('Settings', 'capsman-enhanced'), $cap_name, 'pp-capabilities-settings', 'cme_fakefunc');
+        	add_submenu_page('pp-capabilities-roles',  __('Settings', 'capsman-enhanced'), __('Settings', 'capsman-enhanced'), $cap_name, 'pp-capabilities-settings', 'cme_fakefunc');
         }
 
         if (!defined('PUBLISHPRESS_CAPS_PRO_VERSION')) {
             add_submenu_page(
-                'pp-capabilities',
+                'pp-capabilities-roles',
                 __('Upgrade to Pro', 'capsman-enhanced'),
                 __('Upgrade to Pro', 'capsman-enhanced'),
                 'manage_capabilities',

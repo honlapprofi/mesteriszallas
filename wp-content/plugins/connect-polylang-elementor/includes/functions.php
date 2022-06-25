@@ -58,15 +58,15 @@ function cpel_is_polylang_pro_active() {
 }
 
 /**
- * Is Polylang (free) plugin active or not?
+ * Is Polylang API active
  *
- * @since  1.0.0
+ * @since  2.0.8
  *
  * @return bool TRUE if plugin is active, FALSE otherwise.
  */
-function cpel_is_polylang_free_active() {
+function cpel_is_polylang_api_active() {
 
-	return cpel_is_polylang_active() && ! cpel_is_polylang_pro_active();
+	return cpel_is_polylang_active() && function_exists( 'pll_get_post' );
 
 }
 

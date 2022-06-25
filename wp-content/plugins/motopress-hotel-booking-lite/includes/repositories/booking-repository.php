@@ -305,12 +305,8 @@ class BookingRepository extends AbstractPostRepository {
         $priceBreakdown = $entity->getLastPriceBreakdown(false);
 
         if (!empty($priceBreakdown)) {
-            array_walk_recursive($priceBreakdown, function(&$value, $key) {
-                $value = addslashes($value);
-            });
-
             $priceBreakdown = json_encode($priceBreakdown);
-            $priceBreakdown = mphb_escape_json_unicodes($priceBreakdown);
+            $priceBreakdown = wp_slash($priceBreakdown);
 
             $postAtts['post_metas']['_mphb_booking_price_breakdown'] = $priceBreakdown;
         }

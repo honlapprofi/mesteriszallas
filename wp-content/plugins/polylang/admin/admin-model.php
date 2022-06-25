@@ -238,13 +238,25 @@ class PLL_Admin_Model extends PLL_Model {
 		}
 
 		/**
-		 * Fires when a language is updated.
+		 * Fires after a language is updated.
 		 *
 		 * @since 1.9
+		 * @since 3.2 Added $lang parameter.
 		 *
-		 * @param array $args Arguments used to modify the language. @see PLL_Admin_Model::update_language().
+		 * @param array<mixed> $args {
+		 *   Arguments used to modify the language. @see PLL_Admin_Model::update_language().
+		 *
+		 *   @type string $name           Language name (used only for display).
+		 *   @type string $slug           Language code (ideally 2-letters ISO 639-1 language code).
+		 *   @type string $locale         WordPress locale.
+		 *   @type int    $rtl            1 if rtl language, 0 otherwise.
+		 *   @type int    $term_group     Language order when displayed.
+		 *   @type string $no_default_cat Optional, if set, no default category has been created for this language.
+		 *   @type string $flag           Optional, country code, @see flags.php.
+		 * }
+		 * @param PLL_Language $lang Previous value of the language beeing edited.
 		 */
-		do_action( 'pll_update_language', $args );
+		do_action( 'pll_update_language', $args, $lang );
 
 		$this->clean_languages_cache();
 		flush_rewrite_rules(); // Refresh rewrite rules
@@ -454,6 +466,25 @@ class PLL_Admin_Model extends PLL_Model {
 			foreach ( $terms as $term ) {
 				$term_ids[ $term->taxonomy ][] = $term->term_id;
 				$tr = maybe_unserialize( $term->description );
+
+				/**
+				 * Filters the unserialized translation group description before it is
+				 * updated when a language is deleted or a language slug is changed.
+				 *
+				 * @since 3.2
+				 *
+				 * @param array<int|array<string>> $tr {
+				 *     List of translations with lang codes as array keys and IDs as array values.
+				 *     Also in this array:
+				 *
+				 *     @type array<string> $sync List of synchronized translations with lang codes as array keys and array values.
+				 * }
+				 * @param string                   $old_slug The old language slug.
+				 * @param string                   $new_slug The new language slug.
+				 * @param WP_Term                  $term     The term containing the post or term translation group.
+				 */
+				$tr = apply_filters( 'update_translation_group', $tr, $old_slug, $new_slug, $term );
+
 				if ( ! empty( $tr[ $old_slug ] ) ) {
 					if ( $new_slug ) {
 						$tr[ $new_slug ] = $tr[ $old_slug ]; // Suppress this for delete

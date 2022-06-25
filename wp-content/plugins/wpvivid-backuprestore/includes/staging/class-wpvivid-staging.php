@@ -44,7 +44,8 @@ class WPvivid_Staging_Free
             add_action('admin_enqueue_scripts',array( $this,'enqueue_styles'));
             add_action('admin_enqueue_scripts',array( $this,'enqueue_scripts'));
 
-            add_filter('wpvivid_add_side_bar', array($this, 'add_side_bar'), 11, 2);
+            //add_filter('wpvivid_add_side_bar', array($this, 'add_side_bar'), 11, 2);
+            add_action('wpvivid_add_staging_side_bar_ex', array($this, 'add_side_bar'), 11, 2);
 
             add_filter('wpvivid_get_toolbar_menus',array($this,'get_toolbar_menus'),22);
             add_filter('wpvivid_get_admin_menus',array($this,'get_admin_menus'),22);
@@ -66,7 +67,43 @@ class WPvivid_Staging_Free
             $wpvivid_version = WPVIVID_PLUGIN_VERSION;
             $wpvivid_version = apply_filters('wpvivid_display_pro_version', $wpvivid_version);
 
-            $html = '<div class="postbox">
+            ?>
+            <div class="postbox">
+                <h2>
+                    <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0"><?php _e('Current Version: ', 'wpvivid-backuprestore'); ?><?php echo $wpvivid_version; ?></span></div>
+                    <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">|</span></div>
+                    <div style="float: left; margin-left: 0;">
+                        <span style="margin: 0; padding: 0"><a href="https://wordpress.org/plugins/wpvivid-backuprestore/#developers" target="_blank" style="text-decoration: none;"><?php _e('ChangeLog', 'wpvivid-backuprestore'); ?></a></span>
+                    </div>
+                    <div style="clear: both;"></div>
+                </h2>
+            </div>
+            <div id="wpvivid_backup_schedule_part"></div>
+            <div class="postbox">
+                <h2><span><?php _e('Troubleshooting', 'wpvivid-backuprestore'); ?></span></h2>
+                <div class="inside">
+                    <table class="widefat" cellpadding="0">
+                        <tbody>
+                        <tr class="alternate">
+                            <td class="row-title"><?php _e('Read <a href="https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html" target="_blank">Troubleshooting page</a> for faster solutions.', 'wpvivid-backuprestore'); ?></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="postbox">
+                <h2><span><?php _e('How-to', 'wpvivid-backuprestore'); ?></span></h2>
+                <div class="inside">
+                    <table class="widefat" cellpadding="0">
+                        <tbody>
+                        <tr class="alternate"><td class="row-title"><a href="https://docs.wpvivid.com/wpvivid-backup-pro-create-staging-site.html" target="_blank"><?php _e('Create A Staging Site', 'wpvivid-backuprestore'); ?></a></td></tr>
+                        <tr><td class="row-title"><a href="https://docs.wpvivid.com/wpvivid-staging-pro-create-fresh-install.html" target="_blank"><?php _e('Create A Fresh WordPress Install', 'wpvivid-backuprestore'); ?></a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <?php
+            /*$html = '<div class="postbox">
                 <h2>
                     <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">'.__('Current Version:', 'wpvivid-backuprestore').' '.$wpvivid_version.'</span></div>
                     <div style="float: left; margin-right: 5px;"><span style="margin: 0; padding: 0">|</span></div>
@@ -99,10 +136,10 @@ class WPvivid_Staging_Free
                         </tbody>
                     </table>
                 </div>
-             </div>';
+             </div>';*/
         }
 
-        return $html;
+        //return $html;
     }
 
     public function get_admin_url($admin_url)
@@ -2457,7 +2494,7 @@ class WPvivid_Staging_Free
                 $option['data']['theme']['exclude_regex'] = array();
                 foreach ($staging_options['themes_list'] as $theme)
                 {
-                    $option['data']['theme']['exclude_regex'][] = '#^'.preg_quote($this -> transfer_path(get_theme_root().DIRECTORY_SEPARATOR.$theme), '/').'#';
+                    $option['data']['theme']['exclude_regex'][] = '#^'.preg_quote($this -> transfer_path(get_theme_root().DIRECTORY_SEPARATOR.$theme), '/').'$#';
                 }
             }
 

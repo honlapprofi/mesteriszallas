@@ -8,7 +8,7 @@ msgstr ""
 "Blank WordPress Pot "
 "v1.0.0\n"
 "POT-Creation-Date: "
-"2021-09-13 19:20+0530\n"
+"2019-06-25 13:14+0530\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -47,45 +47,33 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
 "X-Generator: Poedit "
-"2.4.2\n"
+"2.2.1\n"
 "X-Poedit-"
 "SearchPath-0: .\n"
 
-#: image-hover-effects-addon-for-elementor.php:74
-msgid ""
-"Image Hover Effects : "
-"Title"
-msgstr ""
-
-#: image-hover-effects-addon-for-elementor.php:79
-msgid ""
-"Image Hover Effects : "
-"Description"
-msgstr ""
-
-#: image-hover-effects-addon-for-elementor.php:122
+#: image-hover-effects-addon-for-elementor.php:100
 msgid ""
 "Enjoying our "
 "<strong>Image Hover "
-"Effects - Elementor "
-"Addon?</strong> We hope "
-"you liked it! If you "
-"feel this plugin helped "
-"you, You can give us a 5 "
-"star rating!<br>It will "
-"motivate us to serve you "
-"more !"
+"Effects Addon for "
+"Elementor?</strong> We "
+"hope you liked it! If "
+"you feel this plugin "
+"helped you, You can give "
+"us a 5 star rating!"
+"<br>It will motivate us "
+"to serve you more !"
 msgstr ""
 
-#: image-hover-effects-addon-for-elementor.php:123
+#: image-hover-effects-addon-for-elementor.php:101
 msgid "Rate the Plugin!"
 msgstr ""
 
-#: image-hover-effects-addon-for-elementor.php:124
+#: image-hover-effects-addon-for-elementor.php:102
 msgid "Go Pro"
 msgstr ""
 
-#: image-hover-effects-addon-for-elementor.php:125
+#: image-hover-effects-addon-for-elementor.php:103
 msgid "Already Done"
 msgstr ""
 
@@ -305,100 +293,100 @@ msgstr ""
 msgid "Choose Image"
 msgstr ""
 
-#: includes/widgets.php:117
-#: includes/widgets.php:119
-#: includes/widgets.php:337
+#: includes/widgets.php:116
+#: includes/widgets.php:118
+#: includes/widgets.php:338
 msgid "Title"
 msgstr ""
 
-#: includes/widgets.php:120
+#: includes/widgets.php:119
 msgid ""
 "Type your title here"
 msgstr ""
 
-#: includes/widgets.php:130
+#: includes/widgets.php:128
 msgid "Title Tag"
 msgstr ""
 
-#: includes/widgets.php:133
+#: includes/widgets.php:131
 msgid "H1"
 msgstr ""
 
-#: includes/widgets.php:134
+#: includes/widgets.php:132
 msgid "H2"
 msgstr ""
 
-#: includes/widgets.php:135
+#: includes/widgets.php:133
 msgid "H3"
 msgstr ""
 
-#: includes/widgets.php:136
+#: includes/widgets.php:134
 msgid "H4"
 msgstr ""
 
-#: includes/widgets.php:137
+#: includes/widgets.php:135
 msgid "H5"
 msgstr ""
 
-#: includes/widgets.php:138
+#: includes/widgets.php:136
 msgid "H6"
 msgstr ""
 
-#: includes/widgets.php:139
+#: includes/widgets.php:137
 msgid "Paragraph"
 msgstr ""
 
-#: includes/widgets.php:140
+#: includes/widgets.php:138
 msgid "Span"
 msgstr ""
 
-#: includes/widgets.php:149
-#: includes/widgets.php:152
-#: includes/widgets.php:367
+#: includes/widgets.php:147
+#: includes/widgets.php:150
+#: includes/widgets.php:373
 msgid "Description"
 msgstr ""
 
-#: includes/widgets.php:153
+#: includes/widgets.php:151
 msgid ""
 "Type your description "
 "here"
 msgstr ""
 
-#: includes/widgets.php:163
-#: includes/widgets.php:397
+#: includes/widgets.php:160
+#: includes/widgets.php:408
 msgid "Icon"
 msgstr ""
 
-#: includes/widgets.php:173
+#: includes/widgets.php:171
 msgid "Icon Position"
 msgstr ""
 
-#: includes/widgets.php:176
+#: includes/widgets.php:174
 msgid "Before"
 msgstr ""
 
-#: includes/widgets.php:177
+#: includes/widgets.php:175
 msgid "After"
 msgstr ""
 
-#: includes/widgets.php:186
+#: includes/widgets.php:184
 msgid "Link To"
 msgstr ""
 
-#: includes/widgets.php:188
+#: includes/widgets.php:186
 msgid ""
 "https://your-link.com"
 msgstr ""
 
-#: includes/widgets.php:204
+#: includes/widgets.php:201
 msgid "PRO Features"
 msgstr ""
 
-#: includes/widgets.php:212
+#: includes/widgets.php:209
 msgid " "
 msgstr ""
 
-#: includes/widgets.php:215
+#: includes/widgets.php:212
 msgid ""
 "<br/><div>Meet Our Pro "
 "Effects</div><br/>Thank "
@@ -414,70 +402,70 @@ msgid ""
 "Effects</a>"
 msgstr ""
 
-#: includes/widgets.php:223
+#: includes/widgets.php:220
 msgid "Style"
 msgstr ""
 
-#: includes/widgets.php:231
+#: includes/widgets.php:228
 msgid "Background"
 msgstr ""
 
-#: includes/widgets.php:255
+#: includes/widgets.php:256
 msgid ""
 "Horizontal Alignment"
 msgstr ""
 
-#: includes/widgets.php:259
+#: includes/widgets.php:260
 msgid "Left"
 msgstr ""
 
-#: includes/widgets.php:263
+#: includes/widgets.php:264
 msgid "Center"
 msgstr ""
 
-#: includes/widgets.php:267
+#: includes/widgets.php:268
 msgid "Right"
 msgstr ""
 
-#: includes/widgets.php:281
+#: includes/widgets.php:282
 msgid "Vertical Alignment"
 msgstr ""
 
-#: includes/widgets.php:285
+#: includes/widgets.php:286
 msgid "Top"
 msgstr ""
 
-#: includes/widgets.php:289
+#: includes/widgets.php:290
 msgid "Middle"
 msgstr ""
 
-#: includes/widgets.php:293
+#: includes/widgets.php:294
 msgid "Bottom"
 msgstr ""
 
-#: includes/widgets.php:307
+#: includes/widgets.php:308
 msgid "Padding"
 msgstr ""
 
-#: includes/widgets.php:325
+#: includes/widgets.php:326
 msgid "Border Radius"
 msgstr ""
 
-#: includes/widgets.php:346
-#: includes/widgets.php:376
-#: includes/widgets.php:406
+#: includes/widgets.php:347
+#: includes/widgets.php:382
+#: includes/widgets.php:417
 msgid "Color"
 msgstr ""
 
-#: includes/widgets.php:359
-#: includes/widgets.php:389
+#: includes/widgets.php:364
+#: includes/widgets.php:399
 msgid "Typography"
 msgstr ""
 
-#: includes/widgets.php:418
+#: includes/widgets.php:433
 msgid "Icon Size"
 msgstr ""
 
-#: includes/widgets.php:438
+#: includes/widgets.php:453
 msgid "Icon Space"
 msgstr ""

@@ -74,7 +74,7 @@ class Wpvivid_Google_drive extends WPvivid_Remote
 
     public function handle_auth_actions()
     {
-        if(isset($_GET['action']))
+        if(isset($_GET['action']) && isset($_GET['page']))
         {
             if($_GET['page'] === 'WPvivid')
             {
