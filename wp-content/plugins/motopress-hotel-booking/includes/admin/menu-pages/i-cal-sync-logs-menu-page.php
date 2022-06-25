@@ -105,7 +105,7 @@ class iCalSyncLogsMenuPage extends AbstractMenuPage
 
             <?php // SYNC LOGS ?>
             <?php } else {
-                $roomId = !is_null($this->queue) ? QueuedSynchronizer::retrieveRoomIdFromItem($this->queue) : 0;
+                $roomId = !is_null($this->queue) ? mphb_parse_queue_room_id($this->queue) : 0;
                 $room = ($roomId != 0) ? MPHB()->getRoomRepository()->findById($roomId) : null;
                 ?>
                 <h2><?php echo !is_null($room) ? esc_html( $room->getTitle() ) : ''; ?></h2>

@@ -182,6 +182,34 @@ class PageSettings {
 
 	/**
 	 *
+	 * @return bool
+	 * @since 4.2.5
+	 */
+	public function getOpenTermsAndConditionsInNewWindow()
+	{
+		return (bool) get_option( 'mphb_open_terms_in_new_window', false );
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function getMyAccountPageId() {
+		return $this->getPageId( 'my_account' );
+	}
+	
+	/**
+	 * 
+	 * @param int $id
+	 * 
+	 * @since 4.2.0
+	 */
+	public function setMyAccountPageId( $id ) {
+		return update_option( 'mphb_my_account_page', $id );
+	}
+
+	/**
+	 *
 	 * @param string|int $id
 	 * @return string|false
 	 */

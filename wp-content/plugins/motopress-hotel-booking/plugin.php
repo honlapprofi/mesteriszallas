@@ -81,6 +81,12 @@ class HotelBookingPlugin {
 	 * @var \MPHB\Admin\MenuPages\RoomsGeneratorMenuPage
 	 */
 	private $roomsGeneratorMenuPage;
+	
+	/**
+	 *
+	 * @var \MPHB\Admin\MenuPages\CustomersMenuPage
+	 */	
+	private $customersPage;
 
 	/**
 	 *
@@ -433,6 +439,8 @@ class HotelBookingPlugin {
 		$this->capabilitiesAndRoles = new \MPHB\UsersAndRoles\CapabilitiesAndRoles();
 
 		$this->capabilitiesAndRoles::setup();
+		
+		$this->account = new \MPHB\UsersAndRoles\User();
 
 		new \MPHB\Fixes();
 		new \MPHB\Views\ViewActions();
@@ -478,7 +486,11 @@ class HotelBookingPlugin {
 		$this->couponRepository			 = new \MPHB\Repositories\CouponRepository( $this->couponPersistence );
         $this->syncUrlsRepository        = new \MPHB\Repositories\SyncUrlsRepository();
         $this->attributeRepository       = new \MPHB\Repositories\AttributeRepository( $this->attributesPersistence );
+	
+		
 	}
+	
+	
 
 	private function initBookingRules(){
 		$reservationRules	 = $this->settings->bookingRules()->getReservationRules();
@@ -551,6 +563,14 @@ class HotelBookingPlugin {
 
 		$this->calendarMenuPage = new \MPHB\Admin\MenuPages\CalendarMenuPage( 'mphb_calendar', $calendarAtts );
 
+		$customersAtts = array(
+			'capability' => \MPHB\UsersAndRoles\CapabilitiesAndRoles::VIEW_CUSTOMERS,
+			'order' => 60
+		);
+		
+		$this->customersPage = new \MPHB\Admin\MenuPages\CustomersMenuPage( 'mphb_customers', $customersAtts );
+		
+		
 		$bookingRulesSettings = array(
 			'capability'	=> \MPHB\UsersAndRoles\CapabilitiesAndRoles::MANAGE_RULES,
 			'order' 		=> 70
@@ -636,6 +656,7 @@ class HotelBookingPlugin {
 
 	public function addActions(){
 		add_action('plugins_loaded', array($this, 'loadTextdomain'));
+		add_action( 'init', array( $this, 'rewriteRules' ) );
 		add_action( 'admin_init', array( $this, 'initAutoUpdater' ), 9 );
 
 //        add_action( 'wp', array( $this, 'setupRoomTypeMicrodata' ) );
@@ -660,6 +681,26 @@ class HotelBookingPlugin {
 		 * @since 3.9.4
 		 */
 		add_filter( 'wpmu_drop_tables', array( $this, 'deleteBlog' ), 10, 2 );
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function rewriteRules() {
+		$accountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
+		
+		if( $accountPageId ) {
+			$accountPage = get_post( $accountPageId );
+			$accountPage = $accountPage->post_name;
+			
+			add_rewrite_rule( '^(' . $accountPage . ')/([^/]*)/?', 'index.php?pagename=$matches[1]&tab=$matches[2]', 'top' );
+		}
+		
+		add_filter( 'query_vars', function( $vars ){
+			$vars[] = 'tab';
+			return $vars;
+		} );
 	}
 
 	public function enqueuePublicScripts(){
@@ -943,6 +984,8 @@ class HotelBookingPlugin {
 		$tables[] = $wpdb->prefix . 'mphb_sync_queue';
 		$tables[] = $wpdb->prefix . 'mphb_sync_stats';
 		$tables[] = $wpdb->prefix . 'mphb_sync_logs';
+		$tables[] = $wpdb->prefix . 'mphb_customers';
+		$tables[] = $wpdb->prefix . 'mphb_customers_meta';
 
 		restore_current_blog();
 
@@ -1087,6 +1130,10 @@ class HotelBookingPlugin {
 	 */
 	public function getCalendarMenuPage(){
 		return $this->calendarMenuPage;
+	}
+	
+	public function getCustomersMenuPage(){
+		return $this->customersMenuPage;
 	}
 
 	/**
@@ -1376,6 +1423,32 @@ class HotelBookingPlugin {
             . " PRIMARY KEY (log_id),"
 			. " KEY queue_id (queue_id)"
             . ") CHARSET=utf8 AUTO_INCREMENT=1";
+			
+		$customers = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mphb_customers ("
+			. " customer_id INT NOT NULL AUTO_INCREMENT,"
+			. " user_id INT NULL UNIQUE,"
+			. " email VARCHAR(60) NOT NULL UNIQUE,"
+			. " first_name VARCHAR(60) NOT NULL,"	
+			. " last_name VARCHAR(60) NOT NULL,"
+			. " phone VARCHAR(20) NOT NULL,"
+			. " country VARCHAR(2) NOT NULL,"
+			. " state VARCHAR(20) NOT NULL,"
+			. " city VARCHAR(20) NOT NULL,"
+			. " address1 text NOT NULL,"
+			. " zip VARCHAR(10) NOT NULL,"
+			. " bookings INT NOT NULL,"
+			. " date_registered DATETIME DEFAULT CURRENT_TIMESTAMP,"
+			. " last_active DATETIME NULL,"
+			. " KEY customer_id (customer_id)"
+			. ") CHARSET=utf8 AUTO_INCREMENT=1";
+			
+		$customersMeta = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mphb_customers_meta ("
+			. " meta_id INT NOT NULL AUTO_INCREMENT,"
+			. " customer_id INT NULL,"
+			. " meta_key varchar(255) NULL,"
+			. " meta_value longtext NULL,"
+			. " KEY meta_id (meta_id)"
+			. ") CHARSET=utf8 AUTO_INCREMENT=1";
 
 	    $apiKeys = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mphb_api_keys ("
 	        . " key_id BIGINT UNSIGNED NOT NULL auto_increment,"
@@ -1396,6 +1469,8 @@ class HotelBookingPlugin {
         $wpdb->query($syncQueue);
         $wpdb->query($syncStats);
         $wpdb->query($syncLogs);
+		$wpdb->query($customers);
+		$wpdb->query($customersMeta);
         $wpdb->query($apiKeys);
 
     }
@@ -1725,6 +1800,22 @@ class HotelBookingPlugin {
 	public function roles()
 	{
 		return $this->roles;
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function customers() {
+		return new \MPHB\UsersAndRoles\Customers();
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.0
+	 */
+	public function account() {
+		return $this->account;
 	}
 
 	public static function setCustomRolesVersion($version)

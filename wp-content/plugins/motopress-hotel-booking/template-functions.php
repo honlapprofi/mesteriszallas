@@ -418,7 +418,7 @@ function mphb_the_flexslider_gallery( $ids, $atts, $flexsliderAtts = array() ){
 	foreach ( $attachments as $id => $attachment ) {
 
 		$attr = ( trim( $attachment->post_excerpt ) ) ? array( 'aria-describedby' => "$selector-$id" ) : array();
-        $attr['loading'] = 'eager';
+        //$attr['loading'] = 'eager';
 
 		/**
 		 * Disable lazy loading for gallery images
@@ -510,7 +510,7 @@ function mphb_tmpl_the_loop_room_type_book_button( $buttonText = null ){
 		// translators: Verb. To book an accommodation.
 		$buttonText = __( 'Book', 'motopress-hotel-booking' );
 	}
-	echo '<a class="button mphb-book-button" href="' . esc_url( get_the_permalink() ) . '#booking-form-' . get_the_ID() . '">' . $buttonText . '</a>';
+	echo '<a class="button mphb-book-button" href="' . esc_url( get_the_permalink() ) . '#booking-form-' . get_the_ID() . '">' . /* do not escape */ $buttonText . '</a>';
 }
 
 /**
@@ -528,7 +528,7 @@ function mphb_tmpl_the_loop_room_type_book_button_form( $buttonText = null ){
 	foreach ( $queryArgs as $name => $value ) {
 		echo '<input type="hidden" name="' . esc_attr( $name ) . '" value="' . esc_attr( $value ) . '" />';
 	}
-	echo '<button type="submit" class="button mphb-book-button" >' . $buttonText . '</button>';
+	echo '<button type="submit" class="button mphb-book-button" >' . /* do not escape */  $buttonText . '</button>';
 	echo '</form>';
 }
 
@@ -541,7 +541,7 @@ function mphb_tmpl_the_loop_room_type_view_details_button( $buttonText = null ){
 		$buttonText = __( 'View Details', 'motopress-hotel-booking' );
 	}
 	// a.button causes promlems on some themes, when text color = background color
-	echo '<a class="button mphb-view-details-button" href="' . esc_url( get_the_permalink() ) . '" >' . $buttonText . '</a>';
+	echo '<a class="button mphb-view-details-button" href="' . esc_url( get_the_permalink() ) . '" >' . /* do not escape */ $buttonText . '</a>';
 }
 
 /**

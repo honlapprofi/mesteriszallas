@@ -824,6 +824,41 @@ MPHBAdmin.PopupForm = can.Control.extend(
     }
 );
 
+( function( $ ) {
+    $( '.mphb-remove-customer' ).on( 'click', function( e ) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        var pluginData = MPHBAdmin.Plugin.myThis.data;
+        var translations = pluginData.translations;
+        var textOnDelete = translations.deleteConfirmation;
+        
+        var nonce = pluginData.nonces.mphb_remove_customer;
+        
+        var confirmDeleting = confirm(textOnDelete);
+        
+        if(confirmDeleting) {
+            
+            var customer = $( this );
+                
+            $.ajax(
+                ajaxurl,
+                {
+                    type: 'post',
+                    data: {
+                        action: 'mphb_remove_customer',
+                        itemId: customer.attr( "data-item-key" ),
+                        mphb_nonce: nonce
+                    },
+                    success: function( responce ) {
+                        window.location.href = window.location.href;
+                    }
+                }
+            );
+        }
+    } );
+        
+} )( jQuery );
 // table.wp-list-table
 MPHBAdmin.AttributesCustomOrder = can.Control.extend(
 	{},
@@ -3472,6 +3507,8 @@ MPHBAdmin.BookingEditor = can.Control.extend(
 		if ( MPHBAdmin.Plugin.myThis.data.settings.isAttributesCustomOrder ) {
 			new MPHBAdmin.AttributesCustomOrder( $( 'table.wp-list-table' ) );
 		}
+        
+        
 
         new MPHBAdmin.ServiceQuantity('.post-type-mphb_room_service #mphb_price');
 

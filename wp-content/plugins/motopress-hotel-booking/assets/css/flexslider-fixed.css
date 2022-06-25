@@ -274,6 +274,9 @@ html[xmlns] .flexslider .slides {
   }
 }
 
+.no-js .mphb-flexslider-gallery-wrapper .slides > li:first-child {
+  display: block;
+}
 .mphb-flexslider-gallery-wrapper .slides > li {
   display: none;
   -webkit-backface-visibility: hidden;
@@ -285,7 +288,6 @@ html[xmlns] .flexslider .slides {
   margin: 0 !important;
 }
 .mphb-flexslider ul.slides img {
-  width: auto !important;
   box-sizing: border-box;
   display: inline-block !important;
   margin-top: 0px !important;

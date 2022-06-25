@@ -509,6 +509,22 @@ class ShortcodesMenuPage extends AbstractMenuPage {
 				'description'	 => __( 'Use this shortcode on the Booking Cancelation page', 'motopress-hotel-booking' )
 			)
 		);
+		
+		$this->shortcodes[MPHB()->getShortcodes()->getAccount()->getName()] = array(
+			'label'			 => __( 'Customer Account', 'motopress-hotel-booking' ),
+			'description'	 => __( 'Display log in form or customer account area.', 'motopress-hotel-booking' ),
+			'parameters'	 => array(
+				'class' => array(
+					'label'		 => __( 'Custom CSS class for shortcode wrapper', 'motopress-hotel-booking' ),
+					'values'	 => __( 'whitespace separated css classes', 'motopress-hotel-booking' ),
+					'default'	 => ''
+				)
+			),
+			'example'		 => array(
+				'shortcode'		 => MPHB()->getShortcodes()->getAccount()->generateShortcode(),
+				'description'	 => __( 'Use this shortcode to create the My Account page.', 'motopress-hotel-booking' )
+			)
+		);
 
         $customShortcodes = apply_filters('mphb_display_custom_shortcodes', array());
 
@@ -563,7 +579,7 @@ class ShortcodesMenuPage extends AbstractMenuPage {
 		</p>
 		<?php if (isset( $details['description'] )) { ?>
 			<p class="description">
-				<?php echo esc_html( $details['description'] ); ?>
+				<?php echo wp_kses_post( $details['description'] ); ?>
 			</p>
 		<?php } ?>
 		<?php
@@ -584,12 +600,12 @@ class ShortcodesMenuPage extends AbstractMenuPage {
 				</p>
 				<?php if ( isset( $paramDetails['description'] ) ) { ?>
 					<p class="description">
-						<?php echo esc_html( $paramDetails['description'] ); ?>
+						<?php echo wp_kses_post( $paramDetails['description'] ); ?>
 					</p>
 				<?php } ?>
 				<p>
 					<em><?php esc_html_e( 'Values:', 'motopress-hotel-booking' ); ?></em>
-					<?php echo esc_html( $paramDetails['values'] ); ?>
+					<?php echo wp_kses_post( $paramDetails['values'] ); ?>
 				</p>
 				<?php if ( isset( $paramDetails['default'] ) ) { ?>
 					<p>
@@ -624,7 +640,7 @@ class ShortcodesMenuPage extends AbstractMenuPage {
 		</p>
 		<?php if ( isset( $details['example']['description'] ) ) { ?>
 			<p class="description">
-				<?php echo esc_html( $details['example']['description'] ); ?>
+				<?php echo wp_kses_post( $details['example']['description'] ); ?>
 			</p>
 		<?php } ?>
 		<?php

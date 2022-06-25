@@ -54,10 +54,12 @@ abstract class BackgroundWorker extends WP_Background_Process {
 		$currentItem = $this->getCurrentItem();
 		$queueId = !empty($currentItem) ? Queue::findId($currentItem) : 0;
 
-		$this->importer = new \MPHB\iCal\Importer();
-		$this->logger   = new \MPHB\iCal\Logger($queueId);
-		$this->stats	= new Stats($queueId);
+		$this->logger = MPHB()->settings()->main()->isMinimizedSyncLogs()
+			? new \MPHB\iCal\MinimizedLogger($queueId)
+			: new \MPHB\iCal\Logger($queueId);
 
+		$this->importer = new \MPHB\iCal\Importer($this->logger);
+		$this->stats = new Stats($queueId);
 		$this->maxExecutionTime = intval( ini_get( 'max_execution_time' ) );
 	}
 
@@ -276,8 +278,7 @@ abstract class BackgroundWorker extends WP_Background_Process {
                 $tasksCount
             );
 
-            $logContext = array('syncId' => $syncId, 'queueId' => $queueId, 'roomId' => $roomId);
-            $this->logger->info($logMessage, $logContext);
+            $this->logger->info($logMessage);
         }
     }
 
@@ -328,7 +329,6 @@ abstract class BackgroundWorker extends WP_Background_Process {
 		$roomId       = $task['roomId'];
 		$calendarUri  = $task['calendarUri'];
 		$calendarName = $this->retrieveCalendarNameFromSource( $calendarUri );
-		$logContext   = array( 'roomId' => $roomId );
 
 		try {
 			/**
@@ -346,7 +346,7 @@ abstract class BackgroundWorker extends WP_Background_Process {
 			if ( $eventsCount > 0 ) {
 				// This info can replace some messages from background process if log it after the process starts
 				$message = sprintf( _nx( '%1$d event found in calendar %2$s', '%1$d events found in calendar %2$s', $eventsCount, '%s - calendar URI or calendar filename', 'motopress-hotel-booking' ), $eventsCount, $calendarName );
-				$this->logger->info( $message, $logContext );
+				$this->logger->info( $message );
 
 				$importTasks = array_map( function ( $event ) use ( $task ) {
 					return array(
@@ -361,9 +361,9 @@ abstract class BackgroundWorker extends WP_Background_Process {
 
 			} else {
 				if ( empty( $calendarContent ) ) {
-					$this->logger->warning( sprintf( _x( 'Calendar source is empty (%s)', '%s - calendar URI or calendar filename', 'motopress-hotel-booking' ), $calendarName ), $logContext );
+					$this->logger->info( sprintf( _x( 'Calendar source is empty (%s)', '%s - calendar URI or calendar filename', 'motopress-hotel-booking' ), $calendarName ) );
 				} else {
-					$this->logger->warning( sprintf( _x( 'Calendar file is not empty, but there are no events in %s', '%s - calendar URI or calendar filename', 'motopress-hotel-booking' ), $calendarName ), $logContext );
+					$this->logger->info( sprintf( _x( 'Calendar file is not empty, but there are no events in %s', '%s - calendar URI or calendar filename', 'motopress-hotel-booking' ), $calendarName ) );
 				}
 
 				// Remove all outdated bookings
@@ -386,9 +386,9 @@ abstract class BackgroundWorker extends WP_Background_Process {
 			return $task;
 
 		} catch ( RequestException $e ) {
-			$this->logger->error( sprintf( __( 'Error while loading calendar (%1$s): %2$s', 'motopress-hotel-booking' ), $calendarUri, $e->getMessage() ), $logContext );
+			$this->logger->error( sprintf( __( 'Error while loading calendar (%1$s): %2$s', 'motopress-hotel-booking' ), $calendarUri, $e->getMessage() ) );
 		} catch ( \Exception $e ) {
-			$this->logger->error( sprintf( _x( 'Parse error. %s', '%s - error description', 'motopress-hotel-booking' ), $e->getMessage() ), $logContext );
+			$this->logger->error( sprintf( _x( 'Parse error. %s', '%s - error description', 'motopress-hotel-booking' ), $e->getMessage() ) );
 		}
 
 		return false;
@@ -403,17 +403,14 @@ abstract class BackgroundWorker extends WP_Background_Process {
 
 		switch ( $importStatus ){
 			case ImportStatus::SUCCESS:
-				$this->logger->success( $this->importer->getLastMessage(), $task['event'] );
 				$this->stats->increaseSucceedImports( 1 );
 				break;
 
 			case ImportStatus::SKIPPED:
-				$this->logger->info( $this->importer->getLastMessage(), $task['event'] );
 				$this->stats->increaseSkippedImports( 1 );
 				break;
 
 			case ImportStatus::FAILED:
-				$this->logger->error( $this->importer->getLastMessage(), $task['event'] );
 				$this->stats->increaseFailedImports( 1 );
 				break;
 		}
@@ -432,14 +429,14 @@ abstract class BackgroundWorker extends WP_Background_Process {
 
         if (is_null($booking)) {
             // The booking was removed by "import" task
-            $this->logger->info(sprintf(__('Skipped. Outdated booking #%d already removed.', 'motopress-hotel-booking'), $task['bookingId']), $task);
+            $this->logger->info(sprintf(__('Skipped. Outdated booking #%d already removed.', 'motopress-hotel-booking'), $task['bookingId']));
             $this->stats->increaseSkippedCleans(1);
             return false;
         }
 
         if ($booking->getSyncQueueId() == $task['queueId']) {
             // The booking has been updated
-            $this->logger->info(sprintf(__('Skipped. Booking #%d updated with new data.', 'motopress-hotel-booking'), $task['bookingId']), $task);
+            $this->logger->info(sprintf(__('Skipped. Booking #%d updated with new data.', 'motopress-hotel-booking'), $task['bookingId']));
             $this->stats->increaseSkippedCleans(1);
             return false;
         }
@@ -454,7 +451,7 @@ abstract class BackgroundWorker extends WP_Background_Process {
         MPHB()->getBookingRepository()->delete($booking);
 
         $this->stats->increaseDoneCleans(1);
-        $this->logger->success(sprintf(__('The outdated booking #%d has been removed.', 'motopress-hotel-booking'), $task['bookingId']), $task);
+        $this->logger->success(sprintf(__('The outdated booking #%d has been removed.', 'motopress-hotel-booking'), $task['bookingId']));
 
         return false;
     }

@@ -7,8 +7,8 @@ use \MPHB\Admin\Tabs;
 class GatewayManager {
 
 	/**
-	 *
-	 * @var Gateway
+	 * @var Gateway[] [Gateway ID => Gateway], where gateway ID is a string like
+	 *		"bank" or "paypal".
 	 */
 	private $gateways = array();
 
@@ -22,7 +22,24 @@ class GatewayManager {
      * @since 3.7.0 added new action - "mphb_register_gateways".
      */
 	public function registerGateways(){
-        do_action( 'mphb_register_gateways' );
+		/**
+		 * Payments that need to be suspended and not added to the GatewayManager.
+		 *
+		 * @since 4.2.4
+		 *
+		 * @param string[] $suspendPayments [] by default (allow all).
+		 */
+		$suspendPayments = apply_filters( 'mphb_suspend_payments', array() );
+
+		/**
+		 * @since 3.7.0
+		 * @since 4.2.4 added the <code>$suspendPayments</code> argument.
+		 *
+		 * @param string[] $suspendPayments
+		 */
+		do_action( 'mphb_register_gateways', $suspendPayments );
+
+		// See Gateway::register()
 		do_action( 'mphb_init_gateways', $this );
 	}
 

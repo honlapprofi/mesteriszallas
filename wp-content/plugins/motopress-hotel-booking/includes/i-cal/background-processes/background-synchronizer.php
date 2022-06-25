@@ -79,7 +79,7 @@ class BackgroundSynchronizer extends BackgroundWorker {
 			$message = sprintf( __( 'Skipped. No URLs found for parsing.', 'motopress-hotel-booking' ) );
 		}
 
-		$this->logger->info( $message, array( 'roomId' => $roomId ) );
+		$this->logger->info( $message );
 
 		return false;
 	}

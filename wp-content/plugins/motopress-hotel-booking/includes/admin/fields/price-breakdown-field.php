@@ -15,7 +15,8 @@ class PriceBreakdownField extends InputField {
 		// Render price breakdown
 		$result .= '<div class="mphb-price-breakdown-wrapper">';
 
-		$priceBreakdown = json_decode( $this->value, true );
+		$priceBreakdown = json_decode( mphb_strip_price_breakdown_json( $this->value ), true );
+
 		if ( is_array( $priceBreakdown ) ) {
 			$result .= \MPHB\Views\BookingView::generatePriceBreakdownArray( $priceBreakdown );
 		}

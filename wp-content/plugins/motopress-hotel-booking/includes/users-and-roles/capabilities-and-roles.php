@@ -16,6 +16,9 @@ class CapabilitiesAndRoles
     const EXPORT_REPORTS = 'mphb_export_reports';
     const SYNC_ICAL = 'mphb_sync_ical';
     const IMPORT_ICAL = 'mphb_import_ical';
+    const VIEW_CUSTOMERS = 'mphb_view_customers';
+    const EDIT_CUSTOMER = 'mphb_edit_customer';
+    const DELETE_CUSTOMER = 'mphb_delete_customer';
 
     /**
      * @var array
@@ -46,20 +49,36 @@ class CapabilitiesAndRoles
         }
 
         $customRoles = MPHB()->roles()->getRoles();
+        
+        $capabilitiesToRoles = MPHB()->capabilitiesAndRoles()->getRoles();
 
         $rolesVersion = \HotelBookingPlugin::getCustomRolesVersion();
 
         if (!$rolesVersion) {
             if (!$wp_roles->is_role(Roles::MANAGER)) $customRoles[Roles::MANAGER]->add();
             if (!$wp_roles->is_role(Roles::WORKER)) $customRoles[Roles::WORKER]->add();
-
-            $capabilitiesToRoles = MPHB()->capabilitiesAndRoles()->getRoles();
-
+            
             if (!empty($capabilitiesToRoles)) {
                 foreach ($capabilitiesToRoles as $role => $capabilities) {
                     if (!empty($capabilities)) {
                         foreach ($capabilities as $cap) {
                             $wp_roles->add_cap($role, $cap);
+                        }
+                    }
+                }
+            }
+        } else if( $rolesVersion < 2 ) {
+            if (!$wp_roles->is_role(Roles::CUSTOMER)) $customRoles[Roles::CUSTOMER]->add();
+            
+            $newCaps = [self::VIEW_CUSTOMERS, self::EDIT_CUSTOMER, self::DELETE_CUSTOMER];
+            
+            if (!empty($capabilitiesToRoles)) {
+                foreach ($capabilitiesToRoles as $role => $capabilities) {
+                    if (!empty($capabilities)) {
+                        foreach ($capabilities as $cap) {
+                            if( in_array( $cap, $newCaps ) ) {
+                                $wp_roles->add_cap($role, $cap);
+                            }
                         }
                     }
                 }
@@ -114,9 +133,24 @@ class CapabilitiesAndRoles
             'administrator',
             Roles::MANAGER
         );
+        
+        $this->capabilities[self::VIEW_CUSTOMERS] = array(
+            'administrator',
+            Roles::MANAGER
+        );
+        
+        $this->capabilities[self::EDIT_CUSTOMER] = array(
+            'administrator',
+            Roles::MANAGER
+        );
+        
+        $this->capabilities[self::DELETE_CUSTOMER] = array(
+            'administrator',
+            Roles::MANAGER
+        );
 
         $editor = get_role('editor'); // Get capabilities from Editor's \WP_Role
-        $capabilities = array_keys($editor->capabilities);
+        $capabilities = null != $editor ? array_keys($editor->capabilities) : [];
 
         if (!empty($capabilities)) {
             foreach ($capabilities as $cap) {
@@ -128,7 +162,7 @@ class CapabilitiesAndRoles
         }
 
         $contributor = get_role('subscriber'); // Get capabilities for Contributor's \WP_Role
-        $capabilities = array_keys($contributor->capabilities);
+        $capabilities = null != $contributor ? array_keys($contributor->capabilities) : [];
 
         if (!empty($capabilities)) {
             foreach ($capabilities as $cap) {

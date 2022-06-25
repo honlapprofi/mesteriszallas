@@ -1161,12 +1161,16 @@ MPHB.TermsSwitcher = can.Construct.extend(
 		 * @param {Object} element .mphb-checkout-terms-wrapper
 		 */
 		init: function( element, args ) {
+
 			var terms = element.children( '.mphb-terms-and-conditions' );
 
-			element.find( '.mphb-terms-and-conditions-link' ).on( 'click', function( event ){
-				event.preventDefault();
-				terms.toggleClass( 'mphb-active' );
-			} );
+			if ( terms.length > 0 ) {
+
+				element.find( '.mphb-terms-and-conditions-link' ).on( 'click', function( event ){
+					event.preventDefault();
+					terms.toggleClass( 'mphb-active' );
+				} );
+			}
 		}
 	}
 );
@@ -2227,6 +2231,20 @@ MPHB.GuestsChooser = can.Control.extend(
     }
 );
 
+( function( $ ) {
+    $( '#mphb-render-checkout-login' ).click( function( e ) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        var form = $( this ).parents( '.mphb-login-form-wrap' ).find( '.mphb-login-form' );
+        
+        if( form.hasClass( 'mphb-hide' ) ) {
+            form.removeClass( 'mphb-hide' );
+        } else {
+            form.addClass( 'mphb-hide' );
+        }
+    } );
+} )( jQuery );
 /**
  * @requires ./gateway.js
  *

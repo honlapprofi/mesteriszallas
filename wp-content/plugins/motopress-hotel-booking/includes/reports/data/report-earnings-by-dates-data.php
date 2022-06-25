@@ -24,7 +24,12 @@ class ReportEarningsByDatesData extends ReportByDatesData {
     public function __construct( $atts = array() ) {
         parent::__construct( $atts );
 
-        $this->dataTypes = ['confirmed', 'pending', 'cancelled', 'abandoned'];
+        $this->dataTypes = [
+            'confirmed' => _x('Confirmed', 'Booking status', 'motopress-hotel-booking'),
+            'pending'   => _x('Pending', 'Booking status', 'motopress-hotel-booking'),
+            'cancelled' => _x('Cancelled', 'Booking status', 'motopress-hotel-booking'),
+            'abandoned' => _x('Abandoned', 'Booking status', 'motopress-hotel-booking')
+        ];
 
         $this->dataFilters = ['totalPrice', 'totalWithoutTax', 'totalFees', 'totalServices', 'totalDiscount', 'totalBookings'];
     }
@@ -73,6 +78,7 @@ class ReportEarningsByDatesData extends ReportByDatesData {
         foreach( $this->getDataTypes() as $dataType ) {
             $bookingsData[$dataType] = [];
         }
+        
         $bookings = array();
 
         add_filter( 'posts_where', array( $this, 'filterBookingsByDates' ), 10, 1 );

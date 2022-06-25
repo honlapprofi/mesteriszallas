@@ -48,7 +48,7 @@ class CheckoutStep extends Step {
 		add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\CreateBooking\CheckoutView', 'renderCoupon' ), 20 );
 		add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderPriceBreakdown' ), 30 );
 		add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCheckoutText' ), 35 );
-        add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCustomerDetails' ), 40 );
+        add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCustomerDetails' ), 40, 3 );
 		add_action( 'mphb_cb_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderTotalPrice' ), 50 );
 		// Billing details - skipped - the booking does not require the payment
 		// Terms & conditions - skipped

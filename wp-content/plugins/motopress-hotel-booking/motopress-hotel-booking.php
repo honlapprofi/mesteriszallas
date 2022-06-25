@@ -4,7 +4,7 @@
  * Plugin Name: Hotel Booking
  * Plugin URI: https://motopress.com/products/hotel-booking/
  * Description: Manage your hotel booking services. Perfect for hotels, villas, guest houses, hostels, and apartments of all sizes.
- * Version: 4.1.1
+ * Version: 4.2.5
  * Author: MotoPress
  * Author URI: https://motopress.com/
  * License: GPLv2 or later

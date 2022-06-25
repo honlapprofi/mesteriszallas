@@ -203,4 +203,20 @@ class Statuses extends AbstractCPT\Statuses {
 		}
 	}
 
+	/**
+	 * @return string[]
+	 *
+	 * @since 4.2.2
+	 */
+	public function getFinishedStatuses()
+	{
+		// All, except STATUS_PENDING and STATUS_ON_HOLD
+		return array(
+			self::STATUS_COMPLETED,
+			self::STATUS_FAILED,
+			self::STATUS_ABANDONED,
+			self::STATUS_REFUNDED,
+			self::STATUS_CANCELLED,
+		);
+	}
 }

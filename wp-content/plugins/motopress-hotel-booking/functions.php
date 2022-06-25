@@ -107,6 +107,18 @@ function mphb_has_cookie( $name ){
 	return isset( $_COOKIE[$name] );
 }
 
+/**
+ * 
+ * @param string $name
+ * 
+ * @since 4.2.0
+ */
+function mphb_unset_cookie( $name ) {
+	if( isset( $_COOKIE[$name] ) ) {
+		unset( $_COOKIE[$name] );
+	}
+}
+
 function mphb_is_checkout_page(){
 	$checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
 	return $checkoutPageId && is_page( $checkoutPageId );
@@ -207,7 +219,25 @@ function mphb_format_price( $price, $atts = array() ){
 
 	if ( $atts['period'] ) {
 
-		$priceDescription	 = _nx( 'per night', 'for %d nights', $atts['period_nights'], 'Ex: $99 for 2 nights', 'motopress-hotel-booking' );
+		if ( 1 === $atts['period_nights'] ) {
+
+			//translators: Price per one night. Example: $99 per night
+			$priceDescription = _x( 'per night', 'Price per one night. Example: $99 per night', 'motopress-hotel-booking' );
+
+		} else {
+
+			/*
+			 * Translation will be used with numbers:
+			 *     21, 31, 41, 51, 61, 71, 81...
+			 *     2-4, 22-24, 32-34, 42-44, 52-54, 62...
+			 *     0, 5-19, 100, 1000, 10000...
+			 */
+
+			//translators: Price for X nights. Example: $99 for 2 nights, $99 for 21 nights
+			$priceDescription = _nx( 'for %d nights', 'for %d nights', $atts['period_nights'],
+				'Price for X nights. Example: $99 for 2 nights, $99 for 21 nights', 'motopress-hotel-booking' );
+		}
+
 		$priceDescription	 = sprintf( $priceDescription, $atts['period_nights'] );
 		$priceDescription	 = apply_filters( 'mphb_price_period_description', $priceDescription, $atts['period_nights'] );
 
@@ -879,6 +909,22 @@ function mphb_fix_blocks_autop()
 function mphb_escape_json_unicodes($json)
 {
     return preg_replace('/(\\\\u[0-9a-f]{4})/i', '\\\\$1', $json);
+}
+
+/**
+ * @param string $json JSON string with possibly escaped symbol '.
+ * @return string JSON string, ready to json_decode().
+ *
+ * @since 1.x
+ */
+function mphb_strip_price_breakdown_json($json)
+{
+	if (strpos($json, "\\'") !== false) {
+		// Unslash, not breaking the Unicode symbols
+		return wp_unslash(mphb_escape_json_unicodes($json));
+	} else {
+		return $json;
+	}
 }
 
 /**
@@ -1701,4 +1747,57 @@ function mphb_help_tip( $tip, $allow_html = false ) {
 	}
 
 	return '<span class="mphb-help-tip" data-tip="' . $tip . '"></span>';
+}
+
+/**
+ *
+ * @param  string $endpoint  Endpoint slug.
+ * @param  string $value     Query param value.
+ * @param  string $permalink Permalink.
+ * 
+ * @since 4.2.0
+ *
+ * @return string
+ */
+function mphb_create_url( $endpoint, $value = '', $permalink = '' ) {
+	global $wp;
+	
+	if ( ! $permalink ) {
+		$permalink = get_permalink();
+	}
+
+	$query_vars = $wp->query_vars;
+	$endpoint   = ! empty( $query_vars[ $endpoint ] ) ? $query_vars[ $endpoint ] : $endpoint;
+	
+	if ( get_option( 'permalink_structure' ) ) {
+		if ( strstr( $permalink, '?' ) ) {
+			$query_string = '?' . wp_parse_url( $permalink, PHP_URL_QUERY );
+			$permalink    = current( explode( '?', $permalink ) );
+		} else {
+			$query_string = '';
+		}
+		$url = trailingslashit( $permalink );
+
+		if ( $value ) {
+			$url .= trailingslashit( $endpoint ) . user_trailingslashit( $value );
+		} else {
+			$url .= user_trailingslashit( $endpoint );
+		}
+
+		$url .= $query_string;
+	} else {
+		$url = add_query_arg( $endpoint, $value, $permalink );
+	}
+
+	return $url;
+}
+
+/**
+ * @since 4.2.2
+ *
+ * @param string $queueItem Sync queue item, like "%Timestamp%_%Room ID%".
+ * @return int Room ID.
+ */
+function mphb_parse_queue_room_id( $queueItem ) {
+	return (int)preg_replace( '/^\d+_(\d+)/', '$1', $queueItem );
 }

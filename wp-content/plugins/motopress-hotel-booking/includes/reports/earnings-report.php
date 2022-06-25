@@ -367,7 +367,7 @@ class EarningsReport extends AbstractReport {
         $legendData = [];
         $plotData = $this->preparePlotData();
 
-        foreach( $this->data->getDataTypes() as $dataType ) {
+        foreach( $this->data->getDataTypes() as $dataType => $label ) {
             $totalInfo = array();
             $dataForType = isset( $plotData[$dataType] ) ? $plotData[$dataType] : array();
             foreach( $this->data->getDataFilters() as $summary ) {
@@ -391,7 +391,8 @@ class EarningsReport extends AbstractReport {
             }
 
             $legendData[] = array(
-                'dataType' => $dataType,
+                'type' => $dataType,
+                'dataType' => $label,
                 'totalInfo' => $totalInfo,
                 'color' => $this->colors[$dataType]['line']
             );
@@ -402,6 +403,7 @@ class EarningsReport extends AbstractReport {
 
     public function prepareReportLegend() {
         $legendData = $this->prepareLegendData();
+        
         $showDataTypes = $this->getShowDataTypes();
 
         $html = '';
@@ -411,15 +413,15 @@ class EarningsReport extends AbstractReport {
             <?php
             foreach( $legendData as $ld ) {
                 $earned = $ld['totalInfo'];
+                $datatype = $ld['type'];
                 ?>
                 <li class="mphb-chart-legend-item"
-                    data-dataType="<?php echo esc_attr( $ld['dataType'] ); ?>"
+                    data-dataType="<?php echo esc_attr( $datatype ); ?>"
                     style="border-bottom-color: <?php echo esc_attr( $ld['color'] ); ?>;">
                     <h4 class="mphb-chart-legend-item-type">
                         <label><input type="checkbox" class="mphb-chart-legend-item-checkbox"
-                        <?php echo in_array( $ld['dataType'], $showDataTypes ) ? 'checked="checked"' : ''; ?>
-                        value="<?php echo esc_attr( sanitize_title( $ld['dataType'] ) ); ?>" />
-                        <?php echo esc_html( sprintf( '%s ' . __( 'Bookings', 'motopress-hotel-bookings' ), ucfirst( $ld['dataType'] ) ) ); ?></label>
+                        <?php echo in_array( $datatype, $showDataTypes ) ? 'checked="checked"' : ''; ?>
+                        value="<?php echo esc_attr( $ld['dataType'] ); ?>" /><?php echo esc_html( $ld['dataType'] ); ?></label>
                     </h4>
                     <?php
                     if( !empty( $earned ) ) {

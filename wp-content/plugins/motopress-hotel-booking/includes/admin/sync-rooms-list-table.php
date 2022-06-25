@@ -57,7 +57,7 @@ class SyncRoomsListTable extends \WP_List_Table
         $newItems = array();
 
         foreach ($items as $queueId => $item) {
-			$roomId = QueuedSynchronizer::retrieveRoomIdFromItem($item['queue']);
+			$roomId = mphb_parse_queue_room_id($item['queue']);
 			$room   = MPHB()->getRoomRepository()->findById($roomId);
 
             if ( is_null($room) || empty($room->getTitle()) ) {

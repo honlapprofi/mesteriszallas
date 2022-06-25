@@ -3,6 +3,7 @@
 namespace MPHB\Shortcodes\CheckoutShortcode;
 
 use \MPHB\Entities;
+use \MPHB\UsersAndRoles\Customers;
 
 class StepCheckout extends Step {
 
@@ -29,14 +30,22 @@ class StepCheckout extends Step {
 	 * @var array
 	 */
 	protected $roomDetails = array();
+	
+	protected $customer = null;
 
 	public function __construct(){
 		add_action( 'init', array( $this, 'addInitActions' ) );
+		add_action( 'wp_login_failed', array( $this, 'redirectOnFailedLogin' ) );
+		add_action( 'wp_logout', array( $this, 'redirectAfterLogout' ) );
 	}
 
 	public function addInitActions(){
         add_action('mphb_sc_checkout_before_errors', array($this, 'showErrorsMessage'));
-
+		
+		add_action( 'mphb_sc_checkout_before_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCustomerErrors' ), 10 );
+		
+		add_action( 'mphb_sc_checkout_before_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderLoginForm' ), 10 );
+		
 		// templates hooks
 		add_action( 'mphb_sc_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderBookingDetails' ), 10, 2 );
 
@@ -50,7 +59,7 @@ class StepCheckout extends Step {
 		}
 		add_action( 'mphb_sc_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderPriceBreakdown' ), 30 );
 		add_action( 'mphb_sc_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCheckoutText' ), 35 );
-		add_action( 'mphb_sc_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCustomerDetails' ), 40 );
+		add_action( 'mphb_sc_checkout_form', array( '\MPHB\Views\Shortcodes\CheckoutView', 'renderCustomerDetails' ), 40, 3 );
 
 		if ( MPHB()->settings()->main()->getConfirmationMode() === 'payment' ) {
 			$gateways = MPHB()->gatewayManager()->getListActive();
@@ -79,8 +88,10 @@ class StepCheckout extends Step {
      * @since 3.7.0 added new filter - "mphb_sc_checkout_step_checkout_booking_object".
      */
 	public function setup(){
-
+		
 		$this->isCorrectBookingData = $this->parseBookingData();
+		
+		$this->parseCustomerData();
 
 		if ( $this->isCorrectBookingData ) {
 			$bookingAtts = array(
@@ -107,6 +118,7 @@ class StepCheckout extends Step {
 				);
 			}
 
+			mphb_set_cookie( 'mphb_checkout_step', \MPHB\Shortcodes\CheckoutShortcode::STEP_CHECKOUT );
 		}
 	}
 
@@ -126,15 +138,25 @@ class StepCheckout extends Step {
 		if ( !$isCorrectCheckInDate || !$isCorrectCheckOutDate ) {
 			return false;
 		}
-
-		if ( empty( $_POST['mphb_rooms_details'] ) || !is_array( $_POST['mphb_rooms_details'] ) ) {
+		
+		if( ! empty( $_POST['mphb_rooms_details'] ) && is_array( $_POST['mphb_rooms_details'] ) ) {
+			$roomDetails = (array) wp_unslash( $_POST['mphb_rooms_details'] );
+		} else if ( ! empty( mphb_get_cookie( 'mphb_rooms_details' ) ) ) {
+			$roomDetails = maybe_unserialize( mphb_get_cookie( 'mphb_rooms_details' ) );
+		}
+		
+		mphb_set_cookie( 'mphb_rooms_details', maybe_serialize( $roomDetails ) );
+		
+		if ( empty( $roomDetails ) || !is_array( $roomDetails ) ) {
 			$this->errors[] = __( 'There are no accommodations selected for reservation.', 'motopress-hotel-booking' );
 			return false;
 		}
 
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-		$selectedRooms = isset( $_POST['mphb_rooms_details'] ) && is_array( $_POST['mphb_rooms_details'] ) ? $_POST['mphb_rooms_details'] : array();
-        $selectedRooms = apply_filters('mphb_sc_checkout_step_checkout_selected_rooms', $selectedRooms );
+
+		$selectedRooms = ! empty( $roomDetails ) && is_array( $roomDetails ) ? $roomDetails : [];
+		
+		$selectedRooms = apply_filters('mphb_sc_checkout_step_checkout_selected_rooms', $selectedRooms );
 
 		$this->reservedRooms = $reservedRooms = array();
 		$this->roomDetails = $roomDetails = array();
@@ -223,6 +245,24 @@ class StepCheckout extends Step {
 
 		return true;
 	}
+	
+	protected function parseCustomerData() {
+		$userId = get_current_user_id();
+		
+		if( ! $userId ) {
+			// User is not logged in
+			return;
+		}
+		
+		$customer = MPHB()->customers()->findBy( 'user_id', $userId );
+		
+        if( null == $customer ) {
+            // @todo case if user is not a customer
+            return;
+        }
+		
+		$this->customer = $customer;
+	}
 
     /**
      * @since 3.7.0 added new action - "mphb_sc_checkout_before_errors".
@@ -242,7 +282,7 @@ class StepCheckout extends Step {
 
 		do_action( 'mphb_sc_checkout_before_form' );
 
-		\MPHB\Views\Shortcodes\CheckoutView::renderCheckoutForm( $this->booking, $this->roomDetails );
+		\MPHB\Views\Shortcodes\CheckoutView::renderCheckoutForm( $this->booking, $this->roomDetails, $this->customer );
 
 		do_action( 'mphb_sc_checkout_after_form' );
 	}
@@ -277,6 +317,39 @@ class StepCheckout extends Step {
 		MPHB()->getPublicScriptManager()->enqueue();
 
         do_action('mphb_enqueue_checkout_scripts');
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.1
+	 */
+	public function redirectOnFailedLogin() {
+		$referrer = $_SERVER['HTTP_REFERER'];
+        $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
+        $page = get_post( $checkoutPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            $redirectTo = add_query_arg( 'login_failed', 'error', $referrer );
+            wp_safe_redirect( $redirectTo );
+            exit;
+        }
+	}
+	
+	/**
+	 * 
+	 * @since 4.2.1
+	 */
+	public function redirectAfterLogout() {
+		$referrer = $_SERVER['HTTP_REFERER'];
+        $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
+        $page = get_post( $checkoutPageId );
+        $slug = $page->post_name;
+        
+        if( strstr( $referrer, $slug ) ) {
+            wp_safe_redirect( $referrer );
+            exit;
+        }
 	}
 
 }

@@ -28,44 +28,37 @@ class Logger
 		return $this->queueId;
 	}
 
-	public function success( $message, $context = array() ){
-		$this->log( 'success', $message, $context );
+	public function success( $message ){
+		$this->log( 'success', $message );
 	}
 
-	public function info( $message, $context = array() ){
-		$this->log( 'info', $message, $context );
+	public function info( $message ){
+		$this->log( 'info', $message );
 	}
 
-	public function warning( $message, $context = array() ){
-		$this->log( 'warning', $message, $context );
+	public function warning( $message ){
+		$this->log( 'warning', $message );
 	}
 
-	public function error( $message, $context = array() ){
-		$this->log( 'error', $message, $context );
+	public function error( $message ){
+		$this->log( 'error', $message );
 	}
 
 	/**
 	 * @param string $status "success"|"info"|"warning"|"error"
 	 * @param string $message
-	 * @param array $context Room ID, PRODID, UID, check-in/check-out dates etc.
 	 */
-	public function log( $status, $message, $context = array() ){
+	public function log( $status, $message ){
 		global $wpdb;
 
         if (empty($this->queueId)) {
             return;
         }
 
-		// All the data must be scalar, or it will generate a warning similar
-		// like "expects parameter 1 to be string, array given". See
-		// https://codex.wordpress.org/Class_Reference/wpdb#INSERT_row
-		$context = maybe_serialize( $context );
-
 		$wpdb->insert($this->mphb_sync_logs, array(
-			'queue_id' => $this->queueId,
-			'log_status'   => $status,
-			'log_message'  => $message,
-			'log_context'  => $context
+			'queue_id'    => $this->queueId,
+			'log_status'  => $status,
+			'log_message' => $message,
 		));
 	}
 
@@ -88,7 +81,7 @@ class Logger
         $mphb_sync_logs = $wpdb->prefix . Logger::TABLE_NAME;
 
         $query = $wpdb->prepare(
-            "SELECT log_status, log_message, log_context"
+            "SELECT log_status, log_message"
                 . " FROM {$mphb_sync_logs}"
                 . " WHERE queue_id = %d"
                 . " LIMIT {$offset}, {$limit}",
@@ -100,8 +93,8 @@ class Logger
         $logs = array_map(function ($row) {
             return array(
                 'status'  => $row['log_status'],
-                'message' => $row['log_message'],
-                'context' => maybe_unserialize($row['log_context'])
+                // Transform nulls
+                'message' => !empty($row['log_message']) ? $row['log_message'] : '',
             );
         }, $rows);
 

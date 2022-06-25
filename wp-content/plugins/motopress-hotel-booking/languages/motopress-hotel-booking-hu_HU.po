@@ -1,18 +1,17 @@
-# Copyright (C) 2021 MotoPress
-# This file is distributed under the same license as the Hotel Booking plugin.
+# Copyright (C) 2022 MotoPress
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: hotel-booking-plugin\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/motopress-hotel-"
-"booking\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/motopress-hotel-booking\n"
 "Last-Translator: \n"
-"Language-Team: Magyar\n"
+"Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-22T20:11:18+00:00\n"
-"PO-Revision-Date: 2022-03-18 13:04+0000\n"
-"X-Generator: Loco https://localise.biz/\n"
+"POT-Creation-Date: 2022-03-31T19:14:09+00:00\n"
+"PO-Revision-Date: 2022-03-31 20:31\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: motopress-hotel-booking\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: hotel-booking-plugin\n"
@@ -21,22 +20,19 @@ msgstr ""
 "X-Crowdin-File: motopress-hotel-booking.pot\n"
 "X-Crowdin-File-ID: 44\n"
 "Language: hu_HU\n"
-"X-Loco-Version: 2.6.1; wp-5.9.2"
 
 #. Plugin Name of the plugin
 #. translators: Name of the plugin, do not translate
 #: includes/script-managers/block-script-manager.php:21
 msgid "Hotel Booking"
-msgstr ""
+msgstr "Hotel Booking"
 
 #. Plugin URI of the plugin
 msgid "https://motopress.com/products/hotel-booking/"
 msgstr ""
 
 #. Description of the plugin
-msgid ""
-"Manage your hotel booking services. Perfect for hotels, villas, guest houses,"
-" hostels, and apartments of all sizes."
+msgid "Manage your hotel booking services. Perfect for hotels, villas, guest houses, hostels, and apartments of all sizes."
 msgstr "Kezelje a szállásfoglalási szolgáltatásait."
 
 #. Author of the plugin
@@ -57,30 +53,36 @@ msgctxt "Post Status"
 msgid "Auto Draft"
 msgstr "Auto-tervezet"
 
-#: functions.php:180
+#: functions.php:192
 msgctxt "Zero price"
 msgid "Free"
 msgstr "Ingyenes"
 
-#: functions.php:211
-msgctxt "Ex: $99 for 2 nights"
+#. translators: Price per one night. Example: $99 per night
+#: functions.php:226
+msgctxt "Price per one night. Example: $99 per night"
 msgid "per night"
+msgstr "egy éjszaka"
+
+#. translators: Price for X nights. Example: $99 for 2 nights, $99 for 21 nights
+#: functions.php:238
+msgctxt "Price for X nights. Example: $99 for 2 nights, $99 for 21 nights"
+msgid "for %d nights"
 msgid_plural "for %d nights"
 msgstr[0] "egy éjszaka"
 msgstr[1] "%d éjszaka"
 
 #. translators: %s: URL to plugins.php page
-#: functions.php:565
-msgid ""
-"You are using two instances of Hotel Booking plugin at the same time, please "
-"<a href=\"%s\">deactivate one of them</a>."
+#: functions.php:595
+msgid "You are using two instances of Hotel Booking plugin at the same time, please <a href=\"%s\">deactivate one of them</a>."
 msgstr ""
 
-#: functions.php:583
+#: functions.php:613
 msgid "<a href=\"%s\">Upgrade to Premium</a> to enable this feature."
 msgstr ""
 
-#: includes/actions-handler.php:59 includes/actions-handler.php:113
+#: includes/actions-handler.php:59
+#: includes/actions-handler.php:113
 msgid "Nonce verification failed."
 msgstr ""
 
@@ -92,9 +94,58 @@ msgstr ""
 msgid "Source ID is missing."
 msgstr ""
 
-#: includes/actions-handler.php:198 includes/admin/sync-logs-list-table.php:83
+#: includes/actions-handler.php:198
+#: includes/admin/sync-logs-list-table.php:83
 msgid "Error"
 msgstr "Hiba"
+
+#: includes/admin/customers-list-table.php:133
+#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
+#: includes/admin/sync-rooms-list-table.php:140
+#: includes/post-types/room-type-cpt.php:319
+#: templates/account/bookings.php:78
+msgid "View"
+msgstr "Nézet"
+
+#: includes/admin/customers-list-table.php:137
+#: includes/admin/fields/abstract-complex-field.php:25
+#: includes/admin/fields/rules-list-field.php:38
+#: includes/admin/sync-rooms-list-table.php:141
+msgid "Delete"
+msgstr "Törlés"
+
+#: includes/admin/customers-list-table.php:194
+#: includes/post-types/attributes-cpt.php:293
+msgid "Name"
+msgstr "Név"
+
+#: includes/admin/customers-list-table.php:195
+#: includes/admin/menu-pages/customers-menu-page.php:189
+#: includes/ajax.php:1069
+#: includes/bundles/customer-bundle.php:101
+#: includes/bundles/export-bundle.php:31
+#: includes/post-types/booking-cpt.php:89
+#: includes/post-types/payment-cpt.php:242
+#: includes/views/shortcodes/checkout-view.php:568
+#: templates/account/account-details.php:34
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/admin/customers-list-table.php:196
+#: includes/admin/menus.php:71
+#: includes/admin/menus.php:72
+#: includes/post-types/booking-cpt.php:200
+#: includes/shortcodes/account-shortcode.php:225
+msgid "Bookings"
+msgstr "Foglalások"
+
+#: includes/admin/customers-list-table.php:197
+msgid "Date Registered"
+msgstr ""
+
+#: includes/admin/customers-list-table.php:198
+msgid "Last Active"
+msgstr ""
 
 #. translators: Terms are variations for Attributes and bear no relation to the Terms and Conditions Page.
 #: includes/admin/edit-cpt-pages/attributes-edit-cpt-page.php:16
@@ -122,7 +173,8 @@ msgid "Configure terms"
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:20
-#: includes/ajax.php:1051 includes/post-types/reserved-room-cpt.php:22
+#: includes/ajax.php:1054
+#: includes/post-types/reserved-room-cpt.php:22
 msgid "Reserved Accommodations"
 msgstr "Foglalt szállások"
 
@@ -159,8 +211,7 @@ msgid "Resend Email"
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:99
-msgid ""
-"Send a copy of the Approved Booking email to the customer`s email address."
+msgid "Send a copy of the Approved Booking email to the customer`s email address."
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/booking-edit-cpt-page.php:114
@@ -216,9 +267,7 @@ msgid "Season Prices"
 msgstr "Évszak árak"
 
 #: includes/admin/edit-cpt-pages/rate-edit-cpt-page.php:42
-msgid ""
-"<code>Please select Accommodation Type and click Create Rate button to "
-"continue.</code>"
+msgid "<code>Please select Accommodation Type and click Create Rate button to continue.</code>"
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/rate-edit-cpt-page.php:56
@@ -265,9 +314,7 @@ msgid "Accommodation Reviews"
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/room-type-edit-cpt-page.php:27
-msgid ""
-"Allow guests to <a href=\"%s\" target=\"_blank\">submit star ratings and "
-"reviews</a> evaluating your accommodations."
+msgid "Allow guests to <a href=\"%s\" target=\"_blank\">submit star ratings and reviews</a> evaluating your accommodations."
 msgstr ""
 
 #: includes/admin/edit-cpt-pages/room-type-edit-cpt-page.php:68
@@ -298,12 +345,6 @@ msgstr "Aktív szálláshelyek:"
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: includes/admin/fields/abstract-complex-field.php:25
-#: includes/admin/fields/rules-list-field.php:38
-#: includes/admin/sync-rooms-list-table.php:141
-msgid "Delete"
-msgstr "Törlés"
-
 #: includes/admin/fields/amount-field.php:75
 msgid "Per adult:"
 msgstr ""
@@ -322,12 +363,14 @@ msgstr ""
 
 #: includes/admin/fields/complex-horizontal-field.php:49
 #: includes/admin/fields/rules-list-field.php:39
+#: templates/account/bookings.php:22
+#: templates/account/bookings.php:77
 #: templates/edit-booking/edit-reserved-rooms.php:47
 msgid "Actions"
 msgstr "Cselekvések"
 
 #: includes/admin/fields/complex-vertical-field.php:17
-#: includes/admin/menu-pages/settings-menu-page.php:303
+#: includes/admin/menu-pages/settings-menu-page.php:333
 #: includes/settings/main-settings.php:25
 #: includes/settings/main-settings.php:43
 msgid "Default"
@@ -335,14 +378,17 @@ msgstr "Alapértelmezett beállítások"
 
 #: includes/admin/fields/dynamic-select-field.php:61
 #: includes/admin/fields/page-select-field.php:16
+#: includes/admin/menu-pages/customers-menu-page.php:242
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:37
-#: includes/admin/menu-pages/settings-menu-page.php:231
+#: includes/admin/menu-pages/settings-menu-page.php:237
 #: includes/post-types/booking-cpt.php:101
 #: includes/post-types/booking-cpt.php:146
-#: includes/post-types/payment-cpt.php:213 includes/post-types/rate-cpt.php:29
+#: includes/post-types/payment-cpt.php:213
+#: includes/post-types/rate-cpt.php:29
 #: includes/post-types/room-cpt.php:65
-#: includes/views/shortcodes/checkout-view.php:185
-#: includes/views/shortcodes/checkout-view.php:206
+#: includes/views/shortcodes/checkout-view.php:249
+#: includes/views/shortcodes/checkout-view.php:270
+#: templates/account/account-details.php:51
 #: templates/edit-booking/add-room-popup.php:30
 #: templates/edit-booking/add-room-popup.php:38
 msgid "— Select —"
@@ -380,8 +426,10 @@ msgstr ""
 
 #: includes/admin/fields/notes-list-field.php:23
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:68
-#: includes/bundles/export-bundle.php:50 assets/blocks/blocks.js:457
-#: assets/blocks/blocks.js:793 assets/blocks/blocks.js:977
+#: includes/bundles/export-bundle.php:52
+#: assets/blocks/blocks.js:457
+#: assets/blocks/blocks.js:793
+#: assets/blocks/blocks.js:977
 msgid "Date"
 msgstr "Dátum"
 
@@ -398,7 +446,8 @@ msgid "Edit"
 msgstr "Módosítás"
 
 #: includes/admin/fields/rules-list-field.php:37
-#: includes/admin/sync-rooms-list-table.php:75 includes/ajax.php:949
+#: includes/admin/sync-rooms-list-table.php:75
+#: includes/ajax.php:952
 #: includes/script-managers/admin-script-manager.php:92
 msgid "Done"
 msgstr "Kész"
@@ -449,11 +498,14 @@ msgstr ""
 #: includes/admin/fields/variable-pricing-field.php:76
 #: includes/admin/fields/variable-pricing-field.php:127
 #: includes/emails/templaters/reserved-rooms-templater.php:155
-#: includes/post-types/room-type-cpt.php:277 includes/views/booking-view.php:93
+#: includes/post-types/room-type-cpt.php:277
+#: includes/views/booking-view.php:93
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:177 template-functions.php:633
+#: includes/views/shortcodes/checkout-view.php:241
+#: template-functions.php:633
 #: templates/create-booking/search/search-form.php:90
-#: templates/shortcodes/search/search-form.php:74 assets/blocks/blocks.js:60
+#: templates/shortcodes/search/search-form.php:74
+#: assets/blocks/blocks.js:60
 msgid "Adults"
 msgstr "Felnőttek"
 
@@ -463,7 +515,8 @@ msgstr "Felnőttek"
 #: includes/post-types/room-type-cpt.php:286
 #: includes/views/booking-view.php:103
 #: templates/create-booking/search/search-form.php:105
-#: templates/shortcodes/search/search-form.php:97 assets/blocks/blocks.js:75
+#: templates/shortcodes/search/search-form.php:97
+#: assets/blocks/blocks.js:75
 msgid "Children"
 msgstr "Gyermekek"
 
@@ -486,17 +539,8 @@ msgid "Remove variation"
 msgstr ""
 
 #: includes/admin/groups/license-settings-group.php:21
-msgid ""
-"The License Key is required in order to get automatic plugin updates and "
-"support. You can manage your License Key in your personal account. <a "
-"href='https://motopress.zendesk.com/hc/en-us/articles/202812996-How-to-use-"
-"your-personal-MotoPress-account' target='_blank'>Learn more</a>."
-msgstr ""
-"Annak érdekében, hogy Ön automatikus bővítmény frissítéseket és támogatást "
-"tudjon kapni, egy licenc kulcsra lesz szüksége. Ön a licenc kulcsát a "
-"személyes fiókjában kezelheti. <a href='https://motopress.zendesk.com/hc/en-"
-"us/articles/202812996-How-to-use-your-personal-MotoPress-account' "
-"target='_blank'>Learn more</a>."
+msgid "The License Key is required in order to get automatic plugin updates and support. You can manage your License Key in your personal account. <a href='https://motopress.zendesk.com/hc/en-us/articles/202812996-How-to-use-your-personal-MotoPress-account' target='_blank'>Learn more</a>."
+msgstr "Annak érdekében, hogy Ön automatikus bővítmény frissítéseket és támogatást tudjon kapni, egy licenc kulcsra lesz szüksége. Ön a licenc kulcsát a személyes fiókjában kezelheti. <a href='https://motopress.zendesk.com/hc/en-us/articles/202812996-How-to-use-your-personal-MotoPress-account' target='_blank'>Learn more</a>."
 
 #: includes/admin/groups/license-settings-group.php:26
 msgid "License Key"
@@ -507,7 +551,8 @@ msgstr "Licenc kulcs"
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:28
 #: includes/admin/sync-logs-list-table.php:70
 #: includes/admin/sync-rooms-list-table.php:120
-#: includes/bundles/export-bundle.php:19 template-functions.php:815
+#: includes/bundles/export-bundle.php:19
+#: template-functions.php:815
 #: templates/edit-booking/edit-reserved-rooms.php:46
 msgid "Status"
 msgstr "Állapot"
@@ -535,16 +580,8 @@ msgid "Invalid"
 msgstr "Érvénytelen"
 
 #: includes/admin/groups/license-settings-group.php:69
-msgid ""
-"Your License Key does not match the installed plugin. <a href='https:"
-"//motopress.zendesk.com/hc/en-us/articles/202957243-What-to-do-if-the-"
-"license-key-doesn-t-correspond-with-the-plugin-license' target='_blank'>How "
-"to fix this.</a>"
-msgstr ""
-"Az Ön licenc kulcsa nem egyezik a feltelepített bővítménnyel. <a href='https:"
-"//motopress.zendesk.com/hc/en-us/articles/202957243-What-to-do-if-the-"
-"license-key-doesn-t-correspond-with-the-plugin-license' target='_blank'>How "
-"to fix this.</a>"
+msgid "Your License Key does not match the installed plugin. <a href='https://motopress.zendesk.com/hc/en-us/articles/202957243-What-to-do-if-the-license-key-doesn-t-correspond-with-the-plugin-license' target='_blank'>How to fix this.</a>"
+msgstr "Az Ön licenc kulcsa nem egyezik a feltelepített bővítménnyel. <a href='https://motopress.zendesk.com/hc/en-us/articles/202957243-What-to-do-if-the-license-key-doesn-t-correspond-with-the-plugin-license' target='_blank'>How to fix this.</a>"
 
 #: includes/admin/groups/license-settings-group.php:72
 msgid "Product ID is not valid"
@@ -567,16 +604,11 @@ msgid "Renew License"
 msgstr "Licenc megújítása"
 
 #: includes/admin/manage-cpt-pages/attributes-manage-cpt-page.php:9
-msgid ""
-"Attributes let you define extra accommodation data, such as location or type."
-" You can use these attributes in the search availability form as advanced "
-"search filters."
+msgid "Attributes let you define extra accommodation data, such as location or type. You can use these attributes in the search availability form as advanced search filters."
 msgstr ""
 
 #: includes/admin/manage-cpt-pages/attributes-manage-cpt-page.php:72
-msgid ""
-"This attribute refers to non-unique taxonomy - %1$s - which was already "
-"registered with attribute %2$s."
+msgid "This attribute refers to non-unique taxonomy - %1$s - which was already registered with attribute %2$s."
 msgstr ""
 
 #. translators: Terms are variations for Attributes and bear no relation to the Terms and Conditions Page.
@@ -593,9 +625,11 @@ msgstr "Új foglalás"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:61
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:26
 #: includes/admin/menu-pages/shortcodes-menu-page.php:354
-#: includes/ajax.php:1037 includes/bundles/export-bundle.php:18
+#: includes/ajax.php:1040
+#: includes/bundles/export-bundle.php:18
 #: includes/post-types/booking-cpt.php:38
-#: includes/post-types/payment-cpt.php:140 assets/blocks/blocks.js:1066
+#: includes/post-types/payment-cpt.php:140
+#: assets/blocks/blocks.js:1066
 msgid "ID"
 msgstr "ID"
 
@@ -606,7 +640,8 @@ msgstr "Bejelentkezés / kijelentkezés"
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:64
 #: includes/views/booking-view.php:95
 #: includes/views/edit-booking/checkout-view.php:149
-#: includes/views/shortcodes/checkout-view.php:179 template-functions.php:635
+#: includes/views/shortcodes/checkout-view.php:243
+#: template-functions.php:635
 #: templates/shortcodes/search/search-form.php:76
 msgid "Guests"
 msgstr "Vendégek"
@@ -621,12 +656,16 @@ msgstr "Ügyféladatok"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:66
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:16
-#: includes/post-types/rate-cpt.php:52 includes/post-types/service-cpt.php:131
-#: includes/post-types/service-cpt.php:135
+#: includes/post-types/rate-cpt.php:52
+#: includes/post-types/service-cpt.php:133
+#: includes/post-types/service-cpt.php:137
 #: includes/views/single-service-view.php:18
-#: includes/widgets/rooms-widget.php:194 assets/blocks/blocks.js:360
-#: assets/blocks/blocks.js:411 assets/blocks/blocks.js:610
-#: assets/blocks/blocks.js:747 assets/blocks/blocks.js:931
+#: includes/widgets/rooms-widget.php:194
+#: assets/blocks/blocks.js:360
+#: assets/blocks/blocks.js:411
+#: assets/blocks/blocks.js:610
+#: assets/blocks/blocks.js:747
+#: assets/blocks/blocks.js:931
 #: assets/blocks/blocks.js:1138
 msgid "Price"
 msgstr "Ár"
@@ -635,9 +674,12 @@ msgstr "Ár"
 #: includes/admin/menu-pages/booking-rules-menu-page.php:308
 #: includes/admin/room-list-table.php:98
 #: includes/admin/sync-rooms-list-table.php:119
-#: includes/bookings-calendar.php:735 includes/bookings-calendar.php:753
-#: includes/bundles/export-bundle.php:24 includes/post-types/room-cpt.php:26
-#: includes/post-types/room-cpt.php:61 includes/post-types/room-type-cpt.php:61
+#: includes/bookings-calendar.php:735
+#: includes/bookings-calendar.php:753
+#: includes/bundles/export-bundle.php:24
+#: includes/post-types/room-cpt.php:26
+#: includes/post-types/room-cpt.php:61
+#: includes/post-types/room-type-cpt.php:61
 #: templates/edit-booking/add-room-popup.php:36
 #: templates/edit-booking/edit-reserved-rooms.php:45
 msgid "Accommodation"
@@ -645,7 +687,7 @@ msgstr "Szálláshely"
 
 #: includes/admin/manage-cpt-pages/booking-manage-cpt-page.php:95
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:55
+#: includes/admin/menu-pages/create-booking/booking-step.php:62
 #: includes/bookings-calendar.php:525
 #: includes/script-managers/admin-script-manager.php:96
 msgid "Booking #%s"
@@ -701,6 +743,7 @@ msgid "Imported %s"
 msgstr ""
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:27
+#: includes/admin/menu-pages/customers-menu-page.php:281
 msgid "Customer"
 msgstr "Vevő"
 
@@ -709,15 +752,21 @@ msgstr "Vevő"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:199
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:259
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:309
-#: includes/post-types/payment-cpt.php:169 includes/views/booking-view.php:113
-#: includes/views/booking-view.php:147 includes/views/booking-view.php:176
-#: includes/views/booking-view.php:200 includes/views/booking-view.php:223
-#: includes/views/booking-view.php:244 template-functions.php:816
+#: includes/post-types/payment-cpt.php:169
+#: includes/views/booking-view.php:113
+#: includes/views/booking-view.php:147
+#: includes/views/booking-view.php:176
+#: includes/views/booking-view.php:200
+#: includes/views/booking-view.php:223
+#: includes/views/booking-view.php:244
+#: template-functions.php:816
 msgid "Amount"
 msgstr "Mennyíség"
 
 #: includes/admin/manage-cpt-pages/payment-manage-cpt-page.php:30
 #: includes/post-types/booking-cpt.php:201
+#: templates/account/bookings.php:18
+#: templates/account/bookings.php:64
 msgid "Booking"
 msgstr "Szállásfoglalás"
 
@@ -748,22 +797,17 @@ msgid "Modified on: "
 msgstr "Módosítva:"
 
 #: includes/admin/manage-cpt-pages/rate-manage-cpt-page.php:11
-msgid ""
-"Rates are used to offer different prices of the same accommodation type "
-"depending on extra conditions. E.g. Double room with breakfast included; "
-"double room with no breakfast. Guests will choose the preferable rate when "
-"submitting a booking request."
-msgstr ""
-"A díjakra azért van szükség, hogy különböző árakat lehessen kínálni az extra "
-"feltételektől függően. Például: kétágyas szoba reggelivel, kétágyas szoba "
-"reggeli nélkül. A vendégek a foglaláskor kiválaszthatják a megfelelő díjatt."
+msgid "Rates are used to offer different prices of the same accommodation type depending on extra conditions. E.g. Double room with breakfast included; double room with no breakfast. Guests will choose the preferable rate when submitting a booking request."
+msgstr "A díjakra azért van szükség, hogy különböző árakat lehessen kínálni az extra feltételektől függően. Például: kétágyas szoba reggelivel, kétágyas szoba reggeli nélkül. A vendégek a foglaláskor kiválaszthatják a megfelelő díjatt."
 
 #: includes/admin/manage-cpt-pages/rate-manage-cpt-page.php:21
 #: includes/admin/manage-cpt-pages/room-manage-cpt-page.php:32
 #: includes/admin/menu-pages/booking-rules-menu-page.php:302
 #: includes/admin/menu-pages/rooms-generator-menu-page.php:33
-#: includes/bundles/export-bundle.php:22 includes/post-types/rate-cpt.php:28
-#: includes/post-types/room-cpt.php:68 includes/post-types/room-type-cpt.php:55
+#: includes/bundles/export-bundle.php:22
+#: includes/post-types/rate-cpt.php:28
+#: includes/post-types/room-cpt.php:68
+#: includes/post-types/room-type-cpt.php:55
 #: templates/create-booking/search/search-form.php:78
 #: templates/edit-booking/add-room-popup.php:28
 #: templates/edit-booking/edit-reserved-rooms.php:44
@@ -783,12 +827,8 @@ msgid "Rate was duplicated."
 msgstr "A díj másolva volt."
 
 #: includes/admin/manage-cpt-pages/room-manage-cpt-page.php:13
-msgid ""
-"These are real accommodations like rooms, apartments, houses, villas, beds "
-"(for hostels) etc."
-msgstr ""
-"Ezek valódi szálláshelyek, mint például szobák, apartmanok, házak, villák, "
-"ágyak (szállók) stb. "
+msgid "These are real accommodations like rooms, apartments, houses, villas, beds (for hostels) etc."
+msgstr "Ezek valódi szálláshelyek, mint például szobák, apartmanok, házak, villák, ágyak (szállók) stb. "
 
 #: includes/admin/manage-cpt-pages/room-manage-cpt-page.php:77
 #: includes/admin/menu-pages/reports-menu-page.php:128
@@ -797,14 +837,8 @@ msgid "All Accommodation Types"
 msgstr "Összes szálláshely típus"
 
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:11
-msgid ""
-"These are not physical accommodations, but their types. E.g. standard double "
-"room. To specify the real number of existing accommodations, you'll need to "
-"use Generate Accommodations menu."
-msgstr ""
-"Ezek nem valódi szálláshelyek, hanem a típusai. Például kétágyas szoba. A "
-"meglévő szálláshelyek tényleges számának a megadásához a szálláshelyek "
-"generálása menüt kell választani."
+msgid "These are not physical accommodations, but their types. E.g. standard double room. To specify the real number of existing accommodations, you'll need to use Generate Accommodations menu."
+msgstr "Ezek nem valódi szálláshelyek, hanem a típusai. Például kétágyas szoba. A meglévő szálláshelyek tényleges számának a megadásához a szálláshelyek generálása menüt kell választani."
 
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:35
 #: includes/post-types/room-type-cpt.php:273
@@ -829,8 +863,9 @@ msgstr "Ágy típus"
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:228
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:280
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:330
-#: includes/post-types/room-cpt.php:25 includes/post-types/room-cpt.php:35
-#: includes/wizard.php:99
+#: includes/post-types/room-cpt.php:25
+#: includes/post-types/room-cpt.php:35
+#: includes/wizard.php:100
 msgid "Accommodations"
 msgstr "Szálláshelyek"
 
@@ -845,7 +880,8 @@ msgstr "Összesen:"
 
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:66
 #: includes/views/loop-room-type-view.php:116
-#: includes/views/single-room-type-view.php:203 template-functions.php:759
+#: includes/views/single-room-type-view.php:203
+#: template-functions.php:759
 #: templates/create-booking/results/reserve-rooms.php:51
 #: templates/widgets/rooms/room-content.php:76
 #: templates/widgets/search-availability/search-form.php:73
@@ -854,7 +890,8 @@ msgstr "Felnőtt:"
 
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:67
 #: includes/views/loop-room-type-view.php:131
-#: includes/views/single-room-type-view.php:218 template-functions.php:764
+#: includes/views/single-room-type-view.php:218
+#: template-functions.php:764
 #: templates/create-booking/results/reserve-rooms.php:52
 #: templates/widgets/rooms/room-content.php:89
 #: templates/widgets/search-availability/search-form.php:98
@@ -873,14 +910,8 @@ msgid "Active:"
 msgstr "Aktív:"
 
 #: includes/admin/manage-cpt-pages/season-manage-cpt-page.php:11
-msgid ""
-"Seasons are real periods of time, dates or days that come with different "
-"prices for accommodations. E.g. Winter 2018 ($120 per night), Christmas "
-"($150 per night)."
-msgstr ""
-"Az évszakok valóságos időszakok, dátumok vagy napok, amelyek különböző "
-"szálláslehetőségi árral rendelkeznek. Például Tél 2018 (120 dollár/éjszaka), "
-"Karácsony (150 dollár/éjszaka)."
+msgid "Seasons are real periods of time, dates or days that come with different prices for accommodations. E.g. Winter 2018 ($120 per night), Christmas ($150 per night)."
+msgstr "Az évszakok valóságos időszakok, dátumok vagy napok, amelyek különböző szálláslehetőségi árral rendelkeznek. Például Tél 2018 (120 dollár/éjszaka), Karácsony (150 dollár/éjszaka)."
 
 #: includes/admin/manage-cpt-pages/season-manage-cpt-page.php:16
 msgid "Start"
@@ -897,57 +928,51 @@ msgid "Days"
 msgstr "Nap"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:11
-msgid ""
-"Services are extra offers that you can sell or give for free. E.g. Thai "
-"massage, transfer, babysitting. Guests can pre-order them when placing a "
-"booking."
-msgstr ""
-"A szolgáltatások extra ajánlatok, amelyeket pénzért vagy ingyen kínál. "
-"Például thai masszázs, transzfer, gyermekfelügyelet. Az ajánlatok a "
-"foglaláskor igénybevehetők."
+msgid "Services are extra offers that you can sell or give for free. E.g. Thai massage, transfer, babysitting. Guests can pre-order them when placing a booking."
+msgstr "A szolgáltatások extra ajánlatok, amelyeket pénzért vagy ingyen kínál. Például thai masszázs, transzfer, gyermekfelügyelet. Az ajánlatok a foglaláskor igénybevehetők."
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:17
-#: includes/post-types/service-cpt.php:147
+#: includes/post-types/service-cpt.php:149
 msgid "Periodicity"
 msgstr "Időszakosság"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:18
-#: includes/post-types/service-cpt.php:196
+#: includes/post-types/service-cpt.php:198
 msgid "Charge"
 msgstr "Díj"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:41
-#: includes/entities/service.php:203 includes/post-types/service-cpt.php:150
+#: includes/entities/service.php:203
+#: includes/post-types/service-cpt.php:152
 msgid "Per Day"
 msgstr "Naponta"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:43
-#: includes/post-types/service-cpt.php:151
+#: includes/post-types/service-cpt.php:153
 msgid "Guest Choice"
 msgstr ""
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:45
-#: includes/entities/service.php:207 includes/post-types/service-cpt.php:149
+#: includes/entities/service.php:207
+#: includes/post-types/service-cpt.php:151
 msgid "Once"
 msgstr "Egyszer"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
-#: includes/entities/service.php:213 includes/post-types/service-cpt.php:199
+#: includes/entities/service.php:213
+#: includes/post-types/service-cpt.php:201
 msgid "Per Guest"
 msgstr "Fejenként"
 
 #: includes/admin/manage-cpt-pages/service-manage-cpt-page.php:49
-#: includes/entities/service.php:215 includes/post-types/service-cpt.php:198
+#: includes/entities/service.php:215
+#: includes/post-types/service-cpt.php:200
 msgid "Per Accommodation"
 msgstr "Szálláshelyként"
 
 #: includes/admin/manage-tax-pages/facility-manage-tax-page.php:9
-msgid ""
-"These are accommodation amenities, generally free ones. E.g. air-"
-"conditioning, wifi."
-msgstr ""
-"Ezek szálláslehetőségek, amelyek általában ingyenesek. Például "
-"légkondicionálás, wifi."
+msgid "These are accommodation amenities, generally free ones. E.g. air-conditioning, wifi."
+msgstr "Ezek szálláslehetőségek, amelyek általában ingyenesek. Például légkondicionálás, wifi."
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:27
 msgid "Booking rules saved."
@@ -956,13 +981,14 @@ msgstr ""
 #: includes/admin/menu-pages/booking-rules-menu-page.php:34
 #: includes/admin/menu-pages/booking-rules-menu-page.php:444
 #: includes/admin/menu-pages/booking-rules-menu-page.php:448
-#: includes/admin/menu-pages/settings-menu-page.php:334
+#: includes/admin/menu-pages/settings-menu-page.php:364
 msgid "Booking Rules"
 msgstr "Foglalási szabályok"
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:71
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:55
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:118
+#: templates/account/account-details.php:94
 msgid "Save Changes"
 msgstr ""
 
@@ -992,7 +1018,8 @@ msgstr ""
 #: includes/admin/menu-pages/booking-rules-menu-page.php:370
 #: includes/admin/menu-pages/booking-rules-menu-page.php:402
 #: includes/admin/menu-pages/booking-rules-menu-page.php:434
-#: includes/post-types/season-cpt.php:65 includes/post-types/season-cpt.php:75
+#: includes/post-types/season-cpt.php:65
+#: includes/post-types/season-cpt.php:75
 msgid "Seasons"
 msgstr "Évszakok"
 
@@ -1039,7 +1066,8 @@ msgid "There are no blocking accommodation rules."
 msgstr ""
 
 #: includes/admin/menu-pages/booking-rules-menu-page.php:317
-#: includes/bookings-calendar.php:631 includes/bookings-calendar.php:722
+#: includes/bookings-calendar.php:631
+#: includes/bookings-calendar.php:722
 msgid "From"
 msgstr "Érkezés"
 
@@ -1118,113 +1146,116 @@ msgstr ""
 
 #: includes/admin/menu-pages/create-booking-menu-page.php:162
 #: includes/admin/menu-pages/edit-booking-menu-page.php:55
-msgid ""
-"Note: booking rules are disabled in the plugin settings and are not taken "
-"into account."
+msgid "Note: booking rules are disabled in the plugin settings and are not taken into account."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:39
-#: includes/shortcodes/checkout-shortcode/step-booking.php:475
+#: includes/admin/menu-pages/create-booking/booking-step.php:46
+#: includes/shortcodes/checkout-shortcode/step-booking.php:485
 msgid "Unable to create booking. Please try again."
 msgstr "A foglalás nem lehet sikerült. Kérjük, próbálja újra."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:63
-#: includes/shortcodes/checkout-shortcode/step-booking.php:107
+#: includes/admin/menu-pages/create-booking/booking-step.php:70
+#: includes/shortcodes/checkout-shortcode/step-booking.php:110
 msgid "Booking is blocked due to maintenance reason. Please try again later."
-msgstr ""
-"A foglalás karbantartási okokból blokkolva van. Kérjük, próbálja újra később."
+msgstr "A foglalás karbantartási okokból blokkolva van. Kérjük, próbálja újra később."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:104
-#: includes/admin/menu-pages/create-booking/booking-step.php:244
+#: includes/admin/menu-pages/create-booking/booking-step.php:111
+#: includes/admin/menu-pages/create-booking/booking-step.php:251
 #: includes/admin/menu-pages/create-booking/checkout-step.php:105
 #: includes/admin/menu-pages/edit-booking/booking-control.php:34
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:50
 #: includes/admin/menu-pages/edit-booking/summary-control.php:45
-#: includes/shortcodes/checkout-shortcode/step-booking.php:176
-#: includes/shortcodes/checkout-shortcode/step-booking.php:335
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:131
+#: includes/shortcodes/checkout-shortcode/step-booking.php:186
+#: includes/shortcodes/checkout-shortcode/step-booking.php:345
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:151
 #: includes/utils/parse-utils.php:191
 msgid "There are no accommodations selected for reservation."
 msgstr "A szálláshely nincs kiválasztva."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:106
-#: includes/admin/menu-pages/create-booking/booking-step.php:135
+#: includes/admin/menu-pages/create-booking/booking-step.php:113
+#: includes/admin/menu-pages/create-booking/booking-step.php:142
 #: includes/admin/menu-pages/create-booking/checkout-step.php:107
 #: includes/admin/menu-pages/create-booking/checkout-step.php:126
 #: includes/admin/menu-pages/create-booking/checkout-step.php:149
-#: includes/utils/parse-utils.php:151 includes/utils/parse-utils.php:219
+#: includes/utils/parse-utils.php:151
+#: includes/utils/parse-utils.php:219
 #: includes/utils/parse-utils.php:239
 msgid "Selected accommodations are not valid."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:130
+#: includes/admin/menu-pages/create-booking/booking-step.php:137
 #: includes/admin/menu-pages/create-booking/checkout-step.php:121
-#: includes/admin/menu-pages/create-booking/step.php:147 includes/ajax.php:591
-#: includes/shortcodes/checkout-shortcode/step-booking.php:190
-#: includes/shortcodes/checkout-shortcode/step-booking.php:196
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:146
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:158
+#: includes/admin/menu-pages/create-booking/step.php:147
+#: includes/ajax.php:594
+#: includes/shortcodes/checkout-shortcode/step-booking.php:200
+#: includes/shortcodes/checkout-shortcode/step-booking.php:206
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:168
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:180
 #: includes/utils/parse-utils.php:235
 msgid "Accommodation Type is not valid."
 msgstr "A szállástípus nem érvényes."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:140
-#: includes/admin/menu-pages/create-booking/booking-step.php:161
-#: includes/ajax.php:599
-#: includes/shortcodes/checkout-shortcode/step-booking.php:202
-#: includes/shortcodes/checkout-shortcode/step-booking.php:218
-#: includes/shortcodes/checkout-shortcode/step-booking.php:375
-#: includes/shortcodes/checkout-shortcode/step-booking.php:387
+#: includes/admin/menu-pages/create-booking/booking-step.php:147
+#: includes/admin/menu-pages/create-booking/booking-step.php:168
+#: includes/ajax.php:602
+#: includes/shortcodes/checkout-shortcode/step-booking.php:212
+#: includes/shortcodes/checkout-shortcode/step-booking.php:228
+#: includes/shortcodes/checkout-shortcode/step-booking.php:385
+#: includes/shortcodes/checkout-shortcode/step-booking.php:397
 #: includes/utils/parse-utils.php:253
 msgid "Rate is not valid."
 msgstr "Az ár nem érvényes."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:166
+#: includes/admin/menu-pages/create-booking/booking-step.php:173
 #: includes/admin/menu-pages/create-booking/step.php:165
-#: includes/admin/menu-pages/create-booking/step.php:169 includes/ajax.php:472
-#: includes/shortcodes/checkout-shortcode/step-booking.php:224
+#: includes/admin/menu-pages/create-booking/step.php:169
+#: includes/ajax.php:475
+#: includes/shortcodes/checkout-shortcode/step-booking.php:234
 #: includes/shortcodes/search-results-shortcode.php:539
-#: includes/utils/parse-utils.php:102 includes/utils/parse-utils.php:257
+#: includes/utils/parse-utils.php:102
+#: includes/utils/parse-utils.php:257
 msgid "Adults number is not valid."
 msgstr "Felnőttek száma nem érvényes."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:171
+#: includes/admin/menu-pages/create-booking/booking-step.php:178
 #: includes/admin/menu-pages/create-booking/step.php:187
-#: includes/admin/menu-pages/create-booking/step.php:191 includes/ajax.php:488
-#: includes/shortcodes/checkout-shortcode/step-booking.php:230
+#: includes/admin/menu-pages/create-booking/step.php:191
+#: includes/ajax.php:491
+#: includes/shortcodes/checkout-shortcode/step-booking.php:240
 #: includes/shortcodes/search-results-shortcode.php:555
-#: includes/utils/parse-utils.php:127 includes/utils/parse-utils.php:261
+#: includes/utils/parse-utils.php:127
+#: includes/utils/parse-utils.php:261
 msgid "Children number is not valid."
 msgstr "Gyermekek száma nem érvényes."
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:176
-#: includes/ajax.php:608
-#: includes/shortcodes/checkout-shortcode/step-booking.php:235
+#: includes/admin/menu-pages/create-booking/booking-step.php:183
+#: includes/ajax.php:611
+#: includes/shortcodes/checkout-shortcode/step-booking.php:245
 #: includes/utils/parse-utils.php:265
 msgid "The total number of guests is not valid."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:181
+#: includes/admin/menu-pages/create-booking/booking-step.php:188
 #: includes/admin/menu-pages/create-booking/checkout-step.php:136
-#: includes/shortcodes/checkout-shortcode/step-booking.php:240
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:189
+#: includes/shortcodes/checkout-shortcode/step-booking.php:250
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:211
 #: includes/utils/parse-utils.php:269
 msgid "Selected dates do not meet booking rules for type %s"
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/booking-step.php:232
+#: includes/admin/menu-pages/create-booking/booking-step.php:239
 #: includes/admin/menu-pages/create-booking/checkout-step.php:141
 #: includes/utils/parse-utils.php:197
 msgid "Accommodations are not available."
 msgstr ""
 
 #: includes/admin/menu-pages/create-booking/checkout-step.php:131
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:184
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:206
 msgid "There are no rates for requested dates."
 msgstr "Nincs elérhető szállás az adott dátumokon."
 
 #: includes/admin/menu-pages/create-booking/results-step.php:145
-#: includes/wizard.php:90
+#: includes/wizard.php:91
 msgid "Search Results"
 msgstr "Keresési eredmények"
 
@@ -1237,35 +1268,159 @@ msgstr ""
 msgid "Search parameters are not set."
 msgstr ""
 
-#: includes/admin/menu-pages/create-booking/step.php:106 includes/ajax.php:439
+#: includes/admin/menu-pages/create-booking/step.php:106
+#: includes/ajax.php:442
 #: includes/script-managers/public-script-manager.php:244
-#: includes/shortcodes/checkout-shortcode/step.php:42
+#: includes/shortcodes/checkout-shortcode/step.php:50
 #: includes/shortcodes/search-results-shortcode.php:570
 #: includes/utils/parse-utils.php:38
 msgid "Check-in date is not valid."
 msgstr "A bejelentkezési dátum nem érvényes."
 
 #: includes/admin/menu-pages/create-booking/step.php:108
-#: includes/shortcodes/checkout-shortcode/step.php:45
+#: includes/shortcodes/checkout-shortcode/step.php:53
 #: includes/shortcodes/search-results-shortcode.php:573
 #: includes/utils/parse-utils.php:40
 msgid "Check-in date cannot be earlier than today."
 msgstr "A bejelentkezési dátum a mai napnál nem lehet hamarabb."
 
-#: includes/admin/menu-pages/create-booking/step.php:127 includes/ajax.php:456
+#: includes/admin/menu-pages/create-booking/step.php:127
+#: includes/ajax.php:459
 #: includes/script-managers/public-script-manager.php:245
-#: includes/shortcodes/checkout-shortcode/step.php:69
+#: includes/shortcodes/checkout-shortcode/step.php:84
 #: includes/shortcodes/search-results-shortcode.php:591
 #: includes/utils/parse-utils.php:71
 msgid "Check-out date is not valid."
 msgstr "A kijelentkezési dátum nem érvényes."
 
-#: includes/admin/menu-pages/create-booking/step.php:129 includes/ajax.php:1181
-#: includes/ajax.php:1189 includes/ajax.php:1250
-#: includes/shortcodes/checkout-shortcode/step.php:72
+#: includes/admin/menu-pages/create-booking/step.php:129
+#: includes/ajax.php:1184
+#: includes/ajax.php:1192
+#: includes/ajax.php:1253
+#: includes/shortcodes/checkout-shortcode/step.php:87
 #: includes/shortcodes/search-results-shortcode.php:598
 #: includes/utils/parse-utils.php:73
 msgid "Nothing found. Please try again with different search parameters."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:51
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:142
+msgid "User ID"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:153
+#: templates/account/account-details.php:30
+msgid "Username"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:165
+#: includes/ajax.php:1061
+#: includes/bundles/customer-bundle.php:83
+#: includes/bundles/export-bundle.php:29
+#: includes/post-types/booking-cpt.php:77
+#: includes/post-types/payment-cpt.php:228
+#: includes/views/shortcodes/checkout-view.php:546
+#: templates/account/account-details.php:22
+msgid "First Name"
+msgstr "Keresztnév"
+
+#: includes/admin/menu-pages/customers-menu-page.php:177
+#: includes/ajax.php:1065
+#: includes/bundles/customer-bundle.php:92
+#: includes/bundles/export-bundle.php:30
+#: includes/post-types/booking-cpt.php:83
+#: includes/post-types/payment-cpt.php:235
+#: includes/views/shortcodes/checkout-view.php:557
+#: templates/account/account-details.php:26
+msgid "Last Name"
+msgstr "Vezetéknév"
+
+#: includes/admin/menu-pages/customers-menu-page.php:201
+#: includes/ajax.php:1073
+#: includes/bundles/customer-bundle.php:110
+#: includes/bundles/export-bundle.php:32
+#: includes/post-types/booking-cpt.php:95
+#: includes/post-types/payment-cpt.php:249
+#: includes/views/shortcodes/checkout-view.php:579
+#: templates/account/account-details.php:38
+msgid "Phone"
+msgstr "Telefonszám"
+
+#: includes/admin/menu-pages/customers-menu-page.php:213
+#: includes/ajax.php:1081
+#: includes/bundles/customer-bundle.php:128
+#: includes/bundles/export-bundle.php:34
+#: includes/post-types/booking-cpt.php:108
+#: includes/views/shortcodes/checkout-view.php:613
+#: templates/account/account-details.php:42
+msgid "Address"
+msgstr "Cím"
+
+#: includes/admin/menu-pages/customers-menu-page.php:225
+#: includes/ajax.php:1089
+#: includes/bundles/customer-bundle.php:146
+#: includes/bundles/export-bundle.php:36
+#: includes/post-types/booking-cpt.php:120
+#: includes/post-types/payment-cpt.php:284
+#: includes/views/shortcodes/checkout-view.php:635
+#: templates/account/account-details.php:64
+msgid "State / County"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:237
+#: includes/ajax.php:1077
+#: includes/bundles/export-bundle.php:33
+#: includes/post-types/booking-cpt.php:102
+#: includes/post-types/payment-cpt.php:256
+#: templates/account/account-details.php:46
+msgid "Country"
+msgstr "Ország"
+
+#: includes/admin/menu-pages/customers-menu-page.php:250
+#: includes/ajax.php:1085
+#: includes/bundles/customer-bundle.php:137
+#: includes/bundles/export-bundle.php:35
+#: includes/post-types/booking-cpt.php:114
+#: includes/post-types/payment-cpt.php:277
+#: includes/views/shortcodes/checkout-view.php:624
+#: templates/account/account-details.php:68
+msgid "City"
+msgstr "Város"
+
+#: includes/admin/menu-pages/customers-menu-page.php:262
+#: includes/ajax.php:1093
+#: includes/bundles/customer-bundle.php:155
+#: includes/bundles/export-bundle.php:37
+#: includes/post-types/booking-cpt.php:126
+#: includes/views/shortcodes/checkout-view.php:646
+#: templates/account/account-details.php:72
+msgid "Postcode"
+msgstr "Irányítószám"
+
+#: includes/admin/menu-pages/customers-menu-page.php:296
+msgid "Customer data updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:302
+msgid "User account updated."
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:309
+msgid "Edit User Profile"
+msgstr ""
+
+#: includes/admin/menu-pages/customers-menu-page.php:341
+#: includes/admin/menu-pages/i-cal-menu-page.php:148
+msgid "Update"
+msgstr "Frissítés"
+
+#: includes/admin/menu-pages/customers-menu-page.php:347
+#: includes/admin/menu-pages/customers-menu-page.php:360
+#: includes/admin/menu-pages/customers-menu-page.php:364
+msgid "Customers"
 msgstr ""
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:66
@@ -1273,7 +1428,7 @@ msgid "The booking is not set."
 msgstr ""
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:74
-#: includes/ajax.php:1024
+#: includes/ajax.php:1027
 msgid "The booking not found."
 msgstr ""
 
@@ -1287,7 +1442,7 @@ msgid "Cancel"
 msgstr "Mégse"
 
 #: includes/admin/menu-pages/edit-booking-menu-page.php:121
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:195
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:192
 #: includes/admin/menu-pages/i-cal-menu-page.php:149
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys.php:41
 msgid "Back"
@@ -1303,19 +1458,13 @@ msgstr "Foglalás módosítása"
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:30
 #: includes/admin/menu-pages/edit-booking/edit-control.php:54
 #: includes/admin/menu-pages/edit-booking/summary-control.php:26
-msgid ""
-"You cannot edit the imported booking. Please update the source booking and "
-"resync your calendars."
+msgid "You cannot edit the imported booking. Please update the source booking and resync your calendars."
 msgstr ""
 
 #: includes/admin/menu-pages/edit-booking/booking-control.php:22
-#: includes/ajax.php:190
-msgid ""
-"Request does not pass security verification. Please refresh the page and try "
-"one more time."
-msgstr ""
-"A kérés nem engedte át a biztonsági ellenőrzés. Kérjük, frissítse az oldalt, "
-"és próbálja meg még egyszer."
+#: includes/ajax.php:193
+msgid "Request does not pass security verification. Please refresh the page and try one more time."
+msgstr "A kérés nem engedte át a biztonsági ellenőrzés. Kérjük, frissítse az oldalt, és próbálja meg még egyszer."
 
 #: includes/admin/menu-pages/edit-booking/booking-control.php:26
 #: includes/admin/menu-pages/edit-booking/checkout-control.php:35
@@ -1357,14 +1506,12 @@ msgstr ""
 #: includes/admin/menu-pages/extensions-menu-page.php:137
 #: includes/admin/menu-pages/extensions-menu-page.php:177
 #: includes/admin/menu-pages/extensions-menu-page.php:183
-#: includes/admin/menu-pages/settings-menu-page.php:755
+#: includes/admin/menu-pages/settings-menu-page.php:794
 msgid "Extensions"
 msgstr ""
 
 #: includes/admin/menu-pages/extensions-menu-page.php:140
-msgid ""
-"Extend the functionality of Hotel Booking plugin with the number of helpful "
-"addons for your custom purposes."
+msgid "Extend the functionality of Hotel Booking plugin with the number of helpful addons for your custom purposes."
 msgstr ""
 
 #: includes/admin/menu-pages/extensions-menu-page.php:163
@@ -1375,40 +1522,36 @@ msgstr ""
 msgid "No extensions found."
 msgstr ""
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:80
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:77
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:60
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:102
 #: includes/i-cal/logs-handler.php:73
 msgid "Abort Process"
 msgstr "Megszakítási folyamat"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:81
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:78
 #: includes/admin/menu-pages/i-cal-sync-logs-menu-page.php:61
 msgid "Aborting..."
 msgstr "Megszakítás..."
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:196
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:210
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:152
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:193
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:207
 #: includes/admin/room-list-table.php:161
 msgid "Import Calendar"
 msgstr "Naptár importálása"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:155
 msgid "Accommodation: %s"
 msgstr "Szálláshely: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:161
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:158
 msgid "Accommodation Type: %s"
 msgstr "Szálláshely típus: %s"
 
-#: includes/admin/menu-pages/i-cal-import-menu-page.php:168
-msgid ""
-"Please be patient while the calendars are imported. You will be notified via "
-"this page when the process is completed."
-msgstr ""
-"Kérjük, legyen türelmes a naptárak importálása közben. Ezen az oldalon "
-"fogjuk értesítetni a folyamat befelyezését illetően."
+#: includes/admin/menu-pages/i-cal-import-menu-page.php:165
+msgid "Please be patient while the calendars are imported. You will be notified via this page when the process is completed."
+msgstr "Kérjük, legyen türelmes a naptárak importálása közben. Ezen az oldalon fogjuk értesítetni a folyamat befelyezését illetően."
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:67
 msgid "Accommodation updated."
@@ -1433,16 +1576,8 @@ msgid "Sync All External Calendars"
 msgstr "Összes külső naptár szinkronizálása"
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:121
-msgid ""
-"Sync your bookings across all online channels like Booking.com, TripAdvisor, "
-"Airbnb etc. via iCalendar file format."
-msgstr ""
-"Szinkronizálja foglalásait az olyan oldalakon, mint a Booking.com, "
-"TripAdvisor, Airbnb stb. a iCalendar fájlformátummal."
-
-#: includes/admin/menu-pages/i-cal-menu-page.php:148
-msgid "Update"
-msgstr "Frissítés"
+msgid "Sync your bookings across all online channels like Booking.com, TripAdvisor, Airbnb etc. via iCalendar file format."
+msgstr "Szinkronizálja foglalásait az olyan oldalakon, mint a Booking.com, TripAdvisor, Airbnb stb. a iCalendar fájlformátummal."
 
 #: includes/admin/menu-pages/i-cal-menu-page.php:212
 msgid "Calendar URL"
@@ -1502,66 +1637,36 @@ msgid "Default language"
 msgstr "Alapértelmezett nyelv"
 
 #: includes/admin/menu-pages/language-menu-page.php:13
-msgid ""
-"This plugin will display all system messages, labels, buttons in the "
-"language set in <em>General > Settings > Site Language</em>. If the plugin "
-"is not available in your language, you may <a href=\"%s\">contribute your "
-"translation</a>."
-msgstr ""
-"Ez a bővítmény az összes rendszer üzenetet, címkét, gombot a <em>Általános> "
-"Beállítások>Oldal nyelv</em> menüben beállított nyelvben jeleníti meg. Ha a "
-"bővítmény az Ön nyelvében nem elérhető, hozzáadhatja a <a href=\"%s\">saját "
-"fordítását</a> is."
+msgid "This plugin will display all system messages, labels, buttons in the language set in <em>General > Settings > Site Language</em>. If the plugin is not available in your language, you may <a href=\"%s\">contribute your translation</a>."
+msgstr "Ez a bővítmény az összes rendszer üzenetet, címkét, gombot a <em>Általános> Beállítások>Oldal nyelv</em> menüben beállított nyelvben jeleníti meg. Ha a bővítmény az Ön nyelvében nem elérhető, hozzáadhatja a <a href=\"%s\">saját fordítását</a> is."
 
 #: includes/admin/menu-pages/language-menu-page.php:14
 msgid "Custom translations and edits"
 msgstr "Egyedi fordítások és módosítások"
 
 #: includes/admin/menu-pages/language-menu-page.php:15
-msgid ""
-"You may customize plugin translation by editing the needed texts or adding "
-"your translation following these steps:"
-msgstr ""
-"Ön módosíthatja a bővítmény fordítást a szükséges szövegek szerkesztésével "
-"vagy az Ön saját fordítása hozzáadásával, ha a következő lépéseket követi:"
+msgid "You may customize plugin translation by editing the needed texts or adding your translation following these steps:"
+msgstr "Ön módosíthatja a bővítmény fordítást a szükséges szövegek szerkesztésével vagy az Ön saját fordítása hozzáadásával, ha a következő lépéseket követi:"
 
 #: includes/admin/menu-pages/language-menu-page.php:17
-msgid ""
-"Take the source file for your translations %s or needed translated locale."
-msgstr ""
-"Töltse le a fordításai forrásfájlját %s vagy a szükséges lefordított "
-"lokalizációt."
+msgid "Take the source file for your translations %s or needed translated locale."
+msgstr "Töltse le a fordításai forrásfájlját %s vagy a szükséges lefordított lokalizációt."
 
 #: includes/admin/menu-pages/language-menu-page.php:18
-msgid ""
-"Translate texts with any translation program like Poedit, Loco, Pootle etc."
-msgstr ""
-"A szövegek fordítása olyan alkalmazásokkal lehetséges, mint a Poedit, Loco, "
-"Pootle stb."
+msgid "Translate texts with any translation program like Poedit, Loco, Pootle etc."
+msgstr "A szövegek fordítása olyan alkalmazásokkal lehetséges, mint a Poedit, Loco, Pootle stb."
 
 #: includes/admin/menu-pages/language-menu-page.php:19
-msgid ""
-"Put created .mo file with your translations into the folder %s. Where {lang} "
-"is ISO-639 language code and {country} is ISO-3166 country code. Example: "
-"Brazilian Portuguese file would be called motopress-hotel-booking-pt_BR.mo."
-msgstr ""
-"Helyezze be a fordítást tartalmazó létrehozott .mo fájlt a %s mappába. Ahol "
-"a {lang} ISO-639 kódú és a {country} ISO-3166 ország kódú. Például: a "
-"portugál brazil fájlnak motopress-hotel-booking-pt_BR.mo lenne a neve."
+msgid "Put created .mo file with your translations into the folder %s. Where {lang} is ISO-639 language code and {country} is ISO-3166 country code. Example: Brazilian Portuguese file would be called motopress-hotel-booking-pt_BR.mo."
+msgstr "Helyezze be a fordítást tartalmazó létrehozott .mo fájlt a %s mappába. Ahol a {lang} ISO-639 kódú és a {country} ISO-3166 ország kódú. Például: a portugál brazil fájlnak motopress-hotel-booking-pt_BR.mo lenne a neve."
 
 #: includes/admin/menu-pages/language-menu-page.php:22
 msgid "Multilingual content"
 msgstr "Többnyelvű tartalom"
 
 #: includes/admin/menu-pages/language-menu-page.php:23
-msgid ""
-"If your site is multilingual, you may use additional plugins to translate "
-"your added content into multiple languages allowing the site visitors to "
-"switch them."
-msgstr ""
-"Ha az Ön honlapja többnyelvű, további bővítmények használását javasoljuk "
-"ahhoz, hogy több nyelvre tudja lefordítani a weboldalhoz hozzáadott "
-"tartalmat, hogy a látogatók a nyelvek között tudjanak váltani."
+msgid "If your site is multilingual, you may use additional plugins to translate your added content into multiple languages allowing the site visitors to switch them."
+msgstr "Ha az Ön honlapja többnyelvű, további bővítmények használását javasoljuk ahhoz, hogy több nyelvre tudja lefordítani a weboldalhoz hozzáadott tartalmat, hogy a látogatók a nyelvek között tudjanak váltani."
 
 #: includes/admin/menu-pages/language-menu-page.php:33
 msgid "Language"
@@ -1631,7 +1736,8 @@ msgstr "Szálláshelyek száma"
 #: includes/payments/gateways/gateway.php:486
 #: includes/widgets/rooms-widget.php:178
 #: templates/create-booking/results/reserve-rooms.php:35
-#: assets/blocks/blocks.js:300 assets/blocks/blocks.js:550
+#: assets/blocks/blocks.js:300
+#: assets/blocks/blocks.js:550
 #: assets/blocks/blocks.js:1078
 msgid "Title"
 msgstr "Cím"
@@ -1650,12 +1756,6 @@ msgid_plural "%s accommodations generated."
 msgstr[0] "Generált szálláshely."
 msgstr[1] "%s generált szálláshely."
 
-#: includes/admin/menu-pages/rooms-generator-menu-page.php:82
-#: includes/admin/sync-rooms-list-table.php:140
-#: includes/post-types/room-type-cpt.php:319
-msgid "View"
-msgstr "Nézet"
-
 #: includes/admin/menu-pages/settings-menu-page.php:54
 msgid "General"
 msgstr "Általános"
@@ -1669,12 +1769,8 @@ msgid "Search Results Page"
 msgstr "Keresési eredmények oldala"
 
 #: includes/admin/menu-pages/settings-menu-page.php:63
-msgid ""
-"Select page to display search results. Use search results shortcode on this "
-"page."
-msgstr ""
-"Válassza ki az oldalt a keresési eredmények megjelenítéséhez. Használja a "
-"keresési eredmények rövidkódot ezen az oldalon."
+msgid "Select page to display search results. Use search results shortcode on this page."
+msgstr "Válassza ki az oldalt a keresési eredmények megjelenítéséhez. Használja a keresési eredmények rövidkódot ezen az oldalon."
 
 #: includes/admin/menu-pages/settings-menu-page.php:68
 msgid "Checkout Page"
@@ -1689,47 +1785,53 @@ msgid "Terms & Conditions"
 msgstr "Felhasználási feltételek"
 
 #: includes/admin/menu-pages/settings-menu-page.php:75
-msgid ""
-"If you define a \"Terms\" page the customer will be asked if they accept "
-"them when checking out."
+msgid "If you define a \"Terms\" page the customer will be asked if they accept them when checking out."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:84
+#: includes/admin/menu-pages/settings-menu-page.php:80
+msgid "My Account Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:81
+msgid "Select a page to display user account. Use the customer account shortcode on this page."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:90
 msgid "Misc"
 msgstr "Egyéb"
 
-#: includes/admin/menu-pages/settings-menu-page.php:89
+#: includes/admin/menu-pages/settings-menu-page.php:95
 msgid "Square Units"
 msgstr "Négyzetméter"
 
-#: includes/admin/menu-pages/settings-menu-page.php:95
+#: includes/admin/menu-pages/settings-menu-page.php:101
 #: includes/post-types/payment-cpt.php:190
 msgid "Currency"
 msgstr "Pénznem"
 
-#: includes/admin/menu-pages/settings-menu-page.php:101
+#: includes/admin/menu-pages/settings-menu-page.php:107
 msgid "Currency Position"
 msgstr "Pénznem pozíció"
 
-#: includes/admin/menu-pages/settings-menu-page.php:107
+#: includes/admin/menu-pages/settings-menu-page.php:113
 msgid "Datepicker Date Format"
 msgstr "Datepicker dátum formátum"
 
-#: includes/admin/menu-pages/settings-menu-page.php:113
-#: includes/emails/templaters/email-templater.php:135
+#: includes/admin/menu-pages/settings-menu-page.php:119
+#: includes/emails/templaters/email-templater.php:140
 msgid "Check-out Time"
 msgstr "Kijelentkezés ideje"
 
-#: includes/admin/menu-pages/settings-menu-page.php:118
-#: includes/emails/templaters/email-templater.php:131
+#: includes/admin/menu-pages/settings-menu-page.php:124
+#: includes/emails/templaters/email-templater.php:136
 msgid "Check-in Time"
 msgstr "Bejelentkezés ideje"
 
-#: includes/admin/menu-pages/settings-menu-page.php:123
+#: includes/admin/menu-pages/settings-menu-page.php:129
 msgid "Bed Types"
 msgstr "Ágy típusok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:128
+#: includes/admin/menu-pages/settings-menu-page.php:134
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:124
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:189
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:251
@@ -1739,15 +1841,15 @@ msgstr "Ágy típusok"
 msgid "Type"
 msgstr "Típus"
 
-#: includes/admin/menu-pages/settings-menu-page.php:132
+#: includes/admin/menu-pages/settings-menu-page.php:138
 msgid "Add Bed Type"
 msgstr "Ágy típus hozzáadása"
 
-#: includes/admin/menu-pages/settings-menu-page.php:137
+#: includes/admin/menu-pages/settings-menu-page.php:143
 msgid "Show Lowest Price for"
 msgstr "Legalacsonyabb ár megjelenítése -"
 
-#: includes/admin/menu-pages/settings-menu-page.php:138
+#: includes/admin/menu-pages/settings-menu-page.php:144
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:146
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:212
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:273
@@ -1755,378 +1857,369 @@ msgstr "Legalacsonyabb ár megjelenítése -"
 msgid "days"
 msgstr "napok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:142
-msgid ""
-"Lowest price of accommodation for selected number of days if check-in and "
-"check-out dates are not set. Example: set 0 to display today's lowest price, "
-"set 7 to display the lowest price for the next week."
-msgstr ""
-"A kiválasztott napok mennyiségének a legalacsonyabb ára, ha a bejelentkezési "
-"és kijelentkezési dátumok nem lettek beállítva. Például: válassza ki a 0 a "
-"mai legalacsonyabb ár megjelenítéséhez, válassza ki a 7 a következő hét "
-"legalacsonyabb árjának a megjelenítéséhez."
-
-#: includes/admin/menu-pages/settings-menu-page.php:146
-msgid ""
-"Enable search form to recommend the best set of accommodations according to "
-"a number of guests."
-msgstr ""
-"Engedélyezze a keresési űrlapot, hogy a vendégek száma szerint ajánljon "
-"szálláshelyet."
+#: includes/admin/menu-pages/settings-menu-page.php:148
+msgid "Lowest price of accommodation for selected number of days if check-in and check-out dates are not set. Example: set 0 to display today's lowest price, set 7 to display the lowest price for the next week."
+msgstr "A kiválasztott napok mennyiségének a legalacsonyabb ára, ha a bejelentkezési és kijelentkezési dátumok nem lettek beállítva. Például: válassza ki a 0 a mai legalacsonyabb ár megjelenítéséhez, válassza ki a 7 a következő hét legalacsonyabb árjának a megjelenítéséhez."
 
 #: includes/admin/menu-pages/settings-menu-page.php:152
+msgid "Enable search form to recommend the best set of accommodations according to a number of guests."
+msgstr "Engedélyezze a keresési űrlapot, hogy a vendégek száma szerint ajánljon szálláshelyet."
+
+#: includes/admin/menu-pages/settings-menu-page.php:158
 msgid "Enable the use of coupons."
 msgstr "Kupon használat engedélyezése."
 
-#: includes/admin/menu-pages/settings-menu-page.php:157
+#: includes/admin/menu-pages/settings-menu-page.php:163
 msgid "Text on Checkout"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:158
+#: includes/admin/menu-pages/settings-menu-page.php:164
 msgid "This text will appear on the checkout page."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:167
+#: includes/admin/menu-pages/settings-menu-page.php:173
 msgid "Disable Booking"
 msgstr "Szállásfoglalás kikapcsolása"
 
-#: includes/admin/menu-pages/settings-menu-page.php:172
+#: includes/admin/menu-pages/settings-menu-page.php:178
 msgid "Hide reservation forms and buttons"
 msgstr "Foglalás formák és gombok elrejtése"
 
-#: includes/admin/menu-pages/settings-menu-page.php:178
+#: includes/admin/menu-pages/settings-menu-page.php:184
 msgid "Text instead of reservation form while booking is disabled"
 msgstr "A foglalási űrlap helyett megjelenő szöveg ki van kapcsolva"
 
-#: includes/admin/menu-pages/settings-menu-page.php:187
+#: includes/admin/menu-pages/settings-menu-page.php:193
 #: includes/admin/menu-pages/shortcodes-menu-page.php:482
-#: includes/wizard.php:108 assets/blocks/blocks.js:1423
+#: includes/wizard.php:109
+#: assets/blocks/blocks.js:1423
 #: assets/blocks/blocks.js:1453
 msgid "Booking Confirmation"
 msgstr "Foglalás megerősítése"
 
-#: includes/admin/menu-pages/settings-menu-page.php:192
+#: includes/admin/menu-pages/settings-menu-page.php:198
 msgid "Confirmation Mode"
 msgstr "Megerősítési mód"
 
-#: includes/admin/menu-pages/settings-menu-page.php:194
+#: includes/admin/menu-pages/settings-menu-page.php:200
 msgid "By customer via email"
 msgstr "Ügyfél által e-mailen keresztül"
 
-#: includes/admin/menu-pages/settings-menu-page.php:195
+#: includes/admin/menu-pages/settings-menu-page.php:201
 msgid "By admin manually"
 msgstr "Admin által kézileg"
 
-#: includes/admin/menu-pages/settings-menu-page.php:196
+#: includes/admin/menu-pages/settings-menu-page.php:202
 msgid "Confirmation upon payment"
 msgstr "Megerősítés a fizetés után"
 
-#: includes/admin/menu-pages/settings-menu-page.php:202
+#: includes/admin/menu-pages/settings-menu-page.php:208
 msgid "Booking Confirmed Page"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:203
-msgid ""
-"Page user will be redirected to once the booking is confirmed via email or "
-"by admin."
+#: includes/admin/menu-pages/settings-menu-page.php:209
+msgid "Page user will be redirected to once the booking is confirmed via email or by admin."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:208
+#: includes/admin/menu-pages/settings-menu-page.php:214
 msgid "Approval Time for User"
 msgstr "Jóváhagyási idő a felhasználó számára"
 
-#: includes/admin/menu-pages/settings-menu-page.php:209
-msgid ""
-"Period of time in minutes the user is given to confirm booking via email. "
-"Unconfirmed bookings become Abandoned and accommodation status changes to "
-"Available."
-msgstr ""
-"A rendelkezésre álló időtartam az e-mailen keresztüli foglalás "
-"megerősítésére. A nem megerősített foglalások Elhagyatottak lesznek, és a "
-"szálláshely státusz Elérhető lesz."
+#: includes/admin/menu-pages/settings-menu-page.php:215
+msgid "Period of time in minutes the user is given to confirm booking via email. Unconfirmed bookings become Abandoned and accommodation status changes to Available."
+msgstr "A rendelkezésre álló időtartam az e-mailen keresztüli foglalás megerősítésére. A nem megerősített foglalások Elhagyatottak lesznek, és a szálláshely státusz Elérhető lesz."
 
-#: includes/admin/menu-pages/settings-menu-page.php:216
+#: includes/admin/menu-pages/settings-menu-page.php:222
 msgid "Country of residence field is required for reservation."
 msgstr "A  foglaláshoz kötelező a tartózkodási hely országának a begépelése."
 
-#: includes/admin/menu-pages/settings-menu-page.php:221
+#: includes/admin/menu-pages/settings-menu-page.php:227
 msgid "Full address fields are required for reservation."
 msgstr "A foglaláshoz kötelező a cím mezők begépelése."
 
-#: includes/admin/menu-pages/settings-menu-page.php:226
+#: includes/admin/menu-pages/settings-menu-page.php:232
 msgid "Customer information is required when placing admin bookings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:232
+#: includes/admin/menu-pages/settings-menu-page.php:238
 msgid "Default Country on Checkout"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:237
-#: includes/emails/templaters/email-templater.php:186
+#: includes/admin/menu-pages/settings-menu-page.php:243
+#: includes/emails/templaters/email-templater.php:191
 #: includes/post-types/booking-cpt.php:157
-#: includes/views/shortcodes/checkout-view.php:397
+#: includes/views/shortcodes/checkout-view.php:461
 msgid "Price Breakdown"
 msgstr "Árösszetevők"
 
-#: includes/admin/menu-pages/settings-menu-page.php:238
+#: includes/admin/menu-pages/settings-menu-page.php:244
 msgid "Price breakdown unfolded by default."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:246
-#: includes/upgrader.php:646 includes/wizard.php:145
-msgid "Booking Cancellation"
-msgstr "Foglalás lemondása"
-
-#: includes/admin/menu-pages/settings-menu-page.php:251
-msgid "User can cancel booking via link provided inside email."
-msgstr ""
-"A felhasználó az e-mailben megtalálható linken keresztül törölheti a "
-"foglalást."
-
-#: includes/admin/menu-pages/settings-menu-page.php:256
-msgid "Booking Cancelation Page"
+#: includes/admin/menu-pages/settings-menu-page.php:252
+msgid "Accounts"
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:257
-msgid "Page to confirm booking cancelation."
+msgid "Account creation"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:262
-msgid "Booking Canceled Page"
+#: includes/admin/menu-pages/settings-menu-page.php:258
+msgid "Automatically create an account for a user at checkout."
 msgstr ""
 
 #: includes/admin/menu-pages/settings-menu-page.php:263
+msgid "Allow customers to create an account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:268
+msgid "Allow customers to log into their existing account during checkout."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:276
+#: includes/upgrader.php:716
+#: includes/wizard.php:146
+msgid "Booking Cancellation"
+msgstr "Foglalás lemondása"
+
+#: includes/admin/menu-pages/settings-menu-page.php:281
+msgid "User can cancel booking via link provided inside email."
+msgstr "A felhasználó az e-mailben megtalálható linken keresztül törölheti a foglalást."
+
+#: includes/admin/menu-pages/settings-menu-page.php:286
+msgid "Booking Cancelation Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:287
+msgid "Page to confirm booking cancelation."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:292
+msgid "Booking Canceled Page"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:293
 msgid "Page to redirect to after a booking is canceled."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Search Options"
 msgstr "Keresési opciók"
 
-#: includes/admin/menu-pages/settings-menu-page.php:271
+#: includes/admin/menu-pages/settings-menu-page.php:301
 msgid "Maximum accommodation occupancy available in the Search Form."
 msgstr "Maximum elérhető szállásfoglaltság a keresési formában."
 
-#: includes/admin/menu-pages/settings-menu-page.php:278
+#: includes/admin/menu-pages/settings-menu-page.php:308
 msgid "Max Adults"
 msgstr "Max. felnőtt"
 
-#: includes/admin/menu-pages/settings-menu-page.php:285
+#: includes/admin/menu-pages/settings-menu-page.php:315
 msgid "Max Children"
 msgstr "Max. gyermek"
 
-#: includes/admin/menu-pages/settings-menu-page.php:290
+#: includes/admin/menu-pages/settings-menu-page.php:320
 msgid "Age of Child"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:291
+#: includes/admin/menu-pages/settings-menu-page.php:321
 msgid "Optional description of the \"Children\" field."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:296
+#: includes/admin/menu-pages/settings-menu-page.php:326
 msgid "Skip Search Results"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:297
-msgid ""
-"Skip search results page and enable direct booking from accommodation pages."
+#: includes/admin/menu-pages/settings-menu-page.php:327
+msgid "Skip search results page and enable direct booking from accommodation pages."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:301
+#: includes/admin/menu-pages/settings-menu-page.php:331
 msgid "Direct Booking Form"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:304
+#: includes/admin/menu-pages/settings-menu-page.php:334
 msgid "Show price for selected period"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:305
+#: includes/admin/menu-pages/settings-menu-page.php:335
 msgid "Show price together with adults and children fields"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:311
+#: includes/admin/menu-pages/settings-menu-page.php:341
 msgid "Book button behavior on the search results page"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:312
-msgid ""
-"Redirect to the checkout page immediately after successful addition to "
-"reservation."
+#: includes/admin/menu-pages/settings-menu-page.php:342
+msgid "Redirect to the checkout page immediately after successful addition to reservation."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:318
+#: includes/admin/menu-pages/settings-menu-page.php:348
 msgid "Enable \"adults\" and \"children\" options for my website (default)."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:319
-msgid ""
-"Disable \"children\" option for my website (hide \"children\" field and use "
-"Guests label instead)."
+#: includes/admin/menu-pages/settings-menu-page.php:349
+msgid "Disable \"children\" option for my website (hide \"children\" field and use Guests label instead)."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:320
+#: includes/admin/menu-pages/settings-menu-page.php:350
 msgid "Disable \"adults\" and \"children\" options for my website."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:323
+#: includes/admin/menu-pages/settings-menu-page.php:353
 msgid "Guest Management"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:329
-msgid ""
-"Hide \"adults\" and \"children\" fields within search availability forms."
+#: includes/admin/menu-pages/settings-menu-page.php:359
+msgid "Hide \"adults\" and \"children\" fields within search availability forms."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:335
+#: includes/admin/menu-pages/settings-menu-page.php:365
 msgid "Do not apply booking rules for admin bookings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:342
+#: includes/admin/menu-pages/settings-menu-page.php:372
 msgid "Display Options"
 msgstr "Megjelenítési opciók"
 
-#: includes/admin/menu-pages/settings-menu-page.php:347
+#: includes/admin/menu-pages/settings-menu-page.php:377
 msgid "Display gallery images of accommodation page in lightbox."
 msgstr "A szálláshely oldal galéria képeinek megjelenítése a lightboxban."
 
-#: includes/admin/menu-pages/settings-menu-page.php:353
+#: includes/admin/menu-pages/settings-menu-page.php:383
 msgid "Calendar Theme"
 msgstr "Naptár téma"
 
-#: includes/admin/menu-pages/settings-menu-page.php:354
+#: includes/admin/menu-pages/settings-menu-page.php:384
 msgid "Select theme for an availability calendar."
 msgstr "Válasszon ki egy témát az elérhetőség naptárnak."
 
-#: includes/admin/menu-pages/settings-menu-page.php:358
+#: includes/admin/menu-pages/settings-menu-page.php:388
 msgid "Template Mode"
 msgstr "Sablon mód"
 
-#: includes/admin/menu-pages/settings-menu-page.php:360
+#: includes/admin/menu-pages/settings-menu-page.php:390
 msgid "Developer Mode"
 msgstr "Fejlesztői mód"
 
-#: includes/admin/menu-pages/settings-menu-page.php:361
+#: includes/admin/menu-pages/settings-menu-page.php:391
 msgid "Theme Mode"
 msgstr "Téma mód"
 
-#: includes/admin/menu-pages/settings-menu-page.php:363
-msgid ""
-"Choose Theme Mode to display the content with the styles of your theme. "
-"Choose Developer Mode to control appearance of the content with custom page "
-"templates, actions and filters. This option can't be changed if your theme "
-"is initially integrated with the plugin."
-msgstr ""
-"Válassza ki a Téma módot az Ön által kiválasztott stílusok megjelenítéséhez. "
-"Válassza ki a fejlesztői módot az egyedi sablon oldalak, gombok és szűrők "
-"kezeléséhez. Ez az opció nem módosítható, ha az Ön témája a bővítménybe már "
-"be van építve."
+#: includes/admin/menu-pages/settings-menu-page.php:393
+msgid "Choose Theme Mode to display the content with the styles of your theme. Choose Developer Mode to control appearance of the content with custom page templates, actions and filters. This option can't be changed if your theme is initially integrated with the plugin."
+msgstr "Válassza ki a Téma módot az Ön által kiválasztott stílusok megjelenítéséhez. Válassza ki a fejlesztői módot az egyedi sablon oldalak, gombok és szűrők kezeléséhez. Ez az opció nem módosítható, ha az Ön témája a bővítménybe már be van építve."
 
-#: includes/admin/menu-pages/settings-menu-page.php:373
+#: includes/admin/menu-pages/settings-menu-page.php:403
 msgid "More Styles"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:374
-msgid ""
-"Extend the styling options of Hotel Booking plugin with the new free addon - "
-"Hotel Booking Styles."
+#: includes/admin/menu-pages/settings-menu-page.php:404
+msgid "Extend the styling options of Hotel Booking plugin with the new free addon - Hotel Booking Styles."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:385
+#: includes/admin/menu-pages/settings-menu-page.php:415
 msgid "Calendars Synchronization"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:390
+#: includes/admin/menu-pages/settings-menu-page.php:420
 msgid "Export admin blocks."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:395
+#: includes/admin/menu-pages/settings-menu-page.php:425
 msgid "Do not export imported bookings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:402
+#: includes/admin/menu-pages/settings-menu-page.php:430
+msgid "Minimize Logs"
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:431
+msgid "Enable the plugin to record only important messages."
+msgstr ""
+
+#: includes/admin/menu-pages/settings-menu-page.php:438
 msgid "Calendars Synchronization Scheduler"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:411
+#: includes/admin/menu-pages/settings-menu-page.php:447
 msgid "Enable automatic external calendars synchronization"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:417
+#: includes/admin/menu-pages/settings-menu-page.php:453
 msgid "Clock"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:418
-msgid ""
-"Sync calendars at this time (UTC) or starting at this time every interval "
-"below."
+#: includes/admin/menu-pages/settings-menu-page.php:454
+msgid "Sync calendars at this time (UTC) or starting at this time every interval below."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:426
+#: includes/admin/menu-pages/settings-menu-page.php:462
 msgid "Interval"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:428
+#: includes/admin/menu-pages/settings-menu-page.php:464
 #: includes/crons/cron-manager.php:79
 msgid "Quarter an Hour"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:429
+#: includes/admin/menu-pages/settings-menu-page.php:465
 #: includes/crons/cron-manager.php:84
 msgid "Half an Hour"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:430
+#: includes/admin/menu-pages/settings-menu-page.php:466
 msgid "Once Hourly"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:431
+#: includes/admin/menu-pages/settings-menu-page.php:467
 msgid "Twice Daily"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:432
+#: includes/admin/menu-pages/settings-menu-page.php:468
 msgid "Once Daily"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:440
+#: includes/admin/menu-pages/settings-menu-page.php:476
 msgid "Automatically delete sync logs older than"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:442
+#: includes/admin/menu-pages/settings-menu-page.php:478
 msgid "Day"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:443
+#: includes/admin/menu-pages/settings-menu-page.php:479
 msgid "Week"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:444
+#: includes/admin/menu-pages/settings-menu-page.php:480
 #: includes/bookings-calendar.php:497
 msgid "Month"
 msgstr "Hónap"
 
-#: includes/admin/menu-pages/settings-menu-page.php:445
+#: includes/admin/menu-pages/settings-menu-page.php:481
 #: includes/bookings-calendar.php:498
 msgid "Quarter"
 msgstr "Negyedév"
 
-#: includes/admin/menu-pages/settings-menu-page.php:446
+#: includes/admin/menu-pages/settings-menu-page.php:482
 msgid "Half a Year"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:447
+#: includes/admin/menu-pages/settings-menu-page.php:483
 msgid "Never Delete"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:456
+#: includes/admin/menu-pages/settings-menu-page.php:492
 msgid "Block Editor"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:497
+#: includes/admin/menu-pages/settings-menu-page.php:502
 msgid "Enable block editor for \"%s\"."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:461
+#: includes/admin/menu-pages/settings-menu-page.php:497
 #: includes/post-types/coupon-cpt.php:60
 #: includes/post-types/room-type-cpt.php:54
 #: includes/post-types/room-type-cpt.php:65
@@ -2134,240 +2227,217 @@ msgstr ""
 msgid "Accommodation Types"
 msgstr "Szállástípusok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:466
+#: includes/admin/menu-pages/settings-menu-page.php:502
 #: includes/bundles/export-bundle.php:28
 #: includes/emails/templaters/reserved-rooms-templater.php:163
-#: includes/post-types/service-cpt.php:90
-#: includes/post-types/service-cpt.php:100 includes/views/booking-view.php:170
+#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:102
+#: includes/views/booking-view.php:170
 msgid "Services"
 msgstr "Szolgáltatások"
 
-#: includes/admin/menu-pages/settings-menu-page.php:494
+#: includes/admin/menu-pages/settings-menu-page.php:531
 msgid "Admin Emails"
 msgstr "Admin e-mailek"
 
-#: includes/admin/menu-pages/settings-menu-page.php:507
+#: includes/admin/menu-pages/settings-menu-page.php:544
 msgid "Customer Emails"
 msgstr "Ügyfél e-mailek"
 
-#: includes/admin/menu-pages/settings-menu-page.php:512
-msgid ""
-"Turn one-time guests into loyal customers by sending out automatic marketing "
-"campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
+#: includes/admin/menu-pages/settings-menu-page.php:549
+msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the <a>Hotel Booking & Mailchimp Integration</a>."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:515
-msgid ""
-"Turn one-time guests into loyal customers by sending out automatic marketing "
-"campaigns with the Hotel Booking & Mailchimp Integration."
+#: includes/admin/menu-pages/settings-menu-page.php:552
+msgid "Turn one-time guests into loyal customers by sending out automatic marketing campaigns with the Hotel Booking & Mailchimp Integration."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:530
+#: includes/admin/menu-pages/settings-menu-page.php:567
 msgid "Cancellation Details Template"
 msgstr "Lemondási Részletek sablon"
 
-#: includes/admin/menu-pages/settings-menu-page.php:531
+#: includes/admin/menu-pages/settings-menu-page.php:568
 msgid "Used for %cancellation_details% tag."
 msgstr "A %cancellation_details% címkéhez volt használva."
 
-#: includes/admin/menu-pages/settings-menu-page.php:548
+#: includes/admin/menu-pages/settings-menu-page.php:587
 msgid "Email Settings"
 msgstr "E-mail beállítások"
 
-#: includes/admin/menu-pages/settings-menu-page.php:553
-msgid ""
-"Send automated email notifications, such as key pick-up instructions, house "
-"rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
+#: includes/admin/menu-pages/settings-menu-page.php:592
+msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with <a>Hotel Booking Notifier</a>."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:556
-msgid ""
-"Send automated email notifications, such as key pick-up instructions, house "
-"rules, before and after arrival/departure with Hotel Booking Notifier."
+#: includes/admin/menu-pages/settings-menu-page.php:595
+msgid "Send automated email notifications, such as key pick-up instructions, house rules, before and after arrival/departure with Hotel Booking Notifier."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:564
+#: includes/admin/menu-pages/settings-menu-page.php:603
 msgid "Email Sender"
 msgstr "E-mail Feladó"
 
-#: includes/admin/menu-pages/settings-menu-page.php:569
+#: includes/admin/menu-pages/settings-menu-page.php:608
 msgid "Administrator Email"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:575
+#: includes/admin/menu-pages/settings-menu-page.php:614
 msgid "From Email"
 msgstr "E-mailtől"
 
-#: includes/admin/menu-pages/settings-menu-page.php:581
+#: includes/admin/menu-pages/settings-menu-page.php:620
 msgid "From Name"
 msgstr "Névtől"
 
-#: includes/admin/menu-pages/settings-menu-page.php:588
+#: includes/admin/menu-pages/settings-menu-page.php:627
 msgid "Logo URL"
 msgstr "Logó URL"
 
-#: includes/admin/menu-pages/settings-menu-page.php:595
+#: includes/admin/menu-pages/settings-menu-page.php:634
 msgid "Footer Text"
 msgstr "Lábléc szöveg"
 
-#: includes/admin/menu-pages/settings-menu-page.php:603
+#: includes/admin/menu-pages/settings-menu-page.php:642
 msgid "Reserved Accommodation Details Template"
 msgstr "Fenntartott szálláshely részletek sablon"
 
-#: includes/admin/menu-pages/settings-menu-page.php:604
+#: includes/admin/menu-pages/settings-menu-page.php:643
 msgid "Used for %reserved_rooms_details% tag."
 msgstr " A %reserved_rooms_details% címkéhez volt használva."
 
-#: includes/admin/menu-pages/settings-menu-page.php:615
+#: includes/admin/menu-pages/settings-menu-page.php:654
 msgid "Styles"
 msgstr "Stílusok"
 
-#: includes/admin/menu-pages/settings-menu-page.php:620
+#: includes/admin/menu-pages/settings-menu-page.php:659
 msgid "Base Color"
 msgstr "Alapszín"
 
-#: includes/admin/menu-pages/settings-menu-page.php:626
+#: includes/admin/menu-pages/settings-menu-page.php:665
 msgid "Background Color"
 msgstr "Háttér szín"
 
-#: includes/admin/menu-pages/settings-menu-page.php:632
+#: includes/admin/menu-pages/settings-menu-page.php:671
 msgid "Body Background Color"
 msgstr "Váz háttér szín"
 
-#: includes/admin/menu-pages/settings-menu-page.php:638
+#: includes/admin/menu-pages/settings-menu-page.php:677
 msgid "Body Text Color"
 msgstr "Váz szöveg szín"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "Payment Gateways"
 msgstr "Fizetési kapu"
 
-#: includes/admin/menu-pages/settings-menu-page.php:658
+#: includes/admin/menu-pages/settings-menu-page.php:697
 msgid "General Settings"
 msgstr "Általános beállítások"
 
-#: includes/admin/menu-pages/settings-menu-page.php:663
-msgid ""
-"Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">"
-"WooCommerce Payments</a> extension."
+#: includes/admin/menu-pages/settings-menu-page.php:702
+msgid "Need more gateways? Use our Hotel Booking <a href=\"%s\" target=\"_blank\">WooCommerce Payments</a> extension."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:667
-msgid ""
-"You may also email the <a href=\"%s\" target=\"_blank\">balance payment "
-"request</a> link to your guests."
+#: includes/admin/menu-pages/settings-menu-page.php:706
+msgid "You may also email the <a href=\"%s\" target=\"_blank\">balance payment request</a> link to your guests."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:676
+#: includes/admin/menu-pages/settings-menu-page.php:715
 msgid "User Pays"
 msgstr "Felhasználói fizetések"
 
-#: includes/admin/menu-pages/settings-menu-page.php:678
+#: includes/admin/menu-pages/settings-menu-page.php:717
 msgid "Full Amount"
 msgstr "Teljes összeg"
 
-#: includes/admin/menu-pages/settings-menu-page.php:679
+#: includes/admin/menu-pages/settings-menu-page.php:718
 #: includes/views/booking-view.php:342
 msgid "Deposit"
 msgstr "Letét"
 
-#: includes/admin/menu-pages/settings-menu-page.php:685
+#: includes/admin/menu-pages/settings-menu-page.php:724
 msgid "Deposit Type"
 msgstr "Letét típus"
 
-#: includes/admin/menu-pages/settings-menu-page.php:687
+#: includes/admin/menu-pages/settings-menu-page.php:726
 msgid "Fixed"
 msgstr "Rögzített"
 
-#: includes/admin/menu-pages/settings-menu-page.php:688
+#: includes/admin/menu-pages/settings-menu-page.php:727
 msgid "Percent"
 msgstr "Százalék"
 
-#: includes/admin/menu-pages/settings-menu-page.php:694
+#: includes/admin/menu-pages/settings-menu-page.php:733
 msgid "Deposit Amount"
 msgstr "Letéti összeg"
 
-#: includes/admin/menu-pages/settings-menu-page.php:702
+#: includes/admin/menu-pages/settings-menu-page.php:741
 msgid "Deposit Time Frame (days)"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:703
-msgid ""
-"Apply deposit to bookings made in at least the selected number of days prior "
-"to the check-in date. Otherwise, the full amount is charged."
+#: includes/admin/menu-pages/settings-menu-page.php:742
+msgid "Apply deposit to bookings made in at least the selected number of days prior to the check-in date. Otherwise, the full amount is charged."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:711
+#: includes/admin/menu-pages/settings-menu-page.php:750
 msgid "Force Secure Checkout"
 msgstr "Biztonságos fizetés kényszerítése"
 
-#: includes/admin/menu-pages/settings-menu-page.php:713
-msgid ""
-"Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate "
-"installed to use this option."
-msgstr ""
-"SLL (HTTPS) kényszerítése a fizetési oldalakon. Az opció használásához Önnek "
-"egy SLL bizonyítványra lesz szüksége."
+#: includes/admin/menu-pages/settings-menu-page.php:752
+msgid "Force SSL (HTTPS) on the checkout pages. You must have an SSL certificate installed to use this option."
+msgstr "SLL (HTTPS) kényszerítése a fizetési oldalakon. Az opció használásához Önnek egy SLL bizonyítványra lesz szüksége."
 
-#: includes/admin/menu-pages/settings-menu-page.php:717
+#: includes/admin/menu-pages/settings-menu-page.php:756
 msgid "Reservation Received Page"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:722
+#: includes/admin/menu-pages/settings-menu-page.php:761
 msgid "Failed Transaction Page"
 msgstr "Sikertelen tranzakció oldal"
 
-#: includes/admin/menu-pages/settings-menu-page.php:727
+#: includes/admin/menu-pages/settings-menu-page.php:766
 msgid "Default Gateway"
 msgstr "Alapértelmezett átjáró"
 
-#: includes/admin/menu-pages/settings-menu-page.php:735
+#: includes/admin/menu-pages/settings-menu-page.php:774
 msgid "Pending Payment Time"
 msgstr "Függő fizetés ideje"
 
-#: includes/admin/menu-pages/settings-menu-page.php:736
-msgid ""
-"Period of time in minutes the user is given to complete payment. Unpaid "
-"bookings become Abandoned and accommodation status changes to Available."
-msgstr ""
-"A rendelkezésre álló időtartam a foglalás kifizetésére. A nem kifizetett "
-"foglalások Elhagyatottak lesznek, és a szálláshely státusz Elérhető lesz."
+#: includes/admin/menu-pages/settings-menu-page.php:775
+msgid "Period of time in minutes the user is given to complete payment. Unpaid bookings become Abandoned and accommodation status changes to Available."
+msgstr "A rendelkezésre álló időtartam a foglalás kifizetésére. A nem kifizetett foglalások Elhagyatottak lesznek, és a szálláshely státusz Elérhető lesz."
 
-#: includes/admin/menu-pages/settings-menu-page.php:758
-msgid ""
-"Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage "
-"their settings."
+#: includes/admin/menu-pages/settings-menu-page.php:797
+msgid "Install <a href=\"%s\" target=\"_blank\">Hotel Booking addons</a> to manage their settings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:760
+#: includes/admin/menu-pages/settings-menu-page.php:799
 msgid "Install Hotel Booking addons to manage their settings."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:778
+#: includes/admin/menu-pages/settings-menu-page.php:817
 msgid "Advanced"
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:790
-#: includes/admin/menu-pages/settings-menu-page.php:792
+#: includes/admin/menu-pages/settings-menu-page.php:829
+#: includes/admin/menu-pages/settings-menu-page.php:831
 msgid "License"
 msgstr "Licenc"
 
-#: includes/admin/menu-pages/settings-menu-page.php:831
+#: includes/admin/menu-pages/settings-menu-page.php:870
 msgid "Settings saved."
 msgstr "Beállítások elmentve."
 
-#: includes/admin/menu-pages/settings-menu-page.php:863
-msgid ""
-"<strong>Note:</strong> Payment methods will appear on the checkout page only "
-"when Confirmation Upon Payment is enabled in Accommodation > Settings > "
-"General > Confirmation Mode."
+#: includes/admin/menu-pages/settings-menu-page.php:902
+msgid "<strong>Note:</strong> Payment methods will appear on the checkout page only when Confirmation Upon Payment is enabled in Accommodation > Settings > General > Confirmation Mode."
 msgstr ""
 
-#: includes/admin/menu-pages/settings-menu-page.php:951
-#: includes/admin/menu-pages/settings-menu-page.php:955
-#: assets/blocks/blocks.js:54 assets/blocks/blocks.js:186
-#: assets/blocks/blocks.js:293 assets/blocks/blocks.js:543
-#: assets/blocks/blocks.js:1060 assets/blocks/blocks.js:1282
+#: includes/admin/menu-pages/settings-menu-page.php:990
+#: includes/admin/menu-pages/settings-menu-page.php:994
+#: assets/blocks/blocks.js:54
+#: assets/blocks/blocks.js:186
+#: assets/blocks/blocks.js:293
+#: assets/blocks/blocks.js:543
+#: assets/blocks/blocks.js:1060
+#: assets/blocks/blocks.js:1282
 #: assets/blocks/blocks.js:1363
 msgid "Settings"
 msgstr "Beállítások"
@@ -2425,6 +2495,7 @@ msgstr ""
 #: includes/admin/menu-pages/shortcodes-menu-page.php:468
 #: includes/admin/menu-pages/shortcodes-menu-page.php:486
 #: includes/admin/menu-pages/shortcodes-menu-page.php:502
+#: includes/admin/menu-pages/shortcodes-menu-page.php:518
 msgid "Custom CSS class for shortcode wrapper"
 msgstr "Egyéni CSS kategória a rövidkód átalakító számára"
 
@@ -2439,11 +2510,13 @@ msgstr "Egyéni CSS kategória a rövidkód átalakító számára"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:469
 #: includes/admin/menu-pages/shortcodes-menu-page.php:487
 #: includes/admin/menu-pages/shortcodes-menu-page.php:503
+#: includes/admin/menu-pages/shortcodes-menu-page.php:519
 msgid "whitespace separated css classes"
 msgstr "szóközzel elválasztott css kategóriák"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:61
-#: assets/blocks/blocks.js:163 assets/blocks/blocks.js:249
+#: assets/blocks/blocks.js:163
+#: assets/blocks/blocks.js:249
 msgid "Availability Calendar"
 msgstr ""
 
@@ -2452,14 +2525,16 @@ msgstr ""
 #: includes/admin/menu-pages/shortcodes-menu-page.php:463
 #: includes/bundles/export-bundle.php:23
 #: includes/emails/templaters/reserved-rooms-templater.php:167
-#: assets/blocks/blocks.js:192 assets/blocks/blocks.js:1287
+#: assets/blocks/blocks.js:192
+#: assets/blocks/blocks.js:1287
 #: assets/blocks/blocks.js:1368
 msgid "Accommodation Type ID"
 msgstr "Szállástípus azonosító"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:66
 #: includes/admin/menu-pages/shortcodes-menu-page.php:442
-#: assets/blocks/blocks.js:193 assets/blocks/blocks.js:1288
+#: assets/blocks/blocks.js:193
+#: assets/blocks/blocks.js:1288
 msgid "ID of Accommodation Type to check availability."
 msgstr "Szállástípus azonosító az elérhetőség ellenőrzéséhez."
 
@@ -2477,19 +2552,17 @@ msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:72
 #: assets/blocks/blocks.js:205
-msgid ""
-"Set the number of columns or the number of rows and columns separated by "
-"comma. Example: \"3\" or \"2,3\""
+msgid "Set the number of columns or the number of rows and columns separated by comma. Example: \"3\" or \"2,3\""
 msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:86
 #: assets/blocks/blocks.js:164
-msgid ""
-"Display availability calendar of the current accommodation type or by ID."
+msgid "Display availability calendar of the current accommodation type or by ID."
 msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:91
-#: assets/blocks/blocks.js:261 assets/blocks/blocks.js:494
+#: assets/blocks/blocks.js:261
+#: assets/blocks/blocks.js:494
 msgid "Availability Search Results"
 msgstr "Elérhetőség keresési eredményei"
 
@@ -2501,7 +2574,8 @@ msgstr "Keresési feltételeknek megfelelő szállástípusok megjelenítése."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:95
 #: includes/admin/menu-pages/shortcodes-menu-page.php:190
 #: includes/admin/menu-pages/shortcodes-menu-page.php:359
-#: assets/blocks/blocks.js:301 assets/blocks/blocks.js:551
+#: assets/blocks/blocks.js:301
+#: assets/blocks/blocks.js:551
 #: assets/blocks/blocks.js:1079
 msgid "Whether to display title of the accommodation type."
 msgstr "Szállástípus cím megjelenítése."
@@ -2509,7 +2583,8 @@ msgstr "Szállástípus cím megjelenítése."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:100
 #: includes/admin/menu-pages/shortcodes-menu-page.php:195
 #: includes/admin/menu-pages/shortcodes-menu-page.php:364
-#: assets/blocks/blocks.js:313 assets/blocks/blocks.js:563
+#: assets/blocks/blocks.js:313
+#: assets/blocks/blocks.js:563
 #: assets/blocks/blocks.js:1091
 msgid "Whether to display featured image of the accommodation type."
 msgstr "Szállástípust ábrázoló kép megjelenítése."
@@ -2517,7 +2592,8 @@ msgstr "Szállástípust ábrázoló kép megjelenítése."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:105
 #: includes/admin/menu-pages/shortcodes-menu-page.php:200
 #: includes/admin/menu-pages/shortcodes-menu-page.php:369
-#: assets/blocks/blocks.js:325 assets/blocks/blocks.js:575
+#: assets/blocks/blocks.js:325
+#: assets/blocks/blocks.js:575
 #: assets/blocks/blocks.js:1103
 msgid "Whether to display gallery of the accommodation type."
 msgstr "Szállástípus galéria megjelenítése."
@@ -2525,16 +2601,17 @@ msgstr "Szállástípus galéria megjelenítése."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:110
 #: includes/admin/menu-pages/shortcodes-menu-page.php:205
 #: includes/admin/menu-pages/shortcodes-menu-page.php:374
-#: assets/blocks/blocks.js:337 assets/blocks/blocks.js:587
+#: assets/blocks/blocks.js:337
+#: assets/blocks/blocks.js:587
 #: assets/blocks/blocks.js:1115
-msgid ""
-"Whether to display excerpt (short description) of the accommodation type."
+msgid "Whether to display excerpt (short description) of the accommodation type."
 msgstr "Szállástípus leírás megjelenítése."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:115
 #: includes/admin/menu-pages/shortcodes-menu-page.php:210
 #: includes/admin/menu-pages/shortcodes-menu-page.php:379
-#: assets/blocks/blocks.js:349 assets/blocks/blocks.js:599
+#: assets/blocks/blocks.js:349
+#: assets/blocks/blocks.js:599
 #: assets/blocks/blocks.js:1127
 msgid "Whether to display details of the accommodation type."
 msgstr "Szállástípus részletek megjelenítése."
@@ -2543,7 +2620,8 @@ msgstr "Szállástípus részletek megjelenítése."
 #: includes/admin/menu-pages/shortcodes-menu-page.php:215
 #: includes/admin/menu-pages/shortcodes-menu-page.php:384
 #: includes/admin/menu-pages/shortcodes-menu-page.php:405
-#: assets/blocks/blocks.js:361 assets/blocks/blocks.js:611
+#: assets/blocks/blocks.js:361
+#: assets/blocks/blocks.js:611
 #: assets/blocks/blocks.js:1139
 msgid "Whether to display price of the accommodation type."
 msgstr "Szállástípus árak megjelenítése."
@@ -2557,11 +2635,10 @@ msgstr "Bővebben gomb megjelenítése"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:126
 #: includes/admin/menu-pages/shortcodes-menu-page.php:221
 #: includes/admin/menu-pages/shortcodes-menu-page.php:390
-#: assets/blocks/blocks.js:373 assets/blocks/blocks.js:623
+#: assets/blocks/blocks.js:373
+#: assets/blocks/blocks.js:623
 #: assets/blocks/blocks.js:1151
-msgid ""
-"Whether to display \"View Details\" button with the link to accommodation "
-"type."
+msgid "Whether to display \"View Details\" button with the link to accommodation type."
 msgstr "Szállástípushoz vezető \"Bővebben\" gomb megjelenítése."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:131
@@ -2588,19 +2665,16 @@ msgstr ""
 #: includes/admin/menu-pages/shortcodes-menu-page.php:142
 #: includes/admin/menu-pages/shortcodes-menu-page.php:273
 #: includes/admin/menu-pages/shortcodes-menu-page.php:321
-msgid ""
-"ASC - from lowest to highest values (1, 2, 3). DESC - from highest to lowest "
-"values (3, 2, 1)."
+msgid "ASC - from lowest to highest values (1, 2, 3). DESC - from highest to lowest values (3, 2, 1)."
 msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:146
 #: includes/admin/menu-pages/shortcodes-menu-page.php:277
 #: includes/admin/menu-pages/shortcodes-menu-page.php:325
-#: assets/blocks/blocks.js:438 assets/blocks/blocks.js:774
+#: assets/blocks/blocks.js:438
+#: assets/blocks/blocks.js:774
 #: assets/blocks/blocks.js:958
-msgid ""
-"Custom field name. Required if \"orderby\" is one of the \"meta_value\", "
-"\"meta_value_num\" or \"meta_value_*\"."
+msgid "Custom field name. Required if \"orderby\" is one of the \"meta_value\", \"meta_value_num\" or \"meta_value_*\"."
 msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:147
@@ -2615,16 +2689,14 @@ msgstr ""
 #: includes/admin/menu-pages/shortcodes-menu-page.php:288
 #: includes/admin/menu-pages/shortcodes-menu-page.php:327
 #: includes/admin/menu-pages/shortcodes-menu-page.php:336
-#: includes/admin/menu-pages/shortcodes-menu-page.php:601
+#: includes/admin/menu-pages/shortcodes-menu-page.php:617
 msgid "empty string"
 msgstr "üres karakterlánc:"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:151
 #: includes/admin/menu-pages/shortcodes-menu-page.php:282
 #: includes/admin/menu-pages/shortcodes-menu-page.php:330
-msgid ""
-"Specified type of the custom field. Can be used in conjunction with "
-"orderby=\"meta_value\"."
+msgid "Specified type of the custom field. Can be used in conjunction with orderby=\"meta_value\"."
 msgstr ""
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:165
@@ -2639,7 +2711,8 @@ msgstr "A Foglal gombot jeleníti meg"
 #: includes/admin/menu-pages/shortcodes-menu-page.php:172
 #: includes/admin/menu-pages/shortcodes-menu-page.php:227
 #: includes/admin/menu-pages/shortcodes-menu-page.php:395
-#: assets/blocks/blocks.js:635 assets/blocks/blocks.js:1163
+#: assets/blocks/blocks.js:635
+#: assets/blocks/blocks.js:1163
 msgid "Whether to display Book button."
 msgstr "Foglal gomb megjelenítése."
 
@@ -2649,12 +2722,8 @@ msgid "NOTE:"
 msgstr "FIGYELEM:"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:182
-msgid ""
-"Use only on page that you set as Search Results Page in <a href=\"%s\">"
-"Settings</a>"
-msgstr ""
-"Csak a <a href=\"%s\">Beállítások</a> menüben megtalálható Keresési "
-"eredmények oldalként kiválasztott oldalon használható"
+msgid "Use only on page that you set as Search Results Page in <a href=\"%s\">Settings</a>"
+msgstr "Csak a <a href=\"%s\">Beállítások</a> menüben megtalálható Keresési eredmények oldalként kiválasztott oldalon használható"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:187
 #: assets/blocks/blocks.js:506
@@ -2663,7 +2732,8 @@ msgstr "Szállástípusok felsorolása"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:232
 #: includes/admin/menu-pages/shortcodes-menu-page.php:305
-#: assets/blocks/blocks.js:668 assets/blocks/blocks.js:892
+#: assets/blocks/blocks.js:668
+#: assets/blocks/blocks.js:892
 msgid "Count per page"
 msgstr "Számlálás oldalanként"
 
@@ -2720,7 +2790,8 @@ msgid "Show All Services"
 msgstr "Összes szolgáltatás megjelenítése"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:351
-#: assets/blocks/blocks.js:1031 assets/blocks/blocks.js:1207
+#: assets/blocks/blocks.js:1031
+#: assets/blocks/blocks.js:1207
 msgid "Single Accommodation Type"
 msgstr ""
 
@@ -2734,7 +2805,8 @@ msgid "Display accommodation type with title and image."
 msgstr "Szállástípus megjelenítése képekkel és címmel együtt."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:422
-#: assets/blocks/blocks.js:1219 assets/blocks/blocks.js:1249
+#: assets/blocks/blocks.js:1219
+#: assets/blocks/blocks.js:1249
 msgid "Checkout Form"
 msgstr "Fizetési űrlap"
 
@@ -2744,14 +2816,12 @@ msgid "Display checkout form."
 msgstr "Fizetési űrlap megjelenítése."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:433
-msgid ""
-"Use only on page that you set as Checkout Page in <a href=\"%s\">Settings</a>"
-msgstr ""
-"Csak a <a href=\"%s\">Beállítások</a> menüben megtalálható Fizetési "
-"oldalként kiválasztott oldalon használható."
+msgid "Use only on page that you set as Checkout Page in <a href=\"%s\">Settings</a>"
+msgstr "Csak a <a href=\"%s\">Beállítások</a> menüben megtalálható Fizetési oldalként kiválasztott oldalon használható."
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:438
-#: assets/blocks/blocks.js:1261 assets/blocks/blocks.js:1330
+#: assets/blocks/blocks.js:1261
+#: assets/blocks/blocks.js:1330
 msgid "Booking Form"
 msgstr "Foglalási űrlap"
 
@@ -2760,7 +2830,8 @@ msgid "Show Booking Form for Accommodation Type with id 777"
 msgstr "A 777 azonosítószámú Szállástípus Foglalási űrlapnak a megjelenítése"
 
 #: includes/admin/menu-pages/shortcodes-menu-page.php:460
-#: assets/blocks/blocks.js:1342 assets/blocks/blocks.js:1411
+#: assets/blocks/blocks.js:1342
+#: assets/blocks/blocks.js:1411
 msgid "Accommodation Rates List"
 msgstr "Szállási árak listája"
 
@@ -2794,49 +2865,62 @@ msgstr ""
 msgid "Use this shortcode on the Booking Cancelation page"
 msgstr ""
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:521
-#: includes/admin/menu-pages/shortcodes-menu-page.php:654
-#: includes/admin/menu-pages/shortcodes-menu-page.php:658
+#: includes/admin/menu-pages/shortcodes-menu-page.php:514
+msgid "Customer Account"
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:515
+msgid "Display log in form or customer account area."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+msgid "Use this shortcode to create the My Account page."
+msgstr ""
+
+#: includes/admin/menu-pages/shortcodes-menu-page.php:537
+#: includes/admin/menu-pages/shortcodes-menu-page.php:670
+#: includes/admin/menu-pages/shortcodes-menu-page.php:674
 msgid "Shortcodes"
 msgstr "Rövidkódok"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:525
+#: includes/admin/menu-pages/shortcodes-menu-page.php:541
 msgid "Shortcode"
 msgstr "Rövidkód"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:526
+#: includes/admin/menu-pages/shortcodes-menu-page.php:542
 #: includes/post-types/attributes-cpt.php:299
 msgid "Parameters"
 msgstr "Paraméterek"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:527
+#: includes/admin/menu-pages/shortcodes-menu-page.php:543
 msgid "Example"
 msgstr "Példa"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:559
-#: includes/admin/menu-pages/shortcodes-menu-page.php:581
+#: includes/admin/menu-pages/shortcodes-menu-page.php:575
+#: includes/admin/menu-pages/shortcodes-menu-page.php:597
 msgid "Deprecated since %s"
 msgstr "Elavult %s óta"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:591
+#: includes/admin/menu-pages/shortcodes-menu-page.php:607
 msgid "Values:"
 msgstr "Értékek:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:596
+#: includes/admin/menu-pages/shortcodes-menu-page.php:612
 msgid "Default:"
 msgstr "Alapértelmezett:"
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:642
+#: includes/admin/menu-pages/shortcodes-menu-page.php:658
 msgid "Optional."
 msgstr "Nem kötelező."
 
-#: includes/admin/menu-pages/shortcodes-menu-page.php:650
+#: includes/admin/menu-pages/shortcodes-menu-page.php:666
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:30
 #: includes/payments/gateways/gateway.php:363
-#: includes/views/shortcodes/checkout-view.php:182
-#: includes/views/shortcodes/checkout-view.php:203
-#: includes/views/shortcodes/checkout-view.php:437
-#: includes/views/shortcodes/checkout-view.php:447
+#: includes/views/shortcodes/checkout-view.php:246
+#: includes/views/shortcodes/checkout-view.php:267
+#: includes/views/shortcodes/checkout-view.php:501
+#: includes/views/shortcodes/checkout-view.php:531
+#: templates/account/account-details.php:34
 msgid "Required"
 msgstr "Kötelező"
 
@@ -2851,7 +2935,8 @@ msgid "Taxes & Fees"
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:111
-#: includes/bundles/export-bundle.php:44 includes/views/booking-view.php:222
+#: includes/bundles/export-bundle.php:45
+#: includes/views/booking-view.php:222
 msgid "Fees"
 msgstr ""
 
@@ -2896,9 +2981,7 @@ msgid "Limit"
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:145
-msgid ""
-"How often this fee is charged. Set 0 to charge each day of the stay period. "
-"Set 1 to charge once."
+msgid "How often this fee is charged. Set 0 to charge each day of the stay period. Set 1 to charge once."
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:151
@@ -2914,7 +2997,8 @@ msgid "Show accommodation rate with this charge included"
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:176
-#: includes/bundles/export-bundle.php:42 includes/views/booking-view.php:146
+#: includes/bundles/export-bundle.php:43
+#: includes/views/booking-view.php:146
 msgid "Accommodation Taxes"
 msgstr ""
 
@@ -2937,9 +3021,7 @@ msgstr ""
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:211
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:272
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:322
-msgid ""
-"Limit of days the fee is charged. Set 0 to charge each day of stay period. "
-"Set 1 to charge once."
+msgid "Limit of days the fee is charged. Set 0 to charge each day of stay period. Set 1 to charge once."
 msgstr ""
 
 #: includes/admin/menu-pages/taxes-and-fees-menu-page.php:238
@@ -2957,11 +3039,6 @@ msgstr ""
 #: includes/views/booking-view.php:243
 msgid "Fee Taxes"
 msgstr ""
-
-#: includes/admin/menus.php:71 includes/admin/menus.php:72
-#: includes/post-types/booking-cpt.php:200
-msgid "Bookings"
-msgstr "Foglalások"
 
 #: includes/admin/room-list-table.php:100
 msgid "External Calendars"
@@ -3003,11 +3080,13 @@ msgctxt "This is date and time format 31/12/2017 - 23:59:59"
 msgid "d/m/Y - H:i:s"
 msgstr ""
 
-#: includes/admin/sync-rooms-list-table.php:73 includes/ajax.php:947
+#: includes/admin/sync-rooms-list-table.php:73
+#: includes/ajax.php:950
 msgid "Waiting"
 msgstr "Várakozás"
 
-#: includes/admin/sync-rooms-list-table.php:74 includes/ajax.php:948
+#: includes/admin/sync-rooms-list-table.php:74
+#: includes/ajax.php:951
 msgid "Processing"
 msgstr "Feldolgozás alatt"
 
@@ -3057,9 +3136,7 @@ msgid "API Key updated successfully."
 msgstr ""
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:133
-msgid ""
-"API Key generated successfully. Make sure to copy your new keys now as the "
-"secret key will be hidden once you leave this page."
+msgid "API Key generated successfully. Make sure to copy your new keys now as the secret key will be hidden once you leave this page."
 msgstr ""
 
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-ajax.php:137
@@ -3075,7 +3152,8 @@ msgstr ""
 #: includes/advanced/admin/tab/subtabs/api-keys/api-keys-table-list.php:57
 #: includes/advanced/admin/tab/subtabs/api-keys/html-keys-edit.php:22
 #: includes/payments/gateways/gateway.php:494
-#: includes/post-types/coupon-cpt.php:24 includes/post-types/rate-cpt.php:63
+#: includes/post-types/coupon-cpt.php:24
+#: includes/post-types/rate-cpt.php:63
 msgid "Description"
 msgstr "Leírás"
 
@@ -3202,62 +3280,66 @@ msgstr ""
 msgid "QR Code"
 msgstr ""
 
-#: includes/ajax.php:251
+#: includes/ajax.php:254
 msgid "No bookings found for your request."
 msgstr ""
 
-#: includes/ajax.php:258
+#: includes/ajax.php:261
 msgid "Uploads directory is not writable."
 msgstr ""
 
-#: includes/ajax.php:323
+#: includes/ajax.php:326
 msgid "No enough data"
 msgstr ""
 
-#: includes/ajax.php:341 includes/script-managers/admin-script-manager.php:88
+#: includes/ajax.php:344
+#: includes/script-managers/admin-script-manager.php:88
 msgid "An error has occurred"
 msgstr "Hiba történt"
 
-#: includes/ajax.php:353 includes/ajax.php:393 includes/ajax.php:686
+#: includes/ajax.php:356
+#: includes/ajax.php:396
+#: includes/ajax.php:689
 #: includes/csv/bookings/bookings-query.php:77
 msgid "Please complete all required fields and try again."
 msgstr "Kérjük, töltse ki az összes kötelező mezőt."
 
-#: includes/ajax.php:379 includes/script-managers/public-script-manager.php:220
+#: includes/ajax.php:382
+#: includes/script-managers/public-script-manager.php:220
 msgid "An error has occurred, please try again later."
 msgstr "Hiba történt. Kérjük, próbálja meg újra később."
 
-#: includes/ajax.php:505 includes/ajax.php:574
+#: includes/ajax.php:508
+#: includes/ajax.php:577
 msgid "An error has occurred. Please try again later."
 msgstr "Hiba történt. Kérjük, próbálja meg újra később."
 
-#: includes/ajax.php:702
-msgid ""
-"Sorry, the minimum allowed payment amount is %s to use this payment method."
+#: includes/ajax.php:705
+msgid "Sorry, the minimum allowed payment amount is %s to use this payment method."
 msgstr ""
 
-#: includes/ajax.php:765
-msgid ""
-"Chosen payment method is not available. Please refresh the page and try one "
-"more time."
-msgstr ""
-"A kiválasztott fizetési módszer nem elérhető. Kérjük, frissítse az oldalt, "
-"és próbálja meg még egyszer."
+#: includes/ajax.php:768
+msgid "Chosen payment method is not available. Please refresh the page and try one more time."
+msgstr "A kiválasztott fizetési módszer nem elérhető. Kérjük, frissítse az oldalt, és próbálja meg még egyszer."
 
-#: includes/ajax.php:838
+#: includes/ajax.php:841
 msgid "Coupon applied successfully."
 msgstr "A kupon sikeresen alkalmazva volt."
 
-#: includes/ajax.php:844 includes/entities/abstract-coupon.php:205
+#: includes/ajax.php:847
+#: includes/entities/abstract-coupon.php:205
 msgid "Coupon is not valid."
 msgstr "A kupon nem érvényes."
 
-#: includes/ajax.php:1033 includes/post-types/booking-cpt.php:33
+#: includes/ajax.php:1036
+#: includes/post-types/booking-cpt.php:33
 msgid "Booking Information"
 msgstr "Foglalási információ"
 
-#: includes/ajax.php:1041 includes/emails/templaters/email-templater.php:123
-#: includes/post-types/booking-cpt.php:45 template-functions.php:609
+#: includes/ajax.php:1044
+#: includes/emails/templaters/email-templater.php:128
+#: includes/post-types/booking-cpt.php:45
+#: template-functions.php:609
 #: template-functions.php:613
 #: templates/create-booking/search/search-form.php:49
 #: templates/edit-booking/edit-dates.php:33
@@ -3267,8 +3349,10 @@ msgstr "Foglalási információ"
 msgid "Check-in Date"
 msgstr "Bejelentkezési dátum"
 
-#: includes/ajax.php:1045 includes/emails/templaters/email-templater.php:127
-#: includes/post-types/booking-cpt.php:52 template-functions.php:618
+#: includes/ajax.php:1048
+#: includes/emails/templaters/email-templater.php:132
+#: includes/post-types/booking-cpt.php:52
+#: template-functions.php:618
 #: template-functions.php:622
 #: templates/create-booking/search/search-form.php:69
 #: templates/edit-booking/edit-dates.php:42
@@ -3278,7 +3362,8 @@ msgstr "Bejelentkezési dátum"
 msgid "Check-out Date"
 msgstr "Kijelentkezési dátum"
 
-#: includes/ajax.php:1054 includes/post-types/booking-cpt.php:72
+#: includes/ajax.php:1057
+#: includes/post-types/booking-cpt.php:72
 #: templates/emails/customer-approved-booking.php:31
 #: templates/emails/customer-cancelled-booking.php:29
 #: templates/emails/customer-confirmation-booking.php:35
@@ -3286,104 +3371,50 @@ msgstr "Kijelentkezési dátum"
 msgid "Customer Information"
 msgstr "Ügyfél információ"
 
-#: includes/ajax.php:1058 includes/bundles/customer-bundle.php:83
-#: includes/bundles/export-bundle.php:29 includes/post-types/booking-cpt.php:77
-#: includes/post-types/payment-cpt.php:228
-#: includes/views/shortcodes/checkout-view.php:462
-msgid "First Name"
-msgstr "Keresztnév"
-
-#: includes/ajax.php:1062 includes/bundles/customer-bundle.php:92
-#: includes/bundles/export-bundle.php:30 includes/post-types/booking-cpt.php:83
-#: includes/post-types/payment-cpt.php:235
-#: includes/views/shortcodes/checkout-view.php:473
-msgid "Last Name"
-msgstr "Vezetéknév"
-
-#: includes/ajax.php:1066 includes/bundles/customer-bundle.php:101
-#: includes/bundles/export-bundle.php:31 includes/post-types/booking-cpt.php:89
-#: includes/post-types/payment-cpt.php:242
-#: includes/views/shortcodes/checkout-view.php:484
-msgid "Email"
-msgstr "E-mail"
-
-#: includes/ajax.php:1070 includes/bundles/customer-bundle.php:110
-#: includes/bundles/export-bundle.php:32 includes/post-types/booking-cpt.php:95
-#: includes/post-types/payment-cpt.php:249
-#: includes/views/shortcodes/checkout-view.php:495
-msgid "Phone"
-msgstr "Telefonszám"
-
-#: includes/ajax.php:1074 includes/bundles/export-bundle.php:33
-#: includes/post-types/booking-cpt.php:102
-#: includes/post-types/payment-cpt.php:256
-msgid "Country"
-msgstr "Ország"
-
-#: includes/ajax.php:1078 includes/bundles/customer-bundle.php:128
-#: includes/bundles/export-bundle.php:34
-#: includes/post-types/booking-cpt.php:108
-#: includes/views/shortcodes/checkout-view.php:528
-msgid "Address"
-msgstr "Cím"
-
-#: includes/ajax.php:1082 includes/bundles/customer-bundle.php:137
-#: includes/bundles/export-bundle.php:35
-#: includes/post-types/booking-cpt.php:114
-#: includes/post-types/payment-cpt.php:277
-#: includes/views/shortcodes/checkout-view.php:539
-msgid "City"
-msgstr "Város"
-
-#: includes/ajax.php:1086 includes/bundles/customer-bundle.php:146
-#: includes/bundles/export-bundle.php:36
-#: includes/post-types/booking-cpt.php:120
-#: includes/post-types/payment-cpt.php:284
-#: includes/views/shortcodes/checkout-view.php:550
-msgid "State / County"
-msgstr "Megye"
-
-#: includes/ajax.php:1090 includes/bundles/customer-bundle.php:155
-#: includes/bundles/export-bundle.php:37
-#: includes/post-types/booking-cpt.php:126
-#: includes/views/shortcodes/checkout-view.php:561
-msgid "Postcode"
-msgstr "Irányítószám"
-
-#: includes/ajax.php:1094 includes/bundles/export-bundle.php:38
-#: includes/emails/templaters/email-templater.php:176
+#: includes/ajax.php:1097
+#: includes/bundles/export-bundle.php:38
+#: includes/emails/templaters/email-templater.php:181
 #: includes/post-types/booking-cpt.php:133
 msgid "Customer Note"
 msgstr "Ügyfél megjegyzése"
 
-#: includes/ajax.php:1100 includes/post-types/booking-cpt.php:140
+#: includes/ajax.php:1103
+#: includes/post-types/booking-cpt.php:140
 msgid "Additional Information"
 msgstr "További információ"
 
-#: includes/ajax.php:1104 includes/bundles/export-bundle.php:40
+#: includes/ajax.php:1107
+#: includes/bundles/export-bundle.php:40
 #: includes/post-types/booking-cpt.php:145
 #: includes/post-types/coupon-cpt.php:124
 msgid "Coupon"
 msgstr "Kupon"
 
-#: includes/ajax.php:1108 includes/post-types/booking-cpt.php:152
+#: includes/ajax.php:1111
+#: includes/post-types/booking-cpt.php:152
 msgid "Total Booking Price"
 msgstr "Teljes foglalási ár"
 
-#: includes/ajax.php:1117 includes/bundles/customer-bundle.php:164
+#: includes/ajax.php:1120
+#: includes/bundles/customer-bundle.php:164
 #: includes/post-types/booking-cpt.php:164
-#: includes/views/shortcodes/checkout-view.php:572
+#: includes/views/shortcodes/checkout-view.php:657
 msgid "Notes"
 msgstr "Megjegyzések"
 
 #. translators: %1$s: note author, %1$s: note date
-#: includes/ajax.php:1132
+#: includes/ajax.php:1135
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: includes/ajax.php:1231 template-functions.php:78
+#: includes/ajax.php:1234
+#: template-functions.php:78
 msgid "Based on your search parameters"
 msgstr "Az Ön keresési paraméterei szerint"
+
+#: includes/ajax.php:1265
+msgid "You do not have permission to do this action."
+msgstr ""
 
 #: includes/attribute-functions.php:164
 #: includes/post-types/attributes-cpt.php:131
@@ -3409,7 +3440,8 @@ msgctxt "Booking status"
 msgid "Confirmed"
 msgstr "Megerősített"
 
-#: includes/bookings-calendar.php:564 includes/reports/abstract-report.php:46
+#: includes/bookings-calendar.php:564
+#: includes/reports/abstract-report.php:46
 #: includes/reports/earnings-report.php:350
 msgid "Show"
 msgstr "Megjelenítés"
@@ -3421,33 +3453,34 @@ msgstr "Megjelenítés"
 msgid "Search"
 msgstr "Keresés"
 
-#: includes/bookings-calendar.php:571 includes/bookings-calendar.php:572
+#: includes/bookings-calendar.php:571
+#: includes/bookings-calendar.php:572
 #: includes/bookings-calendar.php:604
 #: includes/script-managers/public-script-manager.php:221
 msgid "Booked"
 msgstr "Foglalt"
 
-#: includes/bookings-calendar.php:573 includes/bookings-calendar.php:574
+#: includes/bookings-calendar.php:573
+#: includes/bookings-calendar.php:574
 #: includes/bookings-calendar.php:605
 #: includes/script-managers/public-script-manager.php:223
 msgid "Pending"
 msgstr "Függő"
 
-#: includes/bookings-calendar.php:575 includes/bookings-calendar.php:576
+#: includes/bookings-calendar.php:575
+#: includes/bookings-calendar.php:576
 msgid "External"
 msgstr ""
 
-#: includes/bookings-calendar.php:577 includes/bookings-calendar.php:578
+#: includes/bookings-calendar.php:577
+#: includes/bookings-calendar.php:578
 #: includes/bookings-calendar.php:981
 msgid "Blocked"
 msgstr ""
 
 #: includes/bookings-calendar.php:594
-msgid ""
-"Search results for accommodations that have bookings with status \"%s\" from "
-"%s until %s"
-msgstr ""
-"Keresési eredmények a következő állapotú foglalásokra \"%s\"  %s -tól %s -ig"
+msgid "Search results for accommodations that have bookings with status \"%s\" from %s until %s"
+msgstr "Keresési eredmények a következő állapotú foglalásokra \"%s\"  %s -tól %s -ig"
 
 #: includes/bookings-calendar.php:603
 msgid "Free"
@@ -3457,7 +3490,8 @@ msgstr "Ingyenes"
 msgid "Locked (Booked or Pending)"
 msgstr ""
 
-#: includes/bookings-calendar.php:637 includes/bookings-calendar.php:725
+#: includes/bookings-calendar.php:637
+#: includes/bookings-calendar.php:725
 msgid "Until"
 msgstr "Távozás"
 
@@ -3489,7 +3523,8 @@ msgstr "Bejelentkezés #%d"
 msgid "Booking #%d"
 msgstr "Foglalás #%d"
 
-#: includes/bookings-calendar.php:984 includes/bookings-calendar.php:988
+#: includes/bookings-calendar.php:984
+#: includes/bookings-calendar.php:988
 #: includes/script-managers/public-script-manager.php:222
 msgid "Buffer time."
 msgstr ""
@@ -5207,7 +5242,7 @@ msgid "Phone is required."
 msgstr "A telefonszám feltüntetése kötelező."
 
 #: includes/bundles/customer-bundle.php:119
-#: includes/views/shortcodes/checkout-view.php:508
+#: includes/views/shortcodes/checkout-view.php:592
 msgid "Country of residence"
 msgstr "Lakóhely szerinti ország"
 
@@ -5236,6 +5271,8 @@ msgid "Note is required."
 msgstr ""
 
 #: includes/bundles/export-bundle.php:20
+#: templates/account/bookings.php:19
+#: templates/account/bookings.php:68
 #: templates/create-booking/search/search-form.php:38
 #: templates/edit-booking/edit-dates.php:29
 #: templates/shortcodes/search/search-form.php:29
@@ -5243,6 +5280,8 @@ msgid "Check-in"
 msgstr "Bejelentkezés"
 
 #: includes/bundles/export-bundle.php:21
+#: templates/account/bookings.php:20
+#: templates/account/bookings.php:71
 #: templates/create-booking/search/search-form.php:58
 #: templates/edit-booking/edit-dates.php:38
 #: templates/shortcodes/search/search-form.php:49
@@ -5250,7 +5289,8 @@ msgid "Check-out"
 msgstr "Kijelentkezés"
 
 #. translators: The value a hotel wishes to sell their rooms. Also called the Cost, Value, Tariff or Room charge.
-#: includes/bundles/export-bundle.php:25 includes/post-types/rate-cpt.php:85
+#: includes/bundles/export-bundle.php:25
+#: includes/post-types/rate-cpt.php:85
 msgid "Rate"
 msgstr "Értékelés"
 
@@ -5261,36 +5301,49 @@ msgstr ""
 #: includes/bundles/export-bundle.php:39
 #: includes/emails/templaters/reserved-rooms-templater.php:199
 #: includes/views/edit-booking/checkout-view.php:170
-#: includes/views/shortcodes/checkout-view.php:222
+#: includes/views/shortcodes/checkout-view.php:286
 msgid "Full Guest Name"
 msgstr "Vendég teljes neve"
 
-#: includes/bundles/export-bundle.php:41 includes/views/booking-view.php:330
+#: includes/bundles/export-bundle.php:41
+#: includes/views/booking-view.php:138
+msgid "Accommodation Subtotal"
+msgstr "Szálláshely részösszege"
+
+#: includes/bundles/export-bundle.php:42
+#: includes/views/booking-view.php:330
+#: templates/account/bookings.php:21
+#: templates/account/bookings.php:74
 msgid "Total"
 msgstr "Összesen"
 
-#: includes/bundles/export-bundle.php:43
+#: includes/bundles/export-bundle.php:44
 msgid "Total Accommodation Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:45
+#: includes/bundles/export-bundle.php:46
 #: includes/reports/earnings-report.php:97
 msgid "Total Fees"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:46
+#: includes/bundles/export-bundle.php:47
+#: includes/views/booking-view.php:189
+msgid "Services Subtotal"
+msgstr "Szolgáltatások részösszege"
+
+#: includes/bundles/export-bundle.php:48
 msgid "Total Service Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:47
+#: includes/bundles/export-bundle.php:49
 msgid "Total Fee Taxes"
 msgstr ""
 
-#: includes/bundles/export-bundle.php:48
+#: includes/bundles/export-bundle.php:50
 msgid "Paid"
 msgstr "Fizetett"
 
-#: includes/bundles/export-bundle.php:49
+#: includes/bundles/export-bundle.php:51
 #: includes/post-types/payment-cpt.php:125
 #: includes/shortcodes/booking-confirmation-shortcode.php:372
 msgid "Payment Details"
@@ -5322,21 +5375,19 @@ msgstr ""
 
 #: includes/crons/cron-manager.php:89
 msgid "User Approval Time setted in Hotel Booking Settings"
-msgstr ""
-"A felhasználó jóváhagyási idő a Szállásfoglalás beállításokban állítható be."
+msgstr "A felhasználó jóváhagyási idő a Szállásfoglalás beállításokban állítható be."
 
 #: includes/crons/cron-manager.php:94
 msgid "Pending Payment Time set in Hotel Booking Settings"
-msgstr ""
-"A kifizetésre váró fizetés időtartama a Szállásfoglalás beállításokban "
-"állítható be."
+msgstr "A kifizetésre váró fizetés időtartama a Szállásfoglalás beállításokban állítható be."
 
 #: includes/crons/cron-manager.php:99
 msgid "Interval for automatic cleaning of synchronization logs."
 msgstr ""
 
 #: includes/csv/bookings/bookings-parser.php:195
-#: includes/views/edit-booking/checkout-view.php:261 template-functions.php:776
+#: includes/views/edit-booking/checkout-view.php:261
+#: template-functions.php:776
 msgid "x %d guest"
 msgid_plural "x %d guests"
 msgstr[0] ""
@@ -5344,7 +5395,8 @@ msgstr[1] ""
 
 #: includes/csv/bookings/bookings-parser.php:199
 #: includes/views/edit-booking/checkout-view.php:265
-#: includes/views/reserved-room-view.php:29 template-functions.php:779
+#: includes/views/reserved-room-view.php:29
+#: template-functions.php:779
 msgid "x %d time"
 msgid_plural "x %d times"
 msgstr[0] ""
@@ -5354,36 +5406,35 @@ msgstr[1] ""
 msgid "Please select columns to export."
 msgstr ""
 
-#: includes/emails/abstract-email.php:397
+#: includes/emails/abstract-email.php:418
 msgid "Disable this email notification"
 msgstr "Az adott e-mail értesítés kikapcsolása"
 
-#: includes/emails/abstract-email.php:402
+#: includes/emails/abstract-email.php:423
 msgid "Subject"
 msgstr "Téma"
 
-#: includes/emails/abstract-email.php:411
+#: includes/emails/abstract-email.php:432
 msgid "Header"
 msgstr "Fejléc"
 
-#: includes/emails/abstract-email.php:420
+#: includes/emails/abstract-email.php:441
 msgid "Email Template"
 msgstr "E-mail sablon"
 
-#: includes/emails/abstract-email.php:503
-msgid ""
-"\"%s\" email will not be sent: there is no customer email in the booking."
+#: includes/emails/abstract-email.php:542
+msgid "\"%s\" email will not be sent: there is no customer email in the booking."
 msgstr "\"%s\" email nem lesz elküldve: nincs ügyféli email a foglalásban."
 
-#: includes/emails/abstract-email.php:538
+#: includes/emails/abstract-email.php:577
 msgid "Deprecated tags in header of %s"
 msgstr "Elavult címkék a %s fejlécben"
 
-#: includes/emails/abstract-email.php:541
+#: includes/emails/abstract-email.php:580
 msgid "Deprecated tags in subject of %s"
 msgstr "Elavult címkék a %s témában"
 
-#: includes/emails/abstract-email.php:544
+#: includes/emails/abstract-email.php:583
 msgid "Deprecated tags in template of %s"
 msgstr "Elavult címkék a %s sablonban"
 
@@ -5421,7 +5472,8 @@ msgid "Cancelled Booking Email"
 msgstr "Törölt foglalási e-mail"
 
 #: includes/emails/booking/admin/confirmed-by-payment-email.php:8
-#: includes/emails/booking/admin/confirmed-email.php:8 includes/wizard.php:123
+#: includes/emails/booking/admin/confirmed-email.php:8
+#: includes/wizard.php:124
 msgid "Booking Confirmed"
 msgstr "A foglalást megerősítettük"
 
@@ -5440,8 +5492,7 @@ msgstr "Jóváhagyott foglalási e-mail (fizetés által)"
 
 #: includes/emails/booking/admin/confirmed-email.php:16
 msgid "Email that will be sent to Admin when customer confirms booking."
-msgstr ""
-"Az az e-mail, amely az Adminnak lesz elküldve a foglalás megerősítése után."
+msgstr "Az az e-mail, amely az Adminnak lesz elküldve a foglalás megerősítése után."
 
 #: includes/emails/booking/admin/confirmed-email.php:20
 #: includes/emails/booking/customer/approved-email.php:20
@@ -5458,8 +5509,7 @@ msgstr "%site_title% - Új foglalás #%booking_id%"
 
 #: includes/emails/booking/admin/pending-email.php:17
 msgid "Email that will be sent to administrator after booking is placed."
-msgstr ""
-"Az az e-mail, amely az adminisztrátornak lesz elküldve a foglalás után."
+msgstr "Az az e-mail, amely az adminisztrátornak lesz elküldve a foglalás után."
 
 #: includes/emails/booking/admin/pending-email.php:21
 msgid "Pending Booking Email"
@@ -5475,14 +5525,13 @@ msgstr "%site_title% - A #%booking_id% foglalást megerősítettük"
 
 #: includes/emails/booking/customer/approved-email.php:16
 msgid "Email that will be sent to customer when booking is approved."
-msgstr ""
-"Az az e-mail, amely az ügyfélnek lesz elküldve a foglalás megerősítése után."
+msgstr "Az az e-mail, amely az ügyfélnek lesz elküldve a foglalás megerősítése után."
 
-#: includes/emails/booking/customer/base-email.php:45
+#: includes/emails/booking/customer/base-email.php:51
 msgid "\"%s\" mail was sent to customer."
 msgstr "A \"%s\" e-mail el lett küldve az ügyfélnek."
 
-#: includes/emails/booking/customer/base-email.php:47
+#: includes/emails/booking/customer/base-email.php:53
 msgid "\"%s\" mail sending is failed."
 msgstr "A \"%s\" "
 
@@ -5496,8 +5545,7 @@ msgstr "%site_title% - A #%booking_id% foglalást töröltük"
 
 #: includes/emails/booking/customer/cancelled-email.php:16
 msgid "Email that will be sent to customer when booking is cancelled."
-msgstr ""
-"Az az e-mail, amely az ügyfélnek lesz elküldve a foglalás törlése után."
+msgstr "Az az e-mail, amely az ügyfélnek lesz elküldve a foglalás törlése után."
 
 #: includes/emails/booking/customer/confirmation-email.php:8
 msgid "Confirm your booking"
@@ -5508,9 +5556,7 @@ msgid "%site_title% - Confirm your booking #%booking_id%"
 msgstr "%site_title% - Erősítse meg a #%booking_id% foglalást"
 
 #: includes/emails/booking/customer/confirmation-email.php:16
-msgid ""
-"This email is sent when \"Booking Confirmation Mode\" is set to Customer "
-"confirmation via email."
+msgid "This email is sent when \"Booking Confirmation Mode\" is set to Customer confirmation via email."
 msgstr ""
 
 #: includes/emails/booking/customer/confirmation-email.php:17
@@ -5531,16 +5577,28 @@ msgid "%site_title% - Booking #%booking_id% is placed"
 msgstr "%site_title% - Sikeres foglalás: #%booking_id%"
 
 #: includes/emails/booking/customer/pending-email.php:16
-msgid ""
-"This email is sent when \"Booking Confirmation Mode\" is set to Admin "
-"confirmation."
-msgstr ""
-"Az e-mail akkor lesz elküldve, ha a \"Foglalás megerősítés mód\" menüben az "
-"Admin megerősítést választja."
+msgid "This email is sent when \"Booking Confirmation Mode\" is set to Admin confirmation."
+msgstr "Az e-mail akkor lesz elküldve, ha a \"Foglalás megerősítés mód\" menüben az Admin megerősítést választja."
 
 #: includes/emails/booking/customer/pending-email.php:21
 msgid "New Booking Email (Confirmation by Admin)"
 msgstr "Új foglalási e-mail (Megerősítés az admin által)"
+
+#: includes/emails/booking/customer/registration-email.php:8
+msgid "Welcome"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:12
+msgid "%site_title% - account details"
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:16
+msgid "Email that will be sent to a customer after they registered on your site."
+msgstr ""
+
+#: includes/emails/booking/customer/registration-email.php:20
+msgid "Customer Registration Email"
+msgstr ""
 
 #: includes/emails/templaters/abstract-templater.php:72
 msgid "Possible tags:"
@@ -5559,96 +5617,123 @@ msgstr "egyik sem"
 msgid "User Cancellation Link"
 msgstr "Törlési link"
 
-#: includes/emails/templaters/email-templater.php:97
+#: includes/emails/templaters/email-templater.php:102
 msgid "Site title (set in Settings > General)"
 msgstr "Webhely cím (Beállítások > Általános)"
 
-#: includes/emails/templaters/email-templater.php:111
+#: includes/emails/templaters/email-templater.php:116
 #: includes/post-types/payment-cpt.php:214
 msgid "Booking ID"
 msgstr "Foglalás azonosító"
 
-#: includes/emails/templaters/email-templater.php:115
+#: includes/emails/templaters/email-templater.php:120
 msgid "Booking Edit Link"
 msgstr "Foglalás módosítás link"
 
-#: includes/emails/templaters/email-templater.php:119
+#: includes/emails/templaters/email-templater.php:124
 msgid "Booking Total Price"
 msgstr "Teljes foglalási ár"
 
-#: includes/emails/templaters/email-templater.php:140
+#: includes/emails/templaters/email-templater.php:145
+#: includes/emails/templaters/email-templater.php:284
 msgid "Customer First Name"
 msgstr "Ügyfél Keresztneve"
 
-#: includes/emails/templaters/email-templater.php:144
+#: includes/emails/templaters/email-templater.php:149
+#: includes/emails/templaters/email-templater.php:288
 msgid "Customer Last Name"
 msgstr "Ügyfél vezetékneve"
 
-#: includes/emails/templaters/email-templater.php:148
+#: includes/emails/templaters/email-templater.php:153
+#: includes/emails/templaters/email-templater.php:292
 msgid "Customer Email"
 msgstr "Ügyfél e-mail címje"
 
-#: includes/emails/templaters/email-templater.php:152
+#: includes/emails/templaters/email-templater.php:157
+#: includes/emails/templaters/email-templater.php:296
 msgid "Customer Phone"
 msgstr "Ügyfél telefonszáma"
 
-#: includes/emails/templaters/email-templater.php:156
+#: includes/emails/templaters/email-templater.php:161
+#: includes/emails/templaters/email-templater.php:300
 msgid "Customer Country"
 msgstr ""
 
-#: includes/emails/templaters/email-templater.php:160
+#: includes/emails/templaters/email-templater.php:165
+#: includes/emails/templaters/email-templater.php:304
 msgid "Customer Address"
 msgstr ""
 
-#: includes/emails/templaters/email-templater.php:164
+#: includes/emails/templaters/email-templater.php:169
+#: includes/emails/templaters/email-templater.php:308
 msgid "Customer City"
 msgstr ""
 
-#: includes/emails/templaters/email-templater.php:168
+#: includes/emails/templaters/email-templater.php:173
+#: includes/emails/templaters/email-templater.php:312
 msgid "Customer State/County"
 msgstr ""
 
-#: includes/emails/templaters/email-templater.php:172
+#: includes/emails/templaters/email-templater.php:177
+#: includes/emails/templaters/email-templater.php:316
 msgid "Customer Postcode"
 msgstr ""
 
-#: includes/emails/templaters/email-templater.php:181
+#: includes/emails/templaters/email-templater.php:186
 msgid "Reserved Accommodations Details"
 msgstr "Fenntartott szálláshely részletek"
 
-#: includes/emails/templaters/email-templater.php:203
+#: includes/emails/templaters/email-templater.php:208
 #: includes/views/create-booking/checkout-view.php:15
-#: includes/views/shortcodes/checkout-view.php:94
+#: includes/views/shortcodes/checkout-view.php:158
 #: templates/shortcodes/booking-details/booking-details.php:18
 msgid "Booking Details"
 msgstr "Foglalási adatok"
 
-#: includes/emails/templaters/email-templater.php:216
+#: includes/emails/templaters/email-templater.php:221
 msgid "Confirmation Link"
 msgstr "Megerősítési link"
 
-#: includes/emails/templaters/email-templater.php:220
+#: includes/emails/templaters/email-templater.php:225
 msgid "Confirmation Link Expiration Time ( UTC )"
 msgstr "Megerősítési link lejárati ideje"
 
-#: includes/emails/templaters/email-templater.php:233
+#: includes/emails/templaters/email-templater.php:238
 msgid "Cancellation Details (if enabled)"
 msgstr "Lemondási Részletek (ha engedélyezve van)"
 
-#: includes/emails/templaters/email-templater.php:246
+#: includes/emails/templaters/email-templater.php:251
 msgid "The total price of payment"
 msgstr "A fizetés teljes összege"
 
-#: includes/emails/templaters/email-templater.php:250
+#: includes/emails/templaters/email-templater.php:255
 msgid "The unique ID of payment"
 msgstr "A fizetés egyedi azonosítószáma"
 
-#: includes/emails/templaters/email-templater.php:254
+#: includes/emails/templaters/email-templater.php:259
 msgid "The method of payment"
 msgstr "A fizetés módszere"
 
-#: includes/emails/templaters/email-templater.php:258
+#: includes/emails/templaters/email-templater.php:263
 msgid "Payment instructions"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:276
+msgid "User login"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:280
+msgid "User password"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:320
+msgid "Link to My Account page"
+msgstr ""
+
+#: includes/emails/templaters/email-templater.php:547
+#: includes/upgrader.php:831
+#: includes/wizard.php:183
+msgid "My Account"
 msgstr ""
 
 #: includes/emails/templaters/reserved-rooms-templater.php:171
@@ -5736,17 +5821,13 @@ msgstr[1] "%d URL került elemzésre."
 msgid "Skipped. No URLs found for parsing."
 msgstr "Kimarad. Nem található URL az elemzéshez ."
 
-#: includes/i-cal/background-processes/background-uploader.php:66
+#: includes/i-cal/background-processes/background-uploader.php:64
 msgid "Cannot read uploaded file"
 msgstr "Nem sikerült olvasni a feltöltött fájlt"
 
-#: includes/i-cal/background-processes/background-worker.php:275
-msgid ""
-"We will need to check %d previous booking after importing and remove it if "
-"the booking is outdated."
-msgid_plural ""
-"We will need to check %d previous bookings after importing and remove the "
-"outdated ones."
+#: includes/i-cal/background-processes/background-worker.php:277
+msgid "We will need to check %d previous booking after importing and remove it if the booking is outdated."
+msgid_plural "We will need to check %d previous bookings after importing and remove the outdated ones."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -5776,60 +5857,52 @@ msgctxt "%s - error description"
 msgid "Parse error. %s"
 msgstr "Parse hiba. %s"
 
-#: includes/i-cal/background-processes/background-worker.php:435
+#: includes/i-cal/background-processes/background-worker.php:432
 msgid "Skipped. Outdated booking #%d already removed."
 msgstr ""
 
-#: includes/i-cal/background-processes/background-worker.php:442
+#: includes/i-cal/background-processes/background-worker.php:439
 msgid "Skipped. Booking #%d updated with new data."
 msgstr ""
 
-#: includes/i-cal/background-processes/background-worker.php:457
+#: includes/i-cal/background-processes/background-worker.php:454
 msgid "The outdated booking #%d has been removed."
 msgstr ""
 
-#: includes/i-cal/importer.php:99
-msgid "Skipped. Event has passed."
+#: includes/i-cal/importer.php:103
+msgid "Skipped. Event from %1$s to %2$s has passed."
 msgstr ""
 
-#: includes/i-cal/importer.php:112
-msgid "Success. New booking #%d."
+#: includes/i-cal/importer.php:119
+msgid "New booking #%1$d. The dates from %2$s to %3$s are now blocked."
 msgstr ""
 
-#: includes/i-cal/importer.php:128
+#: includes/i-cal/importer.php:139
 msgid "Success. Booking #%d updated with new data."
 msgstr ""
 
-#: includes/i-cal/importer.php:132
+#: includes/i-cal/importer.php:147
 msgid "Skipped. The dates from %1$s to %2$s are already blocked."
 msgstr ""
 
-#: includes/i-cal/importer.php:146
-msgid ""
-"Success. Booking #%1$d updated with new data. Removed %2$d outdated booking."
-msgid_plural ""
-"Success. Booking #%1$d updated with new data. Removed %2$d outdated bookings."
+#: includes/i-cal/importer.php:163
+msgid "Success. Booking #%1$d updated with new data. Removed %2$d outdated booking."
+msgid_plural "Success. Booking #%1$d updated with new data. Removed %2$d outdated bookings."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/i-cal/importer.php:148
+#: includes/i-cal/importer.php:165
 msgid "Success. Booking #%1$d updated with new data."
 msgstr ""
 
-#: includes/i-cal/importer.php:158
-msgid ""
-"Cannot import new event. Dates from %1$s to %2$s are partially blocked by "
-"booking %3$s."
-msgid_plural ""
-"Cannot import new event. Dates from %1$s to %2$s are partially blocked by "
-"bookings %3$s."
+#: includes/i-cal/importer.php:176
+msgid "Cannot import new event. Dates from %1$s to %2$s are partially blocked by booking %3$s."
+msgid_plural "Cannot import new event. Dates from %1$s to %2$s are partially blocked by bookings %3$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/i-cal/importer.php:208
-msgid ""
-"Booking imported with UID %1$s.<br />Summary: %2$s.<br />Description: %3$s."
-"<br />Source: %4$s."
+#: includes/i-cal/importer.php:229
+msgid "Booking imported with UID %1$s.<br />Summary: %2$s.<br />Description: %3$s.<br />Source: %4$s."
 msgstr ""
 
 #: includes/i-cal/logs-handler.php:25
@@ -5864,13 +5937,13 @@ msgstr "Mind kinyitása"
 msgid "Collapse All"
 msgstr "Minden bezárása"
 
-#: includes/i-cal/logs-handler.php:184
+#: includes/i-cal/logs-handler.php:135
 msgid "All done! %1$d booking was successfully added."
 msgid_plural "All done! %1$d bookings were successfully added."
 msgstr[0] "Minden kész! %1$d foglalás sikeresen hozzáadva."
 msgstr[1] "Minden kész! %1$d foglalás sikeresen hozzáadva."
 
-#: includes/i-cal/logs-handler.php:185
+#: includes/i-cal/logs-handler.php:136
 msgid " There was %2$d failure."
 msgid_plural " There were %2$d failures."
 msgstr[0] " %2$d hiba volt."
@@ -5881,14 +5954,12 @@ msgid "Dismiss "
 msgstr "Elvetés"
 
 #: includes/license-notice.php:44
-msgid ""
-"Your License Key is not active. Please, <a href='%s'>activate your License "
-"Key</a> to get plugin updates"
-msgstr ""
-"A licenc kulcs nem aktív. Kérjük, <a href='%s'>aktiválja a licenc kulcsot</a>"
-" ahhoz, hogy bővítmény frissítéseket tudjon kapni"
+msgid "Your License Key is not active. Please, <a href='%s'>activate your License Key</a> to get plugin updates"
+msgstr "A licenc kulcs nem aktív. Kérjük, <a href='%s'>aktiválja a licenc kulcsot</a> ahhoz, hogy bővítmény frissítéseket tudjon kapni"
 
-#: includes/notices.php:148 includes/notices.php:167 includes/wizard.php:34
+#: includes/notices.php:148
+#: includes/notices.php:167
+#: includes/wizard.php:34
 msgid "Hotel Booking Plugin"
 msgstr "Szálloda foglalási bővítmény"
 
@@ -5901,19 +5972,15 @@ msgid "Taking a while? Click here to run it now."
 msgstr "Sok időbe tart? Kattintson ide a futtatáshoz."
 
 #: includes/notices.php:168
-msgid ""
-"Add \"Booking Confirmation\" shortcode to your \"Booking Confirmed\" and "
-"\"Reservation Received\" pages to show more details about booking or payment."
-"<br/>Click \"Update Pages\" to apply all changes automatically or skip this "
-"notice and add \"Booking Confirmation\" shortcode manually.<br/><b><em>This "
-"action will replace the whole content of the pages.</em></b>"
+msgid "Add \"Booking Confirmation\" shortcode to your \"Booking Confirmed\" and \"Reservation Received\" pages to show more details about booking or payment.<br/>Click \"Update Pages\" to apply all changes automatically or skip this notice and add \"Booking Confirmation\" shortcode manually.<br/><b><em>This action will replace the whole content of the pages.</em></b>"
 msgstr ""
 
 #: includes/notices.php:170
 msgid "Update Pages"
 msgstr ""
 
-#: includes/notices.php:172 includes/wizard.php:37
+#: includes/notices.php:172
+#: includes/wizard.php:37
 msgid "Skip"
 msgstr "Ugrás"
 
@@ -5923,9 +5990,7 @@ msgid "Direct Bank Transfer"
 msgstr ""
 
 #: includes/payments/gateways/bank-gateway.php:47
-msgid ""
-"Make your payment directly into our bank account. Please use your Booking ID "
-"as the payment reference."
+msgid "Make your payment directly into our bank account. Please use your Booking ID as the payment reference."
 msgstr ""
 
 #: includes/payments/gateways/beanstream-gateway.php:54
@@ -5936,12 +6001,8 @@ msgstr ""
 #: includes/payments/gateways/braintree-gateway.php:144
 #: includes/payments/gateways/paypal-gateway.php:62
 #: includes/payments/gateways/two-checkout-gateway.php:70
-msgid ""
-"Use the card number %1$s with CVC %2$s and a valid expiration date to test a "
-"payment."
-msgstr ""
-"Használja a %1$s kártya számot a CVC %2$s számmal és egy érvényes lejárati "
-"dátumot ahhoz, hogy tesztelje a fizetést."
+msgid "Use the card number %1$s with CVC %2$s and a valid expiration date to test a payment."
+msgstr "Használja a %1$s kártya számot a CVC %2$s számmal és egy érvényes lejárati dátumot ahhoz, hogy tesztelje a fizetést."
 
 #: includes/payments/gateways/beanstream-gateway.php:66
 msgid "Pay by Card (Beanstream)"
@@ -5954,28 +6015,14 @@ msgstr "Fizessen a bankkártyájával a Beanstream-en keresztül"
 #: includes/payments/gateways/beanstream-gateway.php:85
 #: includes/payments/gateways/braintree-gateway.php:189
 #: includes/payments/gateways/stripe-gateway.php:171
-msgid ""
-"%1$s is enabled, but the <a href=\"%2$s\">Force Secure Checkout</a> option "
-"is disabled. Please enable SSL and ensure your server has a valid SSL "
-"certificate. Otherwise, %1$s will only work in Test Mode."
-msgstr ""
-"%1$s engedélyezve van, de a <a href=\"%2$s\">Biztonságos fizetés "
-"kényszerítésé</a> le van tiltva. Kérjük, engedélyezze a SSL-t, és győződjön "
-"meg róla, hogy egy érvényes SSL tanúsítvánnyal rendelkezik. Ellenkező "
-"esetben a %1$s csak teszt üzemmódban működik."
+msgid "%1$s is enabled, but the <a href=\"%2$s\">Force Secure Checkout</a> option is disabled. Please enable SSL and ensure your server has a valid SSL certificate. Otherwise, %1$s will only work in Test Mode."
+msgstr "%1$s engedélyezve van, de a <a href=\"%2$s\">Biztonságos fizetés kényszerítésé</a> le van tiltva. Kérjük, engedélyezze a SSL-t, és győződjön meg róla, hogy egy érvényes SSL tanúsítvánnyal rendelkezik. Ellenkező esetben a %1$s csak teszt üzemmódban működik."
 
 #: includes/payments/gateways/beanstream-gateway.php:87
 #: includes/payments/gateways/braintree-gateway.php:191
 #: includes/payments/gateways/stripe-gateway.php:173
-msgid ""
-"The <a href=\"%2$s\">Force Secure Checkout</a> option is disabled. Please "
-"enable SSL and ensure your server has a valid SSL certificate. Otherwise, "
-"%1$s will only work in Test Mode."
-msgstr ""
-"A <a href=\"%2$s\">Biztonságos fizetés kényszerítése</a> opció le van tiltva."
-"  Kérjük, engedélyezze a SSL-t, és győződjön meg róla, hogy egy érvényes SSL "
-"tanúsítvánnyal rendelkezik. Ellenkező esetben a %1$s csak teszt üzemmódban "
-"működik."
+msgid "The <a href=\"%2$s\">Force Secure Checkout</a> option is disabled. Please enable SSL and ensure your server has a valid SSL certificate. Otherwise, %1$s will only work in Test Mode."
+msgstr "A <a href=\"%2$s\">Biztonságos fizetés kényszerítése</a> opció le van tiltva.  Kérjük, engedélyezze a SSL-t, és győződjön meg róla, hogy egy érvényes SSL tanúsítvánnyal rendelkezik. Ellenkező esetben a %1$s csak teszt üzemmódban működik."
 
 #: includes/payments/gateways/beanstream-gateway.php:90
 msgid "Beanstream"
@@ -5987,26 +6034,16 @@ msgid "Merchant ID"
 msgstr "Kereskedő ID"
 
 #: includes/payments/gateways/beanstream-gateway.php:103
-msgid ""
-"Your Merchant ID can be found in the top-right corner of the screen after "
-"logging in to the Beanstream Back Office"
-msgstr ""
-"Az Ön kereskedő ID száma a képernyő jobb felső sarkában található meg, "
-"miután bejelentkezett a Beanstream Back Office-ba"
+msgid "Your Merchant ID can be found in the top-right corner of the screen after logging in to the Beanstream Back Office"
+msgstr "Az Ön kereskedő ID száma a képernyő jobb felső sarkában található meg, miután bejelentkezett a Beanstream Back Office-ba"
 
 #: includes/payments/gateways/beanstream-gateway.php:107
 msgid "Payments Passcode"
 msgstr "Fizetések jelszava"
 
 #: includes/payments/gateways/beanstream-gateway.php:109
-msgid ""
-"To generate the passcode, navigate to Administration > Account Settings > "
-"Order Settings in the sidebar, then scroll to Payment Gateway > "
-"Security/Authentication"
-msgstr ""
-"A jelszó létrehozásához keresse meg az Adminisztráció > Fiókbeállítások > "
-"Megrendelési beállítások oldalt az oldalsávban, majd lépjen a Fizetési "
-"átjáró > Biztonság oldalra"
+msgid "To generate the passcode, navigate to Administration > Account Settings > Order Settings in the sidebar, then scroll to Payment Gateway > Security/Authentication"
+msgstr "A jelszó létrehozásához keresse meg az Adminisztráció > Fiókbeállítások > Megrendelési beállítások oldalt az oldalsávban, majd lépjen a Fizetési átjáró > Biztonság oldalra"
 
 #: includes/payments/gateways/beanstream-gateway.php:157
 msgid "Beanstream Payment Error: %s"
@@ -6039,11 +6076,8 @@ msgid "Braintree gateway cannot be enabled due to some problems: %s"
 msgstr " Braintree átjáró bizonyos problémák miatt nem engedélyezhető: %s"
 
 #: includes/payments/gateways/braintree-gateway.php:207
-msgid ""
-"In your Braintree account select Account > My User > View Authorizations."
-msgstr ""
-"Az Ön Braintree fiókjában válassza a Fiók > Saját felhasználó> Megtekintési "
-"jogosultságok opciót."
+msgid "In your Braintree account select Account > My User > View Authorizations."
+msgstr "Az Ön Braintree fiókjában válassza a Fiók > Saját felhasználó> Megtekintési jogosultságok opciót."
 
 #: includes/payments/gateways/braintree-gateway.php:211
 #: includes/payments/gateways/stripe-gateway.php:201
@@ -6059,16 +6093,8 @@ msgid "Merchant Account ID"
 msgstr "Kereskedőfiók ID"
 
 #: includes/payments/gateways/braintree-gateway.php:222
-msgid ""
-"In case the site currency differs from default currency in your Braintree "
-"account, you can set specific merchant account to avoid <a href=\"%s\">"
-"complications with currencty conversions</a>. Otherwise leave the field "
-"empty."
-msgstr ""
-"Abban az esetben, ha a webhely pénzneme különbözik a Braintree számlán "
-"alapértelmezettől, egy speciális kereskedői fiókot állíthat be a <a "
-"href=\"%s\">a konverzióval járó kellemetlenségek elkerülése</a> érdekében. "
-"Ellenkező esetben hagyja üresen a mezőt."
+msgid "In case the site currency differs from default currency in your Braintree account, you can set specific merchant account to avoid <a href=\"%s\">complications with currencty conversions</a>. Otherwise leave the field empty."
+msgstr "Abban az esetben, ha a webhely pénzneme különbözik a Braintree számlán alapértelmezettől, egy speciális kereskedői fiókot állíthat be a <a href=\"%s\">a konverzióval járó kellemetlenségek elkerülése</a> érdekében. Ellenkező esetben hagyja üresen a mezőt."
 
 #: includes/payments/gateways/braintree-gateway.php:276
 msgid "Braintree submitted for settlement (Transaction ID: %s)"
@@ -6138,14 +6164,11 @@ msgstr "A Sandbox a fizetések teszteléséhez használható."
 
 #: includes/payments/gateways/gateway.php:488
 msgid "Payment method title that the customer will see on your website."
-msgstr ""
-"A fizetési mód címe, amely a weboldalon lesz megtekinthető az ügyfél által."
+msgstr "A fizetési mód címe, amely a weboldalon lesz megtekinthető az ügyfél által."
 
 #: includes/payments/gateways/gateway.php:496
 msgid "Payment method description that the customer will see on your website."
-msgstr ""
-"A fizetési mód leírása, amely a weboldalon lesz megtekinthető az ügyfél "
-"által."
+msgstr "A fizetési mód leírása, amely a weboldalon lesz megtekinthető az ügyfél által."
 
 #: includes/payments/gateways/gateway.php:504
 msgid "Instructions"
@@ -6186,12 +6209,8 @@ msgid "Disable IPN Verification"
 msgstr "IPN ellenőrzés letiltása"
 
 #: includes/payments/gateways/paypal-gateway.php:213
-msgid ""
-"Specify an IPN listener for a specific payment instead of the listeners "
-"specified in your PayPal Profile."
-msgstr ""
-"Határozza meg az IPN-t a speciális fizetésekhez az Ön PayPal fiókjában "
-"megadott helyett."
+msgid "Specify an IPN listener for a specific payment instead of the listeners specified in your PayPal Profile."
+msgstr "Határozza meg az IPN-t a speciális fizetésekhez az Ön PayPal fiókjában megadott helyett."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:164
 msgid "Payment %s via IPN."
@@ -6203,83 +6222,51 @@ msgstr "A fizetés nem sikerült, mert a PayPal IPN üzleti e-mail érvénytelen
 
 #: includes/payments/gateways/paypal/ipn-listener.php:200
 msgid "Payment failed due to invalid currency in PayPal IPN."
-msgstr ""
-"A fizetés nem sikerült, mert a PayPal IPN -ben található pénznem érvénytelen."
+msgstr "A fizetés nem sikerült, mert a PayPal IPN -ben található pénznem érvénytelen."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:215
 msgid "Payment failed due to invalid amount in PayPal IPN."
-msgstr ""
-"A fizetés nem sikerült, mert a PayPal IPN -ben található összeg érvénytelen."
+msgstr "A fizetés nem sikerült, mert a PayPal IPN -ben található összeg érvénytelen."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:230
 msgid "Payment failed due to invalid purchase key in PayPal IPN."
-msgstr ""
-"A fizetés nem sikerült, mert a PayPal IPN -ben elhelyezett vásárlási kulcs "
-"érvénytelen."
+msgstr "A fizetés nem sikerült, mert a PayPal IPN -ben elhelyezett vásárlási kulcs érvénytelen."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:303
 msgid "Payment made via eCheck and will clear automatically in 5-8 days."
-msgstr ""
-"A fizetés eCheck-en keresztül történt meg, és 5-8 nap kell a feldolgozására."
+msgstr "A fizetés eCheck-en keresztül történt meg, és 5-8 nap kell a feldolgozására."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:309
-msgid ""
-"Payment requires a confirmed customer address and must be accepted manually "
-"through PayPal."
-msgstr ""
-"A fizetéshez egy megerősített ügyfél címre lesz szüksége, és ezen kívül csak "
-"manuálisan elfogadható."
+msgid "Payment requires a confirmed customer address and must be accepted manually through PayPal."
+msgstr "A fizetéshez egy megerősített ügyfél címre lesz szüksége, és ezen kívül csak manuálisan elfogadható."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:315
-msgid ""
-"Payment must be accepted manually through PayPal due to international "
-"account regulations."
-msgstr ""
-"A fizetés a nemzetközi számviteli előírások miatt csak manuálisan fogadható "
-"el a PayPal-on keresztül."
+msgid "Payment must be accepted manually through PayPal due to international account regulations."
+msgstr "A fizetés a nemzetközi számviteli előírások miatt csak manuálisan fogadható el a PayPal-on keresztül."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:321
-msgid ""
-"Payment received in non-shop currency and must be accepted manually through "
-"PayPal."
-msgstr ""
-"A fizetés az üzletben nem meghatározott pénznemben érkezett meg, és csak "
-"manuálisan elfogadható a PayPal-on keresztül."
+msgid "Payment received in non-shop currency and must be accepted manually through PayPal."
+msgstr "A fizetés az üzletben nem meghatározott pénznemben érkezett meg, és csak manuálisan elfogadható a PayPal-on keresztül."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:328
-msgid ""
-"Payment is being reviewed by PayPal staff as high-risk or in possible "
-"violation of government regulations."
-msgstr ""
-"A fizetés felülvizsgálat alatt áll a PayPal alkalmazottai által, mivel "
-"lehetséges, hogy magas kockázatú vagy hatósági előírásokat szegett meg."
+msgid "Payment is being reviewed by PayPal staff as high-risk or in possible violation of government regulations."
+msgstr "A fizetés felülvizsgálat alatt áll a PayPal alkalmazottai által, mivel lehetséges, hogy magas kockázatú vagy hatósági előírásokat szegett meg."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:334
 msgid "Payment was sent to unconfirmed or non-registered email address."
-msgstr ""
-"A fizetés egy nem jóváhagyott vagy nem regisztrált e-mail címre lett "
-"elküldve."
+msgstr "A fizetés egy nem jóváhagyott vagy nem regisztrált e-mail címre lett elküldve."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:340
 msgid "PayPal account must be upgraded before this payment can be accepted."
-msgstr ""
-"Az adott fizetés nem lesz elfogadva, amig nem frissíti a PayPal fiókját."
+msgstr "Az adott fizetés nem lesz elfogadva, amig nem frissíti a PayPal fiókját."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:346
-msgid ""
-"PayPal account is not verified. Verify account in order to accept this "
-"payment."
-msgstr ""
-"A PayPal fiók nincs megerősítve. Erősítse meg ahhoz, hogy a fizetési mód "
-"elfogadható legyen."
+msgid "PayPal account is not verified. Verify account in order to accept this payment."
+msgstr "A PayPal fiók nincs megerősítve. Erősítse meg ahhoz, hogy a fizetési mód elfogadható legyen."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:352
-msgid ""
-"Payment is pending for unknown reasons. Contact PayPal support for "
-"assistance."
-msgstr ""
-"A fizetés ismeretlen okokból van függőben. Vegye fel a kapcsolatot a PayPal "
-"ügyféltámogatásával."
+msgid "Payment is pending for unknown reasons. Contact PayPal support for assistance."
+msgstr "A fizetés ismeretlen okokból van függőben. Vegye fel a kapcsolatot a PayPal ügyféltámogatásával."
 
 #: includes/payments/gateways/paypal/ipn-listener.php:372
 msgid "Partial PayPal refund processed: %s"
@@ -6299,9 +6286,7 @@ msgid "Stripe"
 msgstr ""
 
 #: includes/payments/gateways/stripe-gateway.php:132
-msgid ""
-"Use the card number %1$s with CVC %2$s, a valid expiration date and random 5-"
-"digit ZIP-code to test a payment."
+msgid "Use the card number %1$s with CVC %2$s, a valid expiration date and random 5-digit ZIP-code to test a payment."
 msgstr ""
 
 #: includes/payments/gateways/stripe-gateway.php:147
@@ -6338,9 +6323,7 @@ msgid "SOFORT"
 msgstr ""
 
 #: includes/payments/gateways/stripe-gateway.php:195
-msgid ""
-"Euro is the only acceptable currency for the selected payment methods. "
-"Change your currency to Euro in General settings."
+msgid "Euro is the only acceptable currency for the selected payment methods. Change your currency to Euro in General settings."
 msgstr ""
 
 #: includes/payments/gateways/stripe-gateway.php:207
@@ -6365,9 +6348,7 @@ msgstr "Fizetési nyelv"
 
 #: includes/payments/gateways/stripe-gateway.php:230
 msgid "Display Checkout in the user's preferred language, if available."
-msgstr ""
-"A fizetési oldal megjelenítése a felhasználó által preferált nyelven, ha az "
-"elérhető."
+msgstr "A fizetési oldal megjelenítése a felhasználó által preferált nyelven, ha az elérhető."
 
 #: includes/payments/gateways/stripe-gateway.php:294
 msgid "The payment method is not selected."
@@ -6528,14 +6509,7 @@ msgid "You will be redirected to a secure page to complete the payment."
 msgstr ""
 
 #: includes/payments/gateways/stripe-gateway.php:600
-msgid ""
-"By providing your IBAN and confirming this payment, you are authorizing this "
-"merchant and Stripe, our payment service provider, to send instructions to "
-"your bank to debit your account and your bank to debit your account in "
-"accordance with those instructions. You are entitled to a refund from your "
-"bank under the terms and conditions of your agreement with your bank. A "
-"refund must be claimed within 8 weeks starting from the date on which your "
-"account was debited."
+msgid "By providing your IBAN and confirming this payment, you are authorizing this merchant and Stripe, our payment service provider, to send instructions to your bank to debit your account and your bank to debit your account in accordance with those instructions. You are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited."
 msgstr ""
 
 #. translators: %s - event type, like "source.chargeable"
@@ -6579,16 +6553,12 @@ msgid "2Checkout"
 msgstr ""
 
 #: includes/payments/gateways/two-checkout-gateway.php:88
-msgid ""
-"To setup the callback process for 2Checkout to automatically mark payments "
-"completed, you will need to"
-msgstr ""
-"A 2Checkout visszahívási folyamatának a beállításához Önnek szüksége lesz"
+msgid "To setup the callback process for 2Checkout to automatically mark payments completed, you will need to"
+msgstr "A 2Checkout visszahívási folyamatának a beállításához Önnek szüksége lesz"
 
 #: includes/payments/gateways/two-checkout-gateway.php:90
 msgid "Login to your 2Checkout account and click the Notifications tab"
-msgstr ""
-"Jelentkezzen be az Ön 2Checkout fiókjába és kattintson az Értesítések mezőre"
+msgstr "Jelentkezzen be az Ön 2Checkout fiókjába és kattintson az Értesítések mezőre"
 
 #: includes/payments/gateways/two-checkout-gateway.php:91
 msgid "Click Enable All Notifications"
@@ -6706,10 +6676,6 @@ msgstr ""
 msgid "No &quot;%s&quot; found"
 msgstr ""
 
-#: includes/post-types/attributes-cpt.php:293
-msgid "Name"
-msgstr "Név"
-
 #: includes/post-types/attributes-cpt.php:294
 msgid "Name (numeric)"
 msgstr ""
@@ -6723,9 +6689,7 @@ msgid "Enable Archives"
 msgstr ""
 
 #: includes/post-types/attributes-cpt.php:304
-msgid ""
-"Link the attribute to an archive page with all accommodation types that have "
-"this attribute."
+msgid "Link the attribute to an archive page with all accommodation types that have this attribute."
 msgstr ""
 
 #: includes/post-types/attributes-cpt.php:310
@@ -7119,7 +7083,8 @@ msgstr "A (#%s) fizetés függőben van"
 msgid "Rate Info"
 msgstr "Díj infó"
 
-#: includes/post-types/rate-cpt.php:40 includes/post-types/season-cpt.php:66
+#: includes/post-types/rate-cpt.php:40
+#: includes/post-types/season-cpt.php:66
 msgid "Season"
 msgstr "Évszak"
 
@@ -7136,7 +7101,8 @@ msgid "Will be displayed on the checkout page."
 msgstr "A fizetési oldalon lesz megjelenítve."
 
 #. translators: The value a hotel wishes to sell their rooms. Also called the Cost, Value, Tariff or Room charge.
-#: includes/post-types/rate-cpt.php:84 includes/post-types/rate-cpt.php:94
+#: includes/post-types/rate-cpt.php:84
+#: includes/post-types/rate-cpt.php:94
 msgid "Rates"
 msgstr "Díjak"
 
@@ -7281,7 +7247,7 @@ msgstr "Szállástípushoz feltöltve"
 #: includes/post-types/room-type-cpt.php:84
 msgctxt "slug"
 msgid "accommodation"
-msgstr ""
+msgstr "accommodation"
 
 #: includes/post-types/room-type-cpt.php:109
 msgid "Accommodation Categories"
@@ -7343,7 +7309,8 @@ msgstr "Válasszon a legtöbbet használt kategóriák közül"
 msgid "No categories found."
 msgstr "Nincsenek kategóriák."
 
-#: includes/post-types/room-type-cpt.php:124 assets/blocks/blocks.js:680
+#: includes/post-types/room-type-cpt.php:124
+#: assets/blocks/blocks.js:680
 msgid "Categories"
 msgstr "Kategóriák"
 
@@ -7351,7 +7318,7 @@ msgstr "Kategóriák"
 #: includes/post-types/room-type-cpt.php:139
 msgctxt "slug"
 msgid "accommodation-category"
-msgstr ""
+msgstr "accommodation-category"
 
 #: includes/post-types/room-type-cpt.php:164
 msgid "Accommodation Tags"
@@ -7413,7 +7380,8 @@ msgstr ""
 msgid "No tags found."
 msgstr ""
 
-#: includes/post-types/room-type-cpt.php:179 assets/blocks/blocks.js:692
+#: includes/post-types/room-type-cpt.php:179
+#: assets/blocks/blocks.js:692
 msgid "Tags"
 msgstr "Címkék"
 
@@ -7421,7 +7389,7 @@ msgstr "Címkék"
 #: includes/post-types/room-type-cpt.php:193
 msgctxt "slug"
 msgid "accommodation-tag"
-msgstr ""
+msgstr "accommodation-tag"
 
 #: includes/post-types/room-type-cpt.php:218
 #: includes/post-types/room-type-cpt.php:233
@@ -7488,21 +7456,14 @@ msgstr "Nincsenek szolgáltatások."
 #: includes/post-types/room-type-cpt.php:248
 msgctxt "slug"
 msgid "accommodation-facility"
-msgstr ""
+msgstr "accommodation-facility"
 
 #: includes/post-types/room-type-cpt.php:287
 msgid "State the age or disable children in <a href=\"%s\">settings</a>."
 msgstr ""
 
 #: includes/post-types/room-type-cpt.php:296
-msgid ""
-"Leave this option empty to calculate total capacity automatically to meet "
-"the exact number of adults AND children set above. This is the default "
-"behavior. Configure this option to allow any variations of adults OR "
-"children set above at checkout so that in total it meets the limit of "
-"manually set \"Capacity\". For example, configuration \"adults:5\", "
-"\"children:4\", \"capacity:5\" means the property can accommodate up to 5 "
-"adults, up to 4 children, but up to 5 guests in total (not 9)."
+msgid "Leave this option empty to calculate total capacity automatically to meet the exact number of adults AND children set above. This is the default behavior. Configure this option to allow any variations of adults OR children set above at checkout so that in total it meets the limit of manually set \"Capacity\". For example, configuration \"adults:5\", \"children:4\", \"capacity:5\" means the property can accommodate up to 5 adults, up to 4 children, but up to 5 guests in total (not 9)."
 msgstr ""
 
 #: includes/post-types/room-type-cpt.php:305
@@ -7526,11 +7487,8 @@ msgid "Bed type"
 msgstr "Ágy típus"
 
 #: includes/post-types/room-type-cpt.php:332
-msgid ""
-"Set bed types list in <a href=\"%link%\" target=\"_blank\">settings</a>."
-msgstr ""
-"Az ágy típus lista beállítása a <a href=\"%link%\" target=\"_blank\">"
-"beállításokban</a> lehetséges."
+msgid "Set bed types list in <a href=\"%link%\" target=\"_blank\">settings</a>."
+msgstr "Az ágy típus lista beállítása a <a href=\"%link%\" target=\"_blank\">beállításokban</a> lehetséges."
 
 #: includes/post-types/room-type-cpt.php:340
 msgid "Photo Gallery"
@@ -7608,70 +7566,71 @@ msgstr "Évszakhoz feltöltve"
 msgid "This is where you can add new seasons."
 msgstr "Az új évszakok hozzáadása itt lehetséges."
 
-#: includes/post-types/service-cpt.php:91 includes/views/booking-view.php:174
+#: includes/post-types/service-cpt.php:93
+#: includes/views/booking-view.php:174
 msgid "Service"
 msgstr "Szolgáltatás"
 
-#: includes/post-types/service-cpt.php:92
+#: includes/post-types/service-cpt.php:94
 msgctxt "Add New Service"
 msgid "Add New"
 msgstr "Új hozzáadása"
 
-#: includes/post-types/service-cpt.php:93
+#: includes/post-types/service-cpt.php:95
 msgid "Add New Service"
 msgstr "Új szolgáltatás hozzáadása"
 
-#: includes/post-types/service-cpt.php:94
+#: includes/post-types/service-cpt.php:96
 msgid "Edit Service"
 msgstr "Módosítás szolgáltatás"
 
-#: includes/post-types/service-cpt.php:95
+#: includes/post-types/service-cpt.php:97
 msgid "New Service"
 msgstr "Új szolgáltatás"
 
-#: includes/post-types/service-cpt.php:96
+#: includes/post-types/service-cpt.php:98
 msgid "View Service"
 msgstr "Nézet szolgáltatás"
 
-#: includes/post-types/service-cpt.php:97
+#: includes/post-types/service-cpt.php:99
 msgid "Search Service"
 msgstr "Keresési szölgáltatás"
 
-#: includes/post-types/service-cpt.php:98
+#: includes/post-types/service-cpt.php:100
 msgid "No services found"
 msgstr "Nincs szolgáltatás"
 
-#: includes/post-types/service-cpt.php:99
+#: includes/post-types/service-cpt.php:101
 msgid "No services found in Trash"
 msgstr "A kukában nincs szolgáltatás."
 
-#: includes/post-types/service-cpt.php:101
+#: includes/post-types/service-cpt.php:103
 msgid "Insert into service description"
 msgstr "Beillesztés a szolgáltatás leírásba"
 
-#: includes/post-types/service-cpt.php:102
+#: includes/post-types/service-cpt.php:104
 msgid "Uploaded to this service"
 msgstr "Szolgáltatáshoz feltöltve"
 
 #. translators: do not translate
-#: includes/post-types/service-cpt.php:119
+#: includes/post-types/service-cpt.php:121
 msgctxt "slug"
-msgid "service"
-msgstr ""
+msgid "services"
+msgstr "services"
 
-#: includes/post-types/service-cpt.php:153
+#: includes/post-types/service-cpt.php:155
 msgid "How many times the customer will be charged."
 msgstr "A pénzlevonások száma."
 
-#: includes/post-types/service-cpt.php:163
+#: includes/post-types/service-cpt.php:165
 msgid "Minimum"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:175
+#: includes/post-types/service-cpt.php:177
 msgid "Maximum"
 msgstr ""
 
-#: includes/post-types/service-cpt.php:185
+#: includes/post-types/service-cpt.php:187
 msgid "Empty means unlimited"
 msgstr ""
 
@@ -7702,7 +7661,7 @@ msgstr ""
 
 #: includes/reports/earnings-report.php:341
 #: includes/views/create-booking/checkout-view.php:56
-#: includes/views/shortcodes/checkout-view.php:20
+#: includes/views/shortcodes/checkout-view.php:84
 msgid "Apply"
 msgstr "Alkalmaz"
 
@@ -7779,6 +7738,10 @@ msgstr ""
 msgid "Cancelling..."
 msgstr ""
 
+#: includes/script-managers/admin-script-manager.php:101
+msgid "Want to delete?"
+msgstr ""
+
 #: includes/script-managers/public-script-manager.php:225
 msgid "Not available"
 msgstr "Nem elérhető"
@@ -7822,8 +7785,7 @@ msgstr "Sikertelen tokenizálás: %s"
 #: includes/script-managers/public-script-manager.php:239
 #: includes/script-managers/public-script-manager.php:240
 msgid "%1$d &times; &ldquo;%2$s&rdquo; has been added to your reservation."
-msgid_plural ""
-"%1$d &times; &ldquo;%2$s&rdquo; have been added to your reservation."
+msgid_plural "%1$d &times; &ldquo;%2$s&rdquo; have been added to your reservation."
 msgstr[0] "%1$d &times; &ldquo;%2$s&rdquo; hozzá lett adva a rendeléséhez."
 msgstr[1] "%1$d &times; &ldquo;%2$s&rdquo; hozzá lett adva a rendeléséhez."
 
@@ -7894,6 +7856,39 @@ msgstr "Palakék"
 msgid "Turquoise"
 msgstr "Türkiz"
 
+#: includes/shortcodes/account-shortcode.php:198
+#: includes/views/shortcodes/checkout-view.php:21
+msgid "Invalid login or password."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:207
+msgid "Account data updated."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:213
+msgid "Password changed."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:224
+msgid "Dashboard"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:226
+msgid "Account"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:227
+msgid "Logout"
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:263
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/shortcodes/account-shortcode.php:266
+msgid "Please, provide a valid current password."
+msgstr ""
+
 #: includes/shortcodes/booking-confirmation-shortcode.php:375
 msgid "Payment:"
 msgstr "Fizetés:"
@@ -7907,46 +7902,39 @@ msgstr "Fizetési módszer:"
 msgid "Status:"
 msgstr "Állapot:"
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:144
+#: includes/shortcodes/checkout-shortcode/step-booking.php:154
 msgid "Checkout data is not valid."
 msgstr ""
 
-#: includes/shortcodes/checkout-shortcode/step-booking.php:446
+#: includes/shortcodes/checkout-shortcode/step-booking.php:456
 msgid "Payment method is not valid."
 msgstr "A fizetés módszer nem érvényes."
 
-#: includes/shortcodes/checkout-shortcode/step-checkout.php:152
+#: includes/shortcodes/checkout-shortcode/step-checkout.php:174
 msgid "Accommodation count is not valid."
 msgstr "A szállástípus nem érvényes."
 
-#: includes/shortcodes/checkout-shortcode/step.php:81
+#: includes/shortcodes/checkout-shortcode/step.php:96
 msgid "Accommodation is already booked."
 msgstr "A szálláshely már foglalt."
 
-#: includes/shortcodes/checkout-shortcode/step.php:91
-#: includes/shortcodes/checkout-shortcode/step.php:100
-#: includes/shortcodes/checkout-shortcode/step.php:109
+#: includes/shortcodes/checkout-shortcode/step.php:106
+#: includes/shortcodes/checkout-shortcode/step.php:115
+#: includes/shortcodes/checkout-shortcode/step.php:124
 msgid "Reservation submitted"
 msgstr "A foglalás be lett nyújtva"
 
-#: includes/shortcodes/checkout-shortcode/step.php:92
-msgid ""
-"Details of your reservation have just been sent to you in a confirmation "
-"email. Please check your inbox to complete booking."
-msgstr ""
-"A foglalás részleteit elküldtük Önnek a megerősítő e-mailben. A foglalás "
-"befejezéséhez, kérjük, ellenőrizze a postaládáját."
+#: includes/shortcodes/checkout-shortcode/step.php:107
+msgid "Details of your reservation have just been sent to you in a confirmation email. Please check your inbox to complete booking."
+msgstr "A foglalás részleteit elküldtük Önnek a megerősítő e-mailben. A foglalás befejezéséhez, kérjük, ellenőrizze a postaládáját."
 
-#: includes/shortcodes/checkout-shortcode/step.php:101
-#: includes/shortcodes/checkout-shortcode/step.php:110
-msgid ""
-"We received your booking request. Once it is confirmed we will notify you "
-"via email."
-msgstr ""
-"Megkaptuk az Ön foglalási kérelmét. Amennyiben azt megerősítettük, e-mailben "
-"fogjuk Önt értesíteni."
+#: includes/shortcodes/checkout-shortcode/step.php:116
+#: includes/shortcodes/checkout-shortcode/step.php:125
+msgid "We received your booking request. Once it is confirmed we will notify you via email."
+msgstr "Megkaptuk az Ön foglalási kérelmét. Amennyiben azt megerősítettük, e-mailben fogjuk Önt értesíteni."
 
-#: includes/shortcodes/room-rates-shortcode.php:95 template-functions.php:24
+#: includes/shortcodes/room-rates-shortcode.php:95
+#: template-functions.php:24
 msgid "Choose dates to see relevant prices"
 msgstr "Válassza ki a dátumot az aktuális árak megtekintéséhez"
 
@@ -8001,16 +7989,68 @@ msgstr[1] "%d rendelkezésre álló szállásból"
 
 #. translators: Verb. To book an accommodation.
 #: includes/shortcodes/search-results-shortcode.php:887
-#: template-functions.php:511 template-functions.php:523
+#: template-functions.php:511
+#: template-functions.php:523
 msgid "Book"
 msgstr "Foglalás"
 
-#: includes/users-and-roles/roles.php:30
+#: includes/users-and-roles/customers.php:289
+#: includes/users-and-roles/customers.php:379
+msgid "Please, provide a valid email."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:317
+msgid "Could not create a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:375
+msgid "Could not retrieve a customer."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:528
+#: includes/users-and-roles/customers.php:574
+msgid "Please, provide a valid Customer ID."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:560
+msgid "A database error."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:580
+msgid "No customer was deleted."
+msgstr ""
+
+#: includes/users-and-roles/customers.php:689
+#: includes/views/shortcodes/checkout-view.php:30
+msgid "An account with this email already exists. Please, log in."
+msgstr ""
+
+#: includes/users-and-roles/roles.php:34
 msgid "Hotel Manager"
 msgstr ""
 
-#: includes/users-and-roles/roles.php:35
+#: includes/users-and-roles/roles.php:39
 msgid "Hotel Worker"
+msgstr ""
+
+#: includes/users-and-roles/roles.php:44
+msgid "Hotel Customer"
+msgstr ""
+
+#: includes/users-and-roles/user.php:41
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: includes/users-and-roles/user.php:56
+msgid "Please enter a valid account username."
+msgstr ""
+
+#: includes/users-and-roles/user.php:60
+msgid "An account is already registered with that username. Please choose another."
+msgstr ""
+
+#: includes/users-and-roles/user.php:68
+msgid "Please enter an account password."
 msgstr ""
 
 #: includes/utils/date-utils.php:116
@@ -8095,10 +8135,6 @@ msgstr "Dátumok részösszege"
 msgid "Discount"
 msgstr ""
 
-#: includes/views/booking-view.php:138
-msgid "Accommodation Subtotal"
-msgstr "Szálláshely részösszege"
-
 #: includes/views/booking-view.php:158
 msgid "Accommodation Taxes Subtotal"
 msgstr ""
@@ -8106,14 +8142,12 @@ msgstr ""
 #: includes/views/booking-view.php:175
 #: includes/views/loop-room-type-view.php:39
 #: includes/views/single-room-type-view.php:126
-#: includes/widgets/rooms-widget.php:190 assets/blocks/blocks.js:348
-#: assets/blocks/blocks.js:598 assets/blocks/blocks.js:1126
+#: includes/widgets/rooms-widget.php:190
+#: assets/blocks/blocks.js:348
+#: assets/blocks/blocks.js:598
+#: assets/blocks/blocks.js:1126
 msgid "Details"
 msgstr "Részletek"
-
-#: includes/views/booking-view.php:189
-msgid "Services Subtotal"
-msgstr "Szolgáltatások részösszege"
 
 #: includes/views/booking-view.php:211
 msgid "Service Taxes Subtotal"
@@ -8144,7 +8178,7 @@ msgid "Taxes"
 msgstr ""
 
 #: includes/views/create-booking/checkout-view.php:55
-#: includes/views/shortcodes/checkout-view.php:19
+#: includes/views/shortcodes/checkout-view.php:83
 msgid "Coupon Code:"
 msgstr "Kupon kód:"
 
@@ -8156,12 +8190,14 @@ msgstr ""
 msgid "Original Booking Details"
 msgstr ""
 
-#: includes/views/edit-booking/checkout-view.php:120 template-functions.php:739
+#: includes/views/edit-booking/checkout-view.php:120
+#: template-functions.php:739
 msgid "Accommodation:"
 msgstr "Szálláshely:"
 
 #: includes/views/edit-booking/checkout-view.php:160
-#: includes/views/shortcodes/checkout-view.php:202 template-functions.php:652
+#: includes/views/shortcodes/checkout-view.php:266
+#: template-functions.php:652
 #: templates/create-booking/search/search-form.php:107
 #: templates/shortcodes/search/search-form.php:99
 msgid "Children %s"
@@ -8215,7 +8251,8 @@ msgid "View:"
 msgstr "Nézet:"
 
 #: includes/views/loop-room-type-view.php:187
-#: includes/views/single-room-type-view.php:274 template-functions.php:684
+#: includes/views/single-room-type-view.php:274
+#: template-functions.php:684
 #: templates/widgets/rooms/room-content.php:216
 msgid "Prices start at:"
 msgstr "Ár űrlap:"
@@ -8230,63 +8267,82 @@ msgid_plural "x %d adults"
 msgstr[0] "x %d felnőtt"
 msgstr[1] "x %d felnőtt"
 
-#: includes/views/shortcodes/checkout-view.php:112
+#: includes/views/shortcodes/checkout-view.php:48
+msgid "Returning customer?"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:49
+msgid "Click here to log in"
+msgstr ""
+
+#. translators: 1 - username;
+#: includes/views/shortcodes/checkout-view.php:65
+#: templates/account/dashboard.php:28
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)."
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:176
 msgid "Accommodation #%d"
 msgstr "Szálláshely #%d"
 
-#: includes/views/shortcodes/checkout-view.php:116
+#: includes/views/shortcodes/checkout-view.php:180
 msgid "Accommodation Type:"
 msgstr "Szállástípus:"
 
-#: includes/views/shortcodes/checkout-view.php:256
+#: includes/views/shortcodes/checkout-view.php:320
 msgid "Choose Rate"
 msgstr "Díj kiválasztása"
 
-#: includes/views/shortcodes/checkout-view.php:323
+#: includes/views/shortcodes/checkout-view.php:387
 msgid "Choose Additional Services"
 msgstr "További szolgáltatások kiválasztása"
 
-#: includes/views/shortcodes/checkout-view.php:352
+#: includes/views/shortcodes/checkout-view.php:416
 msgid "for "
 msgstr "címzett"
 
-#: includes/views/shortcodes/checkout-view.php:363
+#: includes/views/shortcodes/checkout-view.php:427
 msgctxt "Example: Breakfast for X guest(s)"
 msgid " guest(s)"
 msgstr ""
 
-#: includes/views/shortcodes/checkout-view.php:384
+#: includes/views/shortcodes/checkout-view.php:448
 msgid "time(s)"
 msgstr ""
 
-#: includes/views/shortcodes/checkout-view.php:432
+#: includes/views/shortcodes/checkout-view.php:496
 msgctxt "I've read and accept the terms & conditions"
 msgid "terms & conditions"
 msgstr ""
 
-#: includes/views/shortcodes/checkout-view.php:435
+#: includes/views/shortcodes/checkout-view.php:499
 msgctxt "I've read and accept the <tag>terms & conditions</tag>"
 msgid "I've read and accept the %s"
 msgstr ""
 
-#: includes/views/shortcodes/checkout-view.php:453
+#: includes/views/shortcodes/checkout-view.php:537
 msgid "Your Information"
 msgstr "Az Ön információja"
 
-#: includes/views/shortcodes/checkout-view.php:456 template-functions.php:599
+#: includes/views/shortcodes/checkout-view.php:540
+#: template-functions.php:599
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr "A kötelezően kitöltendő mezőket követi a %s"
 
-#: includes/views/shortcodes/checkout-view.php:589
+#: includes/views/shortcodes/checkout-view.php:673
+msgid "Create an account"
+msgstr ""
+
+#: includes/views/shortcodes/checkout-view.php:692
 msgid "Payment Method"
 msgstr "Fizetési módszer"
 
-#: includes/views/shortcodes/checkout-view.php:594
+#: includes/views/shortcodes/checkout-view.php:697
 msgid "Sorry, it seems that there are no available payment methods."
 msgstr "Sajnáljunk, jelenleg nincsenek rendelkezésre álló fizetési módszerek."
 
-#: includes/views/shortcodes/checkout-view.php:688
+#: includes/views/shortcodes/checkout-view.php:791
 #: templates/emails/admin-customer-cancelled-booking.php:32
 #: templates/emails/admin-customer-confirmed-booking.php:32
 #: templates/emails/admin-payment-confirmed-booking.php:39
@@ -8298,33 +8354,33 @@ msgstr "Sajnáljunk, jelenleg nincsenek rendelkezésre álló fizetési módszer
 msgid "Total Price:"
 msgstr "Teljes ár:"
 
-#: includes/views/shortcodes/checkout-view.php:699
+#: includes/views/shortcodes/checkout-view.php:802
 msgid "Deposit:"
 msgstr "Letét:"
 
-#: includes/views/shortcodes/checkout-view.php:718
+#: includes/views/shortcodes/checkout-view.php:821
 #: templates/shortcodes/booking-details/booking-details.php:25
 #: templates/widgets/search-availability/search-form.php:30
 msgid "Check-in:"
 msgstr "Bejelentkezés:"
 
-#: includes/views/shortcodes/checkout-view.php:725
+#: includes/views/shortcodes/checkout-view.php:828
 msgctxt "from 10:00 am"
 msgid "from"
 msgstr " kezdet"
 
-#: includes/views/shortcodes/checkout-view.php:741
+#: includes/views/shortcodes/checkout-view.php:844
 #: templates/shortcodes/booking-details/booking-details.php:29
 #: templates/widgets/search-availability/search-form.php:49
 msgid "Check-out:"
 msgstr "Kijelentkezés:"
 
-#: includes/views/shortcodes/checkout-view.php:748
+#: includes/views/shortcodes/checkout-view.php:851
 msgctxt "until 10:00 am"
 msgid "until"
 msgstr "vége"
 
-#: includes/views/shortcodes/checkout-view.php:822
+#: includes/views/shortcodes/checkout-view.php:927
 #: templates/create-booking/checkout/checkout-form.php:42
 msgid "Book Now"
 msgstr "Foglalás most"
@@ -8341,22 +8397,28 @@ msgstr "Foglalási űrlap"
 msgid "Display Accommodation Types"
 msgstr "Szálláshelytípus megjelenítése"
 
-#: includes/widgets/rooms-widget.php:182 assets/blocks/blocks.js:312
-#: assets/blocks/blocks.js:562 assets/blocks/blocks.js:1090
+#: includes/widgets/rooms-widget.php:182
+#: assets/blocks/blocks.js:312
+#: assets/blocks/blocks.js:562
+#: assets/blocks/blocks.js:1090
 msgid "Featured Image"
 msgstr ""
 
-#: includes/widgets/rooms-widget.php:186 assets/blocks/blocks.js:336
-#: assets/blocks/blocks.js:586 assets/blocks/blocks.js:1114
+#: includes/widgets/rooms-widget.php:186
+#: assets/blocks/blocks.js:336
+#: assets/blocks/blocks.js:586
+#: assets/blocks/blocks.js:1114
 msgid "Excerpt (short description)"
 msgstr "Kivonat megjelenítése (rövid leírás)"
 
-#: includes/widgets/rooms-widget.php:198 assets/blocks/blocks.js:634
+#: includes/widgets/rooms-widget.php:198
+#: assets/blocks/blocks.js:634
 #: assets/blocks/blocks.js:1162
 msgid "Book Button"
 msgstr ""
 
-#: includes/widgets/search-availability-widget.php:50 includes/wizard.php:84
+#: includes/widgets/search-availability-widget.php:50
+#: includes/wizard.php:85
 msgid "Search Availability"
 msgstr "Szabad férőhelyeket keresése"
 
@@ -8395,42 +8457,34 @@ msgid "Attributes:"
 msgstr ""
 
 #: includes/wizard.php:35
-msgid ""
-"Booking Confirmation and Search Results pages are required to handle "
-"bookings. Press \"Install Pages\" button to create and set up these pages. "
-"Dismiss this notice if you already installed them."
-msgstr ""
-"A foglalások kezeléséhez szükség van a Foglalás megerősítése és Keresési "
-"eredmények oldalakra. Nyomja meg az \"Oldalak feltelepítése\" gombot, és "
-"állítsa be azokat. Ha már feltelepítette őket, vesse el az értesítést."
+msgid "Booking Confirmation and Search Results pages are required to handle bookings. Press \"Install Pages\" button to create and set up these pages. Dismiss this notice if you already installed them."
+msgstr "A foglalások kezeléséhez szükség van a Foglalás megerősítése és Keresési eredmények oldalakra. Nyomja meg az \"Oldalak feltelepítése\" gombot, és állítsa be azokat. Ha már feltelepítette őket, vesse el az értesítést."
 
 #: includes/wizard.php:36
 msgid "Install Pages"
 msgstr "Telepítési oldalak"
 
-#: includes/wizard.php:132
+#: includes/wizard.php:133
 msgid "Booking Canceled"
 msgstr ""
 
-#: includes/wizard.php:133
+#: includes/wizard.php:134
 msgid "Your reservation is canceled."
 msgstr ""
 
-#: includes/wizard.php:160
+#: includes/wizard.php:161
 msgid "Reservation Received"
 msgstr ""
 
-#: includes/wizard.php:169
+#: includes/wizard.php:170
 msgid "Transaction Failed"
 msgstr ""
 
-#: includes/wizard.php:170
-msgid ""
-"Unfortunately, your transaction cannot be completed at this time. Please try "
-"again or contact us."
+#: includes/wizard.php:171
+msgid "Unfortunately, your transaction cannot be completed at this time. Please try again or contact us."
 msgstr ""
 
-#: plugin.php:1012
+#: plugin.php:1055
 msgid "Prices start at: %s"
 msgstr ""
 
@@ -8438,7 +8492,8 @@ msgstr ""
 msgid "View Details"
 msgstr "Részletek megtekintése"
 
-#: template-functions.php:610 template-functions.php:619
+#: template-functions.php:610
+#: template-functions.php:619
 #: templates/create-booking/search/search-form.php:39
 #: templates/create-booking/search/search-form.php:59
 #: templates/edit-booking/edit-dates.php:30
@@ -8451,7 +8506,8 @@ msgctxt "Date format tip"
 msgid "Formatted as %s"
 msgstr "Formázott %s"
 
-#: template-functions.php:665 templates/edit-booking/edit-dates.php:46
+#: template-functions.php:665
+#: templates/edit-booking/edit-dates.php:46
 msgid "Check Availability"
 msgstr "Szabad szobák ellenőrzése"
 
@@ -8491,6 +8547,35 @@ msgstr "Fizetni"
 msgid "Add Payment Manually"
 msgstr "Fizetés manuális hozzáadása"
 
+#: templates/account/account-details.php:78
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/account-details.php:81
+msgid "Old Password"
+msgstr ""
+
+#: templates/account/account-details.php:85
+msgid "New Password"
+msgstr ""
+
+#: templates/account/account-details.php:89
+msgid "Confirm New Password"
+msgstr ""
+
+#: templates/account/account-details.php:99
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#: templates/account/bookings.php:114
+#: templates/account/bookings.php:119
+msgid "No bookings found."
+msgstr "Nincsenek foglalások."
+
+#: templates/account/dashboard.php:38
+msgid "From your account dashboard you can view <a href=\"%1$s\">your recent bookings</a> or edit your <a href=\"%2$s\">password and account details</a>."
+msgstr ""
+
 #: templates/create-booking/results/reserve-rooms.php:37
 msgid "Base price"
 msgstr ""
@@ -8517,9 +8602,7 @@ msgid "Save"
 msgstr "Mentés"
 
 #: templates/edit-booking/edit-dates.php:25
-msgid ""
-"Choose new dates to check availability of reserved accommodations in the "
-"original booking."
+msgid "Choose new dates to check availability of reserved accommodations in the original booking."
 msgstr ""
 
 #: templates/edit-booking/edit-reserved-rooms.php:39
@@ -8540,9 +8623,7 @@ msgid "Choose how to associate data"
 msgstr ""
 
 #: templates/edit-booking/summary-table.php:27
-msgid ""
-"Use Source Accommodation to assign pre-filled booking information available "
-"in the original booking, e.g., full guest name, selected rate, services, etc."
+msgid "Use Source Accommodation to assign pre-filled booking information available in the original booking, e.g., full guest name, selected rate, services, etc."
 msgstr ""
 
 #: templates/edit-booking/summary-table.php:32
@@ -8685,6 +8766,7 @@ msgstr ""
 #: templates/emails/customer-cancelled-booking.php:38
 #: templates/emails/customer-confirmation-booking.php:44
 #: templates/emails/customer-pending-booking.php:41
+#: templates/emails/customer-registration.php:26
 msgid "Thank you!"
 msgstr "Köszönjük!"
 
@@ -8714,9 +8796,7 @@ msgstr ""
 
 #: templates/emails/customer-confirmation-booking.php:22
 msgid "If you did not place this booking, please ignore this email."
-msgstr ""
-"Ha a foglalást nem Ön hajtotta végre, kérjük,  hagyja figyelmen kívül ezt a "
-"levelet."
+msgstr "Ha a foglalást nem Ön hajtotta végre, kérjük,  hagyja figyelmen kívül ezt a levelet."
 
 #: templates/emails/customer-pending-booking.php:15
 msgid "Dear %1$s %2$s, your reservation is pending."
@@ -8724,9 +8804,31 @@ msgstr "Kedves %1$s %2$s, az Ön foglalása folyamatban van."
 
 #: templates/emails/customer-pending-booking.php:17
 msgid "We will notify you by email once it is confirmed by our staff."
+msgstr "Értesítjük Önt e-mailen keresztül, amint a munkatársaink elfogadták a kérését."
+
+#: templates/emails/customer-registration.php:15
+msgid "Hi %1$s %2$s,"
 msgstr ""
-"Értesítjük Önt e-mailen keresztül, amint a munkatársaink elfogadták a "
-"kérését."
+
+#: templates/emails/customer-registration.php:17
+msgid "Thanks for creating an account on %1$s."
+msgstr ""
+
+#: templates/emails/customer-registration.php:19
+msgid "You Account Details"
+msgstr ""
+
+#: templates/emails/customer-registration.php:20
+msgid "Login: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:21
+msgid "Password: %s"
+msgstr ""
+
+#: templates/emails/customer-registration.php:22
+msgid "Log in here: %s"
+msgstr ""
 
 #: templates/emails/reserved-room-details.php:14
 msgid "Accommodation #%s"
@@ -8762,9 +8864,7 @@ msgid "Invalid request."
 msgstr "Érvénytelen kérelem."
 
 #: templates/shortcodes/booking-cancellation/not-possible.php:7
-msgid ""
-"Cancelation of your booking is not possible for some reason. Please contact "
-"the website administrator."
+msgid "Cancelation of your booking is not possible for some reason. Please contact the website administrator."
 msgstr ""
 
 #: templates/shortcodes/booking-confirmation/already-confirmed.php:7
@@ -8780,17 +8880,11 @@ msgid "Your booking request is expired. Please start a new booking request."
 msgstr "A foglalási kérése lejárt. Kérjük, kérelmezzen egy újat. "
 
 #: templates/shortcodes/booking-confirmation/not-possible.php:7
-msgid ""
-"Confirmation of your booking request is not possible for some reason. Please "
-"start a new booking request."
-msgstr ""
-"Az Ön Foglalási kérésének a megerősítése valamilyen okból nem lehetséges. "
-"Kérjük, kezdjen meg egy új foglalást."
+msgid "Confirmation of your booking request is not possible for some reason. Please start a new booking request."
+msgstr "Az Ön Foglalási kérésének a megerősítése valamilyen okból nem lehetséges. Kérjük, kezdjen meg egy új foglalást."
 
 #: templates/shortcodes/booking-confirmation/received.php:11
-msgid ""
-"We are pleased to inform you that your reservation request has been received "
-"and confirmed."
+msgid "We are pleased to inform you that your reservation request has been received and confirmed."
 msgstr ""
 
 #: templates/shortcodes/booking-details/booking-details.php:21
@@ -8806,8 +8900,7 @@ msgid "Thank you for your payment. Your transaction has been completed."
 msgstr ""
 
 #: templates/shortcodes/payment-confirmation/received.php:11
-msgid ""
-"We are pleased to inform you that your reservation request has been received."
+msgid "We are pleased to inform you that your reservation request has been received."
 msgstr ""
 
 #: templates/shortcodes/room-rates/rate-content.php:15
@@ -8830,174 +8923,208 @@ msgstr "Nincs találat."
 msgid "Children %s:"
 msgstr "Gyermek %s"
 
-#: assets/blocks/blocks.js:91 assets/blocks/blocks.js:103
+#: assets/blocks/blocks.js:91
+#: assets/blocks/blocks.js:103
 msgid "Preset date. Formatted as %s"
 msgstr "Elõre beállított dátum. Formázott %s"
 
-#: assets/blocks/blocks.js:324 assets/blocks/blocks.js:574
+#: assets/blocks/blocks.js:324
+#: assets/blocks/blocks.js:574
 #: assets/blocks/blocks.js:1102
 msgid "Gallery"
 msgstr ""
 
-#: assets/blocks/blocks.js:372 assets/blocks/blocks.js:622
+#: assets/blocks/blocks.js:372
+#: assets/blocks/blocks.js:622
 #: assets/blocks/blocks.js:1150
 msgid "View Button"
 msgstr ""
 
-#: assets/blocks/blocks.js:386 assets/blocks/blocks.js:422
-#: assets/blocks/blocks.js:722 assets/blocks/blocks.js:758
-#: assets/blocks/blocks.js:906 assets/blocks/blocks.js:942
+#: assets/blocks/blocks.js:386
+#: assets/blocks/blocks.js:422
+#: assets/blocks/blocks.js:722
+#: assets/blocks/blocks.js:758
+#: assets/blocks/blocks.js:906
+#: assets/blocks/blocks.js:942
 msgid "Order"
 msgstr ""
 
-#: assets/blocks/blocks.js:394 assets/blocks/blocks.js:730
+#: assets/blocks/blocks.js:394
+#: assets/blocks/blocks.js:730
 #: assets/blocks/blocks.js:914
 msgid "Order By"
 msgstr ""
 
-#: assets/blocks/blocks.js:397 assets/blocks/blocks.js:733
+#: assets/blocks/blocks.js:397
+#: assets/blocks/blocks.js:733
 #: assets/blocks/blocks.js:917
 msgid "No order"
 msgstr ""
 
-#: assets/blocks/blocks.js:398 assets/blocks/blocks.js:734
+#: assets/blocks/blocks.js:398
+#: assets/blocks/blocks.js:734
 #: assets/blocks/blocks.js:918
 msgid "Post ID"
 msgstr ""
 
-#: assets/blocks/blocks.js:399 assets/blocks/blocks.js:735
+#: assets/blocks/blocks.js:399
+#: assets/blocks/blocks.js:735
 #: assets/blocks/blocks.js:919
 msgid "Post author"
 msgstr ""
 
-#: assets/blocks/blocks.js:400 assets/blocks/blocks.js:736
+#: assets/blocks/blocks.js:400
+#: assets/blocks/blocks.js:736
 #: assets/blocks/blocks.js:920
 msgid "Post title"
 msgstr "Bejegyzés címe"
 
-#: assets/blocks/blocks.js:401 assets/blocks/blocks.js:737
+#: assets/blocks/blocks.js:401
+#: assets/blocks/blocks.js:737
 #: assets/blocks/blocks.js:921
 msgid "Post name (post slug)"
 msgstr ""
 
-#: assets/blocks/blocks.js:402 assets/blocks/blocks.js:738
+#: assets/blocks/blocks.js:402
+#: assets/blocks/blocks.js:738
 #: assets/blocks/blocks.js:922
 msgid "Post date"
 msgstr ""
 
-#: assets/blocks/blocks.js:403 assets/blocks/blocks.js:739
+#: assets/blocks/blocks.js:403
+#: assets/blocks/blocks.js:739
 #: assets/blocks/blocks.js:923
 msgid "Last modified date"
 msgstr ""
 
-#: assets/blocks/blocks.js:404 assets/blocks/blocks.js:740
+#: assets/blocks/blocks.js:404
+#: assets/blocks/blocks.js:740
 #: assets/blocks/blocks.js:924
 msgid "Parent ID"
 msgstr ""
 
-#: assets/blocks/blocks.js:405 assets/blocks/blocks.js:741
+#: assets/blocks/blocks.js:405
+#: assets/blocks/blocks.js:741
 #: assets/blocks/blocks.js:925
 msgid "Random order"
 msgstr ""
 
-#: assets/blocks/blocks.js:406 assets/blocks/blocks.js:742
+#: assets/blocks/blocks.js:406
+#: assets/blocks/blocks.js:742
 #: assets/blocks/blocks.js:926
 msgid "Number of comments"
 msgstr "Kommentek száma"
 
-#: assets/blocks/blocks.js:407 assets/blocks/blocks.js:743
+#: assets/blocks/blocks.js:407
+#: assets/blocks/blocks.js:743
 #: assets/blocks/blocks.js:927
 msgid "Relevance"
 msgstr ""
 
-#: assets/blocks/blocks.js:408 assets/blocks/blocks.js:744
+#: assets/blocks/blocks.js:408
+#: assets/blocks/blocks.js:744
 #: assets/blocks/blocks.js:928
 msgid "Page order"
 msgstr "Oldalsorrend"
 
-#: assets/blocks/blocks.js:409 assets/blocks/blocks.js:745
+#: assets/blocks/blocks.js:409
+#: assets/blocks/blocks.js:745
 #: assets/blocks/blocks.js:929
 msgid "Meta value"
 msgstr ""
 
-#: assets/blocks/blocks.js:410 assets/blocks/blocks.js:746
+#: assets/blocks/blocks.js:410
+#: assets/blocks/blocks.js:746
 #: assets/blocks/blocks.js:930
 msgid "Numeric meta value"
 msgstr ""
 
-#: assets/blocks/blocks.js:425 assets/blocks/blocks.js:761
+#: assets/blocks/blocks.js:425
+#: assets/blocks/blocks.js:761
 #: assets/blocks/blocks.js:945
 msgid "Ascending (1, 2, 3)"
 msgstr ""
 
-#: assets/blocks/blocks.js:426 assets/blocks/blocks.js:762
+#: assets/blocks/blocks.js:426
+#: assets/blocks/blocks.js:762
 #: assets/blocks/blocks.js:946
 msgid "Descending (3, 2, 1)"
 msgstr ""
 
-#: assets/blocks/blocks.js:437 assets/blocks/blocks.js:773
+#: assets/blocks/blocks.js:437
+#: assets/blocks/blocks.js:773
 #: assets/blocks/blocks.js:957
 msgid "Meta Name"
 msgstr ""
 
-#: assets/blocks/blocks.js:449 assets/blocks/blocks.js:785
+#: assets/blocks/blocks.js:449
+#: assets/blocks/blocks.js:785
 #: assets/blocks/blocks.js:969
 msgid "Meta Type"
 msgstr ""
 
-#: assets/blocks/blocks.js:450 assets/blocks/blocks.js:786
+#: assets/blocks/blocks.js:450
+#: assets/blocks/blocks.js:786
 #: assets/blocks/blocks.js:970
-msgid ""
-"Specified type of the custom field. Can be used in conjunction with "
-"\"orderby\" = \"meta_value\"."
+msgid "Specified type of the custom field. Can be used in conjunction with \"orderby\" = \"meta_value\"."
 msgstr ""
 
-#: assets/blocks/blocks.js:453 assets/blocks/blocks.js:789
+#: assets/blocks/blocks.js:453
+#: assets/blocks/blocks.js:789
 #: assets/blocks/blocks.js:973
 msgid "Any"
 msgstr ""
 
-#: assets/blocks/blocks.js:454 assets/blocks/blocks.js:790
+#: assets/blocks/blocks.js:454
+#: assets/blocks/blocks.js:790
 #: assets/blocks/blocks.js:974
 msgid "Numeric"
 msgstr ""
 
-#: assets/blocks/blocks.js:455 assets/blocks/blocks.js:791
+#: assets/blocks/blocks.js:455
+#: assets/blocks/blocks.js:791
 #: assets/blocks/blocks.js:975
 msgid "Binary"
 msgstr ""
 
-#: assets/blocks/blocks.js:456 assets/blocks/blocks.js:792
+#: assets/blocks/blocks.js:456
+#: assets/blocks/blocks.js:792
 #: assets/blocks/blocks.js:976
 msgid "String"
 msgstr ""
 
-#: assets/blocks/blocks.js:458 assets/blocks/blocks.js:794
+#: assets/blocks/blocks.js:458
+#: assets/blocks/blocks.js:794
 #: assets/blocks/blocks.js:978
 msgid "Time"
 msgstr ""
 
-#: assets/blocks/blocks.js:459 assets/blocks/blocks.js:795
+#: assets/blocks/blocks.js:459
+#: assets/blocks/blocks.js:795
 #: assets/blocks/blocks.js:979
 msgid "Date and time"
 msgstr ""
 
-#: assets/blocks/blocks.js:460 assets/blocks/blocks.js:796
+#: assets/blocks/blocks.js:460
+#: assets/blocks/blocks.js:796
 #: assets/blocks/blocks.js:980
 msgid "Decimal number"
 msgstr ""
 
-#: assets/blocks/blocks.js:461 assets/blocks/blocks.js:797
+#: assets/blocks/blocks.js:461
+#: assets/blocks/blocks.js:797
 #: assets/blocks/blocks.js:981
 msgid "Signed number"
 msgstr ""
 
-#: assets/blocks/blocks.js:462 assets/blocks/blocks.js:798
+#: assets/blocks/blocks.js:462
+#: assets/blocks/blocks.js:798
 #: assets/blocks/blocks.js:982
 msgid "Unsigned number"
 msgstr ""
 
-#: assets/blocks/blocks.js:648 assets/blocks/blocks.js:873
+#: assets/blocks/blocks.js:648
+#: assets/blocks/blocks.js:873
 msgid "Query Settings"
 msgstr ""
 
@@ -9006,6 +9133,6 @@ msgid "Relation"
 msgstr ""
 
 #: assets/blocks/blocks.js:893
-msgid ""
-"Values: integer, -1 to display all, default: \"Blog pages show at most\""
+msgid "Values: integer, -1 to display all, default: \"Blog pages show at most\""
 msgstr ""
+

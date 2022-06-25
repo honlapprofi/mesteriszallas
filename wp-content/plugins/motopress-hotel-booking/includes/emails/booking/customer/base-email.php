@@ -30,7 +30,13 @@ abstract class BaseEmail extends Emails\AbstractEmail {
         if ( $this->isTestMode ) {
             return MPHB()->settings()->emails()->getHotelAdminEmail();
         } else {
-            return $this->booking->getCustomer()->getEmail();
+			if( isset( $this->customer ) ) {
+				return $this->customer->getEmail();
+			} else if( isset( $this->booking ) ) {
+				return $this->booking->getCustomer()->getEmail();
+			}
+
+			return '';
         }
 	}
 

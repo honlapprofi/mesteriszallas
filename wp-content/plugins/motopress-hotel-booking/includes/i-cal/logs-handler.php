@@ -92,76 +92,27 @@ class LogsHandler {
 	}
 
 	/**
-	 *
-	 * @param array $log Log entry ["status", "message", "context"].
+	 * @param array $log Log entry ["status", "message"].
 	 * @param bool $inline
-	 *
 	 * @return string
 	 */
 	public function logToHtml( $log, $inline = false ){
-
-		$log = array_merge(
-			array(
-				'status'	 => 'info',
-				'message'	 => '',
-				'context'	 => array()
-			),
-			$log
-		);
-
-		/**
-		 * @var string $status "success", "info", "warning", "error" etc.
-		 * @var string $message
-		 * @var array $context Event info: [roomId, prodid, uid, checkIn,
-         * checkOut, summary, description]; all fields are optional.
-		 */
-		extract( $log );
-
-		$roomId	= isset( $context['roomId'] ) ? (int) $context['roomId'] : 0;
-		$event	= isset( $context['checkIn'] ) && isset( $context['checkOut'] ) ? $context : array();
+		$log += array( 'status' => 'info', 'message' => '' );
 
 		$html = '';
 
-		// Add title
-		if ( !$inline && $roomId > 0 ) {
-			$room = MPHB()->getRoomRepository()->findById( $roomId );
-			if ( $room ) {
-				$html .= '<b>' . sprintf( '"%1$s" (ID %2$d)', $room->getTitle(), $roomId ) . '</b>';
-			} else {
-				$html .= '<b>' . sprintf( '(ID %d)', $roomId ) . '</b>';
-			}
-		}
-
-		// Build "event" part:
-		//		%UID%, %checkIn% - %checkOut%
-		//		%message%
-		$eventHtml = '';
-		if ( !empty( $event ) ) {
-			$uid      = $event['uid'];
-			$checkIn  = str_replace( '-', '', $event['checkIn'] );
-			$checkOut = str_replace( '-', '', $event['checkOut'] );
-
-            if ( !empty( $uid ) ) {
-                $eventHtml .= '<code>' . "{$uid}, {$checkIn} - {$checkOut}" . '</code><br/>';
-            } else {
-                $eventHtml .= '<code>' . "{$checkIn} - {$checkOut}" . '</code><br/>';
-            }
-		}
-		$eventHtml .= $message;
-
-		// Add "event" part to result HTML
-		if ( !empty( $eventHtml ) && !$inline ) {
-            $class = ' class="notice notice-' . $status . '"';
-
-			$html .= '<p' . $class . '>';
-			$html .= $eventHtml;
-			$html .= '</p>';
+		if ( !empty( $log['message'] ) && !$inline ) {
+			$html .= '<li>';
+				$html .= '<p class="notice notice-' . esc_attr( $log['status'] ) . '">';
+					$html .= $log['message'];
+				$html .= '</p>';
+			$html .= '</li>';
 
 		} else {
-            $html .= $eventHtml;
+            $html .= $log['message'];
         }
 
-		return ( !empty( $html ) && !$inline ) ? '<li>' . $html . '</li>' : $html;
+		return $html;
 	}
 
 	/**

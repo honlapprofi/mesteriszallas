@@ -2,8 +2,6 @@
 
 namespace MPHB\iCal\BackgroundProcesses;
 
-use MPHB\iCal\Logger as Logs;
-use MPHB\iCal\Stats;
 use MPHB\iCal\Queue;
 
 class BackgroundUploader extends BackgroundWorker {
@@ -20,7 +18,7 @@ class BackgroundUploader extends BackgroundWorker {
      */
 	public function reset(){
 		$queueItem = $this->getCurrentItem();
-        Queue::createItem($queueItem);
+        Queue::createUploaderItem($queueItem);
 
 		parent::reset();
 
