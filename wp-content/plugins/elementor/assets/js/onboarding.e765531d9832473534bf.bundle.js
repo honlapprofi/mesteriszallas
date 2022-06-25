@@ -1,4 +1,4 @@
-/*! elementor - v3.6.5 - 27-04-2022 */
+/*! elementor - v3.6.6 - 08-06-2022 */
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["onboarding"],{
 
@@ -447,49 +447,6 @@ Card.propTypes = {
 
 /***/ }),
 
-/***/ "../core/app/modules/onboarding/assets/js/components/checkbox-with-label.js":
-/*!**********************************************************************************!*\
-  !*** ../core/app/modules/onboarding/assets/js/components/checkbox-with-label.js ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-/* provided dependency */ var PropTypes = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports["default"] = CheckBoxWithLabel;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _checkbox = _interopRequireDefault(__webpack_require__(/*! ../../../../../assets/js/ui/atoms/checkbox */ "../core/app/assets/js/ui/atoms/checkbox.js"));
-
-function CheckBoxWithLabel(props) {
-  return /*#__PURE__*/_react.default.createElement("label", {
-    className: "e-onboarding__checkbox-label"
-  }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
-    className: "e-onboarding__checkbox-input",
-    checked: props.checked,
-    onChange: function onChange(event) {
-      return props.onChangeCallback(event);
-    }
-  }), props.labelText);
-}
-
-CheckBoxWithLabel.propTypes = {
-  checked: PropTypes.any,
-  labelText: PropTypes.string,
-  onChangeCallback: PropTypes.func.isRequired
-};
-
-/***/ }),
-
 /***/ "../core/app/modules/onboarding/assets/js/components/checklist-item.js":
 /*!*****************************************************************************!*\
   !*** ../core/app/modules/onboarding/assets/js/components/checklist-item.js ***!
@@ -896,8 +853,7 @@ function Layout(props) {
         details: {
           placement: elementorAppConfig.onboarding.eventPlacement,
           step: state.currentStep,
-          source: 'header',
-          contributor: state.isUsageDataShared
+          source: 'header'
         }
       });
     }
@@ -918,8 +874,7 @@ function Layout(props) {
           details: {
             placement: elementorAppConfig.onboarding.eventPlacement,
             step: state.currentStep,
-            source: 'header',
-            contributor: state.isUsageDataShared
+            source: 'header'
           }
         });
       }
@@ -943,8 +898,7 @@ function Layout(props) {
           version: '',
           details: {
             placement: elementorAppConfig.onboarding.eventPlacement,
-            step: state.currentStep,
-            contributor: state.isUsageDataShared
+            step: state.currentStep
           }
         });
       }
@@ -1368,9 +1322,6 @@ function ContextProvider(props) {
     isLibraryConnected: onboardingConfig.isLibraryConnected,
     isHelloThemeInstalled: onboardingConfig.helloInstalled,
     isHelloThemeActivated: onboardingConfig.helloActivated,
-    isUsageDataShared: elementorCommon.config['event-tracker'].isUserDataShared,
-    helloOptInChecked: onboardingConfig.helloOptOut,
-    trackerCheckboxChecked: onboardingConfig.isUserDataShared,
     siteName: onboardingConfig.siteName,
     siteLogo: onboardingConfig.siteLogo,
     proNotice: '',
@@ -1444,8 +1395,6 @@ var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runt
 
 var _router = __webpack_require__(/*! @reach/router */ "../node_modules/@reach/router/es/index.js");
 
-var _useAjax2 = _interopRequireDefault(__webpack_require__(/*! elementor-app/hooks/use-ajax */ "../core/app/assets/js/hooks/use-ajax.js"));
-
 var _context = __webpack_require__(/*! ../context/context */ "../core/app/modules/onboarding/assets/js/context/context.js");
 
 var _connect = _interopRequireDefault(__webpack_require__(/*! ../utils/connect */ "../core/app/modules/onboarding/assets/js/utils/connect.js"));
@@ -1453,8 +1402,6 @@ var _connect = _interopRequireDefault(__webpack_require__(/*! ../utils/connect *
 var _layout = _interopRequireDefault(__webpack_require__(/*! ../components/layout/layout */ "../core/app/modules/onboarding/assets/js/components/layout/layout.js"));
 
 var _pageContentLayout = _interopRequireDefault(__webpack_require__(/*! ../components/layout/page-content-layout */ "../core/app/modules/onboarding/assets/js/components/layout/page-content-layout.js"));
-
-var _checkboxWithLabel = _interopRequireDefault(__webpack_require__(/*! ../components/checkbox-with-label */ "../core/app/modules/onboarding/assets/js/components/checkbox-with-label.js"));
 
 function Account() {
   var _useContext = (0, _react.useContext)(_context.OnboardingContext),
@@ -1465,13 +1412,6 @@ function Account() {
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       noticeState = _useState2[0],
       setNoticeState = _useState2[1],
-      _useState3 = (0, _react.useState)(true),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      dataSharingCheckboxState = _useState4[0],
-      setDataSharingCheckboxState = _useState4[1],
-      _useAjax = (0, _useAjax2.default)(),
-      dataSharingAjaxState = _useAjax.ajaxState,
-      setDataSharingAjaxState = _useAjax.setAjax,
       navigate = (0, _router.useNavigate)(),
       pageId = 'account',
       nextStep = state.isHelloThemeActivated ? 'siteName' : 'hello',
@@ -1483,17 +1423,7 @@ function Account() {
   if ('completed' !== state.steps[pageId]) {
     skipButton = {
       text: __('Skip', 'elementor')
-    }; // If the user skips the "Connect" step, but did check the Data Sharing checkbox - handle data sharing.
-
-    if (!state.isUsageDataShared && dataSharingCheckboxState) {
-      skipButton.action = function () {
-        setDataSharingAjaxState({
-          data: {
-            action: 'elementor_update_data_sharing'
-          }
-        });
-      };
-    }
+    };
   }
 
   var pageTexts = {};
@@ -1527,18 +1457,8 @@ function Account() {
           placement: elementorAppConfig.onboarding.eventPlacement,
           step: state.currentStep
         }
-      }); // If connected to Elementor, handle the data sharing permission when the user clicks the Next button.
-
-      if (!state.isUsageDataShared && dataSharingCheckboxState) {
-        setDataSharingAjaxState({
-          data: {
-            action: 'elementor_update_data_sharing'
-          }
-        });
-      }
-
-      var stateToUpdate = getStateObjectToUpdate(state, 'steps', pageId, 'completed');
-      updateState(stateToUpdate);
+      });
+      updateState(getStateObjectToUpdate(state, 'steps', pageId, 'completed'));
       navigate('onboarding/' + nextStep);
     };
   } else {
@@ -1552,20 +1472,11 @@ function Account() {
         version: '',
         details: {
           placement: elementorAppConfig.onboarding.eventPlacement,
-          contributor: dataSharingCheckboxState,
           source: 'cta'
         }
       });
     };
   }
-
-  var sendDataSharingRequest = function sendDataSharingRequest() {
-    setDataSharingAjaxState({
-      data: {
-        action: 'elementor_update_data_sharing'
-      }
-    });
-  };
 
   var connectSuccessCallback = function connectSuccessCallback(data) {
     var stateToUpdate = getStateObjectToUpdate(state, 'steps', pageId, 'completed');
@@ -1587,13 +1498,8 @@ function Account() {
       type: 'success',
       icon: 'eicon-check-circle-o',
       message: 'Alrighty - your account is connected.'
-    }); // If not connected at onboarding load, handle the data sharing permission after the connect is handled.
-
-    if (!state.isUsageDataShared && dataSharingCheckboxState) {
-      sendDataSharingRequest();
-    } else {
-      navigate('onboarding/' + nextStep);
-    }
+    });
+    navigate('onboarding/' + nextStep);
   };
 
   var connectFailureCallback = function connectFailureCallback() {
@@ -1611,59 +1517,10 @@ function Account() {
       type: 'error',
       icon: 'eicon-warning',
       message: __('Oops, the connection failed. Try again.', 'elementor')
-    }); // If not connected at onboarding load, handle the data sharing permission after the connect is handled.
-
-    if (!state.isUsageDataShared && dataSharingCheckboxState) {
-      sendDataSharingRequest();
-    } else {
-      navigate('onboarding/' + nextStep);
-    }
+    });
+    navigate('onboarding/' + nextStep);
   };
-  /**
-   * AJAX State Sampling and reaction.
-   */
 
-
-  (0, _react.useEffect)(function () {
-    if ('initial' !== dataSharingAjaxState.status) {
-      var _dataSharingAjaxState;
-
-      if ('success' === dataSharingAjaxState.status && (_dataSharingAjaxState = dataSharingAjaxState.response) !== null && _dataSharingAjaxState !== void 0 && _dataSharingAjaxState.usageDataShared) {
-        elementorCommon.config['event-tracker'].isUserDataShared = true; // If connect was successful
-
-        if (state.isLibraryConnected) {
-          updateState({
-            isUsageDataShared: true
-          });
-        } else {
-          var stateToUpdate = getStateObjectToUpdate(state, 'steps', pageId, 'skipped');
-          stateToUpdate.isUsageDataShared = true;
-          updateState(stateToUpdate);
-          navigate('onboarding/' + state.nextStep);
-        }
-      } else if ('error' === dataSharingAjaxState.status) {
-        elementorCommon.events.dispatchEvent({
-          event: 'indication prompt',
-          version: '',
-          details: {
-            placement: elementorAppConfig.onboarding.eventPlacement,
-            step: state.currentStep,
-            action_state: 'failure',
-            action: 'connect data'
-          }
-        });
-        setNoticeState({
-          type: 'error',
-          icon: 'eicon-warning',
-          message: __('We couldn\'t set up data sharing. You can also do this later in the Elementor Settings page in the admin dashboard.', 'elementor')
-        });
-      } // Since the data sharing Ajax request is done after the Connect sequence, moving to the next step is done
-      // once the Ajax request is processed.
-
-
-      navigate('onboarding/' + nextStep);
-    }
-  }, [dataSharingAjaxState.status]);
   return /*#__PURE__*/_react.default.createElement(_layout.default, {
     pageId: pageId,
     nextStep: nextStep
@@ -1683,21 +1540,7 @@ function Account() {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: 'listItem' + index
     }, listItem);
-  })), !state.isUsageDataShared && /*#__PURE__*/_react.default.createElement(_checkboxWithLabel.default, {
-    checked: dataSharingCheckboxState,
-    onChangeCallback: function onChangeCallback(event) {
-      elementorCommon.events.dispatchEvent({
-        event: 'contributor checkbox click',
-        version: '',
-        details: {
-          placement: elementorAppConfig.onboarding.eventPlacement,
-          state: event.target.checked
-        }
-      });
-      setDataSharingCheckboxState(event.target.checked);
-    },
-    labelText: __('Become a super contributor by sharing non-sensitive data.', 'elementor')
-  })), !state.isLibraryConnected && /*#__PURE__*/_react.default.createElement("div", {
+  }))), !state.isLibraryConnected && /*#__PURE__*/_react.default.createElement("div", {
     className: "e-onboarding__footnote"
   }, /*#__PURE__*/_react.default.createElement("p", null, __('Already have one?', 'elementor') + ' ', /*#__PURE__*/_react.default.createElement("a", {
     ref: alreadyHaveAccountLinkRef,
@@ -1707,8 +1550,7 @@ function Account() {
         event: 'connect account',
         version: '',
         details: {
-          placement: elementorAppConfig.onboarding.eventPlacement,
-          contributor: dataSharingCheckboxState
+          placement: elementorAppConfig.onboarding.eventPlacement
         }
       });
     }
@@ -2666,7 +2508,6 @@ function UploadAndInstallPro() {
 
   var _useContext = (0, _react.useContext)(_context.OnboardingContext),
       state = _useContext.state,
-      updateState = _useContext.updateState,
       _useAjax = (0, _useAjax2.default)(),
       installProZipAjaxState = _useAjax.ajaxState,
       setInstallProZipAjaxState = _useAjax.setAjax,
@@ -2861,4 +2702,4 @@ Connect.propTypes = {
 /***/ })
 
 }]);
-//# sourceMappingURL=onboarding.a7b6b26c425933f57bce.bundle.js.map
+//# sourceMappingURL=onboarding.e765531d9832473534bf.bundle.js.map
