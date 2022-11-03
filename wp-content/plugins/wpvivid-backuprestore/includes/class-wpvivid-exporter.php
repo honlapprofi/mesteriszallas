@@ -68,7 +68,7 @@ class WPvivid_Post_List extends WP_List_Table
             $checked='';
 
             static $cb_counter = 1;
-            $columns['cb']     = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Select All' ) . '</label>'
+            $columns['cb']     = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Select All', 'wpvivid-backuprestore' ) . '</label>'
                 . '<input id="cb-select-all-' . $cb_counter . '" type="checkbox" '.$checked.'/>';
             $cb_counter++;
         }
@@ -112,10 +112,10 @@ class WPvivid_Post_List extends WP_List_Table
         /* translators: manage posts column name */
         $posts_columns['wpvivid_id'] = 'ID';
 
-        $posts_columns['title'] = _x( 'Title', 'column name' );
+        $posts_columns['title'] = _x( 'Title', 'column name', 'wpvivid-backuprestore' );
 
         if ( post_type_supports( $post_type, 'author' ) ) {
-            $posts_columns['author'] = __( 'Author' );
+            $posts_columns['author'] = __( 'Author', 'wpvivid-backuprestore' );
         }
 
         $taxonomies = get_object_taxonomies( $post_type, 'objects' );
@@ -147,9 +147,9 @@ class WPvivid_Post_List extends WP_List_Table
             $posts_columns[ $column_key ] = get_taxonomy( $taxonomy )->labels->name;
         }
 
-        $posts_columns['comments'] =__( 'Comments' );
+        $posts_columns['comments'] =__( 'Comments', 'wpvivid-backuprestore' );
 
-        $posts_columns['date'] = __( 'Date' );
+        $posts_columns['date'] = __( 'Date', 'wpvivid-backuprestore' );
 
         return $posts_columns;
     }
@@ -244,7 +244,7 @@ class WPvivid_Post_List extends WP_List_Table
     public function column_title( $post ) {
         echo '<strong>';
         $title = $post->post_title;
-        echo $title;
+        echo esc_html($title);
         echo "</strong>\n";
     }
 
@@ -509,7 +509,7 @@ class WPvivid_Post_List extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
         $removable_query_args = wp_removable_query_args();
@@ -545,7 +545,7 @@ class WPvivid_Post_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -556,24 +556,24 @@ class WPvivid_Post_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page' id='current-page-selector-export' type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label for="current-page-selector-export" class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label for="current-page-selector-export" class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -581,7 +581,7 @@ class WPvivid_Post_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -591,7 +591,7 @@ class WPvivid_Post_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }
@@ -630,7 +630,7 @@ class WPvivid_Post_List extends WP_List_Table
         ?>
         <div class="tablenav <?php echo esc_attr( $which ); ?>" style="<?php esc_attr_e($css_type); ?>">
             <div class="alignleft actions bulkactions">
-                <?php echo '<input class="button-primary" id="wpvivid-post-research-submit" type="submit" name="post" value="Reset Filters">'; ?>
+                <?php echo '<input class="button-primary" id="wpvivid-post-research-submit" type="submit" name="post" value="' . esc_attr__('Reset Filters', 'wpvivid-backuprestore') .'">'; ?>
             </div>
             <?php
             $this->extra_tablenav( $which );

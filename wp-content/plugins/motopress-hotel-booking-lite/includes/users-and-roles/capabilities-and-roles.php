@@ -38,54 +38,38 @@ class CapabilitiesAndRoles
 
     public static function setup()
     {
-        global $wp_roles;
+        $wpRoles = wp_roles();
 
-        if (!class_exists('WP_Roles')) {
-            return;
-        }
-
-        if (!isset($wp_roles)) {
-            $wp_roles = new WP_Roles();
-        }
-
+        // create empty roles if they do not exist
         $customRoles = MPHB()->roles()->getRoles();
-        
-        $capabilitiesToRoles = MPHB()->capabilitiesAndRoles()->getRoles();
 
-        $rolesVersion = \HotelBookingPlugin::getCustomRolesVersion();
+        foreach( $customRoles as $role ) {
 
-        if (!$rolesVersion) {
-            if (!$wp_roles->is_role(Roles::MANAGER)) $customRoles[Roles::MANAGER]->add();
-            if (!$wp_roles->is_role(Roles::WORKER)) $customRoles[Roles::WORKER]->add();
-            
-            if (!empty($capabilitiesToRoles)) {
-                foreach ($capabilitiesToRoles as $role => $capabilities) {
-                    if (!empty($capabilities)) {
-                        foreach ($capabilities as $cap) {
-                            $wp_roles->add_cap($role, $cap);
-                        }
-                    }
-                }
-            }
-        } else if( $rolesVersion < 2 ) {
-            if (!$wp_roles->is_role(Roles::CUSTOMER)) $customRoles[Roles::CUSTOMER]->add();
-            
-            $newCaps = [self::VIEW_CUSTOMERS, self::EDIT_CUSTOMER, self::DELETE_CUSTOMER];
-            
-            if (!empty($capabilitiesToRoles)) {
-                foreach ($capabilitiesToRoles as $role => $capabilities) {
-                    if (!empty($capabilities)) {
-                        foreach ($capabilities as $cap) {
-                            if( in_array( $cap, $newCaps ) ) {
-                                $wp_roles->add_cap($role, $cap);
-                            }
-                        }
-                    }
-                }
-            }
+            if ( ! $wpRoles->is_role( $role->name ) ) $role->add();
         }
 
-        \HotelBookingPlugin::setCustomRolesVersion(Roles::getCurrentVersion());
+        // update role capabilities if current version of the roles code > roles version in DB
+        // we just add our caps and do not erase already set caps by admin
+        if ( Roles::getCurrentVersion() > \HotelBookingPlugin::getCustomRolesVersion() ) {
+
+            $capabilitiesToRoles = MPHB()->capabilitiesAndRoles()->getRoles();
+
+            if ( !empty($capabilitiesToRoles) ) {
+
+                foreach ( $capabilitiesToRoles as $role => $capabilities ) {
+
+                    if ( !empty($capabilities) ) {
+
+                        foreach ( $capabilities as $cap ) {
+
+                            $wpRoles->add_cap( $role, $cap, true );
+                        }
+                    }
+                }
+            }
+
+            \HotelBookingPlugin::setCustomRolesVersion( Roles::getCurrentVersion() );
+        }
     }
 
     /**

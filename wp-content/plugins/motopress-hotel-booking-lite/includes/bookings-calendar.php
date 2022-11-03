@@ -938,10 +938,30 @@ class BookingsCalendar {
 		}
 
 		// Mark imported bookings
-		if( isset( $dateDetails['booking_details'] ) && $dateDetails['booking_details']['ical']
-	 		|| isset( $dateDetails['check_out_booking_details'] ) && $dateDetails['check_out_booking_details']['ical'] ) {
-			$firstPartClass .= ' mphb-date-imported-booking';
-			$secondPartClass .= ' mphb-date-imported-booking';
+		$isCurrentBookingImported = isset( $dateDetails['booking_details'] ) && $dateDetails['booking_details']['ical'];
+		$isPreviousBookingImported = isset( $dateDetails['check_out_booking_details'] ) && $dateDetails['check_out_booking_details']['ical'];
+
+		$bookingPendingStatuses = array( 
+			\MPHB\PostTypes\BookingCPT\Statuses::STATUS_PENDING,
+			\MPHB\PostTypes\BookingCPT\Statuses::STATUS_PENDING_USER,
+			\MPHB\PostTypes\BookingCPT\Statuses::STATUS_PENDING_PAYMENT
+		);
+		$isCurrentBookingPending = ! empty( $dateDetails['booking_status'] ) && in_array( $dateDetails['booking_status'], $bookingPendingStatuses );
+		$isPreviousBookingPending = ! empty( $dateDetails['check_out_booking_status'] ) && in_array( $dateDetails['check_out_booking_status'], $bookingPendingStatuses );
+
+		if ( $isCurrentBookingImported || $isPreviousBookingImported ) {
+
+			if ( ( ! $dateDetails['is_check_in'] && $isCurrentBookingImported && ! $isCurrentBookingPending ) || 
+				( $dateDetails['is_check_out'] && $isPreviousBookingImported && ! $isPreviousBookingPending ) ) {
+				
+				$firstPartClass .= ' mphb-date-imported-booking';
+			}
+
+			if ( ( ! $dateDetails['is_check_out'] && $isCurrentBookingImported && ! $isCurrentBookingPending ) ||
+				( $dateDetails['is_check_in'] && $isCurrentBookingImported && ! $isCurrentBookingPending ) ) {
+				
+				$secondPartClass .= ' mphb-date-imported-booking';
+			}
 		}
 
 		// Generate titles

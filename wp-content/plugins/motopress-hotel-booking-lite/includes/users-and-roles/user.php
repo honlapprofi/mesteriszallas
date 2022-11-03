@@ -8,28 +8,41 @@ namespace MPHB\UsersAndRoles;
 class User {
     
     public function __construct() {
-        $this->addActions();
+
+        add_action( 'profile_update', array( $this, 'updateCustomer' ), 10, 2 );
     }
     
-    public function addActions() {
-        add_action( 'profile_update', array( $this, 'updateCustomer' ), 10, 3 );
-    }
-    
-    public function updateCustomer( $userId, $oldData, $newData ) {
+    public function updateCustomer( $userId, $oldData ) {
+
+        $newUserData = get_userdata( $userId );
+
         $customer = MPHB()->customers()->findBy( 'user_id', $userId );
+
+        if ( empty( $customer ) || false === $newUserData ) {
+            return;
+        }
+
+        $is_customer_changed = false;
+
+        if ( isset( $newUserData->user_email ) ) {
+
+            $customer->setEmail( $newUserData->user_email );
+            $is_customer_changed = true;
+        }
         
-        if( $customer ) {
-            if( isset( $newData['user_email'] ) ) {
-                $customer->setEmail( $newData['user_email'] );
-            }
-            
-            if( isset( $newData['first_name'] ) ) {
-                $customer->setFirstName( $newData['first_name'] );
-            }
-            
-            if( isset( $newData['last_name'] ) ) {
-                $customer->setLastName( $newData['last_name'] );
-            }
+        if ( isset( $newUserData->first_name ) ) {
+
+            $customer->setFirstName( $newUserData->first_name );
+            $is_customer_changed = true;
+        }
+        
+        if ( isset( $newUserData->last_name ) ) {
+
+            $customer->setLastName( $newUserData->last_name );
+            $is_customer_changed = true;
+        }
+        
+        if ( $is_customer_changed ) {
             
             MPHB()->customers()->updateData( $customer );
         }
@@ -189,7 +202,7 @@ class User {
     public static function findFreeAccounts() {
         global $wpdb;
         
-        $users = $wpdb->users;
+        $users = '`' . DB_NAME . '`.' . $wpdb->users;
         $customers = $wpdb->prefix . 'mphb_customers';
         
         $query = "SELECT

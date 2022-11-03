@@ -4,11 +4,7 @@ namespace MPHB;
 
 class Autoloader {
 
-	/**
-	 *
-	 * @var string
-	 */
-	private $prefix;
+	const CLASSES_NAMESPACE_PREFIX = 'MPHB\\';
 
 	/**
 	 *
@@ -30,15 +26,12 @@ class Autoloader {
 	private $customPathList = array();
 
 	/**
-	 *
-	 * @param string $prefix Class prefix.
-	 * @param string $basePath Path to classes directory.
+	 * @param string $basePath Path to plugin directory
 	 */
-	public function __construct( $prefix, $basePath ){
+	public function __construct( $basePath ) {
 
-		$this->prefix		 = $prefix;
-		$this->prefixLength	 = strlen( $this->prefix );
-		$this->basePath		 = $basePath;
+		$this->prefixLength = strlen( static::CLASSES_NAMESPACE_PREFIX );
+		$this->basePath     = $basePath;
 
 		$this->classDirSeparator = '\\'; // namespaces
 
@@ -47,22 +40,30 @@ class Autoloader {
 		spl_autoload_register( array( $this, 'autoload' ) );
 	}
 
-	private function setupCustomPathList(){
-		$this->customPathList['Libraries\\WP_SessionManager\\Recursive_ArrayAccess']	 = 'libraries/wp-session-manager/class-recursive-arrayaccess.php';
-		$this->customPathList['Libraries\\WP_SessionManager\\WP_Session']				 = 'libraries/wp-session-manager/class-wp-session.php';
-		$this->customPathList['Libraries\\EDD_Plugin_Updater\\EDD_Plugin_Updater']		 = 'libraries/edd-plugin-updater/edd-plugin-updater.php';
+	private function setupCustomPathList() {
+
+		$this->customPathList['Libraries\\WP_SessionManager\\Recursive_ArrayAccess'] = 'includes/libraries/wp-session-manager/class-recursive-arrayaccess.php';
+		$this->customPathList['Libraries\\WP_SessionManager\\WP_Session']            = 'includes/libraries/wp-session-manager/class-wp-session.php';
+		$this->customPathList['Libraries\\EDD_Plugin_Updater\\EDD_Plugin_Updater']   = 'includes/libraries/edd-plugin-updater/edd-plugin-updater.php';
+
+		$this->customPathList['Core\\CoreAPI'] = 'includes/core/core-api.php';
+		$this->customPathList['Core\\RoomAvailabilityHelper'] = 'includes/core/helpers/room-availability-helper.php';
+		
+
+		$this->customPathList['AjaxApi\\AbstractAjaxApiAction']   = 'includes/ajax-api/ajax-actions/abstract-ajax-api-action.php';
+		$this->customPathList['AjaxApi\\GetRoomTypeCalendarData'] = 'includes/ajax-api/ajax-actions/get-room-type-calendar-data.php';
+
 	}
 
 	/**
-	 *
 	 * @param string $class
 	 */
-	public function autoload( $class ){
+	public function autoload( $class ) {
 
 		$class = ltrim( $class, '\\' );
 
 		// does the class use the namespace prefix?
-		if ( strncmp( $this->prefix, $class, $this->prefixLength ) !== 0 ) {
+		if ( strncmp( static::CLASSES_NAMESPACE_PREFIX, $class, $this->prefixLength ) !== 0 ) {
 			// no, move to the next registered autoloader
 			return false;
 		}
@@ -72,12 +73,12 @@ class Autoloader {
 		// replace the namespace prefix with the base directory, replace namespace
 		// separators with directory separators in the relative class name, append
 		// with .php
-		$file = $this->basePath . $this->convertClassToPath( $relativeClass );
+		$file = $this->convertClassToPath( $relativeClass );
 
 		// if the file exists, require it
 		if ( file_exists( $file ) ) {
-			require_once $file;
 
+			require_once $file;
 			return $file;
 		}
 		return false;
@@ -88,46 +89,50 @@ class Autoloader {
 	 * @param string $class
 	 * @return string Relative path to classfile.
 	 */
-	private function convertClassToPath( $class ){
+	private function convertClassToPath( $class ) {
+
 		$path = '';
 
 		if ( array_key_exists( $class, $this->customPathList ) ) {
-			$path = $this->customPathList[$class];
+
+			$path = $this->basePath . $this->customPathList[ $class ];
+
 		} else {
-			$path = $this->defaultConvert( $class );
+
+			$path = $this->basePath . 'includes/' . $this->defaultConvert( $class );
 		}
 
 		return $path;
 	}
 
-	private function defaultConvert( $class ){
+	private function defaultConvert( $class ) {
 
-		$filePath	 = $this->convertToFilePath( $class );
-		$filePath	 = $this->lowerCamelCase( $filePath );
-		$filePath	 = $this->replaceUnderscores( $filePath );
+		$filePath = $this->convertToFilePath( $class );
+		$filePath = $this->lowerCamelCase( $filePath );
+		$filePath = $this->replaceUnderscores( $filePath );
 
 		return $filePath;
 	}
 
-	private function replaceUnderscores( $path ){
+	private function replaceUnderscores( $path ) {
+
 		return str_replace( '_', '-', $path );
 	}
 
-	private function lowerCamelCase( $class ){
-		$class	 = preg_replace( '/([a-z])([A-Z])/', '$1-$2', $class );
-		$class	 = preg_replace( '/([A-Z])([A-Z][a-z])/', '$1-$2', $class );
-		$class	 = strtolower( $class );
+	private function lowerCamelCase( $class ) {
+
+		$class = preg_replace( '/([a-z])([A-Z])/', '$1-$2', $class );
+		$class = preg_replace( '/([A-Z])([A-Z][a-z])/', '$1-$2', $class );
+		$class = strtolower( $class );
 
 		return $class;
 	}
 
-	private function convertToFilePath( $class ){
+	private function convertToFilePath( $class ) {
 
 		$classFile = str_replace( $this->classDirSeparator, DIRECTORY_SEPARATOR, $class );
-
 		$classFile = $classFile . '.php';
 
 		return $classFile;
 	}
-
 }

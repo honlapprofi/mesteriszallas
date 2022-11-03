@@ -392,9 +392,9 @@ class WPvivid_Migrate
                 </div>
                 <strong><?php _e('The key will expire in ', 'wpvivid-backuprestore'); ?></strong>
                 <select id="wpvivid_generate_url_expires" style="margin-bottom: 2px;">
-                    <option value="2 hour">2 hours</option>
-                    <option selected="selected" value="8 hour">8 hours</option>
-                    <option value="24 hour">24 hours</option>
+                    <option value="2 hour"><?php esc_html_e('2 hours', 'wpvivid-backuprestore'); ?></option>
+                    <option selected="selected" value="8 hour"><?php esc_html_e('8 hours', 'wpvivid-backuprestore'); ?></option>
+                    <option value="24 hour"><?php esc_html_e('24 hours', 'wpvivid-backuprestore'); ?></option>
                     <!--<option value="Never">Never</option>-->
                 </select>
                 <p><?php _e('Tips: For security reason, please choose an appropriate expiration time for the key.', 'wpvivid-backuprestore'); ?></p>
@@ -594,7 +594,7 @@ class WPvivid_Migrate
 
             if (empty($options)) {
                 $ret['result'] = 'failed';
-                $ret['error'] = 'A key is required.';
+                $ret['error'] = __('A key is required.', 'wpvivid-backuprestore');
                 echo json_encode($ret);
                 die();
             }
@@ -606,14 +606,14 @@ class WPvivid_Migrate
 
             if ($url === '') {
                 $ret['result'] = 'failed';
-                $ret['error'] = 'The key is invalid.';
+                $ret['error'] = __('The key is invalid.', 'wpvivid-backuprestore');
                 echo json_encode($ret);
                 die();
             }
 
             if ($options[$url]['expires'] != 0 && $options[$url]['expires'] < time()) {
                 $ret['result'] = 'failed';
-                $ret['error'] = 'The key has expired.';
+                $ret['error'] =  __('The key has expired.', 'wpvivid-backuprestore');
                 echo json_encode($ret);
                 die();
             }
@@ -851,7 +851,7 @@ class WPvivid_Migrate
             $html .= '<div style="padding: 0 0 10px 0;"><strong>'.__('Please paste the key below.', 'wpvivid-backuprestore').'</strong><a href="#" style="margin-left: 5px; text-decoration: none;" onclick="wpvivid_click_how_to_get_key();">'.__('How to get a site key?', 'wpvivid-backuprestore').'</a></div>
             <div id="wpvivid_how_to_get_key"></div>
             <div class="wpvivid-element-space-bottom"><textarea type="text" id="wpvivid_transfer_key_text" onKeyUp="wpvivid_check_key(this.value)" style="width: 100%; height: 140px;"/></textarea></div>
-            <div><input class="button-primary" id="wpvivid_save_url_button" type="submit" value="'.esc_attr( 'Save', 'wpvivid-backuprestore' ).'" onclick="wpvivid_click_save_site_url();" /></div>';
+            <div><input class="button-primary" id="wpvivid_save_url_button" type="submit" value="'.esc_attr__( 'Save', 'wpvivid-backuprestore' ).'" onclick="wpvivid_click_save_site_url();" /></div>';
         }
         else{
             foreach ($options as $key => $value)
@@ -872,7 +872,7 @@ class WPvivid_Migrate
             $html .= '<div style="padding: 0 0 10px 0;">
                         <span>Key:</span>
                         <input type="text" id="wpvivid_send_remote_site_url_text" value="'.$token.'" readonly="readonly" />
-                        <input class="button-primary" id="wpvivid_delete_key_button" type="submit" value="'.esc_attr( 'Delete', 'wpvivid-backuprestore' ).'" onclick="wpvivid_click_delete_transfer_key();" />
+                        <input class="button-primary" id="wpvivid_delete_key_button" type="submit" value="'.esc_attr__( 'Delete', 'wpvivid-backuprestore' ).'" onclick="wpvivid_click_delete_transfer_key();" />
                        </div>
                        <div class="wpvivid-element-space-bottom">'.$key_status.'</div>
                        <div>The connection is ok. Now you can transfer the site <strong>'.$source_dir.'</strong> to the site <strong>'.$target_dir.'</strong></div>';
@@ -1008,7 +1008,7 @@ class WPvivid_Migrate
     public function wpvivid_migrate_part_exec($html){
         $html = '';
         $html .= '<div id="wpvivid_transfer_btn" style="float: left;">
-                        <input class="button-primary quicktransfer-btn" type="submit" value="'.esc_attr( 'Clone then Transfer', 'wpvivid-backuprestore').'" onclick="wpvivid_click_send_backup();" />
+                        <input class="button-primary quicktransfer-btn" type="submit" value="'.esc_attr__( 'Clone then Transfer', 'wpvivid-backuprestore').'" onclick="wpvivid_click_send_backup();" />
                     </div>
                     <script>
                     function wpvivid_click_send_backup()
@@ -1175,7 +1175,7 @@ class WPvivid_Migrate
                          <div style="margin-left:10px; float: left; width:100%;"><p id="wpvivid_upload_current_doing">' . $list_tasks[$task['id']]['task_info']['descript'] . '</p></div>
                          <div style="clear: both;"></div>
                          <div>
-                            <div id="wpvivid_transfer_cancel" class="backup-log-btn"><input class="button-primary" id="wpvivid_transfer_cancel_btn" type="submit" value="'.esc_attr( 'Cancel', 'wpvivid-backuprestore' ).'"  /></div>
+                            <div id="wpvivid_transfer_cancel" class="backup-log-btn"><input class="button-primary" id="wpvivid_transfer_cancel_btn" type="submit" value="'.esc_attr__( 'Cancel', 'wpvivid-backuprestore' ).'"  /></div>
                          </div>';
             }
         }

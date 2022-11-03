@@ -7,7 +7,7 @@
 namespace MPHB\UsersAndRoles;
 class Roles
 {
-    const VERSION = 2; 
+    const VERSION = 3; 
     
     const MANAGER = 'mphb_manager';
     const WORKER = 'mphb_worker';

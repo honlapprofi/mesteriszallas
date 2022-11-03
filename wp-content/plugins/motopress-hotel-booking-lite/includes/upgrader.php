@@ -108,6 +108,9 @@ class Upgrader {
 			'stopSynchronization', // Stop active sync to reset the queue with the next start
 			'alterTableSyncLogs',  // Remove "log_context" and change "log_message"
 		),
+		'4.4.0' => array(
+			'fixForV4_4_0',
+		)
 	);
 
 	public function __construct(){
@@ -456,6 +459,26 @@ class Upgrader {
 		return false;
 	}
 
+	/**
+	 * Reverted compatibility with MySQL 5.5
+	 * for mphb_customers table
+	 *
+	 * @return void
+	 */
+	public function fixForV4_4_0() {
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . 'mphb_customers';
+		$query = $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) );
+
+		if ( $wpdb->get_var( $query ) === $table_name ) {
+			return;
+		}
+
+		$this->createTableCustomers();
+		$this->fixForV4_2_0();
+	}
+
 	public function fixGlobalRule(){
 		$globalRules = array(
 			'check_in_days'   => get_option( 'mphb_global_check_in_days', array_keys( \MPHB\Utils\DateUtils::getDaysList() ) ),
@@ -753,7 +776,7 @@ class Upgrader {
 			. " address1 text NOT NULL,"
 			. " zip VARCHAR(10) NOT NULL,"
 			. " bookings INT NOT NULL,"
-			. " date_registered DATETIME DEFAULT CURRENT_TIMESTAMP,"
+			. " date_registered DATETIME NOT NULL default '0000-00-00 00:00:00',"
 			. " last_active DATETIME NULL,"
 			. " KEY customer_id (customer_id)"
 			. ") CHARSET=utf8 AUTO_INCREMENT=1";

@@ -52,7 +52,7 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
         if (!empty($columns['cb']))
         {
             static $cb_counter = 1;
-            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All') . '</label>'
+            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All', 'wpvivid-backuprestore') . '</label>'
                 . '<input id="cb-select-all-' . $cb_counter . '" type="checkbox"/>';
             $cb_counter++;
         }
@@ -94,11 +94,11 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
     public function get_columns()
     {
         $sites_columns = array(
-            'cb'          => __( ' ' ),
-            'thumb'    =>__( 'Thumbnail' ),
-            'path'    => __( 'Path' ),
-            //'folder' => __( 'Folder' ),
-            'size'=>__( 'Size' )
+            'cb'          => __( ' ', 'wpvivid-backuprestore' ),
+            'thumb'    =>__( 'Thumbnail', 'wpvivid-backuprestore' ),
+            'path'    => __( 'Path', 'wpvivid-backuprestore' ),
+            //'folder' => __( 'Folder', 'wpvivid-backuprestore' ),
+            'size'=>__( 'Size', 'wpvivid-backuprestore' )
         );
 
         return $sites_columns;
@@ -271,7 +271,7 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
 
@@ -302,7 +302,7 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -313,24 +313,24 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page'  type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label  class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label  class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -338,7 +338,7 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -348,7 +348,7 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }
@@ -385,17 +385,17 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
             ?>
             <div class="tablenav <?php echo esc_attr( $which ); ?>" style="<?php esc_attr_e($css_type); ?>">
                 <div class="alignleft actions bulkactions">
-                    <label for="wpvivid_uc_bulk_action" class="screen-reader-text">Select bulk action</label>
+                    <label for="wpvivid_uc_bulk_action" class="screen-reader-text"><?php esc_html_e( 'Select bulk action', 'wpvivid-backuprestore' ); ?></label>
                     <select name="action" id="wpvivid_uc_bulk_action">
-                        <option value="-1">Bulk Actions</option>
-                        <option value="wpvivid_isolate_selected_image">Isolate selected images</option>
-                        <option value="wpvivid_isolate_list_image">Isolate all images</option>
+                        <option value="-1"><?php esc_html_e( 'Bulk Actions', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_isolate_selected_image"><?php esc_html_e( 'Isolate selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_isolate_list_image"><?php esc_html_e( 'Isolate all images', 'wpvivid-backuprestore' ); ?></option>
                     </select>
-                    <input type="submit" class="button action" value="Apply">
+                    <input type="submit" class="button action" value="<?php esc_attr_e( 'Apply', 'wpvivid-backuprestore' ); ?>">
                 </div>
                 <div id="wpvivid_isolate_progress" style="margin-top: 4px; display: none;">
                     <div class="spinner is-active" style="margin: 0 5px 10px 0; float: left;"></div>
-                    <div style="float: left; margin-top: 2px;">Isolating images...</div>
+                    <div style="float: left; margin-top: 2px;"><?php esc_html_e( 'Isolating images...', 'wpvivid-backuprestore' ); ?></div>
                     <div style="clear: both;"></div>
                 </div>
                 <?php
@@ -412,17 +412,17 @@ class WPvivid_Unused_Upload_Files_List extends WP_List_Table
             ?>
             <div class="tablenav <?php echo esc_attr( $which ); ?>" style="<?php esc_attr_e($css_type); ?>">
                 <div class="alignleft actions bulkactions">
-                    <label for="wpvivid_uc_bulk_action" class="screen-reader-text">Select bulk action</label>
+                    <label for="wpvivid_uc_bulk_action" class="screen-reader-text"><?php esc_html_e( 'Select bulk action', 'wpvivid-backuprestore' ); ?></label>
                     <select name="action" id="wpvivid_uc_bulk_action">
-                        <option value="-1">Bulk Actions</option>
-                        <option value="wpvivid_isolate_selected_image">Isolate selected images</option>
-                        <option value="wpvivid_isolate_list_image">Isolate all images</option>
+                        <option value="-1"><?php esc_html_e( 'Bulk Actions', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_isolate_selected_image"><?php esc_html_e( 'Isolate selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_isolate_list_image"><?php esc_html_e( 'Isolate all images', 'wpvivid-backuprestore' ); ?></option>
                     </select>
-                    <input type="submit" class="button action" value="Apply">
+                    <input type="submit" class="button action" value="<?php esc_attr_e( 'Apply', 'wpvivid-backuprestore' ); ?>">
                 </div>
                 <div id="wpvivid_isolate_progress" style="margin-top: 4px; display: none;">
                     <div class="spinner is-active" style="margin: 0 5px 10px 0; float: left;"></div>
-                    <div style="float: left; margin-top: 2px;">Isolating images...</div>
+                    <div style="float: left; margin-top: 2px;"><?php esc_html_e( 'Isolating images...', 'wpvivid-backuprestore' ); ?></div>
                     <div style="clear: both;"></div>
                 </div>
                 <br class="clear" />
@@ -507,7 +507,7 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
         if (!empty($columns['cb']))
         {
             static $cb_counter = 1;
-            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All') . '</label>'
+            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All', 'wpvivid-backuprestore') . '</label>'
                 . '<input id="cb-select-all-' . $cb_counter . '" type="checkbox"/>';
             $cb_counter++;
         }
@@ -549,11 +549,11 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
     public function get_columns()
     {
         $sites_columns = array(
-            'cb'          => __( ' ' ),
-            'thumb'    =>__( 'Thumbnail' ),
-            'path'    => __( 'Path' ),
-            //'folder' => __( 'Folder' ),
-            'size'=>__( 'Size' )
+            'cb'          => __( ' ', 'wpvivid-backuprestore' ),
+            'thumb'    =>__( 'Thumbnail', 'wpvivid-backuprestore' ),
+            'path'    => __( 'Path', 'wpvivid-backuprestore' ),
+            //'folder' => __( 'Folder', 'wpvivid-backuprestore' ),
+            'size'=>__( 'Size', 'wpvivid-backuprestore' )
         );
 
         return $sites_columns;
@@ -726,7 +726,7 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
 
@@ -757,7 +757,7 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -768,24 +768,24 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page'  type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label  class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label  class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -793,7 +793,7 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -803,7 +803,7 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }
@@ -843,26 +843,26 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
             ?>
             <div class="tablenav <?php echo esc_attr( $which ); ?>" style="<?php esc_attr_e($css_type); ?>">
                 <div class="alignleft actions bulkactions">
-                    <label for="wpvivid_uc_iso_bulk_action" class="screen-reader-text">Select bulk action</label>
+                    <label for="wpvivid_uc_iso_bulk_action" class="screen-reader-text"><?php esc_html_e( 'Select bulk action', 'wpvivid-backuprestore' ); ?></label>
                     <select name="action" id="wpvivid_uc_iso_bulk_action">
-                        <option value="-1">Bulk Actions</option>
-                        <option value="wpvivid_restore_selected_image">Restore selected images</option>
-                        <option value="wpvivid_restore_list_image">Restore all images</option>
-                        <option value="wpvivid_delete_selected_image">Delete selected images</option>
-                        <option value="wpvivid_delete_list_image">Delete all images</option>
+                        <option value="-1"><?php esc_html_e( 'Bulk Actions', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_restore_selected_image"><?php esc_html_e( 'Restore selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_restore_list_image"><?php esc_html_e( 'Restore all images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_delete_selected_image"><?php esc_html_e( 'Delete selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_delete_list_image"><?php esc_html_e( 'Delete all images', 'wpvivid-backuprestore' ); ?></option>
                     </select>
-                    <input type="submit" class="button action" value="Apply">
+                    <input type="submit" class="button action" value="<?php esc_attr_e( 'Apply', 'wpvivid-backuprestore' ); ?>">
                 </div>
                 <div id="wpvivid_restore_delete_progress" style="margin-top: 4px; display: none;">
                     <div class="spinner is-active" style="margin: 0 5px 10px 0; float: left;"></div>
-                    <div id="wpvivid_restore_delete_text" style="float: left; margin-top: 2px;">Restoring images...</div>
+                    <div id="wpvivid_restore_delete_text" style="float: left; margin-top: 2px;"><?php esc_html_e( 'Restoring images...', 'wpvivid-backuprestore' ); ?></div>
                     <div style="clear: both;"></div>
                 </div>
                 <div class="wpvivid-backup-tips" style="background: #fff; border: 1px solid #f1f1f1; border-radius: 6px; margin-top: 10px;margin-bottom: 10px">
                     <div style="float: left;">
                         <div style="padding: 10px;">
-                            <strong><?php _e('Note: ', 'wpvivid'); ?></strong>
-                            <?php _e('Once deleted, images will be lost permanently. The action cannot be undone, unless you have <a href="'. $admin_url . 'admin.php?page=WPvivid'.'">a backup</a> in place.', 'wpvivid'); ?>
+                            <strong><?php _e('Note: ', 'wpvivid-backuprestore'); ?></strong>
+                            <?php echo sprintf(__('Once deleted, images will be lost permanently. The action cannot be undone, unless you have %1$sa backup%2$s in place.', 'wpvivid-backuprestore'), '<a href="'. $admin_url . 'admin.php?page=WPvivid'.'">', '</a>'); ?>
                         </div>
                     </div>
                     <div style="clear: both;"></div>
@@ -881,26 +881,26 @@ class WPvivid_Isolate_Files_List extends WP_List_Table
             ?>
             <div class="tablenav <?php echo esc_attr( $which ); ?>" style="<?php esc_attr_e($css_type); ?>">
                 <div class="alignleft actions bulkactions">
-                    <label for="wpvivid_uc_iso_bulk_action" class="screen-reader-text">Select bulk action</label>
+                    <label for="wpvivid_uc_iso_bulk_action" class="screen-reader-text"><?php esc_html_e( 'Select bulk action', 'wpvivid-backuprestore' ); ?></label>
                     <select name="action" id="wpvivid_uc_iso_bulk_action">
-                        <option value="-1">Bulk Actions</option>
-                        <option value="wpvivid_restore_selected_image">Restore selected images</option>
-                        <option value="wpvivid_restore_list_image">Restore all images</option>
-                        <option value="wpvivid_delete_selected_image">Delete selected images</option>
-                        <option value="wpvivid_delete_list_image">Delete all images</option>
+                        <option value="-1"><?php esc_html_e( 'Bulk Actions', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_restore_selected_image"><?php esc_html_e( 'Restore selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_restore_list_image"><?php esc_html_e( 'Restore all images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_delete_selected_image"><?php esc_html_e( 'Delete selected images', 'wpvivid-backuprestore' ); ?></option>
+                        <option value="wpvivid_delete_list_image"><?php esc_html_e( 'Delete all images', 'wpvivid-backuprestore' ); ?></option>
                     </select>
-                    <input type="submit" class="button action" value="Apply">
+                    <input type="submit" class="button action" value="<?php esc_attr_e( 'Apply', 'wpvivid-backuprestore' ); ?>">
                 </div>
                 <div id="wpvivid_restore_delete_progress" style="margin-top: 4px; display: none;">
                     <div class="spinner is-active" style="margin: 0 5px 10px 0; float: left;"></div>
-                    <div id="wpvivid_restore_delete_text" style="float: left; margin-top: 2px;">Restoring images...</div>
+                    <div id="wpvivid_restore_delete_text" style="float: left; margin-top: 2px;"><?php esc_html_e( 'Restoring images...', 'wpvivid-backuprestore' ); ?></div>
                     <div style="clear: both;"></div>
                 </div>
                 <div class="wpvivid-backup-tips" style="background: #fff; border: 1px solid #f1f1f1; border-radius: 6px; margin-top: 10px;margin-bottom: 10px">
                     <div style="float: left;">
                         <div style="padding: 10px;">
-                            <strong><?php _e('Note: ', 'wpvivid'); ?></strong>
-                            <?php _e('Once deleted, images will be lost permanently. The action cannot be undone, unless you have <a href="'. $admin_url . 'admin.php?page=WPvivid'.'">a backup</a> in place.', 'wpvivid'); ?>
+                            <strong><?php _e('Note: ', 'wpvivid-backuprestore'); ?></strong>
+                            <?php echo sprintf(__('Once deleted, images will be lost permanently. The action cannot be undone, unless you have %1$sa backup%2$s in place.', 'wpvivid-backuprestore'), '<a href="'. $admin_url . 'admin.php?page=WPvivid'.'">', '</a>'); ?>
                         </div>
                     </div>
                     <div style="clear: both;"></div>
@@ -1074,7 +1074,7 @@ class WPvivid_Uploads_Cleaner
                     _e('<div class="notice notice-warning inline" style="margin: 10px 0 0 0;"><p><strong>Warning:</strong> We detected that you use Jet Engine plugin on this site, 
                                                         it may have compatibility issues with our plugin, which can result in an inaccuracy of the scan result, 
                                                         so we recommend not using this feature yet.
-                                                          </p></div>');
+                                                          </p></div>', 'wpvivid-backuprestore');
                 }
             }
         }
@@ -1102,7 +1102,7 @@ class WPvivid_Uploads_Cleaner
         <div class="wrap" style="max-width:1720px;">
             <h1>
                 <?php
-                echo __('WPvivid Image Cleaner', 'wpvivid');
+                echo __('WPvivid Image Cleaner', 'wpvivid-backuprestore');
                 ?>
             </h1>
 
@@ -1115,8 +1115,8 @@ class WPvivid_Uploads_Cleaner
 
             $args['is_parent_tab']=1;
             $this->main_tab=new WPvivid_Tab_Page_Container();
-            $this->main_tab->add_tab('Scan Media','scan',array($this, 'output_scan'), $args);
-            $this->main_tab->add_tab('Isolated Media','isolate',array($this, 'output_isolate'), $args);
+            $this->main_tab->add_tab(__('Scan Media', 'wpvivid-backuprestore'),'scan',array($this, 'output_scan'), $args);
+            $this->main_tab->add_tab(__('Isolated Media', 'wpvivid-backuprestore'),'isolate',array($this, 'output_isolate'), $args);
             //$this->main_tab->add_tab('Database','database',array($this, 'output_database'), $args);
             $this->main_tab->display();
             if (isset($_GET['tab']))
@@ -1171,25 +1171,25 @@ class WPvivid_Uploads_Cleaner
         ?>
         <div class="postbox quickbackup-addon">
             <div style="margin-top: 10px;margin-bottom: 10px;">
-                In the tab, you can scan your media folder (uploads) to find unused images and isolate specific or all unused images.
+                <?php esc_html_e('In the tab, you can scan your media folder (uploads) to find unused images and isolate specific or all unused images.', 'wpvivid-backuprestore'); ?>
             </div>
             <div id="wpvivid_uc_scan">
                 <div style="margin-top: 10px;margin-bottom: 10px;">
-                    Media path: <a><?php echo $path?></a>
+                    <?php esc_html_e('Media path: ', 'wpvivid-backuprestore'); ?><a><?php echo $path?></a>
                 </div>
-                <input class="button-primary" style="width: 200px; height: 50px; font-size: 20px;" id="wpvivid_start_scan" type="submit" value="<?php esc_attr_e('Scan', 'wpvivid'); ?>">
+                <input class="button-primary" style="width: 200px; height: 50px; font-size: 20px;" id="wpvivid_start_scan" type="submit" value="<?php esc_attr_e('Scan', 'wpvivid-backuprestore'); ?>">
                 <div style="clear: both;"></div>
                 <div style="margin-top: 10px">
                     <span>
-                        Clicking the 'Scan' button to find unused images in your media folder. Currently it only scans JPG and PNG images.
+                        <?php esc_html_e('Clicking the \'Scan\' button to find unused images in your media folder. Currently it only scans JPG and PNG images.', 'wpvivid-backuprestore'); ?>
                     </span>
                 </div>
                 <?php echo $text?>
                 <div class="wpvivid-backup-tips" style="background: #fff; border: 1px solid #f1f1f1; border-radius: 6px; margin-top: 10px;">
                     <div style="float: left;">
                         <div style="padding: 10px;">
-                            <strong><?php _e('Note: ', 'wpvivid'); ?></strong>
-                            <?php _e('Please don\'t refresh the page while running a scan.', 'wpvivid'); ?>
+                            <strong><?php _e('Note: ', 'wpvivid-backuprestore'); ?></strong>
+                            <?php _e('Please don\'t refresh the page while running a scan.', 'wpvivid-backuprestore'); ?>
                         </div>
                     </div>
                     <div style="clear: both;"></div>
@@ -1202,9 +1202,9 @@ class WPvivid_Uploads_Cleaner
         </div>
         <div class="postbox quickbackup-addon">
             <p>
-                <input id="wpvivid_result_list_search" type="search" name="s" value="" placeholder="Search">
+                <input id="wpvivid_result_list_search" type="search" name="s" value="" placeholder="<?php esc_attr_e('Search', 'wpvivid-backuprestore'); ?>">
                 <select id="wpvivid_result_list_folder" style="margin-top: -5px;">
-                    <option selected="selected" value="0">All Folders</option>
+                    <option selected="selected" value="0"><?php esc_html_e('All Folders', 'wpvivid-backuprestore'); ?></option>
                     <?php
                     if(!empty($folders))
                     {
@@ -1216,7 +1216,7 @@ class WPvivid_Uploads_Cleaner
                     }
                     ?>
                 </select>
-                <input id="wpvivid_result_list_search_btn" type="submit" class="button" value="Search">
+                <input id="wpvivid_result_list_search_btn" type="submit" class="button" value="<?php esc_attr_e('Search', 'wpvivid-backuprestore'); ?>">
             </p>
         </div>
         <div class="postbox">
@@ -1837,17 +1837,17 @@ class WPvivid_Uploads_Cleaner
         ?>
         <div class="postbox quickbackup-addon">
             <div style="margin-top: 10px;margin-bottom: 10px;">
-                This tab displays the isolated images and their locations. You can choose to restore or delete specific isolated images.
+                <?php esc_html_e('This tab displays the isolated images and their locations. You can choose to restore or delete specific isolated images.', 'wpvivid-backuprestore'); ?>
             </div>
             <div style="margin-top: 10px;margin-bottom: 10px;">
-                lsolated Folder Path: <a><?php echo $path?></a>
+                <?php esc_html_e('lsolated Folder Path: ', 'wpvivid-backuprestore'); ?><a><?php echo $path?></a>
             </div>
         </div>
         <div class="postbox quickbackup-addon">
             <p>
-                <input id="wpvivid_iso_list_search" type="search" name="s" value="" placeholder="Search">
+                <input id="wpvivid_iso_list_search" type="search" name="s" value="" placeholder="<?php esc_attr_e('Search', 'wpvivid-backuprestore'); ?>">
                 <select id="wpvivid_iso_list_folder" style="margin-top: -5px;">
-                    <option selected="selected" value="0">All Folders</option>
+                    <option selected="selected" value="0"><?php esc_html_e('All Folders', 'wpvivid-backuprestore'); ?></option>
                     <?php
                     asort($result['folders']);
                     foreach ($result['folders'] as $folder)
@@ -1856,7 +1856,7 @@ class WPvivid_Uploads_Cleaner
                     }
                     ?>
                 </select>
-                <input id="wpvivid_iso_list_search_btn" type="submit" class="button" value="Search">
+                <input id="wpvivid_iso_list_search_btn" type="submit" class="button" value="<?php esc_attr_e('Search', 'wpvivid-backuprestore'); ?>">
             </p>
         </div>
         <div class="postbox">

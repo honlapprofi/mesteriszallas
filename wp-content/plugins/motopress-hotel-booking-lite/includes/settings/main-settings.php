@@ -272,20 +272,24 @@ class MainSettings {
 		return (int) get_option( 'mphb_average_price_period', 7 );
 	}
 
-	/**
-	 *
-	 * @return bool
-	 */
-	public function isUseSingleRoomTypeGalleryMagnific(){
+	public function isUseSingleRoomTypeGalleryMagnific() {
 		$useMagnific = get_option( 'mphb_single_room_type_gallery_use_magnific', true );
 		return (bool) apply_filters( 'mphb_single_room_type_gallery_use_magnific', $useMagnific );
 	}
 
-	/**
-	 *
-	 * @return bool
-	 */
-	public function isEnabledRecommendation(){
+	public function isRoomTypeCalendarShowPrices() {
+		return (bool) get_option( 'mphb_room_type_calendar_show_prices', false );
+	}
+
+	public function isRoomTypeCalendarTruncatePrices() {
+		return (bool) get_option( 'mphb_room_type_calendar_truncate_prices', true );
+	}
+
+	public function isRoomTypeCalendarShowPricesCurrency() {
+		return (bool) get_option( 'mphb_room_type_calendar_show_prices_currency', false );
+	}
+	
+	public function isEnabledRecommendation() {
 		return (bool) get_option( 'mphb_enable_recommendation', true );
 	}
 

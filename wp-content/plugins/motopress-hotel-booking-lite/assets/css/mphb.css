@@ -5,7 +5,7 @@
   clear: both;
 }
 .mphb-preloader {
-  background-image: url("../../images/loading.gif?ver=4.2.5");
+  background-image: url("../../images/loading.gif?ver=4.4.4");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -21,15 +21,36 @@
   /* Available date */
   /* Date that earlier than today */
 }
+.mphb-calendar.mphb-loading .datepick {
+  position: relative;
+}
+.mphb-calendar.mphb-loading .datepick:before {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("../../images/loading.gif?ver=4.4.4");
+  background-size: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 .mphb-calendar .datepick-month-header select {
   display: inline-block !important;
   width: auto !important;
 }
 .mphb-calendar .datepick-month table {
   border-collapse: collapse;
+  height: 100%;
+  margin-bottom: 0;
 }
 .mphb-calendar .datepick-month td {
   padding: 0;
+}
+.mphb-calendar .datepick-month td > span {
+  height: 100%;
 }
 .mphb-calendar .datepick-month td .mphb-booked-date {
   /*background-color: #fed24d;*/
@@ -57,6 +78,22 @@
 .mphb-calendar .datepick-month td .mphb-not-stay-in-date {
   background-color: #ee8767;
   color: #000;
+}
+.mphb-calendar .datepick-month td span .mphb-date-cell__price {
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: keep-all;
+  font-size: 10px;
+  padding: 0;
+  margin: 0 0.125em;
+  width: auto;
+  color: inherit;
+  line-height: 1.5;
+}
+.mphb-calendar .datepick-month td span .mphb-date-cell__price span {
+  padding: 0;
+  display: inline;
+  color: inherit;
 }
 /*.mphb-room-type-gallery{
 	margin-left: 0;

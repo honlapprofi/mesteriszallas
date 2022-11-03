@@ -5,84 +5,100 @@ if ( ! defined( 'ABSPATH' ) )
 
 /**
  * Cookie_Notice_Welcome class.
- * 
+ *
  * @class Cookie_Notice_Welcome
  */
 class Cookie_Notice_Welcome {
-	
-	private $app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
-	
-	private $pricing_monthly = array();
-	private $pricing_yearly = array();
 
+	private $pricing_monthly = [];
+	private $pricing_yearly = [];
+
+	/**
+	 * Constructor.
+	 *
+	 * @return void
+	 */
 	public function __construct() {
 		// actions
-		add_action( 'admin_init', array( $this, 'init' ) );
-		add_action( 'admin_init', array( $this, 'welcome' ) );
-		add_action( 'wp_ajax_cn_welcome_screen', array( $this, 'welcome_screen' ) );
+		add_action( 'admin_init', [ $this, 'init' ] );
+		add_action( 'admin_init', [ $this, 'welcome' ] );
+		add_action( 'wp_ajax_cn_welcome_screen', [ $this, 'welcome_screen' ] );
 	}
-	
+
 	/**
-	 * Init.
+	 * Load defaults.
+	 *
+	 * @return void
 	 */
 	public function init() {
-		$this->pricing_monthly = array(
-			'compliance_monthly_notrial' => '14.95',
-			'compliance_monthly_5' => '29.95',
-			'compliance_monthly_10' => '49.95',
-			'compliance_monthly_20' => '69.95'
-		);
+		$this->pricing_monthly = [
+			'compliance_monthly_notrial'	=> '14.95',
+			'compliance_monthly_5'			=> '29.95',
+			'compliance_monthly_10'			=> '49.95',
+			'compliance_monthly_20'			=> '69.95'
+		];
 
-		$this->pricing_yearly = array(
-			'compliance_yearly_notrial' => '149.50',
-			'compliance_yearly_5' => '299.50',
-			'compliance_yearly_10' => '499.50',
-			'compliance_yearly_20' => '699.50'
-		);
+		$this->pricing_yearly = [
+			'compliance_yearly_notrial'	=> '149.50',
+			'compliance_yearly_5'		=> '299.50',
+			'compliance_yearly_10'		=> '499.50',
+			'compliance_yearly_20'		=> '699.50'
+		];
 	}
 
 	/**
 	 * Load scripts and styles - admin.
+	 *
+	 * @return void
 	 */
-	public function admin_enqueue_scripts( $page ) {		
-		if ( in_array( Cookie_Notice()->get_status(), array( 'active', 'pending' ) ) )
-			return;
-		
-		wp_enqueue_style( 'dashicons' );
-		
-		wp_enqueue_style( 'cookie-notice-modaal', plugins_url( '../assets/modaal/css/modaal.min.css', __FILE__ ), array(), Cookie_Notice()->defaults['version'] );
-		wp_enqueue_script( 'cookie-notice-modaal', plugins_url( '../assets/modaal/js/modaal.min.js', __FILE__ ), array(), Cookie_Notice()->defaults['version'] );
-		
-		wp_enqueue_style( 'cookie-notice-spectrum', plugins_url( '../assets/spectrum/spectrum.min.css', __FILE__ ), array(), Cookie_Notice()->defaults['version'] );
-		
-		wp_enqueue_style( 'cookie-notice-microtip', plugins_url( '../assets/microtip/microtip.min.css', __FILE__ ), array(), Cookie_Notice()->defaults['version'] );
+	public function admin_enqueue_scripts( $page ) {
+		// get main instance
+		$cn = Cookie_Notice();
 
-		wp_enqueue_script( 'cookie-notice-spectrum', plugins_url( '../assets/spectrum/spectrum.min.js', __FILE__ ), array(), Cookie_Notice()->defaults['version'] );
-		wp_enqueue_script( 'cookie-notice-welcome', plugins_url( '../js/admin-welcome.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-progressbar' ), Cookie_Notice()->defaults['version'] );
-		wp_enqueue_script( 'cookie-notice-braintree-client', 'https://js.braintreegateway.com/web/3.71.0/js/client.min.js', array(), null, false );
-		wp_enqueue_script( 'cookie-notice-braintree-hostedfields', 'https://js.braintreegateway.com/web/3.71.0/js/hosted-fields.min.js', array(), null, false );
-		wp_enqueue_script( 'cookie-notice-braintree-paypal', 'https://js.braintreegateway.com/web/3.71.0/js/paypal-checkout.min.js', array(), null, false );
-		
-		$js_args = array(
-			'ajaxURL'		=> admin_url( 'admin-ajax.php' ),
-			'nonce'			=> wp_create_nonce( 'cookie-notice-welcome' ),
-			'initModal'		=> get_transient( 'cn_show_welcome' ), // welcome modal
-			'error'			=> __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ),
-			'statusPassed'	=> __( 'Passed', 'cookie-notice' ),
-			'statusFailed'	=> __( 'Failed', 'cookie-notice' ),
-			'paidMonth'	=> __( 'monthly', 'cookie-notice' ),
-			'paidYear'	=> __( 'yearly', 'cookie-notice' ),
-			'pricingMonthly' => $this->pricing_monthly,
-			'pricingYearly' => $this->pricing_yearly,
-			'complianceStatus' => Cookie_Notice()->get_status(),
-			'complianceFailed' => __( '<em>Compliance Failed!</em>Your website does not achieve minimum viable compliance. <b><a href="#" class="cn-sign-up">Sign up to Cookie Compliance</a></b> to bring your site into compliance with the latest data privacy rules and regulations.', 'cookie-notice' ),
-			'compliancePassed' => __( '<em>Compliance Passed!</em>Congratulations. Your website meets minimum viable compliance.', 'cookie-notice' ),
-			'licensesAvailable' => __( 'available', 'cookie-notice' ),
-			'invalidFields'	=> __( 'Please fill all the required fields.', 'cookie-notice' )
-		);
-		
+		if ( $cn->check_status( $cn->get_status() ) )
+			return;
+
+		wp_enqueue_style( 'dashicons' );
+
+		wp_enqueue_style( 'cookie-notice-modaal', COOKIE_NOTICE_URL . '/assets/modaal/css/modaal.min.css', [], $cn->defaults['version'] );
+		wp_enqueue_script( 'cookie-notice-modaal', COOKIE_NOTICE_URL . '/assets/modaal/js/modaal.min.js', [], $cn->defaults['version'] );
+
+		wp_enqueue_style( 'cookie-notice-spectrum', COOKIE_NOTICE_URL . '/assets/spectrum/spectrum.min.css', [], $cn->defaults['version'] );
+		wp_enqueue_style( 'cookie-notice-microtip', COOKIE_NOTICE_URL . '/assets/microtip/microtip.min.css', [], $cn->defaults['version'] );
+
+		wp_enqueue_script( 'cookie-notice-spectrum', COOKIE_NOTICE_URL . '/assets/spectrum/spectrum.min.js', [], $cn->defaults['version'] );
+		wp_enqueue_script( 'cookie-notice-welcome', COOKIE_NOTICE_URL . '/js/admin-welcome.js', [ 'jquery', 'jquery-ui-core', 'jquery-ui-progressbar' ], $cn->defaults['version'] );
+		wp_enqueue_script( 'cookie-notice-braintree-client', 'https://js.braintreegateway.com/web/3.71.0/js/client.min.js', [], null, false );
+		wp_enqueue_script( 'cookie-notice-braintree-hostedfields', 'https://js.braintreegateway.com/web/3.71.0/js/hosted-fields.min.js', [], null, false );
+		wp_enqueue_script( 'cookie-notice-braintree-paypal', 'https://js.braintreegateway.com/web/3.71.0/js/paypal-checkout.min.js', [], null, false );
+
+		// check network
+		$network = $cn->is_network_admin();
+
+		$js_args = [
+			'ajaxURL'			=> admin_url( 'admin-ajax.php' ),
+			'network'			=> (int) $network,
+			'nonce'				=> wp_create_nonce( 'cookie-notice-welcome' ),
+			'initModal'			=> $network ? get_site_transient( 'cn_show_welcome' ) : get_transient( 'cn_show_welcome' ), // welcome modal
+			'error'				=> __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ),
+			'statusPassed'		=> __( 'Passed', 'cookie-notice' ),
+			'statusFailed'		=> __( 'Failed', 'cookie-notice' ),
+			'paidMonth'			=> __( 'monthly', 'cookie-notice' ),
+			'paidYear'			=> __( 'yearly', 'cookie-notice' ),
+			'pricingMonthly'	=> $this->pricing_monthly,
+			'pricingYearly'		=> $this->pricing_yearly,
+			'complianceStatus'	=> $cn->get_status(),
+			'complianceFailed'	=> __( '<em>Compliance Failed!</em>Your website does not achieve minimum viable compliance. <b><a href="#" class="cn-sign-up">Sign up to Cookie Compliance</a></b> to bring your site into compliance with the latest data privacy rules and regulations.', 'cookie-notice' ),
+			'compliancePassed'	=> __( '<em>Compliance Passed!</em>Congratulations. Your website meets minimum viable compliance.', 'cookie-notice' ),
+			'licensesAvailable'	=> __( 'available', 'cookie-notice' ),
+			'invalidFields'		=> __( 'Please fill all the required fields.', 'cookie-notice' )
+		];
+
 		// delete the show modal transient
-		delete_transient( 'cn_show_welcome' );
+		if ( $network )
+			delete_site_transient( 'cn_show_welcome' );
+		else
+			delete_transient( 'cn_show_welcome' );
 
 		wp_localize_script(
 			'cookie-notice-welcome',
@@ -90,9 +106,9 @@ class Cookie_Notice_Welcome {
 			$js_args
 		);
 
-		wp_enqueue_style( 'cookie-notice-welcome', plugins_url( '../css/admin-welcome.css', __FILE__ ) );
+		wp_enqueue_style( 'cookie-notice-welcome', COOKIE_NOTICE_URL . '/css/admin-welcome.css' );
 	}
-	
+
 	/**
 	 * Add one or more classes to the body tag in the dashboard.
 	 *
@@ -101,44 +117,48 @@ class Cookie_Notice_Welcome {
 	 */
 	public function admin_body_class( $classes ) {
 		$classes .= ' folded';
-		
+
 		return $classes;
 	}
 
 	/**
 	 * Send user to the welcome page on first activation.
 	 *
+	 * @global string $pagenow
+	 *
 	 * @return void
 	 */
 	public function welcome() {
 		global $pagenow;
-		
+
 		if ( $pagenow != 'admin.php' )
 			return;
-		
+
 		if ( isset( $_GET['page'] ) && $_GET['page'] !== 'cookie-notice' )
 			return;
 
-		// bail if activating from network, or bulk, or within an iFrame
-		if ( is_network_admin() || isset( $_GET['activate-multi'] ) || defined( 'IFRAME_REQUEST' ) )
+		// bail if bulk activating or within an iframe
+		if ( isset( $_GET['activate-multi'] ) || defined( 'IFRAME_REQUEST' ) )
 			return;
 
-		if ( (isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action']) && (isset( $_GET['plugin'] ) && strstr( $_GET['plugin'], 'cookie-notice.php' )) )
+		if ( ( isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action'] ) && ( isset( $_GET['plugin'] ) && strstr( $_GET['plugin'], 'cookie-notice.php' ) ) )
 			return;
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
-		add_action( 'admin_footer', array( $this, 'admin_footer' ) );
-		
-		// add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
+		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
+		add_action( 'admin_footer', [ $this, 'admin_footer' ] );
+
+		// add_filter( 'admin_body_class', [ $this, 'admin_body_class' ] );
 	}
-		
+
 	/**
 	 * Welcome modal container.
+	 *
+	 * @return void
 	 */
 	public function admin_footer() {
 		echo '<button id="cn-modal-trigger" style="display:none;"></button>';
 	}
-	
+
 	/**
 	 * Output the welcome screen.
 	 *
@@ -151,34 +171,31 @@ class Cookie_Notice_Welcome {
 
 		$this->welcome_screen( $screen );
 	}
-	
+
 	/**
 	 * Render welcome screen sidebar step.
-	 * 
-	 * @param int $step
-	 * @return mixed
+	 *
+	 * @param int|string $screen
+	 * @param bool $echo
+	 * @return string|void
 	 */
 	public function welcome_screen( $screen, $echo = true ) {
-		global $current_user;
-		
 		if ( ! current_user_can( 'install_plugins' ) )
 			wp_die( _( 'You do not have permission to access this page.', 'cookie-notice' ) );
 
-		$sidebars = array( 'about', 'login', 'register', 'configure', 'select_plan', 'success' );
-		$steps = array( 1, 2, 3, 4 );
+		$sidebars = [ 'about', 'login', 'register', 'configure', 'select_plan', 'success' ];
+		$steps = [ 1, 2, 3, 4 ];
 		$screens = array_merge( $sidebars, $steps );
-
-		$is_ajax = defined( 'DOING_AJAX' ) && DOING_AJAX;
 		$screen = ! empty( $screen ) && in_array( $screen, $screens ) ? $screen : ( isset( $_REQUEST['screen'] ) && in_array( $_REQUEST['screen'], $screens ) ? $_REQUEST['screen'] : '' );
 
 		if ( empty( $screen ) )
 			wp_die( _( 'You do not have permission to access this page.', 'cookie-notice' ) );
 
-		if ( $is_ajax && ! check_ajax_referer( 'cookie-notice-welcome', 'nonce' ) )
+		if ( wp_doing_ajax() && ! check_ajax_referer( 'cookie-notice-welcome', 'nonce' ) )
 			wp_die( _( 'You do not have permission to access this page.', 'cookie-notice' ) );
 
 		// get token data
-		$token_data = get_transient( 'cookie_notice_app_token' );
+		// $token_data = get_transient( 'cookie_notice_app_token' );
 
 		// step screens
 		if ( in_array( $screen, $steps ) ) {
@@ -187,7 +204,7 @@ class Cookie_Notice_Welcome {
 
 			if ( $screen == 1 ) {
 				$html .= $this->welcome_screen( 'about', false );
-				
+
 				$html .= '
 				<div class="cn-content cn-sidebar-visible">
 					<div class="cn-inner">
@@ -198,7 +215,7 @@ class Cookie_Notice_Welcome {
 								<p><b>' . __( 'Cookie Compliance is a free web application that enables websites to take a proactive approach to data protection and consent laws.', 'cookie-notice' ) . '</b></p>
 								<div class="cn-hero-image">
 									<div class="cn-flex-item">
-										<img src="' . plugins_url( '../img/screen-compliance.png', __FILE__ ) . '" alt="Cookie Notice dashboard" />
+										<img src="' . COOKIE_NOTICE_URL . '/img/screen-compliance.png" alt="Cookie Notice dashboard" />
 									</div>
 								</div>
 								<p>' . __( 'It is the first solution to offer <b>intentional consent</b>, a new consent framework that incorporates the latest guidelines from over 100+ countries, and emerging standards from leading international organizations like the IEEE.', 'cookie-notice' ) . '</p>
@@ -210,12 +227,11 @@ class Cookie_Notice_Welcome {
 								<button type="button" class="cn-btn cn-btn-lg cn-btn-transparent cn-skip-button">' . __( 'Skip for now', 'cookie-notice' ) . '</button>
 							</div>
 							';
-			
+
 				$html .= '
 						</div>
 					</div>
 				</div>';
-
 			} elseif ( $screen == 2 ) {
 				$html .= $this->welcome_screen( 'configure', false );
 
@@ -224,11 +240,8 @@ class Cookie_Notice_Welcome {
 					<iframe id="cn_iframe_id" src="' . home_url( '/?cn_preview_mode=1' ) . '"></iframe>
 				</div>';
 			} elseif ( $screen == 3 ) {
-				// get options
-				$app_config = get_transient( 'cookie_notice_app_config' );
-
 				$html .= $this->welcome_screen( 'register', false );
-				
+
 				$html .= '
 				<div class="cn-content cn-sidebar-visible">
 					<div class="cn-inner">
@@ -238,48 +251,8 @@ class Cookie_Notice_Welcome {
 							<div class="cn-lead">
 								<p>' . __( 'Take a proactive approach to data protection and consent laws by signing up for Cookie Compliance account. Then select a limited Basic Plan for free or get one of the Professional Plans for unlimited visits, consent storage, languages and customizations.', 'cookie-notice' ) . '</p>
 							</div>';
-				/*
-							<div class="cn-billing-wrapper cn-radio-wrapper">
-								<label for="cn_billing_monthly"><input id="cn_billing_monthly" type="radio" name="cn_billing" value="monthly" checked><span><span>' . __( 'Billing Monthly', 'cookie-notice' ) . '</span><span class="cn-plan-overlay"></span></span></label><label for="cn_billing_yearly"><input id="cn_billing_yearly" type="radio" name="cn_billing" value="yearly"><span><span>' . __( 'Billing Yearly', 'cookie-notice' ) . '</span> <span class="cn-price-off">(' . __( '15% off', 'cookie-notice' ) . ')</span><span class="cn-plan-overlay"></span></span></label>
-							</div>
-				
-				$html .= '
-							<div class="cn-hero-image">
-								<div class="cn-flex-item">
-									<div class="cn-logo-container">
-										<img src="' . plugins_url( '../img/cookie-notice-logo-dark.png', __FILE__ ) . '">
-										<span class="cn-badge">' . __( 'WP Plugin', 'cookie-notice' ) . '</span>
-									</div>
-									<img src="' . plugins_url( '../img/screen-notice.png', __FILE__ ) . '" alt="Cookie Notice dashboard" />
-									<ul class="cn-features-list">
-										<li><span>' . __( '<b>Free</b>', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Customizable notice message', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Consent on click, scroll or close', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Link to Privacy Policy page', 'cookie-notice' ) . '</span></li>
-									</ul>
-								</div>
-								<div class="cn-flex-item">
-									<img src="//cno0-53eb.kxcdn.com/screen-plus.png" alt="Cookie Notice + Compliance" />
-								</div>
-								<div class="cn-flex-item">
-									<div class="cn-logo-container">
-										<img src="' . plugins_url( '../img/cookie-compliance-logo-dark.png', __FILE__ ) . '">
-										<span class="cn-badge">' . __( 'Web App', 'cookie-notice' ) . '</span>
-									</div>
-									<img src="' . plugins_url( '../img/screen-compliance.png', __FILE__ ) . '"alt="Cookie Compliance dashboard" />
-									<ul class="cn-features-list">
-										<li><span>' . __( '<b>Free plan</b>', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Consent Analytics Dashboard', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Cookie Autoblocking', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Cookie Categories', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( 'Proof-of-Consent Storage', 'cookie-notice' ) . '</span></li>
-										<li><span>' . __( "Link to 'Do Not Sell' page", 'cookie-notice' ) . '</span></li>
-									</ul>
-								</div>
-							</div>';
-				*/
 
-				$html .= '	
+				$html .= '
 							<h3 class="cn-pricing-select">' . __( 'Compliance Plans', 'cookie-notice' ) . ':</h3>
 							<div class="cn-pricing-type cn-radio-wrapper">
 								<div>
@@ -301,7 +274,8 @@ class Cookie_Notice_Welcome {
 											<p class="cn-included"><span class="cn-icon"></span>' . __( 'GDPR, CCPA, ePrivacy, PECR compliance', 'cookie-notice' ) . '</p>
 											<p class="cn-included"><span class="cn-icon"></span>' . __( 'Consent Analytics Dashboard', 'cookie-notice' ) . '</p>
 											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>1,000</b> visits / month', 'cookie-notice' ) . '</p>
-											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>30 days</b> consent storage', 'cookie-notice' ) . '</p>	
+											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>30 days</b> consent storage', 'cookie-notice' ) . '</p>
+											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>Geolocation</b> support', 'cookie-notice' ) . '</p>
 											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>1 additional</b> language', 'cookie-notice' ) . '</p>
 											<p class="cn-excluded"><span class="cn-icon"></span>' . __( '<b>Basic</b> Support', 'cookie-notice' ) . '</p>
 										</div>
@@ -330,9 +304,10 @@ class Cookie_Notice_Welcome {
 											<p class="cn-included"><span class="cn-icon"></span>' . __( 'GDPR, CCPA, ePrivacy, PECR compliance', 'cookie-notice' ) . '</p>
 											<p class="cn-included"><span class="cn-icon"></span>' . __( 'Consent Analytics Dashboard', 'cookie-notice' ) . '</p>
 											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Unlimited</b> visits', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Lifetime</b> consent storage', 'cookie-notice' ) . '</p>	
+											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Lifetime</b> consent storage', 'cookie-notice' ) . '</p>
+											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Geolocation</b> support', 'cookie-notice' ) . '</p>
 											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Unlimited</b> languages', 'cookie-notice' ) . '</p>
-											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Premium</b> Support', 'cookie-notice' ) . '</p>
+											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Priority</b> Support', 'cookie-notice' ) . '</p>
 										</div>
 										<div class="cn-pricing-footer">
 											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Start Premium', 'cookie-notice' ) . '</button>
@@ -343,16 +318,14 @@ class Cookie_Notice_Welcome {
 							<div class="cn-buttons">
 								<button type="button" class="cn-btn cn-btn-lg cn-btn-transparent cn-skip-button">' . __( "I don’t want to create an account now", 'cookie-notice' ) . '</button>
 							</div>';
-				
-				
+
 				$html .= '
 						</div>
 					</div>
 				</div>';
-	
 			} elseif ( $screen == 4 ) {
 				$html .= $this->welcome_screen( 'success', false );
-				
+
 				$html .= '
 				<div class="cn-content cn-sidebar-visible">
 					<div class="cn-inner">
@@ -363,7 +336,7 @@ class Cookie_Notice_Welcome {
 								<p>' . __( 'Log in to your Cookie Compliance&trade; account and continue configuring your Privacy Experience.', 'cookie-notice' ) . '</p>
 							</div>
 							<div class="cn-buttons">
-								<a href="' . $this->app_login_url . '" class="cn-btn cn-btn-lg" target="_blank">' . __( 'Go to Application', 'cookie-notice' ) . '</a>
+								<a href="' . Cookie_Notice()->get_url( 'login' ) . '" class="cn-btn cn-btn-lg" target="_blank">' . __( 'Go to Application', 'cookie-notice' ) . '</a>
 							</div>
 						</div>
 					</div>
@@ -384,8 +357,8 @@ class Cookie_Notice_Welcome {
 					<div class="cn-inner">
 						<div class="cn-header">
 							<div class="cn-top-bar">
-								<div class="cn-logo"><img src="' . plugins_url( '../img/cookie-notice-logo.png', __FILE__ ) . '" alt="Cookie Notice logo" /></div>
-							</div>	
+								<div class="cn-logo"><img src="' . COOKIE_NOTICE_URL . '/img/cookie-notice-logo.png" alt="Cookie Notice logo" /></div>
+							</div>
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Compliance check', 'cookie-notice' ) . '</h2>
@@ -413,8 +386,8 @@ class Cookie_Notice_Welcome {
 					<div class="cn-inner">
 						<div class="cn-header">
 							<div class="cn-top-bar">
-								<div class="cn-logo"><img src="' . plugins_url( '../img/cookie-notice-logo.png', __FILE__ ) . '" alt="Cookie Notice logo" /></div>
-							</div>	
+								<div class="cn-logo"><img src="' . COOKIE_NOTICE_URL . '/img/cookie-notice-logo.png" alt="Cookie Notice logo" /></div>
+							</div>
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Live Setup', 'cookie-notice' ) . '</h2>
@@ -474,11 +447,11 @@ class Cookie_Notice_Welcome {
 											<div class="cn-field cn-field-radio-image">
 												<label>' . __( 'Select your preferred display position', 'cookie-notice' ) . '​:</label>
 												<div class="cn-radio-image-wrapper">
-													<label for="cn_position_bottom"><input id="cn_position_bottom" type="radio" name="cn_position" value="bottom" title="' . __( 'Bottom', 'cookie-notice' ) . '" checked><img src="' . plugins_url( '../img/layout-bottom.png', __FILE__ ) . '" width="24" height="24"></label>
-													<label for="cn_position_top"><input id="cn_position_top" type="radio" name="cn_position" value="top" title="' . __( 'Top', 'cookie-notice' ) . '"><img src="' . plugins_url( '../img/layout-top.png', __FILE__ ) . '" width="24" height="24"></label>
-													<label for="cn_position_left"><input id="cn_position_left" type="radio" name="cn_position" value="left" title="' . __( 'Left', 'cookie-notice' ) . '"><img src="' . plugins_url( '../img/layout-left.png', __FILE__ ) . '" width="24" height="24"></label>
-													<label for="cn_position_right"><input id="cn_position_right" type="radio" name="cn_position" value="right" title="' . __( 'Right', 'cookie-notice' ) . '"><img src="' . plugins_url( '../img/layout-right.png', __FILE__ ) . '" width="24" height="24"></label>
-													<label for="cn_position_center"><input id="cn_position_center" type="radio" name="cn_position" value="center" title="' . __( 'Center', 'cookie-notice' ) . '"><img src="' . plugins_url( '../img/layout-center.png', __FILE__ ) . '" width="24" height="24"></label>
+													<label for="cn_position_bottom"><input id="cn_position_bottom" type="radio" name="cn_position" value="bottom" title="' . __( 'Bottom', 'cookie-notice' ) . '" checked><img src="' . COOKIE_NOTICE_URL . '/img/layout-bottom.png" width="24" height="24"></label>
+													<label for="cn_position_top"><input id="cn_position_top" type="radio" name="cn_position" value="top" title="' . __( 'Top', 'cookie-notice' ) . '"><img src="' . COOKIE_NOTICE_URL . '/img/layout-top.png" width="24" height="24"></label>
+													<label for="cn_position_left"><input id="cn_position_left" type="radio" name="cn_position" value="left" title="' . __( 'Left', 'cookie-notice' ) . '"><img src="' . COOKIE_NOTICE_URL . '/img/layout-left.png" width="24" height="24"></label>
+													<label for="cn_position_right"><input id="cn_position_right" type="radio" name="cn_position" value="right" title="' . __( 'Right', 'cookie-notice' ) . '"><img src="' . COOKIE_NOTICE_URL . '/img/layout-right.png" width="24" height="24"></label>
+													<label for="cn_position_center"><input id="cn_position_center" type="radio" name="cn_position" value="center" title="' . __( 'Center', 'cookie-notice' ) . '"><img src="' . COOKIE_NOTICE_URL . '/img/layout-center.png" width="24" height="24"></label>
 												</div>
 											</div>
 											<div class="cn-field cn-fieldset">
@@ -511,8 +484,8 @@ class Cookie_Notice_Welcome {
 					<div class="cn-inner">
 						<div class="cn-header">
 							<div class="cn-top-bar">
-								<div class="cn-logo"><img src="' . plugins_url( '../img/cookie-notice-logo.png', __FILE__ ) . '" alt="Cookie Notice logo" /></div>
-							</div>	
+								<div class="cn-logo"><img src="' . COOKIE_NOTICE_URL . '/img/cookie-notice-logo.png" alt="Cookie Notice logo" /></div>
+							</div>
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Compliance account', 'cookie-notice' ) . '</h2>
@@ -610,9 +583,7 @@ class Cookie_Notice_Welcome {
 
 				$html .= '
 									</form>
-								</div>';
-				
-				$html .= '
+								</div>
 							</div>
 						</div>';
 			} elseif ( $screen === 'login' ) {
@@ -621,8 +592,8 @@ class Cookie_Notice_Welcome {
 					<div class="cn-inner">
 						<div class="cn-header">
 							<div class="cn-top-bar">
-								<div class="cn-logo"><img src="' . plugins_url( '../img/cookie-notice-logo.png', __FILE__ ) . '" alt="Cookie Notice logo" /></div>
-							</div>	
+								<div class="cn-logo"><img src="' . COOKIE_NOTICE_URL . '/img/cookie-notice-logo.png" alt="Cookie Notice logo" /></div>
+							</div>
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Compliance Sign in', 'cookie-notice' ) . '</h2>
@@ -644,7 +615,7 @@ class Cookie_Notice_Welcome {
 											<div class="cn-field cn-field-submit cn-nav">
 												<button type="submit" class="cn-btn cn-screen-button" tabindex="4" ' . /* data-screen="4" */ '><span class="cn-spinner"></span>' . __( 'Sign in', 'cookie-notice' ) . '</button>
 											</div>';
-				
+
 				// get site language
 				$locale = get_locale();
 				$locale_code = explode( '_', $locale );
@@ -658,9 +629,7 @@ class Cookie_Notice_Welcome {
 										</form>
 										<p>' . __( 'Don\'t have an account yet?', 'cookie-notice' ) . ' <a href="#" class="cn-screen-button" data-screen="register">' . __( 'Sign up', 'cookie-notice' ) . '</a></p>
 									</div>
-								</div>';
-				
-				$html .= '
+								</div>
 								<div id="cn-accordion-billing" class="cn-accordion-item cn-form-container cn-collapsed cn-disabled" tabindex="-1">
 									<div class="cn-accordion-header cn-form-header">
 										<button class="cn-accordion-button" type="button">2. ' . __( 'Select Plan', 'cookie-notice' ) . '</button>
@@ -680,7 +649,7 @@ class Cookie_Notice_Welcome {
 										<div class="cn-field cn-fieldset" id="cn_submit_free">
 											<button type="submit" class="cn-btn cn-screen-button" tabindex="4" data-screen="4"><span class="cn-spinner"></span>' . __( 'Confirm', 'cookie-notice' ) . '</button>
 										</div>
-										
+
 										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_pro">
 											<input type="hidden" name="cn_payment_identifier" value="" />
 											<div class="cn-field cn-field-radio">
@@ -712,7 +681,7 @@ class Cookie_Notice_Welcome {
 												<div id="cn_paypal_button"></div>
 											</div>
 										</div>
-										
+
 										<div class="cn-field cn-fieldset cn-hidden" id="cn_submit_license">
 											<div class="cn-field cn-field-select" id="cn-subscriptions-list">
 												<label for="cn-subscription-select">' . __( 'Select subscription', 'cookie-notice' ) . '​</label>
@@ -735,16 +704,15 @@ class Cookie_Notice_Welcome {
 					<div class="cn-inner">
 						<div class="cn-header">
 							<div class="cn-top-bar">
-								<div class="cn-logo"><img src="' . plugins_url( '../img/cookie-notice-logo.png', __FILE__ ) . '" alt="Cookie Notice logo" /></div>
-							</div>	
+								<div class="cn-logo"><img src="' . COOKIE_NOTICE_URL . '/img/cookie-notice-logo.png" alt="Cookie Notice logo" /></div>
+							</div>
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Success!', 'cookie-notice' ) . '</h2>
-							<div class="cn-lead"><p><b>' . __( 'You have successfully upgraded your website to Cookie Compliance&trade;', 'cookie-notice' ) . '</b></p><p>' . sprintf( __( 'Go to Cookie Compliance&trade; application now. Or access it anytime from your <a href="%s">Cookie Notice settings page</a>.', 'cookie-notice' ), esc_url( admin_url( 'admin.php?page=cookie-notice' ) ) ) . '</p></div>
+							<div class="cn-lead"><p><b>' . __( 'You have successfully upgraded your website to Cookie Compliance&trade;', 'cookie-notice' ) . '</b></p><p>' . sprintf( __( 'Go to Cookie Compliance&trade; application now. Or access it anytime from your <a href="%s">Cookie Notice settings page</a>.', 'cookie-notice' ), esc_url( Cookie_Notice()->is_network_admin() ? network_admin_url( 'admin.php?page=cookie-notice' ) : admin_url( 'admin.php?page=cookie-notice' ) ) ) . '</p></div>
 						</div>';
 			}
 
-			
 			$html .= '
 					<div class="cn-footer">';
 			/*
@@ -764,7 +732,6 @@ class Cookie_Notice_Welcome {
 					</div>
 				</div>
 			</div>';
-					
 		}
 
 		if ( $echo )
@@ -772,7 +739,7 @@ class Cookie_Notice_Welcome {
 		else
 			return $html;
 
-		if ( $is_ajax )
+		if ( wp_doing_ajax() )
 			exit();
 	}
 }

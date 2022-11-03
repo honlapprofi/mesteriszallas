@@ -6,7 +6,12 @@ class BlockScriptManager extends ScriptManager {
     public function __construct() {
         parent::__construct();
 
-        add_filter('block_categories', array($this, 'registerBlockCategory'));
+        if ( class_exists('WP_Block_Editor_Context') ) {
+            add_filter('block_categories_all', array($this, 'registerBlockCategory'));
+        } else {
+            add_filter('block_categories', array($this, 'registerBlockCategory'));
+        }
+
         add_action('init', array($this, 'register'));
     }
 
@@ -73,6 +78,9 @@ class BlockScriptManager extends ScriptManager {
         $this->registerBlock('motopress-hotel-booking/availability-calendar', 'renderAvailabilityCalendar', array(
             'id'           => array('type' => 'string', 'default' => ''),
             'monthstoshow' => array('type' => 'string', 'default' => ''),
+            'display_price' => array('type' => 'boolean', 'default' => false),
+            'truncate_price' => array('type' => 'boolean', 'default' => true),
+            'display_currency' => array('type' => 'boolean', 'default' => false),
             'alignment'    => array('type' => 'string', 'default' => ''),
             'className'    => array('type' => 'string', 'default' => '')
         ));

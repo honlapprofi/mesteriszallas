@@ -125,7 +125,8 @@ class TaxesAndFeesMenuPage extends AbstractMenuPage {
 					'default'		 => 'per_guest_per_day',
 					'list'			 => array(
 						'per_guest_per_day'		 => __( 'Per guest / per day', 'motopress-hotel-booking' ),
-						'per_room_per_day'		 => __( 'Per accommodation / per day', 'motopress-hotel-booking' )
+						'per_room_per_day'		 => __( 'Per accommodation / per day', 'motopress-hotel-booking' ),
+						'per_room_percentage'	 => __( 'Per accommodation (%)', 'motopress-hotel-booking' )
 					)
 				) ),
 				FieldFactory::create( 'amount', array(
@@ -135,7 +136,7 @@ class TaxesAndFeesMenuPage extends AbstractMenuPage {
 					'default'		 => array( 0, 0 ),
 					'dependency'	 => array(
 						'input'					 => 'type',
-						'single_input_on'		 => array( 'per_room_per_day' ),
+						'single_input_on'		 => array( 'per_room_per_day', 'per_room_percentage' ),
 						'multiple_inputs_on'	 => array( 'per_guest_per_day' )
 					)
 				) ),
@@ -144,7 +145,11 @@ class TaxesAndFeesMenuPage extends AbstractMenuPage {
 					'label'			 => __( 'Limit', 'motopress-hotel-booking' ) . mphb_help_tip(
 										__( 'How often this fee is charged. Set 0 to charge each day of the stay period. Set 1 to charge once.', 'motopress-hotel-booking' ) ),
 					'inner_label'	 => __( 'days', 'motopress-hotel-booking' ),
-					'min'			 => 0
+					'min'			 => 0,
+					'dependency'	 => array(
+						'input'					 => 'type',
+						'disable_on'			 => array( 'per_room_percentage' )
+					)
 				) ),
 				FieldFactory::create( 'included', array(
 					'type'			 => 'single-checkbox',

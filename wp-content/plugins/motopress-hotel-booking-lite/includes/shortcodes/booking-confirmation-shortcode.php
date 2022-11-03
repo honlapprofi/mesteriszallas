@@ -20,7 +20,7 @@ class BookingConfirmationShortcode extends AbstractShortcode
     protected $name = 'mphb_booking_confirmation';
     protected $payment = null;
 
-    public function render($atts, $content = '', $shortcodeName)
+    public function render($atts, $content, $shortcodeName)
     {
         $defaultAtts = array(
             'class' => ''
@@ -136,11 +136,15 @@ class BookingConfirmationShortcode extends AbstractShortcode
 
         do_action('mphb_sc_booking_confirmation_before_confirmation_messages');
 
-        mphb_get_template_part('shortcodes/booking-confirmation/received');
+        if ( BookingConfirmationAction::STATUS_CONFIRMED == $status ||
+            BookingConfirmationAction::STATUS_ALREADY_CONFIRMED == $status ) {
+
+            mphb_get_template_part('shortcodes/booking-confirmation/received');
+        }
 
         do_action('mphb_sc_booking_confirmation_between_confirmation_messages');
 
-        switch ($status) {
+        switch ( $status ) {
             case BookingConfirmationAction::STATUS_INVALID_REQUEST:
                 mphb_get_template_part('shortcodes/booking-confirmation/invalid-request');
                 break;

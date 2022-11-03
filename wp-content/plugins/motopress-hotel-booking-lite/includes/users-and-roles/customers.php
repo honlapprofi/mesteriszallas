@@ -43,7 +43,7 @@ class Customers {
         global $wpdb;
         
         $table = $wpdb->prefix . 'mphb_customers';
-        $users = $wpdb->users;
+        $users = '`' . DB_NAME . '`.' . $wpdb->users;
         
         if( $all ) {
             $customer = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $table as customers LEFT JOIN $users as users ON customers.user_id = users.ID WHERE customers.email=%s", $email ), ARRAY_A );
@@ -75,7 +75,7 @@ class Customers {
         global $wpdb;
         
         $table = $wpdb->prefix . 'mphb_customers';
-        $users = $wpdb->users;
+        $users = '`' . DB_NAME . '`.' . $wpdb->users;
         
         if( $all ) {
             $customer = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $table as customers LEFT JOIN $users as users ON customers.user_id = users.ID WHERE customers.user_id=%d", $userId ), ARRAY_A );
@@ -106,7 +106,7 @@ class Customers {
         global $wpdb;
         
         $table = $wpdb->prefix . 'mphb_customers';
-        $users = $wpdb->users;
+        $users = '`' . DB_NAME . '`.' . $wpdb->users;
         
         $customer = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $table as customers LEFT JOIN $users as users ON customers.user_id = users.ID WHERE customers.customer_id=%d", $id ), ARRAY_A );
 

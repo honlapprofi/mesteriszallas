@@ -324,12 +324,19 @@ class StepCheckout extends Step {
 	 * @since 4.2.1
 	 */
 	public function redirectOnFailedLogin() {
-		$referrer = $_SERVER['HTTP_REFERER'];
+
+		$referrer = wp_get_referer();
+
+		if ( false === $referrer ) {
+            return;
+        }
+
         $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
         $page = get_post( $checkoutPageId );
         $slug = $page->post_name;
         
-        if( strstr( $referrer, $slug ) ) {
+        if ( strstr( $referrer, $slug ) ) {
+
             $redirectTo = add_query_arg( 'login_failed', 'error', $referrer );
             wp_safe_redirect( $redirectTo );
             exit;
@@ -341,12 +348,19 @@ class StepCheckout extends Step {
 	 * @since 4.2.1
 	 */
 	public function redirectAfterLogout() {
-		$referrer = $_SERVER['HTTP_REFERER'];
+
+		$referrer = wp_get_referer();
+
+		if ( false === $referrer ) {
+            return;
+        }
+
         $checkoutPageId = MPHB()->settings()->pages()->getCheckoutPageId();
         $page = get_post( $checkoutPageId );
         $slug = $page->post_name;
         
-        if( strstr( $referrer, $slug ) ) {
+        if ( strstr( $referrer, $slug ) ) {
+			
             wp_safe_redirect( $referrer );
             exit;
         }

@@ -18,7 +18,7 @@ abstract class AbstractShortcode {
 		add_shortcode( $this->name, array( $this, 'render' ) );
 	}
 
-	abstract public function render( $atts, $content = '', $name );
+	abstract public function render( $atts, $content, $shortcodeName );
 
 	/**
 	 *

@@ -203,7 +203,7 @@ class MainWP_Custom_Post_Type {
 	 *
 	 * @return array|bool|string[] Response array, true|false, Error message.
 	 */
-	private function insert_post( $data, $edit_id, $parent_id = 0 ) {
+	private function insert_post( $data, $edit_id, $parent_id = 0 ) { // phpcs:ignore -- required to achieve desired results, pull request solutions appreciated.
 		$data_insert                = array();
 		$data_post                  = $data['post'];
 		$data_insert['post_author'] = get_current_user_id();
@@ -280,7 +280,13 @@ class MainWP_Custom_Post_Type {
 		if ( ! empty( $parent_id ) ) {
 			$data_insert['post_parent'] = $parent_id;
 		}
-		$post_id = wp_insert_post( $data_insert, true );
+
+		if ( ! empty( $edit_id ) ) {
+			$post_id = wp_update_post( $data_insert, true );
+		} else {
+			$post_id = wp_insert_post( $data_insert, true );
+		}
+
 		if ( is_wp_error( $post_id ) ) {
 			return array( 'error' => __( 'Error when insert new post:', $this->plugin_translate ) . ' ' . $post_id->get_error_message() );
 		}

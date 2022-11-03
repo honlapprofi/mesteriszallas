@@ -248,6 +248,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return mixed
 	 */
+	#[\ReturnTypeWillChange]
 	public function current(){
 		return current( $this->container );
 	}
@@ -259,6 +260,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return mixed
 	 */
+	#[\ReturnTypeWillChange]
 	public function key(){
 		return key( $this->container );
 	}
@@ -270,6 +272,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function next(){
 		next( $this->container );
 	}
@@ -281,6 +284,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function rewind(){
 		reset( $this->container );
 	}
@@ -292,6 +296,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return bool
 	 */
+	#[\ReturnTypeWillChange]
 	public function valid(){
 		return $this->offsetExists( $this->key() );
 	}
@@ -307,6 +312,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 *
 	 * @return int
 	 */
+	#[\ReturnTypeWillChange]
 	public function count(){
 		return count( $this->container );
 	}

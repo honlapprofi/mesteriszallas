@@ -20,13 +20,31 @@ class ApiKeysAjax {
 
 	public function registerAjaxScript(){
 		// API settings.
-		if ( isset( $_GET['page'], $_GET['tab'] ) && 'mphb_settings' === $_GET['page'] && 'advanced' === $_GET['tab'] && empty( $_GET['subtab'] ) ) {
-			wp_register_script( 'mphb-api-keys-page',
+		if ( isset( $_GET['page'], $_GET['tab'] ) &&
+		     'mphb_settings' === $_GET['page'] &&
+		     'advanced' === $_GET['tab'] &&
+		     empty( $_GET['subtab'] )
+		) {
+			wp_enqueue_script( 'jquery-blockui',
+				MPHB()->getPluginUrl( 'includes/advanced/admin/tab/subtabs/api-keys/js/lib/jquery.blockUI.js' ),
+				array( 'jquery' ),
+				'2.70',
+				true
+			);
+
+			wp_enqueue_script( 'qrcode',
+				MPHB()->getPluginUrl( 'includes/advanced/admin/tab/subtabs/api-keys/js/lib/jquery.qrcode.js' ),
+				array( 'jquery' ),
+				false,
+				true
+			);
+
+			wp_enqueue_script( 'mphb-api-keys-page',
 				MPHB()->getPluginUrl( 'includes/advanced/admin/tab/subtabs/api-keys/js/api-keys-page.js' ),
 				array( 'jquery', 'qrcode', 'jquery-blockui', 'wp-util' ),
 				MPHB()->getVersion()
 			);
-			wp_enqueue_script( 'mphb-api-keys-page' );
+
 			wp_localize_script(
 				'mphb-api-keys-page',
 				'mphb_api_keys',

@@ -136,6 +136,22 @@ if (!class_exists('rsssl_multisite')) {
 			        ),
 		        ),
 	        );
+	        $notices['6_multisite_networkwide'] = array(
+		        'callback' => 'RSSSL()->rsssl_multisite->ssl_activation_status',
+		        'score'     => 0,
+		        'output'    => array(
+			        'ssl-per-site' => array(
+                        'title'       => __( "End of Per Site Management support.", "really-simple-ssl"  ),
+				        'msg'         => __( "Really Simple SSL 6.0 drops SSL activation per website. Upgrading to 6.0 will upgrade all subsites to SSL.", "really-simple-ssl" ),
+				        'icon'        => 'warning',
+				        'url'         => 'https://really-simple-ssl.com/ssl-per-website-deprecated/',
+				        'dismissible' => true,
+				        'plusone' => true,
+				        'admin_notice' => true,
+			        ),
+		        ),
+	        );
+
 
 	        $notices['multisite_server_variable_warning'] = array(
 		        'callback' => 'RSSSL()->rsssl_multisite->multisite_server_variable_warning',
@@ -510,7 +526,7 @@ if (!class_exists('rsssl_multisite')) {
         public function update_network_options()
         {
             if (!isset($_POST['rsssl_ms_nonce']) || !wp_verify_nonce($_POST['rsssl_ms_nonce'], 'rsssl_ms_settings_update')) return;
-            if (!current_user_can('manage_network_options')) return;
+            if (! rsssl_user_can_manage() ) return;
 
 	        do_action('rsssl_process_network_options');
 
@@ -680,7 +696,7 @@ if (!class_exists('rsssl_multisite')) {
 
         public function save_options()
         {
-	        if ( ! current_user_can( 'manage_network_options' ) ) return;
+	        if ( ! rsssl_user_can_manage() ) return;
 
             $options = get_site_option("rlrsssl_network_options");
             if (!is_array($options)) $options = array();
@@ -995,7 +1011,7 @@ if (!class_exists('rsssl_multisite')) {
             //check if we are on ssl settings page
             if (!$this->is_settings_page()) return;
             //check user role
-            if (!current_user_can('manage_network_options')) return;
+            if (! rsssl_user_can_manage() ) return;
             //check nonce
             if (!isset($_GET['token']) || (!wp_verify_nonce($_GET['token'], 'run_ssl_to_admin_init'))) return;
             //check for action
@@ -1024,7 +1040,8 @@ if (!class_exists('rsssl_multisite')) {
 		        foreach ( $notices as $id => $notice ){
 			        $notice = $notice['output'];
 			        $class = ( $notice['status'] !== 'completed' ) ? 'error' : 'updated';
-			        echo RSSSL()->really_simple_ssl->notice_html( $class.' '.$id, $notice['title'], $notice['msg'] );
+			        $footer = isset($notice['url']) ? '<a class="button" target="_blank" href="' . esc_url_raw($notice['url']) . '">'.__("More info", "really-simple-ssl").'</a>' : '';
+			        echo RSSSL()->really_simple_ssl->notice_html( $class.' '.$id, $notice['title'], $notice['msg'], $footer );
 		        }
             }
 

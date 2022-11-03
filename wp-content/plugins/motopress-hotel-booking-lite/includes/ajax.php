@@ -14,6 +14,9 @@ use \MPHB\Utils\ValidateUtils;
  * @since 3.5.0 added new event - "export_bookings_csv".
  * @since 3.5.0 added new event - "check_bookings_csv".
  * @since 3.5.0 added new event - "cancel_bookings_csv".
+ * 
+ * @deprecated put all ajax code to the \MPHB\AjaxApi\AjaxApiHandler and its actions
+ * pay attansion to the #nolite comments
  */
 class Ajax {
 
@@ -340,8 +343,15 @@ class Ajax {
 				return '';
 			}
 
+			$errorMessage = __( 'The number of adults is not valid.', 'motopress-hotel-booking' );
+
+			if ( !MPHB()->settings()->main()->isChildrenAllowed() ) {
+
+				$errorMessage = __( 'The number of guests is not valid.', 'motopress-hotel-booking' );
+			}
+
 			wp_send_json_error( array(
-				'message' => __( 'Adults number is not valid.', 'motopress-hotel-booking' )
+				'message' => $errorMessage
 			) );
 		}
 

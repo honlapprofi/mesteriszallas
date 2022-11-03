@@ -550,7 +550,8 @@ function mphb_tmpl_the_loop_room_type_view_details_button( $buttonText = null ){
  * @param \MPHB\Entities\RoomType $roomType Optional. Use current room type by default.
  * @param string $atts Optional. Additional attributes.
  */
-function mphb_tmpl_the_room_type_calendar( $roomType = null, $atts = '' ){
+function mphb_tmpl_the_room_type_calendar( $roomType = null, $atts = '' ) {
+	
 	if ( is_null( $roomType ) ) {
 		$roomType = MPHB()->getCurrentRoomType();
 	}

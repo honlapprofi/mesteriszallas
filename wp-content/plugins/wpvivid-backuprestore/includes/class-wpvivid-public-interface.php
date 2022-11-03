@@ -29,7 +29,7 @@ class WPvivid_Public_Interface
 
             if(!isset($backup_options['type']))
             {
-                $backup_options['type']='Manual';
+                $backup_options['type']=__('Manual', 'wpvivid-backuprestore');
                 $backup_options['action']='backup';
             }
             $ret = $wpvivid_plugin->check_backup_option($backup_options, $backup_options['type']);

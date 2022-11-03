@@ -39,7 +39,7 @@ class BookingAvailabilityController extends AbstractRestController {
 	/**
 	 * Register the routes.
 	 */
-	public function register_routes(){
+	public function register_routes() {
 		register_rest_route( $this->namespace, '/' . $this->rest_base, array(
 			array(
 				'methods'             => WP_REST_Server::READABLE,
@@ -56,7 +56,7 @@ class BookingAvailabilityController extends AbstractRestController {
 	 *
 	 * @return array
 	 */
-	public function get_item_schema(){
+	public function get_item_schema() {
 		$schema = array(
 			'$schema'    => 'http://json-schema.org/draft-04/schema#',
 			'title'      => 'booking_availability',
@@ -145,11 +145,11 @@ class BookingAvailabilityController extends AbstractRestController {
 	/**
 	 * Check if a given request has access to read items.
 	 *
-	 * @param  WP_REST_Request  $request  Full details about the request.
+	 * @param WP_REST_Request $request Full details about the request.
 	 *
 	 * @return WP_Error|boolean
 	 */
-	public function get_item_permissions_check( $request ){
+	public function get_item_permissions_check( $request ) {
 		if ( ! ApiHelper::checkPostPermissions( $this->post_type, 'read' ) ) {
 			return new WP_Error( 'mphb_rest_cannot_view',
 				'Sorry, you cannot list resources.',
@@ -160,27 +160,18 @@ class BookingAvailabilityController extends AbstractRestController {
 	}
 
 	/**
-	 * @param  array  $availability
-	 * @param  WP_REST_Request  $request
+	 * @param array $data
+	 * @param WP_REST_Request $request
 	 *
 	 * @return WP_Error|WP_REST_Response
 	 */
-	public function prepare_item_for_response( $availability, $request ){
+	public function prepare_item_for_response( $data, $request ) {
 		$context = ! empty( $request['context'] ) ? $request['context'] : 'view';
-
-		$data = array(
-			'check_in_date'      => ApiHelper::prepareDateResponse( $this->check_in_date ),
-			'check_out_date'     => ApiHelper::prepareDateResponse( $this->check_out_date ),
-			'accommodation_type' => $this->accommodation_type,
-			'adults'             => $this->adults,
-			'children'           => $this->children,
-			'availability'       => array_values( $availability ),
-		);
 
 		$data     = $this->add_additional_fields_to_object( $data, $request );
 		$data     = $this->filter_response_by_context( $data, $context );
 		$response = rest_ensure_response( $data );
-		$response->add_links( $this->prepare_links( $availability, $request ) );
+		$response->add_links( $this->prepare_links( $data['availability'], $request ) );
 
 		/**
 		 * Filter the data for a response.
@@ -188,38 +179,73 @@ class BookingAvailabilityController extends AbstractRestController {
 		 * The dynamic portion of the hook name, $this->post_type, refers to post_type of the post being
 		 * prepared for the response.
 		 *
-		 * @param  WP_REST_Response  $response  The response object.
-		 * @param  mixed  $post  Entity object.
-		 * @param  WP_REST_Request  $request  Request object.
+		 * @param WP_REST_Response $response The response object.
+		 * @param mixed $post Entity object.
+		 * @param WP_REST_Request $request Request object.
 		 */
-		return apply_filters( "mphb_rest_prepare_{$this->post_type}", $response, $availability, $request );
+		return apply_filters( "mphb_rest_prepare_{$this->post_type}", $response, $data, $request );
 	}
 
 	/**
-	 * @param  \DateTime  $checkInDate
-	 * @param  \DateTime  $checkOutDate
-	 * @param  int  $accommodationTypeId  Optional. 0 by default.
+	 * Get a single item.
 	 *
-	 * @return array [%accommodationTypeId% => [
-	 *                        'accommodation_type' => %accommodationTypeId%,
-	 *                      'title' => %accommodationTypeTitle%,
-	 *                        'base_price' => %accommodationTypeBasePrice%,
-	 *                      'accommodations' => [
-	 *                                              'id' => %accommodationId%,
-	 *                                              'title' => %accommodationTitle%
-	 *                                          ]
-	 *                      ]
-	 *               ]
-	 * Will always return original
-	 *     IDs because of direct query to the DB.
+	 * @param WP_REST_Request $request Full details about the request.
 	 *
-	 * @global \wpdb $wpdb
+	 * @return WP_Error|WP_REST_Response
 	 */
-	protected function getAvailableAccommodations( \DateTime $checkInDate, \DateTime $checkOutDate, $accommodationTypeId = 0 ){
+	public function get_item( $request ) {
+		$checkInDate         = ApiHelper::prepareDateRequest( $request['check_in_date'] );
+		$checkOutDate        = ApiHelper::prepareDateRequest( $request['check_out_date'] );
+		$accommodationTypeId = $request['accommodation_type'];
+		$adults              = $request['adults'];
+		$children            = $request['children'];
+
+		// todo: перепроверить условие с оригинальным
+		if ( $accommodationTypeId && is_null( MPHB()->getRoomTypePersistence()->getPost( $accommodationTypeId ) ) ) {
+			return new WP_Error( "mphb_rest_invalid_accommodation_type",
+				'Invalid ID.', array( 'status' => 400 ) );
+		}
+
+		$data = array(
+			'check_in_date'      => ApiHelper::prepareDateResponse( $checkInDate ),
+			'check_out_date'     => ApiHelper::prepareDateResponse( $checkOutDate ),
+			'accommodation_type' => $accommodationTypeId,
+			'adults'             => $adults,
+			'children'           => $children,
+			'availability'       => $this->getAvailability( $checkInDate, $checkOutDate, $accommodationTypeId, $adults, $children ),
+		);
+
+		$data     = $this->prepare_item_for_response( $data, $request );
+		$response = rest_ensure_response( $data );
+
+		return $response;
+	}
+
+	/**
+	 * @param $checkInDate \DateTime
+	 * @param $checkOutDate \DateTime
+	 * @param $accommodationTypeId integer
+	 *
+	 * @return array[][
+	 *  'type_id' => '0'
+	 *  'type_title' => '',
+	 *  'accommodation_id' = '0',
+	 *  'accommodation_title' => ''
+	 * ]
+	 */
+	protected function getAllUnlockedAccommodations(
+		\DateTime $checkInDate,
+		\DateTime $checkOutDate,
+		int $accommodationTypeId = 0
+	) {
 		global $wpdb;
 
-		$lockedAccommodation = MPHB()->getRoomRepository()->getLockedRooms( $checkInDate, $checkOutDate,
-			$accommodationTypeId, array( 'skip_buffer_rules' => false ) );
+		$lockedAccommodation = MPHB()->getRoomRepository()->getLockedRooms(
+			$checkInDate,
+			$checkOutDate,
+			$accommodationTypeId,
+			array( 'skip_buffer_rules' => false )
+		);
 
 		$query = "SELECT accommodation_type_id.meta_value AS type_id, accommodation_types.post_title AS type_title, accommodations.ID AS accommodation_id, accommodations.post_title AS accommodation_title "
 		         . "FROM $wpdb->posts AS accommodations "
@@ -246,77 +272,82 @@ class BookingAvailabilityController extends AbstractRestController {
 			          . "AND accommodation_type_id.meta_value <> '' ";
 		}
 
-		/**
-		 * @var array [["type_id", "type_title", "accommodation_id", "accommodation_title"], ...]
-		 */
-		$results = $wpdb->get_results( $query, ARRAY_A );
-
-		$availableAccommodations = array();
-
-		foreach ( $results as $row ) {
-			$typeId          = intval( $row['type_id'] );
-			$accommodationId = intval( $row['accommodation_id'] );
-
-			if ( ! isset( $availableAccommodations[ $typeId ] ) ) {
-				$availableAccommodations[ $typeId ] = array(
-					'accommodation_type' => $typeId,
-					'title'              => $row['type_title'],
-					'base_price'         => mphb_get_room_type_period_price( $this->check_in_date,
-						$this->check_out_date, $typeId ),
-				);
-			}
-
-			$availableAccommodations[ $typeId ]['accommodations'][] = array(
-				'id'    => $accommodationId,
-				'title' => $row['accommodation_title'],
-			);
-		}
-
-		return $availableAccommodations;
+		return $wpdb->get_results( $query, ARRAY_A );
 	}
 
 	/**
-	 * Get a single item.
+	 * @param $checkInDate \DateTime
+	 * @param $checkOutDate \DateTime
+	 * @param $accommodationTypeId integer
+	 * @param int $adults
+	 * @param int $children
 	 *
-	 * @param  WP_REST_Request  $request  Full details about the request.
+	 * @return array[]{
+	 *  'accommodation_type': int,
+	 *  'title': string,
+	 *  'base_price': float,
+	 *  'accommodations': array[]{'id': int, 'title': string}
 	 *
-	 * @return WP_Error|WP_REST_Response
+	 * Will always return original
+	 *     IDs because of direct query to the DB.
+	 *
+	 * @global \wpdb $wpdb
 	 */
-	public function get_item( $request ){
-		$this->check_in_date      = ApiHelper::prepareDateRequest( $request['check_in_date'] );
-		$this->check_out_date     = ApiHelper::prepareDateRequest( $request['check_out_date'] );
-		$this->accommodation_type = $request['accommodation_type'];
-		$this->adults             = $request['adults'];
-		$this->children           = $request['children'];
+	protected function getAvailability(
+		\DateTime $checkInDate,
+		\DateTime $checkOutDate,
+		int $accommodationTypeId = 0,
+		int $adults = 1,
+		int $children = 0
+	) {
 
-		$rooms = $this->getAvailableAccommodations( $this->check_in_date, $this->check_out_date,
-			$this->accommodation_type );
+		$unlockedAccommodations  = $this->getAllUnlockedAccommodations( $checkInDate, $checkOutDate, $accommodationTypeId );
+		$availableAccommodations = array();
 
-		if ( count( $rooms ) && ! empty( $request['accommodation_type'] ) &&
-		     is_null( MPHB()->getRoomTypePersistence()->getPost( $request['accommodation_type'] ) ) ) {
-			return new WP_Error( "mphb_rest_invalid_accommodation_type",
-				'Invalid ID.', array( 'status' => 400 ) );
+		foreach ( $unlockedAccommodations as $unlockedAccommodation ) {
+			$accommodationTypeId = intval( $unlockedAccommodation['type_id'] );
+			$accommodationId     = intval( $unlockedAccommodation['accommodation_id'] );
+
+			// skip accommodations which don't match to booking rules
+
+			if ( ! isset( $availableAccommodations[ $accommodationTypeId ] ) &&
+			     ( ! $this->isAvailableAccommodationTypeByRates( $checkInDate, $checkOutDate, $accommodationTypeId ) ||
+			       ! $this->isAvailableAccommodationTypeByCapacity( $accommodationTypeId, $adults, $children ) ||
+			       ! $this->isAvailableAccommodationTypeByBookingRules( $checkInDate, $checkOutDate, $accommodationTypeId ) )
+			) {
+				continue;
+			}
+
+			if ( ! $this->isAvailableAccommodationByBlockedRules( $checkInDate, $checkOutDate, $accommodationTypeId, $accommodationId ) ) {
+				continue;
+			}
+
+
+			if ( ! isset( $availableAccommodations[ $accommodationTypeId ] ) ) {
+				$availableAccommodations[ $accommodationTypeId ] = array(
+					'accommodation_type' => $accommodationTypeId,
+					'title'              => $unlockedAccommodation['type_title'],
+					'base_price'         => mphb_get_room_type_period_price( $checkInDate, $checkOutDate, $accommodationTypeId ),
+				);
+			}
+
+			$availableAccommodations[ $accommodationTypeId ]['accommodations'][] = array(
+				'id'    => $accommodationId,
+				'title' => $unlockedAccommodation['accommodation_title'],
+			);
 		}
 
-		$rooms = $this->filterAccommodationsByRates( $rooms );
-		$rooms = $this->filterAccommodationsByCapacity( $rooms );
-		$rooms = $this->filterAccommodationsByRules( $rooms );
-
-		$data     = $this->prepare_item_for_response( $rooms, $request );
-		$response = rest_ensure_response( $data );
-
-		return $response;
+		return array_values( $availableAccommodations );
 	}
 
 	/**
 	 * Prepare links for the request.
 	 *
-	 * @param  array  $availability
-	 * @param  WP_REST_Request  $request  Request object.
+	 * @param array $availability
 	 *
 	 * @return array.
 	 */
-	protected function prepare_links( $availability, $request ){
+	protected function prepare_links( $availability ) {
 		$links = array(
 			'self' => array(
 				'href' => rest_url( sprintf( '/%s/%s', $this->namespace, $this->rest_base ) ),
@@ -349,53 +380,92 @@ class BookingAvailabilityController extends AbstractRestController {
 		return $links;
 	}
 
-	private function filterAccommodationsByRates( $accommodations ){
+	/**
+	 * @param $checkInDate \DateTime
+	 * @param $checkOutDate \DateTime
+	 * @param $accommodationTypeId integer
+	 *
+	 * @return bool
+	 */
+	protected function isAvailableAccommodationTypeByRates(
+		\DateTime $checkInDate,
+		\DateTime $checkOutDate,
+		int $accommodationTypeId = 0
+	) {
 		$rateSearchAtts = array(
-			'check_in_date'  => $this->check_in_date,
-			'check_out_date' => $this->check_out_date
+			'check_in_date'  => $checkInDate,
+			'check_out_date' => $checkOutDate
 		);
 
-		foreach ( $accommodations as $key => $accommodation ) {
-			$accommodationTypeId = $accommodation['accommodation_type'];
-			if ( ! MPHB()->getRateRepository()->isExistsForRoomType( $accommodationTypeId, $rateSearchAtts ) ) {
-				unset( $accommodations[ $key ] );
-			}
+		if ( ! MPHB()->getRateRepository()->isExistsForRoomType( $accommodationTypeId, $rateSearchAtts ) ) {
+			return false;
 		}
 
-		return $accommodations;
+		return true;
 	}
 
-	private function filterAccommodationsByCapacity( $accommodations ){
-		foreach ( $accommodations as $key => $accommodation ) {
-			$accommodationTypeId = $accommodation['accommodation_type'];
-			$accommodationType   = MPHB()->getRoomTypeRepository()->findById( $accommodationTypeId );
+	/**
+	 * @param $accommodationTypeId integer
+	 * @param $adults integer
+	 * @param $children integer
+	 *
+	 * @return bool
+	 */
+	protected function isAvailableAccommodationTypeByCapacity(
+		int $accommodationTypeId,
+		int $adults,
+		int $children
+	) {
+		$accommodationType = MPHB()->getRoomTypeRepository()->findById( $accommodationTypeId );
 
-			if ( is_null( $accommodationType ) || $accommodationType->getAdultsCapacity() < $this->adults || $accommodationType->getChildrenCapacity() < $this->children ) {
-				unset( $accommodations[ $key ] );
-			}
+		if ( is_null( $accommodationType ) || $accommodationType->getAdultsCapacity() < $adults || $accommodationType->getChildrenCapacity() < $children ) {
+			return false;
 		}
 
-		return $accommodations;
+		return true;
 	}
 
-	private function filterAccommodationsByRules( $accommodations ){
-		foreach ( $accommodations as $key => $accommodation ) {
-			$accommodationTypeId = $accommodation['accommodation_type'];
-			if ( ! MPHB()->getRulesChecker()->verify( $this->check_in_date, $this->check_out_date,
-				$accommodationTypeId ) ) {
-				unset( $accommodations[ $key ] );
-				continue;
-			}
+	/**
+	 * @param $checkInDate \DateTime
+	 * @param $checkOutDate \DateTime
+	 * @param $accommodationTypeId integer
+	 *
+	 * @return bool
+	 */
+	protected function isAvailableAccommodationTypeByBookingRules(
+		\DateTime $checkInDate,
+		\DateTime $checkOutDate,
+		$accommodationTypeId = 0
+	) {
+		$rules = MPHB()->getRulesChecker();
 
-			$unavailableAccommodations = MPHB()->getRulesChecker()->customRules()->getUnavailableRooms( $this->check_in_date,
-				$this->check_out_date, $accommodationTypeId );
-
-			if ( ! empty( $unavailableAccommodations ) ) {
-				$availableAccommodations = array_diff( $accommodations[ $accommodationTypeId ], $unavailableAccommodations );
-				$accommodations[ $key ]['accommodations'] = $availableAccommodations;
-			}
+		if ( ! $rules->verify( $checkInDate, $checkOutDate, $accommodationTypeId ) ) {
+			return false;
 		}
 
-		return $accommodations;
+		return true;
+	}
+
+	/**
+	 * @param $checkInDate \DateTime
+	 * @param $checkOutDate \DateTime
+	 * @param $accommodationTypeId integer
+	 * @param $accommodationId integer
+	 *
+	 * @return bool
+	 */
+	protected function isAvailableAccommodationByBlockedRules(
+		\DateTime $checkInDate,
+		\DateTime $checkOutDate,
+		int $accommodationTypeId,
+		int $accommodationId
+	) {
+		$unavailableAccommodations = MPHB()->getRulesChecker()->customRules()->getUnavailableRooms( $checkInDate, $checkOutDate, $accommodationTypeId );
+
+		if ( in_array( $accommodationId, $unavailableAccommodations ) ) {
+			return false;
+		}
+
+		return true;
 	}
 }

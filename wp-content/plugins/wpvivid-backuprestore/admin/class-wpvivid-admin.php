@@ -377,7 +377,21 @@ class WPvivid_Admin {
 
     public function add_action_links( $links )
     {
-        $active_plugins = get_option('active_plugins');
+        if(!is_multisite())
+        {
+            $active_plugins = get_option('active_plugins');
+        }
+        else
+        {
+            $active_plugins = array();
+            //network active
+            $mu_active_plugins = get_site_option( 'active_sitewide_plugins', array() );
+            if(!empty($mu_active_plugins)){
+                foreach ($mu_active_plugins as $plugin_name => $data){
+                    $active_plugins[] = $plugin_name;
+                }
+            }
+        }
         if(!function_exists('get_plugins'))
             require_once(ABSPATH . 'wp-admin/includes/plugin.php');
         $plugins=get_plugins();
@@ -396,15 +410,33 @@ class WPvivid_Admin {
 
         if($is_active_pro)
         {
-            $settings_link = array(
-                '<a href="' . admin_url( 'admin.php?page=' . strtolower(sprintf('%s-dashboard', apply_filters('wpvivid_white_label_slug', 'wpvivid'))) ) . '">' . __('Settings', $this->plugin_name) . '</a>',
-            );
+            if(!is_multisite())
+            {
+                $settings_link = array(
+                    '<a href="' . admin_url( 'admin.php?page=' . strtolower(sprintf('%s-dashboard', apply_filters('wpvivid_white_label_slug', 'wpvivid'))) ) . '">' . __('Settings', 'wpvivid-backuprestore') . '</a>',
+                );
+            }
+            else
+            {
+                $settings_link = array(
+                    '<a href="' . network_admin_url( 'admin.php?page=' . strtolower(sprintf('%s-dashboard', apply_filters('wpvivid_white_label_slug', 'wpvivid'))) ) . '">' . __('Settings', 'wpvivid-backuprestore') . '</a>',
+                );
+            }
         }
         else
         {
-            $settings_link = array(
-                '<a href="' . admin_url( 'admin.php?page=' . apply_filters('wpvivid_white_label_slug', $this->plugin_name) ) . '">' . __('Settings', $this->plugin_name) . '</a>',
-            );
+            if(!is_multisite())
+            {
+                $settings_link = array(
+                    '<a href="' . admin_url( 'admin.php?page=' . apply_filters('wpvivid_white_label_slug', $this->plugin_name) ) . '">' . __('Settings', 'wpvivid-backuprestore') . '</a>',
+                );
+            }
+            else
+            {
+                $settings_link = array(
+                    '<a href="' . network_admin_url( 'admin.php?page=' . apply_filters('wpvivid_white_label_slug', $this->plugin_name) ) . '">' . __('Settings', 'wpvivid-backuprestore') . '</a>',
+                );
+            }
         }
 
         return array_merge(  $settings_link, $links );
@@ -439,7 +471,7 @@ class WPvivid_Admin {
         if(!empty($migrate_status) && $migrate_status == 'completed')
         {
             $migrate_notice=true;
-            echo '<div class="notice notice-warning is-dismissible"><p>'.__('Migration is complete and htaccess file is replaced. In order to successfully complete the migration, you\'d better reinstall 301 redirect plugin, firewall and security plugin, and caching plugin if they exist.').'</p></div>';
+            echo '<div class="notice notice-warning is-dismissible"><p>'.__('Migration is complete and htaccess file is replaced. In order to successfully complete the migration, you\'d better reinstall 301 redirect plugin, firewall and security plugin, and caching plugin if they exist.', 'wpvivid-backuprestore').'</p></div>';
             WPvivid_Setting::delete_option('wpvivid_migrate_status');
         }
         $restore = new WPvivid_restore_data();
@@ -460,7 +492,7 @@ class WPvivid_Admin {
                 else{
                     if(!$migrate_notice)
                     {
-                        echo '<div class="notice notice-success is-dismissible"><p>'.__('Restore completed successfully.').'</p></div>';
+                        echo '<div class="notice notice-success is-dismissible"><p>'.__('Restore completed successfully.', 'wpvivid-backuprestore').'</p></div>';
                     }
                 }
             }
@@ -547,10 +579,10 @@ class WPvivid_Admin {
                     echo '<div class="notice notice-info is-dismissible" id="wpvivid_notice_rate">
                     <p>' . $review_msg . '</p>
                     <div style="padding-bottom: 10px;">
-                    <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr('Rate Us', 'wpvivid-backuprestore').'" /></span>
-                    <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr('Maybe Later', 'wpvivid-backuprestore').'" /></span>
-                    <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr('Never', 'wpvivid-backuprestore').'" /></span>
-                    <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr('Already Done', 'wpvivid-backuprestore').'" /></span>
+                    <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr__('Rate Us', 'wpvivid-backuprestore').'" /></span>
+                    <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr__('Maybe Later', 'wpvivid-backuprestore').'" /></span>
+                    <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
+                    <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr__('Already Done', 'wpvivid-backuprestore').'" /></span>
                     </div>
                     </div>';
                 }
@@ -565,10 +597,10 @@ class WPvivid_Admin {
                         echo '<div class="notice notice-info is-dismissible" id="wpvivid_notice_rate">
                         <p>' . $review_msg . '</p>
                         <div style="padding-bottom: 10px;">
-                        <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr('Rate Us', 'wpvivid-backuprestore').'" /></span>    
-                        <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr('Maybe Later', 'wpvivid-backuprestore').'" /></span>
-                        <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr('Never', 'wpvivid-backuprestore').'" /></span>
-                        <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr('Already Done', 'wpvivid-backuprestore').'" /></span>
+                        <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr__('Rate Us', 'wpvivid-backuprestore').'" /></span>    
+                        <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr__('Maybe Later', 'wpvivid-backuprestore').'" /></span>
+                        <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
+                        <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr__('Already Done', 'wpvivid-backuprestore').'" /></span>
                         </div>
                         </div>';
                     }
@@ -788,7 +820,7 @@ class WPvivid_Admin {
                     {
                         ?>
                         <div class="notice notice-warning" style="padding: 11px 15px;">
-                            <?php echo sprintf(__('We detected that you are using a lower version of %s Pro, please update it to 2.0.23 or higher to ensure backing up to Google Drive works properly.', 'wpvivid'), apply_filters('wpvivid_white_label_display', 'WPvivid Backup Plugin')); ?>
+                            <?php echo sprintf(__('We detected that you are using a lower version of %s Pro, please update it to 2.0.23 or higher to ensure backing up to Google Drive works properly.', 'wpvivid-backuprestore'), apply_filters('wpvivid_white_label_display', 'WPvivid Backup Plugin')); ?>
                         </div>
                         <?php
                     }
@@ -1131,8 +1163,8 @@ class WPvivid_Admin {
                         </div>
                         <div class="wpvivid-element-space-bottom wpvivid-text-space-right" style="float: left;">
                             <select id="wpvivid_debug_type">
-                                <option selected="selected" value="sharehost">share hosting</option>
-                                <option value="vps">VPS hosting</option>
+                                <option selected="selected" value="sharehost"><?php _e('share hosting', 'wpvivid-backuprestore'); ?></option>
+                                <option value="vps"><?php _e('VPS hosting', 'wpvivid-backuprestore'); ?></option>
                             </select>
                         </div>
                         <div style="clear: both;"></div>
@@ -1247,7 +1279,7 @@ class WPvivid_Admin {
                     try {
                         var jsonarray = jQuery.parseJSON(data);
                         if (jsonarray.result === "success") {
-                            alert("Send succeeded.");
+                            alert("<?php esc_html_e('Send succeeded.', 'wpvivid-backuprestore'); ?>");
                         }
                         else {
                             alert(jsonarray.error);
@@ -1480,9 +1512,9 @@ class WPvivid_Admin {
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
-                        <p><span style="height: 12px;width: 12px;background-color: #f1f1f1;border-radius: 50%;display: inline-block;"></span></p>
-                        <p><span style="height: 12px;width: 12px;background-color: #f1f1f1;border-radius: 50%;display: inline-block;"></span></p>
-                        <p><span style="height: 12px;width: 12px;background-color: #f1f1f1;border-radius: 50%;display: inline-block;"></span></p>
+                        <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
+                        <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
+                        <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                     </td>
                     <td style="text-align:center;">
                         <p><span style="color: #81d742;"><?php _e('Up to 10 domains', 'wpvivid-backuprestore'); ?></span></p>
@@ -1503,7 +1535,7 @@ class WPvivid_Admin {
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                     </td>
                     <td style="text-align:center;">
-                        <p><span style="color: #81d742;"><?php _e('Unlimited', 'wpvivid-backuprestore'); ?></span></p>
+                        <p><span style="color: #81d742;"><?php _e('Unlimited domains', 'wpvivid-backuprestore'); ?></span></p>
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
                         <p><span style="height: 12px;width: 12px;background-color: #81d742;border-radius: 50%;display: inline-block;"></span></p>
@@ -1515,8 +1547,7 @@ class WPvivid_Admin {
                 </tbody>
                 <tfoot>
                 <tr>
-                    <th><?php _e('*No credit card needed. Trial starts with the Free Trial plan with 2 sites. You can choose a plan at the end of the trial.', 'wpvivid-backuprestore'); ?></th>
-                    <th colspan="4" style="text-align:center;"><p style="margin-top: 6px;"><a href="https://wpvivid.com/pricing" class="page-title-action"><?php _e('START 14-DAY FREE TRIAL', 'wpvivid-backuprestore'); ?></a></p></th>
+                    <th colspan="5" style="text-align:center;"><p style="margin-top: 6px;"><a href="https://wpvivid.com/pricing" class="page-title-action"><?php _e('See Plans', 'wpvivid-backuprestore'); ?></a></p></th>
                 </tr>
                 </tfoot>
             </table>

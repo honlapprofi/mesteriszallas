@@ -12,6 +12,7 @@
 
 namespace RankMath\Admin;
 
+use RankMath\KB;
 use RankMath\Helper;
 use RankMath\Data_Encryption;
 use RankMath\Helpers\Security;
@@ -153,7 +154,7 @@ class Admin_Helper {
 				sprintf(
 					/* translators: KB Link */
 					__( 'If the issue persists, please try the solution described in our Knowledge Base article: %s', 'rank-math' ),
-					'<a href="https://rankmath.com/kb/fix-automatic-update-unavailable-for-this-plugin/#unable-to-encrypt" target="_blank">' . __( '[3. Unable to Encrypt]', 'rank-math' ) . '</a>'
+					'<a href="' . KB::get( 'unable-to-encrypt', 'Registration Data' ) . '" target="_blank">' . __( '[3. Unable to Encrypt]', 'rank-math' ) . '</a>'
 				),
 				[ 'type' => 'error' ]
 			);
@@ -161,8 +162,12 @@ class Admin_Helper {
 			return false;
 		}
 
-		if ( isset( $options['site_url'] ) && Helper::get_home_url() !== $options['site_url'] ) {
-			$message = esc_html__( 'Your site URL has changed since you connected to Rank Math.', 'rank-math' ) . ' <a href="' . self::get_activate_url() . '">' . esc_html__( 'Click here to reconnect.', 'rank-math' ) . '</a>';
+		/**
+		 * Filter whether we need to check for URL mismatch or not.
+		 */
+		$do_url_check = apply_filters( 'rank_math/registration/do_url_check', ! get_option( 'rank_math_siteurl_mismatch_notice_dismissed' ) );
+		if ( $do_url_check && isset( $options['site_url'] ) && Helper::get_home_url() !== $options['site_url'] ) {
+			$message = esc_html__( 'Seems like your site URL has changed since you connected to Rank Math.', 'rank-math' ) . ' <a href="' . self::get_activate_url() . '">' . esc_html__( 'Click here to reconnect.', 'rank-math' ) . '</a>';
 			Helper::add_notification(
 				$message,
 				[
@@ -170,9 +175,6 @@ class Admin_Helper {
 					'id'   => 'rank-math-site-url-mismatch',
 				]
 			);
-
-			delete_option( $row );
-			return false;
 		}
 
 		return $options;

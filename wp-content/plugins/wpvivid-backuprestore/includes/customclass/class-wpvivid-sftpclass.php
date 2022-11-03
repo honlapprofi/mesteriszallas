@@ -409,7 +409,7 @@ class WPvivid_SFTPClass extends WPvivid_Remote{
         $ret = $conn->login($username,$password);
         if(!$ret)
         {
-            return array('result'=>WPVIVID_FAILED,'error'=>'Login failed. You have entered the incorrect credential(s). Please try again.');
+            return array('result'=>WPVIVID_FAILED,'error'=>'The connection failed because of incorrect credentials or server connection timeout. Please try again.');
         }
 
 		return $conn;

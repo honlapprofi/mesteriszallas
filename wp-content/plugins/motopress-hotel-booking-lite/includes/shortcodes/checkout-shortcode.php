@@ -181,7 +181,7 @@ class CheckoutShortcode extends AbstractShortcode {
 	 * @param string $shortcodeName
 	 * @return string
 	 */
-	public function render( $atts, $content = '', $shortcodeName ){
+	public function render( $atts, $content, $shortcodeName ){
 
 		$defaultAtts = array(
 			'class' => ''

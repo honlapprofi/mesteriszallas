@@ -1,13 +1,13 @@
 === PublishPress Capabilities - User Role Access, Editor Permissions, Admin Menus ===
 
-Contributors: publishpress, kevinB, stevejburge, andergmartins
+Contributors: publishpress, kevinB, stevejburge, andergmartins, olatechpro
 Author: PublishPress
 Author URI: https://publishpress.com
 Tags: user roles, capabilities, permissions, admin menus, post editing, post types, taxonomies
 Requires at least: 4.9.7
 Tested up to: 6.0
 Requires PHP: 5.6.20
-Stable tag: 2.4.2
+Stable tag: 2.6.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -408,6 +408,57 @@ Fixed : Non-administrators with user editing capabilities could add new Administ
 Fixed : Security issue. Please update.
 
 == Changelog ==
+
+= 2.6.0 - 25 Oct 2022 =
+  * Added : Add a way for admins to test user accounts #57
+  * Fixed : Multi-select JS fails to load on Profile Edit Screen #576
+  * Update : Adding an explanation for Checkmark / empty / X #578
+  * Update : Add text description to Settings #573
+  * Fixed : Plugin translation ignores user's language setting #580
+  * Fixed : Illegal string offset 'administrator' & Array to string conversion Warning #589
+  * Update : Support for the "Templates" metabox #251
+  * Fixed : Some CPT is missing from Editor Features #582
+  * Update : Capabilities-FR-IT-TranslationUpdate-September2022 #577
+
+= 2.5.2 - 04 Oct 2022 =
+  * Update : Changes to Import/Export encoding method
+
+= 2.5.1 - 13 Sep 2022 =
+  * Added : Ability to block user login by role #510
+  * Update : Add disable WooCommerce admin restrictions in role settings #549
+  * Update : Hide taxonomy screen option for editor features #554
+  * Update : Hide metabox screen option for editor features #556
+  * Fixed : It's possible to access customize page even after blocking with admin menu #559
+  * Fixed : Uncaught error: Illegal offset type in isset or empty #564
+  * Update : Translation Note Suggestion for "Editor" #567
+  * Update : Capability-FR-IT-Translation_updates-August15_2022 #551
+
+= 2.5.0 - 11 Aug 2022 =
+  * Update : Admin Features UI design consistency #466
+  * Fixed : Support WordPress API for Editor features Classic Editor disable / enable #531
+  * Fixed : Woocommerce order metabox Illegal offset type in isset or empty warning #538
+  * Added : Added woocommerce coupon description to editor features #299
+  * Update : ES-FR-IT-Capability-Translations-Update-August2022 #540
+
+= 2.4.4 - 02 Aug 2022 =
+  * Added : Add "list" capabilities to display #206
+  * Added : Add a Settings screen to Free version #520
+  * Added : Add settings to allow users to select multiple roles when creating users #462
+  * Fixed : Multiple role when creating user doesn’t work #515
+  * Fixed : Admin Menus issue with Yoast #493
+  * Fixed : It's possible to get lockout of admin menus when all items are checked #527
+  * Update : Limit "Control Custom Statuses" option to settings screens alone #528
+  * Update : French and Italian Translations updates #524
+  * Fixed : PHP Warning on viewing Admin Menus #525
+
+= 2.4.3 - 12 Jul 2022 =
+  * Fixed : Capabilities conflict with Advanced Custom Fields #494
+  * Fixed : Issue with editor features when options is not array #495
+  * Update : Add checkbox for the "Allowed Editors" feature #498
+  * Update : Add support for TaxoPress on the Capabilities screen #500
+  * Update : Use 3 clicks approach for all boxes in Capabilities #497
+  * Fixed : Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given. #513
+  * Fixed : Hide Invalid Capabilities if empty #490
 
 = 2.4.2 - 14 Jun 2022 =
   * Fixed : Correct match of post types and Editor Features boxes #427

@@ -1,15 +1,15 @@
-# Translation of Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Stable (latest release) in German
-# This file is distributed under the same license as the Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Stable (latest release) package.
+# Translation of Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Development (trunk) in German
+# This file is distributed under the same license as the Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-05 07:09:52+0000\n"
+"PO-Revision-Date: 2022-09-28 05:54:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: de\n"
-"Project-Id-Version: Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Stable (latest release)\n"
+"Project-Id-Version: Plugins - MainWP Child &#8211; Securely connects sites to the MainWP WordPress Manager Dashboard - Development (trunk)\n"
 
 #: class/class-mainwp-child-updates.php:863
 msgid "Another update is currently in progress."
@@ -26,6 +26,10 @@ msgstr "<strong>JETZT</strong> oder deaktiviere das"
 #: class/class-mainwp-pages.php:110
 msgid " plugin is activated but not connected."
 msgstr " Plugin ist aktiviert, aber nicht verbunden."
+
+#: class/class-mainwp-connect.php:167
+msgid "Authentication failed! Please deactivate & re-activate the MainWP Child plugin on this child site and try again."
+msgstr "Authentifizierung fehlgeschlagen! Bitte deaktiviere und reaktiviere das MainWP-Child-Plugin auf dieser Child-Website und versuchen es erneut."
 
 #: class/class-mainwp-client-report-base.php:922
 msgid "Scan complete. Congratulations, no new problems found."
@@ -397,7 +401,7 @@ msgstr "Auftragsnübersicht"
 msgid "Changes for job <i>%s</i> saved."
 msgstr "Änderungen für Auftrag <i>%s</i> gespeichert."
 
-#: class/class-mainwp-child-callable.php:174
+#: class/class-mainwp-child-callable.php:175
 msgid "Required version has not been detected. Please, make sure that you are using the latest version of the MainWP Child plugin on your site."
 msgstr "Die erforderliche Version wurde nicht erkannt. Bitte stelle sicher, dass du die neueste Version des MainWP Child-Plugins auf deiner Website verwendest."
 
@@ -925,31 +929,31 @@ msgstr "Das in %1$s angegebene Verzeichnis kann nicht als gültiges Verzeichnis 
 msgid "You must change <strong>WordPress permalinks</strong> to a setting other than \"Plain\" in order to use \"Hide Backend\" feature."
 msgstr "Du musst die <strong>WordPress-Permalinks</strong> auf eine andere Einstellung als „Einfach“ ändern, um die „Backend verbergen“-Funktion verwenden zu können."
 
-#: class/class-mainwp-custom-post-type.php:369
+#: class/class-mainwp-custom-post-type.php:375
 msgid "Error when adding taxonomy to post"
 msgstr "Fehler beim Hinzufügen der Taxonomie zum Beitrag"
 
-#: class/class-mainwp-custom-post-type.php:342
+#: class/class-mainwp-custom-post-type.php:348
 msgid "Missing taxonomy"
 msgstr "Fehlende Taxonomie"
 
-#: class/class-mainwp-custom-post-type.php:431
+#: class/class-mainwp-custom-post-type.php:437
 msgid "Error when adding post meta"
 msgstr "Fehler beim Hinzufügen von Beitrags-Metadaten"
 
-#: class/class-mainwp-custom-post-type.php:419
+#: class/class-mainwp-custom-post-type.php:425
 msgid "Cannot add featured image"
 msgstr "Kann Beitragsbild nicht hinzufügen"
 
-#: class/class-mainwp-custom-post-type.php:460
+#: class/class-mainwp-custom-post-type.php:466
 msgid "Cannot add product image"
 msgstr "Kann Produkt-Bild nicht hinzufügen"
 
-#: class/class-mainwp-custom-post-type.php:396
+#: class/class-mainwp-custom-post-type.php:402
 msgid "Product SKU must be unique"
 msgstr "Produkt-Artikelnummer muss eindeutig sein"
 
-#: class/class-mainwp-custom-post-type.php:285
+#: class/class-mainwp-custom-post-type.php:291
 msgid "Error when insert new post:"
 msgstr "Fehler beim Einsetzen eines neuen Beitrags:"
 
@@ -1185,11 +1189,11 @@ msgstr "Entzippen gescheitert mit Fehler \"%s\"."
 msgid "Settings could not be imported:"
 msgstr "Einstellungen konnten nicht importiert werden:"
 
-#: class/class-mainwp-utility.php:670
+#: class/class-mainwp-utility.php:671
 msgid "Child plugin is disabled or the security key is incorrect. Please resync with your main installation."
 msgstr "MainWP Child-Plugin ist deaktiviert oder der Sicherheitsschlüssel ist falsch. Bitte erneut mit deiner Hauptinstallation synchronisieren."
 
-#: class/class-mainwp-utility.php:668
+#: class/class-mainwp-utility.php:669
 msgid "Something went wrong while contacting the child site. Please check if there is an error on the child site. This error could also be caused by trying to clone or restore a site to large for your server settings."
 msgstr "Etwas ist schiefgelaufen, während der Verbindung zur Child-Website. Bitte überprüfe, ob es einen Fehler auf der Child-Website gibt. Dieser Fehler könnte auch durch den Versuch verursacht worden sein, eine Website zu klonen oder wiederherzustellen, die zu groß für deine Servereinstellungen ist."
 
@@ -2774,7 +2778,7 @@ msgstr "Kann keine Sitzungen beenden"
 msgid "Cannot get user_id"
 msgstr "Kann user_id nicht abrufen"
 
-#: class/class-mainwp-child-callable.php:864
+#: class/class-mainwp-child-callable.php:876
 msgid "PHP Version %s is unsupported."
 msgstr "PHP Version %s wird nicht unterstützt."
 

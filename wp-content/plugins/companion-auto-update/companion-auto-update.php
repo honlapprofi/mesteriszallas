@@ -4,7 +4,7 @@
  * Plugin Name: Companion Auto Update
  * Plugin URI: http://codeermeneer.nl/portfolio/companion-auto-update/
  * Description: This plugin auto updates all plugins, all themes and the wordpress core.
- * Version: 3.8.5
+ * Version: 3.8.7.1
  * Author: Papin Schipper
  * Author URI: http://codeermeneer.nl/
  * Contributors: papin

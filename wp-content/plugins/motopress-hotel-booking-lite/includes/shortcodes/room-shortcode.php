@@ -26,7 +26,7 @@ class RoomShortcode extends AbstractShortcode {
 		add_action( 'mphb_sc_room_render_book_button', array( '\MPHB\Views\LoopRoomTypeView', 'renderBookButton' ) );
 	}
 
-	public function render( $atts, $content = '', $shortcodeName ){
+	public function render( $atts, $content, $shortcodeName ){
 
 		/**
 		 * price_per_night deprecated since 1.2.0

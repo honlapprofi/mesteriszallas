@@ -1,15 +1,33 @@
 <?php
 
-// What user rights can edit plugin settings?
+// What user rights can edit plugin settings? ARRAY
+function cau_allowed_user_rights_array() {
+
+	// Base rights
+	$allowed_roles[] = 'administrator';
+
+	// Fetch from database
+	global $wpdb;
+	$table_name 	= $wpdb->prefix.'auto_updates'; 
+	$cau_configs 	= $wpdb->get_results( "SELECT name, onoroff FROM {$table_name} WHERE name = 'allow_editor' OR name = 'allow_author'" );
+
+	foreach ( $cau_configs as $config ) {
+		if( $config->onoroff == 'on' ) $allowed_roles[] = str_replace( "allow_", "", $config->name );
+	}
+
+	// Return array
+	return $allowed_roles;
+
+}
+
+// What user rights can edit plugin settings? TRUE/FALSE
 function cau_allowed_user_rights() {
 
 	// Current user
 	$user 			= wp_get_current_user();
 
 	// Allow roles
-	$allowed_roles 	= array( 'administrator' );
-	if( cau_get_db_value( 'allow_editor' ) == 'on' ) array_push( $allowed_roles, 'editor' );
-	if( cau_get_db_value( 'allow_author' ) == 'on' ) array_push( $allowed_roles, 'author' );
+	$allowed_roles 	= cau_allowed_user_rights_array();
 
 	// Check
 	if ( array_intersect( $allowed_roles, $user->roles ) ) {
@@ -17,6 +35,7 @@ function cau_allowed_user_rights() {
 	} else {
 		return false;
 	}
+
 }
 
 // Get database value
@@ -24,7 +43,7 @@ function cau_get_db_value( $name, $table = 'auto_updates' ) {
 
 	global $wpdb;
 	$table_name 	= $wpdb->prefix.$table; 
-	$cau_configs 	= $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table_name} WHERE name = '%s'", $name ) );
+	$cau_configs 	= $wpdb->get_results( $wpdb->prepare( "SELECT onoroff FROM {$table_name} WHERE name = '%s'", $name ) );
 	foreach ( $cau_configs as $config ) return $config->onoroff;
 
 }
@@ -1089,13 +1108,11 @@ function cau_active_plugin_info( $slug, $what ) {
 
 	$allPlugins = get_plugins();
 
-	foreach ($allPlugins as $key => $value) {
+	foreach( $allPlugins as $key => $value ) {
 		$thisSlug 	= explode('/', $key);
 		$thisSlugE 	= $thisSlug[0];
 		if( $thisSlug == $slug ) {
-
 			if( $what == 'version' ) return $value['Version'];
-
 		}
 	}
 

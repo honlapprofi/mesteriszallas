@@ -81,7 +81,7 @@ class AdminScriptManager extends ScriptManager {
 				'prefix'			 => MPHB()->getPrefix(),
 				'ajaxUrl'			 => MPHB()->getAjaxUrl(),
 				'today'				 => mphb_current_time( 'Y-m-d' ),
-				'nonces'			 => array_merge($customNonces, MPHB()->getAjax()->getAdminNonces()),
+				'nonces'			 => array_merge( $customNonces, MPHB()->getAjax()->getAdminNonces(), \MPHB\AjaxApi\AjaxApiHandler::getAjaxActionWPNonceForLoggedInUser() ),
 				'translations'		 => array(
 					'roomTypeGalleryTitle'	 => __( 'Accommodation Type Gallery', 'motopress-hotel-booking' ),
 					'addGalleryToRoomType'	 => __( 'Add Gallery To Accommodation Type', 'motopress-hotel-booking' ),

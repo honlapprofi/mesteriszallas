@@ -31,31 +31,31 @@ class WPvivid_Schedule
         if(!isset($schedules["wpvivid_12hours"])){
             $schedules["wpvivid_12hours"] = array(
                 'interval' => 3600*12,
-                'display' => __('12 Hours'));
+                'display' => __('12 Hours', 'wpvivid-backuprestore'));
         }
 
         if(!isset($schedules["wpvivid_daily"])){
             $schedules["wpvivid_daily"] = array(
                 'interval' => 86400 ,
-                'display' => __('Daily'));
+                'display' => __('Daily', 'wpvivid-backuprestore'));
         }
 
         if(!isset($schedules["wpvivid_weekly"])){
             $schedules["wpvivid_weekly"] = array(
                 'interval' => 604800 ,
-                'display' => __('Weekly'));
+                'display' => __('Weekly', 'wpvivid-backuprestore'));
         }
 
         if(!isset($schedules["wpvivid_fortnightly"])){
             $schedules["wpvivid_fortnightly"] = array(
                 'interval' => 604800*2 ,
-                'display' => __('Fortnightly'));
+                'display' => __('Fortnightly', 'wpvivid-backuprestore'));
         }
 
         if(!isset($schedules["wpvivid_monthly"])){
             $schedules["wpvivid_monthly"] = array(
                 'interval' => 2592000 ,
-                'display' => __('Monthly'));
+                'display' => __('Monthly', 'wpvivid-backuprestore'));
         }
 
         return $schedules;

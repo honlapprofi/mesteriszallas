@@ -186,7 +186,7 @@ function wpvivid_schedule_do_js()
     if(empty($remote_id))
     {
         ?>
-        alert("There is no default remote storage configured. Please set it up first.");
+        alert("<?php esc_html_e('There is no default remote storage configured. Please set it up first.', 'wpvivid-backuprestore'); ?>");
         jQuery("input:radio[name='save_local_remote'][value='local']").prop('checked', true);
         <?php
     }

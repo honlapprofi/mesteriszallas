@@ -79,7 +79,7 @@ class AccountShortcode extends AbstractShortcode {
         }
     }
 
-    public function render( $atts, $shortcodeName, $content = '' ) {
+    public function render( $atts, $content, $shortcodeName ) {
         $defaultAtts = array(
             'class' => ''
         );
@@ -282,6 +282,7 @@ class AccountShortcode extends AbstractShortcode {
 			?>
 			<div class="mphb-login-form">
             	<?php wp_login_form(); ?>
+                <a href="<?php echo esc_url( wp_lostpassword_url( get_permalink() ) ); ?>"><?php esc_html_e( 'Lost your password?', 'motopress-hotel-booking' ); ?></a>
 			</div>
 			<?php
         }
@@ -292,12 +293,19 @@ class AccountShortcode extends AbstractShortcode {
      * @since 4.2.1
      */
     public function redirectOnFailedLogin() {
-        $referrer = $_SERVER['HTTP_REFERER'];
+
+        $referrer = wp_get_referer();
+
+        if ( false === $referrer ) {
+            return;
+        }
+
         $accountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
         $page = get_post( $accountPageId );
         $slug = $page->post_name;
         
-        if( strstr( $referrer, $slug ) ) {
+        if ( strstr( $referrer, $slug ) ) {
+            
             $redirectTo = add_query_arg( 'login_failed', 'error', $referrer );
             wp_safe_redirect( $redirectTo );
             exit;
@@ -309,12 +317,19 @@ class AccountShortcode extends AbstractShortcode {
      * @since 4.2.1
      */
     public function redirectAfterLogout() {
-        $referrer = $_SERVER['HTTP_REFERER'];
+        
+        $referrer = wp_get_referer();
+
+        if ( false === $referrer ) {
+            return;
+        }
+
         $accountPageId = MPHB()->settings()->pages()->getMyAccountPageId();
         $page = get_post( $accountPageId );
         $slug = $page->post_name;
         
-        if( strstr( $referrer, $slug ) ) {
+        if ( strstr( $referrer, $slug ) ) {
+
             wp_safe_redirect( $referrer );
             exit;
         }

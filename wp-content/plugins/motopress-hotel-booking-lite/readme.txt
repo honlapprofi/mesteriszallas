@@ -3,8 +3,8 @@ Contributors: MotoPress
 Donate link: https://motopress.com/
 Requires at least: 4.7
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
-Tested up to: 5.9
-Stable tag: 4.2.5
+Tested up to: 6.0
+Stable tag: 4.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ The MotoPress hotel reservation plugin allows you to add a real-time property se
 
 This WordPress booking system was developed for hotel and vacation rental owners, B&B hosts, real estate agencies, and anyone in the lodging sector of the hospitality industry. Hotel Booking is a standalone plugin that will help you create a stunning rental property website with any WordPress theme and switch it with peace in mind if needed.
 
-The admin dashboard of WordPress hotel plugin is absolutely user-friendly making it easy to create a hotel or property renting website for non-tech people.
+The admin dashboard of WordPress hotel plugin is absolutely user-friendly making it easy to create a hotel or property renting website for non-tech people.
 
 ### wp hotel booking plugin features
 
@@ -44,7 +44,7 @@ The admin dashboard of WordPress hotel plugin is absolutely user-friendly makin
 * Shortcodes, widgets and blocks for setting up the system.
 * A user-friendly property booking widget for guests.
 * Currency support.
-* Professional localization into 14 languages: Portuguese, Polish, Russian, Spanish, Turkish, Swedish, Italian, Hungarian, Czech, Chinese, Dutch, French, Arabic and German. Additionally, the plugin is officially compatible with WPML and is custom translations ready.
+* Professional localization of the WP hotel booking plugin into 14 languages: Portuguese, Polish, Russian, Spanish, Turkish, Swedish, Italian, Hungarian, Czech, Chinese, Dutch, French, Arabic and German. Additionally, the plugin is officially compatible with WPML and is custom translations ready.
 
 ### Property management system
 
@@ -122,9 +122,13 @@ Offer smooth and quick event and appointment reservations on your rental propert
 
 ### Hotel and Vacation Rental WordPress Themes
 
+Are you looking for a pre-designed ready-to-go hotel booking WordPress theme?
+
 Check out our [Hotel and Vacation Rental WordPress Themes](https://motopress.com/products/category/hotel-rental-wordpress-themes/?utm_source=wp-org&utm_medium=hotel-themes&utm_campaign=hotel-booking-lite&utm_content=wordpress-hotel-themes) where the Pro version of the [WordPress Booking Plugin](https://motopress.com/products/hotel-booking/?utm_source=wp-org&utm_medium=pro-link&utm_campaign=hotel-booking-lite&utm_content=wordpress-booking-plugin) is included for free.
 
 You may also use the Palmeria [free hotel booking theme](https://wordpress.org/themes/palmeria/) and Albatross [free hotel Elementor theme](https://wordpress.org/themes/albatross/) with the built-in free WordPress hotel booking plugin Lite.
+
+Every hotel booking theme in the list comes with the Hotel Booking Lite pluin pre-installed, with the visual styles polished for the plugin.
 
 == Installation ==
 
@@ -154,26 +158,42 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
-= 4.2.5, May 12 2022 =
+= 4.4.4, Oct 21 2022 =
+* Fixed an error in previous version.
+
+= 4.4.3, Oct 7 2022 =
+* Added support for displaying prices in the availability calendars of individual accommodations.
+
+= 4.4.2, Sep 12 2022 =
+* Added the ability to create a percentage fee, which applies to the accommodation cost.
+* Optimized the asset loading in the admin panel for REST API.
+* Fixed an error of creating customers on MySQL 5.5.
+* Fixed an error of creating coupon codes in REST API.
+* Fixed an error with the availability search when one of the accommodations was blocked. Applies for REST API and the mobile app.
+* Improved compatibility with PHP 8.
+* Updated the minimum required version of PHP to 7.0.
+
+= 4.4.1, Aug 22 2022 =
 * Minor bugfixes and improvements.
 
-= 4.2.4, Apr 4 2022 =
-* Added two new columns to the CSV report: Total Accommodation and Total Services that display total revenue data from these sources respectively.
-* Fixed an issue with displaying the price breakdown table for accommodation types styled with quotation marks.
-* Fixed the per night / for x nights phrasing in several translation locales.
-* Fixed an issue that might have made some pages unavailable on websites in French and Spanish.
+= 4.4.0, Aug 12 2022 =
+* Fixed a confusing message on the customer booking confirmation page, when a customer visits the latter from the confirmation email.
+* Fixed overlapping colors on pending, reserved, and imported bookings in the backend calendar.
+* Fixed an issue with the message about not filling the number of guests field on the checkout page when the children option is disabled.
+* Added a lost password link to the login form on checkout and account pages.
+* Fixed an error on the customer update in the old WordPress versions less than 5.6.8.
+* Fixed the visibility of the admin bar for the Booking Customer user role.
+* Fixed a PHP notice about undefined HTTP_REFERER in the account shortcode.
+* Fixed a PHP notice about undefined HTTP_REFERER in the checkout shortcode.
+* Fixed a fatal error on getting booking customer information when WordPress multisite installation has more than two databases.
+* Fixed switching to the default language of the booking cancelation page when a customer goes to it by link in the booking registration email.
+* Fixed a javascript error on the checkout page with the disabled Elementor and enabled "Open the Terms & Conditions page in a new window" option.
+* Fixed Total and Paid values in the booking export for bookings with an applied discount coupon.
+* Fixed a PHP notice in the earnings report.
+* Changed column order and added the Discount column to the booking export report.
 
-= 4.2.3, Mar 23 2022 =
-* Minor bugfixes and improvements.
-
-= 4.2.2, Mar 16 2022 =
-* Improved ical synchronization logs removal from database.
-
-= 4.2.1, Feb 21 2022 =
-* Improved compatibility with the image lazy-loading feature.
-
-= 4.2.0, Feb 16 2022 =
-* Added the user area for customers that allows them to log in, view bookings and speed up reservations with pre-populated info at checkout. Website admins can set the plugin to create user accounts automatically or let customers create ones manually.
+= 4.3.0, Jul 18 2022 =
+* Improved code for uploading files and checkout customer data processing in the extensions.
 
 --------
 

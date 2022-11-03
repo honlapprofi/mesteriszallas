@@ -342,7 +342,7 @@ class ReservedRoom {
 
 		$roomBreakdown = $this->getRoomBreakdown( $checkInDate, $checkOutDate, $coupon, $language );
 		$servicesBreakdown = $this->getServicesBreakdown( $checkInDate, $checkOutDate, $language );
-		$feesBreakdown = $this->getFeesBreakdown( $checkInDate, $checkOutDate );
+		$feesBreakdown = $this->getFeesBreakdown( $checkInDate, $checkOutDate, $roomBreakdown['discount_total'] );
 		$taxesBreakdown = array(
 			'room'		 => $this->getRoomTaxesBreakdown( $checkInDate, $checkOutDate, $roomBreakdown['discount_total'] ),
 			'services'	 => $this->getServiceTaxesBreakdown( $servicesBreakdown['total'] ),
@@ -367,7 +367,7 @@ class ReservedRoom {
 		return $priceBreakdown;
 	}
 
-	private function getFeesBreakdown( $checkInDate, $checkOutDate ){
+	private function getFeesBreakdown( $checkInDate, $checkOutDate, $roomPrice ){
 		$roomTypeId	 = $this->getRoomTypeId();
 		$duration	 = \MPHB\Utils\DateUtils::calcNights( $checkInDate, $checkOutDate );
 		$adults		 = $this->getAdults();
@@ -399,6 +399,10 @@ class ReservedRoom {
 					} else {
 						$feePrice = $fee['amount'] * min( $fee['limit'], $duration );
 					}
+					break;
+
+				case 'per_room_percentage':
+					$feePrice = $roomPrice / 100 * $fee['amount'];
 					break;
 			}
 

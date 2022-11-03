@@ -32,7 +32,7 @@ class WPvivid_Files_List extends WP_List_Table
 
         if (!empty($columns['cb'])) {
             static $cb_counter = 1;
-            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All') . '</label>'
+            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All', 'wpvivid-backuprestore') . '</label>'
                 . '<input id="cb-select-all-' . $cb_counter . '" type="checkbox"/>';
             $cb_counter++;
         }
@@ -72,7 +72,7 @@ class WPvivid_Files_List extends WP_List_Table
     public function get_columns()
     {
         $columns = array();
-        $columns['wpvivid_file'] = __( 'File', 'wpvivid' );
+        $columns['wpvivid_file'] = __( 'File', 'wpvivid-backuprestore' );
         return $columns;
     }
 
@@ -85,20 +85,20 @@ class WPvivid_Files_List extends WP_List_Table
                     <div class="wpvivid-download-status" style="padding:0;">';
         if($file['status']=='completed')
         {
-            $html.='<span>'.__('File Size: ', 'wpvivid').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class=" wpvivid-element-space-right wpvivid-ready-download"><a style="cursor: pointer;">Download</a></span>';
+            $html.='<span>'.__('File Size: ', 'wpvivid-backuprestore').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class=" wpvivid-element-space-right wpvivid-ready-download"><a style="cursor: pointer;">'. __('Download', 'wpvivid-backuprestore').'</a></span>';
         }
         else if($file['status']=='file_not_found')
         {
-            $html.='<span>' . __('File not found', 'wpvivid') . '</span>';
+            $html.='<span>' . __('File not found', 'wpvivid-backuprestore') . '</span>';
         }
         else if($file['status']=='need_download')
         {
-            $html.='<span>'.__('File Size: ', 'wpvivid').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">Prepare to Download</a></span>';
+            $html.='<span>'.__('File Size: ', 'wpvivid-backuprestore').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">'. __('Prepare to Download', 'wpvivid-backuprestore').'</a></span>';
         }
         else if($file['status']=='running')
         {
             $html.='<div class="wpvivid-element-space-bottom">
-                        <span class="wpvivid-element-space-right">Retriving (remote storage to web server)</span><span class="wpvivid-element-space-right">|</span><span>File Size: </span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span>Downloaded Size: </span><span>'.$file['downloaded_size'].'</span>
+                        <span class="wpvivid-element-space-right">' . __('Retriving (remote storage to web server)', 'wpvivid-backuprestore') . '</span><span class="wpvivid-element-space-right">|</span><span>' . __('File Size: ', 'wpvivid-backuprestore') . '</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span>'. __('Downloaded Size: ', 'wpvivid-backuprestore').'</span><span>'.$file['downloaded_size'].'</span>
                     </div>
                     <div style="width:100%;height:10px; background-color:#dcdcdc;">
                         <div style="background-color:#0085ba; float:left;width:'.$file['progress_text'].'%;height:10px;"></div>
@@ -110,7 +110,7 @@ class WPvivid_Files_List extends WP_List_Table
                         <span>Download timeout, please retry.</span>
                     </div>
                     <div>
-                        <span>'.__('File Size: ', 'wpvivid').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">Prepare to Download</a></span>
+                        <span>'.__('File Size: ', 'wpvivid-backuprestore').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">'. __('Prepare to Download', 'wpvivid-backuprestore').'</a></span>
                     </div>';
         }
         else if($file['status']=='error')
@@ -119,7 +119,7 @@ class WPvivid_Files_List extends WP_List_Table
                         <span>'.$file['error'].'</span>
                     </div>
                     <div>
-                        <span>'.__('File Size: ', 'wpvivid').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">Prepare to Download</a></span>
+                        <span>'.__('File Size: ', 'wpvivid-backuprestore').'</span><span class="wpvivid-element-space-right wpvivid-download-file-size">'.$file['size'].'</span><span class="wpvivid-element-space-right">|</span><span class="wpvivid-element-space-right"><a class="wpvivid-download" style="cursor: pointer;">'. __('Prepare to Download', 'wpvivid-backuprestore').'</a></span>
                     </div>';
         }
 
@@ -229,7 +229,7 @@ class WPvivid_Files_List extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
 
@@ -260,7 +260,7 @@ class WPvivid_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -271,24 +271,24 @@ class WPvivid_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page' id='current-page-selector-filelist' type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label for="current-page-selector-filelist" class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label for="current-page-selector-filelist" class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -296,7 +296,7 @@ class WPvivid_Files_List extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -306,7 +306,7 @@ class WPvivid_Files_List extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }
@@ -852,7 +852,7 @@ function wpvivid_backuppage_add_page_backup(){
                     if (j == 2) {
                         var backup_id = jQuery(this).parent().children('th').find("input[type=checkbox]").attr("id");
                         var download_btn = '<div id="wpvivid_file_part_' + backup_id + '" style="float:left;padding:10px 10px 10px 0px;">' +
-                            '<div style="cursor:pointer;" onclick="wpvivid_initialize_download(\'' + backup_id + '\', \''+list_name+'\');" title="Prepare to download the backup">' +
+                            '<div style="cursor:pointer;" onclick="wpvivid_initialize_download(\'' + backup_id + '\', \''+list_name+'\');" title="<?php esc_html_e('Prepare to download the backup', 'wpvivid-backuprestore'); ?>">' +
                             '<img id="wpvivid_download_btn_' + backup_id + '" src="' + wpvivid_plugurl + '/admin/partials/images/download.png" style="vertical-align:middle;" />Download' +
                             '<div class="spinner" id="wpvivid_download_loading_' + backup_id + '" style="float:right;width:auto;height:auto;padding:10px 180px 10px 0;background-position:0 0;"></div>' +
                             '</div>' +
@@ -1382,7 +1382,7 @@ function wpvivid_backuppage_add_page_restore(){
          */
         function wpvivid_start_restore(restore_type = 'backup'){
             if(!wpvivid_restore_sure){
-                var descript = 'Are you sure to continue?';
+                var descript = '<?php esc_html_e('Are you sure to continue?', 'wpvivid-backuprestore'); ?>';
                 var ret = confirm(descript);
             }
             else{
@@ -1695,14 +1695,14 @@ function wpvivid_backuppage_add_page_restore(){
                                     wpvivid_restoring = false;
                                     wpvivid_restore(restore_type);
                                     wpvivid_restore_unlock();
-                                    alert("Restore completed successfully.");
+                                    alert("<?php esc_html_e('Restore completed successfully.', 'wpvivid-backuprestore'); ?>");
                                     location.reload();
                                 }
                                 else if (jsonarray.status === 'error') {
                                     wpvivid_restore_unlock();
                                     wpvivid_restoring = false;
                                     jQuery('#wpvivid_restore_' + restore_method + 'btn').css({'pointer-events': 'auto', 'opacity': '1'});
-                                    alert("Restore failed.");
+                                    alert("<?php esc_html_e('Restore failed.', 'wpvivid-backuprestore'); ?>");
                                 }
                                 else {
                                     setTimeout(function () {
@@ -2335,7 +2335,7 @@ function wpvivid_backup_module_add_exec(){
         var bcheck=true;
         var bdownloading=false;
         if(m_downloading_id !== '') {
-            var descript = 'This request might delete the backup being downloaded, are you sure you want to continue?';
+            var descript = '<?php esc_html_e('This request might delete the backup being downloaded, are you sure you want to continue?', 'wpvivid-backuprestore'); ?>';
             var ret = confirm(descript);
             if (ret === true) {
                 bcheck=true;

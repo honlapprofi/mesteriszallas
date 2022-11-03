@@ -226,6 +226,9 @@ class EarningsReport extends AbstractReport {
         $barWidth = 0;
 
         foreach( $plotData as $dataType => $pd ) {
+
+            $dataType = strtolower( $dataType );
+
             foreach( $pd as $filter => $plotArray ) {
                 if( in_array( $filter, array( 'totalWithoutTax', 'totalFees', 'totalServices', 'totalDiscount' ) ) ) {
                     $plotType = 'dashes';

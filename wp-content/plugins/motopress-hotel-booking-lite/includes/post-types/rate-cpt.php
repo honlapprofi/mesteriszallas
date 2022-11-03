@@ -33,7 +33,7 @@ class RateCPT extends EditableCPT {
 			) ),
 			Fields\FieldFactory::create( 'mphb_season_prices', array(
 				'type'				=> 'complex',
-				'label'				=> __( 'Season Prices', 'motopress-hotel-booking' ),
+				'label'				=> false,
 				'fields'			=> array(
 					Fields\FieldFactory::create( 'season', array(
 						'type'			 => 'select',

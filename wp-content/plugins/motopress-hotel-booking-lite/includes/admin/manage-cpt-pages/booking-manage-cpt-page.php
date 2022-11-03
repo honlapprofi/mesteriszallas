@@ -701,7 +701,7 @@ class BookingManageCPTPage extends ManageCPTPage {
 		uksort( $views, function( $view1, $view2 ) use ($viewsOrder) {
 			$view1Order	 = array_key_exists( $view1, $viewsOrder ) ? $viewsOrder[$view1] : 999;
 			$view2Order	 = array_key_exists( $view2, $viewsOrder ) ? $viewsOrder[$view2] : 999;
-			return $view1Order > $view2Order;
+			return $view1Order > $view2Order ? 1 : ( $view1Order == $view2Order ? 0 : -1 );
 		} );
 
 		return $views;

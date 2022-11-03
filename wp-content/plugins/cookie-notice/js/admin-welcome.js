@@ -1,17 +1,17 @@
-( function ( $ ) {
+( function( $ ) {
 
 	// ready event
-	$( function () {
+	$( function() {
 		var btClient = false;
 		var btCreditCardsInitialized = false;
 		var btPayPalInitialized = false;
 
-		var btInit = function () {
+		var btInit = function() {
 			var result = btInitToken();
 
 			if ( result !== false && btCreditCardsInitialized === false ) {
-				// AJAX was successful
-				result.done( function ( response ) {
+				// ajax was successful
+				result.done( function( response ) {
 					// token received
 					try {
 						// parse response
@@ -27,14 +27,14 @@
 					} catch ( e ) {
 						btGatewayFail( 'btInit catch' );
 					}
-					// AJAX failed
-				} ).fail( function () {
+					// ajax failed
+				} ).fail( function() {
 					btGatewayFail( 'btInit AJAX failed' );
 				} );
 			}
 		}
 
-		var btInitToken = function () {
+		var btInitToken = function() {
 			// payment screen?
 			var paymentEl = $( '.cn-sidebar form[data-action="payment"]' );
 
@@ -43,15 +43,21 @@
 				paymentEl.addClass( 'cn-form-disabled' );
 
 				if ( typeof braintree !== 'undefined' ) {
+					var ajaxArgs = {
+						action: 'cn_api_request',
+						request: 'get_bt_init_token',
+						nonce: cnWelcomeArgs.nonce
+					};
+
+					// network area?
+					if ( cnWelcomeArgs.network === '1' )
+						ajaxArgs.cn_network = 1;
+
 					return $.ajax( {
 						url: cnWelcomeArgs.ajaxURL,
 						type: 'POST',
 						dataType: 'html',
-						data: {
-							action: 'cn_api_request',
-							request: 'get_bt_init_token',
-							nonce: cnWelcomeArgs.nonce
-						}
+						data: ajaxArgs
 					} );
 				} else
 					return false;
@@ -59,9 +65,7 @@
 				return false;
 		}
 
-		var btInitPaymentMethod = function ( type ) {
-			// console.log( 'btInitPaymentMethod' );
-
+		var btInitPaymentMethod = function( type ) {
 			if ( btClient !== false ) {
 				if ( type === 'credit_card' && btCreditCardsInitialized === false ) {
 					$( 'form.cn-form[data-action="payment"]' ).addClass( 'cn-form-disabled' );
@@ -76,9 +80,7 @@
 				btGatewayFail( 'btInitPaymentMethod btClient is false' );
 		}
 
-		var btCreditCardsInit = function ( clientInstance ) {
-			// console.log( 'btCreditCardsInit' );
-
+		var btCreditCardsInit = function( clientInstance ) {
 			return braintree.hostedFields.create( {
 				client: clientInstance,
 				styles: {
@@ -111,16 +113,14 @@
 			} );
 		}
 
-		var btHostedFieldsInstance = function ( hostedFieldsInstance ) {
-			// console.log( 'btHostedFieldsInstance' );
-
+		var btHostedFieldsInstance = function( hostedFieldsInstance ) {
 			btCreditCardsInitialized = true;
 
 			var form = $( 'form.cn-form[data-action="payment"]' );
 
 			form.removeClass( 'cn-form-disabled' );
 
-			form.on( 'submit', function () {
+			form.on( 'submit', function() {
 				if ( form.hasClass( 'cn-payment-in-progress' ) )
 					return false;
 
@@ -134,7 +134,7 @@
 				var state = hostedFieldsInstance.getState();
 
 				// check hosted fields
-				Object.keys( state.fields ).forEach( function ( field ) {
+				Object.keys( state.fields ).forEach( function( field ) {
 					if ( ! state.fields[field].isValid ) {
 						$( state.fields[field].container ).addClass( 'braintree-hosted-fields-invalid' );
 
@@ -143,7 +143,7 @@
 				} );
 
 				if ( invalidForm ) {
-					setTimeout( function () {
+					setTimeout( function() {
 						cnDisplayError( cnWelcomeArgs.invalidFields, form );
 
 						// spin the spinner, if exists
@@ -154,11 +154,7 @@
 					return false;
 				}
 
-				hostedFieldsInstance.tokenize( function ( err, payload ) {
-					
-					console.log( 'btHostedFieldsInstance' );
-					console.log( payload );
-					
+				hostedFieldsInstance.tokenize( function( err, payload ) {
 					if ( err ) {
 						cnDisplayError( cnWelcomeArgs.error );
 
@@ -176,33 +172,25 @@
 			} );
 		}
 
-		var btPaypalCheckoutInit = function ( clientInstance ) {
-			// console.log( 'btPaypalCheckoutInit' );
-
+		var btPaypalCheckoutInit = function( clientInstance ) {
 			return braintree.paypalCheckout.create( {
 				client: clientInstance
 			} );
 		}
 
-		var btPaypalCheckoutSDK = function ( paypalCheckoutInstance ) {
-			// console.log( 'btPaypalCheckoutSDK' );
-
+		var btPaypalCheckoutSDK = function( paypalCheckoutInstance ) {
 			return paypalCheckoutInstance.loadPayPalSDK( {
 				vault: true,
 				intent: 'tokenize'
 			} );
 		}
 
-		var btPaypalCheckoutInstance = function ( paypalCheckoutInstance ) {
-			// console.log( 'btPaypalCheckoutInstance' );
-
+		var btPaypalCheckoutInstance = function( paypalCheckoutInstance ) {
 			var form = $( 'form.cn-form[data-action="payment"]' );
 
 			return paypal.Buttons( {
 				fundingSource: paypal.FUNDING.PAYPAL,
-				createBillingAgreement: function () {
-					// console.log( 'createBillingAgreement' );
-
+				createBillingAgreement: function() {
 					form.addClass( 'cn-form-disabled' );
 
 					return paypalCheckoutInstance.createPayment( {
@@ -211,62 +199,45 @@
 						currency: 'EUR'
 					} );
 				},
-				onApprove: function ( data, actions ) {
-					// console.log( 'onApprove' );
-
-					return paypalCheckoutInstance.tokenizePayment( data ).then( function ( payload ) {
-						
-						console.log( 'btPaypalCheckoutInstance' );
-						console.log( payload );
-						
+				onApprove: function( data, actions ) {
+					return paypalCheckoutInstance.tokenizePayment( data ).then( function( payload ) {
 						form.addClass( 'cn-payment-in-progress' );
 						form.find( 'input[name="payment_nonce"]' ).val( payload.nonce );
 						form.find( 'input[name="cn_payment_identifier"]' ).val( payload.details.email );
 
-						// console.log( 'onApprove inside' );
-						// console.log( $( '#cn_submit_pro' ).find( '.cn-screen-button[data-screen="4"]' ) );
-
 						$( '#cn_submit_pro' ).find( '.cn-screen-button[data-screen="4"]' ).trigger( 'click' );
 					} );
 				},
-				onCancel: function ( data ) {
-					// console.log( 'onCancel' );
-
+				onCancel: function( data ) {
 					form.removeClass( 'cn-form-disabled' );
 				},
-				onError: function ( err ) {
-					// console.log( 'onError' );
-
+				onError: function( err ) {
 					form.removeClass( 'cn-form-disabled' );
 				}
 			} ).render( '#cn_paypal_button' );
 		}
 
-		var btPaypalCheckoutButton = function () {
-			// console.log( 'btPaypalCheckoutButton' );
-
+		var btPaypalCheckoutButton = function() {
 			btPayPalInitialized = true;
 
 			$( 'form.cn-form[data-action="payment"]' ).removeClass( 'cn-form-disabled' );
 		}
 
-		var btGatewayFail = function ( error ) {
-			// console.log( 'btGatewayFail' );
-
+		var btGatewayFail = function( error ) {
 			if ( typeof error !== 'undefined' )
 				console.log( error );
 
 			cnDisplayError( cnWelcomeArgs.error );
 		}
 
-		var cnDisplayError = function ( message, form ) {
+		var cnDisplayError = function( message, form ) {
 			if ( typeof form === 'undefined' )
 				form = $( 'form.cn-form[data-action="payment"]' );
 
 			form.find( '.cn-form-feedback' ).html( '<p class="cn-error">' + message + '</p>' ).removeClass( 'cn-hidden' );
 		}
 
-		var cnWelcomeScreen = function ( target ) {
+		var cnWelcomeScreen = function( target ) {
 			var screen = $( target ).data( 'screen' );
 			var steps = [1, 2, 3, 4];
 			var sidebars = ['login', 'register', 'configure', 'payment'];
@@ -277,16 +248,20 @@
 				nonce: cnWelcomeArgs.nonce
 			};
 
-			if ( $.inArray( screen, steps ) != - 1 ) {
+			if ( $.inArray( screen, steps ) !== -1 ) {
 				var container = $( '.cn-welcome-wrap' );
 
 				requestData.screen = screen;
-			} else if ( $.inArray( screen, sidebars ) != - 1 ) {
+			} else if ( $.inArray( screen, sidebars ) !== -1 ) {
 				var container = $( '.cn-sidebar' );
 
 				requestData.screen = screen;
 			} else
 				return false;
+
+			// network area?
+			if ( cnWelcomeArgs.network === '1' )
+				requestData.cn_network = 1;
 
 			// add loading overlay
 			$( container ).addClass( 'cn-loading' );
@@ -296,11 +271,11 @@
 				type: 'POST',
 				dataType: 'html',
 				data: requestData
-			} ).done( function ( response ) {
+			} ).done( function( response ) {
 				$( container ).replaceWith( response );
-			} ).fail( function ( jqXHR, textStatus, errorThrown ) {
+			} ).fail( function( jqXHR, textStatus, errorThrown ) {
 				//
-			} ).always( function ( response ) {
+			} ).always( function( response ) {
 				// remove spinner
 				$( container ).removeClass( 'cn-loading' );
 
@@ -313,7 +288,7 @@
 			return this;
 		};
 
-		var cnWelcomeForm = function ( form ) {
+		var cnWelcomeForm = function( form ) {
 			var formAction = $( form[0] ).data( 'action' );
 			var formResult = null;
 			var formData = {
@@ -328,7 +303,7 @@
 			formData.request = formAction;
 
 			// convert form data to object
-			$( form[0] ).serializeArray().map( function ( x ) {
+			$( form[0] ).serializeArray().map( function( x ) {
 				// exception for checkboxes
 				if ( x.name === 'cn_laws' ) {
 					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [];
@@ -336,10 +311,13 @@
 					arrayVal.push( x.value );
 
 					formData[x.name] = arrayVal;
-				} else {
+				} else
 					formData[x.name] = x.value;
-				}
 			} );
+
+			// network area?
+			if ( cnWelcomeArgs.network === '1' )
+				formData.cn_network = 1;
 
 			formResult = $.ajax( {
 				url: cnWelcomeArgs.ajaxURL,
@@ -352,7 +330,7 @@
 		};
 
 		// handle screen loading
-		$( document ).on( 'click', '.cn-screen-button', function ( e ) {
+		$( document ).on( 'click', '.cn-screen-button', function( e ) {
 			var form = $( e.target ).closest( 'form' );
 			var result = false;
 
@@ -369,7 +347,7 @@
 			var formAction = formDataset.hasOwnProperty( 'action' ) ? formDataset.action : '';
 
 			// get form data
-			$( form[0] ).serializeArray().map( function ( x ) {
+			$( form[0] ).serializeArray().map( function( x ) {
 				// exception for checkboxes
 				if ( x.name === 'cn_laws' ) {
 					var arrayVal = typeof formData[x.name] !== 'undefined' ? formData[x.name] : [];
@@ -377,14 +355,12 @@
 					arrayVal.push( x.value );
 
 					formData[x.name] = arrayVal;
-				} else {
+				} else
 					formData[x.name] = x.value;
-				}
 			} );
 
 			// payment?
 			if ( formAction === 'payment' ) {
-			
 				// free
 				if ( formData.plan === 'free' ) {
 					// load screen
@@ -399,30 +375,34 @@
 					// disable form
 					if ( paymentEl.length )
 						paymentEl.addClass( 'cn-form-disabled' );
-				
+
 					// get subscription ID
 					var subscriptionID = formData.hasOwnProperty( 'cn_subscription_id' ) ? parseInt( formData.cn_subscription_id ) : 0;
+
+					var ajaxArgs = {
+						action: 'cn_api_request',
+						request: 'use_license',
+						subscriptionID: subscriptionID,
+						nonce: cnWelcomeArgs.nonce
+					};
+
+					// network area?
+					if ( cnWelcomeArgs.network === '1' )
+						ajaxArgs.cn_network = 1;
 
 					// assign license request
 					result = $.ajax( {
 						url: cnWelcomeArgs.ajaxURL,
 						type: 'POST',
 						dataType: 'json',
-						data: {
-							action: 'cn_api_request',
-							request: 'use_license',
-							subscriptionID: subscriptionID,
-							nonce: cnWelcomeArgs.nonce
-						}
+						data: ajaxArgs
 					} );
-					
+
 					// process license
-					result.done( function ( response ) {
+					result.done( function( response ) {
 						// error
 						if ( response.hasOwnProperty( 'error' ) ) {
 							cnDisplayError( response.error, $( form[0] ) );
-							
-							// console.log( response.error );
 
 							return false;
 							// message
@@ -435,17 +415,16 @@
 							return result;
 						}
 					} );
-					
+
 					// remove spinner
-					result.always( function ( response ) {
+					result.always( function( response ) {
 						if ( $( e.target ).find( '.cn-spinner' ).length )
 							$( e.target ).find( '.cn-spinner' ).removeClass( 'spin' );
-						
+
 						// enable form
 						if ( paymentEl.length )
 							paymentEl.removeClass( 'cn-form-disabled' );
 					} );
-						
 				// pro
 				} else {
 					// only credit cards
@@ -455,11 +434,10 @@
 						return false;
 					}
 				}
-				
 			// other forms
 			} else
 				e.preventDefault();
-			
+
 			// break here on license payment
 			if ( formAction === 'payment' && formData.plan === 'license' )
 				return result;
@@ -467,25 +445,24 @@
 			// get form and process it
 			result = cnWelcomeForm( form );
 
-			result.done( function ( response ) {
+			result.done( function( response ) {
 				// error
 				if ( response.hasOwnProperty( 'error' ) ) {
 					cnDisplayError( response.error, $( form[0] ) );
 
 					return false;
-					// message
+				// message
 				} else if ( response.hasOwnProperty( 'message' ) ) {
 					cnDisplayError( response.message, $( form[0] ) );
 
 					return false;
-					// all good
+				// all good
 				} else {
 					switch ( formAction ) {
 						// logged in, go to success or billing
-						case 'login' :
+						case 'login':
 						// register complete, go to success or billing
-						case 'register' :
-
+						case 'register':
 							// if there are any subscriptions
 							if ( response.hasOwnProperty( 'subscriptions' ) ) {
 								var subscriptions = response.subscriptions;
@@ -530,11 +507,10 @@
 
 							// init braintree after payment screen is loaded via AJAX
 							btInit();
-
 							break;
 
-						case 'configure' :
-						default :
+						case 'configure':
+						default:
 							// load screen
 							cnWelcomeScreen( e.target );
 							break;
@@ -542,7 +518,7 @@
 				}
 			} );
 
-			result.always( function ( response ) {
+			result.always( function( response ) {
 				if ( $( e.target ).find( '.cn-spinner' ).length )
 					$( e.target ).find( '.cn-spinner' ).removeClass( 'spin' );
 
@@ -557,18 +533,18 @@
 		} );
 
 		//
-		$( document ).on( 'screen-loaded', function () {
+		$( document ).on( 'screen-loaded', function() {
 			var configureFields = $( '#cn-form-configure' ).serializeArray() || [];
 			var frame = window.frames[ 'cn_iframe_id' ];
 
 			if ( configureFields.length > 0 ) {
-				$( configureFields ).each( function ( index, field ) {
+				$( configureFields ).each( function( index, field ) {
 				} );
 			}
 		} );
 
 		// change payment method
-		$( document ).on( 'change', 'input[name="method"]', function () {
+		$( document ).on( 'change', 'input[name="method"]', function() {
 			var input = $( this );
 
 			$( '#cn_payment_method_credit_card, #cn_payment_method_paypal' ).toggle();
@@ -579,8 +555,8 @@
 			btInitPaymentMethod( input.val() );
 		} );
 
-		// 
-		$( document ).on( 'click', '.cn-accordion > .cn-accordion-item .cn-accordion-button', function () {
+		//
+		$( document ).on( 'click', '.cn-accordion > .cn-accordion-item .cn-accordion-button', function() {
 			var accordionItem = $( this ).closest( '.cn-accordion-item' );
 			var activeItem = $( this ).closest( '.cn-accordion' ).find( '.cn-accordion-item:not(.cn-collapsed)' );
 
@@ -593,17 +569,17 @@
 		} );
 
 		// live preview
-		$( document ).on( 'change', 'input[name="cn_position"]', function () {
+		$( document ).on( 'change', 'input[name="cn_position"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'position', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_laws"]', function () {
+		$( document ).on( 'change', 'input[name="cn_laws"]', function() {
 			var val = [];
 
-			$( 'input[name="cn_laws"]:checked' ).each( function () {
+			$( 'input[name="cn_laws"]:checked' ).each( function() {
 				val.push( $( this ).val() );
 			} );
 
@@ -612,10 +588,10 @@
 			frame.contentWindow.postMessage( {call: 'laws', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_naming"]', function () {
+		$( document ).on( 'change', 'input[name="cn_naming"]', function() {
 			var val = [];
 
-			$( 'input[name="cn_naming"]:checked' ).each( function () {
+			$( 'input[name="cn_naming"]:checked' ).each( function() {
 				val.push( $( this ).val() );
 			} );
 
@@ -624,56 +600,56 @@
 			frame.contentWindow.postMessage( {call: 'naming', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_privacy_paper"]', function () {
+		$( document ).on( 'change', 'input[name="cn_privacy_paper"]', function() {
 			var val = $( this ).prop( 'checked' );
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'privacy_paper', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_privacy_contact"]', function () {
+		$( document ).on( 'change', 'input[name="cn_privacy_contact"]', function() {
 			var val = $( this ).prop( 'checked' );
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'privacy_contact', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_primary"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_primary"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'color_primary', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_background"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_background"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'color_background', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_border"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_border"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'color_border', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_text"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_text"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'color_text', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_heading"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_heading"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
 			frame.contentWindow.postMessage( {call: 'color_heading', value: val} );
 		} );
 
-		$( document ).on( 'change', 'input[name="cn_color_button_text"]', function () {
+		$( document ).on( 'change', 'input[name="cn_color_button_text"]', function() {
 			var val = $( this ).val();
 			var frame = window.frames['cn_iframe_id'];
 
@@ -681,7 +657,7 @@
 		} );
 
 		// handle monthly / yearly payment plan
-		$( document ).on( 'change', 'input[name="cn_pricing_type"]', function () {
+		$( document ).on( 'change', 'input[name="cn_pricing_type"]', function() {
 			// pricing plans
 			var plansMonthly = cnWelcomeArgs.pricingMonthly;
 			var plansYearly = cnWelcomeArgs.pricingYearly;
@@ -692,11 +668,10 @@
 			var names = Object.keys( checked === 'yearly' ? plansYearly : plansMonthly );
 			var pricing = Object.values( checked === 'yearly' ? plansYearly : plansMonthly );
 
-			if ( checked === 'yearly' ) {
+			if ( checked === 'yearly' )
 				$( '.cn-plan-period' ).text( cnWelcomeArgs.paidYear );
-			} else {
+			else
 				$( '.cn-plan-period' ).text( cnWelcomeArgs.paidMonth );
-			}
 
 			// replace options
 			var i = 0;
@@ -704,20 +679,17 @@
 			for ( var property in pricing ) {
 				var option = pricingOptions[i];
 
-				// console.log( option );
-
 				$( option ).val( names[i] );
 				$( option ).attr( 'data-price', pricing[i] );
-				i ++;
+				i++;
 			}
 
 			// trigger plan selection
 			$( 'select[name="cn_pricing_plan"]' ).trigger( 'change' );
-
 		} );
 
 		// handle pro plan selection
-		$( document ).on( 'change', 'select[name="cn_pricing_plan"]', function () {
+		$( document ).on( 'change', 'select[name="cn_pricing_plan"]', function() {
 			var el = $( '#cn-pricing-plans' );
 			var selected = $( el ).find( 'option:selected' );
 
@@ -730,12 +702,10 @@
 			availablePlans = availablePlans.concat( Object.keys( cnWelcomeArgs.pricingMonthly ) );
 			availablePlans = availablePlans.concat( Object.keys( cnWelcomeArgs.pricingYearly ) );
 
-			var input = $( this ),
-				inputVal = input.val();
+			var input = $( this );
+			var inputVal = input.val();
 
-			inputVal = availablePlans.indexOf( inputVal ) != - 1 ? inputVal : 'free';
-
-			// console.log( inputVal );
+			inputVal = availablePlans.indexOf( inputVal ) !== -1 ? inputVal : 'free';
 
 			if ( inputVal === 'free' ) {
 				$( '#cn_submit_free' ).removeClass( 'cn-hidden' );
@@ -753,7 +723,7 @@
 		} );
 
 		// handle free / pro / license selection
-		$( document ).on( 'change', 'input[name="plan"]', function () {
+		$( document ).on( 'change', 'input[name="plan"]', function() {
 			var input = $( this ),
 				inputVal = input.val();
 
@@ -780,12 +750,12 @@
 		} );
 
 		// highlight form
-		$( document ).on( 'click', 'input[name="cn_pricing"]', function () {
+		$( document ).on( 'click', 'input[name="cn_pricing"]', function() {
 			$( '.cn-accordion .cn-accordion-item:first-child:not(.cn-collapsed)' ).focus();
 		} );
 
 		// select plan payment
-		$( document ).on( 'change', 'input[name="cn_pricing"]', function () {
+		$( document ).on( 'change', 'input[name="cn_pricing"]', function() {
 			var input = $( this ),
 				inputVal = input.val();
 
@@ -812,7 +782,7 @@
 
 	} );
 
-	$( document ).on( 'ajaxComplete', function () {
+	$( document ).on( 'ajaxComplete', function() {
 		// color picker
 		initSpectrum();
 	} );
@@ -832,21 +802,20 @@
 			modal = $( "#cn-modal-trigger" );
 
 		if ( modal ) {
-
 			$( "#cn-modal-trigger" ).modaal( {
 				content_source: cnWelcomeArgs.ajaxURL + '?action=cn_welcome_screen' + '&nonce=' + cnWelcomeArgs.nonce + '&screen=1',
 				type: 'ajax',
 				width: 1600,
 				custom_class: 'cn-modal',
 				// is_locked: true
-				ajax_success: function () {
+				ajax_success: function() {
 					progressbar = $( document ).find( '.cn-progressbar' );
 
 					if ( progressbar ) {
 						timerId = initProgressBar( progressbar );
 					}
 				},
-				before_close: function () {
+				before_close: function() {
 					clearInterval( timerId );
 
 					var currentStep = $( '.cn-welcome-wrap' );
@@ -857,7 +826,7 @@
 							window.location.reload( true );
 					}
 				},
-				after_close: function () {
+				after_close: function() {
 					progressbar = $( document ).find( '.cn-progressbar' );
 
 					$( progressbar ).progressbar( "destroy" );
@@ -866,7 +835,7 @@
 
 			$( modal ).trigger( 'click' );
 
-			$( document ).on( 'click', '.cn-skip-button', function ( e ) {
+			$( document ).on( 'click', '.cn-skip-button', function( e ) {
 				$( '#modaal-close' ).trigger( 'click' );
 			} );
 		}
@@ -880,11 +849,8 @@
 			timerId;
 
 		if ( progressbar ) {
-
-			$( document ).on( 'click', '.cn-screen-button', function ( e ) {
+			$( document ).on( 'click', '.cn-screen-button', function( e ) {
 				e.preventDefault();
-
-				// console.log( e );
 
 				clearInterval( timerId );
 			} );
@@ -892,14 +858,10 @@
 			$( progressbar ).progressbar( {
 				value: 5,
 				max: 100,
-				create: function ( event, ui ) {
-					// console.log( event );
-
-					timerId = setInterval( function () {
+				create: function( event, ui ) {
+					timerId = setInterval( function() {
 						// increment progress bar
 						currentProgress += 5;
-
-						// console.log( currentProgress );
 
 						// update progressbar
 						progressbar.progressbar( 'value', currentProgress );
@@ -943,27 +905,20 @@
 						}
 
 						// complete
-						if ( currentProgress >= 100 ) {
+						if ( currentProgress >= 100 )
 							clearInterval( timerId );
-						}
 					}, 300 );
 				},
-				change: function ( event, ui ) {
-					// console.log( event );
-
+				change: function( event, ui ) {
 					progressLabel.text( progressbar.progressbar( 'value' ) + '%' );
 				},
-				complete: function ( event, ui ) {
-					// console.log( event );
-
-					setTimeout( function () {
+				complete: function( event, ui ) {
+					setTimeout( function() {
 						if ( cnWelcomeArgs.complianceStatus )
 							$( '.cn-compliance-check' ).find( '.cn-compliance-feedback' ).html( '<p class="cn-message">' + cnWelcomeArgs.compliancePassed + '</p>' ).removeClass( 'cn-hidden' );
 						else
 							$( '.cn-compliance-check' ).find( '.cn-compliance-feedback' ).html( '<p class="cn-error">' + cnWelcomeArgs.complianceFailed + '</p>' ).removeClass( 'cn-hidden' );
 					}, 500 );
-
-					// $( progressbar ).progressbar( "destroy" );
 				}
 			} );
 
@@ -973,16 +928,14 @@
 		}
 	}
 
-	$( document ).on( 'click', '.cn-run-upgrade, .cn-run-welcome', function ( e ) {
+	$( document ).on( 'click', '.cn-run-upgrade, .cn-run-welcome', function( e ) {
 		e.preventDefault();
-
-		// console.log( e );
 
 		// modal
 		initModal();
 	} );
 
-	$( document ).ready( function () {
+	$( document ).ready( function() {
 		var welcome = false;
 
 		welcome = cnGetUrlParam( 'welcome' );
@@ -993,7 +946,7 @@
 		}
 	} );
 
-	$( document ).on( 'click', '.cn-sign-up', function ( e ) {
+	$( document ).on( 'click', '.cn-sign-up', function( e ) {
 		e.preventDefault();
 
 		$( '.cn-screen-button' ).trigger( 'click' );
@@ -1008,10 +961,10 @@
 		for ( i = 0; i < urlVars.length; i ++ ) {
 			parameterName = urlVars[i].split( '=' );
 
-			if ( parameterName[0] === parameter ) {
+			if ( parameterName[0] === parameter )
 				return typeof parameterName[1] === undefined ? true : decodeURIComponent( parameterName[1] );
-			}
 		}
+
 		return false;
 	};
 

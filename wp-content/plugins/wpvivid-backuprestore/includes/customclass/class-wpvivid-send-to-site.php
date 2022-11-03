@@ -54,6 +54,10 @@ class WPvivid_Send_to_site extends WPvivid_Remote
             {
                 $this->send_to_site_file_status();
             }
+            else if($_POST['wpvivid_action']=='clear_backup_cache')
+            {
+                $this->clear_backup_cache();
+            }
             die();
         }
     }
@@ -118,6 +122,7 @@ class WPvivid_Send_to_site extends WPvivid_Remote
             $result=$this->_upload($task_id, $file,$callback);
             if($result['result'] !==WPVIVID_SUCCESS)
             {
+                $this->wpvivid_clear_backup_cache($task_id);
                 return $result;
             }
         }
@@ -246,6 +251,67 @@ class WPvivid_Send_to_site extends WPvivid_Remote
         $upload_job['job_data'][basename($file)]['uploaded']=1;
         WPvivid_taskmanager::update_backup_sub_task_progress($task_id,'upload',WPVIVID_REMOTE_SEND_TO_SITE,WPVIVID_UPLOAD_SUCCESS,'Uploading '.basename($file).' completed.',$upload_job['job_data']);
         return array('result' =>WPVIVID_SUCCESS);
+    }
+
+    public function wpvivid_clear_backup_cache($task_id)
+    {
+        global $wpvivid_plugin;
+        $json=array();
+
+        $json['backup_id']=$task_id;
+        $json=json_encode($json);
+        $crypt=new WPvivid_crypt(base64_decode($this->options['token']));
+        $data=$crypt->encrypt_message($json);
+
+        $data=base64_encode($data);
+
+        $wpvivid_plugin->wpvivid_log->WriteLog('Failed upload backup, clear backup cache.','notice');
+
+        global $wp_version;
+        $args['user-agent'] ='WordPress/' . $wp_version . '; ' . get_bloginfo('url');
+        $args['body']=array('wpvivid_content'=>$data,'wpvivid_action'=>'clear_backup_cache');
+        $args['timeout']=30;
+        $response=wp_remote_post($this->options['url'],$args);
+
+        if ( is_wp_error( $response ) )
+        {
+            $ret['result']=WPVIVID_FAILED;
+            $ret['error']= $response->get_error_message();
+            $wpvivid_plugin->wpvivid_log->WriteLog( $ret['error'],'notice');
+        }
+        else
+        {
+            if($response['response']['code']==200)
+            {
+                $res=json_decode($response['body'],1);
+                if($res!=null)
+                {
+                    if($res['result']==WPVIVID_SUCCESS)
+                    {
+                        $ret['result']=WPVIVID_SUCCESS;
+                    }
+                    else
+                    {
+                        $ret['result']=WPVIVID_FAILED;
+                        $ret['error']= $res['error'];
+                        $wpvivid_plugin->wpvivid_log->WriteLog( $ret['error'],'notice');
+                    }
+                }
+                else
+                {
+                    $ret['result']=WPVIVID_FAILED;
+                    $ret['error']= 'Failed to parse returned data, unable to clear target site backup cache.';
+                    $wpvivid_plugin->wpvivid_log->WriteLog( $ret['error'],'notice');
+                }
+            }
+            else
+            {
+                $ret['result']=WPVIVID_FAILED;
+                $ret['error']= 'Clear backup cache error '.$response['response']['code'].' '.$response['body'];
+                $wpvivid_plugin->wpvivid_log->WriteLog( $ret['error'],'notice');
+            }
+        }
+        return $ret;
     }
 
     public function connect_site($task_id)
@@ -872,5 +938,124 @@ class WPvivid_Send_to_site extends WPvivid_Remote
             die();
         }
         die();
+    }
+
+    public function clear_backup_cache()
+    {
+        include_once WPVIVID_PLUGIN_DIR . '/includes/class-wpvivid-crypt.php';
+        try {
+            if (isset($_POST['wpvivid_content'])) {
+                $default = array();
+                $option = get_option('wpvivid_api_token', $default);
+                if (empty($option)) {
+                    die();
+                }
+                if ($option['expires'] != 0 && $option['expires'] < time()) {
+                    die();
+                }
+
+                $crypt = new WPvivid_crypt(base64_decode($option['private_key']));
+                $body = base64_decode($_POST['wpvivid_content']);
+                $data = $crypt->decrypt_message($body);
+
+                if (!is_string($data)) {
+                    $ret['result'] = WPVIVID_FAILED;
+                    $ret['error'] = 'The key is invalid.';
+                    echo json_encode($ret);
+                    die();
+                }
+                $params = json_decode($data, 1);
+                if (is_null($params)) {
+                    $ret['result'] = WPVIVID_FAILED;
+                    $ret['error'] = 'The key is invalid.';
+                    echo json_encode($ret);
+                    die();
+                }
+
+                global $wpvivid_plugin;
+                $wpvivid_plugin->wpvivid_log = new WPvivid_Log();
+                $wpvivid_plugin->wpvivid_log->OpenLogFile($params['backup_id'] . '_backup', 'no_folder', 'backup');
+
+                $dir=WPvivid_Setting::get_backupdir();
+
+
+                $backup_path=WP_CONTENT_DIR.DIRECTORY_SEPARATOR.$dir.DIRECTORY_SEPARATOR;
+                if(is_dir($backup_path))
+                {
+                    $handler = opendir($backup_path);
+                    if($handler!==false)
+                    {
+                        while (($filename = readdir($handler)) !== false)
+                        {
+                            if ($filename != "." && $filename != "..")
+                            {
+                                if (is_dir($backup_path  . $filename))
+                                {
+                                    continue;
+                                }
+                                else {
+                                    if (self::is_wpvivid_backup($filename))
+                                    {
+                                        if ($id =self::get_wpvivid_backup_id($filename))
+                                        {
+                                            $white_label_id = str_replace(apply_filters('wpvivid_white_label_file_prefix', 'wpvivid'), 'wpvivid', $id);
+                                            if(isset($params['backup_id']))
+                                            {
+                                                $clear_backup_id = sanitize_text_field($params['backup_id']);
+
+                                                if($id === $clear_backup_id || $white_label_id === $clear_backup_id)
+                                                {
+                                                    $wpvivid_plugin->wpvivid_log->WriteLog('Clear backup file: '.$backup_path.$filename, 'notice');
+                                                    @unlink($backup_path.$filename);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if($handler)
+                            @closedir($handler);
+                    }
+                    $ret['result'] = WPVIVID_SUCCESS;
+                }
+                else{
+                    $ret['result']=WPVIVID_PRO_FAILED;
+                    $ret['error']='Failed to get local storage directory.';
+                }
+                echo json_encode($ret);
+            }
+        }
+        catch (Exception $e) {
+            $ret['result']=WPVIVID_FAILED;
+            $ret['error']=$e->getMessage();
+            echo json_encode($ret);
+            die();
+        }
+        die();
+    }
+
+    public static function is_wpvivid_backup($file_name)
+    {
+        if (preg_match('/wpvivid-.*_.*_.*\.zip$/', $file_name))
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static function get_wpvivid_backup_id($file_name)
+    {
+        if (preg_match('/wpvivid-(.*?)_/', $file_name, $matches))
+        {
+            $id = $matches[0];
+            $id = substr($id, 0, strlen($id) - 1);
+            return $id;
+        }
+        else {
+            return false;
+        }
     }
 }

@@ -371,22 +371,34 @@ class ParseUtils
                 $customerData[$fieldName] = $value;
             }
         }
-
-        $customerData = apply_filters('mphb_parse_customer_data', $customerData);
-
+        
+        /**
+         * 
+         * @since 4.3.0 $rawData
+         * @since 4.3.0 $customerFields
+         */
+        $customerData = apply_filters('mphb_parse_customer_data', $customerData, $rawData, $customerFields);
+        
+        /**
+         * 
+         * @param array $errors
+         * 
+         * @since 4.3.0
+         */
+        $errors = apply_filters( 'mphb_parse_customer_errors', $errors );
+        
         // Check for errors
-        $wasErrors = count($errors);
+         foreach ($customerFields as $fieldName => $field) {
 
-        foreach ($customerFields as $fieldName => $field) {
             $value = $customerData[$fieldName];
 
-            if (empty($value) && $field['required']) {
+            if ( empty($value) && $field['required'] ) {
                 $errors[] = $field['labels']['required_error'];
             }
         }
 
         // Return the results
-        if (count($errors) == $wasErrors) {
+        if ( empty($errors) ) {
             return $customerData;
         } else {
             return false;

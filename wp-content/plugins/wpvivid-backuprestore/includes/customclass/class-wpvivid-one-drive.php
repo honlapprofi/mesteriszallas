@@ -116,7 +116,7 @@ class WPvivid_one_drive extends WPvivid_Remote
                         {
                             if (isset($value['auth_id']) && isset($_GET['auth_id']) && $value['auth_id'] == sanitize_text_field($_GET['auth_id']))
                             {
-                                _e('<div class="notice notice-success is-dismissible"><p>You have authenticated the Microsoft OneDrive account as your remote storage.</p></div>');
+                                _e('<div class="notice notice-success is-dismissible"><p>You have authenticated the Microsoft OneDrive account as your remote storage.</p></div>', 'wpvivid-backuprestore');
                                 return;
                             }
                         }
@@ -208,7 +208,7 @@ class WPvivid_one_drive extends WPvivid_Remote
                     <?php _e('Please read <a target="_blank" href="https://wpvivid.com/privacy-policy" style="text-decoration: none;">this privacy policy</a> for use of our Microsoft OneDrive authorization app (none of your backup data is sent to us).', 'wpvivid-backuprestore'); ?>
                 </div>
                 <div style="color:#8bc34a; padding: 10px 10px 10px 0;">
-                    <strong>Authentication is done, please continue to enter the storge information, then click 'Add Now' button to save it.</strong>
+                    <strong><?php esc_html_e('Authentication is done, please continue to enter the storge information, then click \'Add Now\' button to save it.', 'wpvivid-backuprestore'); ?></strong>
                 </div>
                 <div style="padding: 10px 10px 10px 0;">
                     <strong><?php _e('Enter Your Microsoft OneDrive Information', 'wpvivid-backuprestore'); ?></strong>
@@ -408,6 +408,9 @@ class WPvivid_one_drive extends WPvivid_Remote
                     </tr>
                     </tbody>
                 </table>
+                <div style="padding: 10px 0 0 0;">
+                    <span>Tip: Get a 404 or 403 error after authorization? Please read this <a href="https://docs.wpvivid.com/http-403-error-authorizing-cloud-storage.html">doc</a>.</span>
+                </div>
             </div>
             <script>
                 function wpvivid_one_drive_auth()

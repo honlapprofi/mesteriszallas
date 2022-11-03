@@ -3,9 +3,9 @@ Contributors: Papin, qweb
 Donate link: https://www.paypal.me/dakel/10/
 Tags: auto, automatic, background, update, updates, updating, automatic updates, automatic background updates, easy update, wordpress update, theme update, plugin update, up-to-date, security, update latest version, update core, update wp, update wp core, major updates, minor updates, update to new version, update core, update plugin, update plugins, update plugins automatically, update theme, plugin, theme, advance, control, mail, notifations, enable
 Requires at least: 3.6.0
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 5.1
-Stable tag: 3.8.5
+Stable tag: 3.8.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,10 +17,13 @@ Companion Auto Update is a powerful and completely free plugin that allows you t
 
 We understand that you might not always be able to check if your WordPress site has any updates that need to be installed. Especially when you maintain multiple websites keeping them up-to-date can be a lot of work. This plugin can help you with that. We'll keep your site up-to-date and keep you posted about what's happening and notify you when we need your help with something.
 
+If you have a feature suggestion or idea you’d like to see in the plugin, we’d love to hear about it! [Suggest a Feature](https://codeermeneer.nl/contact/)
+
 = Main features =
 1. Auto-updating for plugins, themes, core and translation files
+1. Set at what time you wish to update
 1. Filter plugins and themes to not be updated
-1. E-mail notifications about old software, pending updates and complete updates
+1. E-mail notifications about old software, pending updates and completed updates
 1. An update log with all updates
 1. Option to delay automatic updates with an x number of days
 
@@ -34,8 +37,6 @@ Sometimes developers will push an update that will cause errors on your site, th
 = Know what's happening =
 We want you to know what's happening on your website. This plugin offers settings for various email notifications. We can send you an email when an update is available, when a plugin has been updated or when wordpress has been updated.
 But if you don't want to recieve emails about this you can still log in and view the changelog to see what happened.
-
-If you have a feature suggestion or idea you’d like to see in the plugin, we’d love to hear about it! [Suggest a Feature](https://codeermeneer.nl/contact/)
 
 == Installation ==
 
@@ -80,6 +81,15 @@ So obviously, some of you wondered what the difference would be between the defa
 4. Keep track of updates with the update log
 
 == Changelog ==
+
+= 3.8.7.1 (September 28, 2022) =
+* Tweak: Extended function_exists check with get_plugins() for the fatal error when trying to send update emails
+
+= 3.8.7 (September 12, 2022) =
+* Fix: Fatal error when trying to send update emails
+
+= 3.8.6 (August 11, 2022) =
+* Tweak: Code optimization for better performance
 
 = 3.8.5 (March 17, 2022) =
 * New: Added more checks on the status page and added an explanation to some of them.

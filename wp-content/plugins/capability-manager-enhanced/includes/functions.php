@@ -215,6 +215,7 @@ function pp_capabilities_is_classic_editor_available()
         || version_compare($wp_version, '5.0', '<')
         || class_exists('WooCommerce')
         || (defined('PP_CAPABILITIES_CONFIGURE_CLASSIC_EDITOR') && PP_CAPABILITIES_CONFIGURE_CLASSIC_EDITOR)
+        || !empty(get_option('cme_editor_features_classic_editor_tab'))
         || (function_exists('et_get_option') && 'on' === et_get_option('et_enable_classic_editor', 'off'));
 }
 
@@ -248,10 +249,23 @@ add_action('admin_bar_menu', 'ppc_features_get_admin_bar_nodes', 999);
  *
  */
 function ppc_admin_feature_restrictions() {
-    require_once ( dirname(CME_FILE) . '/includes/features/restrict-admin-features.php' );    
+    require_once ( PUBLISHPRESS_CAPS_ABSPATH . '/includes/features/restrict-admin-features.php' );    
     PP_Capabilities_Admin_Features::adminFeaturedRestriction();
 }
 add_action('init', 'ppc_admin_feature_restrictions', 999);
+
+
+/**
+ * Implement test user feature
+ *
+ * @return void
+ */
+function ppc_test_user_init () {
+    require_once (PUBLISHPRESS_CAPS_ABSPATH . '/includes/test-user.php');
+    PP_Capabilities_Test_User::init();
+}
+add_action('init', 'ppc_test_user_init');
+
 
 /**
  * Redirect user to configured role login redirect
@@ -314,6 +328,60 @@ function ppc_roles_logout_redirect($redirect_to, $request, $user) {
     return $redirect_to;
 }
 add_filter('logout_redirect', 'ppc_roles_logout_redirect', 10, 3);
+
+/**
+ * Block user role login
+ *
+ * @param $user (null|WP_User|WP_Error) WP_User if the user is authenticated. WP_Error or null otherwise.
+ * 
+ * @return WP_User object if credentials authenticate the user. WP_Error or null otherwise
+*/
+function ppc_roles_wp_authenticate_user($user) {
+
+    if (is_wp_error($user)) {
+        return $user;
+    }
+
+    if (isset($user->roles) && is_array($user->roles)) {
+        foreach ($user->roles as $user_role) {
+            //get role option
+            $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+            if (is_array($role_option) && !empty($role_option) 
+                && !empty($role_option['disable_role_user_login']) 
+                && (int)$role_option['disable_role_user_login'] > 0
+            ) {
+                return new WP_Error('ppc_roles_user_banned', __('Login permission denied.', 'capsman-enhanced'));
+            }
+        }
+    }
+
+    return $user;
+}
+add_filter('wp_authenticate_user', 'ppc_roles_wp_authenticate_user', 1);
+
+/**
+ * Wocommerce role admin access restriction remove
+ */
+function ppc_roles_disable_woocommerce_admin_restrictions($restrict_access) {
+
+    if ($restrict_access && is_user_logged_in()) {
+        $user = get_userdata(get_current_user_id());
+
+        if (isset($user->roles) && is_array($user->roles)) {
+            foreach ($user->roles as $user_role) {
+                //get role option
+                $role_option = get_option("pp_capabilities_{$user_role}_role_option", []);
+                if (is_array($role_option) && !empty($role_option) && !empty($role_option['disable_woocommerce_admin_restrictions'])) {
+                    $restrict_access = false;
+                    break;
+                }
+            }
+        }
+    }
+    return $restrict_access;
+}
+add_filter('woocommerce_prevent_admin_access', 'ppc_roles_disable_woocommerce_admin_restrictions', 20);
+add_filter('woocommerce_disable_admin_bar', 'ppc_roles_disable_woocommerce_admin_restrictions', 20);
 
 /**
  * List of capabilities admin pages

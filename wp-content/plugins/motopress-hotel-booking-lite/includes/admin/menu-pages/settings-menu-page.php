@@ -417,6 +417,7 @@ class SettingsMenuPage extends AbstractMenuPage {
 
 		$searchParametersGroup->addFields( $searchParametersFields );
 		$this->filterGroupFields( $searchParametersGroup );
+		
 
 		$displayGroup	 = new Groups\SettingsGroup( 'mphb_display_parameters', __( 'Display Options', 'motopress-hotel-booking' ), $generalTab->getOptionGroupName() );
 		$displayFields	 = array(
@@ -425,6 +426,22 @@ class SettingsMenuPage extends AbstractMenuPage {
 				'default'		 => true,
 				'inner_label'	 => __( 'Display gallery images of accommodation page in lightbox.', 'motopress-hotel-booking' )
 			) ),
+			Fields\FieldFactory::create( 'mphb_room_type_calendar_show_prices', array(
+                'type'        => 'checkbox',
+                'label'       => __('Availability Calendar', 'motopress-hotel-booking'),
+                'inner_label' => __('Display per-night prices in the availability calendar.', 'motopress-hotel-booking'),
+                'default'     => false
+            ) ),
+			Fields\FieldFactory::create( 'mphb_room_type_calendar_truncate_prices', array(
+                'type'        => 'checkbox',
+                'inner_label' => __('Truncate per-night prices in the availability calendar.', 'motopress-hotel-booking'),
+                'default'     => true
+            ) ),
+			Fields\FieldFactory::create( 'mphb_room_type_calendar_show_prices_currency', array(
+                'type'        => 'checkbox',
+                'inner_label' => __('Display the currency sign in the availability calendar.', 'motopress-hotel-booking'),
+                'default'     => false
+            ) ),
 			Fields\FieldFactory::create( 'mphb_datepicker_theme', array(
 				'type'			 => 'select',
 				'list'			 => MPHB()->settings()->main()->getDatepickerThemesList(),

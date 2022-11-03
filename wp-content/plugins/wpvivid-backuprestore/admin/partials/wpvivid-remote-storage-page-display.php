@@ -190,7 +190,7 @@ function wpvivid_add_page_storage_list()
         });
 
         function wpvivid_delete_remote_storage(storage_id){
-            var descript = 'Deleting a remote storage will make it unavailable until it is added again. Are you sure to continue?';
+            var descript = '<?php esc_html_e('Deleting a remote storage will make it unavailable until it is added again. Are you sure to continue?', 'wpvivid-backuprestore'); ?>';
             var ret = confirm(descript);
             if(ret === true){
                 var ajax_data = {
@@ -232,7 +232,7 @@ function wpvivid_add_page_storage_list()
         function wpvivid_control_remote_storage(has_remote){
             if(!has_remote){
                 if(jQuery("input:radio[name='save_local_remote'][value='remote']").prop('checked')) {
-                    alert("There is no default remote storage configured. Please set it up first.");
+                    alert("<?php esc_html_e('There is no default remote storage configured. Please set it up first.', 'wpvivid-backuprestore'); ?>");
                     jQuery("input:radio[name='save_local_remote'][value='local']").prop('checked', true);
                 }
             }

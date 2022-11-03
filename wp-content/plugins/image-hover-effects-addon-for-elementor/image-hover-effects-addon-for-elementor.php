@@ -6,9 +6,9 @@
  * Author URI:		  https://blocksera.com
  * Description: 	  Add creative image hover effects to Elementor page builder. Easily customize title and content and effects with intuitive interface.
  * Requires PHP:      5.6
- * Requires at least: 4.7
- * Tested up to:      5.9.3
- * Version:     	  1.3.6
+ * Requires at least: 5.6
+ * Tested up to:      6.0
+ * Version:     	  1.3.7
  * License: 		  GPL v3
  * Text Domain: 	  eihe-lang
  * Domain Path: 	  /languages
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('EIHE_VERSION', '1.3.6');
+define('EIHE_VERSION', '1.3.7');
 define('EIHE_MINIMUM_ELEMENTOR_VERSION', '2.6.0');
 define('EIHE_PATH', plugin_dir_path(__FILE__));
 define('EIHE_URL', plugin_dir_url(__FILE__));

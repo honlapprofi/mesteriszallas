@@ -67,8 +67,9 @@ class LanguageFlag extends Data_Tag {
 		);
 
 		if ( 'yes' === $settings['svg_flag'] ) {
-			$flag_svg          = cpel_flag_svg( $image_data['url'] );
-			$image_data['url'] = isset( $flag_svg['url'] ) ? $flag_svg['url'] : $image_data['url'];
+			$flag_code         = cpel_flag_code( $image_data['url'] );
+			$flag_svg          = $flag_code ? cpel_flag_svg( $flag_code ) : false;
+			$image_data['url'] = $flag_svg ? $flag_svg['url'] : $image_data['url'];
 		}
 
 		return $image_data;

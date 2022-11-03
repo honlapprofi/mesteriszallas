@@ -357,7 +357,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
         if (!empty($columns['cb']))
         {
             static $cb_counter = 1;
-            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All') . '</label>'
+            $columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __('Select All', 'wpvivid-backuprestore') . '</label>'
                 . '<input id="cb-select-all-' . $cb_counter . '" type="checkbox"/>';
             $cb_counter++;
         }
@@ -398,10 +398,10 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
     {
         $sites_columns = array(
             'cb'          => '<input type="checkbox" />',
-            'blogname'    => __( 'Subsite URL' ),
-            'tables_folders'=>__( 'Subsite Tables/Folders' ),
-            'title' => __( 'Subsite Title' ),
-            'description'  => __( 'Subsite Description')
+            'blogname'    => __( 'Subsite URL', 'wpvivid-backuprestore' ),
+            'tables_folders'=>__( 'Subsite Tables/Folders', 'wpvivid-backuprestore' ),
+            'title' => __( 'Subsite Title', 'wpvivid-backuprestore' ),
+            'description'  => __( 'Subsite Description', 'wpvivid-backuprestore')
         );
 
         return $sites_columns;
@@ -434,7 +434,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
         ?>
         <label class="screen-reader-text" for="blog_<?php echo $subsite_id; ?>">
             <?php
-            printf( __( 'Select %s' ), $blogname );
+            printf( __( 'Select %s', 'wpvivid-backuprestore' ), $blogname );
             ?>
         </label>
         <input type="checkbox" name="<?php echo esc_attr( $this->type ); ?>" value="<?php echo esc_attr( $subsite_id ); ?>" checked />
@@ -571,7 +571,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
 
@@ -602,7 +602,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -613,24 +613,24 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page' type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -638,7 +638,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -648,7 +648,7 @@ class WPvivid_Staging_MU_Site_List_Free extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }
@@ -816,11 +816,11 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
     public function get_columns()
     {
         $sites_columns = array(
-            'cb'          => __( ' ' ),
-            'blogname'    => __( 'Subsite URL' ),
-            //'tables_folders'=>__( 'Subsite Tables/Folders' ),
-            'title' => __( 'Subsite Title' ),
-            'description'  => __( 'Subsite Description')
+            'cb'          => __( ' ', 'wpvivid-backuprestore' ),
+            'blogname'    => __( 'Subsite URL', 'wpvivid-backuprestore' ),
+            //'tables_folders'=>__( 'Subsite Tables/Folders', 'wpvivid-backuprestore' ),
+            'title' => __( 'Subsite Title', 'wpvivid-backuprestore' ),
+            'description'  => __( 'Subsite Description', 'wpvivid-backuprestore' )
         );
 
         return $sites_columns;
@@ -853,7 +853,7 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
         ?>
         <label class="screen-reader-text" for="blog_<?php echo $subsite_id; ?>">
             <?php
-            printf( __( 'Select %s' ), $blogname );
+            printf( __( 'Select %s', 'wpvivid-backuprestore' ), $blogname );
             ?>
         </label>
         <input type="checkbox" name="<?php echo esc_attr( $this->type ); ?>" value="<?php echo esc_attr( $subsite_id ); ?>" />
@@ -990,7 +990,7 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
             $this->screen->render_screen_reader_content( 'heading_pagination' );
         }
 
-        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
+        $output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items, 'wpvivid-backuprestore' ), number_format_i18n( $total_items ) ) . '</span>';
 
         $current              = $this->get_pagenum();
 
@@ -1021,7 +1021,7 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='first-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'First page' ),
+                __( 'First page', 'wpvivid-backuprestore' ),
                 '&laquo;'
             );
         }
@@ -1032,24 +1032,24 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='prev-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Previous page' ),
+                __( 'Previous page', 'wpvivid-backuprestore' ),
                 '&lsaquo;'
             );
         }
 
         if ( 'bottom' === $which ) {
             $html_current_page  = $current;
-            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
+            $total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</span><span id="table-paging" class="paging-input"><span class="tablenav-paging-text">';
         } else {
             $html_current_page = sprintf(
                 "%s<input class='current-page'  type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' /><span class='tablenav-paging-text'>",
-                '<label  class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+                '<label  class="screen-reader-text">' . __( 'Current Page', 'wpvivid-backuprestore' ) . '</label>',
                 $current,
                 strlen( $total_pages )
             );
         }
         $html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+        $page_links[]     = $total_pages_before . sprintf( _x( '%1$s of %2$s', 'paging', 'wpvivid-backuprestore' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 
         if ( $disable_next ) {
             $page_links[] = '<span class="tablenav-pages-navspan button disabled" aria-hidden="true">&rsaquo;</span>';
@@ -1057,7 +1057,7 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
             $page_links[] = sprintf(
                 "<div class='next-page button' value='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
                 $current,
-                __( 'Next page' ),
+                __( 'Next page', 'wpvivid-backuprestore' ),
                 '&rsaquo;'
             );
         }
@@ -1067,7 +1067,7 @@ class WPvivid_Staging_MU_Single_Site_List_Free extends WP_List_Table
         } else {
             $page_links[] = sprintf(
                 "<div class='last-page button'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></div>",
-                __( 'Last page' ),
+                __( 'Last page', 'wpvivid-backuprestore' ),
                 '&raquo;'
             );
         }

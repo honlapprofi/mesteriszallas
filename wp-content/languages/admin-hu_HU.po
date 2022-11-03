@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the WordPress - 6.0.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-09 17:12:23+0000\n"
+"PO-Revision-Date: 2022-10-10 11:42:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: hu\n"
 "Project-Id-Version: WordPress - 6.0.x - Development - Administration\n"
 
@@ -34,24 +34,65 @@ msgstr "0"
 msgid "Continue"
 msgstr "Folytatás"
 
-#: wp-admin/about.php:303
+#: wp-admin/about.php:359
 msgid "https://make.wordpress.org/core/2022/05/03/wordpress-6-0-field-guide/"
 msgstr "https://make.wordpress.org/core/2022/05/03/wordpress-6-0-field-guide/"
 
+#. translators: %s: 6.0 overview video link.
+#: wp-admin/about.php:332
+msgid "See WordPress 6.0 in action! <a href=\"%s\">Watch a brief overview video</a> highlighting some of the major features debuting in WordPress 6.0."
+msgstr "Nézzük meg a WordPress 6.0 verziót működés közben! <a href=\"%s\">Nézzük meg  a rövid áttekintő  videót</a> ami kiemeli a WordPress 6.0 legújabb funkcióit."
+
 #. translators: %s: Version number.
-#: wp-admin/about.php:267
+#: wp-admin/about.php:323
 msgid "Learn more about WordPress %s"
 msgstr "Bővebben a WordPress %s verzióról"
 
-#: wp-admin/about.php:259
+#: wp-admin/about.php:315
 msgid "Exploring WordPress 6.0 video"
 msgstr "A WordPress 6.0 felfedezése (videó)"
 
-#: wp-admin/about.php:151
+#: wp-admin/about.php:306
+msgid "Use the gap support functionality in the Gallery block to create different looks–from adding spacing between all images, to removing spacing altogether."
+msgstr "Használjuk az új hézagtámogatási funkciót a Galéria blokkban hogy új saját kinézetet hozzunk létre, a képek közötti térközök módosításával, vagy törlésével."
+
+#: wp-admin/about.php:288
+msgid "Control gaps, margins, typography, and more on a collection of blocks, all at once, in the Group block."
+msgstr "Vezéreljük a térközöket, margókat, tipográfiát és továbbiakat blokk gyűjteményeken átívelően, egyszerre a Csoport blokkban."
+
+#: wp-admin/about.php:277
+msgid "Transparency levels for your colors allow for even more creative color options."
+msgstr "A színek átlátszósági szintjének állítása még további kreatív szinváltozatokat eredményezhet."
+
+#: wp-admin/about.php:261
+msgid "New border controls offer a simpler way to set your border exactly as you like it."
+msgstr "Az új szegély beállítási lehetőségekkel egyszerűen betudjuk állítani a szegélyeinket, ahogy csak szeretnénk."
+
+#: wp-admin/about.php:253
+msgid "A new color panel design saves space, but still shows your options at a glance."
+msgstr "Az új szín panel kinézete helytakarékos, de egy pillanat alatt megmutatja az elérhető lehetőségeket."
+
+#: wp-admin/about.php:237
+msgid "Additional Design Tools"
+msgstr "További tervezőeszközök"
+
+#: wp-admin/about.php:224
+msgid "Block Locking Controls"
+msgstr "Blokk zárolási eszközök"
+
+#: wp-admin/about.php:207
 msgid "Better List View"
 msgstr "Jobb listanézet"
 
-#: wp-admin/about.php:52
+#: wp-admin/about.php:190
+msgid "Integrated Patterns"
+msgstr "Integrált minták"
+
+#: wp-admin/about.php:168
+msgid "New featured image sizing controls make it easier to get the results you want."
+msgstr "Az új kiemelt kép méretezési lehetőségek még egyszerűbbé teszik, hogy azt az eredményt érjük el, amit csak szeretnénk."
+
+#: wp-admin/about.php:108
 msgid "WordPress 6.0 includes more than 500 enhancements and 400 bug fixes. This page highlights several key advancements aimed at making your WordPress content-creating and site-building experience more feature-rich and intuitive. You will also find resources for developers and anyone wanting a deeper understanding of WordPress."
 msgstr "A WordPress 6.0 több mint 500 új fejlesztést és 400 hibajavítást tartalmaz. Ezen az oldalon kiemeltünk számos olyan kulcsfontosságú fejlesztést, melynek célja, hogy a WordPress tartalomkészítő és webhelyépítő élményét még funkciókban gazdagabbá és intuitívabbá tegye. További segédletek is megtalálhatók a fejlesztők és mindazok számára, akik szeretnék jobban megismerni a WordPress lelkivilágát."
 
@@ -78,7 +119,7 @@ msgstr "Az adatkezelési tájékoztató oldal beállítását követően javasol
 
 #. translators: Do not translate USERNAME, ADMIN_URL, EMAIL, SITENAME, SITEURL:
 #. those are placeholders.
-#: wp-admin/includes/misc.php:1427
+#: wp-admin/includes/misc.php:1428
 msgid ""
 "Howdy ###USERNAME###,\n"
 "\n"
@@ -204,7 +245,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/appearance-editor-screen
 
 #: wp-admin/site-health.php:90
 msgid "<a href=\"https://wordpress.org/support/article/site-health-screen/\">Documentation on Site Health tool</a>"
-msgstr "<a href=\"https://wordpress.org/support/article/site-health-screen/\">Weboldal egészség dokumentációja</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/site-health-screen/\">Webhely Egészség dokumentációja</a>"
 
 #: wp-admin/site-editor.php:23
 msgid "The theme you are currently using is not compatible with Full Site Editing."
@@ -352,7 +393,7 @@ msgstr "Extra menü tételeinek összezárása"
 #. translators: %s: The currently displayed tab.
 #: wp-admin/site-health.php:43
 msgid "Site Health - %s"
-msgstr "Webhely egészsége - %s"
+msgstr "Webhely Egészség - %s"
 
 #. translators: 1: wp-config.php, 2: Documentation URL.
 #: wp-admin/setup-config.php:455
@@ -389,7 +430,7 @@ msgstr "%s tétel"
 #. translators: %s: Number of available theme updates.
 #: wp-admin/menu.php:203 wp-admin/network/menu.php:63
 msgid "Themes %s"
-msgstr "Sablon %s"
+msgstr "Sablonok %s"
 
 #. translators: %s: Error message.
 #: wp-admin/includes/privacy-tools.php:419
@@ -728,7 +769,7 @@ msgstr "A WordPress automatikus új verzióra frissítése bekapcsolva. Köszön
 
 #: wp-admin/index.php:82
 msgid "<strong>Site Health Status</strong> &mdash; Informs you of any potential issues that should be addressed to improve the performance or security of your website."
-msgstr "<strong>Webhely Egészség</strong> &mdash; Minden lehetséges problémára felhívja a figyelmünket, amelyekkel sebességi vagy biztonsági szempontból érinthetik a webhelyünket."
+msgstr "<strong>Webhely Egészségi állapot</strong> &mdash; Minden lehetséges problémára felhívja a figyelmünket, amelyekkel sebességi vagy biztonsági szempontból érinthetik a webhelyünket."
 
 #. translators: %s: Application name.
 #: wp-admin/authorize-application.php:204 wp-admin/user-edit.php:922
@@ -744,7 +785,7 @@ msgstr "Új alkalmazás jelszó hozzáadása"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "Alkalmazás jelszó létrehozása szükséges, a felhasználó frissítése nélkül."
 
-#: wp-admin/about.php:330
+#: wp-admin/about.php:386
 msgid "Go to Updates"
 msgstr "Tovább a Frissítésekre"
 
@@ -754,7 +795,7 @@ msgstr "&larr; Tovább a Felhasználókhoz"
 
 #: wp-admin/revision.php:110
 msgid "&larr; Go to editor"
-msgstr "&larr; Tovább szerkesztőfelületre"
+msgstr "&larr; Tovább a szerkesztőfelületre"
 
 #: wp-admin/includes/class-plugin-installer-skin.php:139
 #: wp-admin/includes/class-plugin-installer-skin.php:145
@@ -771,7 +812,7 @@ msgstr "Tovább a Sablon telepítőhöz"
 
 #: wp-admin/includes/privacy-tools.php:294
 msgid "Go to top"
-msgstr "Ugrás felülre"
+msgstr "Ugrás a lap tetejére"
 
 #. translators: %s is the name of the city we couldn't locate. Replace the
 #. examples with cities in your locale, but test that they match the expected
@@ -910,7 +951,7 @@ msgstr "Utoljára használt"
 #: wp-admin/includes/ajax-actions.php:5314
 #: wp-admin/includes/ajax-actions.php:5364
 msgid "The Site Health check for %1$s has been replaced with %2$s."
-msgstr "A(z) %1$s webhely állapotellenőrzés helyébe %2$s lépett."
+msgstr "%1$s Webhely Egészség ellenőrzés helyébe %2$s lépett."
 
 #: wp-admin/includes/class-wp-privacy-data-removal-requests-list-table.php:139
 msgid "Erase personal data"
@@ -1645,7 +1686,7 @@ msgstr "Sablon visszaállítása korábbi verzióra&#8230;"
 
 #: wp-admin/includes/class-theme-upgrader.php:99
 msgid "Updating the theme&#8230;"
-msgstr "Sablon frissítése&#8230;"
+msgstr "A sablon frissítése&#8230;"
 
 #. translators: %s: Theme error.
 #: wp-admin/includes/class-theme-upgrader.php:95
@@ -1893,7 +1934,7 @@ msgstr "Ez a honosított verzió tartalmazza a fordításokat és egyéb, a hono
 msgid "Take a look at the <strong>%1$d item</strong> on the <a href=\"%2$s\">Site Health screen</a>."
 msgid_plural "Take a look at the <strong>%1$d items</strong> on the <a href=\"%2$s\">Site Health screen</a>."
 msgstr[0] "<strong>%1$d</strong> elem megtekintése a <a href=\"%2$s\">Webhely egészség oldalon</a>."
-msgstr[1] "<strong>%1$d</strong> elem megtekintése a <a href=\"%2$s\">Webhely egészség oldalon</a>."
+msgstr[1] "<strong>%1$d</strong> elem megtekintése a <a href=\"%2$s\">Webhely Egészség oldalon</a>."
 
 #: wp-admin/includes/dashboard.php:1952
 msgid "Your site&#8217;s health is looking good, but there are still some things you can do to improve its performance and security."
@@ -1910,7 +1951,7 @@ msgstr "Az oldalon súlyos problémák vannak, amelyeket mielőbb ki kell javít
 #. translators: %s: URL to Site Health screen.
 #: wp-admin/includes/dashboard.php:1936
 msgid "Site health checks will automatically run periodically to gather information about your site. You can also <a href=\"%s\">visit the Site Health screen</a> to gather information about your site now."
-msgstr "Az oldal egészségének ellenőrzése időközönként automatikusan lefut, hogy adatokat gyűjtsön. Ha meglátogatja <a href=\"%s\">az Oldal Egészsége menüt</a>, akkor most azonnal megtekintheti az aktuális állapotot."
+msgstr "A webhely egészségének ellenőrzése időközönként automatikusan lefut, hogy adatokat gyűjtsön. Ha meglátogatja a <a href=\"%s\">Webhely Egészség</a> menüt, akkor most azonnal megtekintheti az aktuális állapotot."
 
 #: wp-admin/includes/dashboard.php:1923
 msgid "No information yet&hellip;"
@@ -2135,7 +2176,7 @@ msgstr "%s nem regisztrált. A nem regisztrált beállítások nem ajánlottak. 
 
 #: wp-admin/edit-form-advanced.php:380
 msgid "<strong>Format</strong> &mdash; Post Formats designate how your theme will display a specific post. For example, you could have a <em>standard</em> blog post with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Your theme could enable all or some of 10 possible formats. <a href=\"https://wordpress.org/support/article/post-formats/#supported-formats\">Learn more about each post format</a>."
-msgstr "<strong>Bejegyzés formátum</strong> &mdash; Bejegyzés formátumok azt szabályozzák, hogy a bejegyzések hogy jelennek meg a webhelyünkön. Például a <em>standard</em> bejegyzés címsorral, bekezdésekkel fog megjelenni, vagy a rövid <em>széljegyzet</em> nem jeleníti meg a címsort, csak a tartalom rövidített fülszövegét jeleníti meg. A sablonunk képes használni valamennyi elérhető formátumot. <a href=\"https://wordpress.org/support/article/post-formats/#supported-formats\">Segítség a bejegyzés formátumokkal kapcsolatban</a>."
+msgstr "<strong>Bejegyzés formátum</strong> &mdash; Bejegyzés formátumok azt szabályozzák, hogy a bejegyzések hogy jelennek meg a webhelyünkön. Például a <em>standard</em> bejegyzés címsorral, bekezdésekkel fog megjelenni, vagy a rövid <em>széljegyzet</em> nem jeleníti meg a címsort, csak a tartalom rövidített fülszövegét jeleníti meg. A sablonunk támogathatja mind a 10 elérhető, vagy ezek közül néhány formátumot. <a href=\"https://wordpress.org/support/article/post-formats/#supported-formats\">Segítség a bejegyzés formátumokkal kapcsolatban</a>."
 
 #: wp-admin/edit-form-advanced.php:337
 msgid "<a href=\"https://wordpress.org/support/article/pages-screen/\">Documentation on Editing Pages</a>"
@@ -2184,7 +2225,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/users-add-new-screen/\">
 #. translators: %s: URL to Site Health Status page.
 #: wp-admin/site-health-info.php:43
 msgid "This page can show you every detail about the configuration of your WordPress website. For any improvements that could be made, see the <a href=\"%s\">Site Health Status</a> page."
-msgstr "Ezen az oldalon a WordPress minden konfigurációja megtalálható. Ha további fejlesztéseket szeretnénk végrehajtani, látogassunk el a <a href=\"%s\">Webhely Egészség</a> oldalra."
+msgstr "Ezen az oldalon a WordPress minden konfigurációja megtalálható. Ha további fejlesztéseket szeretnénk végrehajtani, látogassunk el a <a href=\"%s\">Webhely Egészség állapot</a> oldalra."
 
 #: wp-admin/includes/dashboard.php:1925 wp-admin/site-health.php:127
 msgid "Results are still loading&hellip;"
@@ -2470,7 +2511,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/posts-categories-screen/
 #. translators: %s: Documentation URL.
 #: wp-admin/options-reading.php:171
 msgid "Your theme determines how content is displayed in browsers. <a href=\"%s\">Learn more about feeds</a>."
-msgstr "Your theme determines how content is displayed in browsers. <a href=\"%s\">Bővebben a hírcsatornákról</a>."
+msgstr "A sablonunk határozza meg, hogy hogyan jelenik meg a tartalom a böngészőkben. <a href=\"%s\">Bővebben a hírcsatornákról</a>."
 
 #: wp-admin/options-reading.php:161 wp-admin/options-reading.php:162
 msgid "For each post in a feed, include"
@@ -2704,7 +2745,7 @@ msgstr "Sikeresen elvégzett ellenőrzések"
 
 #: wp-admin/site-health.php:48
 msgid "Sorry, you are not allowed to access site health information."
-msgstr "Sajnos, nem engedélyezett a webhely egészségével kapcsolatos információk megtekintése."
+msgstr "Sajnos nem engedélyezett a webhely egészségével kapcsolatos információk megtekintése."
 
 #: wp-admin/site-health-info.php:53
 msgid "Copy site info to clipboard"
@@ -2716,11 +2757,11 @@ msgstr "Amennyiben egy hasznos listát szeretnénk a weboldalról készíteni, a
 
 #: wp-admin/site-health-info.php:24 wp-admin/site-health.php:213
 msgid "The Site Health check requires JavaScript."
-msgstr "A webhely egészségi állapotának ellenőrzéséhez JavaScript szükséges"
+msgstr "A Webhely Egészségi állapotának ellenőrzéséhez JavaScript szükséges."
 
 #: wp-admin/site-health-info.php:37
 msgid "Site Health Info"
-msgstr "Weboldal egészségügyi információ"
+msgstr "Webhely Egészségi információ"
 
 #: wp-admin/update-core.php:538 wp-admin/update-core.php:727
 msgid "This update does not work with your version of PHP."
@@ -2736,7 +2777,7 @@ msgstr "Szűkítés bejegyzés formátum alapján"
 
 #: wp-admin/includes/plugin.php:2500 wp-admin/includes/plugin.php:2578
 msgid "Go to the Plugins screen"
-msgstr "Bővítmények képernyő"
+msgstr "Tovább a Bővítmények képernyőre"
 
 #. translators: %s: The filename of the package.
 #: wp-admin/includes/file.php:1485
@@ -2907,7 +2948,7 @@ msgstr "Ezt a bővítmény nem sikerült teljesen betölteni és a visszaállít
 
 #: wp-admin/includes/theme.php:1208
 msgid "Go to the Themes screen"
-msgstr "Ugrás a Sablonokhoz"
+msgstr "Tovább a Sablonok képernyőre"
 
 #: wp-admin/includes/class-wp-debug-data.php:1699
 msgid "Total size is not available. Some errors were encountered when determining the size of your installation."
@@ -2941,11 +2982,11 @@ msgstr[1] "%s javításra ajánlott"
 
 #: wp-admin/site-health.php:236
 msgid "The site health check shows critical information about your WordPress configuration and items that require your attention."
-msgstr "A weboldal egészségének ellenőrzése megmutatja a WordPress konfigurációjának kritikus információit, és a figyelemre érdemes tételeket."
+msgstr "A webhely egészségének ellenőrzése megmutatja a WordPress konfigurációjának kritikus információit, és a figyelemre érdemes tételeket."
 
 #: wp-admin/includes/dashboard.php:62 wp-admin/site-health.php:233
 msgid "Site Health Status"
-msgstr "Webhely egészségi állapota"
+msgstr "Webhely Egészségi állapota"
 
 #: wp-admin/site-health.php:227
 msgid "Everything is running smoothly here."
@@ -3478,7 +3519,7 @@ msgstr "A hiba kód: %s."
 
 #: wp-admin/includes/class-wp-site-health-auto-updates.php:169
 msgid "When you've been able to update using the \"Update now\" button on Dashboard > Updates, we'll clear this error for future update attempts."
-msgstr "Ha sikerül a frissítés a Vezérlőpult > Frissítések menü \"Frissítés most\" funkciójával, eltávolítjuk ezt a hibaüzenetet a további frissítések kezelésekor."
+msgstr "Ha sikerül a frissítés a Vezérlőpult > Frissítések menü \"Frissítés most\" gombjával, eltávolítjuk ezt a hibaüzenetet a jövőbeni frissítési próbálkozásokkor."
 
 #: wp-admin/includes/class-wp-site-health-auto-updates.php:168
 #: wp-admin/includes/class-wp-site-health-auto-updates.php:183
@@ -3900,7 +3941,7 @@ msgstr "Kezdőlap URL"
 
 #: wp-admin/menu.php:349 wp-admin/site-health.php:101
 msgid "Site Health"
-msgstr "Webhely egészség"
+msgstr "Webhely Egészség"
 
 #. translators: %s: Number of requests.
 #: wp-admin/includes/class-wp-privacy-requests-table.php:159
@@ -4099,10 +4140,11 @@ msgctxt "plugin"
 msgid "Cannot Install"
 msgstr "Nem telepíthető"
 
+#. translators: %s: WordPress version
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:316 wp-admin/includes/update.php:302
-#: wp-admin/index.php:119 wp-admin/install.php:238 wp-admin/update-core.php:94
-#: wp-admin/upgrade.php:80
+#: wp-admin/about.php:62 wp-admin/about.php:87 wp-admin/about.php:372
+#: wp-admin/includes/update.php:302 wp-admin/index.php:119
+#: wp-admin/install.php:238 wp-admin/update-core.php:94 wp-admin/upgrade.php:80
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -4313,7 +4355,7 @@ msgid "Privacy Policy Page"
 msgstr "Adatvédelmi irányelvek oldal"
 
 #. translators: %s: Page title.
-#: wp-admin/includes/misc.php:1512
+#: wp-admin/includes/misc.php:1513
 msgid "%s (Draft)"
 msgstr "%s (Vázlat)"
 
@@ -5080,7 +5122,7 @@ msgstr "Tudtuk?"
 
 #: wp-admin/credits.php:135
 msgid "Noteworthy Contributors"
-msgstr "Figyelemre méltó közreműködők"
+msgstr "Említésre méltó közreműködők"
 
 #: wp-admin/theme-editor.php:376
 msgid "If you decide to go ahead with direct edits anyway, use a file manager to create a copy with a new name and hang on to the original. That way, you can re-enable a functional version if something goes wrong."
@@ -5265,12 +5307,12 @@ msgstr "%s (a szerző nevének megtisztított verziója)"
 #. translators: %s: Permalink structure tag.
 #: wp-admin/options-permalink.php:291
 msgid "%s (Category slug. Nested sub-categories appear as nested directories in the URL.)"
-msgstr "%s (kategória slug. A hierarchikus kategóriák egymás után jelennek meg az URL-ben.)"
+msgstr "%s (kategória keresőbarát név. A hierarchikus kategóriák egymás után jelennek meg az URL-ben.)"
 
 #. translators: %s: Permalink structure tag.
 #: wp-admin/options-permalink.php:289
 msgid "%s (The sanitized post title (slug).)"
-msgstr "%s (A bejegyzés egyszerűsített címe (slug).)"
+msgstr "%s (A bejegyzés egyszerűsített címe (keresőbarát név).)"
 
 #. translators: %s: Permalink structure tag.
 #: wp-admin/options-permalink.php:287
@@ -5401,10 +5443,6 @@ msgstr "Sablon telepítési hiba."
 #: wp-admin/includes/class-plugin-upgrader.php:83
 msgid "Plugin installation failed."
 msgstr "Bővítmény telepítési hiba."
-
-#: wp-admin/includes/class-plugin-installer-skin.php:110
-msgid "Activate Plugin &amp; Go to Press This"
-msgstr "Bővítmény bekapcsolása &amp; Press This"
 
 #: wp-admin/customize.php:71
 msgid "Your scheduled changes just published"
@@ -5775,7 +5813,7 @@ msgstr "Elnézést, nincs megfelelő jogosultság a honlap frissítéséhez."
 
 #: wp-admin/themes.php:401 wp-admin/themes.php:752
 msgid "New version available. <button class=\"button-link\" type=\"button\">Update now</button>"
-msgstr "Új verzió érhető el. <button class=\"button-link\" type=\"button\">Frissítés</button>"
+msgstr "Új verzió érhető el. <button class=\"button-link\" type=\"button\">Frissítés most</button>"
 
 #: wp-admin/theme-install.php:171
 msgid "The Theme Installer screen requires JavaScript."
@@ -5875,7 +5913,7 @@ msgstr "WordPress frissítése"
 #. URL to network admin, 4: Accessibility text.
 #: wp-admin/includes/update.php:309
 msgid "<a href=\"%1$s\">WordPress %2$s</a> is available! <a href=\"%3$s\" aria-label=\"%4$s\">Please update now</a>."
-msgstr "<a href=\"%1$s\">WordPress %2$s</a> elérhető! <a href=\"%3$s\" aria-label=\"%4$s\">Frissítés most</a>."
+msgstr "<a href=\"%1$s\">WordPress %2$s</a> elérhető! <a href=\"%3$s\" aria-label=\"%4$s\">Frissítsünk most</a>!"
 
 #: wp-admin/includes/theme.php:319
 msgid "Portfolio"
@@ -6043,7 +6081,7 @@ msgstr "Kiadás megbízott"
 
 #: wp-admin/credits.php:139
 msgid "Release Design Lead"
-msgstr "Kiadás design vezető"
+msgstr "Dizájn kiadás vezető"
 
 #. translators: %s: Documentation URL.
 #: wp-admin/includes/meta-boxes.php:807
@@ -6485,7 +6523,7 @@ msgid "(Currently set to: %s)"
 msgstr "(Jelenlegi beállítás: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:354
+#: wp-admin/about.php:410
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>%s verzió</strong> egy biztonsági hibát javított."
 
@@ -6497,15 +6535,15 @@ msgstr "https://en.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Adatlap-kép"
 
-#: wp-admin/about.php:351
+#: wp-admin/about.php:42 wp-admin/about.php:407
 msgid "Maintenance and Security Releases"
 msgstr "Hibajavító- és biztonsági frissítések"
 
-#: wp-admin/about.php:348
+#: wp-admin/about.php:404
 msgid "Security Releases"
 msgstr "Biztonsági frissítések"
 
-#: wp-admin/about.php:345
+#: wp-admin/about.php:401
 msgid "Maintenance Releases"
 msgstr "Hibajavító frissítések"
 
@@ -7728,7 +7766,7 @@ msgstr "Értékelés"
 #. translators: %s: Support email address.
 #: wp-admin/includes/class-wp-automatic-updater.php:817
 msgid "The WordPress team is willing to help you. Forward this email to %s and the team will work with you to make sure your site is working."
-msgstr "A WordPress Magyarország csapata készen áll a segítségadásra. Ezt a levelet el kell küldeni a %s címre, és a csapat segíteni fog, hogy a honlap egészen biztos, hogy működjön."
+msgstr "A WordPress Magyarország csapata készen áll a segítségadásra. Ezt a levelet el kell küldeni a %s címre, és a csapat segíteni fog, hogy a honlap egészen biztosan működjön."
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:67
 msgctxt "themes"
@@ -7912,7 +7950,7 @@ msgstr "<a href=\"https://tamogatas.wphu.org/\" target=\"_blank\">WordPress Magy
 #. translators: %s: https://wordpress.org
 #: wp-admin/admin-footer.php:37
 msgid "Thank you for creating with <a href=\"%s\">WordPress</a>."
-msgstr "Köszönjük a <a href=\"%s\">WordPress</a> használatát a honlap létrehozásához!"
+msgstr "Köszönet a <a href=\"%s\">WordPress</a> használatáért a honlap létrehozásához!"
 
 #: wp-admin/themes.php:234
 msgid "Search installed themes..."
@@ -8252,7 +8290,7 @@ msgstr "Bármilyen hiba vagy kérdés esetén a WordPress Magyarország fórumá
 #: wp-admin/includes/class-wp-automatic-updater.php:828
 #: wp-admin/update-core.php:972
 msgid "Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers."
-msgstr "A honlap frissen tartása biztonsági szempontból fontos. Ezzel az olvasóink számára is az internetet egy biztonságosabb hellyé tehetjük."
+msgstr "A honlap frissen tartása biztonsági szempontból fontos. Ezzel az internetet egy biztonságosabb hellyé tehetjük nem csak magunk, de az olvasóink számára is."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:807
 msgid "Please check out your site now. It's possible that everything is working. If it says you need to update, you should do so:"
@@ -8270,7 +8308,7 @@ msgstr "%1$s honlapunk súlyos hibát érzékelt a WordPress legújabb %2$s verz
 #: wp-admin/includes/class-wp-automatic-updater.php:761
 #: wp-admin/includes/class-wp-automatic-updater.php:784
 msgid "Updating is easy and only takes a few moments:"
-msgstr "A frissítés könnyű, és csak pár mozdulat:"
+msgstr "A frissítés egyszerű és csak egy pár pillanat:"
 
 #. translators: 1: Home URL, 2: WordPress version.
 #: wp-admin/includes/class-wp-automatic-updater.php:771
@@ -8317,7 +8355,7 @@ msgstr "%s fordítása"
 #: wp-admin/includes/class-language-pack-upgrader-skin.php:51
 #: wp-admin/includes/class-wp-automatic-updater.php:384
 msgid "Updating translations for %1$s (%2$s)&#8230;"
-msgstr "Fordítások frissítése %1$s (%2$s)&#8230;"
+msgstr "%1$s (%2$s) fordításának frissítése&#8230;"
 
 #: wp-admin/includes/class-language-pack-upgrader-skin.php:31
 #: wp-admin/update-core.php:814 wp-admin/update-core.php:1224
@@ -8901,7 +8939,7 @@ msgid "You cannot move this item to the Trash. %s is currently editing."
 msgstr "%s jelenleg szerkesztés alatt áll, ezért nem mozgatható a lomtárba."
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/misc.php:1194
+#: wp-admin/includes/misc.php:1195
 msgid "%s has taken over and is currently editing."
 msgstr "%s átvétel alatt, és jelenleg szerkesztés alatt áll."
 
@@ -8975,7 +9013,7 @@ msgstr "Ha a hivatkozásokat szeretnénk kezelni telepítsük a <a href=\"%s\">H
 
 #: wp-admin/widgets-form.php:65
 msgid "When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive Widgets area, where all of your widgets and their settings will have been saved."
-msgstr "Amikor sablon váltunk, általában az oldalsávok számának és beállításának megváltozásával jár, és ezek módosítása nem megy mindig simán. Ezért, ha sablon váltás után, egy widgetünk eltűnt, az Inaktív területen meg fogjuk találni, valamennyi beállításával együtt."
+msgstr "Amikor sablon váltunk, általában az oldalsávok számának és beállításának megváltozásával jár, és ezek módosítása nem megy mindig simán. Ezért ha sablon váltás után egy modulunk eltűnt, az Inaktív területen meg fogjuk találni, minden beállításával együtt."
 
 #: wp-admin/edit-tags.php:288
 msgid "<strong>Parent</strong> &mdash; Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have child categories for Bebop and Big Band. Totally optional. To create a subcategory, just choose another category from the Parent dropdown."
@@ -8991,7 +9029,7 @@ msgstr "Média beillesztése"
 
 #: wp-admin/edit-form-advanced.php:282
 msgid "The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop. You can also minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
-msgstr "A cím-mező, és a nagy bejegyzés-szerkesztő terület rögzített helyzetű, de az összes többi doboz a fogd és dobd módszerrel átrendezhető. Lehetőség van mindegyik doboz méretének minimalizálására vagy kinyitására a címsávukra történő kattintással. A Mit lássunk?-funkció szolgál egy, vagy több doboz elrejtésére (Kivonat, Visszakövetés, Egyéni mező, Interakció, Slug, Szerző), vagy a képernyő 1 vagy 2 oszlopos elrendezésére."
+msgstr "A cím-mező, és a nagy bejegyzés-szerkesztő terület rögzített helyzetű, de az összes többi doboz a fogd és dobd módszerrel átrendezhető. Lehetőség van mindegyik doboz méretének minimalizálására vagy kinyitására a címsávukra történő kattintással. A Mit lássunk?-funkció szolgál egy, vagy több doboz elrejtésére (Kivonat, Visszakövetés, Egyéni mező, Interakció, Keresőbarát név, Szerző), vagy a képernyő 1 vagy 2 oszlopos elrendezésére."
 
 #: wp-admin/includes/class-custom-image-header.php:130
 msgid "Do not forget to click &#8220;Save Changes&#8221; when you are done!"
@@ -9128,7 +9166,7 @@ msgstr "Üdvözlet a WordPress-csapattól!"
 
 #: wp-admin/includes/dashboard.php:395
 msgid "Search engines discouraged"
-msgstr "A keresőmotorok letiltva"
+msgstr "A keresőmotorok le vannak tiltva"
 
 #. translators: 1: Link to documentation on child themes, 2: Name of parent
 #. theme.
@@ -9486,7 +9524,7 @@ msgstr "Fejrész szöveg"
 #: wp-admin/includes/theme.php:249 wp-admin/includes/update.php:518
 #: wp-admin/includes/update.php:704
 msgid "There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version %4$s details</a> or <a href=\"%5$s\" %6$s>update now</a>."
-msgstr "Az új %1$s verzió már elérhető. <a href=\"%2$s\" %3$s> A legfrissebb %4$s változat részletei itt tekinthetőek meg</a>, vagy <a href=\"%5$s\" %6$s>frissítés most</a>."
+msgstr "Az új %1$s verzió már elérhető. <a href=\"%2$s\" %3$s>Tekintsük meg a legfrissebb %4$s változat részleteit</a>, vagy <a href=\"%5$s\" %6$s>frissítsünk most</a>."
 
 #. translators: %s: Plugin author.
 #: wp-admin/includes/plugin.php:210
@@ -9601,7 +9639,7 @@ msgstr "MB (üresen kell hagyni a hálózat alapértelmezett értékhez)"
 
 #. translators: New admin email address notification email subject. %s: Site
 #. title.
-#: wp-admin/includes/misc.php:1487
+#: wp-admin/includes/misc.php:1488
 msgid "[%s] New Admin Email Address"
 msgstr "[%s] Új admin e-mail-cím"
 
@@ -9827,14 +9865,18 @@ msgstr "Adjuk meg egy létező felhasználó e-mail-címét a honlapra történ�
 msgid "Show Toolbar when viewing site"
 msgstr "Eszköztár mutatása az oldal megtekintésekor"
 
+#. translators: %s: HelpHub URL
+#. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:377
+#: wp-admin/about.php:59 wp-admin/about.php:84 wp-admin/about.php:433
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "További információk: <a href=\"%s\">Verzió információk</a>."
 
+#. translators: 1: WordPress version number, 2: plural number of bugs. More
+#. than one security issue.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:371
+#: wp-admin/about.php:47 wp-admin/about.php:427
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s verzió</strong> biztonsági réseket, és %2$s hibát javított."
@@ -9842,33 +9884,33 @@ msgstr[1] "<strong>%1$s verzió</strong> biztonsági réseket, és %2$s hibát j
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:365
+#: wp-admin/about.php:421
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s verzió</strong> egy biztonsági rést, és %2$s hibát javított."
 msgstr[1] "<strong>%1$s verzió</strong> egy biztonsági rést, és %2$s hibát javított."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:359
+#: wp-admin/about.php:72 wp-admin/about.php:415
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>%1$s verzió</strong> %2$s hibát javít."
 msgstr[1] "<strong>%1$s verzió</strong> %2$s hibát javít."
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:356
+#: wp-admin/about.php:412
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "A <strong>%s verzió</strong> néhány biztonsági hibát javít."
 
-#: wp-admin/about.php:350
+#: wp-admin/about.php:406
 msgid "Maintenance and Security Release"
 msgstr "Karbantartó és biztonsági frissítés"
 
-#: wp-admin/about.php:347
+#: wp-admin/about.php:403
 msgid "Security Release"
 msgstr "Biztonsági frissítés"
 
-#: wp-admin/about.php:344
+#: wp-admin/about.php:400
 msgid "Maintenance Release"
 msgstr "Hibajavító frissítés"
 
@@ -9936,7 +9978,7 @@ msgstr "Képernyő tartalom"
 
 #: wp-admin/edit.php:244
 msgid "This screen provides access to all of your posts. You can customize the display of this screen to suit your workflow."
-msgstr "Ezen a képernyőn lehet kezelni valamennyi bejegyzésünket. A megjelenést pedig testre lehet szabni, hogy még jobban megfeleljen az igényeinknek."
+msgstr "Ezen a képernyőn lehet kezelni minden bejegyzésünket. A megjelenést pedig testre lehet szabni, hogy még jobban megfeleljen az igényeinknek."
 
 #. translators: %s: URL to Add Plugins screen.
 #: wp-admin/import.php:229
@@ -10030,7 +10072,7 @@ msgstr "Lehetőség van jelszó változtatásra, gyorsbillentyűk bekapcsolásá
 
 #: wp-admin/widgets-form.php:94
 msgid "This sidebar is no longer available and does not show anywhere on your site. Remove each of the widgets below to fully remove this inactive sidebar."
-msgstr "Ez az oldalsáv már nincs használatban és sehol sem jelenik meg az oldalon. Valamennyi widget eltávolításával eltüntethető ez a használaton kívüli oldalsáv."
+msgstr "Ez az oldalsáv már nincs használatban és sehol sem jelenik meg az oldalon. Az összes modul eltávolításával eltüntethető ez a használaton kívüli oldalsáv."
 
 #: wp-admin/widgets-form.php:91
 msgid "Inactive Sidebar (not used)"
@@ -10123,7 +10165,7 @@ msgstr "Ha a sor fölé mozgatjuk az egeret, megjelennek a felhasználók kezel�
 
 #: wp-admin/users.php:48
 msgid "You can view all posts made by a user by clicking on the number under the Posts column."
-msgstr "Valamennyi, az adott felhasználó által jegyzett bejegyzés megtekinthető a Bejegyzés oszlopban látható számjegyre történő kattintással."
+msgstr "Az összes, adott felhasználó által jegyzett bejegyzés megtekinthető a Bejegyzés oszlopban látható számjegyre történő kattintással."
 
 #: wp-admin/users.php:46
 msgid "You can hide/display columns based on your needs and decide how many users to list per screen using the Screen Options tab."
@@ -10154,17 +10196,17 @@ msgid "Because this is a multisite installation, you may add accounts that alrea
 msgstr "Mivel ez egy Multisite telepítés, lehetséges a hálózaton már létező felhasználókat hozzáadni, a felhasználónevük, vagy e-mail-címük megadásával, és egy szerepkör meghatározásával. További lehetőségekhez, mint például jelszó megadáshoz Hálózat Adminisztrátornak kell lenni, és Hálózat-kezelő > Összes felhasználó oldalon a felhasználó neve fölé mozgatva az egeret a Szerkesztés lehetőséget választani."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:46
+#: wp-admin/about.php:102
 msgid "Welcome to WordPress %s"
 msgstr "Üdvözöl a WordPress %s"
 
-#: wp-admin/about.php:333
+#: wp-admin/about.php:389
 msgid "Go to Dashboard &rarr; Home"
-msgstr "Vezérlőpulthoz &rarr; Kezdőlap"
+msgstr "Tovább a Vezérlőpult &rarr; Kezdőlaphoz"
 
-#: wp-admin/about.php:330
+#: wp-admin/about.php:386
 msgid "Go to Dashboard &rarr; Updates"
-msgstr "Vezérlőpulthoz &rarr; Frissítések"
+msgstr "Tovább a Vezérlőpult &rarr; Frissítésekhez"
 
 #: wp-admin/user-edit.php:207
 msgid "Profile updated."
@@ -10194,7 +10236,7 @@ msgstr ""
 
 #: wp-admin/credits.php:141
 msgid "Core Developer"
-msgstr "főfejlesztő"
+msgstr "Főfejlesztő"
 
 #: wp-admin/includes/class-plugin-upgrader.php:440
 msgid "No valid plugins were found."
@@ -10293,7 +10335,7 @@ msgstr "A <em>Vezérlőpult</em> képernyőbeállításainál a továbbiakban fe
 
 #: wp-admin/index.php:51
 msgid "The left-hand navigation menu provides links to all of the WordPress administration screens, with submenu items displayed on hover. You can minimize this menu to a narrow icon strip by clicking on the Collapse Menu arrow at the bottom."
-msgstr "A bal oldali navigációs menüben valamennyi hivatkozás megtalálható ami a WordPress teljes vezérléséhez, működtetéséhez szükséges. A további almenük megjelennek, amennyiben a kurzort a menüsor fölé húzzuk. A menüsáv mérete csökkenthető az alul lévő \"Összezárás\" ikonra történő kattintással."
+msgstr "A bal oldali navigációs menüben minden hivatkozás megtalálható ami a WordPress teljes vezérléséhez, működtetéséhez szükséges. A további almenük megjelennek, amennyiben a kurzort a menüsor fölé húzzuk. A menüsáv mérete csökkenthető az alul lévő \"Összezárás\" ikonra történő kattintással."
 
 #: wp-admin/comment.php:62 wp-admin/edit-comments.php:179
 #: wp-admin/edit-form-advanced.php:344 wp-admin/edit-link-form.php:66
@@ -10619,7 +10661,7 @@ msgstr "Ezen az oldalon további sablonokat tölthetünk le az oldalunkhoz a Sab
 #. translators: %s: WordPress Plugin Directory URL.
 #: wp-admin/plugins.php:550
 msgid "If you would like to see more plugins to choose from, click on the &#8220;Add New&#8221; button and you will be able to browse or search for additional plugins from the <a href=\"%s\">WordPress Plugin Directory</a>. Plugins in the WordPress Plugin Directory are designed and developed by third parties, and are compatible with the license WordPress uses. Oh, and they&#8217;re free!"
-msgstr "Amennyiben további bővítmények közül szeretnénk választani, kattintsunk az &#8220;Új bővítmény hozzádása&#8221; fülre, ami által lehetőségünk lesz a <a href=\"%s\" target=\"_blank\">WordPress.org Bővítménytár</a> választékában keresgélni, válogatni. A WordPress.org Bővítménytárban fellelhető bővítmények külső szerző(k) műve melyek WordPress licencével kompatibilis licenc alatt kerültek kiadásra. További előny, hogy valamennyi teljesen ingyenes!"
+msgstr "Amennyiben további bővítmények közül szeretnénk választani, kattintsunk az &#8220;Új bővítmény hozzádása&#8221; fülre, ami által lehetőségünk lesz a <a href=\"%s\" target=\"_blank\">WordPress.org Bővítménytár</a> választékában keresgélni, válogatni. A WordPress.org Bővítménytárban fellelhető bővítmények külső szerző(k) műve melyek WordPress licencével kompatibilis licenc alatt kerültek kiadásra. További előny, hogy mindegyik teljesen ingyenes!"
 
 #. translators: %s: MAX_FILE_SIZE
 #: wp-admin/includes/file.php:867
@@ -10647,7 +10689,7 @@ msgstr "Fordítók"
 #. https://wordpress.org/about/license
 #: wp-admin/freedoms.php:99
 msgid "Every plugin and theme in WordPress.org&#8217;s directory is 100%% GPL or a similarly free and compatible license, so you can feel safe finding <a href=\"%1$s\">plugins</a> and <a href=\"%2$s\">themes</a> there. If you get a plugin or theme from another source, make sure to <a href=\"%3$s\">ask them if it&#8217;s GPL</a> first. If they do not respect the WordPress license, it is not recommended to use them."
-msgstr "A WordPress.org-on található valamennyi sablon és bővítmény 100%% GPL vagy hasonló ingyenes és kompatibilis licenccel rendelkezik, így biztonságosan válogathatunk a <a href=\"%1$s\">bővítmények</a> és <a href=\"%2$s\">sablonok</a> között. Ha másmilyen forrásból származó bővítményünk, vagy sablonunk van, használat előtt <a href=\"%3$s\">bizonyosodjunk meg róla, hogy rendelkezik-e GPL licenccel</a>. Ha nem tartják tiszteletben a WordPress licencét, akkor nem javasoljuk a használatát."
+msgstr "A WordPress.org-on található minden sablon és bővítmény 100%% GPL vagy hasonló ingyenes és kompatibilis licenccel rendelkezik, így biztonságosan válogathatunk a <a href=\"%1$s\">bővítmények</a> és <a href=\"%2$s\">sablonok</a> között. Ha másmilyen forrásból származó bővítményünk, vagy sablonunk van, használat előtt <a href=\"%3$s\">bizonyosodjunk meg róla, hogy rendelkezik-e GPL licenccel</a>. Ha nem tartják tiszteletben a WordPress licencét, akkor nem javasoljuk a használatát."
 
 #. translators: %s: https://wordpressfoundation.org/trademark-policy
 #: wp-admin/freedoms.php:87
@@ -10660,7 +10702,7 @@ msgstr "Összes hozzászólás"
 
 #: wp-admin/credits.php:137
 msgid "Lead Developer"
-msgstr "vezető fejlesztő"
+msgstr "Vezető fejlesztő"
 
 #: wp-admin/credits.php:136
 msgid "Cofounder, Project Lead"
@@ -10756,7 +10798,7 @@ msgstr "Létező felhasználó hozzáadása"
 
 #: wp-admin/plugin-editor.php:137 wp-admin/theme-editor.php:46
 msgid "Any edits to files from this screen will be reflected on all sites in the network."
-msgstr "Bármely fájl módosítása ezen a képernyőn kihat a hálózat valamennyi honlapjára."
+msgstr "Bármely fájl módosítása ezen a képernyőn kihat a hálózat minden honlapjára."
 
 #: wp-admin/users.php:35
 msgid "This screen lists all the existing users for your site. Each user has one of five defined roles as set by the site admin: Site Administrator, Editor, Author, Contributor, or Subscriber. Users with roles other than Administrator will see fewer options in the dashboard navigation when they are logged in, based on their role."
@@ -10997,7 +11039,7 @@ msgstr "Jelöljünk ki legalább egy sablont frissítésre."
 
 #: wp-admin/includes/class-bulk-upgrader-skin.php:41
 msgid "The update process is starting. This process may take a while on some hosts, so please be patient."
-msgstr "A frissítés folyamata megkezdődött. A frissítési folyamat kiszolgálónként eltérő időtartamú lehet, szóval legyünk türelemmel."
+msgstr "A frissítés megkezdődött. A frissítési folyamat kiszolgálónként eltérő időtartamú lehet, szóval legyünk türelemmel."
 
 #: wp-admin/theme-install.php:217 wp-admin/theme-install.php:239
 msgid "Apply Filters"
@@ -11080,19 +11122,19 @@ msgstr "Az új %1$s verzió már elérhető. <a href=\"%2$s\" %3$s> %4$s verzió
 #: wp-admin/includes/class-theme-installer-skin.php:164
 #: wp-admin/includes/class-theme-upgrader-skin.php:127
 msgid "Go to Themes page"
-msgstr "Sablonok oldal"
+msgstr "Tovább a Sablonok oldalra"
 
 #: wp-admin/includes/class-bulk-plugin-upgrader-skin.php:56
 #: wp-admin/includes/class-bulk-theme-upgrader-skin.php:56
 #: wp-admin/includes/class-language-pack-upgrader-skin.php:80
 msgid "Go to WordPress Updates page"
-msgstr "WordPress frissítési oldal"
+msgstr "Tovább a WordPress frissítési oldalra"
 
 #: wp-admin/includes/class-bulk-plugin-upgrader-skin.php:51
 #: wp-admin/includes/class-plugin-installer-skin.php:151
 #: wp-admin/includes/class-plugin-upgrader-skin.php:101
 msgid "Go to Plugins page"
-msgstr "Bővítmények oldalra"
+msgstr "Tovább a Bővítmények oldalra"
 
 #: wp-admin/includes/nav-menu.php:1086
 msgid "Click Save Menu to make pending menu items public."
@@ -11299,11 +11341,11 @@ msgstr "A hivatkozás neve, a webcím és a leírás dobozok helyzete rögzítet
 
 #: wp-admin/update-core.php:628
 msgid "Your themes are all up to date."
-msgstr "Valamennyi sablon a legfrissebb verziójú."
+msgstr "Minden sablon a legfrissebb verziójú."
 
 #: wp-admin/update-core.php:459
 msgid "Your plugins are all up to date."
-msgstr "Valamennyi bővítmény a legfrissebb verziójú."
+msgstr "Minden bővítmény a legfrissebb verziójú."
 
 #: wp-admin/update-core.php:288
 msgid "While your site is being updated, it will be in maintenance mode. As soon as your updates are complete, this mode will be deactivated."
@@ -11352,7 +11394,7 @@ msgstr "Ezen képernyő megjelenítése a Mit lássunk?-fül és/vagy legördül
 
 #: wp-admin/plugins.php:560
 msgid "Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue."
-msgstr "A legtöbb bővítmény gond nélkül működik együtt a WordPress eredeti fájljaival és más bővítményekkel. Néha azonban előfordul, hogy egy bővítmény kódja egy másik bővítmény kódjával ütközik, és kompatibilitási gondot okoz. Amennyiben a honlap működése közben furcsaságokat tapasztalunk, akkor ez is egy lehetséges ok. Meg kell próbálni valamennyi bővítményt kikapcsolni, majd egyesével visszakapcsolva megnézni az eredményt, hogy fennáll-e még a probléma, így fellelhetőek lehetnek az ütköző bővítmények."
+msgstr "A legtöbb bővítmény gond nélkül működik együtt a WordPress eredeti fájljaival és más bővítményekkel. Néha azonban előfordul, hogy egy bővítmény kódja egy másik bővítmény kódjával ütközik, és kompatibilitási gondot okoz. Amennyiben a honlap működése közben furcsaságokat tapasztalunk, akkor ez is egy lehetséges ok. Meg kell próbálni minden bővítményt kikapcsolni, majd egyesével visszakapcsolva megnézni az eredményt, hogy fennáll-e még a probléma, így fellelhetőek lehetnek az ütköző bővítmények."
 
 #: wp-admin/widgets-form.php:56
 msgid "Enabling Accessibility Mode, via Screen Options, allows you to use Add and Edit buttons instead of using drag and drop."
@@ -11376,7 +11418,7 @@ msgstr "Miután begépeltük a változásokat, kattintsunk a Fájl módosítás�
 
 #: wp-admin/theme-editor.php:31
 msgid "Begin by choosing a theme to edit from the dropdown menu and clicking the Select button. A list then appears of the theme&#8217;s template files. Clicking once on any file name causes the file to appear in the large Editor box."
-msgstr "Egy sablon szerkesztését a legördülő menüből történő kiválasztásával kezdjük - kiválasztjuk a kívánt sablon nevét, majd a Kijelölés gombra kattintunk, melynek hatására a sablon valamennyi fájlja megjelenik egy listában, a jobb oldalon. A szerkeszteni kívánt fájl nevére kattintva annak tartalma megjelenik a nagy szerkesztő dobozban."
+msgstr "Egy sablon szerkesztését a legördülő menüből történő kiválasztásával kezdjük - kiválasztjuk a kívánt sablon nevét, majd a Kijelölés gombra kattintunk, melynek hatására a sablon fájljai megjelennek egy listában, a jobb oldalon. A szerkeszteni kívánt fájl nevére kattintva annak tartalma megjelenik a nagy szerkesztő dobozban."
 
 #: wp-admin/theme-editor.php:30
 msgid "You can use the theme file editor to edit the individual CSS and PHP files which make up your theme."
@@ -11396,7 +11438,7 @@ msgstr "<strong>Szülő</strong> - Az oldalak hierarchikusan rendezhetőek, pél
 
 #: wp-admin/includes/class-bulk-upgrader-skin.php:48
 msgid "All updates have been completed."
-msgstr "Valamennyi frissítés megtörtént."
+msgstr "Minden frissítés megtörtént."
 
 #: wp-admin/edit-tags.php:293
 msgid "You can change the display of this screen using the Screen Options tab to set how many items are displayed per screen and to display/hide columns in the table."
@@ -11784,7 +11826,7 @@ msgstr "Oldal elmentve"
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:584
 #: wp-admin/js/updates.js:644
 msgid "Update Now"
-msgstr "Frissítés most!"
+msgstr "Frissítés most"
 
 #. translators: %s: Importer name.
 #. translators: %s: Plugin name and version.
@@ -11901,7 +11943,7 @@ msgstr "%s frissítése sikertelen."
 #. plugins being updated.
 #: wp-admin/includes/class-bulk-plugin-upgrader-skin.php:24
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "%1$s (%2$d/%3$d) bővítmény frissítése"
+msgstr "%1$s bővítmény frissítése (%2$d/%3$d)"
 
 #: wp-admin/includes/upgrade.php:117
 msgid "The password you chose during installation."
@@ -11941,9 +11983,9 @@ msgstr "WordPress frissítés"
 msgid "Edit menu item"
 msgstr "Menütétel szerkesztése"
 
-#: wp-admin/about.php:333 wp-admin/includes/network.php:148
+#: wp-admin/about.php:389 wp-admin/includes/network.php:148
 msgid "Go to Dashboard"
-msgstr "Vissza a Vezérlőpulthoz"
+msgstr "Tovább a Vezérlőpultra"
 
 #. translators: %s: Number of plugins.
 #: wp-admin/includes/class-wp-plugins-list-table.php:538
@@ -12082,7 +12124,7 @@ msgstr "Elérhető widgetek"
 msgid "Error in displaying the widget settings form."
 msgstr "Hiba a widget beállítási űrlap megjelenítésekor."
 
-#: wp-admin/includes/misc.php:1316 wp-admin/includes/post.php:2001
+#: wp-admin/includes/misc.php:1317 wp-admin/includes/post.php:2001
 #: wp-admin/widgets-form.php:366
 msgid "Error while saving."
 msgstr "Hiba történt a mentés közben."
@@ -12589,7 +12631,7 @@ msgstr "Az oldalak és hírcsatornák kódolása"
 
 #: wp-admin/options-reading.php:164
 msgid "Full text"
-msgstr "teljes szövege."
+msgstr "Teljes szöveg"
 
 #: wp-admin/options-reading.php:157
 msgid "Syndication feeds show the most recent"
@@ -12610,12 +12652,12 @@ msgstr "<strong>Figyelem:</strong> ezek az oldalak nem lehetnek azonosak!"
 #. translators: %s: Select field to choose the page for posts.
 #: wp-admin/options-reading.php:127
 msgid "Posts page: %s"
-msgstr "Bejegyzések oldalának kiválasztása: %s"
+msgstr "Bejegyzések oldal: %s"
 
 #. translators: %s: URL to Pages screen.
 #: wp-admin/options-reading.php:99
 msgid "A <a href=\"%s\">static page</a> (select below)"
-msgstr "Egy <a href=\"%s\">statikus oldal</a> (kijelölés alább)"
+msgstr "Egy <a href=\"%s\">statikus oldal</a> (válasszuk ki alább)"
 
 #: wp-admin/options-reading.php:17
 msgid "Reading Settings"
@@ -13898,7 +13940,7 @@ msgstr "Sorrend:"
 
 #: wp-admin/includes/media.php:2553
 msgid "All Tabs:"
-msgstr "Valamennyi fül:"
+msgstr "Összes fül:"
 
 #: wp-admin/includes/media.php:2361 wp-admin/includes/media.php:2579
 #: wp-admin/includes/media.php:2881
@@ -14004,7 +14046,7 @@ msgstr "A kép metaadatai nem olvashatóak be."
 
 #: wp-admin/includes/image-edit.php:248
 msgid "All sizes except thumbnail"
-msgstr "Valamennyi méret, kivéve bélyegkép"
+msgstr "Minden méret, kivéve a bélyegkép"
 
 #: wp-admin/includes/image-edit.php:238
 msgid "All image sizes"
@@ -15027,13 +15069,13 @@ msgid "Someone"
 msgstr "Valaki"
 
 #. translators: %s: Date and time.
-#: wp-admin/includes/misc.php:1324
+#: wp-admin/includes/misc.php:1325
 msgid "Draft saved at %s."
 msgstr "Vázlat mentve: %s."
 
 #. translators: Draft saved date format, see
 #. https://www.php.net/manual/datetime.format.php
-#: wp-admin/includes/misc.php:1320
+#: wp-admin/includes/misc.php:1321
 msgid "g:i:s a"
 msgstr "H:i:s"
 

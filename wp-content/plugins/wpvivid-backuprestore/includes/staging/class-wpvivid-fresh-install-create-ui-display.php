@@ -578,7 +578,7 @@ class WPvivid_Fresh_Install_Create_UI_Display_Free
                 });
 
                 jQuery('#wpvivid_create_new_wp').click(function() {
-                    var descript = 'Click OK to start creating fresh WordPress install.';
+                    var descript = '<?php esc_html_e('Click OK to start creating fresh WordPress install.', 'wpvivid-backuprestore'); ?>';
                     var ret = confirm(descript);
                     if(ret === true)
                     {
