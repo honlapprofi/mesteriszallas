@@ -72,6 +72,24 @@ class ShortcodesMenuPage extends AbstractMenuPage {
 					'values'		 => __( 'Set the number of columns or the number of rows and columns separated by comma. Example: "3" or "2,3"', 'motopress-hotel-booking' ),
 					'default'		 => '2'
 				),
+				'display_price'	 => array(
+					'label'			 => __( 'Display per-night prices in the availability calendar.', 'motopress-hotel-booking' ),
+					'description'	 => '',
+					'values'		 => 'true | false',
+					'default'		 => 'false'
+				),
+				'truncate_price'	 => array(
+					'label'			 => __( 'Truncate per-night prices in the availability calendar.', 'motopress-hotel-booking' ),
+					'description'	 => '',
+					'values'		 => 'true | false',
+					'default'		 => 'true'
+				),
+				'display_currency'	 => array(
+					'label'			 => __( 'Display the currency sign in the availability calendar.', 'motopress-hotel-booking' ),
+					'description'	 => '',
+					'values'		 => 'true | false',
+					'default'		 => 'false'
+				),
 				'class'			 => array(
 					'label'			 => __( 'Custom CSS class for shortcode wrapper', 'motopress-hotel-booking' ),
 					'values'		 => __( 'whitespace separated css classes', 'motopress-hotel-booking' ),

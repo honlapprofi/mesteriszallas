@@ -156,7 +156,7 @@ class WPvivid_Staging_Setting_Free
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
-                    <strong>Retrying </strong>
+                    <strong><?php _e('Retrying', 'wpvivid-backuprestore'); ?> </strong>
                     <select option="setting" name="staging_resume_count">
                         <?php
                         for($resume_count=3; $resume_count<10; $resume_count++){
@@ -179,7 +179,7 @@ class WPvivid_Staging_Setting_Free
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
-                    <span>When the option is checked, anyone will be able to visit the staging site without the need to login. Uncheck it to request a login to visit the staging site.</span>
+                    <span><?php _e('When the option is checked, anyone will be able to visit the staging site without the need to login. Uncheck it to request a login to visit the staging site.', 'wpvivid-backuprestore'); ?></span>
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
@@ -190,7 +190,7 @@ class WPvivid_Staging_Setting_Free
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
-                    <span>When checked, this option allows you to keep the current permalink structure when you create a staging site or push a staging site to live.</span>
+                    <span><?php _e('When checked, this option allows you to keep the current permalink structure when you create a staging site or push a staging site to live.', 'wpvivid-backuprestore'); ?></span>
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
@@ -201,7 +201,7 @@ class WPvivid_Staging_Setting_Free
                 </div>
 
                 <div class="wpvivid-element-space-bottom">
-                    <span>With this option checked, all staging sites you have created will be retained when the plugin is deleted, just in case you still need them later. The sites will show up again after the plugin is reinstalled.</span>
+                    <span><?php _e('With this option checked, all staging sites you have created will be retained when the plugin is deleted, just in case you still need them later. The sites will show up again after the plugin is reinstalled.', 'wpvivid-backuprestore'); ?></span>
                 </div>
             </div>
         </div>
@@ -358,7 +358,7 @@ class WPvivid_Staging_Setting_Free
             </div>
 
             <div class="wpvivid-element-space-bottom">
-                <span>When the option is checked, anyone will be able to visit the staging site without the need to login. Uncheck it to request a login to visit the staging site.</span>
+                <span><?php _e('When the option is checked, anyone will be able to visit the staging site without the need to login. Uncheck it to request a login to visit the staging site.', 'wpvivid-backuprestore'); ?></span>
             </div>
 
             <div class="wpvivid-element-space-bottom">
@@ -369,7 +369,7 @@ class WPvivid_Staging_Setting_Free
             </div>
 
             <div class="wpvivid-element-space-bottom">
-                <span>When checked, this option allows you to keep the current permalink structure when you create a staging site or push a staging site to live.</span>
+                <span><?php _e('When checked, this option allows you to keep the current permalink structure when you create a staging site or push a staging site to live.', 'wpvivid-backuprestore'); ?></span>
             </div>
 
             <div class="wpvivid-element-space-bottom">
@@ -380,7 +380,7 @@ class WPvivid_Staging_Setting_Free
             </div>
 
             <div class="wpvivid-element-space-bottom">
-                <span>With this option checked, all staging sites you have created will be retained when the plugin is deleted, just in case you still need them later. The sites will show up again after the plugin is reinstalled.</span>
+                <span><?php _e('With this option checked, all staging sites you have created will be retained when the plugin is deleted, just in case you still need them later. The sites will show up again after the plugin is reinstalled.', 'wpvivid-backuprestore'); ?></span>
             </div>
         </div>
         <div><input class="button-primary wpvividstg_save_setting" type="submit" value="<?php esc_attr_e( 'Save Changes', 'wpvivid-backuprestore' ); ?>" /></div>

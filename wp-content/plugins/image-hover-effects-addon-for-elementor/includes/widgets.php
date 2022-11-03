@@ -19,7 +19,7 @@ class Elementor_Image_Hover_Effects_EIHE extends Widget_Base {
 		return 'eicon-image-rollover';
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		$this->start_controls_section(
 			'eihe_content',

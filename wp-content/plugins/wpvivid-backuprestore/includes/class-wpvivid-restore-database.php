@@ -101,23 +101,71 @@ class WPvivid_RestoreDB
 
     private function wpvivid_fix_siteurl_home(){
         global $wpvivid_plugin;
+        global $wpdb;
         $option_table = $this->new_prefix.'options';
         if($this->old_site_url!=$this->new_site_url)
         {
             //siteurl
-            $update_query ='UPDATE '.$option_table.' SET option_value="'.$this->new_site_url.'" WHERE option_name="siteurl";';
-            $wpvivid_plugin->restore_data->write_log($update_query, 'notice');
-            $wpvivid_plugin->restore_data->write_log('update query len:'.strlen($update_query), 'notice');
-            $this->execute_sql($update_query);
+            $db_siteurl = false;
+            $siteurl_sql = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $option_table WHERE option_name = %s", 'siteurl' ) );
+            foreach ( $siteurl_sql as $siteurl )
+            {
+                $db_siteurl = untrailingslashit($siteurl->option_value);
+            }
+            if($db_siteurl !== false)
+            {
+                $update_query ='UPDATE '.$option_table.' SET option_value="'.$this->new_site_url.'" WHERE option_name="siteurl";';
+                $wpvivid_plugin->restore_data->write_log($update_query, 'notice');
+                $wpvivid_plugin->restore_data->write_log('update query len:'.strlen($update_query), 'notice');
+                $this->execute_sql($update_query);
+            }
+            else
+            {
+                $insert_query = $wpdb->prepare("INSERT INTO {$option_table} (option_name,option_value) VALUES ('siteurl',%s)", $this->new_site_url);
+                $wpvivid_plugin->restore_data->write_log('siteurl not found, insert: '.$insert_query, 'notice');
+                if ($wpdb->get_results($insert_query) === false) {
+                    $error = $wpdb->last_error;
+                    $wpvivid_plugin->restore_data->write_log('insert siteurl failed: '.$error, 'notice');
+                }
+                else
+                {
+                    $wpvivid_plugin->restore_data->write_log('insert siteurl success', 'notice');
+                }
+            }
+
+
         }
 
         if($this->old_home_url!=$this->new_home_url)
         {
             //home
-            $update_query ='UPDATE '.$option_table.' SET option_value="'.$this->new_home_url.'" WHERE option_name="home";';
-            $wpvivid_plugin->restore_data->write_log($update_query, 'notice');
-            $wpvivid_plugin->restore_data->write_log('update query len:'.strlen($update_query), 'notice');
-            $this->execute_sql($update_query);
+            $db_home = false;
+            $home_sql = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $option_table WHERE option_name = %s", 'home' ) );
+            foreach ( $home_sql as $home )
+            {
+                $db_home = untrailingslashit($home->option_value);
+            }
+            if($db_home !== false)
+            {
+                $update_query ='UPDATE '.$option_table.' SET option_value="'.$this->new_home_url.'" WHERE option_name="home";';
+                $wpvivid_plugin->restore_data->write_log($update_query, 'notice');
+                $wpvivid_plugin->restore_data->write_log('update query len:'.strlen($update_query), 'notice');
+                $this->execute_sql($update_query);
+            }
+            else
+            {
+                $insert_query = $wpdb->prepare("INSERT INTO {$option_table} (option_name,option_value) VALUES ('home',%s)", $this->new_home_url);
+                $wpvivid_plugin->restore_data->write_log('home not found, insert: '.$insert_query, 'notice');
+                if ($wpdb->get_results($insert_query) === false) {
+                    $error = $wpdb->last_error;
+                    $wpvivid_plugin->restore_data->write_log('insert home failed: '.$error, 'notice');
+                }
+                else
+                {
+                    $wpvivid_plugin->restore_data->write_log('insert home success', 'notice');
+                }
+            }
+
         }
     }
 
@@ -292,6 +340,8 @@ class WPvivid_RestoreDB
 
         $current_table='';
         $current_old_table='';
+        $is_restore_option_table = false;
+        $reset_option_table = false;
         while(!feof($sql_handle))
         {
             $line = fgets($sql_handle);
@@ -357,6 +407,59 @@ class WPvivid_RestoreDB
                 if (preg_match('#^\\s*CREATE TABLE#', $query))
                 {
                     $current_table=$this->create_table($query,$current_old_table);
+                    if($current_table === $wpdb->prefix.'options')
+                    {
+                        $is_restore_option_table = true;
+                    }
+
+                    if($is_restore_option_table === true && $current_table !== $wpdb->prefix.'options' && $reset_option_table === false)
+                    {
+                        $option_table = $wpdb->prefix.'options';
+
+                        $db_siteurl = false;
+                        $siteurl_sql = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $option_table WHERE option_name = %s", 'siteurl' ) );
+                        foreach ( $siteurl_sql as $siteurl )
+                        {
+                            $db_siteurl = untrailingslashit($siteurl->option_value);
+                        }
+                        if($db_siteurl === false)
+                        {
+                            $insert_query = $wpdb->prepare("INSERT INTO {$option_table} (option_name,option_value) VALUES ('siteurl',%s)", untrailingslashit(site_url()));
+                            $wpvivid_plugin->restore_data->write_log('siteurl not found, insert: '.$insert_query, 'notice');
+                            if ($wpdb->get_results($insert_query) === false) {
+                                $error = $wpdb->last_error;
+                                $wpvivid_plugin->restore_data->write_log('insert siteurl failed: '.$error, 'notice');
+                            }
+                            else
+                            {
+                                $wpvivid_plugin->restore_data->write_log('insert siteurl success', 'notice');
+                            }
+                        }
+
+
+                        $db_home = false;
+                        $home_sql = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $option_table WHERE option_name = %s", 'home' ) );
+                        foreach ( $home_sql as $home )
+                        {
+                            $db_home = untrailingslashit($home->option_value);
+                        }
+                        if($db_home === false)
+                        {
+                            $insert_query = $wpdb->prepare("INSERT INTO {$option_table} (option_name,option_value) VALUES ('home',%s)", untrailingslashit(home_url()));
+                            $wpvivid_plugin->restore_data->write_log('home not found, insert: '.$insert_query, 'notice');
+                            if ($wpdb->get_results($insert_query) === false) {
+                                $error = $wpdb->last_error;
+                                $wpvivid_plugin->restore_data->write_log('insert home failed: '.$error, 'notice');
+                            }
+                            else
+                            {
+                                $wpvivid_plugin->restore_data->write_log('insert home success', 'notice');
+                            }
+                        }
+
+                        $reset_option_table = true;
+                    }
+
                 }else if(preg_match('#^\\s*LOCK TABLES#',$query))
                 {
                     $this->lock_table($query);

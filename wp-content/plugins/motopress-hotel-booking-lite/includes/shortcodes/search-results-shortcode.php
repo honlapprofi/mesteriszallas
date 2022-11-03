@@ -144,7 +144,7 @@ class SearchResultsShortcode extends AbstractShortcode {
 		add_action( 'mphb_sc_search_results_error', array( '\MPHB\Views\GlobalView', 'prependBr' ) );
 	}
 
-	public function render( $atts, $content = '', $shortcodeName ){
+	public function render( $atts, $content, $shortcodeName ){
 
 		$defaultAtts = array(
 			'gallery'			 => 'true',

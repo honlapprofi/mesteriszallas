@@ -80,10 +80,10 @@ abstract class AbstractCoupon {
 			$this->id = $atts['id'];
 		}
 
-		$this->code        = isset( $atts['code'] ) ? $atts['code'] : '';
-		$this->description = isset( $atts['description'] ) ? $atts['description'] : '';
+		$this->code        = $atts['code'] ?? '';
+		$this->description = $atts['description'] ?? '';
 		$this->amount      = $atts['amount'];
-		$this->status      = isset( $atts['status'] ) ? $atts['status'] : \MPHB\PostTypes\PaymentCPT\Statuses::STATUS_PENDING;
+		$this->status      = $atts['status'] ?? 'publish';
 
 		$this->expirationDate     = !empty( $atts['expiration_date'] ) ? $atts['expiration_date'] : null;
 		$this->roomTypes          = !empty( $atts['room_types'] ) ? array_map( 'intval', $atts['room_types'] ) : array();
@@ -301,4 +301,12 @@ abstract class AbstractCoupon {
 		$this->usageCount ++;
 	}
 
+	/**
+	 * @param ReservedRoom $reservedRoom
+	 * @param \DateTime $checkInDate
+	 * @param \DateTime $checkOutDate
+	 *
+	 * @return float
+	 */
+	abstract public function calcRoomDiscount( $reservedRoom, $checkInDate, $checkOutDate );
 }

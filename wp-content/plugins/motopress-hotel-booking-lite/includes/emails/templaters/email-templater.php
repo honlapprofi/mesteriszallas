@@ -248,7 +248,7 @@ class EmailTemplater extends AbstractTemplater {
 		$paymentTags = array(
 			array(
 				'name'			 => 'payment_amount',
-				'description'	 => __( 'The total price of payment', 'motopress-hotel-booking' )
+				'description'	 => __( 'The total amount of payment', 'motopress-hotel-booking' )
 			),
 			array(
 				'name'			 => 'payment_id',

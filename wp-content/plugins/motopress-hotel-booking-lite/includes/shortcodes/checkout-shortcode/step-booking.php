@@ -410,8 +410,13 @@ class StepBooking extends Step {
      * @since 3.7.2 the filter "mphb_sc_checkout_step_booking_customer_details" was removed.
      */
     protected function parseCustomerData()
-    {
-        $input = $_POST;
+    {		
+		$input = $_POST;
+		
+		if( ! empty( $_FILES ) ) {
+			$input = array_merge( $input, $_FILES );
+		}
+		
         $customerData = ParseUtils::parseCustomer($input, $errors);
 		
 		if( $customerData !== false ) {

@@ -53,7 +53,7 @@ class ServicesShortcode extends AbstractShortcode {
 	 * @param string $shortcodeName
 	 * @return string
 	 */
-	public function render( $atts, $content = null, $shortcodeName ){
+	public function render( $atts, $content, $shortcodeName ){
 		$defaultAtts = array(
 			'posts_per_page'	 => '',
 			'ids'				 => '',

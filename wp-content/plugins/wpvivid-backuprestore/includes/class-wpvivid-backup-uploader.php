@@ -15,6 +15,7 @@ class Wpvivid_BackupUploader
         add_action('wp_ajax_wpvivid_get_file_id',array($this,'get_file_id'));
         add_action('wp_ajax_wpvivid_upload_files',array($this,'upload_files'));
         add_action('wp_ajax_wpvivid_upload_files_finish',array($this,'upload_files_finish'));
+        add_action('wp_ajax_wpvivid_delete_upload_incomplete_backup_free', array($this, 'delete_upload_incomplete_backup'));
 
         add_action('wp_ajax_wpvivid_rescan_local_folder',array($this,'rescan_local_folder_set_backup'));
         add_action('wp_ajax_wpvivid_get_backup_count',array($this,'get_backup_count'));
@@ -133,6 +134,48 @@ class Wpvivid_BackupUploader
         try {
             $ret = $this->_rescan_local_folder_set_backup();
             echo json_encode($ret);
+        }
+        catch (Exception $error)
+        {
+            $message = 'An exception has occurred. class: '.get_class($error).';msg: '.$error->getMessage().';code: '.$error->getCode().';line: '.$error->getLine().';in_file: '.$error->getFile().';';
+            error_log($message);
+            echo json_encode(array('result'=>'failed','error'=>$message));
+        }
+        die();
+    }
+
+    function delete_upload_incomplete_backup()
+    {
+        global $wpvivid_plugin;
+        $wpvivid_plugin->ajax_check_security();
+
+        try {
+            if(isset($_POST['incomplete_backup'])&&!empty($_POST['incomplete_backup']))
+            {
+                $json = $_POST['incomplete_backup'];
+                $json = stripslashes($json);
+                $incomplete_backup = json_decode($json, true);
+
+                if(is_array($incomplete_backup) && !empty($incomplete_backup))
+                {
+                    $path=WP_CONTENT_DIR.DIRECTORY_SEPARATOR.WPvivid_Setting::get_backupdir().DIRECTORY_SEPARATOR;
+                    foreach ($incomplete_backup as $backup)
+                    {
+                        $backup = basename($backup);
+                        if (preg_match('/wpvivid-.*_.*_.*\.zip$/', $backup))
+                        {
+                            @unlink($path.$backup);
+                        }
+                        else if(preg_match('/'.apply_filters('wpvivid_white_label_file_prefix', 'wpvivid').'-.*_.*_.*\.zip$/', $backup))
+                        {
+                            @unlink($path.$backup);
+                        }
+                    }
+                }
+
+                $ret['result']='success';
+                echo json_encode($ret);
+            }
         }
         catch (Exception $error)
         {
@@ -517,7 +560,13 @@ class Wpvivid_BackupUploader
                                 if($this->zip_check_sum($path . $filename))
                                 {
                                     if($this->check_is_a_wpvivid_backup($path.$filename) === true)
+                                    {
                                         $backups[$backup_id]['files'][]=$filename;
+                                    }
+                                    else
+                                    {
+                                        $ret['incomplete_backup'][] = $filename;
+                                    }
                                 }
                             }
                         }
@@ -610,7 +659,13 @@ class Wpvivid_BackupUploader
                 {
                     try {
                         var jsonarray = jQuery.parseJSON(data);
-                        if(jsonarray.html !== false){
+                        if(typeof jsonarray.incomplete_backup !== 'undefined' && jsonarray.incomplete_backup.length > 0)
+                        {
+                            var incomplete_count = jsonarray.incomplete_backup.length;
+                            alert('Failed to scan '+incomplete_count+' backup zips, the zips can be corrupted during creation or download process. Please check the zips.');
+                        }
+                        if(jsonarray.html !== false)
+                        {
                             jQuery('#wpvivid_backup_list').html('');
                             jQuery('#wpvivid_backup_list').append(jsonarray.html);
                             wpvivid_popup_tour('show');
@@ -645,9 +700,9 @@ class Wpvivid_BackupUploader
         <div id="wpvivid_plupload-upload-ui" class="hide-if-no-js" style="margin-bottom: 10px;">
             <div id="drag-drop-area">
                 <div class="drag-drop-inside">
-                    <p class="drag-drop-info"><?php _e('Drop files here'); ?></p>
-                    <p><?php _ex('or', 'Uploader: Drop files here - or - Select Files'); ?></p>
-                    <p class="drag-drop-buttons"><input id="wpvivid_select_file_button" type="button" value="<?php esc_attr_e('Select Files'); ?>" class="button" /></p>
+                    <p class="drag-drop-info"><?php _e('Drop files here', 'wpvivid-backuprestore'); ?></p>
+                    <p><?php _ex('or', 'Uploader: Drop files here - or - Select Files', 'wpvivid-backuprestore'); ?></p>
+                    <p class="drag-drop-buttons"><input id="wpvivid_select_file_button" type="button" value="<?php esc_attr_e('Select Files', 'wpvivid-backuprestore'); ?>" class="button" /></p>
                 </div>
             </div>
         </div>
@@ -801,6 +856,19 @@ class Wpvivid_BackupUploader
                 );
             }
 
+            function wpvivid_delete_incomplete_backups(incomplete_backup)
+            {
+                var ajax_data = {
+                    'action': 'wpvivid_delete_upload_incomplete_backup_free',
+                    'incomplete_backup': incomplete_backup
+                };
+                wpvivid_post_request(ajax_data, function (data)
+                {
+                }, function (XMLHttpRequest, textStatus, errorThrown)
+                {
+                });
+            }
+
             function wpvivid_init_upload_list()
             {
                 uploader = new plupload.Uploader(<?php echo json_encode($plupload_init); ?>);
@@ -870,7 +938,17 @@ class Wpvivid_BackupUploader
                             var jsonarray = jQuery.parseJSON(data);
                             if(jsonarray.result === 'success')
                             {
-                                alert('The upload has completed.');
+                                if(typeof jsonarray.incomplete_backup !== 'undefined' && jsonarray.incomplete_backup.length > 0)
+                                {
+                                    var incomplete_count = jsonarray.incomplete_backup.length;
+                                    var incomplete_backup = JSON.stringify(jsonarray.incomplete_backup);
+                                    wpvivid_delete_incomplete_backups(incomplete_backup);
+                                    alert('Failed to scan '+incomplete_count+' backup zips, the zips can be corrupted during creation or download process. Please check the zips.');
+                                }
+                                else
+                                {
+                                    alert('The upload has completed.');
+                                }
                                 jQuery('#wpvivid_backup_list').html('');
                                 jQuery('#wpvivid_backup_list').append(jsonarray.html);
                                 wpvivid_click_switch_page('backup', 'wpvivid_tab_backup', true);

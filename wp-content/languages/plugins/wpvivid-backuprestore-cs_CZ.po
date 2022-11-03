@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Migration, Backup, Staging &#8211; WPvivid - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-24 11:16:36+0000\n"
+"PO-Revision-Date: 2022-07-04 11:07:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,17 +11,18 @@ msgstr ""
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Migration, Backup, Staging &#8211; WPvivid - Stable (latest release)\n"
 
+#: includes/staging/class-wpvivid-staging-setting.php:159
 #: includes/staging/class-wpvivid-staging-setting.php:338
 msgid "Retrying"
 msgstr "Opakuji pokus"
 
-#: includes/staging/class-wpvivid-staging-log-page.php:1178
-msgid "An exception has occurred. class: %1$s; msg: %2$s; code: %3$s; line: %4$s; in_file: %5$s. Please %6$stry again%7$s."
-msgstr "Nastala výjimka. třída: %1$s; zpráva: %2$s; kód: %3$s; řádek: %4$s; in_file: %5$s. %6$sZkuste to znovu%7$s."
-
 #: includes/staging/class-wpvivid-staging-log-page.php:1154
 msgid "File not found. Please %1$stry again%2$s."
 msgstr "Soubor nenalezen. %1$sZkuste to znovu%2$s."
+
+#: includes/staging/class-wpvivid-staging-log-page.php:1178
+msgid "An exception has occurred. class: %1$s; msg: %2$s; code: %3$s; line: %4$s; in_file: %5$s. Please %6$stry again%7$s."
+msgstr "Nastala výjimka. třída: %1$s; zpráva: %2$s; kód: %3$s; řádek: %4$s; in_file: %5$s. %6$sZkuste to znovu%7$s."
 
 #: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1074
 msgid ""
@@ -35,7 +36,7 @@ msgstr ""
 "                                                         proto doporučujeme tuto funkci zatím nepoužívat.\n"
 "                                                           </p></div>"
 
-#: includes/class-wpvivid.php:6065
+#: includes/class-wpvivid.php:6086
 msgid "Send backups to remote storage (You can choose whether to keep the backup in localhost after it is uploaded to cloud storage in Settings.)"
 msgstr "Odesílat zálohy do vzdáleného úložiště (V Nastavení si můžete vybrat, zda chcete zálohu po nahrání do cloudového úložiště ponechat na localhost.)"
 
@@ -46,6 +47,12 @@ msgstr "Opravdu chcete odstranit vybrané zálohy? Tyto zálohy budou trvale ods
 #: admin/partials/wpvivid-backup-restore-page-display.php:1119
 msgid "Are you sure to remove this backup? This backup will be deleted permanently."
 msgstr "Opravdu chcete odstranit tuto zálohu? Tato záloha bude trvale smazána."
+
+#: includes/customclass/class-wpvivid-dropbox.php:510
+#: includes/customclass/class-wpvivid-google-drive.php:287
+#: includes/customclass/class-wpvivid-one-drive.php:271
+msgid "Add Now"
+msgstr "Přidat nyní"
 
 #: includes/customclass/class-wpvivid-one-drive.php:405
 msgid "Click to get Microsoft authentication."
@@ -81,73 +88,67 @@ msgstr "Kliknutím získáte ověření Dropbox."
 msgid "Click the button to add the storage."
 msgstr "Kliknutím na tlačítko přidáte úložiště."
 
-#: includes/customclass/class-wpvivid-dropbox.php:510
-#: includes/customclass/class-wpvivid-google-drive.php:287
-#: includes/customclass/class-wpvivid-one-drive.php:271
-msgid "Add Now"
-msgstr "Přidat nyní"
-
-#: includes/class-wpvivid.php:5086 includes/class-wpvivid.php:5091
+#: includes/class-wpvivid.php:5107 includes/class-wpvivid.php:5112
 msgid "The value of 'Delay Between Requests' can't be empty."
 msgstr "Hodnota 'Prodleva mezi požadavky' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:5075 includes/class-wpvivid.php:5080
+#: includes/class-wpvivid.php:5096 includes/class-wpvivid.php:5101
 msgid "The value of 'PHP Scripts Execution Timeout' can't be empty."
 msgstr "Hodnota 'Časový limit provádění skriptů PHP' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:5064 includes/class-wpvivid.php:5069
-msgid "The value of 'Staging Memory Limit' can't be empty."
-msgstr "Hodnota 'Staging limit paměti' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:5053 includes/class-wpvivid.php:5058
-msgid "The value of 'Max Files Size' can't be empty."
-msgstr "Hodnota 'Maximální velikost souborů' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:5042 includes/class-wpvivid.php:5047
-msgid "The value of 'File Copy Count' can't be empty."
-msgstr "Hodnota 'Počet kopií souboru' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:5031 includes/class-wpvivid.php:5036
-msgid "The value of 'DB Replace Count' can't be empty."
-msgstr "Hodnota 'Počet náhrad DB' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:5020 includes/class-wpvivid.php:5025
-msgid "The value of 'DB Copy Count' can't be empty."
-msgstr "Hodnota 'Počet kopií DB' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:5009 includes/class-wpvivid.php:5014
+#: includes/class-wpvivid.php:5030 includes/class-wpvivid.php:5035
 msgid "The value of 'Media Files Quantity Processed Per Request' can't be empty."
 msgstr "Hodnota 'Množství mediálních souborů zpracovaných na požadavek' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:4998 includes/class-wpvivid.php:5003
+#: includes/class-wpvivid.php:5019 includes/class-wpvivid.php:5024
 msgid "The value of 'Posts Quantity Processed Per Request' can't be empty."
 msgstr "Hodnota 'Počet zpracovaných příspěvků na žádost' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:4987 includes/class-wpvivid.php:4992
-msgid "The value of 'Chunk Size' can't be empty."
-msgstr "Hodnota 'Velikost kousku' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:4976 includes/class-wpvivid.php:4981
-msgid "The value of 'PHP memory limit for restoration' can't be empty."
-msgstr "Hodnota 'PHP limit paměti pro obnovu' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:4965 includes/class-wpvivid.php:4970
-msgid "The value of 'PHP memory limit for backup' can't be empty."
-msgstr "Hodnota 'PHP limit paměti pro zálohování' nemůže být prázdná."
-
-#: includes/class-wpvivid.php:4954 includes/class-wpvivid.php:4959
+#: includes/class-wpvivid.php:4975 includes/class-wpvivid.php:4980
 msgid "The value of 'PHP scripts execution timeout for restore' can't be empty."
 msgstr "Hodnota „Časový limit provádění skriptů PHP pro obnovení“ nemůže být prázdná."
 
-#: includes/class-wpvivid.php:4940 includes/class-wpvivid.php:4947
+#: includes/class-wpvivid.php:4961 includes/class-wpvivid.php:4968
 msgid "The value of 'PHP scripts execution timeout for backup' can't be empty."
 msgstr "Hodnota 'Časový limit provádění skriptů PHP pro zálohování' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:4927 includes/class-wpvivid.php:4934
-msgid "The value of 'Exclude files which are lager than' can't be empty."
+#: includes/class-wpvivid.php:4948 includes/class-wpvivid.php:4955
+msgid "The value of 'Exclude files which are larger than' can't be empty."
 msgstr "Hodnota 'Vyloučit soubory, které jsou větší než' nemůže být prázdná."
 
-#: includes/class-wpvivid.php:4913 includes/class-wpvivid.php:4921
+#: includes/class-wpvivid.php:5008 includes/class-wpvivid.php:5013
+msgid "The value of 'Chunk Size' can't be empty."
+msgstr "Hodnota 'Velikost kousku' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:5074 includes/class-wpvivid.php:5079
+msgid "The value of 'Max File Size' can't be empty."
+msgstr "Hodnota 'Maximální velikost souborů' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:5085 includes/class-wpvivid.php:5090
+msgid "The value of 'Staging Memory Limit' can't be empty."
+msgstr "Hodnota 'Staging limit paměti' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:5063 includes/class-wpvivid.php:5068
+msgid "The value of 'File Copy Count' can't be empty."
+msgstr "Hodnota 'Počet kopií souboru' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:5041 includes/class-wpvivid.php:5046
+msgid "The value of 'DB Copy Count' can't be empty."
+msgstr "Hodnota 'Počet kopií DB' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:5052 includes/class-wpvivid.php:5057
+msgid "The value of 'DB Replace Count' can't be empty."
+msgstr "Hodnota 'Počet náhrad DB' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:4997 includes/class-wpvivid.php:5002
+msgid "The value of 'PHP memory limit for restoration' can't be empty."
+msgstr "Hodnota 'PHP limit paměti pro obnovu' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:4986 includes/class-wpvivid.php:4991
+msgid "The value of 'PHP memory limit for backup' can't be empty."
+msgstr "Hodnota 'PHP limit paměti pro zálohování' nemůže být prázdná."
+
+#: includes/class-wpvivid.php:4934 includes/class-wpvivid.php:4942
 msgid "The value of 'Compress file every' can't be empty."
 msgstr "Hodnota 'Komprimujte každý soubor' nemůže být prázdná."
 
@@ -175,32 +176,6 @@ msgstr "Zjistili jsme, že používáte nižší verzi %s Pro. Aktualizujte ji p
 #: includes/staging/class-wpvivid-staging.php:268
 msgid "Staging"
 msgstr "Staging"
-
-#: includes/staging/class-wpvivid-staging.php:100
-msgid "Create A Fresh WordPress Install"
-msgstr "Vytvořte novou WordPress instalaci"
-
-#: includes/staging/class-wpvivid-staging.php:99
-msgid "Create A Staging Site"
-msgstr "Vytvořte pracovní místo"
-
-#: includes/staging/class-wpvivid-staging-ui-display.php:1301
-msgid "WPvivid Plugins - Staging"
-msgstr "Pluginy WPvivid - Staging"
-
-#: includes/staging/class-wpvivid-staging-ui-display.php:1255
-msgid ""
-"<div class=\"notice notice-warning inline\"><p><strong>Warning:</strong> An inconsistency was detected between the site url, home url of the database and the actual website url. \n"
-"                                        This can cause inappropriate staging site url issues. Please change the site url and home url in the Options table of the database to the actual \n"
-"                                        url of your website. For example, if the site url and home url of the database is http://test.com, but the actual url of your website is https://test.com. \n"
-"                                        You’ll need to change the http to https.\n"
-"                                                                  </p></div>"
-msgstr ""
-"<div class=\"notice notice-warning inline\"><p><strong>Upozornění:</strong> Byla zjištěna nekonzistence mezi adresou URL webu, domovskou adresou URL databáze a skutečnou adresou URL webu.\n"
-"                                         To může způsobit problémy s nevhodnými adresami URL zkušebního webu. Změňte prosím adresu URL webu a domovskou adresu URL v tabulce Možnosti databáze na aktuální\n"
-"                                         URL vašeho webu. Pokud je například adresa URL webu a domovská adresa URL databáze http://test.com, ale skutečná adresa URL vašeho webu je https://test.com.\n"
-"                                         Budete muset změnit http na https.\n"
-"                                                                   </p></div>"
 
 #: includes/staging/class-wpvivid-staging-sites-list.php:437
 #: includes/staging/class-wpvivid-staging-sites-list.php:856
@@ -236,6 +211,32 @@ msgstr "Při mazání pluginu ponechejte pracovní stránky"
 msgid "Keep permalink when transferring website"
 msgstr "Při přenosu webu ponechejte trvalý odkaz"
 
+#: includes/staging/class-wpvivid-staging.php:100
+msgid "Create A Fresh WordPress Install"
+msgstr "Vytvořte novou WordPress instalaci"
+
+#: includes/staging/class-wpvivid-staging.php:99
+msgid "Create A Staging Site"
+msgstr "Vytvořte pracovní místo"
+
+#: includes/staging/class-wpvivid-staging-ui-display.php:1301
+msgid "WPvivid Plugins - Staging"
+msgstr "Pluginy WPvivid - Staging"
+
+#: includes/staging/class-wpvivid-staging-ui-display.php:1255
+msgid ""
+"<div class=\"notice notice-warning inline\"><p><strong>Warning:</strong> An inconsistency was detected between the site url, home url of the database and the actual website url. \n"
+"                                        This can cause inappropriate staging site url issues. Please change the site url and home url in the Options table of the database to the actual \n"
+"                                        url of your website. For example, if the site url and home url of the database is http://test.com, but the actual url of your website is https://test.com. \n"
+"                                        You’ll need to change the http to https.\n"
+"                                                                  </p></div>"
+msgstr ""
+"<div class=\"notice notice-warning inline\"><p><strong>Upozornění:</strong> Byla zjištěna nekonzistence mezi adresou URL webu, domovskou adresou URL databáze a skutečnou adresou URL webu.\n"
+"                                         To může způsobit problémy s nevhodnými adresami URL zkušebního webu. Změňte prosím adresu URL webu a domovskou adresu URL v tabulce Možnosti databáze na aktuální\n"
+"                                         URL vašeho webu. Pokud je například adresa URL webu a domovská adresa URL databáze http://test.com, ale skutečná adresa URL vašeho webu je https://test.com.\n"
+"                                         Budete muset změnit http na https.\n"
+"                                                                   </p></div>"
+
 #: includes/staging/class-wpvivid-staging-setting.php:177
 #: includes/staging/class-wpvivid-staging-setting.php:356
 msgid "Anyone can visit the staging site"
@@ -266,6 +267,11 @@ msgstr "Nižší hodnota pomůže urychlit proces vytváření pracovního míst
 msgid "Delay Between Requests"
 msgstr "Prodleva mezi požadavky"
 
+#: includes/staging/class-wpvivid-staging-setting.php:138
+#: includes/staging/class-wpvivid-staging-setting.php:317
+msgid "PHP Script Execution Timeout"
+msgstr "Časový limit spuštění skriptu PHP"
+
 #: includes/staging/class-wpvivid-staging-setting.php:144
 #: includes/staging/class-wpvivid-staging-setting.php:323
 msgid ""
@@ -276,11 +282,6 @@ msgstr ""
 "Časový limit není časový limit PHP serveru. Po vyčerpání doby provádění náš plugin zastaví průběh\n"
 "                 vytvoření předváděcího místa. Pokud pokrok narazí na časový limit, znamená to, že máte středně velký nebo velký web. Zkuste to prosím\n"
 "                 zvětšit hodnotu."
-
-#: includes/staging/class-wpvivid-staging-setting.php:138
-#: includes/staging/class-wpvivid-staging-setting.php:317
-msgid "PHP Script Execution Timeout"
-msgstr "Časový limit spuštění skriptu PHP"
 
 #: includes/staging/class-wpvivid-staging-setting.php:133
 #: includes/staging/class-wpvivid-staging-setting.php:312
@@ -308,15 +309,6 @@ msgstr "Maximální velikost souborů zkopírovaných na pracovní místo. Všec
 msgid "Max File Size"
 msgstr "Maximální velikost souboru"
 
-#: includes/staging/class-wpvivid-staging-setting.php:114
-#: includes/staging/class-wpvivid-staging-setting.php:293
-msgid ""
-"Number of files to copy that will be copied within one ajax request. The higher value makes the file copy process faster. \n"
-"                Please try a high value to find out the highest possible value. If you encounter timeout errors, try lower values until no more errors occur."
-msgstr ""
-"Počet souborů ke kopírování, které budou zkopírovány v rámci jednoho požadavku ajax. Vyšší hodnota urychlí proces kopírování souboru.\n"
-"                 Zkuste prosím vysokou hodnotu, abyste zjistili nejvyšší možnou hodnotu. Pokud se setkáte s chybami vypršení časového limitu, zkuste nižší hodnoty, dokud se již žádné chyby nevyskytnou."
-
 #: includes/staging/class-wpvivid-staging-setting.php:108
 #: includes/staging/class-wpvivid-staging-setting.php:287
 msgid "File Copy Count"
@@ -330,6 +322,15 @@ msgid ""
 msgstr ""
 "Počet DB řádků, které jsou zpracovány v rámci jednoho ajax dotazu. Vyšší hodnota urychlí proces výměny DB.\n"
 "                 Pokud dojde k chybám při vypršení časového limitu, snižte hodnotu, protože tento proces spotřebovává velké množství paměti."
+
+#: includes/staging/class-wpvivid-staging-setting.php:114
+#: includes/staging/class-wpvivid-staging-setting.php:293
+msgid ""
+"Number of files to copy that will be copied within one ajax request. The higher value makes the file copy process faster. \n"
+"                Please try a high value to find out the highest possible value. If you encounter timeout errors, try lower values until no more errors occur."
+msgstr ""
+"Počet souborů ke kopírování, které budou zkopírovány v rámci jednoho požadavku ajax. Vyšší hodnota urychlí proces kopírování souboru.\n"
+"                 Zkuste prosím vysokou hodnotu, abyste zjistili nejvyšší možnou hodnotu. Pokud se setkáte s chybami vypršení časového limitu, zkuste nižší hodnoty, dokud se již žádné chyby nevyskytnou."
 
 #: includes/staging/class-wpvivid-staging-setting.php:98
 #: includes/staging/class-wpvivid-staging-setting.php:277
@@ -438,10 +439,11 @@ msgstr "Soubor nenalezen"
 
 #: admin/partials/wpvivid-backup-restore-page-display.php:88
 #: admin/partials/wpvivid-backup-restore-page-display.php:96
+#: admin/partials/wpvivid-backup-restore-page-display.php:101
 #: admin/partials/wpvivid-backup-restore-page-display.php:113
 #: admin/partials/wpvivid-backup-restore-page-display.php:122
-#: includes/class-wpvivid.php:2611 includes/class-wpvivid.php:2616
-#: includes/class-wpvivid.php:2625
+#: includes/class-wpvivid.php:2619 includes/class-wpvivid.php:2624
+#: includes/class-wpvivid.php:2633
 msgid "File Size: "
 msgstr "Velikost souboru:"
 
@@ -496,11 +498,6 @@ msgstr "WPvivid Image Cleaner"
 #: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:1040
 msgid "Image Cleaner"
 msgstr "Image Cleaner"
-
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:865
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:903
-msgid "Once deleted, images will be lost permanently. The action cannot be undone, unless you have <a href=\""
-msgstr "Po smazání budou snímky trvale ztraceny. Akci nelze vrátit zpět, pokud nemáte <a href=\""
 
 #: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:101
 #: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:556
@@ -573,114 +570,345 @@ msgstr " "
 msgid "Tip:"
 msgstr "Tip:"
 
-#: includes/class-wpvivid.php:6238
+#: admin/class-wpvivid-admin.php:1305
+#: includes/staging/class-wpvivid-staging-log-page.php:384
+msgid " Next page > "
+msgstr "Další stránka >"
+
+#: admin/class-wpvivid-admin.php:1294
+#: includes/staging/class-wpvivid-staging-log-page.php:373
+msgid " < Pre page "
+msgstr " < Předchozí stránka"
+
+#: admin/class-wpvivid-admin.php:1282 includes/class-wpvivid-importer.php:90
+#: includes/staging/class-wpvivid-staging-log-page.php:361
+msgid "Action"
+msgstr "Akce"
+
+#: admin/class-wpvivid-admin.php:1280
+#: includes/staging/class-wpvivid-staging-log-page.php:54
+#: includes/staging/class-wpvivid-staging-log-page.php:359
+msgid "Log Type"
+msgstr "Typ logů"
+
+#: admin/class-wpvivid-admin.php:1281
+#: includes/staging/class-wpvivid-staging-log-page.php:360
+msgid "Log File Name"
+msgstr "Název log souboru"
+
+#: admin/class-wpvivid-admin.php:1279 includes/class-wpvivid-exporter.php:152
+#: includes/staging/class-wpvivid-staging-log-page.php:53
+#: includes/staging/class-wpvivid-staging-log-page.php:358
+msgid "Date"
+msgstr "Datum"
+
+#: admin/class-wpvivid-admin.php:1166
+msgid "Website Info Value"
+msgstr "Hodnota informací o webu"
+
+#: admin/class-wpvivid-admin.php:1165
+msgid "Website Info Key"
+msgstr "Informační klíč webu"
+
+#: admin/class-wpvivid-admin.php:1161
+#: admin/partials/wpvivid-backup-restore-page-display.php:88
+#: admin/partials/wpvivid-backup-restore-page-display.php:529
+#: admin/partials/wpvivid-backup-restore-page-display.php:566
+#: includes/class-wpvivid.php:2624 includes/class-wpvivid.php:5939
+#: includes/staging/class-wpvivid-staging-log-page.php:57
+msgid "Download"
+msgstr "Stáhnout"
+
+#: admin/class-wpvivid-admin.php:956 admin/class-wpvivid-admin.php:1043
+#: admin/partials/wpvivid-remote-storage-page-display.php:48
+#: admin/partials/wpvivid-remote-storage-page-display.php:345
+#: includes/customclass/class-wpvivid-amazons3-plus.php:297
+#: includes/customclass/class-wpvivid-dropbox.php:682
+#: includes/customclass/class-wpvivid-ftpclass.php:254
+#: includes/customclass/class-wpvivid-google-drive.php:463
+#: includes/customclass/class-wpvivid-one-drive.php:446
+#: includes/customclass/class-wpvivid-s3compat.php:614
+#: includes/customclass/class-wpvivid-sftpclass.php:244
+#: includes/staging/class-wpvivid-staging-setting.php:386
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:855
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: admin/class-wpvivid-admin.php:914
+msgid "Premium"
+msgstr "Prémium"
+
+#: admin/class-wpvivid-admin.php:904
+msgid "MainWP"
+msgstr "MainWP"
+
+#: admin/class-wpvivid-admin.php:893
+#: admin/partials/wpvivid-backup-restore-page-display.php:507
+#: admin/partials/wpvivid-backup-restore-page-display.php:2213
+#: includes/class-wpvivid.php:5929
+msgid "Log"
+msgstr "Log"
+
+#: admin/class-wpvivid-admin.php:1088
+msgid "Logs"
+msgstr "Logy"
+
+#: admin/class-wpvivid-admin.php:880
+msgid "Debug"
+msgstr "Režim ladění (Debug mód)"
+
+#: admin/class-wpvivid-admin.php:868
+msgid "Remote Storage"
+msgstr "Vzdálené úložiště"
+
+#: admin/class-wpvivid-admin.php:862
+msgid "Schedule"
+msgstr "Naplánovat"
+
+#: admin/class-wpvivid-admin.php:163
+#: includes/staging/class-wpvivid-staging.php:83
+msgid "Troubleshooting"
+msgstr "Řešení potíží"
+
+#: admin/class-wpvivid-admin.php:156
+#: includes/staging/class-wpvivid-staging.php:76
+msgid "ChangeLog"
+msgstr "Přehled změn"
+
+#: admin/class-wpvivid-admin.php:153
+#: includes/staging/class-wpvivid-staging.php:73
+msgid "Current Version: "
+msgstr "Současná verze:"
+
+#: admin/class-wpvivid-admin.php:136 admin/class-wpvivid-admin.php:400
+#: admin/class-wpvivid-admin.php:406 admin/class-wpvivid-admin.php:874
+msgid "Settings"
+msgstr "Nastavení"
+
+#: admin/class-wpvivid-admin.php:113 admin/class-wpvivid-admin.php:127
+#: admin/class-wpvivid-admin.php:856
+msgid "Backup & Restore"
+msgstr "Zálohovat a obnovit"
+
+#. Author URI of the plugin
+msgid "https://wpvivid.com"
+msgstr "https://wpvivid.com"
+
+#. Author of the plugin
+msgid "WPvivid Team"
+msgstr "WPvivid Team"
+
+#. Description of the plugin
+msgid "Clone or copy WP sites then move or migrate them to new host (new domain), schedule backups, transfer backups to leading remote storage. All in one."
+msgstr "Naklonujte nebo zkopírujte weby WP a poté je přesuňte nebo migrujte na nového hostitele (novou doménu), naplánujte zálohování, přeneste zálohy na přední vzdálené úložiště. Vše v jednom."
+
+#. Plugin Name of the plugin
+#: admin/partials/wpvivid-admin-display.php:49
+#: includes/class-wpvivid-export-import.php:94
+msgid "WPvivid Backup Plugin"
+msgstr "WPvivid zálohovací plugin"
+
+#: admin/class-wpvivid-admin.php:1125
+msgid "Your email:"
+msgstr "Váš e-mail:"
+
+#: admin/class-wpvivid-admin.php:1124
+msgid "WPvivid support email:"
+msgstr "WPvivid e-mail podpory:"
+
+#: admin/class-wpvivid-admin.php:1121
+msgid "If you have configured SMTP on your site, enter your email address and click the button below to send us the relevant information (website info and errors logs) when you are encountering errors. This will help us figure out what happened. Once the issue is resolved, we will inform you by your email address."
+msgstr "Pokud jste na svém webu nakonfigurovali SMTP, zadejte svou e-mailovou adresu a kliknutím na tlačítko níže nám zašlete příslušné informace (informace o webu a protokoly chyb), když narazíte na chyby. To nám pomůže zjistit, co se stalo. Jakmile bude problém vyřešen, budeme vás informovat na vaši e-mailovou adresu."
+
+#: admin/class-wpvivid-admin.php:1121
+msgid "Method 1."
+msgstr "Metoda 1."
+
+#: admin/class-wpvivid-admin.php:1119
+msgid "There are two ways available to send us the debug information. The first one is recommended."
+msgstr "Informace o ladění nám můžete zaslat dvěma způsoby. První se doporučuje."
+
+#: admin/class-wpvivid-admin.php:738
+msgid "Class PclZip is not detected. Please update or reinstall your WordPress."
+msgstr "Třída PclZip nebyla detekována. Aktualizujte nebo přeinstalujte svůj WordPress."
+
+#: admin/class-wpvivid-admin.php:732
+msgid "The %s extensions are not detected. Please install the extensions first."
+msgstr "%s rozšíření nebyla zjištěna. Nejprve nainstalujte rozšíření."
+
+#: admin/class-wpvivid-admin.php:729
+msgid "The %s extension is not detected. Please install the extension first."
+msgstr "Přípona %s nebyla zjištěna. Nejprve nainstalujte rozšíření."
+
+#: admin/class-wpvivid-admin.php:607
+msgid "As Amazon S3 and DigitalOcean Space have upgraded their connection methods, please delete the previous connections and re-add your Amazon S3/DigitalOcean Space accounts to make sure the connections work."
+msgstr "Protože Amazon S3 a DigitalOcean Space upgradovaly své metody připojení, odstraňte předchozí připojení a znovu přidejte své účty Amazon S3/DigitalOcean Space, abyste se ujistili, že připojení fungují."
+
+#: admin/class-wpvivid-admin.php:463
+#: admin/partials/wpvivid-backup-restore-page-display.php:1698
+msgid "Restore completed successfully."
+msgstr "Obnovení bylo úspěšně dokončeno."
+
+#: admin/class-wpvivid-admin.php:457
+msgid "Cheers! WPvivid Backup plugin has restored successfully your website. If you found WPvivid Backup plugin helpful, a 5-star rating would be highly appreciated, which motivates us to keep providing new features."
+msgstr "Na zdraví! Plugin WPvivid Backup úspěšně obnovil váš web. Pokud jste považovali plugin WPvivid Backup za užitečný, bylo by vysoce oceněno 5hvězdičkové hodnocení, které nás motivuje k tomu, abychom nadále poskytovali nové funkce."
+
+#: admin/class-wpvivid-admin.php:442
+msgid "Migration is complete and htaccess file is replaced. In order to successfully complete the migration, you'd better reinstall 301 redirect plugin, firewall and security plugin, and caching plugin if they exist."
+msgstr "Migrace je dokončena a soubor .htaccess je nahrazen. Chcete-li úspěšně dokončit migraci, raději znovu nainstalujte zásuvný modul pro přesměrování 301, zásuvný modul firewallu a zabezpečení a zásuvný modul pro ukládání do mezi paměti, pokud existují."
+
+#: admin/class-wpvivid-admin.php:267
+msgid "Calculating the size of files, folder and database timed out. If you continue to receive this error, please go to the plugin settings, uncheck 'Calculate the size of files, folder and database before backing up', save changes, then try again."
+msgstr "Vypršel časový limit výpočtu velikosti souborů, složky a databáze. Pokud se tato chyba zobrazuje i nadále, přejděte prosím do nastavení pluginu, zrušte zaškrtnutí políčka „Vypočítat velikost souborů, složky a databáze před zálohováním“, uložte změny a zkuste to znovu."
+
+#: admin/class-wpvivid-admin.php:266
+msgid "Warning: The alias already exists in storage list."
+msgstr "Upozornění: Alias ​​již v seznamu úložiště existuje."
+
+#: admin/class-wpvivid-admin.php:265
+#: includes/customclass/class-wpvivid-ftpclass.php:302
+#: includes/customclass/class-wpvivid-ftpclass.php:310
+msgid "Warning: An alias for remote storage is required."
+msgstr "Upozornění: Je vyžadován alias pro vzdálené úložiště."
+
+#: admin/class-wpvivid-admin.php:264
+msgid "Error:"
+msgstr "Chyba:"
+
+#: admin/class-wpvivid-admin.php:263
+msgid "Warning:"
+msgstr "Varování:"
+
+#: admin/class-wpvivid-admin.php:185
+msgid "Migrate WordPress"
+msgstr "Migrovat WordPress"
+
+#: admin/class-wpvivid-admin.php:184
+msgid "Restore Your Site from a Backup"
+msgstr "Obnovte svůj web ze zálohy"
+
+#: admin/class-wpvivid-admin.php:183
+msgid "Create a Manual Backup"
+msgstr "Vytvořte ruční zálohu"
+
+#: admin/class-wpvivid-admin.php:182
+msgid "WPvivid Backup Settings"
+msgstr "WPvivid nastavení zálohování"
+
+#: admin/class-wpvivid-admin.php:178
+#: includes/staging/class-wpvivid-staging.php:95
+msgid "How-to"
+msgstr "Jak"
+
+#: admin/class-wpvivid-admin.php:171
+msgid "Adjust <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Advanced Settings</a> for higher task success rate."
+msgstr "Upravte <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Pokročilá nastavení</a> pro vyšší úspěšnost úlohy."
+
+#: admin/class-wpvivid-admin.php:168
+#: includes/staging/class-wpvivid-staging.php:88
+msgid "Read <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">Troubleshooting page</a> for faster solutions."
+msgstr "Rychlejší řešení najdete na <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">stránce Odstraňování problémů</a>."
+
+#: includes/class-wpvivid.php:6259
 msgid "Please enter a valid email address."
 msgstr "Zadejte platnou e-mailovou adresu."
 
-#: includes/class-wpvivid.php:6233
+#: includes/class-wpvivid.php:6254
 msgid "User's email address is required."
 msgstr "Vaše e-mailová adresa je vyžadována."
 
-#: includes/class-wpvivid.php:6061
+#: includes/class-wpvivid.php:6082
 msgid "Save backups on localhost (web server)"
 msgstr "Ukládat zálohy na localhost (webový server)"
 
-#: includes/class-wpvivid.php:5907
+#: includes/class-wpvivid.php:5928
 msgid "Type:"
 msgstr "Typ:"
 
-#: includes/class-wpvivid.php:5271
+#: includes/class-wpvivid.php:5292
 msgid "Invalid email address"
 msgstr "Neplatná e-mailová adresa"
 
-#: includes/class-wpvivid.php:5249
+#: includes/class-wpvivid.php:5270
 msgid "The selected file is not the setting file for WPvivid. Please upload the right file."
 msgstr "Vybraný soubor není soubor nastavení pro WPvivid. Nahrajte prosím správný soubor."
 
-#: includes/class-wpvivid.php:5124 includes/class-wpvivid.php:5128
+#: includes/class-wpvivid.php:5145 includes/class-wpvivid.php:5149
 msgid "The pdo_mysql extension is not detected. Please install the extension first or choose wpdb option for Database connection method."
 msgstr "Rozšíření pdo_mysql nebylo zjištěno. Nejprve nainstalujte rozšíření nebo zvolte možnost wpdb pro metodu připojení k databázi."
 
-#: includes/class-wpvivid.php:5115
+#: includes/class-wpvivid.php:5136
 msgid "An email address is required."
 msgstr "Je vyžadována e-mailová adresa."
 
-#: includes/class-wpvivid.php:5098 includes/class-wpvivid.php:5105
+#: includes/class-wpvivid.php:5119 includes/class-wpvivid.php:5126
 msgid "The local storage path is required."
 msgstr "Je vyžadována cesta místního úložiště."
 
-#: includes/class-wpvivid.php:4648
+#: includes/class-wpvivid.php:4669
 msgid "Choose one storage from the list to be the default storage."
 msgstr "Vyberte jedno úložiště ze seznamu jako výchozí úložiště."
 
-#: includes/class-wpvivid.php:4477
+#: includes/class-wpvivid.php:4498
 msgid "The selected junk files have been deleted."
 msgstr "Vybrané nevyžádané soubory byly smazány."
 
-#: includes/class-wpvivid.php:4403
+#: includes/class-wpvivid.php:4424
 msgid "Choose at least one type of junk files for deleting."
 msgstr "Vyberte alespoň jeden typ nevyžádaných souborů ke smazání."
 
-#: includes/class-wpvivid.php:4208
+#: includes/class-wpvivid.php:4229
 msgid "Getting backup directory failed. Please try again later."
 msgstr "Získání záložního adresáře se nezdařilo. Prosím zkuste to znovu později."
 
-#: includes/class-wpvivid.php:4115
+#: includes/class-wpvivid.php:4136
 msgid "%d backup tasks have been completed. Please switch to <a href=\"#\" onclick=\"wpvivid_click_switch_page('wrap', 'wpvivid_tab_log', true);\">Log</a> page to check the details."
 msgstr "%d úloh zálohování bylo dokončeno. Přejděte prosím na stránku <a href=\"#\" onclick=\"wpvivid_click_switch_page('wrap', 'wpvivid_tab_log', true);\">Protokol</a> a zkontrolujte podrobnosti."
 
-#: includes/class-wpvivid.php:4018
+#: includes/class-wpvivid.php:4039
 msgid "Last Backup: "
 msgstr "Poslední záloha:"
 
-#: includes/class-wpvivid.php:3998 includes/class-wpvivid.php:4015
+#: includes/class-wpvivid.php:4010 includes/class-wpvivid.php:4036
 msgid "The last backup message not found."
 msgstr "Poslední záložní zpráva nebyla nalezena."
 
-#: includes/class-wpvivid.php:3882
+#: includes/class-wpvivid.php:3890
 msgid "The restore file not found. Please verify the file exists."
 msgstr "Soubor pro obnovení nebyl nalezen. Ověřte prosím, že soubor existuje."
 
-#: includes/class-wpvivid.php:3833
+#: includes/class-wpvivid.php:3841
 msgid "restore failed error unknown"
 msgstr "obnovení se nezdařilo chyba neznámá"
 
-#: includes/class-wpvivid.php:3081
+#: includes/class-wpvivid.php:3089
 msgid "Failed to get the remote storage information. Please try again later."
 msgstr "Nepodařilo se získat informace o vzdáleném úložišti. Prosím zkuste to znovu později."
 
-#: includes/class-wpvivid.php:3053
+#: includes/class-wpvivid.php:3061
 msgid "Failed to delete the remote storage, can not retrieve the storage infomation. Please try again."
 msgstr "Nepodařilo se odstranit vzdálené úložiště, nelze načíst informace o úložišti. Prosím zkuste to znovu."
 
-#: includes/class-wpvivid.php:3001
+#: includes/class-wpvivid.php:3009
 #: includes/customclass/class-wpvivid-dropbox.php:810
 #: includes/customclass/class-wpvivid-google-drive.php:1095
 #: includes/customclass/class-wpvivid-one-drive.php:1304
 msgid "You have successfully added a remote storage."
 msgstr "Úspěšně jste přidali vzdálené úložiště."
 
-#: includes/class-wpvivid.php:2898
+#: includes/class-wpvivid.php:2906
 msgid "Unable to delete the locked backup. Please unlock it first and try again."
 msgstr "Uzamčenou zálohu nelze odstranit. Nejprve jej odemkněte a zkuste to znovu."
 
-#: includes/class-wpvivid.php:2888
-msgid "Retrieving the backup(s) information failed while deleting the selected backup(s). Please try again later."
-msgstr "Načítání informací o záloze (zálohách) selhalo při odstraňování vybraných záloh. Zkuste to později znovu."
-
-#: includes/class-wpvivid.php:1697 includes/class-wpvivid.php:1817
+#: includes/class-wpvivid.php:1705 includes/class-wpvivid.php:1825
 msgid "Task timed out."
 msgstr "Časový limit úkolu vypršel."
 
-#: includes/class-wpvivid.php:1516 includes/class-wpvivid.php:1538
-#: includes/class-wpvivid.php:1564 includes/class-wpvivid.php:1689
-#: includes/class-wpvivid.php:1809
+#: includes/class-wpvivid.php:1524 includes/class-wpvivid.php:1546
+#: includes/class-wpvivid.php:1572 includes/class-wpvivid.php:1697
+#: includes/class-wpvivid.php:1817
 msgid "Too many resumption attempts."
 msgstr "Příliš mnoho pokusů o obnovení."
-
-#: includes/class-wpvivid.php:561 includes/class-wpvivid.php:5150
-msgid "There is no default remote storage configured. Please set it up first."
-msgstr "Není nakonfigurováno žádné výchozí vzdálené úložiště. Nejprve jej nastavte."
 
 #: includes/class-wpvivid.php:541 includes/class-wpvivid.php:550
 msgid "Choose at least one storage location for backups."
@@ -695,19 +923,29 @@ msgstr "Je vyžadován typ zálohy."
 msgid "Creating scheduled tasks failed. Please try again later."
 msgstr "Vytvoření naplánovaných úloh se nezdařilo. Zkuste to později znovu."
 
+#: admin/partials/wpvivid-remote-storage-page-display.php:235
+#: admin/partials/wpvivid-schedule-page-display.php:189
+#: includes/class-wpvivid.php:561 includes/class-wpvivid.php:5171
+msgid "There is no default remote storage configured. Please set it up first."
+msgstr "Není nakonfigurováno žádné výchozí vzdálené úložiště. Nejprve jej nastavte."
+
+#: includes/class-wpvivid.php:2896
+msgid "Retrieving the backup(s) information failed while deleting the selected backup(s). Please try again later."
+msgstr "Načítání informací o záloze (zálohách) selhalo při odstraňování vybraných záloh. Zkuste to později znovu."
+
 #: includes/class-wpvivid-schedule.php:91
 msgid "12Hours"
 msgstr "12 hodin"
-
-#: includes/class-wpvivid-schedule.php:58
-#: includes/class-wpvivid-schedule.php:103
-msgid "Monthly"
-msgstr "Měsíční"
 
 #: includes/class-wpvivid-schedule.php:52
 #: includes/class-wpvivid-schedule.php:100
 msgid "Fortnightly"
 msgstr "Čtrnáctidenní"
+
+#: includes/class-wpvivid-schedule.php:58
+#: includes/class-wpvivid-schedule.php:103
+msgid "Monthly"
+msgstr "Měsíční"
 
 #: includes/class-wpvivid-schedule.php:46
 #: includes/class-wpvivid-schedule.php:97
@@ -768,6 +1006,8 @@ msgid "Choose an export from your computer to import: "
 msgstr "Vyberte export z počítače, který chcete importovat:"
 
 #: includes/class-wpvivid-export-import.php:1530
+#: includes/class-wpvivid-export-import.php:1783
+#: includes/class-wpvivid-export-import.php:2081
 msgid "Delete Exported Files In Folder"
 msgstr "Smazat exportované soubory ve složce"
 
@@ -1045,17 +1285,17 @@ msgid "1. Visit Key tab page of WPvivid backup plugin of destination site."
 msgstr "1. Navštivte stránku záložky Klíč zálohovacího pluginu WPvivid cílového webu."
 
 #: includes/class-wpvivid-migrate.php:851
-msgid "How to get a site key?"
-msgstr "Jak získat klíč k webu?"
-
-#: includes/class-wpvivid-migrate.php:851
 msgid "Please paste the key below."
 msgstr "Vložte klíč níže."
+
+#: includes/class-wpvivid-migrate.php:851
+msgid "How to get a site key?"
+msgstr "Jak získat klíč k webu?"
 
 #: includes/class-wpvivid-export-import.php:1124
 #: includes/class-wpvivid-export-import.php:1160
 #: includes/class-wpvivid-migrate.php:668 includes/class-wpvivid.php:613
-#: includes/class-wpvivid.php:926 includes/class-wpvivid.php:1153
+#: includes/class-wpvivid.php:934 includes/class-wpvivid.php:1161
 msgid "A task is already running. Please wait until the running task is complete, and try again."
 msgstr "Úloha již běží. Počkejte, dokud nebude spuštěná úloha dokončena, a zkuste to znovu."
 
@@ -1083,7 +1323,7 @@ msgstr "Klíč"
 msgid "Auto-Migration"
 msgstr "Automatická migrace"
 
-#: includes/class-wpvivid-mail-report.php:582 includes/class-wpvivid.php:5279
+#: includes/class-wpvivid-mail-report.php:582 includes/class-wpvivid.php:5300
 msgid "Unable to send email. Please check the configuration of email server."
 msgstr "Nelze odeslat e-mail. Zkontrolujte konfiguraci e-mailového serveru."
 
@@ -1096,8 +1336,8 @@ msgstr "Nelze vytvořit adresář %s. Je jeho nadřazený adresář zapisovateln
 #: includes/class-wpvivid-function-realize.php:100
 #: includes/class-wpvivid-function-realize.php:112
 #: includes/class-wpvivid-function-realize.php:129
-#: includes/class-wpvivid.php:660 includes/class-wpvivid.php:720
-#: includes/class-wpvivid.php:775 includes/class-wpvivid.php:5603
+#: includes/class-wpvivid.php:664 includes/class-wpvivid.php:724
+#: includes/class-wpvivid.php:779 includes/class-wpvivid.php:5624
 #: includes/staging/class-wpvivid-staging-log-page.php:881
 #: includes/staging/class-wpvivid-staging-log-page.php:891
 #: includes/staging/class-wpvivid-staging-log-page.php:1086
@@ -1107,14 +1347,14 @@ msgstr "Protokol nenalezen."
 
 #: includes/class-wpvivid-function-realize.php:95
 #: includes/class-wpvivid-function-realize.php:123
-#: includes/class-wpvivid.php:652 includes/class-wpvivid.php:766
+#: includes/class-wpvivid.php:656 includes/class-wpvivid.php:770
 msgid "Retrieving the backup information failed while showing log. Please try again later."
 msgstr "Načítání informací o záloze selhalo při zobrazování protokolu. Zkuste to později znovu."
 
 #: includes/class-wpvivid-interface-mainwp.php:246
 #: includes/class-wpvivid-public-interface.php:225
-#: includes/class-wpvivid.php:687 includes/class-wpvivid.php:711
-#: includes/class-wpvivid.php:800 includes/class-wpvivid.php:5628
+#: includes/class-wpvivid.php:691 includes/class-wpvivid.php:715
+#: includes/class-wpvivid.php:804 includes/class-wpvivid.php:5649
 #: includes/staging/class-wpvivid-staging-log-page.php:916
 #: includes/staging/class-wpvivid-staging-log-page.php:1163
 msgid "Reading the log failed. Please try again."
@@ -1126,8 +1366,8 @@ msgstr "Čtení protokolu se nezdařilo. Zkuste to znovu."
 #: includes/class-wpvivid-public-interface.php:204
 #: includes/class-wpvivid-public-interface.php:234
 #: includes/class-wpvivid-public-interface.php:263
-#: includes/class-wpvivid.php:670 includes/class-wpvivid.php:729
-#: includes/class-wpvivid.php:784 includes/class-wpvivid.php:5612
+#: includes/class-wpvivid.php:674 includes/class-wpvivid.php:733
+#: includes/class-wpvivid.php:788 includes/class-wpvivid.php:5633
 #: includes/staging/class-wpvivid-staging-log-page.php:900
 msgid "Unable to open the log file."
 msgstr "Nelze otevřít soubor protokolu."
@@ -1275,995 +1515,6 @@ msgstr "Jak získat přístupový klíč AmazonS3."
 msgid "Enter your Amazon S3 access key."
 msgstr "Zadejte přístupový klíč Amazon S3."
 
-#: includes/customclass/class-wpvivid-amazons3-plus.php:82
-#: includes/customclass/class-wpvivid-amazons3-plus.php:220
-msgid "Amazon S3 access key"
-msgstr "Amazon S3 přístupový klíč"
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:70
-#: includes/customclass/class-wpvivid-amazons3-plus.php:208
-msgid "Enter a unique alias: e.g. Amazon S3-001"
-msgstr "Zadejte jedinečný alias: např. Amazon S3-001"
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:62
-#: includes/customclass/class-wpvivid-amazons3-plus.php:200
-msgid "Enter Your Amazon S3 Account"
-msgstr "Zadejte svůj účet Amazon S3"
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:44
-msgid "Amazon S3"
-msgstr "Amazon S3"
-
-#: includes/customclass/class-wpvivid-one-drive.php:400
-msgid "Authenticate with Microsoft OneDrive"
-msgstr "Ověření pomocí Microsoft OneDrive"
-
-#: includes/customclass/class-wpvivid-one-drive.php:221
-#: includes/customclass/class-wpvivid-one-drive.php:434
-msgid "Enter a unique alias: e.g. OneDrive-001"
-msgstr "Zadejte jedinečný alias: např. OneDrive-001"
-
-#: includes/customclass/class-wpvivid-one-drive.php:214
-#: includes/customclass/class-wpvivid-one-drive.php:427
-msgid "Enter Your Microsoft OneDrive Information"
-msgstr "Zadejte informace o svém Microsoft OneDrive"
-
-#: includes/customclass/class-wpvivid-one-drive.php:208
-#: includes/customclass/class-wpvivid-one-drive.php:390
-msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Microsoft OneDrive authorization app (none of your backup data is sent to us)."
-msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> ohledně používání naší autorizační aplikace Microsoft OneDrive (žádné z vašich zálohovaných dat nám nejsou zasílány)."
-
-#: includes/customclass/class-wpvivid-one-drive.php:194
-msgid "Microsoft OneDrive"
-msgstr "Microsoft OneDrive"
-
-#: includes/customclass/class-wpvivid-one-drive.php:182
-msgid "You have authenticated the Microsoft OneDrive account as your remote storage."
-msgstr "Ověřili jste účet Microsoft OneDrive jako vzdálené úložiště."
-
-#: includes/customclass/class-wpvivid-google-drive.php:416
-msgid "Authenticate with Google Drive"
-msgstr "Ověření pomocí Google disku"
-
-#: includes/customclass/class-wpvivid-google-drive.php:237
-#: includes/customclass/class-wpvivid-google-drive.php:451
-msgid "Enter a unique alias: e.g. Google Drive-001"
-msgstr "Zadejte jedinečný alias: např. Disk Google-001"
-
-#: includes/customclass/class-wpvivid-google-drive.php:230
-#: includes/customclass/class-wpvivid-google-drive.php:444
-msgid "Enter Your Google Drive Information"
-msgstr "Zadejte informace o vašem Google disku"
-
-#: includes/customclass/class-wpvivid-google-drive.php:224
-#: includes/customclass/class-wpvivid-google-drive.php:406
-msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Google Drive authorization app (none of your backup data is sent to us)."
-msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> ohledně používání naší autorizační aplikace pro Disk Google (žádné z vašich zálohovaných dat nám nejsou zasílány)."
-
-#: includes/customclass/class-wpvivid-google-drive.php:210
-msgid "Google Drive"
-msgstr "Google Drive"
-
-#: includes/customclass/class-wpvivid-google-drive.php:198
-msgid "You have authenticated the Google Drive account as your remote storage."
-msgstr "Ověřili jste svůj Google účet jako své vzdálené úložiště."
-
-#: includes/customclass/class-wpvivid-google-drive.php:108
-msgid "Authentication failed, the format of the client_secrets.json file is incorrect. Please delete and re-install the plugin to recreate the file."
-msgstr "Ověření se nezdařilo, formát souboru client_secrets.json je nesprávný. Chcete-li soubor znovu vytvořit, smažte a znovu nainstalujte plugin."
-
-#: includes/customclass/class-wpvivid-google-drive.php:104
-msgid "Authentication failed, the client_secrets.json file is missing. Please make sure the client_secrets.json file is in wpvivid-backuprestore\\includes\\customclass directory."
-msgstr "Ověření se nezdařilo, soubor client_secrets.json chybí. Ujistěte se prosím, že soubor client_secrets.json je v adresáři wpvivid-backuprestore\\includes\\customclass."
-
-#: includes/customclass/class-wpvivid-s3compat.php:518
-msgid "Click the button to connect to DigitalOcean Spaces storage and add it to the storage list below."
-msgstr "Kliknutím na tlačítko se připojíte k úložišti DigitalOcean Spaces a přidáte jej do seznamu úložiště níže."
-
-#: includes/customclass/class-wpvivid-s3compat.php:491
-#: includes/customclass/class-wpvivid-s3compat.php:606
-msgid "Enter the DigitalOcean Endpoint for the storage"
-msgstr "Zadejte DigitalOcean Endpoint pro úložiště"
-
-#: includes/customclass/class-wpvivid-s3compat.php:486
-#: includes/customclass/class-wpvivid-s3compat.php:601
-msgid "region.digitaloceanspaces.com"
-msgstr "region.digitaloceanspaces.com"
-
-#: includes/customclass/class-wpvivid-s3compat.php:479
-#: includes/customclass/class-wpvivid-s3compat.php:594
-msgid "Customize the directory where you want to store backups within the Space."
-msgstr "Upravte adresář, do kterého chcete ukládat zálohy v rámci prostoru."
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:118
-#: includes/customclass/class-wpvivid-amazons3-plus.php:256
-#: includes/customclass/class-wpvivid-s3compat.php:474
-#: includes/customclass/class-wpvivid-s3compat.php:589
-msgid "Custom Path"
-msgstr "Vlastní cesta"
-
-#: includes/customclass/class-wpvivid-s3compat.php:467
-#: includes/customclass/class-wpvivid-s3compat.php:582
-msgid "Enter an existed Space to create a custom backup storage directory."
-msgstr "Chcete-li vytvořit vlastní adresář úložiště záloh, zadejte existující prostor."
-
-#: includes/customclass/class-wpvivid-s3compat.php:462
-#: includes/customclass/class-wpvivid-s3compat.php:577
-msgid "Space Name(e.g. test)"
-msgstr "Název prostoru (např. test)"
-
-#: includes/customclass/class-wpvivid-s3compat.php:455
-#: includes/customclass/class-wpvivid-s3compat.php:570
-msgid "Enter your DigitalOcean Spaces secret key"
-msgstr "Zadejte svůj tajný klíč DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-s3compat.php:450
-#: includes/customclass/class-wpvivid-s3compat.php:565
-msgid "DigitalOcean Spaces secret key"
-msgstr "Tajný klíč DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-s3compat.php:443
-#: includes/customclass/class-wpvivid-s3compat.php:558
-msgid "Enter your DigitalOcean Spaces access key"
-msgstr "Zadejte svůj přístupový klíč DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-s3compat.php:438
-#: includes/customclass/class-wpvivid-s3compat.php:553
-msgid "DigitalOcean Spaces access key"
-msgstr "Přístupový klíč DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-s3compat.php:426
-#: includes/customclass/class-wpvivid-s3compat.php:541
-msgid "Enter a unique alias: e.g. DOS-001"
-msgstr "Zadejte jedinečný alias: např. DOS-001"
-
-#: includes/customclass/class-wpvivid-s3compat.php:418
-#: includes/customclass/class-wpvivid-s3compat.php:533
-msgid "Enter Your DigitalOcean Spaces Account"
-msgstr "Zadejte svůj účet DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-s3compat.php:409
-msgid "DigitalOcean Spaces"
-msgstr "DigitalOcean Spaces"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:158
-msgid "Click the button to connect to FTP server and add it to the storage list below."
-msgstr "Klepnutím na tlačítko se připojíte k serveru FTP a přidáte jej do seznamu úložiště níže."
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:173
-#: includes/customclass/class-wpvivid-ftpclass.php:153
-#: includes/customclass/class-wpvivid-s3compat.php:513
-#: includes/customclass/class-wpvivid-sftpclass.php:143
-msgid "Test and Add"
-msgstr "Test a přidání"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:145
-#: includes/customclass/class-wpvivid-ftpclass.php:246
-msgid "Uncheck the option to use FTP active mode when transferring files. Make sure the FTP server you are configuring supports the active FTP mode."
-msgstr "Zrušte zaškrtnutí možnosti používat při přenosu souborů aktivní režim FTP. Ujistěte se, že FTP server, který konfigurujete, podporuje aktivní režim FTP."
-
-#: includes/customclass/class-wpvivid-ftpclass.php:139
-#: includes/customclass/class-wpvivid-ftpclass.php:240
-msgid "Uncheck this to enable FTP active mode."
-msgstr "Zrušte zaškrtnutí pro aktivaci režimu FTP."
-
-#: includes/customclass/class-wpvivid-ftpclass.php:117
-#: includes/customclass/class-wpvivid-ftpclass.php:232
-msgid "Enter an absolute path and a custom subdirectory (optional) for holding the backups of current website. For example, /home/username/customfolder"
-msgstr "Zadejte absolutní cestu a vlastní podadresář (volitelné) pro uložení záloh aktuálního webu. Například /home/username/customfolder"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:112
-#: includes/customclass/class-wpvivid-ftpclass.php:227
-msgid "Absolute path must exist(e.g. /home/username)"
-msgstr "Musí existovat absolutní cesta (např. /home/username)"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:105
-#: includes/customclass/class-wpvivid-ftpclass.php:220
-msgid "Enter the FTP server password."
-msgstr "Zadejte heslo vašeho FTP serveru."
-
-#: includes/customclass/class-wpvivid-ftpclass.php:100
-#: includes/customclass/class-wpvivid-ftpclass.php:215
-msgid "FTP password"
-msgstr "FTP heslo"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:93
-#: includes/customclass/class-wpvivid-ftpclass.php:208
-msgid "Enter your FTP server user name."
-msgstr "Zadejte uživatelské jméno vašeho FTP serveru."
-
-#: includes/customclass/class-wpvivid-ftpclass.php:88
-#: includes/customclass/class-wpvivid-ftpclass.php:203
-msgid "FTP login"
-msgstr "FTP přihlášení"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:81
-msgid "Pro feature: Change the FTP default port number"
-msgstr "Funkce Pro: Změňte výchozí číslo portu FTP"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:69
-#: includes/customclass/class-wpvivid-ftpclass.php:196
-msgid "Enter the FTP server."
-msgstr "Zadejte FTP server."
-
-#: includes/customclass/class-wpvivid-ftpclass.php:64
-#: includes/customclass/class-wpvivid-ftpclass.php:191
-msgid "FTP server (server's port 21)"
-msgstr "FTP server (port serveru 21)"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:52
-#: includes/customclass/class-wpvivid-ftpclass.php:179
-msgid "Enter an unique alias: e.g. FTP-001"
-msgstr "Zadejte jedinečný alias: např. FTP-001"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:45
-#: includes/customclass/class-wpvivid-ftpclass.php:172
-msgid "Enter Your FTP Account"
-msgstr "Zadejte svůj FTP účet"
-
-#: includes/customclass/class-wpvivid-ftpclass.php:36
-msgid "FTP"
-msgstr "FTP"
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:302
-#: includes/customclass/class-wpvivid-dropbox.php:687
-#: includes/customclass/class-wpvivid-ftpclass.php:259
-#: includes/customclass/class-wpvivid-google-drive.php:468
-#: includes/customclass/class-wpvivid-one-drive.php:451
-#: includes/customclass/class-wpvivid-s3compat.php:619
-#: includes/customclass/class-wpvivid-sftpclass.php:249
-msgid "Click the button to save the changes."
-msgstr "Klepnutím na tlačítko uložíte změny."
-
-#: includes/customclass/class-wpvivid-dropbox.php:636
-msgid "Authenticate with Dropbox"
-msgstr "Ověření pomocí Dropboxu"
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:137
-#: includes/customclass/class-wpvivid-dropbox.php:503
-#: includes/customclass/class-wpvivid-ftpclass.php:131
-#: includes/customclass/class-wpvivid-google-drive.php:280
-#: includes/customclass/class-wpvivid-one-drive.php:264
-#: includes/customclass/class-wpvivid-s3compat.php:505
-#: includes/customclass/class-wpvivid-sftpclass.php:135
-msgid "Once checked, all this sites backups sent to a remote storage destination will be uploaded to this storage by default."
-msgstr "Po zaškrtnutí budou všechny zálohy těchto webů odeslané do vzdáleného úložiště ve výchozím nastavení nahrány do tohoto úložiště."
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:131
-#: includes/customclass/class-wpvivid-dropbox.php:497
-#: includes/customclass/class-wpvivid-ftpclass.php:125
-#: includes/customclass/class-wpvivid-google-drive.php:274
-#: includes/customclass/class-wpvivid-one-drive.php:258
-#: includes/customclass/class-wpvivid-s3compat.php:499
-#: includes/customclass/class-wpvivid-sftpclass.php:129
-msgid "Set as the default remote storage."
-msgstr "Nastavit jako výchozí vzdálené úložiště."
-
-#: includes/customclass/class-wpvivid-dropbox.php:489
-#: includes/customclass/class-wpvivid-google-drive.php:266
-#: includes/customclass/class-wpvivid-one-drive.php:250
-msgid "Pro feature: Create a directory for storing the backups of the site"
-msgstr "Pro funkce: Vytvořte adresář pro ukládání záloh webu"
-
-#: includes/customclass/class-wpvivid-dropbox.php:477
-#: includes/customclass/class-wpvivid-google-drive.php:254
-#: includes/customclass/class-wpvivid-one-drive.php:238
-msgid "All backups will be uploaded to this directory."
-msgstr "Všechny zálohy budou nahrány do tohoto adresáře."
-
-#: includes/customclass/class-wpvivid-amazons3-plus.php:75
-#: includes/customclass/class-wpvivid-amazons3-plus.php:213
-#: includes/customclass/class-wpvivid-dropbox.php:465
-#: includes/customclass/class-wpvivid-dropbox.php:675
-#: includes/customclass/class-wpvivid-ftpclass.php:57
-#: includes/customclass/class-wpvivid-ftpclass.php:184
-#: includes/customclass/class-wpvivid-google-drive.php:242
-#: includes/customclass/class-wpvivid-google-drive.php:456
-#: includes/customclass/class-wpvivid-one-drive.php:226
-#: includes/customclass/class-wpvivid-one-drive.php:439
-#: includes/customclass/class-wpvivid-s3compat.php:431
-#: includes/customclass/class-wpvivid-s3compat.php:546
-#: includes/customclass/class-wpvivid-sftpclass.php:61
-#: includes/customclass/class-wpvivid-sftpclass.php:176
-msgid "A name to help you identify the storage if you have multiple remote storage connected."
-msgstr "Název, který vám pomůže identifikovat úložiště, pokud máte připojeno více vzdálených úložišť."
-
-#: includes/customclass/class-wpvivid-dropbox.php:460
-#: includes/customclass/class-wpvivid-dropbox.php:670
-msgid "Enter a unique alias: e.g. Dropbox-001"
-msgstr "Zadejte jedinečný alias: např. Dropbox-001"
-
-#: includes/customclass/class-wpvivid-dropbox.php:453
-#: includes/customclass/class-wpvivid-dropbox.php:629
-msgid "Enter Your Dropbox Information"
-msgstr "Zadejte informace o vaší schránce"
-
-#: includes/customclass/class-wpvivid-dropbox.php:447
-#: includes/customclass/class-wpvivid-dropbox.php:626
-msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Dropbox authorization app (none of your backup data is sent to us)."
-msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> pro použití naší autorizační aplikace Dropbox ( žádné z vašich zálohovaných dat nám nejsou zasílány)."
-
-#: includes/customclass/class-wpvivid-dropbox.php:433
-msgid "Dropbox"
-msgstr "Dropbox"
-
-#: includes/customclass/class-wpvivid-dropbox.php:422
-msgid "You have authenticated the Dropbox account as your remote storage."
-msgstr "Ověřili jste účet Dropbox jako své vzdálené úložiště."
-
-#: includes/class-wpvivid-backup.php:2341
-msgid "Backing up %s finished."
-msgstr "Zálohování %s dokončeno."
-
-#: includes/class-wpvivid-backup.php:2333
-msgid "Start backing up %s."
-msgstr "Začněte zálohovat %s."
-
-#: includes/class-wpvivid-backup.php:1160
-#: includes/class-wpvivid-backup.php:1177
-#: includes/class-wpvivid-function-realize.php:72
-msgid "The backup will be canceled after backing up the current chunk ends."
-msgstr "Záloha bude zrušena po ukončení zálohování aktuálního bloku."
-
-#: includes/class-wpvivid-backup.php:1141
-#: includes/class-wpvivid-backup.php:1154
-#: includes/class-wpvivid-export-import.php:1309
-msgid "running time: "
-msgstr "doba běhu:"
-
-#: includes/class-wpvivid-backup.php:1141
-#: includes/class-wpvivid-backup.php:1154
-#: includes/class-wpvivid-export-import.php:1309
-msgid "Progress: "
-msgstr "Průběh:"
-
-#: includes/class-wpvivid-backup.php:1106
-msgid "Ready to backup. Progress: 0%, running time: 0second."
-msgstr "Připraveno k zálohování. Průběh: 0 %, doba běhu: 0 sekund."
-
-#: includes/class-wpvivid-importer.php:1925
-#: includes/class-wpvivid-importer.php:1930
-#: includes/class-wpvivid-importer.php:2155
-#: includes/class-wpvivid-importer.php:2351
-msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
-msgstr "Zdá se, že se nejedná o soubor WXR, chybějící/neplatné číslo verze WXR"
-
-#: includes/class-wpvivid-importer.php:1878
-msgid "Details are shown above. The importer will now try again with a different parser..."
-msgstr "Podrobnosti jsou zobrazeny výše. Importer se o to nyní pokusí znovu odlišnou metodou..."
-
-#: includes/class-wpvivid-importer.php:1877
-#: includes/class-wpvivid-importer.php:1913
-#: includes/class-wpvivid-importer.php:1921
-msgid "There was an error when reading this WXR file"
-msgstr "Došlo k chybě při čtení tohoto souboru WXR"
-
-#: includes/class-wpvivid-importer.php:1737
-msgid "Invalid file type"
-msgstr "Neplatný typ souboru"
-
-#: includes/class-wpvivid-importer.php:1724
-msgid "Fetching attachments is not enabled"
-msgstr "Načítání příloh není povoleno"
-
-#: includes/class-wpvivid-importer.php:1676
-#: includes/class-wpvivid-importer.php:1777
-msgid "Sorry, this file type is not permitted for security reasons."
-msgstr "Tento typ souboru není z bezpečnostních důvodů povolen."
-
-#: includes/class-wpvivid-importer.php:1669
-#: includes/class-wpvivid-importer.php:1782
-msgid "File not exist, file:"
-msgstr "Soubor neexistuje, soubor:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:309
-#: includes/class-wpvivid-exporter.php:594
-#: includes/class-wpvivid-importer.php:350
-#: includes/staging/class-wpvivid-staging-log-page.php:278
-#: includes/staging/class-wpvivid-staging-sites-list.php:651
-#: includes/staging/class-wpvivid-staging-sites-list.php:1070
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:286
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:664
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:351
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:806
-msgid "Last page"
-msgstr "Poslední stránka"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:299
-#: includes/class-wpvivid-exporter.php:584
-#: includes/class-wpvivid-importer.php:340
-#: includes/staging/class-wpvivid-staging-log-page.php:268
-#: includes/staging/class-wpvivid-staging-sites-list.php:641
-#: includes/staging/class-wpvivid-staging-sites-list.php:1060
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:276
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:654
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:341
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:796
-msgid "Next page"
-msgstr "Další stránka"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:291
-#: includes/class-wpvivid-exporter.php:576
-#: includes/class-wpvivid-importer.php:332
-#: includes/staging/class-wpvivid-staging-log-page.php:260
-#: includes/staging/class-wpvivid-staging-sites-list.php:633
-#: includes/staging/class-wpvivid-staging-sites-list.php:1052
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:268
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:646
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:333
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:788
-msgctxt "paging"
-msgid "%1$s of %2$s"
-msgstr "%1$s z %2$s"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:281
-#: admin/partials/wpvivid-backup-restore-page-display.php:285
-#: includes/class-wpvivid-exporter.php:566
-#: includes/class-wpvivid-exporter.php:570
-#: includes/class-wpvivid-importer.php:322
-#: includes/class-wpvivid-importer.php:326
-#: includes/staging/class-wpvivid-staging-log-page.php:250
-#: includes/staging/class-wpvivid-staging-log-page.php:254
-#: includes/staging/class-wpvivid-staging-sites-list.php:623
-#: includes/staging/class-wpvivid-staging-sites-list.php:627
-#: includes/staging/class-wpvivid-staging-sites-list.php:1042
-#: includes/staging/class-wpvivid-staging-sites-list.php:1046
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:258
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:262
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:636
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:640
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:323
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:327
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:778
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:782
-msgid "Current Page"
-msgstr "Aktuální stránka"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:274
-#: includes/class-wpvivid-exporter.php:559
-#: includes/class-wpvivid-importer.php:315
-#: includes/staging/class-wpvivid-staging-log-page.php:243
-#: includes/staging/class-wpvivid-staging-sites-list.php:616
-#: includes/staging/class-wpvivid-staging-sites-list.php:1035
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:251
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:629
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:316
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:771
-msgid "Previous page"
-msgstr "Předchozí stránka"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:263
-#: includes/class-wpvivid-exporter.php:548
-#: includes/class-wpvivid-importer.php:304
-#: includes/staging/class-wpvivid-staging-log-page.php:232
-#: includes/staging/class-wpvivid-staging-sites-list.php:605
-#: includes/staging/class-wpvivid-staging-sites-list.php:1024
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:240
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:618
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:305
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:760
-msgid "First page"
-msgstr "První stránka"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:232
-#: includes/class-wpvivid-exporter.php:512
-#: includes/class-wpvivid-importer.php:268
-#: includes/staging/class-wpvivid-staging-log-page.php:201
-#: includes/staging/class-wpvivid-staging-sites-list.php:574
-#: includes/staging/class-wpvivid-staging-sites-list.php:993
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:209
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:587
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:274
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:729
-msgid "%s item"
-msgid_plural "%s items"
-msgstr[0] "%s položka"
-msgstr[1] "%s položky"
-msgstr[2] "%s položek"
-
-#: includes/class-wpvivid-importer.php:167
-msgid "Type: "
-msgstr "Typ: "
-
-#: includes/class-wpvivid-importer.php:89
-msgid "Media Files Size"
-msgstr "Velikost mediálních souborů"
-
-#: includes/class-wpvivid-importer.php:88
-msgid "Count"
-msgstr "Počet"
-
-#: includes/class-wpvivid-importer.php:87
-msgid "Post Types"
-msgstr "Typ příspěvku"
-
-#: includes/class-wpvivid-importer.php:86
-msgid "File Name"
-msgstr "Jméno souboru"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:35
-#: includes/class-wpvivid-exporter.php:71
-#: includes/class-wpvivid-importer.php:50
-#: includes/staging/class-wpvivid-staging-sites-list.php:360
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:53
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:431
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:55
-#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:510
-msgid "Select All"
-msgstr "Vybrat vše"
-
-#: includes/class-wpvivid-backup-uploader.php:650
-msgid "Select Files"
-msgstr "Vybrat soubory"
-
-#: includes/class-wpvivid-backup-uploader.php:649
-msgctxt "Uploader: Drop files here - or - Select Files"
-msgid "or"
-msgstr "nebo"
-
-#: includes/class-wpvivid-backup-uploader.php:648
-msgid "Drop files here"
-msgstr "Sem přetáhněte soubory"
-
-#: includes/class-wpvivid-backup-uploader.php:601
-msgid "Scan uploaded backup or received backup"
-msgstr "Skenujte nahranou zálohu nebo přijatou zálohu"
-
-#: includes/class-wpvivid-backup-uploader.php:598
-msgid "Tips: Click the button below to scan all uploaded or received backups in directory"
-msgstr "Tipy: Klepnutím na tlačítko níže prohledáte všechny nahrané nebo přijaté zálohy v adresáři"
-
-#: admin/partials/wpvivid-admin-display.php:63
-msgid "Warning: There is no default remote storage available for the scheduled backups, please set up it first."
-msgstr "Upozornění: Pro plánované zálohování není k dispozici žádné výchozí vzdálené úložiště, nejprve jej prosím nastavte."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2524
-msgid "Next Backup: "
-msgstr "Další záloha:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2522
-msgid "Server Time: "
-msgstr "Čas serveru:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2520
-msgid "Schedule Status: "
-msgstr "Stav plánu:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2518
-msgid "Backup Schedule"
-msgstr "Plán zálohování"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2499
-msgid "The settings are only for manual backup, which won't affect schedule settings."
-msgstr "Nastavení jsou pouze pro ruční zálohování, které neovlivní nastavení plánu."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2323
-msgid "This backup can only be deleted manually"
-msgstr "Tuto zálohu lze odstranit pouze ručně"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2318
-msgid "Backup Now"
-msgstr "Zálohovat nyní"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2305
-msgid "Send Backup to Remote Storage:"
-msgstr "Odeslat zálohu do vzdáleného úložiště:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2301
-msgid "Save Backups to Local"
-msgstr "Uložit zálohy na místní úložiště"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2272
-msgid "rename directory"
-msgstr "přejmenovat adresář"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2270
-msgid "Local Storage Directory:"
-msgstr "Adresář místního úložiště:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2265
-msgid "Back Up Manually"
-msgstr "Zálohovat ručně"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2212
-#: includes/class-wpvivid-migrate.php:360
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2206
-#: includes/class-wpvivid-migrate.php:1172 includes/class-wpvivid.php:4097
-msgid "Network Connection:"
-msgstr "Siťové připojení:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2203
-#: includes/class-wpvivid-migrate.php:1169 includes/class-wpvivid.php:4094
-msgid "Speed:"
-msgstr "Rychlost:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2202
-#: includes/class-wpvivid-migrate.php:1168 includes/class-wpvivid.php:4093
-msgid "Uploaded:"
-msgstr "Nahráno:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2198
-msgid "File Size:"
-msgstr "Velikost souboru:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2197
-msgid "Database Size:"
-msgstr "Velikost databáze:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1287
-msgid "The backup is stored on the remote storage, click on the button to download it to localhost."
-msgstr "Záloha je uložena na vzdáleném úložišti, kliknutím na tlačítko ji stáhnete na lokální úložiště."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1286
-msgid "Retrieve the backup to localhost"
-msgstr "Načtěte zálohu na lokální úložiště"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1284
-msgid "Rollback"
-msgstr "Vrátit zpět"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1283
-msgid "Terminate"
-msgstr "Vypovědět"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1279
-msgid "Tips:"
-msgstr "Tipy:"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1275
-msgid "Restore and keep the original domain (URL) unchanged"
-msgstr "Obnovte a ponechte původní doménu (URL) nezměněnou"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1272
-msgid "Restore and replace the original domain (URL) with %s (migration)"
-msgstr "Obnovte a nahraďte původní doménu (URL) doménou %s (migrace)"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1269
-msgid "Restore function will replace the current site's themes, plugins, uploads, database and/or other content directories with the existing equivalents in the selected backup."
-msgstr "Funkce obnovení nahradí aktuální témata, zásuvné moduly, nahrané soubory, databáze a/nebo jiné adresáře obsahu stávajícími ekvivalenty ve vybrané záloze."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1268
-msgid "Please do not close the page or switch to other pages when a restore task is running, as it could trigger some unexpected errors."
-msgstr "Během úlohy obnovy nezavírejte stránku ani nepřepínejte na jiné stránky, protože by to mohlo způsobit neočekávané chyby."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1267
-msgid "Restore backup from:"
-msgstr "Obnovit zálohu z:"
-
-#: admin/class-wpvivid-admin.php:270
-msgid "Step Three: Click 'Restore' button"
-msgstr "Krok 3: Klikněte na tlačítko 'Obnovit'"
-
-#: admin/class-wpvivid-admin.php:269
-msgid "Step Two: Choose an option to complete restore, if any"
-msgstr "Krok 2: Vyberte možnost pro dokončení obnovy, pokud existuje"
-
-#: admin/class-wpvivid-admin.php:268
-msgid "Step One: In the backup list, click the 'Restore' button on the backup you want to restore. This will bring up the restore tab"
-msgstr "Krok 1: V seznamu záloh klikněte na tlačítko 'Obnovit' u zálohy, kterou chcete obnovit. Tím se zobrazí karta obnovení"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1168
-msgid "This request might delete the backup being downloaded, are you sure you want to continue?"
-msgstr "Tento požadavek může odstranit stahovanou zálohu. Opravdu chcete pokračovat?"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1163
-msgid "Please select at least one item."
-msgstr "Vyberte alespoň jednu položku."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1124
-msgid "This request will delete the backup being downloaded, are you sure you want to continue?"
-msgstr "Tento požadavek smaže stahovanou zálohu. Opravdu chcete pokračovat?"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:1115
-msgid "This backup is locked, are you sure to remove it? This backup will be deleted permanently from your hosting (localhost) and remote storages."
-msgstr "Tato záloha je uzamčena, jste si jisti, že ji chcete odstranit? Tato záloha bude trvale odstraněna z vašeho hostingu (localhost) a vzdálených úložišť."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:581
-msgid "Delete the selected backups"
-msgstr "Smazat vybrané zálohy"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:568
-msgid "Delete"
-msgstr "Smazat"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:565
-msgid "Storage"
-msgstr "Úložiště"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:564
-msgid "Backup"
-msgstr "Záloha"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:518
-#: admin/partials/wpvivid-backup-restore-page-display.php:567
-#: admin/partials/wpvivid-backup-restore-page-display.php:1282
-#: includes/class-wpvivid.php:5926
-msgid "Restore"
-msgstr "Obnovit"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:500
-msgid "Backups"
-msgstr "Zálohy"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:485
-msgid "How to restore your website from a backup(scheduled, manual, uploaded and received backup)"
-msgstr "Jak obnovit svůj web ze zálohy (plánovaná, ruční, nahraná a přijatá záloha)"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:479
-msgid "->If backups are stored in web server, the plugin will list all relevant files immediately."
-msgstr "-> Pokud jsou zálohy uloženy na webovém serveru, plugin okamžitě zobrazí seznam všech relevantních souborů."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:478
-msgid "->If backups are stored in remote storage, our plugin will retrieve the backup to your web server first. This may take a little time depending on the size of backup files. Please be patient. Then you can download them to your PC."
-msgstr "-> Pokud jsou zálohy uloženy ve vzdáleném úložišti, náš plugin nejprve načte zálohu na váš webový server. To může chvíli trvat v závislosti na velikosti záložních souborů. Prosím, buďte trpěliví. Poté si je můžete stáhnout do svého PC."
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:476
-msgid "About backup download"
-msgstr "O stahování zálohy"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:36
-#: admin/partials/wpvivid-remote-storage-page-display.php:337
-msgid "Actions"
-msgstr "Akce"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:35
-#: admin/partials/wpvivid-remote-storage-page-display.php:336
-msgid "Remote Storage Alias"
-msgstr "Alias ​​vzdáleného úložiště"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:34
-#: admin/partials/wpvivid-remote-storage-page-display.php:335
-msgid "Storage Provider"
-msgstr "Poskytovatel úložiště"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:26
-#: admin/partials/wpvivid-remote-storage-page-display.php:327
-msgid "Please choose one storage to save your backups (remote storage)"
-msgstr "Vyberte jedno úložiště pro ukládání záloh (vzdálené úložiště)"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:14
-#: admin/partials/wpvivid-remote-storage-page-display.php:320
-msgid "Storage Edit"
-msgstr "Upravit úložiště"
-
-#: admin/partials/wpvivid-remote-storage-page-display.php:6
-#: admin/partials/wpvivid-remote-storage-page-display.php:318
-msgid "Storages"
-msgstr "Úložiště"
-
-#: admin/partials/wpvivid-settings-page-display.php:696
-msgid "Advanced Settings"
-msgstr "Pokročilé nastavení"
-
-#: admin/partials/wpvivid-settings-page-display.php:690
-msgid "General Settings"
-msgstr "Základní nastavení"
-
-#: admin/partials/wpvivid-settings-page-display.php:674
-msgid "<strong>Retrying </strong>%s<strong> times when encountering a time-out error</strong>"
-msgstr "<strong>Opakování </strong>%s<strong>krát, když dojde k chybě vypršení časového limitu</strong>"
-
-#: admin/partials/wpvivid-settings-page-display.php:660
-msgid "e.g.  if you choose a chunk size of 2MB, a 8MB file will use 4 chunks. Decreasing this value will break the ISP's transmission limit, for example:512KB"
-msgstr "např. pokud zvolíte velikost bloku 2 MB, soubor o velikosti 8 MB použije 4 bloky. Snížením této hodnoty dojde k porušení limitu přenosu ISP, například: 512 kB"
-
-#: admin/partials/wpvivid-settings-page-display.php:657
-msgid "Chunk Size"
-msgstr "Velikost bloku"
-
-#: admin/partials/wpvivid-settings-page-display.php:655
-msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin in restore process. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
-msgstr "Upravte tuto hodnotu, chcete-li použít dočasný limit paměti PHP pro plugin zálohování WPvivid v procesu obnovy. Tuto hodnotu jsme standardně nastavili na 256M. Pokud narazíte na chybu s vyčerpáním paměti, zvyšte hodnotu. Poznámka: Někteří poskytovatelé webhostingu to nemusí podporovat."
-
-#: admin/partials/wpvivid-settings-page-display.php:652
-msgid "PHP Memory Limit for restoration"
-msgstr "Limit paměti PHP pro obnovení"
-
-#: admin/partials/wpvivid-settings-page-display.php:650
-msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin to run a backup. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
-msgstr "Upravte tuto hodnotu, chcete-li použít dočasný limit paměti PHP pro záložní plugin WPvivid pro spuštění zálohy. Tuto hodnotu jsme standardně nastavili na 256M. Pokud narazíte na chybu s vyčerpáním paměti, zvyšte hodnotu. Poznámka: Někteří poskytovatelé webhostingu to nemusí podporovat."
-
-#: admin/partials/wpvivid-settings-page-display.php:647
-msgid "PHP Memory Limit for backup"
-msgstr "Limit paměti PHP pro zálohování"
-
-#: admin/partials/wpvivid-settings-page-display.php:645
-msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of restore down. If the progress of restore encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
-msgstr "Časový limit není časový limit PHP serveru. Po vyčerpání doby provádění náš plugin zastaví proces obnovy. Pokud proces obnovy narazí na časový limit, to znamená, že máte středně velký nebo velký web, zkuste hodnotu zvětšit."
-
-#: admin/partials/wpvivid-settings-page-display.php:642
-msgid "PHP script execution timeout for restore"
-msgstr "Časový limit spuštění skriptu PHP pro obnovení"
-
-#: admin/partials/wpvivid-settings-page-display.php:640
-msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
-msgstr "Časový limit není časový limit PHP serveru. Po vyčerpání doby provádění náš plugin zastaví proces zálohování. Pokud během zálohování dojde k vypršení časového limitu, to znamená, že máte středně velký nebo velký web, zkuste hodnotu zvětšit."
-
-#: admin/partials/wpvivid-settings-page-display.php:637
-msgid "PHP script execution timeout for backup"
-msgstr "Časový limit spuštění skriptu PHP pro zálohování"
-
-#: admin/partials/wpvivid-settings-page-display.php:635
-msgid "Using the option will ignore the file larger than the certain size in MB when backing up, '0' (zero) means unlimited."
-msgstr "Použití této možnosti bude při zálohování ignorovat soubor větší než určitá velikost v MB, '0' (nula) znamená neomezené."
-
-#: admin/partials/wpvivid-settings-page-display.php:632
-msgid "Exclude the files which are larger than"
-msgstr "Vyloučit soubory, které jsou větší než"
-
-#: admin/partials/wpvivid-settings-page-display.php:630
-msgid "Some web hosting providers limit large zip files (e.g. 200MB), and therefore splitting your backup into many parts is an ideal way to avoid hitting the limitation if you are running a big website.  Please try to adjust the value if you are encountering backup errors. If you use a value of 0 MB, any backup files won't be split."
-msgstr "Někteří poskytovatelé webhostingu omezují velké soubory zip (např. 200 MB), a proto je rozdělení zálohy na mnoho částí ideálním způsobem, jak se vyhnout omezení, pokud provozujete velký web. Pokud narazíte na chyby zálohování, zkuste hodnotu upravit. Pokud použijete hodnotu 0 MB, žádné záložní soubory nebudou rozděleny."
-
-#: admin/partials/wpvivid-settings-page-display.php:627
-msgid "Compress Files Every"
-msgstr "Komprimovat soubory každý"
-
-#: admin/partials/wpvivid-settings-page-display.php:618
-msgid "Compress and Archive"
-msgstr "Komprimovat a archivovat"
-
-#: admin/partials/wpvivid-settings-page-display.php:618
-msgid "It will cause a higher CPU usage and is recommended in a VPS or dedicated hosting environment."
-msgstr "Způsobí vyšší využití CPU a doporučuje se ve vyhrazeném hostitelském prostředí VPS."
-
-#: admin/partials/wpvivid-settings-page-display.php:614
-msgid "Only Archive without compressing"
-msgstr "Pouze archivovat bez komprimace"
-
-#: admin/partials/wpvivid-settings-page-display.php:614
-msgid "It will cause a lower CPU Usage and is recommended in a web hosting/ shared hosting environment."
-msgstr "Způsobí to nižší využití CPU a doporučuje se v prostředí webhostingu/sdíleného hostingu."
-
-#: admin/partials/wpvivid-settings-page-display.php:606
-msgid "It is recommended to choose PDO option if pdo_mysql extension is installed on your server, which lets you backup and restore your site faster."
-msgstr "Pokud je na vašem serveru nainstalováno rozšíření pdo_mysql, doporučujeme zvolit volbu PDO, která vám umožní rychleji zálohovat a obnovovat váš web."
-
-#: admin/partials/wpvivid-settings-page-display.php:600
-msgid "WPDB option has a better compatibility, but the speed of backup and restore is slower."
-msgstr "Možnost WPDB má lepší kompatibilitu, ale rychlost zálohování a obnovy je pomalejší."
-
-#: admin/partials/wpvivid-settings-page-display.php:595
-msgid "Database access method."
-msgstr "Metoda přístupu k databázi."
-
-#: admin/partials/wpvivid-settings-page-display.php:588
-msgid "Enabling this option can improve the backup success rate, but it will take more time for backup."
-msgstr "Povolení této možnosti může zlepšit úspěšnost zálohování, ale zálohování bude trvat déle."
-
-#: admin/partials/wpvivid-settings-page-display.php:585
-msgid "Enable optimization mode for web hosting/shared hosting"
-msgstr "Povolit režim optimalizace pro webhosting / sdílený hosting"
-
-#: admin/partials/wpvivid-settings-page-display.php:581
-msgid "Special optimization for web hosting/shared hosting"
-msgstr "Speciální optimalizace pro webhosting / sdílený hosting"
-
-#: admin/partials/wpvivid-settings-page-display.php:581
-msgid "Enable the option when backup failed."
-msgstr "Povolit možnost, když se zálohování nezdařilo."
-
-#: admin/partials/wpvivid-settings-page-display.php:461
-msgid "Importing the json file can help you set WPvivid's configuration on another wordpress site quickly."
-msgstr "Import souboru json vám může pomoci rychle nastavit konfiguraci WPvivid na jiném webu wordpress."
-
-#: admin/partials/wpvivid-settings-page-display.php:460
-#: includes/class-wpvivid-export-import.php:1562
-#: includes/class-wpvivid-importer.php:194
-msgid "Import"
-msgstr "Importovat"
-
-#: admin/partials/wpvivid-settings-page-display.php:456
-msgid "Click 'Export' button to save WPvivid settings on your local computer."
-msgstr "Kliknutím na tlačítko 'Exportovat' uložíte nastavení WPvivid do místního počítače."
-
-#: admin/partials/wpvivid-settings-page-display.php:455
-msgid "Export"
-msgstr "Exportovat"
-
-#: admin/partials/wpvivid-settings-page-display.php:348
-msgid "Empty"
-msgstr "Prázdný"
-
-#: admin/partials/wpvivid-settings-page-display.php:344
-msgid "Temporary Files are created by WPvivid when restoring a website."
-msgstr "Dočasné soubory vytváří wpvivid při obnově webu."
-
-#: admin/partials/wpvivid-settings-page-display.php:342
-msgid "Temporary Files"
-msgstr "Dočasné soubory"
-
-#: admin/partials/wpvivid-settings-page-display.php:335
-msgid "Junk"
-msgstr "Junk"
-
-#: admin/partials/wpvivid-settings-page-display.php:331
-msgid "Backup Cache"
-msgstr "Záložní mezipaměť"
-
-#: admin/partials/wpvivid-settings-page-display.php:325
-#: admin/partials/wpvivid-settings-page-display.php:336
-#: admin/partials/wpvivid-settings-page-display.php:343
-msgid "Path:"
-msgstr "Cesta:"
-
-#: admin/partials/wpvivid-settings-page-display.php:324
-msgid "logs"
-msgstr "Protokoly"
-
-#: admin/partials/wpvivid-settings-page-display.php:319
-msgid "Calculate Sizes"
-msgstr "Vypočítat velikosti"
-
-#: admin/partials/wpvivid-backup-restore-page-display.php:2201
-#: admin/partials/wpvivid-settings-page-display.php:317
-#: includes/class-wpvivid-migrate.php:1167 includes/class-wpvivid.php:4092
-msgid "Total Size:"
-msgstr "Celková velikost:"
-
-#: admin/partials/wpvivid-settings-page-display.php:313
-msgid "Web-server disk space in use by WPvivid"
-msgstr "Místo na disku webového serveru využívané WPvivid"
-
-#: admin/partials/wpvivid-settings-page-display.php:258
-msgid "Pro feature: Add another email address to get report"
-msgstr "Pro funkce: Přidejte další e-mailovou adresu, abyste mohli dostávat zprávy"
-
-#: admin/partials/wpvivid-settings-page-display.php:254
-msgid "Only send an email notification when a backup fails"
-msgstr "Odešlete e-mailové upozornění pouze tehdy, když se zálohování nezdaří"
-
-#: admin/partials/wpvivid-settings-page-display.php:250
-msgid "Always send an email notification when a backup is complete"
-msgstr "Po dokončení zálohování vždy odešlete upozornění e-mailem"
-
-#: admin/partials/wpvivid-settings-page-display.php:245
-msgid "Test Email"
-msgstr "Testovací e-mail"
-
-#: admin/partials/wpvivid-settings-page-display.php:231
-msgid "Enable email report"
-msgstr "Povolit e-mailový přehled"
-
-#: admin/partials/wpvivid-settings-page-display.php:226
-msgid "In order to use this function, please install a <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text-decoration: none;\">WordPress SMTP plugin</a></strong> of your preference and configure your SMTP server first. This is because WordPress uses the PHP Mail function to send its emails by default, which is not supported by many hosts and can cause issues if it is not set properly."
-msgstr "Abyste mohli tuto funkci používat, nainstalujte si prosím <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text- dekorace: none;\">WordPress SMTP plugin</a></strong> podle vašich preferencí a nejprve nakonfigurujte svůj SMTP server. Je to proto, že WordPress ve výchozím nastavení používá k odesílání e-mailů funkci PHP Mail, která není podporována mnoha hostiteli a může způsobit problémy, pokud není správně nastavena."
-
-#: admin/partials/wpvivid-settings-page-display.php:166
-msgid "The action is irreversible! It will remove all backups are out-of-date (including local web server and remote storage) if they exist."
-msgstr "Akce je nevratná! Odebere všechny zálohy, které jsou zastaralé (včetně místního webového serveru a vzdáleného úložiště), pokud existují."
-
-#: admin/partials/wpvivid-settings-page-display.php:165
-msgid "Remove"
-msgstr "Odstranit"
-
-#: admin/partials/wpvivid-settings-page-display.php:153
-msgid "Remote Storage Directory:"
-msgstr "Adresář vzdáleného úložiště:"
-
-#: admin/partials/wpvivid-settings-page-display.php:152
-msgid "Web Server Directory:"
-msgstr "Adresář webového serveru:"
-
-#: admin/partials/wpvivid-settings-page-display.php:148
-msgid "Remove out-of-date backups"
-msgstr "Odstraňte neaktuální zálohy"
-
-#: admin/partials/wpvivid-settings-page-display.php:143
-msgid "Display domain(url) of current site in backup name. (e.g. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
-msgstr "Zobrazit doménu (url) aktuálního webu v názvu zálohy. (např. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
-
-#: admin/partials/wpvivid-settings-page-display.php:138
-msgid "Local storage directory:"
-msgstr "Adresář místního úložiště:"
-
-#: admin/partials/wpvivid-settings-page-display.php:136
-msgid "Name your folder, this folder must be writable for creating backup files."
-msgstr "Pojmenujte svou složku, tato složka musí být zapisovatelná pro vytváření záložních souborů."
-
 #: admin/partials/wpvivid-settings-page-display.php:134
 msgid "Backup Folder"
 msgstr "Složka záloh"
@@ -2406,53 +1657,6 @@ msgstr "Stáhněte si WPvivid Backup pro MainWP"
 msgid "If you are a MainWP user, you can set up and control WPvivid Backup Free and Pro for every child site directly from your MainWP dashboard, using our WPvivid Backup for MainWP extension."
 msgstr "Pokud jste uživatelem MainWP, můžete nastavit a ovládat WPvivid Backup Free a Pro pro každý podřízený web přímo z hlavního panelu MainWP pomocí našeho rozšíření WPvivid Backup for MainWP."
 
-#: admin/class-wpvivid-admin.php:1305
-#: includes/staging/class-wpvivid-staging-log-page.php:384
-msgid " Next page > "
-msgstr "Další stránka >"
-
-#: admin/class-wpvivid-admin.php:1294
-#: includes/staging/class-wpvivid-staging-log-page.php:373
-msgid " < Pre page "
-msgstr " < Předchozí stránka"
-
-#: admin/class-wpvivid-admin.php:1282 includes/class-wpvivid-importer.php:90
-#: includes/staging/class-wpvivid-staging-log-page.php:361
-msgid "Action"
-msgstr "Akce"
-
-#: admin/class-wpvivid-admin.php:1281
-#: includes/staging/class-wpvivid-staging-log-page.php:360
-msgid "Log File Name"
-msgstr "Název log souboru"
-
-#: admin/class-wpvivid-admin.php:1280
-#: includes/staging/class-wpvivid-staging-log-page.php:54
-#: includes/staging/class-wpvivid-staging-log-page.php:359
-msgid "Log Type"
-msgstr "Typ logů"
-
-#: admin/class-wpvivid-admin.php:1279 includes/class-wpvivid-exporter.php:152
-#: includes/staging/class-wpvivid-staging-log-page.php:358
-msgid "Date"
-msgstr "Datum"
-
-#: admin/class-wpvivid-admin.php:1166
-msgid "Website Info Value"
-msgstr "Hodnota informací o webu"
-
-#: admin/class-wpvivid-admin.php:1165
-msgid "Website Info Key"
-msgstr "Informační klíč webu"
-
-#: admin/class-wpvivid-admin.php:1161
-#: admin/partials/wpvivid-backup-restore-page-display.php:529
-#: admin/partials/wpvivid-backup-restore-page-display.php:566
-#: includes/class-wpvivid.php:5918
-#: includes/staging/class-wpvivid-staging-log-page.php:57
-msgid "Download"
-msgstr "Stáhnout"
-
 #: admin/class-wpvivid-admin.php:1158
 msgid "If you didn’t configure SMTP on your site, click the button below to download the relevant information (website info and error logs) to your PC when you are encountering some errors. Sending the files to us will help us diagnose what happened."
 msgstr "Pokud jste na svém webu nenakonfigurovali SMTP, klikněte na tlačítko níže a stáhněte si příslušné informace (informace o webu a protokoly chyb) do počítače, když narazíte na nějaké chyby. Odeslání souborů nám pomůže diagnostikovat, co se stalo."
@@ -2477,191 +1681,995 @@ msgstr "Můj poskytovatel webhostingu je:"
 msgid "I am using:"
 msgstr "Používám:"
 
-#: admin/class-wpvivid-admin.php:1125
-msgid "Your email:"
-msgstr "Váš e-mail:"
+#: admin/partials/wpvivid-backup-restore-page-display.php:309
+#: includes/class-wpvivid-exporter.php:594
+#: includes/class-wpvivid-importer.php:350
+#: includes/staging/class-wpvivid-staging-log-page.php:278
+#: includes/staging/class-wpvivid-staging-sites-list.php:651
+#: includes/staging/class-wpvivid-staging-sites-list.php:1070
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:286
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:664
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:351
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:806
+msgid "Last page"
+msgstr "Poslední stránka"
 
-#: admin/class-wpvivid-admin.php:1124
-msgid "WPvivid support email:"
-msgstr "WPvivid e-mail podpory:"
+#: admin/partials/wpvivid-backup-restore-page-display.php:299
+#: includes/class-wpvivid-exporter.php:584
+#: includes/class-wpvivid-importer.php:340
+#: includes/staging/class-wpvivid-staging-log-page.php:268
+#: includes/staging/class-wpvivid-staging-sites-list.php:641
+#: includes/staging/class-wpvivid-staging-sites-list.php:1060
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:276
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:654
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:341
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:796
+msgid "Next page"
+msgstr "Další stránka"
 
-#: admin/class-wpvivid-admin.php:1121
-msgid "If you have configured SMTP on your site, enter your email address and click the button below to send us the relevant information (website info and errors logs) when you are encountering errors. This will help us figure out what happened. Once the issue is resolved, we will inform you by your email address."
-msgstr "Pokud jste na svém webu nakonfigurovali SMTP, zadejte svou e-mailovou adresu a kliknutím na tlačítko níže nám zašlete příslušné informace (informace o webu a protokoly chyb), když narazíte na chyby. To nám pomůže zjistit, co se stalo. Jakmile bude problém vyřešen, budeme vás informovat na vaši e-mailovou adresu."
+#: admin/partials/wpvivid-backup-restore-page-display.php:291
+#: includes/class-wpvivid-exporter.php:576
+#: includes/class-wpvivid-importer.php:332
+#: includes/staging/class-wpvivid-staging-log-page.php:260
+#: includes/staging/class-wpvivid-staging-sites-list.php:633
+#: includes/staging/class-wpvivid-staging-sites-list.php:1052
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:268
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:646
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:333
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:788
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr "%1$s z %2$s"
 
-#: admin/class-wpvivid-admin.php:1121
-msgid "Method 1."
-msgstr "Metoda 1."
+#: admin/partials/wpvivid-backup-restore-page-display.php:281
+#: admin/partials/wpvivid-backup-restore-page-display.php:285
+#: includes/class-wpvivid-exporter.php:566
+#: includes/class-wpvivid-exporter.php:570
+#: includes/class-wpvivid-importer.php:322
+#: includes/class-wpvivid-importer.php:326
+#: includes/staging/class-wpvivid-staging-log-page.php:250
+#: includes/staging/class-wpvivid-staging-log-page.php:254
+#: includes/staging/class-wpvivid-staging-sites-list.php:623
+#: includes/staging/class-wpvivid-staging-sites-list.php:627
+#: includes/staging/class-wpvivid-staging-sites-list.php:1042
+#: includes/staging/class-wpvivid-staging-sites-list.php:1046
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:258
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:262
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:636
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:640
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:323
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:327
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:778
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:782
+msgid "Current Page"
+msgstr "Aktuální stránka"
 
-#: admin/class-wpvivid-admin.php:1119
-msgid "There are two ways available to send us the debug information. The first one is recommended."
-msgstr "Informace o ladění nám můžete zaslat dvěma způsoby. První se doporučuje."
+#: admin/partials/wpvivid-backup-restore-page-display.php:274
+#: includes/class-wpvivid-exporter.php:559
+#: includes/class-wpvivid-importer.php:315
+#: includes/staging/class-wpvivid-staging-log-page.php:243
+#: includes/staging/class-wpvivid-staging-sites-list.php:616
+#: includes/staging/class-wpvivid-staging-sites-list.php:1035
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:251
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:629
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:316
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:771
+msgid "Previous page"
+msgstr "Předchozí stránka"
 
-#: admin/class-wpvivid-admin.php:956 admin/class-wpvivid-admin.php:1043
-#: admin/partials/wpvivid-remote-storage-page-display.php:48
-#: admin/partials/wpvivid-remote-storage-page-display.php:345
-#: includes/customclass/class-wpvivid-amazons3-plus.php:297
-#: includes/customclass/class-wpvivid-dropbox.php:682
-#: includes/customclass/class-wpvivid-ftpclass.php:254
-#: includes/customclass/class-wpvivid-google-drive.php:463
-#: includes/customclass/class-wpvivid-one-drive.php:446
-#: includes/customclass/class-wpvivid-s3compat.php:614
-#: includes/customclass/class-wpvivid-sftpclass.php:244
-#: includes/staging/class-wpvivid-staging-setting.php:386
-#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:855
-msgid "Save Changes"
-msgstr "Uložit změny"
+#: admin/partials/wpvivid-backup-restore-page-display.php:263
+#: includes/class-wpvivid-exporter.php:548
+#: includes/class-wpvivid-importer.php:304
+#: includes/staging/class-wpvivid-staging-log-page.php:232
+#: includes/staging/class-wpvivid-staging-sites-list.php:605
+#: includes/staging/class-wpvivid-staging-sites-list.php:1024
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:240
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:618
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:305
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:760
+msgid "First page"
+msgstr "První stránka"
 
-#: admin/class-wpvivid-admin.php:914
-msgid "Premium"
-msgstr "Prémium"
+#: admin/partials/wpvivid-backup-restore-page-display.php:232
+#: includes/class-wpvivid-exporter.php:512
+#: includes/class-wpvivid-importer.php:268
+#: includes/staging/class-wpvivid-staging-log-page.php:201
+#: includes/staging/class-wpvivid-staging-sites-list.php:574
+#: includes/staging/class-wpvivid-staging-sites-list.php:993
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:209
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:587
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:274
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:729
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s položka"
+msgstr[1] "%s položky"
+msgstr[2] "%s položek"
 
-#: admin/class-wpvivid-admin.php:904
-msgid "MainWP"
-msgstr "MainWP"
+#: includes/class-wpvivid-importer.php:167
+msgid "Type: "
+msgstr "Typ: "
 
-#: admin/class-wpvivid-admin.php:893
-#: admin/partials/wpvivid-backup-restore-page-display.php:507
-#: admin/partials/wpvivid-backup-restore-page-display.php:2213
-#: includes/class-wpvivid.php:5908
-msgid "Log"
-msgstr "Log"
+#: admin/partials/wpvivid-backup-restore-page-display.php:35
+#: includes/class-wpvivid-exporter.php:71
+#: includes/class-wpvivid-importer.php:50
+#: includes/staging/class-wpvivid-staging-sites-list.php:360
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:53
+#: includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php:431
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:55
+#: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php:510
+msgid "Select All"
+msgstr "Vybrat vše"
 
-#: admin/class-wpvivid-admin.php:1088
-msgid "Logs"
-msgstr "Logy"
+#: includes/class-wpvivid-backup-uploader.php:650
+msgid "Select Files"
+msgstr "Vybrat soubory"
 
-#: admin/class-wpvivid-admin.php:880
-msgid "Debug"
-msgstr "Režim ladění (Debug mód)"
+#: includes/class-wpvivid-importer.php:88
+msgid "Count"
+msgstr "Počet"
 
-#: admin/class-wpvivid-admin.php:868
-msgid "Remote Storage"
-msgstr "Vzdálené úložiště"
+#: includes/class-wpvivid-importer.php:87
+msgid "Post Types"
+msgstr "Typ příspěvku"
 
-#: admin/class-wpvivid-admin.php:862
-msgid "Schedule"
-msgstr "Naplánovat"
+#: includes/class-wpvivid-importer.php:86
+msgid "File Name"
+msgstr "Jméno souboru"
 
-#: admin/class-wpvivid-admin.php:738
-msgid "Class PclZip is not detected. Please update or reinstall your WordPress."
-msgstr "Třída PclZip nebyla detekována. Aktualizujte nebo přeinstalujte svůj WordPress."
+#: includes/customclass/class-wpvivid-amazons3-plus.php:44
+msgid "Amazon S3"
+msgstr "Amazon S3"
 
-#: admin/class-wpvivid-admin.php:732
-msgid "The %s extensions are not detected. Please install the extensions first."
-msgstr "%s rozšíření nebyla zjištěna. Nejprve nainstalujte rozšíření."
+#: includes/customclass/class-wpvivid-google-drive.php:210
+msgid "Google Drive"
+msgstr "Google Drive"
 
-#: admin/class-wpvivid-admin.php:729
-msgid "The %s extension is not detected. Please install the extension first."
-msgstr "Přípona %s nebyla zjištěna. Nejprve nainstalujte rozšíření."
+#: includes/customclass/class-wpvivid-amazons3-plus.php:82
+#: includes/customclass/class-wpvivid-amazons3-plus.php:220
+msgid "Amazon S3 access key"
+msgstr "Amazon S3 přístupový klíč"
 
-#: admin/class-wpvivid-admin.php:607
-msgid "As Amazon S3 and DigitalOcean Space have upgraded their connection methods, please delete the previous connections and re-add your Amazon S3/DigitalOcean Space accounts to make sure the connections work."
-msgstr "Protože Amazon S3 a DigitalOcean Space upgradovaly své metody připojení, odstraňte předchozí připojení a znovu přidejte své účty Amazon S3/DigitalOcean Space, abyste se ujistili, že připojení fungují."
+#: includes/customclass/class-wpvivid-ftpclass.php:100
+#: includes/customclass/class-wpvivid-ftpclass.php:215
+msgid "FTP password"
+msgstr "FTP heslo"
 
-#: admin/class-wpvivid-admin.php:463
-msgid "Restore completed successfully."
-msgstr "Obnovení bylo úspěšně dokončeno."
+#: includes/customclass/class-wpvivid-ftpclass.php:88
+#: includes/customclass/class-wpvivid-ftpclass.php:203
+msgid "FTP login"
+msgstr "FTP přihlášení"
 
-#: admin/class-wpvivid-admin.php:457
-msgid "Cheers! WPvivid Backup plugin has restored successfully your website. If you found WPvivid Backup plugin helpful, a 5-star rating would be highly appreciated, which motivates us to keep providing new features."
-msgstr "Na zdraví! Plugin WPvivid Backup úspěšně obnovil váš web. Pokud jste považovali plugin WPvivid Backup za užitečný, bylo by vysoce oceněno 5hvězdičkové hodnocení, které nás motivuje k tomu, abychom nadále poskytovali nové funkce."
+#: includes/customclass/class-wpvivid-ftpclass.php:36
+msgid "FTP"
+msgstr "FTP"
 
-#: admin/class-wpvivid-admin.php:442
-msgid "Migration is complete and htaccess file is replaced. In order to successfully complete the migration, you'd better reinstall 301 redirect plugin, firewall and security plugin, and caching plugin if they exist."
-msgstr "Migrace je dokončena a soubor .htaccess je nahrazen. Chcete-li úspěšně dokončit migraci, raději znovu nainstalujte zásuvný modul pro přesměrování 301, zásuvný modul firewallu a zabezpečení a zásuvný modul pro ukládání do mezi paměti, pokud existují."
+#: includes/class-wpvivid-backup-uploader.php:649
+msgctxt "Uploader: Drop files here - or - Select Files"
+msgid "or"
+msgstr "nebo"
 
-#: admin/class-wpvivid-admin.php:267
-msgid "Calculating the size of files, folder and database timed out. If you continue to receive this error, please go to the plugin settings, uncheck 'Calculate the size of files, folder and database before backing up', save changes, then try again."
-msgstr "Vypršel časový limit výpočtu velikosti souborů, složky a databáze. Pokud se tato chyba zobrazuje i nadále, přejděte prosím do nastavení pluginu, zrušte zaškrtnutí políčka „Vypočítat velikost souborů, složky a databáze před zálohováním“, uložte změny a zkuste to znovu."
+#: admin/partials/wpvivid-backup-restore-page-display.php:581
+msgid "Delete the selected backups"
+msgstr "Smazat vybrané zálohy"
 
-#: admin/class-wpvivid-admin.php:266
-msgid "Warning: The alias already exists in storage list."
-msgstr "Upozornění: Alias ​​již v seznamu úložiště existuje."
+#: admin/partials/wpvivid-backup-restore-page-display.php:568
+#: includes/class-wpvivid-migrate.php:875
+msgid "Delete"
+msgstr "Smazat"
 
-#: admin/class-wpvivid-admin.php:265
-#: includes/customclass/class-wpvivid-ftpclass.php:302
-#: includes/customclass/class-wpvivid-ftpclass.php:310
-msgid "Warning: An alias for remote storage is required."
-msgstr "Upozornění: Je vyžadován alias pro vzdálené úložiště."
+#: admin/partials/wpvivid-backup-restore-page-display.php:565
+msgid "Storage"
+msgstr "Úložiště"
 
-#: admin/class-wpvivid-admin.php:264
-msgid "Error:"
-msgstr "Chyba:"
+#: admin/partials/wpvivid-backup-restore-page-display.php:564
+msgid "Backup"
+msgstr "Záloha"
 
-#: admin/class-wpvivid-admin.php:263
-msgid "Warning:"
-msgstr "Varování:"
+#: admin/partials/wpvivid-backup-restore-page-display.php:518
+#: admin/partials/wpvivid-backup-restore-page-display.php:567
+#: admin/partials/wpvivid-backup-restore-page-display.php:1282
+#: includes/class-wpvivid.php:5947
+msgid "Restore"
+msgstr "Obnovit"
 
-#: admin/class-wpvivid-admin.php:185
-msgid "Migrate WordPress"
-msgstr "Migrovat WordPress"
+#: admin/partials/wpvivid-backup-restore-page-display.php:500
+msgid "Backups"
+msgstr "Zálohy"
 
-#: admin/class-wpvivid-admin.php:184
-msgid "Restore Your Site from a Backup"
-msgstr "Obnovte svůj web ze zálohy"
+#: admin/partials/wpvivid-remote-storage-page-display.php:36
+#: admin/partials/wpvivid-remote-storage-page-display.php:337
+msgid "Actions"
+msgstr "Akce"
 
-#: admin/class-wpvivid-admin.php:183
-msgid "Create a Manual Backup"
-msgstr "Vytvořte ruční zálohu"
+#: admin/partials/wpvivid-remote-storage-page-display.php:6
+#: admin/partials/wpvivid-remote-storage-page-display.php:318
+msgid "Storages"
+msgstr "Úložiště"
 
-#: admin/class-wpvivid-admin.php:182
-msgid "WPvivid Backup Settings"
-msgstr "WPvivid nastavení zálohování"
+#: admin/partials/wpvivid-settings-page-display.php:696
+msgid "Advanced Settings"
+msgstr "Pokročilé nastavení"
 
-#: admin/class-wpvivid-admin.php:178
-#: includes/staging/class-wpvivid-staging.php:95
-msgid "How-to"
-msgstr "Jak"
+#: admin/partials/wpvivid-settings-page-display.php:690
+msgid "General Settings"
+msgstr "Základní nastavení"
 
-#: admin/class-wpvivid-admin.php:171
-msgid "Adjust <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Advanced Settings</a> for higher task success rate."
-msgstr "Upravte <a href=\"https://docs.wpvivid.com/wpvivid-backup-free-advanced-settings.html\" target=\"_blank\">Pokročilá nastavení</a> pro vyšší úspěšnost úlohy."
+#: admin/partials/wpvivid-remote-storage-page-display.php:14
+#: admin/partials/wpvivid-remote-storage-page-display.php:320
+msgid "Storage Edit"
+msgstr "Upravit úložiště"
 
-#: admin/class-wpvivid-admin.php:168
-#: includes/staging/class-wpvivid-staging.php:88
-msgid "Read <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">Troubleshooting page</a> for faster solutions."
-msgstr "Rychlejší řešení najdete na <a href=\"https://docs.wpvivid.com/troubleshooting-issues-wpvivid-backup-plugin.html\" target=\"_blank\">stránce Odstraňování problémů</a>."
+#: admin/partials/wpvivid-settings-page-display.php:460
+#: includes/class-wpvivid-export-import.php:1562
+#: includes/class-wpvivid-importer.php:194
+msgid "Import"
+msgstr "Importovat"
 
-#: admin/class-wpvivid-admin.php:163
-#: includes/staging/class-wpvivid-staging.php:83
-msgid "Troubleshooting"
-msgstr "Řešení potíží"
+#: admin/partials/wpvivid-settings-page-display.php:456
+msgid "Click 'Export' button to save WPvivid settings on your local computer."
+msgstr "Kliknutím na tlačítko 'Exportovat' uložíte nastavení WPvivid do místního počítače."
 
-#: admin/class-wpvivid-admin.php:156
-#: includes/staging/class-wpvivid-staging.php:76
-msgid "ChangeLog"
-msgstr "Přehled změn"
+#: admin/partials/wpvivid-settings-page-display.php:348
+msgid "Empty"
+msgstr "Prázdný"
 
-#: admin/class-wpvivid-admin.php:153
-#: includes/staging/class-wpvivid-staging.php:73
-msgid "Current Version: "
-msgstr "Současná verze:"
+#: admin/partials/wpvivid-settings-page-display.php:455
+msgid "Export"
+msgstr "Exportovat"
 
-#: admin/class-wpvivid-admin.php:136 admin/class-wpvivid-admin.php:400
-#: admin/class-wpvivid-admin.php:406 admin/class-wpvivid-admin.php:874
-msgid "Settings"
-msgstr "Nastavení"
+#: admin/partials/wpvivid-settings-page-display.php:344
+msgid "Temporary Files are created by WPvivid when restoring a website."
+msgstr "Dočasné soubory vytváří wpvivid při obnově webu."
 
-#: admin/class-wpvivid-admin.php:113 admin/class-wpvivid-admin.php:127
-#: admin/class-wpvivid-admin.php:856
-msgid "Backup & Restore"
-msgstr "Zálohovat a obnovit"
+#: admin/partials/wpvivid-settings-page-display.php:342
+msgid "Temporary Files"
+msgstr "Dočasné soubory"
 
-#. Author URI of the plugin
-msgid "https://wpvivid.com"
-msgstr "https://wpvivid.com"
+#: admin/partials/wpvivid-settings-page-display.php:335
+msgid "Junk"
+msgstr "Junk"
 
-#. Author of the plugin
-msgid "WPvivid Team"
-msgstr "WPvivid Team"
+#: admin/partials/wpvivid-settings-page-display.php:331
+msgid "Backup Cache"
+msgstr "Záložní mezipaměť"
 
-#. Description of the plugin
-msgid "Clone or copy WP sites then move or migrate them to new host (new domain), schedule backups, transfer backups to leading remote storage. All in one."
-msgstr "Naklonujte nebo zkopírujte weby WP a poté je přesuňte nebo migrujte na nového hostitele (novou doménu), naplánujte zálohování, přeneste zálohy na přední vzdálené úložiště. Vše v jednom."
+#: admin/partials/wpvivid-settings-page-display.php:325
+#: admin/partials/wpvivid-settings-page-display.php:336
+#: admin/partials/wpvivid-settings-page-display.php:343
+msgid "Path:"
+msgstr "Cesta:"
 
-#. Plugin Name of the plugin
-#: admin/partials/wpvivid-admin-display.php:49
-#: includes/class-wpvivid-export-import.php:94
-msgid "WPvivid Backup Plugin"
-msgstr "WPvivid zálohovací plugin"
+#: admin/partials/wpvivid-settings-page-display.php:324
+msgid "logs"
+msgstr "Protokoly"
+
+#: admin/partials/wpvivid-settings-page-display.php:319
+msgid "Calculate Sizes"
+msgstr "Vypočítat velikosti"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2201
+#: admin/partials/wpvivid-settings-page-display.php:317
+#: includes/class-wpvivid-migrate.php:1167 includes/class-wpvivid.php:4113
+msgid "Total Size:"
+msgstr "Celková velikost:"
+
+#: admin/partials/wpvivid-settings-page-display.php:313
+msgid "Web-server disk space in use by WPvivid"
+msgstr "Místo na disku webového serveru využívané WPvivid"
+
+#: admin/partials/wpvivid-settings-page-display.php:258
+msgid "Pro feature: Add another email address to get report"
+msgstr "Pro funkce: Přidejte další e-mailovou adresu, abyste mohli dostávat zprávy"
+
+#: admin/partials/wpvivid-settings-page-display.php:254
+msgid "Only send an email notification when a backup fails"
+msgstr "Odešlete e-mailové upozornění pouze tehdy, když se zálohování nezdaří"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:70
+#: includes/customclass/class-wpvivid-amazons3-plus.php:208
+msgid "Enter a unique alias: e.g. Amazon S3-001"
+msgstr "Zadejte jedinečný alias: např. Amazon S3-001"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:62
+#: includes/customclass/class-wpvivid-amazons3-plus.php:200
+msgid "Enter Your Amazon S3 Account"
+msgstr "Zadejte svůj účet Amazon S3"
+
+#: includes/customclass/class-wpvivid-one-drive.php:400
+msgid "Authenticate with Microsoft OneDrive"
+msgstr "Ověření pomocí Microsoft OneDrive"
+
+#: includes/customclass/class-wpvivid-one-drive.php:221
+#: includes/customclass/class-wpvivid-one-drive.php:434
+msgid "Enter a unique alias: e.g. OneDrive-001"
+msgstr "Zadejte jedinečný alias: např. OneDrive-001"
+
+#: includes/customclass/class-wpvivid-one-drive.php:214
+#: includes/customclass/class-wpvivid-one-drive.php:427
+msgid "Enter Your Microsoft OneDrive Information"
+msgstr "Zadejte informace o svém Microsoft OneDrive"
+
+#: includes/customclass/class-wpvivid-one-drive.php:208
+#: includes/customclass/class-wpvivid-one-drive.php:390
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Microsoft OneDrive authorization app (none of your backup data is sent to us)."
+msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> ohledně používání naší autorizační aplikace Microsoft OneDrive (žádné z vašich zálohovaných dat nám nejsou zasílány)."
+
+#: includes/customclass/class-wpvivid-one-drive.php:194
+msgid "Microsoft OneDrive"
+msgstr "Microsoft OneDrive"
+
+#: includes/customclass/class-wpvivid-one-drive.php:182
+msgid "You have authenticated the Microsoft OneDrive account as your remote storage."
+msgstr "Ověřili jste účet Microsoft OneDrive jako vzdálené úložiště."
+
+#: includes/customclass/class-wpvivid-google-drive.php:416
+msgid "Authenticate with Google Drive"
+msgstr "Ověření pomocí Google disku"
+
+#: includes/customclass/class-wpvivid-google-drive.php:237
+#: includes/customclass/class-wpvivid-google-drive.php:451
+msgid "Enter a unique alias: e.g. Google Drive-001"
+msgstr "Zadejte jedinečný alias: např. Disk Google-001"
+
+#: includes/customclass/class-wpvivid-google-drive.php:230
+#: includes/customclass/class-wpvivid-google-drive.php:444
+msgid "Enter Your Google Drive Information"
+msgstr "Zadejte informace o vašem Google disku"
+
+#: includes/customclass/class-wpvivid-google-drive.php:224
+#: includes/customclass/class-wpvivid-google-drive.php:406
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Google Drive authorization app (none of your backup data is sent to us)."
+msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> ohledně používání naší autorizační aplikace pro Disk Google (žádné z vašich zálohovaných dat nám nejsou zasílány)."
+
+#: includes/customclass/class-wpvivid-google-drive.php:198
+msgid "You have authenticated the Google Drive account as your remote storage."
+msgstr "Ověřili jste svůj Google účet jako své vzdálené úložiště."
+
+#: includes/customclass/class-wpvivid-google-drive.php:108
+msgid "Authentication failed, the format of the client_secrets.json file is incorrect. Please delete and re-install the plugin to recreate the file."
+msgstr "Ověření se nezdařilo, formát souboru client_secrets.json je nesprávný. Chcete-li soubor znovu vytvořit, smažte a znovu nainstalujte plugin."
+
+#: includes/customclass/class-wpvivid-google-drive.php:104
+msgid "Authentication failed, the client_secrets.json file is missing. Please make sure the client_secrets.json file is in wpvivid-backuprestore\\includes\\customclass directory."
+msgstr "Ověření se nezdařilo, soubor client_secrets.json chybí. Ujistěte se prosím, že soubor client_secrets.json je v adresáři wpvivid-backuprestore\\includes\\customclass."
+
+#: includes/customclass/class-wpvivid-s3compat.php:518
+msgid "Click the button to connect to DigitalOcean Spaces storage and add it to the storage list below."
+msgstr "Kliknutím na tlačítko se připojíte k úložišti DigitalOcean Spaces a přidáte jej do seznamu úložiště níže."
+
+#: includes/customclass/class-wpvivid-s3compat.php:491
+#: includes/customclass/class-wpvivid-s3compat.php:606
+msgid "Enter the DigitalOcean Endpoint for the storage"
+msgstr "Zadejte DigitalOcean Endpoint pro úložiště"
+
+#: includes/customclass/class-wpvivid-s3compat.php:486
+#: includes/customclass/class-wpvivid-s3compat.php:601
+msgid "region.digitaloceanspaces.com"
+msgstr "region.digitaloceanspaces.com"
+
+#: includes/customclass/class-wpvivid-s3compat.php:479
+#: includes/customclass/class-wpvivid-s3compat.php:594
+msgid "Customize the directory where you want to store backups within the Space."
+msgstr "Upravte adresář, do kterého chcete ukládat zálohy v rámci prostoru."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:118
+#: includes/customclass/class-wpvivid-amazons3-plus.php:256
+#: includes/customclass/class-wpvivid-s3compat.php:474
+#: includes/customclass/class-wpvivid-s3compat.php:589
+msgid "Custom Path"
+msgstr "Vlastní cesta"
+
+#: includes/customclass/class-wpvivid-s3compat.php:467
+#: includes/customclass/class-wpvivid-s3compat.php:582
+msgid "Enter an existed Space to create a custom backup storage directory."
+msgstr "Chcete-li vytvořit vlastní adresář úložiště záloh, zadejte existující prostor."
+
+#: includes/customclass/class-wpvivid-s3compat.php:462
+#: includes/customclass/class-wpvivid-s3compat.php:577
+msgid "Space Name(e.g. test)"
+msgstr "Název prostoru (např. test)"
+
+#: includes/customclass/class-wpvivid-s3compat.php:455
+#: includes/customclass/class-wpvivid-s3compat.php:570
+msgid "Enter your DigitalOcean Spaces secret key"
+msgstr "Zadejte svůj tajný klíč DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-s3compat.php:450
+#: includes/customclass/class-wpvivid-s3compat.php:565
+msgid "DigitalOcean Spaces secret key"
+msgstr "Tajný klíč DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-s3compat.php:443
+#: includes/customclass/class-wpvivid-s3compat.php:558
+msgid "Enter your DigitalOcean Spaces access key"
+msgstr "Zadejte svůj přístupový klíč DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-s3compat.php:438
+#: includes/customclass/class-wpvivid-s3compat.php:553
+msgid "DigitalOcean Spaces access key"
+msgstr "Přístupový klíč DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-s3compat.php:426
+#: includes/customclass/class-wpvivid-s3compat.php:541
+msgid "Enter a unique alias: e.g. DOS-001"
+msgstr "Zadejte jedinečný alias: např. DOS-001"
+
+#: includes/customclass/class-wpvivid-s3compat.php:418
+#: includes/customclass/class-wpvivid-s3compat.php:533
+msgid "Enter Your DigitalOcean Spaces Account"
+msgstr "Zadejte svůj účet DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-s3compat.php:409
+msgid "DigitalOcean Spaces"
+msgstr "DigitalOcean Spaces"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:158
+msgid "Click the button to connect to FTP server and add it to the storage list below."
+msgstr "Klepnutím na tlačítko se připojíte k serveru FTP a přidáte jej do seznamu úložiště níže."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:173
+#: includes/customclass/class-wpvivid-ftpclass.php:153
+#: includes/customclass/class-wpvivid-s3compat.php:513
+#: includes/customclass/class-wpvivid-sftpclass.php:143
+msgid "Test and Add"
+msgstr "Test a přidání"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:145
+#: includes/customclass/class-wpvivid-ftpclass.php:246
+msgid "Uncheck the option to use FTP active mode when transferring files. Make sure the FTP server you are configuring supports the active FTP mode."
+msgstr "Zrušte zaškrtnutí možnosti používat při přenosu souborů aktivní režim FTP. Ujistěte se, že FTP server, který konfigurujete, podporuje aktivní režim FTP."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:139
+#: includes/customclass/class-wpvivid-ftpclass.php:240
+msgid "Uncheck this to enable FTP active mode."
+msgstr "Zrušte zaškrtnutí pro aktivaci režimu FTP."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:117
+#: includes/customclass/class-wpvivid-ftpclass.php:232
+msgid "Enter an absolute path and a custom subdirectory (optional) for holding the backups of current website. For example, /home/username/customfolder"
+msgstr "Zadejte absolutní cestu a vlastní podadresář (volitelné) pro uložení záloh aktuálního webu. Například /home/username/customfolder"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:112
+#: includes/customclass/class-wpvivid-ftpclass.php:227
+msgid "Absolute path must exist(e.g. /home/username)"
+msgstr "Musí existovat absolutní cesta (např. /home/username)"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:93
+#: includes/customclass/class-wpvivid-ftpclass.php:208
+msgid "Enter your FTP server user name."
+msgstr "Zadejte uživatelské jméno vašeho FTP serveru."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:105
+#: includes/customclass/class-wpvivid-ftpclass.php:220
+msgid "Enter the FTP server password."
+msgstr "Zadejte heslo vašeho FTP serveru."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:81
+msgid "Pro feature: Change the FTP default port number"
+msgstr "Funkce Pro: Změňte výchozí číslo portu FTP"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:69
+#: includes/customclass/class-wpvivid-ftpclass.php:196
+msgid "Enter the FTP server."
+msgstr "Zadejte FTP server."
+
+#: includes/customclass/class-wpvivid-ftpclass.php:64
+#: includes/customclass/class-wpvivid-ftpclass.php:191
+msgid "FTP server (server's port 21)"
+msgstr "FTP server (port serveru 21)"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:52
+#: includes/customclass/class-wpvivid-ftpclass.php:179
+msgid "Enter an unique alias: e.g. FTP-001"
+msgstr "Zadejte jedinečný alias: např. FTP-001"
+
+#: includes/customclass/class-wpvivid-ftpclass.php:45
+#: includes/customclass/class-wpvivid-ftpclass.php:172
+msgid "Enter Your FTP Account"
+msgstr "Zadejte svůj FTP účet"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:302
+#: includes/customclass/class-wpvivid-dropbox.php:687
+#: includes/customclass/class-wpvivid-ftpclass.php:259
+#: includes/customclass/class-wpvivid-google-drive.php:468
+#: includes/customclass/class-wpvivid-one-drive.php:451
+#: includes/customclass/class-wpvivid-s3compat.php:619
+#: includes/customclass/class-wpvivid-sftpclass.php:249
+msgid "Click the button to save the changes."
+msgstr "Klepnutím na tlačítko uložíte změny."
+
+#: includes/customclass/class-wpvivid-dropbox.php:636
+msgid "Authenticate with Dropbox"
+msgstr "Ověření pomocí Dropboxu"
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:137
+#: includes/customclass/class-wpvivid-dropbox.php:503
+#: includes/customclass/class-wpvivid-ftpclass.php:131
+#: includes/customclass/class-wpvivid-google-drive.php:280
+#: includes/customclass/class-wpvivid-one-drive.php:264
+#: includes/customclass/class-wpvivid-s3compat.php:505
+#: includes/customclass/class-wpvivid-sftpclass.php:135
+msgid "Once checked, all this sites backups sent to a remote storage destination will be uploaded to this storage by default."
+msgstr "Po zaškrtnutí budou všechny zálohy těchto webů odeslané do vzdáleného úložiště ve výchozím nastavení nahrány do tohoto úložiště."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:131
+#: includes/customclass/class-wpvivid-dropbox.php:497
+#: includes/customclass/class-wpvivid-ftpclass.php:125
+#: includes/customclass/class-wpvivid-google-drive.php:274
+#: includes/customclass/class-wpvivid-one-drive.php:258
+#: includes/customclass/class-wpvivid-s3compat.php:499
+#: includes/customclass/class-wpvivid-sftpclass.php:129
+msgid "Set as the default remote storage."
+msgstr "Nastavit jako výchozí vzdálené úložiště."
+
+#: includes/customclass/class-wpvivid-dropbox.php:489
+#: includes/customclass/class-wpvivid-google-drive.php:266
+#: includes/customclass/class-wpvivid-one-drive.php:250
+msgid "Pro feature: Create a directory for storing the backups of the site"
+msgstr "Pro funkce: Vytvořte adresář pro ukládání záloh webu"
+
+#: includes/customclass/class-wpvivid-dropbox.php:477
+#: includes/customclass/class-wpvivid-google-drive.php:254
+#: includes/customclass/class-wpvivid-one-drive.php:238
+msgid "All backups will be uploaded to this directory."
+msgstr "Všechny zálohy budou nahrány do tohoto adresáře."
+
+#: includes/customclass/class-wpvivid-dropbox.php:460
+#: includes/customclass/class-wpvivid-dropbox.php:670
+msgid "Enter a unique alias: e.g. Dropbox-001"
+msgstr "Zadejte jedinečný alias: např. Dropbox-001"
+
+#: includes/customclass/class-wpvivid-dropbox.php:453
+#: includes/customclass/class-wpvivid-dropbox.php:629
+msgid "Enter Your Dropbox Information"
+msgstr "Zadejte informace o vaší schránce"
+
+#: includes/customclass/class-wpvivid-dropbox.php:447
+#: includes/customclass/class-wpvivid-dropbox.php:626
+msgid "Please read <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">this privacy policy</a> for use of our Dropbox authorization app (none of your backup data is sent to us)."
+msgstr "Přečtěte si <a target=\"_blank\" href=\"https://wpvivid.com/privacy-policy\" style=\"text-decoration: none;\">tyto zásady ochrany osobních údajů</a> pro použití naší autorizační aplikace Dropbox ( žádné z vašich zálohovaných dat nám nejsou zasílány)."
+
+#: includes/customclass/class-wpvivid-dropbox.php:433
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: includes/customclass/class-wpvivid-dropbox.php:422
+msgid "You have authenticated the Dropbox account as your remote storage."
+msgstr "Ověřili jste účet Dropbox jako své vzdálené úložiště."
+
+#: includes/class-wpvivid-backup.php:2341
+msgid "Backing up %s finished."
+msgstr "Zálohování %s dokončeno."
+
+#: includes/class-wpvivid-backup.php:2333
+msgid "Start backing up %s."
+msgstr "Začněte zálohovat %s."
+
+#: includes/class-wpvivid-backup.php:1160
+#: includes/class-wpvivid-backup.php:1177
+#: includes/class-wpvivid-function-realize.php:72
+msgid "The backup will be canceled after backing up the current chunk ends."
+msgstr "Záloha bude zrušena po ukončení zálohování aktuálního bloku."
+
+#: includes/customclass/class-wpvivid-amazons3-plus.php:75
+#: includes/customclass/class-wpvivid-amazons3-plus.php:213
+#: includes/customclass/class-wpvivid-dropbox.php:465
+#: includes/customclass/class-wpvivid-dropbox.php:675
+#: includes/customclass/class-wpvivid-ftpclass.php:57
+#: includes/customclass/class-wpvivid-ftpclass.php:184
+#: includes/customclass/class-wpvivid-google-drive.php:242
+#: includes/customclass/class-wpvivid-google-drive.php:456
+#: includes/customclass/class-wpvivid-one-drive.php:226
+#: includes/customclass/class-wpvivid-one-drive.php:439
+#: includes/customclass/class-wpvivid-s3compat.php:431
+#: includes/customclass/class-wpvivid-s3compat.php:546
+#: includes/customclass/class-wpvivid-sftpclass.php:61
+#: includes/customclass/class-wpvivid-sftpclass.php:176
+msgid "A name to help you identify the storage if you have multiple remote storage connected."
+msgstr "Název, který vám pomůže identifikovat úložiště, pokud máte připojeno více vzdálených úložišť."
+
+#: includes/class-wpvivid-backup.php:1141
+#: includes/class-wpvivid-backup.php:1154
+#: includes/class-wpvivid-export-import.php:1309
+msgid "running time: "
+msgstr "doba běhu:"
+
+#: includes/class-wpvivid-backup.php:1141
+#: includes/class-wpvivid-backup.php:1154
+#: includes/class-wpvivid-export-import.php:1309
+msgid "Progress: "
+msgstr "Průběh:"
+
+#: includes/class-wpvivid-backup.php:1106
+msgid "Ready to backup. Progress: 0%, running time: 0second."
+msgstr "Připraveno k zálohování. Průběh: 0 %, doba běhu: 0 sekund."
+
+#: includes/class-wpvivid-importer.php:1925
+#: includes/class-wpvivid-importer.php:1930
+#: includes/class-wpvivid-importer.php:2155
+#: includes/class-wpvivid-importer.php:2351
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr "Zdá se, že se nejedná o soubor WXR, chybějící/neplatné číslo verze WXR"
+
+#: includes/class-wpvivid-importer.php:1878
+msgid "Details are shown above. The importer will now try again with a different parser..."
+msgstr "Podrobnosti jsou zobrazeny výše. Importer se o to nyní pokusí znovu odlišnou metodou..."
+
+#: includes/class-wpvivid-importer.php:1877
+#: includes/class-wpvivid-importer.php:1913
+#: includes/class-wpvivid-importer.php:1921
+msgid "There was an error when reading this WXR file"
+msgstr "Došlo k chybě při čtení tohoto souboru WXR"
+
+#: includes/class-wpvivid-importer.php:1737
+msgid "Invalid file type"
+msgstr "Neplatný typ souboru"
+
+#: includes/class-wpvivid-importer.php:1724
+msgid "Fetching attachments is not enabled"
+msgstr "Načítání příloh není povoleno"
+
+#: includes/class-wpvivid-importer.php:1676
+#: includes/class-wpvivid-importer.php:1777
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr "Tento typ souboru není z bezpečnostních důvodů povolen."
+
+#: includes/class-wpvivid-importer.php:1669
+#: includes/class-wpvivid-importer.php:1782
+msgid "File not exist, file:"
+msgstr "Soubor neexistuje, soubor:"
+
+#: includes/class-wpvivid-importer.php:89
+msgid "Media Files Size"
+msgstr "Velikost mediálních souborů"
+
+#: includes/class-wpvivid-backup-uploader.php:648
+msgid "Drop files here"
+msgstr "Sem přetáhněte soubory"
+
+#: includes/class-wpvivid-backup-uploader.php:601
+msgid "Scan uploaded backup or received backup"
+msgstr "Skenujte nahranou zálohu nebo přijatou zálohu"
+
+#: includes/class-wpvivid-backup-uploader.php:598
+msgid "Tips: Click the button below to scan all uploaded or received backups in directory"
+msgstr "Tipy: Klepnutím na tlačítko níže prohledáte všechny nahrané nebo přijaté zálohy v adresáři"
+
+#: admin/partials/wpvivid-admin-display.php:63
+msgid "Warning: There is no default remote storage available for the scheduled backups, please set up it first."
+msgstr "Upozornění: Pro plánované zálohování není k dispozici žádné výchozí vzdálené úložiště, nejprve jej prosím nastavte."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2524
+msgid "Next Backup: "
+msgstr "Další záloha:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2522
+msgid "Server Time: "
+msgstr "Čas serveru:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2520
+msgid "Schedule Status: "
+msgstr "Stav plánu:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2518
+msgid "Backup Schedule"
+msgstr "Plán zálohování"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2499
+msgid "The settings are only for manual backup, which won't affect schedule settings."
+msgstr "Nastavení jsou pouze pro ruční zálohování, které neovlivní nastavení plánu."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2323
+msgid "This backup can only be deleted manually"
+msgstr "Tuto zálohu lze odstranit pouze ručně"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2318
+msgid "Backup Now"
+msgstr "Zálohovat nyní"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2305
+msgid "Send Backup to Remote Storage:"
+msgstr "Odeslat zálohu do vzdáleného úložiště:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2301
+msgid "Save Backups to Local"
+msgstr "Uložit zálohy na místní úložiště"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2272
+msgid "rename directory"
+msgstr "přejmenovat adresář"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2270
+msgid "Local Storage Directory:"
+msgstr "Adresář místního úložiště:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2265
+msgid "Back Up Manually"
+msgstr "Zálohovat ručně"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2212
+#: includes/class-wpvivid-migrate.php:360
+#: includes/class-wpvivid-migrate.php:1178
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2206
+#: includes/class-wpvivid-migrate.php:1172 includes/class-wpvivid.php:4118
+msgid "Network Connection:"
+msgstr "Siťové připojení:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2203
+#: includes/class-wpvivid-migrate.php:1169 includes/class-wpvivid.php:4115
+msgid "Speed:"
+msgstr "Rychlost:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2202
+#: includes/class-wpvivid-migrate.php:1168 includes/class-wpvivid.php:4114
+msgid "Uploaded:"
+msgstr "Nahráno:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2198
+msgid "File Size:"
+msgstr "Velikost souboru:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:2197
+msgid "Database Size:"
+msgstr "Velikost databáze:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1287
+msgid "The backup is stored on the remote storage, click on the button to download it to localhost."
+msgstr "Záloha je uložena na vzdáleném úložišti, kliknutím na tlačítko ji stáhnete na lokální úložiště."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1286
+msgid "Retrieve the backup to localhost"
+msgstr "Načtěte zálohu na lokální úložiště"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1284
+msgid "Rollback"
+msgstr "Vrátit zpět"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1283
+msgid "Terminate"
+msgstr "Vypovědět"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1279
+msgid "Tips:"
+msgstr "Tipy:"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1275
+msgid "Restore and keep the original domain (URL) unchanged"
+msgstr "Obnovte a ponechte původní doménu (URL) nezměněnou"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1272
+msgid "Restore and replace the original domain (URL) with %s (migration)"
+msgstr "Obnovte a nahraďte původní doménu (URL) doménou %s (migrace)"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1269
+msgid "Restore function will replace the current site's themes, plugins, uploads, database and/or other content directories with the existing equivalents in the selected backup."
+msgstr "Funkce obnovení nahradí aktuální témata, zásuvné moduly, nahrané soubory, databáze a/nebo jiné adresáře obsahu stávajícími ekvivalenty ve vybrané záloze."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1268
+msgid "Please do not close the page or switch to other pages when a restore task is running, as it could trigger some unexpected errors."
+msgstr "Během úlohy obnovy nezavírejte stránku ani nepřepínejte na jiné stránky, protože by to mohlo způsobit neočekávané chyby."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1267
+msgid "Restore backup from:"
+msgstr "Obnovit zálohu z:"
+
+#: admin/class-wpvivid-admin.php:270
+msgid "Step Three: Click 'Restore' button"
+msgstr "Krok 3: Klikněte na tlačítko 'Obnovit'"
+
+#: admin/class-wpvivid-admin.php:269
+msgid "Step Two: Choose an option to complete restore, if any"
+msgstr "Krok 2: Vyberte možnost pro dokončení obnovy, pokud existuje"
+
+#: admin/class-wpvivid-admin.php:268
+msgid "Step One: In the backup list, click the 'Restore' button on the backup you want to restore. This will bring up the restore tab"
+msgstr "Krok 1: V seznamu záloh klikněte na tlačítko 'Obnovit' u zálohy, kterou chcete obnovit. Tím se zobrazí karta obnovení"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1168
+#: admin/partials/wpvivid-backup-restore-page-display.php:2338
+msgid "This request might delete the backup being downloaded, are you sure you want to continue?"
+msgstr "Tento požadavek může odstranit stahovanou zálohu. Opravdu chcete pokračovat?"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1163
+#: includes/class-wpvivid-export-import.php:395
+msgid "Please select at least one item."
+msgstr "Vyberte alespoň jednu položku."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1124
+msgid "This request will delete the backup being downloaded, are you sure you want to continue?"
+msgstr "Tento požadavek smaže stahovanou zálohu. Opravdu chcete pokračovat?"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:1115
+msgid "This backup is locked, are you sure to remove it? This backup will be deleted permanently from your hosting (localhost) and remote storages."
+msgstr "Tato záloha je uzamčena, jste si jisti, že ji chcete odstranit? Tato záloha bude trvale odstraněna z vašeho hostingu (localhost) a vzdálených úložišť."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:485
+msgid "How to restore your website from a backup(scheduled, manual, uploaded and received backup)"
+msgstr "Jak obnovit svůj web ze zálohy (plánovaná, ruční, nahraná a přijatá záloha)"
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:479
+msgid "->If backups are stored in web server, the plugin will list all relevant files immediately."
+msgstr "-> Pokud jsou zálohy uloženy na webovém serveru, plugin okamžitě zobrazí seznam všech relevantních souborů."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:478
+msgid "->If backups are stored in remote storage, our plugin will retrieve the backup to your web server first. This may take a little time depending on the size of backup files. Please be patient. Then you can download them to your PC."
+msgstr "-> Pokud jsou zálohy uloženy ve vzdáleném úložišti, náš plugin nejprve načte zálohu na váš webový server. To může chvíli trvat v závislosti na velikosti záložních souborů. Prosím, buďte trpěliví. Poté si je můžete stáhnout do svého PC."
+
+#: admin/partials/wpvivid-backup-restore-page-display.php:476
+msgid "About backup download"
+msgstr "O stahování zálohy"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:35
+#: admin/partials/wpvivid-remote-storage-page-display.php:336
+msgid "Remote Storage Alias"
+msgstr "Alias ​​vzdáleného úložiště"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:34
+#: admin/partials/wpvivid-remote-storage-page-display.php:335
+msgid "Storage Provider"
+msgstr "Poskytovatel úložiště"
+
+#: admin/partials/wpvivid-remote-storage-page-display.php:26
+#: admin/partials/wpvivid-remote-storage-page-display.php:327
+msgid "Please choose one storage to save your backups (remote storage)"
+msgstr "Vyberte jedno úložiště pro ukládání záloh (vzdálené úložiště)"
+
+#: admin/partials/wpvivid-settings-page-display.php:674
+msgid "<strong>Retrying </strong>%s<strong> times when encountering a time-out error</strong>"
+msgstr "<strong>Opakování </strong>%s<strong>krát, když dojde k chybě vypršení časového limitu</strong>"
+
+#: admin/partials/wpvivid-settings-page-display.php:660
+msgid "e.g.  if you choose a chunk size of 2MB, a 8MB file will use 4 chunks. Decreasing this value will break the ISP's transmission limit, for example:512KB"
+msgstr "např. pokud zvolíte velikost bloku 2 MB, soubor o velikosti 8 MB použije 4 bloky. Snížením této hodnoty dojde k porušení limitu přenosu ISP, například: 512 kB"
+
+#: admin/partials/wpvivid-settings-page-display.php:657
+msgid "Chunk Size"
+msgstr "Velikost bloku"
+
+#: admin/partials/wpvivid-settings-page-display.php:655
+msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin in restore process. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
+msgstr "Upravte tuto hodnotu, chcete-li použít dočasný limit paměti PHP pro plugin zálohování WPvivid v procesu obnovy. Tuto hodnotu jsme standardně nastavili na 256M. Pokud narazíte na chybu s vyčerpáním paměti, zvyšte hodnotu. Poznámka: Někteří poskytovatelé webhostingu to nemusí podporovat."
+
+#: admin/partials/wpvivid-settings-page-display.php:652
+msgid "PHP Memory Limit for restoration"
+msgstr "Limit paměti PHP pro obnovení"
+
+#: admin/partials/wpvivid-settings-page-display.php:650
+msgid "Adjust this value to apply for a temporary PHP memory limit for WPvivid backup plugin to run a backup. We set this value to 256M by default. Increase the value if you encounter a memory exhausted error. Note: some web hosting providers may not support this."
+msgstr "Upravte tuto hodnotu, chcete-li použít dočasný limit paměti PHP pro záložní plugin WPvivid pro spuštění zálohy. Tuto hodnotu jsme standardně nastavili na 256M. Pokud narazíte na chybu s vyčerpáním paměti, zvyšte hodnotu. Poznámka: Někteří poskytovatelé webhostingu to nemusí podporovat."
+
+#: admin/partials/wpvivid-settings-page-display.php:647
+msgid "PHP Memory Limit for backup"
+msgstr "Limit paměti PHP pro zálohování"
+
+#: admin/partials/wpvivid-settings-page-display.php:645
+msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of restore down. If the progress of restore encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
+msgstr "Časový limit není časový limit PHP serveru. Po vyčerpání doby provádění náš plugin zastaví proces obnovy. Pokud proces obnovy narazí na časový limit, to znamená, že máte středně velký nebo velký web, zkuste hodnotu zvětšit."
+
+#: admin/partials/wpvivid-settings-page-display.php:642
+msgid "PHP script execution timeout for restore"
+msgstr "Časový limit spuštění skriptu PHP pro obnovení"
+
+#: admin/partials/wpvivid-settings-page-display.php:640
+msgid "The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger."
+msgstr "Časový limit není časový limit PHP serveru. Po vyčerpání doby provádění náš plugin zastaví proces zálohování. Pokud během zálohování dojde k vypršení časového limitu, to znamená, že máte středně velký nebo velký web, zkuste hodnotu zvětšit."
+
+#: admin/partials/wpvivid-settings-page-display.php:637
+msgid "PHP script execution timeout for backup"
+msgstr "Časový limit spuštění skriptu PHP pro zálohování"
+
+#: admin/partials/wpvivid-settings-page-display.php:635
+msgid "Using the option will ignore the file larger than the certain size in MB when backing up, '0' (zero) means unlimited."
+msgstr "Použití této možnosti bude při zálohování ignorovat soubor větší než určitá velikost v MB, '0' (nula) znamená neomezené."
+
+#: admin/partials/wpvivid-settings-page-display.php:632
+msgid "Exclude the files which are larger than"
+msgstr "Vyloučit soubory, které jsou větší než"
+
+#: admin/partials/wpvivid-settings-page-display.php:630
+msgid "Some web hosting providers limit large zip files (e.g. 200MB), and therefore splitting your backup into many parts is an ideal way to avoid hitting the limitation if you are running a big website.  Please try to adjust the value if you are encountering backup errors. If you use a value of 0 MB, any backup files won't be split."
+msgstr "Někteří poskytovatelé webhostingu omezují velké soubory zip (např. 200 MB), a proto je rozdělení zálohy na mnoho částí ideálním způsobem, jak se vyhnout omezení, pokud provozujete velký web. Pokud narazíte na chyby zálohování, zkuste hodnotu upravit. Pokud použijete hodnotu 0 MB, žádné záložní soubory nebudou rozděleny."
+
+#: admin/partials/wpvivid-settings-page-display.php:627
+msgid "Compress Files Every"
+msgstr "Komprimovat soubory každý"
+
+#: admin/partials/wpvivid-settings-page-display.php:618
+msgid "Compress and Archive"
+msgstr "Komprimovat a archivovat"
+
+#: admin/partials/wpvivid-settings-page-display.php:618
+msgid "It will cause a higher CPU usage and is recommended in a VPS or dedicated hosting environment."
+msgstr "Způsobí vyšší využití CPU a doporučuje se ve vyhrazeném hostitelském prostředí VPS."
+
+#: admin/partials/wpvivid-settings-page-display.php:614
+msgid "Only Archive without compressing"
+msgstr "Pouze archivovat bez komprimace"
+
+#: admin/partials/wpvivid-settings-page-display.php:614
+msgid "It will cause a lower CPU Usage and is recommended in a web hosting/ shared hosting environment."
+msgstr "Způsobí to nižší využití CPU a doporučuje se v prostředí webhostingu/sdíleného hostingu."
+
+#: admin/partials/wpvivid-settings-page-display.php:606
+msgid "It is recommended to choose PDO option if pdo_mysql extension is installed on your server, which lets you backup and restore your site faster."
+msgstr "Pokud je na vašem serveru nainstalováno rozšíření pdo_mysql, doporučujeme zvolit volbu PDO, která vám umožní rychleji zálohovat a obnovovat váš web."
+
+#: admin/partials/wpvivid-settings-page-display.php:600
+msgid "WPDB option has a better compatibility, but the speed of backup and restore is slower."
+msgstr "Možnost WPDB má lepší kompatibilitu, ale rychlost zálohování a obnovy je pomalejší."
+
+#: admin/partials/wpvivid-settings-page-display.php:595
+msgid "Database access method."
+msgstr "Metoda přístupu k databázi."
+
+#: admin/partials/wpvivid-settings-page-display.php:588
+msgid "Enabling this option can improve the backup success rate, but it will take more time for backup."
+msgstr "Povolení této možnosti může zlepšit úspěšnost zálohování, ale zálohování bude trvat déle."
+
+#: admin/partials/wpvivid-settings-page-display.php:581
+msgid "Special optimization for web hosting/shared hosting"
+msgstr "Speciální optimalizace pro webhosting / sdílený hosting"
+
+#: admin/partials/wpvivid-settings-page-display.php:585
+msgid "Enable optimization mode for web hosting/shared hosting"
+msgstr "Povolit režim optimalizace pro webhosting / sdílený hosting"
+
+#: admin/partials/wpvivid-settings-page-display.php:581
+msgid "Enable the option when backup failed."
+msgstr "Povolit možnost, když se zálohování nezdařilo."
+
+#: admin/partials/wpvivid-settings-page-display.php:461
+msgid "Importing the json file can help you set WPvivid's configuration on another wordpress site quickly."
+msgstr "Import souboru json vám může pomoci rychle nastavit konfiguraci WPvivid na jiném webu wordpress."
+
+#: admin/partials/wpvivid-settings-page-display.php:250
+msgid "Always send an email notification when a backup is complete"
+msgstr "Po dokončení zálohování vždy odešlete upozornění e-mailem"
+
+#: admin/partials/wpvivid-settings-page-display.php:245
+msgid "Test Email"
+msgstr "Testovací e-mail"
+
+#: admin/partials/wpvivid-settings-page-display.php:231
+msgid "Enable email report"
+msgstr "Povolit e-mailový přehled"
+
+#: admin/partials/wpvivid-settings-page-display.php:166
+msgid "The action is irreversible! It will remove all backups are out-of-date (including local web server and remote storage) if they exist."
+msgstr "Akce je nevratná! Odebere všechny zálohy, které jsou zastaralé (včetně místního webového serveru a vzdáleného úložiště), pokud existují."
+
+#: admin/partials/wpvivid-settings-page-display.php:165
+msgid "Remove"
+msgstr "Odstranit"
+
+#: admin/partials/wpvivid-settings-page-display.php:226
+msgid "In order to use this function, please install a <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text-decoration: none;\">WordPress SMTP plugin</a></strong> of your preference and configure your SMTP server first. This is because WordPress uses the PHP Mail function to send its emails by default, which is not supported by many hosts and can cause issues if it is not set properly."
+msgstr "Abyste mohli tuto funkci používat, nainstalujte si prosím <strong><a target=\"_blank\" href=\"https://wpvivid.com/8-best-smtp-plugins-for-wordpress.html\" style=\"text- dekorace: none;\">WordPress SMTP plugin</a></strong> podle vašich preferencí a nejprve nakonfigurujte svůj SMTP server. Je to proto, že WordPress ve výchozím nastavení používá k odesílání e-mailů funkci PHP Mail, která není podporována mnoha hostiteli a může způsobit problémy, pokud není správně nastavena."
+
+#: admin/partials/wpvivid-settings-page-display.php:153
+msgid "Remote Storage Directory:"
+msgstr "Adresář vzdáleného úložiště:"
+
+#: admin/partials/wpvivid-settings-page-display.php:152
+msgid "Web Server Directory:"
+msgstr "Adresář webového serveru:"
+
+#: admin/partials/wpvivid-settings-page-display.php:148
+msgid "Remove out-of-date backups"
+msgstr "Odstraňte neaktuální zálohy"
+
+#: admin/partials/wpvivid-settings-page-display.php:143
+msgid "Display domain(url) of current site in backup name. (e.g. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
+msgstr "Zobrazit doménu (url) aktuálního webu v názvu zálohy. (např. domain_wpvivid-5ceb938b6dca9_2019-05-27-07-36_backup_all.zip)"
+
+#: admin/partials/wpvivid-settings-page-display.php:138
+msgid "Local storage directory:"
+msgstr "Adresář místního úložiště:"
+
+#: admin/partials/wpvivid-settings-page-display.php:136
+msgid "Name your folder, this folder must be writable for creating backup files."
+msgstr "Pojmenujte svou složku, tato složka musí být zapisovatelná pro vytváření záložních souborů."

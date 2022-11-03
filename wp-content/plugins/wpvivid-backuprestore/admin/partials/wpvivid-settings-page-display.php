@@ -126,7 +126,7 @@ function wpvivid_general_settings()
         <div>
             <label>
                 <input type="checkbox" option="setting" name="uninstall_clear_folder" <?php esc_attr_e($uninstall_clear_folder); ?> />
-                <span><?php _e(sprintf('Delete the /%s folder and all backups in it when deleting WPvivid Backup plugin.', $general_setting['options']['wpvivid_local_setting']['path']), 'wpvivid-backuprestore'); ?></span>
+                <span><?php echo sprintf(__('Delete the /%s folder and all backups in it when deleting WPvivid Backup plugin.', 'wpvivid-backuprestore'), $general_setting['options']['wpvivid_local_setting']['path']); ?></span>
             </label>
         </div>
     </div>
@@ -184,7 +184,7 @@ function wpvivid_general_settings()
                 try {
                     var jsonarray = jQuery.parseJSON(data);
                     if (jsonarray.result === "success") {
-                        alert("Out of date backups have been removed.");
+                        alert("<?php esc_html_e('Out of date backups have been removed.', 'wpvivid-backuprestore'); ?>");
                         wpvivid_handle_backup_data(data);
                     }
                 }
@@ -298,15 +298,7 @@ function wpvivid_email_report()
 function wpvivid_clean_junk()
 {
     global $wpvivid_plugin;
-    //$junk_file=$wpvivid_plugin->_junk_files_info();
-    $junk_file['sum_size']=0;
-    $junk_file['log_dir_size']=0;
-    $junk_file['backup_dir_size'] =0;
-    $junk_file['log_path'] = $log_dir = $wpvivid_plugin->wpvivid_log->GetSaveLogFolder();
-    $dir = WPvivid_Setting::get_backupdir();
-    $junk_file['old_files_path'] = WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . WPVIVID_DEFAULT_ROLLBACK_DIR;
-    $dir = WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $dir;
-    $junk_file['junk_path'] = $dir;
+    $junk_file=$wpvivid_plugin->_junk_files_info_ex();
     ?>
     <div class="postbox schedule-tab-block" id="wpvivid_clean_junk">
         <div>
@@ -315,33 +307,30 @@ function wpvivid_clean_junk()
         <div class="setting-tab-block">
             <div class="setting-tab-block">
                 <span class="wpvivid-element-space-right"><?php _e('Total Size:', 'wpvivid-backuprestore'); ?></span>
-                <span id="wpvivid_junk_sum_size"><?php _e($junk_file['sum_size'], 'wpvivid-backuprestore'); ?></span>
+                <span class="wpvivid-size-calc wpvivid-element-space-right" id="wpvivid_junk_sum_size"><?php _e($junk_file['sum_size'], 'wpvivid-backuprestore'); ?></span>
+                <span class="wpvivid-element-space-right"><?php _e( 'Backup Size:', 'wpvivid-backuprestore' ); ?></span>
+                <span class="wpvivid-size-calc wpvivid-element-space-right" id="wpvivid_backup_size"><?php _e($junk_file['backup_size'], 'wpvivid-backuprestore'); ?></span>
                 <input class="button-secondary" id="wpvivid_calculate_size" style="margin-left:10px;" type="submit" name="Calculate-Sizes" value="<?php esc_attr_e( 'Calculate Sizes', 'wpvivid-backuprestore' ); ?>" />
             </div>
             <fieldset>
                 <label for="wpvivid_junk_log">
                     <input type="checkbox" id="wpvivid_junk_log" option="junk-files" name="log" value="junk-log" />
-                    <span class="wpvivid-element-space-right"><?php _e( 'logs', 'wpvivid-backuprestore' ); ?></span>
-                    <span style="margin-right: 2px;"><?php _e('Path:', 'wpvivid-backuprestore' ); ?></span><span id="wpvivid_junk_log_path"><?php _e($junk_file['log_path'], 'wpvivid-backuprestore'); ?></span>
+                    <span class="wpvivid-element-space-right"><?php _e( 'Logs Size:', 'wpvivid-backuprestore' ); ?></span>
+                    <span class="wpvivid-size-calc" id="wpvivid_log_size"><?php _e($junk_file['log_dir_size'], 'wpvivid-backuprestore'); ?></span>
                 </label>
             </fieldset>
             <fieldset>
                 <label for="wpvivid_junk_backup_cache">
                     <input type="checkbox" id="wpvivid_junk_backup_cache" option="junk-files" name="backup_cache" value="junk-backup-cache" />
-                    <span class="wpvivid-element-space-right"><?php _e( 'Backup Cache', 'wpvivid-backuprestore' ); ?></span>
-                </label>
-                <label for="wpvivid_junk_file">
-                    <input type="checkbox" id="wpvivid_junk_file" option="junk-files" name="junk_files" value="junk-files" />
-                    <span class="wpvivid-element-space-right"><?php _e( 'Junk', 'wpvivid-backuprestore' ); ?></span>
-                    <span style="margin-right: 2px;"><?php _e('Path:', 'wpvivid-backuprestore' ); ?></span><span id="wpvivid_junk_file_path"><?php _e($junk_file['junk_path'], 'wpvivid-backuprestore'); ?></span>
+                    <span class="wpvivid-element-space-right"><?php _e( 'Backup Cache Size:', 'wpvivid-backuprestore' ); ?></span>
+                    <span class="wpvivid-size-calc" id="wpvivid_backup_cache_size"><?php _e($junk_file['backup_cache_size'], 'wpvivid-backuprestore'); ?></span>
                 </label>
             </fieldset>
             <fieldset>
-                <label for="wpvivid_junk_temporary_file">
-                    <input type="checkbox" id="wpvivid_junk_temporary_file" option="junk-files" name="old_files" value="junk-temporary-files" />
-                    <span class="wpvivid-element-space-right"><?php _e( 'Temporary Files', 'wpvivid-backuprestore' ); ?></span>
-                    <span style="margin-right: 2px;"><?php _e('Path:', 'wpvivid-backuprestore'); ?></span><span id="wpvivid_restore_temp_file_path"><?php _e($junk_file['old_files_path'], 'wpvivid-backuprestore'); ?></span>
-                    <p><?php echo __('Temporary Files are created by WPvivid when restoring a website.', 'wpvivid-backuprestore'); ?></p>
+                <label for="wpvivid_junk_file">
+                    <input type="checkbox" id="wpvivid_junk_file" option="junk-files" name="junk_files" value="junk-files" />
+                    <span class="wpvivid-element-space-right"><?php _e( 'Junk Size:', 'wpvivid-backuprestore' ); ?></span>
+                    <span class="wpvivid-size-calc" id="wpvivid_junk_size"><?php _e($junk_file['junk_size'], 'wpvivid-backuprestore'); ?></span>
                 </label>
             </fieldset>
         </div>
@@ -367,7 +356,7 @@ function wpvivid_clean_junk()
             var current_size = jQuery('#wpvivid_junk_sum_size').html();
             jQuery('#wpvivid_calculate_size').css({'pointer-events': 'none', 'opacity': '0.4'});
             jQuery('#wpvivid_clean_junk_file').css({'pointer-events': 'none', 'opacity': '0.4'});
-            jQuery('#wpvivid_junk_sum_size').html("calculating...");
+            jQuery('.wpvivid-size-calc').html("calculating...");
             wpvivid_post_request(ajax_data, function(data){
                 jQuery('#wpvivid_calculate_size').css({'pointer-events': 'auto', 'opacity': '1'});
                 jQuery('#wpvivid_clean_junk_file').css({'pointer-events': 'auto', 'opacity': '1'});
@@ -375,9 +364,10 @@ function wpvivid_clean_junk()
                     var jsonarray = jQuery.parseJSON(data);
                     if (jsonarray.result === "success") {
                         jQuery('#wpvivid_junk_sum_size').html(jsonarray.data.sum_size);
-                        jQuery('#wpvivid_junk_log_path').html(jsonarray.data.log_path);
-                        jQuery('#wpvivid_junk_file_path').html(jsonarray.data.junk_path);
-                        jQuery('#wpvivid_restore_temp_file_path').html(jsonarray.data.old_files_path);
+                        jQuery('#wpvivid_log_size').html(jsonarray.data.log_dir_size);
+                        jQuery('#wpvivid_backup_cache_size').html(jsonarray.data.backup_cache_size);
+                        jQuery('#wpvivid_junk_size').html(jsonarray.data.junk_size);
+                        jQuery('#wpvivid_backup_size').html(jsonarray.data.backup_size);
                     }
                 }
                 catch(err){
@@ -399,7 +389,7 @@ function wpvivid_clean_junk()
          * Clean junk files created during backups and restorations off your web server disk.
          */
         function wpvivid_clean_junk_files(){
-            var descript = 'The selected item(s) will be permanently deleted. Are you sure you want to continue?';
+            var descript = '<?php esc_html_e('The selected item(s) will be permanently deleted. Are you sure you want to continue?', 'wpvivid-backuprestore'); ?>';
             var ret = confirm(descript);
             if(ret === true){
                 var option_data = wpvivid_ajax_data_transfer('junk-files');
@@ -418,9 +408,10 @@ function wpvivid_clean_junk()
                         alert(jsonarray.msg);
                         if (jsonarray.result === "success") {
                             jQuery('#wpvivid_junk_sum_size').html(jsonarray.data.sum_size);
-                            jQuery('#wpvivid_junk_log_path').html(jsonarray.data.log_path);
-                            jQuery('#wpvivid_junk_file_path').html(jsonarray.data.junk_path);
-                            jQuery('#wpvivid_restore_temp_file_path').html(jsonarray.data.old_files_path);
+                            jQuery('#wpvivid_log_size').html(jsonarray.data.log_dir_size);
+                            jQuery('#wpvivid_backup_cache_size').html(jsonarray.data.backup_cache_size);
+                            jQuery('#wpvivid_junk_size').html(jsonarray.data.junk_size);
+                            jQuery('#wpvivid_backup_size').html(jsonarray.data.backup_size);
                             jQuery('#wpvivid_loglist').html("");
                             jQuery('#wpvivid_loglist').append(jsonarray.html);
                             wpvivid_log_count = jsonarray.log_count;
@@ -636,12 +627,12 @@ function wpvivid_advanced_settings()
             </div>
             <div><strong><?php _e('PHP script execution timeout for backup', 'wpvivid-backuprestore'); ?></strong></div>
             <div class="setting-tab-block">
-                <input type="text" placeholder="900" option="setting" name="max_execution_time" id="wpvivid_option_timeout" class="all-options" value="<?php esc_attr_e($general_setting['options']['wpvivid_common_setting']['max_execution_time'], 'wpvivid-backuprestore'); ?>" onkeyup="value=value.replace(/\D/g,'')" />Seconds
+                <input type="text" placeholder="900" option="setting" name="max_execution_time" id="wpvivid_option_timeout" class="all-options" value="<?php esc_attr_e($general_setting['options']['wpvivid_common_setting']['max_execution_time'], 'wpvivid-backuprestore'); ?>" onkeyup="value=value.replace(/\D/g,'')" /><?php esc_html_e('Seconds', 'wpvivid-backuprestore'); ?>
                 <div><p><?php _e( 'The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger.', 'wpvivid-backuprestore' ); ?></p></div>
             </div>
             <div><strong><?php _e('PHP script execution timeout for restore', 'wpvivid-backuprestore'); ?></strong></div>
             <div class="setting-tab-block">
-                <input type="text" placeholder="1800" option="setting" name="restore_max_execution_time" class="all-options" value="<?php esc_attr_e($restore_max_execution_time); ?>" onkeyup="value=value.replace(/\D/g,'')" />Seconds
+                <input type="text" placeholder="1800" option="setting" name="restore_max_execution_time" class="all-options" value="<?php esc_attr_e($restore_max_execution_time); ?>" onkeyup="value=value.replace(/\D/g,'')" /><?php esc_html_e('Seconds', 'wpvivid-backuprestore'); ?>
                 <div><p><?php _e( 'The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of restore down. If the progress of restore encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger.', 'wpvivid-backuprestore' ); ?></p></div>
             </div>
             <div><strong><?php _e('PHP Memory Limit for backup', 'wpvivid-backuprestore'); ?></strong></div>

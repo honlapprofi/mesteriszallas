@@ -387,7 +387,7 @@ class WPvivid_FTPClass extends WPvivid_Remote{
 
         if($this->options['path']=='/')
         {
-            $ret['error']="Warning: Root directory is forbidden to set to '/'.";
+            $ret['error']= __('Warning: Root directory is forbidden to set to \'/\'.', 'wpvivid-backuprestore');
             return $ret;
         }
 

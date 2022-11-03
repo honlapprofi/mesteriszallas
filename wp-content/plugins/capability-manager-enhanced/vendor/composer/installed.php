@@ -5,7 +5,7 @@
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'cb911d695437725f74a5126576c20fd3476047d7',
+        'reference' => '18fac168ff8577f0855de6034a2bf8874fc1360c',
         'name' => 'publishpress/capability-manager-enhanced',
         'dev' => false,
     ),
@@ -34,7 +34,7 @@
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'cb911d695437725f74a5126576c20fd3476047d7',
+            'reference' => '18fac168ff8577f0855de6034a2bf8874fc1360c',
             'dev_requirement' => false,
         ),
         'publishpress/publishpress-instance-protection' => array(
@@ -47,12 +47,12 @@
             'dev_requirement' => false,
         ),
         'publishpress/wordpress-banners' => array(
-            'pretty_version' => 'v1.3.0',
-            'version' => '1.3.0.0',
+            'pretty_version' => 'v1.3.1',
+            'version' => '1.3.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../publishpress/wordpress-banners',
             'aliases' => array(),
-            'reference' => '08e20b98320367bdbc59105095c72e7ccbf968f1',
+            'reference' => 'bcb5f9f00973d53e2db027f9a05c059f18743fae',
             'dev_requirement' => false,
         ),
         'publishpress/wordpress-reviews' => array(

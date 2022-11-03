@@ -12,7 +12,7 @@ use MPHB\UserActions\BookingCancellationAction;
 class BookingCancellationShortcode extends AbstractShortcode {
     protected $name = 'mphb_booking_cancellation';
 
-    public function render( $atts, $content = '', $shortcodeName ) {
+    public function render( $atts, $content, $shortcodeName ) {
         $defaultAtts = array(
             'class' => ''
         );
@@ -146,6 +146,7 @@ class BookingCancellationShortcode extends AbstractShortcode {
         $step = BookingCancellationAction::STEP_CONFIRMED_BY_USER;
 
         $cancellationLink = MPHB()->userActions()->getBookingCancellationAction()->generateLink( $booking, $step );
+        $cancellationLink = apply_filters( 'wpml_permalink', $cancellationLink, apply_filters( 'wpml_current_language', NULL ) );
 
         ob_start();
 

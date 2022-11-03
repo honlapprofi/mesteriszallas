@@ -73,11 +73,11 @@ class Ai1wm_Backups_Controller {
 			Ai1wm_Backups::delete_file( $archive );
 			Ai1wm_Backups::delete_label( $archive );
 		} catch ( Ai1wm_Backups_Exception $e ) {
-			echo json_encode( array( 'errors' => array( $e->getMessage() ) ) );
+			ai1wm_json_response( array( 'errors' => array( $e->getMessage() ) ) );
 			exit;
 		}
 
-		echo json_encode( array( 'errors' => array() ) );
+		ai1wm_json_response( array( 'errors' => array() ) );
 		exit;
 	}
 
@@ -117,11 +117,11 @@ class Ai1wm_Backups_Controller {
 		try {
 			Ai1wm_Backups::set_label( $archive, $label );
 		} catch ( Ai1wm_Backups_Exception $e ) {
-			echo json_encode( array( 'errors' => array( $e->getMessage() ) ) );
+			ai1wm_json_response( array( 'errors' => array( $e->getMessage() ) ) );
 			exit;
 		}
 
-		echo json_encode( array( 'errors' => array() ) );
+		ai1wm_json_response( array( 'errors' => array() ) );
 		exit;
 	}
 
@@ -149,8 +149,9 @@ class Ai1wm_Backups_Controller {
 		Ai1wm_Template::render(
 			'backups/backups-list',
 			array(
-				'backups' => Ai1wm_Backups::get_files(),
-				'labels'  => Ai1wm_Backups::get_labels(),
+				'backups'      => Ai1wm_Backups::get_files(),
+				'labels'       => Ai1wm_Backups::get_labels(),
+				'downloadable' => Ai1wm_Backups::are_downloadable(),
 			)
 		);
 		exit;
@@ -179,9 +180,9 @@ class Ai1wm_Backups_Controller {
 
 		try {
 			$archive = new Ai1wm_Extractor( ai1wm_backup_path( $params ) );
-			echo json_encode( $archive->list_files() );
+			ai1wm_json_response( $archive->list_files() );
 		} catch ( Exception $e ) {
-			echo json_encode(
+			ai1wm_json_response(
 				array(
 					'error' => __( 'Unable to list backup content', AI1WM_PLUGIN_NAME ),
 				)

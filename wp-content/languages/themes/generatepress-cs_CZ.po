@@ -2,24 +2,115 @@
 # This file is distributed under the same license as the Themes - GeneratePress package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-26 14:11:20+0000\n"
+"PO-Revision-Date: 2022-07-12 08:25:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: cs_CZ\n"
 "Project-Id-Version: Themes - GeneratePress\n"
 
 #. Description of the theme
+#, gp-priority: high
 msgid "GeneratePress is a lightweight WordPress theme built with a focus on speed and usability. Performance is important to us, which is why a fresh GeneratePress install adds less than 10kb (gzipped) to your page size. We take full advantage of the block editor (Gutenberg), which gives you more control over creating your content. If you use page builders, GeneratePress is the right theme for you. It is completely compatible with all major page builders, including Beaver Builder and Elementor. Thanks to our emphasis on WordPress coding standards, we can boast full compatibility with all well-coded plugins, including WooCommerce. GeneratePress is fully responsive, uses valid HTML/CSS, and is translated into over 25 languages by our amazing community of users. A few of our many features include 60+ color controls, powerful dynamic typography, 5 navigation locations, 5 sidebar layouts, dropdown menus (click or hover), and 9 widget areas. Learn more and check out our powerful premium version at https://generatepress.com"
 msgstr "GeneratePress je lehká WordPress šablona postavená se zaměřením na rychlost a použitelnost. Výkonnost je pro nás důležitý, a proto nová instalace GeneratePress přidá na velikost stránky méně než 15kb (gzipped). Využíváme úplně nového editoru bloků (Gutenberg), který vám dává větší kontrolu nad tvorbou obsahu. Pokud používáte page builder, GeneratePress je pro vás ta správná šablona. Je plně kompatibilní se všemi hlavními page buildery, včetně Beaver Builder a Elementor. Díky našemu důrazu na standardy kódování WordPress se můžeme pochlubit plnou kompatibilitou se všemi dobře zakódovanými pluginy, včetně WooCommerce. GeneratePress je plně vnímavý, používá platný kód HTML / CSS a překládá se do více než 25 jazyků naší úžasné komunity uživatelů. Mezi naše četné funkce patří integrace mikrodat, 9 oblastí widgetů, 5 navigačních umístění, 5 rozvržení postranních panelů, rozbalovací nabídky (kliknutí nebo podržení) a přednastavení navigačních barev. Přečtěte si další informace a podívejte se na naši výkonnou prémiovou verzi na adrese https://generatepress.com"
 
 #. Theme Name of the theme
 #: inc/class-dashboard.php:59 inc/class-dashboard.php:60 inc/dashboard.php:20
 #: inc/structure/footer.php:84
+#, gp-priority: high
 msgid "GeneratePress"
 msgstr "GeneratePress"
+
+#: inc/class-dashboard.php:123
+msgid "Dashboard"
+msgstr "Nástěnka"
+
+#: inc/class-html-attributes.php:168 inc/class-html-attributes.php:254
+msgid "Site"
+msgstr "Web"
+
+#: inc/customizer.php:401
+msgid "Optional"
+msgstr "Volitelné"
+
+#: inc/customizer.php:400
+msgid "Fallback"
+msgstr "Ustoupit"
+
+#: inc/customizer.php:399
+msgid "Swap"
+msgstr "Vyměnit"
+
+#: inc/customizer.php:398
+msgid "Block"
+msgstr "Blok"
+
+#: inc/customizer.php:397
+msgid "Auto"
+msgstr "Automaticky"
+
+#: inc/customizer.php:1462
+msgid "Never"
+msgstr "Nikdy"
+
+#: inc/customizer.php:1459
+msgid "Always"
+msgstr "Vždy"
+
+#: inc/customizer/fields/body.php:119 inc/customizer/fields/content.php:121
+#: inc/customizer/fields/footer-bar.php:123
+#: inc/customizer/fields/footer-widgets.php:123
+#: inc/customizer/fields/header.php:119
+#: inc/customizer/fields/sidebar-widgets.php:123
+#: inc/customizer/fields/top-bar.php:124
+msgid "Link Hover"
+msgstr "Odkaz při přejetí myší"
+
+#: inc/customizer.php:1460
+msgid "On hover"
+msgstr "Při přejetí myší"
+
+#: inc/customizer.php:486
+msgid "Configure"
+msgstr "Nastavení"
+
+#: inc/customizer/fields/content.php:344
+msgid "Heading 6 (H6) Color"
+msgstr "Nadpis 6 (H6) barva"
+
+#: inc/customizer/fields/content.php:339
+msgid "Heading 5 (H5) Color"
+msgstr "Nadpis 5 (H5) barva"
+
+#: inc/customizer/fields/content.php:334
+msgid "Heading 4 (H4) Color"
+msgstr "Nadpis 4 (H4) barva"
+
+#: inc/customizer/fields/content.php:329
+msgid "Heading 3 (H3) Color"
+msgstr "Nadpis 3 (H3) barva"
+
+#: inc/customizer/fields/content.php:324
+msgid "Heading 2 (H2) Color"
+msgstr "Nadpis 2 (H2) barva"
+
+#: inc/customizer/fields/content.php:319
+msgid "Heading 1 (H1) Color"
+msgstr "Nadpis 1 (H1) barva"
+
+#: inc/customizer/fields/header.php:168
+msgid "Tagline"
+msgstr "Popis webu"
+
+#: inc/customizer/fields/header.php:145 assets/dist/customizer.js:1
+msgid "Site Title"
+msgstr "Název webu"
+
+#: inc/customizer/fields/forms.php:184
+msgid "Border"
+msgstr "Okraj"
 
 #: inc/meta-box.php:176
 msgid "Choose your content container type."
@@ -73,11 +164,11 @@ msgctxt "GeneratePress"
 msgid "Built with"
 msgstr "Postaveno s"
 
-#: inc/block-editor.php:153
+#: inc/block-editor.php:180
 msgid "Disable Content Title"
 msgstr "Zakázat název obsahu"
 
-#: inc/block-editor.php:154
+#: inc/block-editor.php:181
 msgid "Show Content Title"
 msgstr "Zobrazit název obsahu"
 
@@ -988,13 +1079,16 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Jejda! Tuto stránku nelze nalézt."
 
 #. Author of the theme
+#, gp-priority: low
 msgid "Tom Usborne"
 msgstr "Tom Usborne"
 
 #. Author URI of the theme
+#, gp-priority: low
 msgid "https://tomusborne.com"
 msgstr "https://tomusborne.com"
 
 #. Theme URI of the theme
+#, gp-priority: low
 msgid "https://generatepress.com"
 msgstr "https://generatepress.com"

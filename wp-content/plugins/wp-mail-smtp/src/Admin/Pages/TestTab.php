@@ -575,8 +575,11 @@ Co-Founder, WP Mail SMTP';
 
 		$mailer_text .= '<strong>Mailer:</strong> ' . $this->debug['mailer'] . '<br>';
 		$mailer_text .= '<strong>Constants:</strong> ' . ( $options->is_const_enabled() ? 'Yes' : 'No' ) . '<br>';
+
 		if ( $conflicts->is_detected() ) {
-			$mailer_text .= '<strong>Conflicts:</strong> ' . esc_html( $conflicts->get_conflict_name() ) . '<br>';
+			$conflict_plugin_names = implode( ', ', $conflicts->get_all_conflict_names() );
+
+			$mailer_text .= '<strong>Conflicts:</strong> ' . esc_html( $conflict_plugin_names ) . '<br>';
 		}
 
 		// Display different debug info based on the mailer.
@@ -759,7 +762,8 @@ Co-Founder, WP Mail SMTP';
 								],
 							]
 						),
-						'https://wpmailsmtp.com/docs/how-to-set-up-the-other-smtp-mailer-in-wp-mail-smtp/#auth-type'
+						// phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+						esc_url( wp_mail_smtp()->get_utm_url( 'https://wpmailsmtp.com/docs/how-to-set-up-the-other-smtp-mailer-in-wp-mail-smtp/#auth-type', [ 'medium' => 'email-test', 'content' => 'Other SMTP auth debug - our documentation' ] ) )
 					),
 				],
 			],
@@ -954,7 +958,8 @@ Co-Founder, WP Mail SMTP';
 								],
 							]
 						),
-						'https://wpmailsmtp.com/docs/how-to-set-up-the-mailgun-mailer-in-wp-mail-smtp/'
+						// phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+						esc_url( wp_mail_smtp()->get_utm_url( 'https://wpmailsmtp.com/docs/how-to-set-up-the-mailgun-mailer-in-wp-mail-smtp/', [ 'medium' => 'email-test', 'content' => 'Mailgun with WP Mail SMTP' ] ) )
 					),
 					esc_html__( 'Complete the steps in section "2. Verify Your Domain".', 'wp-mail-smtp' ),
 				],
@@ -1145,7 +1150,8 @@ Co-Founder, WP Mail SMTP';
 								],
 							]
 						),
-						'https://wpmailsmtp.com/docs/how-to-set-up-the-gmail-mailer-in-wp-mail-smtp/'
+						// phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+						esc_url( wp_mail_smtp()->get_utm_url( 'https://wpmailsmtp.com/docs/how-to-set-up-the-gmail-mailer-in-wp-mail-smtp/', [ 'medium' => 'email-test', 'content' => 'Gmail tutorial' ] ) )
 					),
 				],
 			],
@@ -1404,7 +1410,8 @@ Co-Founder, WP Mail SMTP';
 								),
 							)
 						),
-						'https://wpmailsmtp.com/account/support/'
+						// phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+						esc_url( wp_mail_smtp()->get_utm_url( 'https://wpmailsmtp.com/account/support/', [ 'medium' => 'email-test', 'content' => 'submit a support ticket' ] ) )
 					);
 					?>
 				</p>

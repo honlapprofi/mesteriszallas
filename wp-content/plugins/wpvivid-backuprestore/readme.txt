@@ -2,20 +2,22 @@
 Contributors: wpvivid
 Tags: move, clone, migrate, staging, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
-Tested up to: 6.0
+Tested up to: 6.0.3
 Requires PHP: 5.3
-Stable tag: 0.9.73
+Stable tag: 0.9.79
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Migrate, staging, backup WP.
+Migrate, staging, backup WP and database snapshots.
 
 == Description ==
-WPvivid Backup Plugin offers backup, migration, and staging as basic features, and is integrating more and more elegant features, such as unused images cleaner etc.
+WPvivid Backup Plugin offers backup, migration, and staging as basic features, and is integrating more and more elegant features, such as unused images cleaner, database snapshots etc.
 
 Create a staging site on a subdirectory to safely test WordPress, plugins, themes and website changes.
 
 Clone and migrate a copy of WP site to a new host (a new domain), schedule backups, send backups to leading remote storage, clean unused images before backup and migration. All in one backup & migration plugin.
+
+Create a snapshot for a WordPress database quickly before testing database related changes.
 
 == WPvivid Backup for MainWP ==
 [WPvivid Backup for MainWP](https://wpvivid.com/wpvivid-backup-for-mainwp) is now available to download.
@@ -86,6 +88,7 @@ The pro version also supports Wasabi, pCloud, Backblaze and more are coming soon
 * Create A Staging Site
 * Upload Backups to Restore or Migrate
 * Unused Images Cleaner
+* Database Snapshots
 * Schedule Automated Backups
 * Restore A Backup with One Click
 * Create A Manual Backup
@@ -170,7 +173,7 @@ Yes, absolutely. With no limits, no strings attached.
 = Will there be updates, will they be free and how can I update to the latest version? =
 Yes, we are dedicated to creating a secure and robust solution and will regularly update the plugin. These will be available totally free and can be easily applied through your WP admin area once they are available.
 = Do you provide support for the free version? Where? =
-Yes, absolutely. Whenever you need it, help can be found from the plugin [support forum](https://wordpress.org/support/plugin/wpvivid-backuprestore/) on WordPress.org, by [email](https://wpvivid.com/contact-us), on [Twitter](https://twitter.com/WPvividcom).
+Yes, absolutely. Whenever you need it, help can be found from the plugin [support forum](https://wordpress.org/support/plugin/wpvivid-backuprestore/) on WordPress.org, by [email](https://wpvivid.com/contact-us).
 = Will WPvivid Backup Plugin work on my host? =
 If your website is running on WordPress then yes it will.
 
@@ -179,7 +182,7 @@ The plugin has been extensively tested on the shared and dedicated hosting plans
 Yes, we do. Here are the guides for [migrating your site to a new host](https://wpvivid.com/get-started-transfer-site.html), [creating a manual backup](https://wpvivid.com/get-started-create-a-manual-backup.html), [restoring your site from a backup](https://wpvivid.com/get-started-restore-site.html), and more on [our docs page](https://wpvivid.com/documents).
 
 == Contact us ==
-Feel free to let us know how we can help using the [support forum](https://wordpress.org/support/plugin/wpvivid-backuprestore) for WPvivid Backup Plugin on WordPress.org or our [contact form](https://wpvivid.com/contact-us). You can also reach us with a direct message on [Twitter](https://twitter.com/WPvividcom).
+Feel free to let us know how we can help using the [support forum](https://wordpress.org/support/plugin/wpvivid-backuprestore) for WPvivid Backup Plugin on WordPress.org or our [contact form](https://wpvivid.com/contact-us).
 
 == Languages and Translators ==
 Thank you so much for translating WPvivid Backup Plugin to your languages!
@@ -194,8 +197,39 @@ Thank you so much for translating WPvivid Backup Plugin to your languages!
 * [Robi Erwin Setiawan](https://www.linkedin.com/in/robi-erwin-setiawan/) (Indonesian)
 * [Lois](https://profiles.wordpress.org/naoko01/) (Hungarian)
 * [Khoi](https://profiles.wordpress.org/khoipro/) (Vietnamese)
-* [Jairo Ochoa](https://profiles.wordpress.org/jairoochoa/) and [Carlos Macías](https://profiles.wordpress.org/cmacias/)  (Galician)
+* [Jairo Ochoa](https://profiles.wordpress.org/jairoochoa/) and [Carlos Macías](https://profiles.wordpress.org/cmacias/)  (Galician & Spanish (Spain))
+* [Yordan Soares](https://profiles.wordpress.org/yordansoares/) (Spanish(all locales))
+* [Chun-Chih Cheng](https://www.facebook.com/groups/wordpresstwhant) (Chinese (Taiwan))
 == Changelog ==
+= 0.9.79 =
+- Fixed: All target pages except for home page showed 404 error in some cases after migration.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
+= 0.9.78 =
+- Added an option to create quick database snapshots.
+- Added a check for siteurl and home in a restore process.
+- Fixed: Some used images were falsely scanned as unused.
+- Fixed some bugs in the plugin code and optimized the plugin code.
+= 0.9.77 =
+- Updated: Transferred files will be deleted automatically when auto migration fails.
+- Fixed a vulnerability in the plugin code.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
+= 0.9.76 =
+- Added a check to the integrity of uploaded backups.
+- Fixed a vulnerability in the plugin code.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
+= 0.9.75 =
+- Fixed: Page styling got lost after importing the page in some cases.
+- Fixed: Some used images were falsely scanned as unused.
+- Fixed some UI bugs.
+- Fixed some bugs in the plugin code and optimized the plugin code.
+= 0.9.74 =
+- Fixed some i18n issues in the plugin code.
+- Updated: Last backup time will be updated once the backup schedule is triggered.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
 = 0.9.73 =
 - Fixed some bugs in the plugin code and UI.
 - Optimized the plugin code.

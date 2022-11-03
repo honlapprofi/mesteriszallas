@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - GeneratePress package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-20 13:42:50+0000\n"
+"PO-Revision-Date: 2022-07-11 08:16:25+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,7 +160,7 @@ msgstr "Reduziere die Anzahl der CSS-Dateianfragen und verwende eine Light-Versi
 
 #: inc/customizer.php:1436
 msgid "Font"
-msgstr "Schriftart"
+msgstr "Schrift"
 
 #: inc/typography.php:659 assets/dist/customizer.js:1
 msgid "Heading 3 (H3)"
@@ -868,7 +868,7 @@ msgstr "Standard-Schriftarten"
 #: inc/customizer/controls/class-deprecated.php:72
 #: inc/customizer/controls/class-typography-control.php:76
 msgid "Font family"
-msgstr "Schriftart"
+msgstr "Schriftfamilie"
 
 #: inc/customizer.php:636 inc/customizer/fields/header.php:16
 #: inc/general.php:139 assets/dist/customizer.js:1

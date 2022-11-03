@@ -1256,7 +1256,7 @@ class WPvivid_Staging_UI_Display_Free
                                         This can cause inappropriate staging site url issues. Please change the site url and home url in the Options table of the database to the actual 
                                         url of your website. For example, if the site url and home url of the database is http://test.com, but the actual url of your website is https://test.com. 
                                         You’ll need to change the http to https.
-                                                                  </p></div>');
+                                                                  </p></div>', 'wpvivid-backuprestore');
         }
     }
 
@@ -1277,7 +1277,7 @@ class WPvivid_Staging_UI_Display_Free
             ?>
             <div class="notice notice-warning inline is-dismissible">
                 <p>
-                    <strong>Warning:</strong> We detected that the login url of your live site is not the default '/wp-admin'. <a href="https://docs.wpvivid.com/wpvivid-staging-site-login-issue.html" target="_blank">Learn more</a>
+                    <strong>Warning:</strong> We detected that the login url of your live site is not the default '/wp-login.php'. <a href="https://docs.wpvivid.com/wpvivid-staging-site-login-issue.html" target="_blank">Learn more</a>
                 </p>
             </div>
             <?php
@@ -1298,7 +1298,7 @@ class WPvivid_Staging_UI_Display_Free
         ?>
         <div class="wrap" style="max-width:1720px;">
             <h1>
-                <?php esc_attr_e('WPvivid Plugins - Staging', 'WpvividPlugins' ); ?>
+                <?php esc_attr_e('WPvivid Plugins - Staging', 'wpvivid-backuprestore' ); ?>
             </h1>
             <?php self::wpvivid_check_site_url(); ?>
             <?php self::wpvivid_check_login_url(); ?>

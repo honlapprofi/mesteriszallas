@@ -167,6 +167,9 @@ registerBlockType('motopress-hotel-booking/availability-calendar', {
     attributes: {
         id: {type: 'string', default: ''},
         monthstoshow: {type: 'string', default: '2'},
+        display_price: {type: 'boolean', default: false},
+        truncate_price: {type: 'boolean', default: true},
+        display_currency: {type: 'boolean', default: false},
         alignment: {type: 'string', default: ''}
     },
     getEditWrapperProps: getEditWrapperProps,
@@ -209,6 +212,39 @@ registerBlockType('motopress-hotel-booking/availability-calendar', {
                                 },
                                 key: 'monthstoshow-control'
                             }
+                        ),
+                        createElement(
+                            ToggleControl,
+                            {
+                                label: __('Display per-night prices in the availability calendar.', 'motopress-hotel-booking'),
+                                checked: props.attributes.display_price,
+                                onChange: function (value) {
+                                    props.setAttributes({display_price: value});
+                                },
+                                key: 'display_price-control'
+                            }
+                        ),
+                        createElement(
+                            ToggleControl,
+                            {
+                                label: __('Truncate per-night prices in the availability calendar.', 'motopress-hotel-booking'),
+                                checked: props.attributes.truncate_price,
+                                onChange: function (value) {
+                                    props.setAttributes({truncate_price: value});
+                                },
+                                key: 'truncate_price-control'
+                            }
+                        ),
+                        createElement(
+                            ToggleControl,
+                            {
+                                label: __('Display the currency sign in the availability calendar.', 'motopress-hotel-booking'),
+                                checked: props.attributes.display_currency,
+                                onChange: function (value) {
+                                    props.setAttributes({display_currency: value});
+                                },
+                                key: 'display_currency-control'
+                            }
                         )
                     ]
                 )
@@ -229,20 +265,32 @@ registerBlockType('motopress-hotel-booking/availability-calendar', {
                     }
                 )
             ),
-            mayHaveValidOutput && createElement(
-                Disabled,
-                {
-                    key: 'server-side-render'
-                },
-                createElement(
-                    ServerSideRender,
-                    {
-                        block: "motopress-hotel-booking/availability-calendar",
-                        attributes: props.attributes
-                    }
-                )
-            ),
-            !mayHaveValidOutput && createElement(
+            // dynamic loading from server does not work because we need some
+            // callback after loading html to reinit calendar JS and
+            // Gutenberg does not have it yet but there is some
+            // feature requests so we will be able to fix it later
+            // mayHaveValidOutput && createElement(
+            //     Disabled,
+            //     {
+            //         key: 'server-side-render'
+            //     },
+            //     createElement(
+            //         ServerSideRender,
+            //         {
+            //             block: "motopress-hotel-booking/availability-calendar",
+            //             attributes: props.attributes
+            //         }
+            //     )
+            // ),
+            // !mayHaveValidOutput && createElement(
+            //     Placeholder,
+            //     {
+            //         icon: 'calendar-alt',
+            //         label: __('Availability Calendar', 'motopress-hotel-booking'),
+            //         key: 'block-placeholder'
+            //     }
+            // ),
+            createElement(
                 Placeholder,
                 {
                     icon: 'calendar-alt',
@@ -1492,6 +1540,7 @@ registerBlockType('motopress-hotel-booking/booking-confirmation', {
             var elementsToReinit = node.getElementsByClassName('mphb-gutenberg-reinit');
 
             if (elementsToReinit.length > 0) {
+
                 var $shortcodeWrapper = $(elementsToReinit[0]); // Only one element possible
                 
                 $shortcodeWrapper.children('.mphb-calendar.mphb-datepick:not(.is-datepick)').each(function (_, calendar) {
@@ -1529,10 +1578,11 @@ registerBlockType('motopress-hotel-booking/booking-confirmation', {
             if (this.isLoaded) {
                 return;
             }
-
+            
             var $blocksList = $('.editor-block-list__layout');
 
             if ($blocksList.length > 0) {
+
                 this.isLoaded = true;
 
                 this.$blocksList = $blocksList;

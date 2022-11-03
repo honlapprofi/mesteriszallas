@@ -19,14 +19,14 @@ class WPvivid_tools
         }
         while(($filename=readdir($handler))!==false)
         {
-            if(is_dir($path.DIRECTORY_SEPARATOR.$filename) && preg_match('#temp-'.$home_url_prefix.'_'.'#',$filename))
+            /*if(is_dir($path.DIRECTORY_SEPARATOR.$filename) && preg_match('#temp-'.$home_url_prefix.'_'.'#',$filename))
             {
                 WPvivid_tools::deldir($path.DIRECTORY_SEPARATOR.$filename,'',true);
             }
             if(is_dir($path.DIRECTORY_SEPARATOR.$filename) && preg_match('#temp-'.'#',$filename))
             {
                 WPvivid_tools::deldir($path.DIRECTORY_SEPARATOR.$filename,'',true);
-            }
+            }*/
             if(preg_match('#pclzip-.*\.tmp#', $filename)){
                 @unlink($path.DIRECTORY_SEPARATOR.$filename);
             }

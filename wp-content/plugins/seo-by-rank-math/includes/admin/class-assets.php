@@ -10,6 +10,7 @@
 
 namespace RankMath\Admin;
 
+use RankMath\KB;
 use RankMath\Helper;
 use RankMath\Runner;
 use RankMath\Traits\Hooker;
@@ -57,7 +58,7 @@ class Assets implements Runner {
 		wp_register_style( self::PREFIX . 'common', $css . 'common.css', null, rank_math()->version );
 		wp_register_style( self::PREFIX . 'cmb2', $css . 'cmb2.css', null, rank_math()->version );
 		wp_register_style( self::PREFIX . 'dashboard', $css . 'dashboard.css', [ 'rank-math-common' ], rank_math()->version );
-		wp_register_style( self::PREFIX . 'dashabord-widget', $css . 'dashabord-widget.css', null, rank_math()->version );
+		wp_register_style( self::PREFIX . 'dashboard-widget', $css . 'dashboard-widget.css', null, rank_math()->version );
 
 		// Scripts.
 		wp_register_script( 'validate', rank_math()->plugin_url() . 'assets/vendor/jquery.validate.min.js', [ 'jquery' ], '1.19.0', true );
@@ -118,6 +119,11 @@ class Assets implements Runner {
 		);
 
 		Helper::add_json(
+			'links',
+			KB::get_links()
+		);
+
+		Helper::add_json(
 			'validationl10n',
 			[
 				'regexErrorDefault'    => __( 'Please use the correct format.', 'rank-math' ),
@@ -142,7 +148,7 @@ class Assets implements Runner {
 		$screen = get_current_screen();
 
 		if ( 'dashboard' === $screen->id ) {
-			wp_enqueue_style( self::PREFIX . 'dashabord-widget' );
+			wp_enqueue_style( self::PREFIX . 'dashboard-widget' );
 			wp_enqueue_script( self::PREFIX . 'dashboard' );
 		}
 

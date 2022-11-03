@@ -2,7 +2,6 @@
 
 namespace MPHB\Admin\Groups;
 
-use \MPHB\Entities;
 
 class MetaBoxGroup extends InputGroup {
 
@@ -22,7 +21,7 @@ class MetaBoxGroup extends InputGroup {
 	 * @since 3.9.1
 	 * @param array $atts Optional. Additional attributes for rendering.
 	 */
-	public function __construct( $name, $label = '', $postType, $context = 'advanced', $priority = 'default', $atts = array() ){
+	public function __construct( $name, $label, $postType, $context = 'advanced', $priority = 'default', $atts = array() ){
 		parent::__construct( $name, $label );
 		$this->postType	 = $postType;
 		$this->context	 = $context;

@@ -16,7 +16,7 @@ do_action( 'mphb_cb_checkout_form_before_start' );
 
 ?>
 
-<form class="mphb_cb_checkout_form" method="POST" action="<?php echo esc_url( $actionUrl ); ?>">
+<form class="mphb_cb_checkout_form" enctype="<?php echo esc_attr( apply_filters( 'mphb_checkout_form_enctype_data', '' ) ); ?>" method="POST" action="<?php echo esc_url( $actionUrl ); ?>">
 
 	<?php
 		/**

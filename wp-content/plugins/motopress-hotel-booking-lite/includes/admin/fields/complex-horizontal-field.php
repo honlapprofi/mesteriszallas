@@ -69,7 +69,12 @@ class ComplexHorizontalField extends AbstractComplexField {
 	}
 
 	protected function generateFooter(){
-		$result = '<tfoot><tr><td colspan="' . ( count( $this->fields ) + 1 ) . '">';
+        $totalColumns = count( $this->fields ) + 1;
+        if ( $this->hasSeparateSortable ) {
+            $totalColumns++;
+        }
+
+		$result = '<tfoot><tr><td colspan="' . $totalColumns . '">';
 		$result .= $this->renderAddItemButton();
 		$result .= '</td></tr></tfoot>';
 		return $result;

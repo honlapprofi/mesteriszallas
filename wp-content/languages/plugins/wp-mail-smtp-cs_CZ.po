@@ -1,56 +1,47 @@
-# Translation of Plugins - WP Mail SMTP by WPForms - Stable (latest release) in Czech
-# This file is distributed under the same license as the Plugins - WP Mail SMTP by WPForms - Stable (latest release) package.
+# Translation of Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-09 06:54:10+0000\n"
+"PO-Revision-Date: 2022-10-06 12:05:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: cs_CZ\n"
-"Project-Id-Version: Plugins - WP Mail SMTP by WPForms - Stable (latest release)\n"
-
-#. Translators: Link to the Sendlayer API settings.
-#: assets/languages/wp-mail-smtp-vue.php:292
-msgid "%1$sFollow this link%2$s to get an API Key for Sendlayer."
-msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro Sendlayer."
+"Project-Id-Version: Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release)\n"
 
 #. Translators: Link to the SendLayer API settings.
-#: assets/languages/wp-mail-smtp-vue.php:833
+#: assets/languages/wp-mail-smtp-vue.php:207
 msgid "%1$sFollow this link%2$s to get an API Key for SendLayer."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro SendLayer."
 
-#: src/Admin/Area.php:1204
+#: src/Admin/Area.php:1199
 msgid "Docs"
 msgstr "Dokumentace"
 
-#: assets/languages/wp-mail-smtp-vue.php:839
+#: assets/languages/wp-mail-smtp-vue.php:234
 #: src/Providers/Sendlayer/Options.php:58
 msgid "Get Started with SendLayer"
 msgstr "Začněte se SendLayer"
 
-#: src/Admin/Area.php:1180
+#: src/Admin/Area.php:1184
 msgid "Get WP Mail SMTP Pro"
 msgstr "Získejte WP Mail SMTP Pro"
 
-#: assets/languages/wp-mail-smtp-vue.php:319
-msgid "Read how to set up Sendlayer"
-msgstr "Přečtěte si, jak nastavit Sendlayer"
-
-#: assets/languages/wp-mail-smtp-vue.php:836
+#: assets/languages/wp-mail-smtp-vue.php:237
 msgid "Read how to set up SendLayer"
 msgstr "Přečtěte si, jak nastavit SendLayer"
 
-#: src/Admin/Pages/AboutTab.php:431 src/Admin/Pages/AboutTab.php:437
+#: src/Admin/Pages/AboutTab.php:432 src/Admin/Pages/AboutTab.php:438
 msgid "AffiliateWP"
 msgstr "AffiliateWP"
 
-#: src/Admin/Pages/AboutTab.php:417 src/Admin/Pages/AboutTab.php:423
+#: src/Admin/Pages/AboutTab.php:418 src/Admin/Pages/AboutTab.php:424
 msgid "SearchWP"
 msgstr "SearchWP"
 
-#: src/Admin/Area.php:572 src/Admin/Pages/AboutTab.php:249
+#: src/Admin/Area.php:575 src/Admin/Pages/AboutTab.php:250
 msgid "Visit Site"
 msgstr "Zobrazit web"
 
@@ -90,20 +81,20 @@ msgstr "Region:"
 msgid "Google / Gmail"
 msgstr "Google / Gmail"
 
-#: assets/languages/wp-mail-smtp-vue.php:370
+#: assets/languages/wp-mail-smtp-vue.php:299
 msgid "FluentSMTP"
 msgstr "FluentSMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:154
+#: assets/languages/wp-mail-smtp-vue.php:498
 msgid "Microsoft 365 / Outlook"
 msgstr "Microsoft 365 / Outlook"
 
-#: assets/languages/wp-mail-smtp-vue.php:584
+#: assets/languages/wp-mail-smtp-vue.php:574
 msgid "Read how to set up SparkPost"
 msgstr "Přečtěte si, jak nastavit SparkPost"
 
 #. Translators: Link to the SparkPost Account API section.
-#: assets/languages/wp-mail-smtp-vue.php:588
+#: assets/languages/wp-mail-smtp-vue.php:578
 msgid "%1$sFollow this link%2$s to get an API Key for SparkPost."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro SparkPost."
 
@@ -119,7 +110,7 @@ msgstr "Token pro serverové API:"
 msgid "Export logs to CSV, XLSX, or EML"
 msgstr "Exportovat logy do CSV, XLSX, nebo EML"
 
-#: src/Admin/Pages/MiscTab.php:164
+#: src/Admin/Pages/MiscTab.php:165
 msgid "Hide warnings alerting of email delivery errors."
 msgstr "Skrýt varování upozorňující na chyby doručení e-mailu."
 
@@ -179,7 +170,7 @@ msgstr "Publikováno"
 msgid "Plugin Status"
 msgstr "Stav pluginu"
 
-#: assets/languages/wp-mail-smtp-vue.php:623
+#: assets/languages/wp-mail-smtp-vue.php:361
 msgid "Read how to set up Postmark"
 msgstr "Přečtěte si, jak nastavit Postmark"
 
@@ -211,7 +202,7 @@ msgstr "E-mail změněn"
 msgid "Reset Password Request"
 msgstr "Požadavek na resetování hesla"
 
-#: assets/languages/wp-mail-smtp-vue.php:667
+#: assets/languages/wp-mail-smtp-vue.php:387
 msgid "If you'd prefer not to set up SSL, or need an SMTP solution in the meantime, please go back and select a different mailer option."
 msgstr "Pokud si nepřejete nastavovat SSL nebo mezitím potřebujete řešení SMTP, vraťte se prosím zpět a vyberte jinou možnost odesílatele."
 
@@ -223,7 +214,7 @@ msgstr "Heslo změněno"
 msgid "Password Reset Successfully"
 msgstr "Resetování hesla proběhlo úspěšně"
 
-#: assets/languages/wp-mail-smtp-vue.php:609
+#: assets/languages/wp-mail-smtp-vue.php:347
 #: src/Providers/Postmark/Options.php:85
 msgid "Server API Token"
 msgstr "Token pro serverové API"
@@ -244,6 +235,14 @@ msgstr "Uživatel se pokusil změnit svou e-mailovou adresu. Odesláno na navrho
 msgid "User clicked a confirmation link in personal data export or erasure request email. Sent to the site or network admin."
 msgstr "Uživatel klikl na potvrzovací odkaz v e-mailu s žádostí o export nebo vymazání osobních údajů. Odesláno správci webu nebo sítě."
 
+#: src/Admin/Pages/ControlTab.php:124
+msgid "User Confirmed Export / Erasure Request"
+msgstr "Uživatelem potvrzený požadavek na Export / Vymazání"
+
+#: src/Admin/Pages/TestTab.php:255
+msgid "Test HTML email was sent successfully! Please check your inbox to make sure it was delivered."
+msgstr "Testovací HTML e-mail byl úspěšně odeslán! Zkontrolujte prosím svou doručenou poštu, abyste se ujistili, že byla doručena."
+
 #: src/Reports/Emails/Summary.php:276
 msgid "Last week"
 msgstr "Minulý týden"
@@ -260,7 +259,7 @@ msgstr "Ahoj,"
 msgid "Want More Stats?"
 msgstr "Chcete více statistik?"
 
-#: src/WP.php:655
+#: src/WP.php:680
 msgid "WP Core"
 msgstr "WP jádro"
 
@@ -268,17 +267,13 @@ msgstr "WP jádro"
 msgid "WP Mail SMTP Logo"
 msgstr "WP Mail SMTP Logo"
 
-#: src/Providers/Sendinblue/Mailer.php:303
+#: src/Providers/Sendinblue/Mailer.php:312
 msgid "An email request was sent to the Sendinblue API."
 msgstr "Do rozhraní Sendinblue API byl odeslán e-mailový požadavek."
 
 #: src/Reports/Emails/Summary.php:292
 msgid "Reports"
 msgstr "Přehledy"
-
-#: src/Reports/Emails/Summary.php:257
-msgid "Let’s see how your emails performed in the past week."
-msgstr "Podívejme se, jak si vedly vaše e-maily za minulý týden."
 
 #: src/Reports/Emails/Summary.php:265
 msgid "Total Emails"
@@ -297,16 +292,16 @@ msgstr "Povyšte na <b>WP Mail SMTP Pro</b> a odemkněte <u>E-mailové Logy</u> 
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: src/MailCatcher.php:129 src/MailCatcherV6.php:123
+#: src/MailCatcher.php:163 src/MailCatcherV6.php:169
 #: src/Providers/MailerAbstract.php:281
 msgid "An email request was sent."
 msgstr "Byla odeslána e-mailová žádost."
 
-#: src/Admin/Pages/MiscTab.php:249
+#: src/Admin/Pages/MiscTab.php:250
 msgid "Disable Email Summaries"
 msgstr "Zakázat shrnutí e-mailem"
 
-#: src/Admin/Pages/MiscTab.php:257
+#: src/Admin/Pages/MiscTab.php:258
 msgid "Disable Email Summaries weekly delivery."
 msgstr "Zakázat týdenní doručování e-mailových souhrnů."
 
@@ -315,12 +310,12 @@ msgid "An email request was sent to the Gmail API."
 msgstr "Do rozhraní Gmail API byl odeslán e-mailový požadavek."
 
 #. Translators: %s the error message.
-#: src/Providers/Gmail/Auth.php:384
+#: src/Providers/Gmail/Auth.php:402
 msgid "An error occurred when trying to get Gmail aliases: %s"
 msgstr "Při pokusu o získání aliasů Gmailu došlo k chybě: %s"
 
 #. translators: %s - URL to the debug events page.
-#: src/Core.php:578
+#: src/Core.php:586
 msgid "For more details please try running an Email Test or reading the latest <a href=\"%s\">error event</a>."
 msgstr "Chcete-li získat další podrobnosti, zkuste spustit Test e-mailu nebo si přečtěte nejnovější <a href=\"%s\">chybovou událost</a>."
 
@@ -329,19 +324,19 @@ msgid "Resend emails and attachments"
 msgstr "Znovu posílejte e-maily a přílohy"
 
 #. Translators: %s the error code passed from Google.
-#: src/Providers/Gmail/Auth.php:230
+#: src/Providers/Gmail/Auth.php:248
 msgid "There was an error while processing Google authorization: %s"
 msgstr "Při zpracování autorizace Google došlo k chybě: %s"
 
-#: src/Providers/Gmail/Auth.php:270
+#: src/Providers/Gmail/Auth.php:288
 msgid "There was an error while processing Google authorization: missing code or scope parameter."
 msgstr "Při zpracování autorizace Google došlo k chybě: chybí kód nebo parametr rozsahu."
 
-#: src/Admin/Pages/TestTab.php:1502 src/Admin/Pages/TestTab.php:1533
+#: src/Admin/Pages/TestTab.php:1509 src/Admin/Pages/TestTab.php:1540
 msgid "Send Another Test Email"
 msgstr "Odeslat další testovací email"
 
-#: src/Admin/Pages/MiscTab.php:277
+#: src/Admin/Pages/MiscTab.php:278
 msgid "View Email Summary Example"
 msgstr "Zobrazit ukázkové shrnutí e-mailem"
 
@@ -350,28 +345,28 @@ msgid "Get weekly deliverability reports"
 msgstr "Získejte týdenní zprávy o doručitelnosti"
 
 #. translators: %1$s - Date. %2$s - Date.
-#: src/Admin/Pages/DebugEventsTab.php:416
+#: src/Admin/Pages/DebugEventsTab.php:445
 msgid "between %1$s and %2$s"
 msgstr "mezi %1$s a %2$s"
 
 #. translators: %s - Date.
-#: src/Admin/Pages/DebugEventsTab.php:410
+#: src/Admin/Pages/DebugEventsTab.php:439
 msgid "on %s"
 msgstr "v %s"
 
 #. translators: %1$s - number of debug events found; %2$s - filtered type.
-#: src/Admin/Pages/DebugEventsTab.php:273
+#: src/Admin/Pages/DebugEventsTab.php:302
 msgid "Found <strong>%1$s %2$s event</strong>"
 msgid_plural "Found <strong>%1$s %2$s events</strong>"
 msgstr[0] "Nalezena <strong>%1$s %2$s událost</strong>"
 msgstr[1] "Nalezeny <strong>%1$s %2$s události</strong>"
 msgstr[2] "Nalezeno <strong>%1$s %2$s událostí</strong>"
 
-#: src/Admin/Pages/DebugEventsTab.php:446
+#: src/Admin/Pages/DebugEventsTab.php:475
 msgid "For some reason the database table was not installed correctly. Please contact plugin support team to diagnose and fix the issue."
 msgstr "Z nějakého důvodu nebyla databázová tabulka správně nainstalována. Chcete-li problém diagnostikovat a opravit, kontaktujte tým podpory pluginu."
 
-#: src/Admin/Pages/DebugEventsTab.php:302
+#: src/Admin/Pages/DebugEventsTab.php:331
 msgid "Search Events"
 msgstr "Hledat události"
 
@@ -383,11 +378,11 @@ msgstr "Vše"
 msgid "Close"
 msgstr "Zavřít"
 
-#: src/Admin/DebugEvents/Event.php:349 src/Admin/DebugEvents/Table.php:171
+#: src/Admin/DebugEvents/Event.php:368 src/Admin/DebugEvents/Table.php:171
 msgid "Content"
 msgstr "Obsah"
 
-#: src/Admin/DebugEvents/Event.php:345 src/Admin/DebugEvents/Table.php:173
+#: src/Admin/DebugEvents/Event.php:364 src/Admin/DebugEvents/Table.php:173
 msgid "Date"
 msgstr "Datum"
 
@@ -408,7 +403,7 @@ msgstr "Typy událostí"
 msgid "Filter"
 msgstr "Filtr"
 
-#: src/Admin/DebugEvents/Event.php:244 src/WP.php:545
+#: src/Admin/DebugEvents/Event.php:244 src/WP.php:569
 msgid "N/A"
 msgstr "Nedostupné"
 
@@ -416,15 +411,15 @@ msgstr "Nedostupné"
 msgid "No events found."
 msgstr "Nebyla nalezena žádná událost."
 
-#: assets/languages/wp-mail-smtp-vue.php:685
+#: assets/languages/wp-mail-smtp-vue.php:532
 msgid "Read how to set up Microsoft Outlook / 365"
 msgstr "Přečtěte si, jak nastavit Microsoft Outlook / 365"
 
-#: src/Admin/FlyoutMenu.php:110
+#: src/Admin/FlyoutMenu.php:107
 msgid "Support & Docs"
 msgstr "Podpora & Dokumentace"
 
-#: src/Admin/FlyoutMenu.php:120
+#: src/Admin/FlyoutMenu.php:118
 msgid "Suggest a Feature"
 msgstr "Navrhnout funkci"
 
@@ -432,8 +427,8 @@ msgstr "Navrhnout funkci"
 msgid "View Example"
 msgstr "Zobrazit příklad"
 
-#: src/Admin/DebugEvents/DebugEvents.php:43
-#: src/Admin/DebugEvents/DebugEvents.php:82
+#: src/Admin/DebugEvents/DebugEvents.php:90
+#: src/Admin/DebugEvents/DebugEvents.php:129
 msgid "Access rejected."
 msgstr "Přístup zamítnut."
 
@@ -445,11 +440,11 @@ msgstr "Vyskytla se chyba!"
 msgid "Delete All Events"
 msgstr "Smazat všechny události"
 
-#: assets/languages/wp-mail-smtp-vue.php:418
+#: assets/languages/wp-mail-smtp-vue.php:465
 msgid "Get statistics about emails you've sent."
 msgstr "Získejte statistiky o e-mailech, které jste odeslali."
 
-#: src/Admin/DebugEvents/DebugEvents.php:222
+#: src/Admin/DebugEvents/DebugEvents.php:272
 msgid "Number of events per page:"
 msgstr "Počet událostí na stránce:"
 
@@ -457,13 +452,13 @@ msgstr "Počet událostí na stránce:"
 msgid "See Quick Links"
 msgstr "Viz rychlé odkazy"
 
-#: src/Admin/FlyoutMenu.php:115
+#: src/Admin/FlyoutMenu.php:113
 msgid "Follow on Facebook"
 msgstr "Sledujte nás na Facebooku"
 
-#: src/Admin/DebugEvents/DebugEvents.php:47
-#: src/Admin/DebugEvents/DebugEvents.php:86
-#: src/Admin/Pages/DebugEventsTab.php:326
+#: src/Admin/DebugEvents/DebugEvents.php:94
+#: src/Admin/DebugEvents/DebugEvents.php:133
+#: src/Admin/Pages/DebugEventsTab.php:355
 msgid "You don't have the capability to perform this action."
 msgstr "Nemáte oprávnění pro vykonání této akce."
 
@@ -475,7 +470,7 @@ msgstr "Obsah"
 msgid "Error Details"
 msgstr "Podrobnosti chyby"
 
-#: src/Admin/Pages/ExportTab.php:146
+#: src/Admin/Pages/ExportTab.php:147
 msgid "Search"
 msgstr "Hledat"
 
@@ -515,7 +510,7 @@ msgstr "Exportovat do CSV (.csv)"
 msgid "Export in Microsoft Excel (.xlsx)"
 msgstr "Exportovat do Microsoft Excel (.xlsx)"
 
-#: src/Admin/Pages/ExportTab.php:148
+#: src/Admin/Pages/ExportTab.php:149
 msgid "Email Addresses"
 msgstr "E-mailové adresy"
 
@@ -523,7 +518,7 @@ msgstr "E-mailové adresy"
 msgid "From Address"
 msgstr "Z adresy"
 
-#: src/Admin/Pages/ExportTab.php:141
+#: src/Admin/Pages/ExportTab.php:142
 msgid "Custom Date Range"
 msgstr "Vlastní časové období"
 
@@ -538,6 +533,10 @@ msgstr "Kopie (CC)"
 #: src/Admin/Pages/ExportTab.php:133
 msgid "Blind Carbon Copy (BCC)"
 msgstr "Skrytá kopie (BCC)"
+
+#: src/Admin/Pages/ExportTab.php:119
+msgid "To Address"
+msgstr "Na adresu"
 
 #: src/Admin/Pages/ExportTab.php:42
 msgid "Export"
@@ -629,6 +628,11 @@ msgstr "Nepodařilo se %s"
 msgid "Failed Emails"
 msgstr "Neúspěšné e-maily"
 
+#. translators: %s fixed string of 'N/A'.
+#: src/Admin/DashboardWidget.php:540
+msgid "Unconfirmed %s"
+msgstr "Nepotvrzené %s"
+
 #: src/Admin/Pages/Tools.php:41
 msgid "Tools"
 msgstr "Nástroje"
@@ -637,15 +641,15 @@ msgstr "Nástroje"
 msgid "Is email domain configured properly?"
 msgstr "Je e-mailová doména správně nakonfigurována?"
 
-#: src/SiteHealth.php:340
+#: src/SiteHealth.php:365
 msgid "Email domain issues detected"
 msgstr "Byly zjištěny problémy s e-mailovou doménou"
 
-#: src/SiteHealth.php:313
+#: src/SiteHealth.php:338
 msgid "Email domain is configured correctly"
 msgstr "E-mailová doména je správně nakonfigurována"
 
-#: src/Admin/Pages/AboutTab.php:410
+#: src/Admin/Pages/AboutTab.php:411
 msgid "TrustPulse"
 msgstr "TrustPulse"
 
@@ -653,120 +657,120 @@ msgstr "TrustPulse"
 msgid "Launch Setup Wizard"
 msgstr "Spustit Průvodce nastavením"
 
-#: src/Admin/Pages/AboutTab.php:347
+#: src/Admin/Pages/AboutTab.php:348
 msgid "PushEngage"
 msgstr "PushEngage"
 
-#: src/Admin/Pages/AboutTab.php:319 src/Admin/Pages/AboutTab.php:325
+#: src/Admin/Pages/AboutTab.php:320 src/Admin/Pages/AboutTab.php:326
 msgid "SeedProd"
 msgstr "SeedProd"
 
-#: src/Admin/Pages/AboutTab.php:305 src/Admin/Pages/AboutTab.php:311
+#: src/Admin/Pages/AboutTab.php:306 src/Admin/Pages/AboutTab.php:312
 msgid "AIOSEO"
 msgstr "AIOSEO"
 
-#: src/Admin/Pages/TestTab.php:1491
+#: src/Admin/Pages/TestTab.php:1498
 msgid "Copied"
 msgstr "Zkopírováno"
 
-#: assets/languages/wp-mail-smtp-vue.php:715
+#: assets/languages/wp-mail-smtp-vue.php:624
 msgid "You have successfully linked the current site with your Microsoft API project. Now you can start sending emails through Outlook."
 msgstr "Úspěšně jste propojili aktuální web s projektem Microsoft API. Nyní můžete začít odesílat e-maily přes Outlook."
 
 #. Translators: Error status and error text.
-#: assets/languages/wp-mail-smtp-vue.php:61
+#: assets/languages/wp-mail-smtp-vue.php:90
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
-#: assets/languages/wp-mail-smtp-vue.php:724
+#: assets/languages/wp-mail-smtp-vue.php:633
 msgid "Authorization Error!"
 msgstr "Autorizace se nezdařila!"
 
-#: assets/languages/wp-mail-smtp-vue.php:223
+#: assets/languages/wp-mail-smtp-vue.php:706
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: assets/languages/wp-mail-smtp-vue.php:26
+#: assets/languages/wp-mail-smtp-vue.php:44
 msgid "Error Message:"
 msgstr "Chybová zpráva:"
 
-#: assets/languages/wp-mail-smtp-vue.php:823
+#: assets/languages/wp-mail-smtp-vue.php:588
 msgid "Installed"
 msgstr "Nainstalováno"
 
-#: assets/languages/wp-mail-smtp-vue.php:343
+#: assets/languages/wp-mail-smtp-vue.php:317
 msgid "Your Email Address"
 msgstr "Vaše e-mailová adresa"
 
-#: assets/languages/wp-mail-smtp-vue.php:352
+#: assets/languages/wp-mail-smtp-vue.php:326
 msgid "Yes, count me in"
 msgstr "Ano, počítejte se mnou"
 
-#: assets/languages/wp-mail-smtp-vue.php:817
+#: assets/languages/wp-mail-smtp-vue.php:804
 msgid "Value has to be a round number"
 msgstr "Hodnota musí být celé číslo"
 
-#: assets/languages/wp-mail-smtp-vue.php:210
+#: assets/languages/wp-mail-smtp-vue.php:693
 msgid "Purchase Now"
 msgstr "Koupit nyní"
 
-#: assets/languages/wp-mail-smtp-vue.php:213
+#: assets/languages/wp-mail-smtp-vue.php:696
 msgid "I'll do it later"
 msgstr "Udělám to později"
 
-#: assets/languages/wp-mail-smtp-vue.php:115
+#: assets/languages/wp-mail-smtp-vue.php:83
 msgid "It looks like we can't load authentication details."
 msgstr "Zdá se, že nemůžeme načíst podrobnosti ověření."
 
-#: assets/languages/wp-mail-smtp-vue.php:109
+#: assets/languages/wp-mail-smtp-vue.php:77
 msgid "It looks like we can't import the plugin settings."
 msgstr "Zdá se, že nemůžeme importovat nastavení pluginu."
 
-#: assets/languages/wp-mail-smtp-vue.php:103
+#: assets/languages/wp-mail-smtp-vue.php:71
 msgid "It looks like we can't save the settings."
 msgstr "Zdá se, že nelze uložit nastavení."
 
-#: assets/languages/wp-mail-smtp-vue.php:118
+#: assets/languages/wp-mail-smtp-vue.php:86
 msgid "It looks like we can't load the settings."
 msgstr "Zdá se, že nelze načíst nastavení."
 
-#: assets/languages/wp-mail-smtp-vue.php:238
+#: assets/languages/wp-mail-smtp-vue.php:168
 msgid "Manage Default Notifications"
 msgstr "Spravovat výchozí oznámení"
 
-#: assets/languages/wp-mail-smtp-vue.php:430
+#: assets/languages/wp-mail-smtp-vue.php:141
 msgid "Submit Feedback"
 msgstr "Odeslat zpětnou vazbu"
 
-#: assets/languages/wp-mail-smtp-vue.php:194
+#: assets/languages/wp-mail-smtp-vue.php:681
 msgid "Successful Upgrade!"
 msgstr "Úspěšný upgrade!"
 
-#: assets/languages/wp-mail-smtp-vue.php:721
+#: assets/languages/wp-mail-smtp-vue.php:630
 msgid "Successful Authorization"
 msgstr "Úspěšná autorizace"
 
-#: assets/languages/wp-mail-smtp-vue.php:463
+#: assets/languages/wp-mail-smtp-vue.php:193
 msgid "Thanks for the feedback!"
 msgstr "Děkujeme za zpětnou vazbu!"
 
-#: assets/languages/wp-mail-smtp-vue.php:261
+#: assets/languages/wp-mail-smtp-vue.php:729
 msgid "The License Key format is incorrect. Please enter a valid key and try again."
 msgstr "Formát licenčního klíče je nesprávný. Zadejte prosím platný klíč a zkuste to znovu."
 
-#: assets/languages/wp-mail-smtp-vue.php:255
+#: assets/languages/wp-mail-smtp-vue.php:723
 msgid "Verify License Key"
 msgstr "Ověřit licenční klíč"
 
-#: assets/languages/wp-mail-smtp-vue.php:252
+#: assets/languages/wp-mail-smtp-vue.php:720
 msgid "Enter your license key below to unlock plugin updates!"
 msgstr "Zadejte svůj licenční klíč níže a odemkněte aktualizace pluginu!"
 
-#: assets/languages/wp-mail-smtp-vue.php:731
+#: assets/languages/wp-mail-smtp-vue.php:640
 msgid "Before continuing, you'll need to allow this plugin to send emails using your %s account."
 msgstr "Než budete pokračovat, musíte tomuto pluginu povolit odesílání e-mailů pomocí Vašeho účtu %s."
 
-#: assets/languages/wp-mail-smtp-vue.php:200
+#: assets/languages/wp-mail-smtp-vue.php:687
 msgid "Would you like to purchase the following features now?"
 msgstr "Chcete si nyní zakoupit následující funkce?"
 
@@ -774,366 +778,379 @@ msgstr "Chcete si nyní zakoupit následující funkce?"
 msgid "Return to Plugin Settings"
 msgstr "Zpět do Nastavení pluginu"
 
-#: assets/languages/wp-mail-smtp-vue.php:406
+#: assets/languages/wp-mail-smtp-vue.php:450
 msgid "Easily spot errors causing delivery issues."
 msgstr "Snadno odhalíte chyby způsobující problémy s doručením."
 
-#: assets/languages/wp-mail-smtp-vue.php:216
+#: assets/languages/wp-mail-smtp-vue.php:699
 msgid "Enter your WP Mail SMTP License Key"
 msgstr "Zadejte svůj licenční klíč WP Mail SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:442
+#: assets/languages/wp-mail-smtp-vue.php:153
 msgid "Here’s what to do next:"
 msgstr "Následující postup:"
 
-#: assets/languages/wp-mail-smtp-vue.php:349
+#: assets/languages/wp-mail-smtp-vue.php:323
 msgid "Help make WP Mail SMTP better for everyone"
 msgstr "Pomozte vylepšit WP Mail SMTP pro všechny"
 
-#: assets/languages/wp-mail-smtp-vue.php:337
+#: assets/languages/wp-mail-smtp-vue.php:311
 msgid "Help Improve WP Mail SMTP + Smart Recommendations"
 msgstr "Pomozte zlepšit WP Mail SMTP + chytrá doporučení"
 
-#: assets/languages/wp-mail-smtp-vue.php:397
+#: assets/languages/wp-mail-smtp-vue.php:441
 msgid "Improved Email Deliverability"
 msgstr "Vylepšené doručování e-mailů"
 
-#: assets/languages/wp-mail-smtp-vue.php:433
+#: assets/languages/wp-mail-smtp-vue.php:144
 msgid "How was your WP Mail SMTP setup experience?"
 msgstr "Jaké byly Vaše zkušenosti s nastavením WP Mail SMTP?"
 
-#: assets/languages/wp-mail-smtp-vue.php:121
+#: assets/languages/wp-mail-smtp-vue.php:96
 msgid "It looks like we can't retrieve Amazon SES Identities."
 msgstr "Zdá se, že nemůžeme načíst identitu Amazon SES."
 
-#: assets/languages/wp-mail-smtp-vue.php:485
+#: assets/languages/wp-mail-smtp-vue.php:402
 msgid "Enable Auto TLS"
 msgstr "Povolit automatické TLS"
 
-#: assets/languages/wp-mail-smtp-vue.php:285
+#: assets/languages/wp-mail-smtp-vue.php:741
 msgid "Paste your license key here"
 msgstr "Zde vložte svůj licenční klíč"
 
-#: assets/languages/wp-mail-smtp-vue.php:188
+#: assets/languages/wp-mail-smtp-vue.php:675
 msgid "Successful Verification!"
 msgstr "Úspěšné ověření!"
 
 #. Translators: Minimum and maximum number that can be used.
-#: assets/languages/wp-mail-smtp-vue.php:814
+#: assets/languages/wp-mail-smtp-vue.php:801
 msgid "Please enter a value between %1$s and %2$s"
 msgstr "Zadejte prosím hodnotu mezi %1$s a %2$s"
 
-#: assets/languages/wp-mail-smtp-vue.php:470
+#: assets/languages/wp-mail-smtp-vue.php:200
 msgid "Rate on WordPress.org"
 msgstr "Ohodnoťte na wordpress.org"
 
-#: assets/languages/wp-mail-smtp-vue.php:35
+#: assets/languages/wp-mail-smtp-vue.php:53
 msgid "Please fill out all the required fields to continue."
 msgstr "Chcete-li pokračovat, vyplňte prosím všechna povinná pole."
 
-#: assets/languages/wp-mail-smtp-vue.php:460
+#: assets/languages/wp-mail-smtp-vue.php:190
 msgid "Star icon"
 msgstr "Ikona hvězdičky"
 
-#: assets/languages/wp-mail-smtp-vue.php:454
+#: assets/languages/wp-mail-smtp-vue.php:174
 msgid "Upgrade to Pro Today"
 msgstr "Upgradovat na Pro ještě dnes"
 
-#: assets/languages/wp-mail-smtp-vue.php:448
+#: assets/languages/wp-mail-smtp-vue.php:159
 msgid "Upgrade to Unlock Powerful SMTP Features"
 msgstr "Upgradujte a odemkněte výkonné funkce SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:191
+#: assets/languages/wp-mail-smtp-vue.php:678
 msgid "Verification Error!"
 msgstr "Chyba ověření!"
 
-#: assets/languages/wp-mail-smtp-vue.php:124
+#: assets/languages/wp-mail-smtp-vue.php:99
 msgid "Can't retrieve Amazon SES Identities."
 msgstr "Nelze načíst identitu Amazon SES."
 
-#: assets/languages/wp-mail-smtp-vue.php:127
+#: assets/languages/wp-mail-smtp-vue.php:102
 msgid "Can't register the Amazon SES Identity"
 msgstr "Nelze zaregistrovat identitu Amazon SES"
 
 #. Translators: %1$s and %2$s are bold tags.
-#: assets/languages/wp-mail-smtp-vue.php:220
+#: assets/languages/wp-mail-smtp-vue.php:703
 msgid "You're currently using %1$sWP Mail SMTP Lite%2$s - no license needed. Enjoy!"
 msgstr "Používáte %1$sWP Mail SMTP Lite%2$s – není potřeba žádná licence. Užijte si to!"
 
-#: assets/languages/wp-mail-smtp-vue.php:679
+#: assets/languages/wp-mail-smtp-vue.php:432
+msgid "The following plugin will be installed for free: WPForms"
+msgstr "Následující plugin bude nainstalován zdarma: WPForms"
+
+#. Translators: Link to the WPMailSMTP.com pricing page.
+#: assets/languages/wp-mail-smtp-vue.php:710
+msgid "To unlock selected features, %1$sUpgrade to Pro%2$s and enter your license key below."
+msgstr "Chcete-li odemknout vybrané funkce, %1$sUpgradujte na Pro%2$s a níže zadejte licenční klíč."
+
+#: assets/languages/wp-mail-smtp-vue.php:684
+msgid "Upgrade Failed!"
+msgstr "Upgrade se nezdařil!"
+
+#: assets/languages/wp-mail-smtp-vue.php:526
 msgid "Application ID"
 msgstr "Aplikační ID"
 
-#: assets/languages/wp-mail-smtp-vue.php:807
+#: assets/languages/wp-mail-smtp-vue.php:600
 msgid "Copied!"
 msgstr "Zkopírováno!"
 
-#: assets/languages/wp-mail-smtp-vue.php:367
+#: assets/languages/wp-mail-smtp-vue.php:296
 msgid "Easy WP SMTP"
 msgstr "Easy WP SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:379
+#: assets/languages/wp-mail-smtp-vue.php:308
 msgid "WP SMTP"
 msgstr "WP SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:64
+#: assets/languages/wp-mail-smtp-vue.php:93
 msgid "You appear to be offline."
 msgstr "Zdá se, že jste offline."
 
-#: assets/languages/wp-mail-smtp-vue.php:791
+#: assets/languages/wp-mail-smtp-vue.php:787
 msgid "Value"
 msgstr "Hodnota"
 
-#: assets/languages/wp-mail-smtp-vue.php:176
+#: assets/languages/wp-mail-smtp-vue.php:126
 msgid "Save and Continue"
 msgstr "Uložit a pokračovat"
 
-#: assets/languages/wp-mail-smtp-vue.php:226
+#: assets/languages/wp-mail-smtp-vue.php:293
 msgid "Skip this Step"
 msgstr "Přeskočit tento krok"
 
 #. Translators: name of the oAuth provider (Google, Microsoft, ...).
-#: assets/languages/wp-mail-smtp-vue.php:728
+#: assets/languages/wp-mail-smtp-vue.php:637
 msgid "Connect to %s"
 msgstr "Připojit k %s"
 
-#: assets/languages/wp-mail-smtp-vue.php:41
+#: assets/languages/wp-mail-smtp-vue.php:59
 msgid "Could Not Save Changes"
 msgstr "Nelze uložit změny"
 
-#: assets/languages/wp-mail-smtp-vue.php:166
+#: assets/languages/wp-mail-smtp-vue.php:510
 msgid "is a PRO Feature"
 msgstr "je funkce verze PRO"
 
-#: assets/languages/wp-mail-smtp-vue.php:50
+#: assets/languages/wp-mail-smtp-vue.php:68
 msgid "It looks like something went wrong..."
 msgstr "Vypadá to, že se něco pokazilo..."
 
-#: assets/languages/wp-mail-smtp-vue.php:67
+#: assets/languages/wp-mail-smtp-vue.php:807
 msgid "It looks like the plugin installation failed!"
 msgstr "Zdá se, že instalace pluginu se nezdařila!"
 
-#: assets/languages/wp-mail-smtp-vue.php:88
+#: assets/languages/wp-mail-smtp-vue.php:29
 msgid "It looks like we can't load existing settings."
 msgstr "Zdá se, že nelze načíst stávající nastavení."
 
-#: assets/languages/wp-mail-smtp-vue.php:70
+#: assets/languages/wp-mail-smtp-vue.php:810
 msgid "It looks like we can't install the plugin."
 msgstr "Zdá se, že nemůžeme nainstalovat plugin."
 
-#: assets/languages/wp-mail-smtp-vue.php:91
+#: assets/languages/wp-mail-smtp-vue.php:32
 msgid "It looks like we can't load oAuth connected data."
 msgstr "Zdá se, že nemůžeme načíst připojená data oAuth."
 
-#: assets/languages/wp-mail-smtp-vue.php:85
+#: assets/languages/wp-mail-smtp-vue.php:26
 msgid "It looks like we can't load oAuth redirect."
 msgstr "Zdá se, že nemůžeme načíst přesměrování oAuth."
 
-#: assets/languages/wp-mail-smtp-vue.php:94
+#: assets/languages/wp-mail-smtp-vue.php:35
 msgid "It looks like we can't remove oAuth connection."
 msgstr "Zdá se, že nelze odebrat připojení oAuth."
 
-#: assets/languages/wp-mail-smtp-vue.php:56
+#: assets/languages/wp-mail-smtp-vue.php:831
 msgid "It looks like we can't send the feedback."
 msgstr "Zdá se, že nemůžeme odeslat zpětnou vazbu."
 
-#: assets/languages/wp-mail-smtp-vue.php:788
+#: assets/languages/wp-mail-smtp-vue.php:784
 msgid "Name"
 msgstr "Název"
 
-#: assets/languages/wp-mail-smtp-vue.php:179
+#: assets/languages/wp-mail-smtp-vue.php:129
 msgid "Previous Step"
 msgstr "Předchozí krok"
 
-#: assets/languages/wp-mail-smtp-vue.php:640
+#: assets/languages/wp-mail-smtp-vue.php:552
 msgid "Read how to set up SMTP.com"
 msgstr "Přečtěte si, jak nastavit SMTP.com"
 
-#: assets/languages/wp-mail-smtp-vue.php:529
+#: assets/languages/wp-mail-smtp-vue.php:275
 msgid "Read how to set up Sendinblue"
 msgstr "Přečtěte si, jak nastavit Sendinblue"
 
-#: assets/languages/wp-mail-smtp-vue.php:577
+#: assets/languages/wp-mail-smtp-vue.php:344
 msgid "Read how to set up Sendgrid"
 msgstr "Přečtěte si, jak nastavit Sendgrid"
 
-#: assets/languages/wp-mail-smtp-vue.php:556
+#: assets/languages/wp-mail-smtp-vue.php:489
 msgid "Read how to set up Mailgun"
 msgstr "Přečtěte si, jak nastavit Mailgun"
 
-#: assets/languages/wp-mail-smtp-vue.php:658
+#: assets/languages/wp-mail-smtp-vue.php:376
 msgid "Read how to set up Amazon SES"
 msgstr "Přečtěte si, jak nastavit Amazon SES"
 
-#: assets/languages/wp-mail-smtp-vue.php:776
+#: assets/languages/wp-mail-smtp-vue.php:772
 msgid "Resend"
 msgstr "Přeposlat"
 
-#: assets/languages/wp-mail-smtp-vue.php:810
+#: assets/languages/wp-mail-smtp-vue.php:603
 msgid "The value entered does not match the required format"
 msgstr "Zadaná hodnota neodpovídá požadovanému formátu"
 
-#: assets/languages/wp-mail-smtp-vue.php:764
+#: assets/languages/wp-mail-smtp-vue.php:760
 msgid "Verify Email"
 msgstr "Ověřit e-mail"
 
-#: assets/languages/wp-mail-smtp-vue.php:801
+#: assets/languages/wp-mail-smtp-vue.php:797
 msgid "Verify Email Address"
 msgstr "Ověřit e-mailovou adresu"
 
-#: assets/languages/wp-mail-smtp-vue.php:773
+#: assets/languages/wp-mail-smtp-vue.php:769
 msgid "View DNS"
 msgstr "Zobrazit DNS"
 
-#: assets/languages/wp-mail-smtp-vue.php:160
+#: assets/languages/wp-mail-smtp-vue.php:504
 msgid "I Understand, Continue"
 msgstr "Rozumím, pokračuj"
 
-#: assets/languages/wp-mail-smtp-vue.php:47
+#: assets/languages/wp-mail-smtp-vue.php:65
 msgid "Whoops, we found an issue!"
 msgstr "Jejda, našli jsme problém!"
 
-#: assets/languages/wp-mail-smtp-vue.php:322
+#: assets/languages/wp-mail-smtp-vue.php:657
 msgid "Whoops, looks like things aren’t configured properly."
 msgstr "Jejda, vypadá to, že věci nejsou správně nakonfigurovány."
 
 #. Translators: name of the oAuth provider (Google, Microsoft, ...).
-#: assets/languages/wp-mail-smtp-vue.php:742
+#: assets/languages/wp-mail-smtp-vue.php:651
 msgid "Removing this connection will give you the ability to redo the connection or connect to different %s account."
 msgstr "Odebráním tohoto připojení získáte možnost připojení znovu provést nebo se připojit k jinému účtu %s."
 
-#: assets/languages/wp-mail-smtp-vue.php:526
+#: assets/languages/wp-mail-smtp-vue.php:272
 msgid "Get Started with Sendinblue"
 msgstr "Začněte se Sendinblue"
 
-#: assets/languages/wp-mail-smtp-vue.php:310
+#: assets/languages/wp-mail-smtp-vue.php:225
 msgid "If enabled, the From Email setting above will be used for all emails, ignoring values set by other plugins."
 msgstr "Pokud je povoleno, výše uvedené nastavení Od e-mailu bude použito pro všechny e-maily, přičemž budou ignorovány hodnoty nastavené jinými pluginy."
 
-#: assets/languages/wp-mail-smtp-vue.php:307
+#: assets/languages/wp-mail-smtp-vue.php:222
 msgid "If enabled, the From Name setting above will be used for all emails, ignoring values set by other plugins."
 msgstr "Pokud je povoleno, výše uvedené nastavení Od jména bude použito pro všechny e-maily, přičemž budou ignorovány hodnoty nastavené jinými pluginy."
 
-#: assets/languages/wp-mail-smtp-vue.php:364
+#: assets/languages/wp-mail-smtp-vue.php:290
 msgid "Import Data and Continue"
 msgstr "Importujte data a pokračujte"
 
-#: assets/languages/wp-mail-smtp-vue.php:358
+#: assets/languages/wp-mail-smtp-vue.php:284
 msgid "Import data from your current plugins"
 msgstr "Importujte data z Vašich aktuálních pluginů"
 
 #. Translators: Link to the Sendgrid API settings.
-#: assets/languages/wp-mail-smtp-vue.php:566
+#: assets/languages/wp-mail-smtp-vue.php:333
 msgid "%1$sFollow this link%2$s to get an API Key for Sendgrid."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro Sendgrid."
 
 #. Translators: Link to the Sendinblue API settings.
-#: assets/languages/wp-mail-smtp-vue.php:519
+#: assets/languages/wp-mail-smtp-vue.php:265
 msgid "%1$sFollow this link%2$s to get an API Key for Sendinblue."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro Sendinblue."
 
 #. Translators: Link to the SMTP.com API settings.
-#: assets/languages/wp-mail-smtp-vue.php:630
+#: assets/languages/wp-mail-smtp-vue.php:542
 msgid "%1$sFollow this link%2$s to get an API Key for SMTP.com."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro SMTP.com."
 
 #. Translators: Link to the Mailgun API settings.
-#: assets/languages/wp-mail-smtp-vue.php:545
+#: assets/languages/wp-mail-smtp-vue.php:478
 msgid "%1$sFollow this link%2$s to get an API Key from Mailgun."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte klíč API pro Mailgun."
 
-#: assets/languages/wp-mail-smtp-vue.php:785
+#: assets/languages/wp-mail-smtp-vue.php:781
 msgid "Add New SES Identity"
 msgstr "Přidat novou identitu SES"
 
-#: assets/languages/wp-mail-smtp-vue.php:682
+#: assets/languages/wp-mail-smtp-vue.php:529
 msgid "Application Password"
 msgstr "Heslo aplikace"
 
-#: assets/languages/wp-mail-smtp-vue.php:745
+#: assets/languages/wp-mail-smtp-vue.php:654
 msgid "Connected as"
 msgstr "Připojeno jako"
 
-#: assets/languages/wp-mail-smtp-vue.php:751
+#: assets/languages/wp-mail-smtp-vue.php:747
 msgid "Please enter a valid email address"
 msgstr "Zadejte prosím platnou emailovou adresu"
 
-#: assets/languages/wp-mail-smtp-vue.php:748
+#: assets/languages/wp-mail-smtp-vue.php:744
 msgid "Please enter a domain"
 msgstr "Zadejte prosím doménu"
 
-#: assets/languages/wp-mail-smtp-vue.php:649
+#: assets/languages/wp-mail-smtp-vue.php:367
 msgid "Secret Access Key"
 msgstr "Tajný přístupový klíč"
 
-#: assets/languages/wp-mail-smtp-vue.php:38
+#: assets/languages/wp-mail-smtp-vue.php:56
 msgid "Settings Updated"
 msgstr "Nastavení aktualizováno"
 
-#: assets/languages/wp-mail-smtp-vue.php:82
+#: assets/languages/wp-mail-smtp-vue.php:822
 msgid "You appear to be offline. Plugin information not retrieved."
 msgstr "Zdá se, že jste offline. Informace o pluginu nebyly načteny."
 
-#: assets/languages/wp-mail-smtp-vue.php:73
+#: assets/languages/wp-mail-smtp-vue.php:813
 msgid "You appear to be offline. Plugin not installed."
 msgstr "Zdá se, že jste offline. Plugin nebyl nainstalován."
 
 #. Translators: Link to the Mailgun Domain settings.
-#: assets/languages/wp-mail-smtp-vue.php:549
+#: assets/languages/wp-mail-smtp-vue.php:482
 msgid "%1$sFollow this link%2$s to get a Domain Name from Mailgun."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte název domény od Mailgun."
 
 #. Translators: Link to the SMTP.com Senders/Channel settings.
-#: assets/languages/wp-mail-smtp-vue.php:634
+#: assets/languages/wp-mail-smtp-vue.php:546
 msgid "%1$sFollow this link%2$s to get a Sender Name for SMTP.com."
 msgstr "%1$sPomocí tohoto odkazu%2$s získáte jméno odesílatele pro SMTP.com."
 
 #. Translators: %1$s - the number of current step, %2$s - number of all steps.
-#: assets/languages/wp-mail-smtp-vue.php:692
+#: assets/languages/wp-mail-smtp-vue.php:582
 msgid "Step %1$s of %2$s"
 msgstr "Krok %1$s z %2$s"
 
-#: assets/languages/wp-mail-smtp-vue.php:334
+#: assets/languages/wp-mail-smtp-vue.php:183
 msgid "Finish Setup"
 msgstr "Dokončit nastavení"
 
-#: assets/languages/wp-mail-smtp-vue.php:76
+#: assets/languages/wp-mail-smtp-vue.php:816
 msgid "Can't fetch plugins information."
 msgstr "Nelze načíst informace o pluginech."
 
-#: assets/languages/wp-mail-smtp-vue.php:79
+#: assets/languages/wp-mail-smtp-vue.php:819
 msgid "It looks like we can't fetch plugins information."
 msgstr "Zdá se, že nemůžeme načíst informace o pluginech."
 
-#: assets/languages/wp-mail-smtp-vue.php:100
+#: assets/languages/wp-mail-smtp-vue.php:41
 msgid "It looks like we can't register the Amazon SES Identity."
 msgstr "Zdá se, že nemůžeme zaregistrovat identitu Amazon SES."
 
-#: assets/languages/wp-mail-smtp-vue.php:53
+#: assets/languages/wp-mail-smtp-vue.php:828
 msgid "It looks like we can't perform the mailer configuration check."
 msgstr "Zdá se, že nemůžeme provést kontrolu konfigurace maileru."
 
-#: assets/languages/wp-mail-smtp-vue.php:97
+#: assets/languages/wp-mail-smtp-vue.php:38
 msgid "It looks like we can't retrieve the Amazon SES Identities."
 msgstr "Zdá se, že nemůžeme načíst identitu Amazon SES."
 
-#: assets/languages/wp-mail-smtp-vue.php:139
+#: assets/languages/wp-mail-smtp-vue.php:111
 msgid "Let's Get Started"
 msgstr "Začněme"
 
-#: assets/languages/wp-mail-smtp-vue.php:606
+#: assets/languages/wp-mail-smtp-vue.php:258
 msgid "Read how to set up Zoho Mail"
 msgstr "Přečtěte si, jak nastavit Zoho mail"
 
-#: assets/languages/wp-mail-smtp-vue.php:676
+#: assets/languages/wp-mail-smtp-vue.php:567
 msgid "Read how to set up the Gmail mailer"
 msgstr "Přečtěte si, jak nastavit odesílání pomocí Gmailu"
 
-#: assets/languages/wp-mail-smtp-vue.php:782
+#: assets/languages/wp-mail-smtp-vue.php:778
 msgid "Verify SES Identity"
 msgstr "Ověřit identitu SES"
 
-#: assets/languages/wp-mail-smtp-vue.php:652
+#: assets/languages/wp-mail-smtp-vue.php:370
 msgid "SES Identities"
 msgstr "Identity SES"
 
@@ -1141,15 +1158,19 @@ msgstr "Identity SES"
 msgid "Yikes! WordPress Update Required"
 msgstr "Jejda! Je vyžadována aktualizace WordPress"
 
+#: assets/languages/wp-mail-smtp-vue.php:252
+msgid "Redirect URI"
+msgstr "Přesměrovat URI"
+
 #: assets/languages/wp-mail-smtp-vue.php:9
 msgid "Yikes! PHP Update Required"
 msgstr "Jejda! Je vyžadována aktualizace PHP"
 
-#: src/Admin/SetupWizard.php:1034
+#: src/Admin/SetupWizard.php:1043
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
-#: src/Admin/SetupWizard.php:490
+#: src/Admin/SetupWizard.php:499
 msgid "Contact Us"
 msgstr "Kontaktujte nás"
 
@@ -1158,28 +1179,28 @@ msgstr "Kontaktujte nás"
 msgid "%s icon"
 msgstr "%s ikona"
 
-#: assets/languages/wp-mail-smtp-vue.php:258
-#: src/Admin/Pages/SettingsTab.php:423
+#: assets/languages/wp-mail-smtp-vue.php:726
+#: src/Admin/Pages/SettingsTab.php:427
 msgid "Connect"
 msgstr "Připojit"
 
-#: src/Admin/SetupWizard.php:861 src/Admin/SetupWizard.php:865
+#: src/Admin/SetupWizard.php:870 src/Admin/SetupWizard.php:874
 msgid "Could not install the plugin. Don't have file permission."
 msgstr "Plugin nelze nainstalovat. Nemáte oprávnění k souboru."
 
-#: src/Admin/SetupWizard.php:961
+#: src/Admin/SetupWizard.php:970
 msgid "Could not install the plugin. WP Plugin installer could not retrieve plugin information."
 msgstr "Plugin nelze nainstalovat. Instalační program pluginu WP nemohl načíst informace o pluginu."
 
-#: src/Admin/SetupWizard.php:876
+#: src/Admin/SetupWizard.php:885
 msgid "Could not install the plugin. WP Plugin installer initialization failed."
 msgstr "Plugin nelze nainstalovat. Inicializace instalačního programu pluginu WP se nezdařila."
 
-#: src/Admin/SetupWizard.php:839
+#: src/Admin/SetupWizard.php:848
 msgid "Could not install the plugin. You don't have permission to install plugins."
 msgstr "Plugin nelze nainstalovat. Nemáte oprávnění k instalaci pluginů."
 
-#: src/Admin/Pages/TestTab.php:705
+#: src/Admin/Pages/TestTab.php:708
 msgid "It looks like your SendGrid API Key is invalid."
 msgstr "Zdá se, že váš klíč API SendGrid je neplatný."
 
@@ -1187,55 +1208,55 @@ msgstr "Zdá se, že váš klíč API SendGrid je neplatný."
 msgid "Something went wrong. Please try again later."
 msgstr "Něco se pokazilo. Prosím zkuste to znovu později."
 
-#: src/Admin/SetupWizard.php:470
+#: src/Admin/SetupWizard.php:479
 msgid "Whoops, something's not working."
 msgstr "Jejda, něco nefunguje."
 
-#: assets/languages/wp-mail-smtp-vue.php:695 src/Admin/SetupWizard.php:462
+#: assets/languages/wp-mail-smtp-vue.php:558 src/Admin/SetupWizard.php:471
 msgid "WP Mail SMTP logo"
 msgstr "WP Mail SMTP logo"
 
-#: src/Admin/Pages/TestTab.php:710
+#: src/Admin/Pages/TestTab.php:713
 msgid "Save the plugin settings."
 msgstr "Uložit nastavení pluginu."
 
-#: src/Admin/SetupWizard.php:1028
+#: src/Admin/SetupWizard.php:1037
 msgid "Google Analytics by MonsterInsights"
 msgstr "Google Analytics od MonsterInsights"
 
-#: src/Admin/SetupWizard.php:477
+#: src/Admin/SetupWizard.php:486
 msgid "If you aren't already using Chrome, Firefox, Safari, or Edge, then please try switching to one of these popular browsers."
 msgstr "Pokud ještě nepoužíváte Chrome, Firefox, Safari nebo Edge, zkuste přejít na některý z těchto oblíbených prohlížečů."
 
-#: src/Admin/SetupWizard.php:476
+#: src/Admin/SetupWizard.php:485
 msgid "If you are using an ad blocker, please disable it or whitelist the current page."
 msgstr "Pokud používáte adblock, deaktivujte jej nebo přidejte aktuální stránku na seznam výjimek."
 
-#: src/Admin/Pages/TestTab.php:711
+#: src/Admin/Pages/TestTab.php:714
 msgid "If updating the API Key doesn't resolve this issue, please contact our support."
 msgstr "Pokud aktualizace klíče API tento problém nevyřeší, kontaktujte naši podporu."
 
-#: src/Admin/SetupWizard.php:473
+#: src/Admin/SetupWizard.php:482
 msgid "In order to fix this issue, please check each of the items below:"
 msgstr "Chcete-li tento problém vyřešit, zkontrolujte každou z níže uvedených položek:"
 
-#: src/Admin/SetupWizard.php:481
+#: src/Admin/SetupWizard.php:490
 msgid "If you've checked each of these details and are still running into issues, then please get in touch with our support team. We’d be happy to help!"
 msgstr "Pokud jste zkontrolovali všechny tyto podrobnosti a stále máte problémy, kontaktujte prosím náš tým podpory. Rádi vám pomůžeme!"
 
-#: src/Admin/Pages/TestTab.php:703
+#: src/Admin/Pages/TestTab.php:706
 msgid "Invalid SendGrid API key"
 msgstr "Neplatný klíč API SendGrid"
 
-#: src/Admin/SetupWizard.php:471
+#: src/Admin/SetupWizard.php:480
 msgid "It looks like something is preventing JavaScript from loading on your website. WP Mail SMTP requires JavaScript in order to give you the best possible experience."
 msgstr "Zdá se, že něco brání načítání JavaScriptu na Vašem webu. WP Mail SMTP vyžaduje JavaScript, aby Vám poskytl nejlepší možný zážitek."
 
-#: src/Admin/Pages/SettingsTab.php:421
+#: src/Admin/Pages/SettingsTab.php:425
 msgid "Paste license key here"
 msgstr "Zde vložte licenční klíč"
 
-#: src/Admin/SetupWizard.php:1112
+#: src/Admin/SetupWizard.php:1133
 msgid "Please enter a valid license key!"
 msgstr "Zadejte prosím platný licenční klíč!"
 
@@ -1243,24 +1264,28 @@ msgstr "Zadejte prosím platný licenční klíč!"
 msgid "Setup Wizard"
 msgstr "Průvodce nastavením"
 
-#: assets/languages/wp-mail-smtp-vue.php:142 src/Admin/SetupWizard.php:283
+#: assets/languages/wp-mail-smtp-vue.php:114 src/Admin/SetupWizard.php:288
 msgid "Go back to the Dashboard"
 msgstr "Přejít na Nástěnku"
 
-#: src/Admin/SetupWizard.php:537 src/Admin/SetupWizard.php:555
-#: src/Admin/SetupWizard.php:619
+#: src/Admin/SetupWizard.php:546 src/Admin/SetupWizard.php:564
+#: src/Admin/SetupWizard.php:628
 msgid "You don't have permission to change options for this WP site!"
 msgstr "Nemáte oprávnění měnit nastavení pro tento WP web!"
 
-#: src/Admin/SetupWizard.php:1106
+#: src/Admin/SetupWizard.php:1127
 msgid "You don't have the permission to perform this action."
 msgstr "Nemáte povolení pro vykonání této akce."
+
+#: src/Admin/Pages/TestTab.php:1532
+msgid "The test email might have sent, but its deliverability should be improved."
+msgstr "Testovací e-mail mohl být odeslán, ale jeho doručitelnost by se měla zlepšit."
 
 #: src/Connect.php:55
 msgid "Almost Done"
 msgstr "Téměř hotovo"
 
-#: assets/languages/wp-mail-smtp-vue.php:29
+#: assets/languages/wp-mail-smtp-vue.php:47
 #: src/Admin/Pages/DebugEventsTab.php:151 src/Connect.php:57
 msgid "OK"
 msgstr "OK"
@@ -1293,11 +1318,19 @@ msgstr "Při instalaci upgradu došlo k chybě. Zkontrolujte oprávnění systé
 msgid "Please enter your license key to connect."
 msgstr "Zadejte prosím licenční klíč pro připojení."
 
+#: src/Connect.php:295
+msgid "Pro version installed but needs to be activated on the Plugins page."
+msgstr "Verze Pro je nainstalována, ale je třeba ji aktivovat na stránce Pluginy."
+
+#: src/Connect.php:58
+msgid "Unfortunately there was a server connection error."
+msgstr "Bohužel došlo k chybě připojení k serveru."
+
 #: src/Admin/Area.php:341
 msgid "Multisite"
 msgstr "Síť webů"
 
-#: assets/languages/wp-mail-smtp-vue.php:829 src/Core.php:1086
+#: assets/languages/wp-mail-smtp-vue.php:825 src/Core.php:1095
 msgid "Loading"
 msgstr "Načítání"
 
@@ -1327,7 +1360,7 @@ msgstr "Zamítnout tuto zprávu."
 
 #. translators: %s - WPMailSMTP.com Upgrade page URL.
 #: src/Admin/Education.php:69
-msgid "You’re using WP Mail SMTP Lite. To unlock more features consider <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">upgrading to Pro</a>."
+msgid "You’re using WP Mail SMTP Lite. To unlock more features, consider <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">upgrading to Pro</a>."
 msgstr "Používáte WP Mail SMTP Lite. Chcete-li odemknout více funkcí, zvažte <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">upgrade na Pro</a>."
 
 #: src/Admin/Notifications.php:454
@@ -1342,7 +1375,7 @@ msgstr "Zamítnout tuto zprávu"
 msgid "Next message"
 msgstr "Následující zpráva"
 
-#: src/Admin/Pages/AboutTab.php:159
+#: src/Admin/Pages/AboutTab.php:160
 msgid "Plugin icon"
 msgstr "Ikona pluginu"
 
@@ -1362,12 +1395,12 @@ msgstr "Obecná chyba"
 msgid "WP Mail SMTP DB tables are created"
 msgstr "WP Mail SMTP databázové tabulky jsou vytvořeny"
 
-#: src/SiteHealth.php:272
+#: src/SiteHealth.php:282
 msgid "WP Mail SMTP DB tables check has failed"
 msgstr "WP Mail SMTP Kontrola databázových tabulek DB nezdařila"
 
 #. translators: %s - the list of missing tables separated by comma.
-#: src/SiteHealth.php:278
+#: src/SiteHealth.php:288
 msgid "Missing table: %s"
 msgid_plural "Missing tables: %s"
 msgstr[0] "Chybějící tabulka: %s"
@@ -1382,7 +1415,7 @@ msgstr "Nenalezena žádná databázová tabulka."
 msgid "Cancel"
 msgstr "Storno"
 
-#: src/Admin/Review.php:145
+#: src/Admin/Review.php:151
 msgid "I already did"
 msgstr "Už jsem to udělal"
 
@@ -1390,15 +1423,15 @@ msgstr "Už jsem to udělal"
 msgid "Warning icon"
 msgstr "Ikona varování"
 
-#: src/Admin/Review.php:144
+#: src/Admin/Review.php:150
 msgid "Nope, maybe later"
 msgstr "Ne, možná později"
 
-#: src/Admin/Review.php:142
+#: src/Admin/Review.php:148
 msgid "Ok, you deserve it"
 msgstr "Ok, zasloužíte si to"
 
-#: assets/languages/wp-mail-smtp-vue.php:32 src/Admin/Area.php:455
+#: assets/languages/wp-mail-smtp-vue.php:50 src/Admin/Area.php:455
 #: src/Admin/Pages/DebugEventsTab.php:152
 msgid "Heads up!"
 msgstr "Pozor!"
@@ -1407,7 +1440,7 @@ msgstr "Pozor!"
 msgid "Yes"
 msgstr "Ano"
 
-#: src/Admin/Review.php:133
+#: src/Admin/Review.php:139
 msgid "No thanks"
 msgstr "Ne, děkuji"
 
@@ -1415,84 +1448,92 @@ msgstr "Ne, děkuji"
 msgid "Not Really"
 msgstr "Spíš ne"
 
-#: src/Admin/Pages/TestTab.php:1187
+#: src/Admin/Pages/TestTab.php:1193
 msgid "GuzzleHttp requirements."
 msgstr "Požadavky pro GuzzleHttp."
 
-#: src/Admin/Pages/TestTab.php:1055 src/Providers/Gmail/Mailer.php:267
+#: src/Admin/Pages/TestTab.php:1060 src/Providers/Gmail/Mailer.php:267
 msgid "Go to WP Mail SMTP plugin settings page. Click the “Remove Connection” button."
 msgstr "Přejít na stránku nastavení pluginu WP Mail SMTP. Klikněte na tlačítko “Odebrat připojení“."
 
-#: src/Admin/Pages/TestTab.php:1265
+#: src/Admin/Pages/TestTab.php:1271
 msgid "Contact your web hosting provider and inform them you are having issues with libpcre2 library on PHP 7.4."
 msgstr "Kontaktujte svého poskytovatele webhostingu a informujte ho, že máte problémy s knihovnou libpcre2 v PHP 7.4."
 
-#: src/Admin/Pages/TestTab.php:1267
+#: src/Admin/Pages/TestTab.php:1273
 msgid "For a quick fix, until your web hosting resolves this, you can downgrade to PHP version 7.3 on your server."
 msgstr "Pro rychlou opravu, dokud to váš webhosting nevyřeší, můžete na svém serveru přejít na verzi PHP 7.3."
 
-#: src/Admin/Review.php:130
+#: src/Admin/Review.php:134
 msgid "Give Feedback"
 msgstr "Odeslat zpětnou vazbu"
 
-#: src/Admin/Pages/TestTab.php:1178
+#: src/Admin/Pages/TestTab.php:1184
 msgid "Please make sure you entered an accurate Sender Name in WP Mail SMTP plugin settings."
 msgstr "Ujistěte se prosím, že jste v nastavení pluginu WP Mail SMTP zadali přesné jméno odesílatele."
 
-#: src/Providers/OptionsAbstract.php:461
+#: src/Admin/Pages/TestTab.php:1267
+msgid "It looks like your server is running PHP version 7.4.x with an outdated PCRE library (libpcre2) that has a known issue with email address validation."
+msgstr "Zdá se, že váš server používá PHP verzi 7.4.x se zastaralou knihovnou PCRE (libpcre2), která má známý problém s ověřováním e-mailové adresy."
+
+#: src/Admin/Pages/TestTab.php:1268
+msgid "There is a known issue with PHP version 7.4.x, when using libpcre2 library version lower than 10.33."
+msgstr "Existuje známý problém s PHP verzí 7.4.x při použití verze knihovny libpcre2 nižší než 10.33."
+
+#: src/Providers/OptionsAbstract.php:465
 msgid "If you'd prefer not to set up SSL, or need an SMTP solution in the meantime, please select a different mailer option."
 msgstr "Pokud si nepřejete nastavovat SSL nebo mezitím potřebujete řešení SMTP, vyberte jinou možnost odesílatele."
 
-#: src/Providers/OptionsAbstract.php:362
+#: src/Providers/OptionsAbstract.php:365
 msgid "Learn More"
 msgstr "Zjistit více"
 
-#: src/Providers/PepipostAPI/Options.php:53
+#: src/Providers/PepipostAPI/Options.php:55
 msgid "Get Started with Pepipost"
 msgstr "Začněte s Pepipost"
 
-#: src/Providers/SMTPcom/Options.php:74
+#: src/Providers/SMTPcom/Options.php:76
 msgid "SMTP.com"
 msgstr "SMTP.com"
 
-#: src/Providers/SMTPcom/Options.php:146
+#: src/Providers/SMTPcom/Options.php:148
 msgid "Get Sender Name"
 msgstr "Získejte jméno odesílatele"
 
 #: src/Providers/Sendlayer/Options.php:108
-#: src/Providers/SMTPcom/Options.php:117
+#: src/Providers/SMTPcom/Options.php:119
 #: src/Providers/SparkPost/Options.php:107
 msgid "Get API Key"
 msgstr "Získejte klíč API"
 
-#: assets/languages/wp-mail-smtp-vue.php:637
-#: src/Providers/SMTPcom/Options.php:60
+#: assets/languages/wp-mail-smtp-vue.php:549
+#: src/Providers/SMTPcom/Options.php:62
 msgid "Get Started with SMTP.com"
 msgstr "Začněte s SMTP.com"
 
 #. translators: %s - API key link.
-#: src/Providers/SMTPcom/Options.php:115
+#: src/Providers/SMTPcom/Options.php:117
 msgid "Follow this link to get an API Key from SMTP.com: %s."
 msgstr "Kliknutím na tento odkaz získáte klíč API z SMTP.com: %s."
 
-#: assets/languages/wp-mail-smtp-vue.php:626
-#: src/Providers/SMTPcom/Options.php:128
+#: assets/languages/wp-mail-smtp-vue.php:538
+#: src/Providers/SMTPcom/Options.php:130
 msgid "Sender Name"
 msgstr "Jméno odesílatele"
 
-#: src/Providers/SMTPcom/Mailer.php:453
+#: src/Providers/SMTPcom/Mailer.php:451
 msgid "Channel:"
 msgstr "Kanál:"
 
-#: src/Admin/Area.php:1186
+#: src/Admin/Area.php:1190
 msgid "Go to WP Mail SMTP Settings page"
 msgstr "Přejít na stránku Nastavení WP Mail SMTP"
 
-#: src/Providers/SMTPcom/Mailer.php:451
+#: src/Providers/SMTPcom/Mailer.php:449
 msgid "Api Key:"
 msgstr "Api klíč:"
 
-#: src/Admin/Pages/AboutTab.php:339
+#: src/Admin/Pages/AboutTab.php:340
 msgid "RafflePress Pro"
 msgstr "RafflePress Pro"
 
@@ -1516,7 +1557,7 @@ msgstr "Typ licenčního klíče"
 msgid "Test email sending"
 msgstr "Test odeslání e-mailu"
 
-#: src/Admin/Pages/AboutTab.php:333
+#: src/Admin/Pages/AboutTab.php:334
 msgid "RafflePress"
 msgstr "RafflePress"
 
@@ -1524,11 +1565,11 @@ msgstr "RafflePress"
 msgid "Pepipost SMTP"
 msgstr "Pepipost SMTP"
 
-#: src/Providers/PepipostAPI/Options.php:115
+#: src/Providers/PepipostAPI/Options.php:117
 msgid "Get the API Key"
 msgstr "Získejte klíč API"
 
-#: src/Admin/Area.php:576
+#: src/Admin/Area.php:579
 msgid "Download"
 msgstr "Stáhnout"
 
@@ -1537,7 +1578,7 @@ msgid "Amazon SES"
 msgstr "Amazon SES"
 
 #: src/Admin/Area.php:282 src/Admin/Area.php:283 src/Admin/Area.php:468
-#: src/Admin/SetupWizard.php:231 src/Reports/Emails/Summary.php:313
+#: src/Admin/SetupWizard.php:233 src/Reports/Emails/Summary.php:313
 msgid "Upgrade to Pro"
 msgstr "Upgradovat na Pro"
 
@@ -1545,25 +1586,25 @@ msgstr "Upgradovat na Pro"
 msgid "%name% is a PRO Feature"
 msgstr "%name% je funkce verze PRO"
 
-#: src/Admin/Area.php:484 src/Admin/SetupWizard.php:247
+#: src/Admin/Area.php:487 src/Admin/SetupWizard.php:252
 msgid "Already purchased?"
 msgstr "Již zakoupeno?"
 
-#: src/Admin/Pages/MiscTab.php:148
+#: src/Admin/Pages/MiscTab.php:149
 msgid "Hide Email Delivery Errors"
 msgstr "Skrýt chyby doručení e-mailu"
 
-#: src/Providers/Sendinblue/Options.php:68
+#: src/Providers/Sendinblue/Options.php:70
 msgid "Sendinblue"
 msgstr "Sendinblue"
 
 #. translators: %s - link to get an API Key.
-#: src/Providers/PepipostAPI/Options.php:113
-#: src/Providers/Sendinblue/Options.php:121
+#: src/Providers/PepipostAPI/Options.php:115
+#: src/Providers/Sendinblue/Options.php:123
 msgid "Follow this link to get an API Key: %s."
 msgstr "Kliknutím na tento odkaz získáte klíč API: %s."
 
-#: src/Providers/Sendinblue/Options.php:123
+#: src/Providers/Sendinblue/Options.php:125
 msgid "Get v3 API Key"
 msgstr "Získejte klíč API v3"
 
@@ -1571,12 +1612,12 @@ msgstr "Získejte klíč API v3"
 msgid "https://wpmailsmtp.com/"
 msgstr "https://wpmailsmtp.com/"
 
-#: src/Admin/Area.php:567 src/Admin/Area.php:575
-#: src/Admin/Pages/AboutTab.php:231 src/Connect.php:54
+#: src/Admin/Area.php:570 src/Admin/Area.php:578
+#: src/Admin/Pages/AboutTab.php:232 src/Connect.php:54
 msgid "Activate"
 msgstr "Aktivovat"
 
-#: assets/languages/wp-mail-smtp-vue.php:712 src/Admin/Area.php:165
+#: assets/languages/wp-mail-smtp-vue.php:621 src/Admin/Area.php:165
 msgid "You have successfully linked the current site with your Google API project. Now you can start sending emails through Gmail."
 msgstr "Úspěšně jste propojili aktuální web se svým projektem Google API. Nyní můžete začít odesílat e-maily prostřednictvím Gmailu."
 
@@ -1588,66 +1629,70 @@ msgstr "Licenční klíč"
 msgid "License"
 msgstr "Licence"
 
-#: src/Admin/Area.php:571
+#: src/Admin/Area.php:574
 msgid "Processing..."
 msgstr "Zpracování..."
 
-#: src/Admin/Area.php:574
+#: src/Admin/Area.php:577
 msgid "Install and Activate"
 msgstr "Instalovat a aktivovat"
 
-#: src/Admin/Pages/SettingsTab.php:490
+#: src/Admin/Pages/SettingsTab.php:494
 msgid "Pro Features:"
 msgstr "Funkce verze Pro:"
 
-#: src/Admin/Area.php:573
+#: src/Admin/Area.php:576
 msgid "Could not install a plugin. Please download from WordPress.org and install manually."
 msgstr "Plugin nelze nainstalovat. Stáhněte si ho prosím z WordPress.org a nainstalujte ručně."
 
 #. Translators: %s - discount value $50
-#: src/Admin/Pages/SettingsTab.php:403
+#: src/Admin/Pages/SettingsTab.php:407
 msgid "As a valued WP Mail SMTP Lite user you receive <strong>%s off</strong>, automatically applied at checkout!"
 msgstr "Jako vážený uživatel WP Mail SMTP Lite obdržíte <strong>%s slevu</strong>, která bude automaticky použita na pokladně!"
 
-#: src/Admin/Pages/SettingsTab.php:505
+#: src/Admin/Pages/SettingsTab.php:509
 msgid "Install WP Mail SMTP Pro plugin"
 msgstr "Nainstaloovat plugin WP Mail SMTP Pro"
 
 #. translators: %s - WPMailSMTP.com URL.
-#: src/Admin/Pages/SettingsTab.php:517
+#: src/Admin/Pages/SettingsTab.php:521
 msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Get WP Mail SMTP Pro Today and Unlock all the Powerful Features &raquo;</a>"
 msgstr "<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Získejte WP Mail SMTP Pro ještě dnes a odemkněte všechny výkonné funkce &raquo;</a>"
 
-#: src/Admin/Pages/SettingsTab.php:498
+#: src/Admin/Pages/SettingsTab.php:502
 msgid "Amazon SES - harness the power of AWS"
 msgstr "Amazon SES – využijte sílu AWS"
 
-#: src/Admin/Pages/SettingsTab.php:479
+#: src/Admin/Pages/SettingsTab.php:483
 msgid "Get WP Mail SMTP Pro and Unlock all the Powerful Features"
 msgstr "Získejte WP Mail SMTP Pro a odemkněte všechny výkonné funkce"
 
-#: src/Admin/Pages/SettingsTab.php:508
+#: src/Admin/Pages/SettingsTab.php:512
 msgid "Set up WP Mail SMTP Pro plugin"
 msgstr "Nastavte plugin WP Mail SMTP Pro"
 
-#: src/Admin/Pages/SettingsTab.php:509
+#: src/Admin/Pages/SettingsTab.php:513
 msgid "Test and verify email delivery"
 msgstr "Otestujte a ověřte doručení e-mailu"
 
-#: src/Admin/Pages/SettingsTab.php:377
+#: src/Admin/Pages/SettingsTab.php:381
 msgid "You're using WP Mail SMTP Lite - no license needed. Enjoy!"
 msgstr "Používáte WP Mail SMTP Lite – není potřeba žádná licence. Užijte si to!"
 
-#: src/Admin/Area.php:570 src/Admin/Pages/AboutTab.php:228
+#: src/Admin/Pages/SettingsTab.php:487
+msgid "Thanks for being a loyal WP Mail SMTP user. Upgrade to WP Mail SMTP Pro to unlock more awesome features and experience why WP Mail SMTP is the most popular SMTP plugin."
+msgstr "Děkujeme, že jste věrným uživatelem WP Mail SMTP. Upgradujte na WP Mail SMTP Pro, abyste odemkli další úžasné funkce a poznali, proč je WP Mail SMTP nejoblíbenějším SMTP pluginem."
+
+#: src/Admin/Area.php:573 src/Admin/Pages/AboutTab.php:229
 msgid "Inactive"
 msgstr "Neaktivní"
 
 #. translators: %s - status HTML text.
-#: src/Admin/Pages/AboutTab.php:173
+#: src/Admin/Pages/AboutTab.php:174
 msgid "Status: %s"
 msgstr "Stav: %s"
 
-#: src/Admin/Pages/AboutTab.php:283
+#: src/Admin/Pages/AboutTab.php:284
 msgid "WPForms Pro"
 msgstr "WPForms Pro"
 
@@ -1671,32 +1716,32 @@ msgstr "Zákaznická podpora"
 msgid "Feature"
 msgstr "Funkce"
 
-#: src/Admin/Pages/AboutTab.php:540
+#: src/Admin/Pages/AboutTab.php:541
 msgid "Could not install the plugin."
 msgstr "Plugin nelze nainstalovat."
 
-#: src/Admin/Pages/AboutTab.php:492
+#: src/Admin/Pages/AboutTab.php:493
 msgid "Could not activate the plugin. Please activate it from the Plugins page."
 msgstr "Plugin nelze aktivovat. Aktivujte jej prosím na stránce Pluginy."
 
-#: src/Admin/Pages/TestTab.php:887
+#: src/Admin/Pages/TestTab.php:891
 msgid "It seems that you forgot to activate your Mailgun account."
 msgstr "Zdá se, že jste zapomněli aktivovat svůj účet Mailgun."
 
-#: src/Admin/Pages/AboutTab.php:270
+#: src/Admin/Pages/AboutTab.php:271
 msgid "OptinMonster"
 msgstr "OptinMonster"
 
-#: src/Admin/Pages/AboutTab.php:524
+#: src/Admin/Pages/AboutTab.php:525
 msgid "Plugin activated."
 msgstr "Plugin byl aktivován."
 
-#: src/Admin/Pages/AboutTab.php:607 src/Connect.php:214 src/Connect.php:222
+#: src/Admin/Pages/AboutTab.php:608 src/Connect.php:214 src/Connect.php:222
 #: src/Connect.php:291
 msgid "Plugin installed & activated."
 msgstr "Plugin nainstalován & aktivován."
 
-#: src/Admin/Pages/AboutTab.php:615
+#: src/Admin/Pages/AboutTab.php:616
 msgid "Plugin installed."
 msgstr "Plugin byl nainstalován."
 
@@ -1704,27 +1749,27 @@ msgstr "Plugin byl nainstalován."
 msgid "Enter email address where test email will be sent."
 msgstr "Zadejte e-mailovou adresu, na kterou bude zaslán zkušební e-mail."
 
-#: src/Admin/Pages/AboutTab.php:297
+#: src/Admin/Pages/AboutTab.php:298
 msgid "MonsterInsights Pro"
 msgstr "MonsterInsights Pro"
 
-#: src/Admin/Pages/AboutTab.php:291
+#: src/Admin/Pages/AboutTab.php:292
 msgid "MonsterInsights"
 msgstr "MonsterInsights"
 
-#: src/Admin/SetupWizard.php:1022
+#: src/Admin/SetupWizard.php:1031
 msgid "Contact Forms by WPForms"
 msgstr "Contact Forms by WPForms"
 
-#: src/Admin/Pages/TestTab.php:891
+#: src/Admin/Pages/TestTab.php:895
 msgid "If you do not see activation email, go to your Mailgun control panel and resend the activation email."
 msgstr "Pokud aktivační e-mail nevidíte, přejděte na ovládací panel Mailgun a znovu odešlete aktivační e-mail."
 
-#: src/Admin/Pages/AboutTab.php:110
+#: src/Admin/Pages/AboutTab.php:111
 msgid "The WPForms Team"
 msgstr "Tým WPForms"
 
-#: src/Admin/Pages/AboutTab.php:108
+#: src/Admin/Pages/AboutTab.php:109
 msgid "The WPForms Team photo"
 msgstr "Fotografie týmu WPForms"
 
@@ -1732,7 +1777,7 @@ msgstr "Fotografie týmu WPForms"
 msgid "Get WP Mail SMTP Pro Today and Unlock all of these Powerful Features"
 msgstr "Získejte WP Mail SMTP Pro ještě dnes a odemkněte všechny tyto výkonné funkce"
 
-#: src/Admin/Pages/AboutTab.php:102
+#: src/Admin/Pages/AboutTab.php:103
 msgid "Yup, we know a thing or two about building awesome products that customers love."
 msgstr "Ano, víme něco o vytváření úžasných produktů, které zákazníci milují."
 
@@ -1759,18 +1804,18 @@ msgstr "Připojeno jako %s"
 msgid "All the defined constants will stop working and you will be able to change all the values on this page."
 msgstr "Všechny definované konstanty přestanou fungovat a budete moci změnit všechny hodnoty na této stránce."
 
-#: assets/languages/wp-mail-smtp-vue.php:512
+#: assets/languages/wp-mail-smtp-vue.php:429
 #: src/Providers/OptionsAbstract.php:240
 msgid "TLS"
 msgstr "TLS"
 
-#: assets/languages/wp-mail-smtp-vue.php:509
+#: assets/languages/wp-mail-smtp-vue.php:426
 #: src/Providers/OptionsAbstract.php:231
 msgid "SSL"
 msgstr "SSL"
 
 #. Author of the plugin
-#: src/Admin/Pages/AboutTab.php:277
+#: src/Admin/Pages/AboutTab.php:278
 msgid "WPForms"
 msgstr "WPForms"
 
@@ -1790,36 +1835,36 @@ msgstr "Odeslat v HTML nebo v textovém formátu."
 msgid "Save Settings"
 msgstr "Uložit nastavení"
 
-#: src/Admin/Pages/DebugEventsTab.php:338 src/Admin/Pages/MiscTab.php:348
-#: src/Admin/Pages/SettingsTab.php:650
+#: src/Admin/Pages/DebugEventsTab.php:367 src/Admin/Pages/MiscTab.php:349
+#: src/Admin/Pages/SettingsTab.php:682
 msgid "Settings were successfully saved."
 msgstr "Nastavení bylo úspěšně uloženo."
 
-#: src/Admin/Pages/TestTab.php:873
+#: src/Admin/Pages/TestTab.php:877
 msgid "no"
 msgstr "Ne"
 
-#: src/Admin/Pages/TestTab.php:968 src/Admin/Pages/TestTab.php:1017
-#: src/Admin/Pages/TestTab.php:1037 src/Admin/Pages/TestTab.php:1065
-#: src/Admin/Pages/TestTab.php:1081 src/Admin/Pages/TestTab.php:1133
-#: src/Admin/Pages/TestTab.php:1158
+#: src/Admin/Pages/TestTab.php:973 src/Admin/Pages/TestTab.php:1022
+#: src/Admin/Pages/TestTab.php:1042 src/Admin/Pages/TestTab.php:1070
+#: src/Admin/Pages/TestTab.php:1086 src/Admin/Pages/TestTab.php:1138
+#: src/Admin/Pages/TestTab.php:1164
 msgid "Google API Error."
 msgstr "Chyba Google API."
 
-#: assets/languages/wp-mail-smtp-vue.php:826 src/Admin/Area.php:568
-#: src/Admin/Pages/AboutTab.php:223
+#: assets/languages/wp-mail-smtp-vue.php:591 src/Admin/Area.php:571
+#: src/Admin/Pages/AboutTab.php:224
 msgid "Activated"
 msgstr "Aktivováno"
 
-#: src/Admin/Area.php:569 src/Admin/Pages/AboutTab.php:220
+#: src/Admin/Area.php:572 src/Admin/Pages/AboutTab.php:221
 msgid "Active"
 msgstr "Aktivní"
 
-#: src/Admin/Pages/AboutTab.php:239
+#: src/Admin/Pages/AboutTab.php:240
 msgid "Not Installed"
 msgstr "Není nainstalován"
 
-#: src/Admin/Pages/AboutTab.php:242
+#: src/Admin/Pages/AboutTab.php:243
 msgid "Install Plugin"
 msgstr "Nainstalovat plugin"
 
@@ -1831,45 +1876,45 @@ msgstr "Výchozí (žádný)"
 msgid "Other SMTP"
 msgstr "Ostatní SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:562
+#: assets/languages/wp-mail-smtp-vue.php:495
 #: src/Providers/Mailgun/Options.php:131
 #: src/Providers/SparkPost/Options.php:137
 msgid "EU"
 msgstr "EU"
 
-#: assets/languages/wp-mail-smtp-vue.php:559
+#: assets/languages/wp-mail-smtp-vue.php:492
 #: src/Providers/Mailgun/Options.php:122
 #: src/Providers/SparkPost/Options.php:128
 msgid "US"
 msgstr "US"
 
-#: assets/languages/wp-mail-smtp-vue.php:541
+#: assets/languages/wp-mail-smtp-vue.php:240
 #: src/Providers/Mailgun/Options.php:112
 #: src/Providers/SparkPost/Options.php:118
 msgid "Region"
 msgstr "Oblast"
 
-#: assets/languages/wp-mail-smtp-vue.php:506
+#: assets/languages/wp-mail-smtp-vue.php:423
 #: src/Providers/OptionsAbstract.php:222
 msgid "None"
 msgstr "Žádný"
 
-#: assets/languages/wp-mail-smtp-vue.php:482
+#: assets/languages/wp-mail-smtp-vue.php:399
 #: src/Providers/OptionsAbstract.php:266
 msgid "Auto TLS"
 msgstr "Automatické TLS"
 
-#: assets/languages/wp-mail-smtp-vue.php:497
+#: assets/languages/wp-mail-smtp-vue.php:414
 #: src/Providers/OptionsAbstract.php:307
 msgid "SMTP Username"
 msgstr "SMTP uživatelské jméno"
 
-#: assets/languages/wp-mail-smtp-vue.php:500
+#: assets/languages/wp-mail-smtp-vue.php:417
 #: src/Providers/OptionsAbstract.php:321
 msgid "SMTP Password"
 msgstr "SMTP heslo"
 
-#: assets/languages/wp-mail-smtp-vue.php:734
+#: assets/languages/wp-mail-smtp-vue.php:643
 #: src/Providers/Gmail/Options.php:183
 msgid "Remove Connection"
 msgstr "Odstranit spojení"
@@ -1882,21 +1927,21 @@ msgstr "Poslat e-mail"
 msgid "Mail"
 msgstr "E-mail"
 
-#: assets/languages/wp-mail-smtp-vue.php:288
-#: src/Providers/PepipostAPI/Options.php:94
+#: assets/languages/wp-mail-smtp-vue.php:203
+#: src/Providers/PepipostAPI/Options.php:96
 #: src/Providers/Sendgrid/Options.php:63
-#: src/Providers/Sendinblue/Options.php:102
-#: src/Providers/Sendlayer/Options.php:87 src/Providers/SMTPcom/Options.php:97
+#: src/Providers/Sendinblue/Options.php:104
+#: src/Providers/Sendlayer/Options.php:87 src/Providers/SMTPcom/Options.php:99
 #: src/Providers/SparkPost/Options.php:83
 msgid "API Key"
 msgstr "API klíč"
 
-#: assets/languages/wp-mail-smtp-vue.php:603
+#: assets/languages/wp-mail-smtp-vue.php:255
 #: src/Providers/Gmail/Options.php:146
 msgid "Authorization"
 msgstr "Autorizace"
 
-#: assets/languages/wp-mail-smtp-vue.php:594 src/Providers/Gmail/Options.php:87
+#: assets/languages/wp-mail-smtp-vue.php:246 src/Providers/Gmail/Options.php:87
 msgid "Client ID"
 msgstr "ID klienta"
 
@@ -1905,11 +1950,11 @@ msgstr "ID klienta"
 msgid "General"
 msgstr "Obecné"
 
-#: assets/languages/wp-mail-smtp-vue.php:820
+#: assets/languages/wp-mail-smtp-vue.php:585
 msgid "Install"
 msgstr "Nainstalovat"
 
-#: src/Admin/DebugEvents/Event.php:341 src/Admin/DebugEvents/Table.php:170
+#: src/Admin/DebugEvents/Event.php:360 src/Admin/DebugEvents/Table.php:170
 msgid "Type"
 msgstr "Typ"
 
@@ -1917,7 +1962,7 @@ msgstr "Typ"
 msgid "Version"
 msgstr "Verze"
 
-#: src/Admin/Pages/MiscTab.php:213
+#: src/Admin/Pages/MiscTab.php:214
 msgid "Uninstall WP Mail SMTP"
 msgstr "Odinstalovat WP Mail SMTP"
 
@@ -1925,7 +1970,7 @@ msgstr "Odinstalovat WP Mail SMTP"
 msgid "SendGrid"
 msgstr "SendGrid"
 
-#: src/Admin/Pages/TestTab.php:742
+#: src/Admin/Pages/TestTab.php:745
 msgid "Could not authenticate your SMTP account."
 msgstr "Nepodařilo se ověřit Váš účet SMTP."
 
@@ -1933,7 +1978,7 @@ msgstr "Nepodařilo se ověřit Váš účet SMTP."
 msgid "Create API Key"
 msgstr "Vytvořit API klíč"
 
-#: src/Admin/Pages/MiscTab.php:129
+#: src/Admin/Pages/MiscTab.php:130
 msgid "Hide Announcements"
 msgstr "Skrýt oznámení"
 
@@ -1941,8 +1986,8 @@ msgstr "Skrýt oznámení"
 msgid "Mailgun"
 msgstr "Mailgun"
 
-#: src/Admin/Pages/TestTab.php:885 src/Admin/Pages/TestTab.php:900
-#: src/Admin/Pages/TestTab.php:940
+#: src/Admin/Pages/TestTab.php:889 src/Admin/Pages/TestTab.php:904
+#: src/Admin/Pages/TestTab.php:944
 msgid "Mailgun failed."
 msgstr "Mailgun selhal."
 
@@ -1950,38 +1995,43 @@ msgstr "Mailgun selhal."
 msgid "Misc"
 msgstr "Různé"
 
-#: src/Admin/Pages/TestTab.php:1390
+#: src/Admin/Pages/TestTab.php:1396
 msgid "Need support?"
 msgstr "Potřebujete podporu?"
 
+#: src/Admin/Pages/AlertsTab.php:119 src/Admin/Pages/AlertsTab.php:150
+#: src/Admin/Pages/AlertsTab.php:181 src/Admin/Pages/AlertsTab.php:230
 #: src/Admin/Pages/ControlTab.php:298 src/Admin/Pages/TestTab.php:168
 #: src/Providers/OptionsAbstract.php:277 src/Providers/OptionsAbstract.php:299
 msgid "Off"
 msgstr "Vypnout"
 
+#: src/Admin/Pages/AlertsTab.php:118 src/Admin/Pages/AlertsTab.php:149
+#: src/Admin/Pages/AlertsTab.php:180 src/Admin/Pages/AlertsTab.php:229
 #: src/Admin/Pages/ControlTab.php:295 src/Admin/Pages/TestTab.php:167
 #: src/Providers/OptionsAbstract.php:276 src/Providers/OptionsAbstract.php:298
 msgid "On"
 msgstr "Zapnout"
 
-#: src/Providers/PepipostAPI/Options.php:61
+#: src/Providers/PepipostAPI/Options.php:63
 msgid "Pepipost"
 msgstr "Pepipost"
 
-#: src/Admin/DebugEvents/Event.php:356 src/Admin/DebugEvents/Table.php:172
+#: src/Admin/DebugEvents/Event.php:375 src/Admin/DebugEvents/Table.php:172
+#: src/Admin/Pages/ExportTab.php:138
 msgid "Source"
 msgstr "Zdroj"
 
-#: assets/languages/wp-mail-smtp-vue.php:313
+#: assets/languages/wp-mail-smtp-vue.php:228
 #: src/Admin/Pages/SettingsTab.php:203
 msgid "The name that emails are sent from."
 msgstr "Jméno, ze kterého se odesílají e-maily."
 
-#: src/Admin/Pages/TestTab.php:772
+#: src/Admin/Pages/TestTab.php:776
 msgid "Error due to unsolicited and/or bulk e-mail."
 msgstr "Chyba způsobená nevyžádaným a/nebo hromadným e-mailem."
 
-#: assets/languages/wp-mail-smtp-vue.php:494 src/Admin/Pages/TestTab.php:795
+#: assets/languages/wp-mail-smtp-vue.php:411 src/Admin/Pages/TestTab.php:799
 msgid "Enable Authentication"
 msgstr "Povolit ověřování"
 
@@ -1989,7 +2039,7 @@ msgstr "Povolit ověřování"
 msgid "Allow plugin to send emails using your Google account"
 msgstr "Povolte pluginu odesílat e-maily pomocí Vašeho Google účtu"
 
-#: src/Admin/Pages/TestTab.php:1302
+#: src/Admin/Pages/TestTab.php:1308
 msgid "An issue was detected."
 msgstr "Byl zjištěn problém."
 
@@ -1997,11 +2047,11 @@ msgstr "Byl zjištěn problém."
 msgid "Are you sure you want to reset the current provider connection? You will need to immediately create a new one to be able to send emails."
 msgstr "Opravdu chcete resetovat aktuální připojení poskytovatele? Abyste mohli odesílat e-maily, budete si muset okamžitě vytvořit nový."
 
-#: src/Admin/Pages/TestTab.php:668 src/Admin/Pages/TestTab.php:733
+#: src/Admin/Pages/TestTab.php:671 src/Admin/Pages/TestTab.php:736
 msgid "Ask them to resolve the issue then try again."
 msgstr "Požádejte je, aby problém vyřešili, a zkuste to znovu."
 
-#: src/Admin/Pages/TestTab.php:1067
+#: src/Admin/Pages/TestTab.php:1072
 msgid "Authentication code that Google returned to you has already been used on your previous auth attempt."
 msgstr "Ověřovací kód, který vám Google vrátil, již byl použit při Vašem předchozím pokusu o ověření."
 
@@ -2009,16 +2059,16 @@ msgstr "Ověřovací kód, který vám Google vrátil, již byl použit při Va�
 msgid "Do Not Send"
 msgstr "Nezasílat"
 
-#: src/Admin/Pages/SettingsTab.php:330
+#: src/Admin/Pages/SettingsTab.php:334
 msgid "Dismiss this notice"
 msgstr "Zamítnout toto oznámení"
 
-#: assets/languages/wp-mail-smtp-vue.php:304
+#: assets/languages/wp-mail-smtp-vue.php:219
 #: src/Admin/Pages/SettingsTab.php:172
 msgid "Force From Email"
 msgstr "Vynutit z e-mailu"
 
-#: assets/languages/wp-mail-smtp-vue.php:298
+#: assets/languages/wp-mail-smtp-vue.php:213
 #: src/Admin/Pages/SettingsTab.php:217
 msgid "Force From Name"
 msgstr "Vynutit z jména"
@@ -2039,7 +2089,7 @@ msgstr "Získejte soukromý klíč API"
 msgid "Get a Domain Name"
 msgstr "Získejte název domény"
 
-#: src/Admin/Pages/TestTab.php:708 src/Admin/Pages/TestTab.php:794
+#: src/Admin/Pages/TestTab.php:711 src/Admin/Pages/TestTab.php:798
 msgid "Go to WP Mail SMTP plugin Settings page."
 msgstr "Přejít na stránku Nastavení pluginu WP Mail SMTP."
 
@@ -2056,21 +2106,16 @@ msgstr "Pokud používáte poskytovatele e-mailu (Yahoo, Outlook.com atd.), měl
 msgid "Follow this link to get an API Key from SendGrid: %s."
 msgstr "Kliknutím na tento odkaz získáte klíč API od SendGrid: %s."
 
-#. translators: %s - API key link.
-#: src/Providers/Mailgun/Options.php:74
-msgid "Follow this link to get an API Key from Mailgun: %s."
-msgstr "Kliknutím na tento odkaz získáte klíč API od Mailgun: %s."
-
 #. translators: %s - URL to Mailgun.com page.
 #: src/Providers/Mailgun/Options.php:141
 msgid "<a href=\"%s\" rel=\"\" target=\"_blank\">More information</a> on Mailgun.com."
 msgstr "<a href=\"%s\" rel=\"\" target=\"_blank\">Více informací</a> o Mailgun.com."
 
-#: src/Admin/Pages/TestTab.php:731
+#: src/Admin/Pages/TestTab.php:734
 msgid "Contact your web hosting provider and inform them you are having issues making outbound connections."
 msgstr "Kontaktujte svého poskytovatele webhostingu a informujte ho, že máte problémy s odchozím připojením."
 
-#: assets/languages/wp-mail-smtp-vue.php:538
+#: assets/languages/wp-mail-smtp-vue.php:474
 #: src/Providers/Mailgun/Options.php:87
 msgid "Domain Name"
 msgstr "Název domény"
@@ -2080,7 +2125,7 @@ msgstr "Název domény"
 msgid "Follow this link to get a Domain Name from Mailgun: %s."
 msgstr "Kliknutím na tento odkaz získáte název domény od Mailgun: %s."
 
-#: assets/languages/wp-mail-smtp-vue.php:503
+#: assets/languages/wp-mail-smtp-vue.php:420
 #: src/Providers/OptionsAbstract.php:244
 msgid "For most servers TLS is the recommended option. If your SMTP provider offers both SSL and TLS options, we recommend using TLS."
 msgstr "Pro většinu serverů je doporučená možnost TLS. Pokud váš poskytovatel SMTP nabízí možnosti SSL i TLS, doporučujeme používat TLS."
@@ -2093,15 +2138,16 @@ msgstr "Stav"
 msgid "Copy URL to clipboard"
 msgstr "Zkopírovat odkaz do schránky"
 
-#: src/Admin/Pages/TestTab.php:147
+#: src/Admin/Pages/AlertsTab.php:127 src/Admin/Pages/TestTab.php:147
 msgid "Send To"
 msgstr "Odeslat komu"
 
+#: assets/languages/wp-mail-smtp-vue.php:838
 #: src/Providers/Mailgun/Options.php:55
 msgid "Private API Key"
 msgstr "Soukromý API klíč"
 
-#: src/Admin/Pages/TestTab.php:1382
+#: src/Admin/Pages/TestTab.php:1388
 msgid "Recommended next steps:"
 msgstr "Doporučené další kroky:"
 
@@ -2122,56 +2168,79 @@ msgstr "Testovací e-mail pro %s"
 msgid "Test emails are allowed to be sent, regardless of this option."
 msgstr "Bez ohledu na tuto možnost je povoleno odesílání testovacích e-mailů."
 
-#: src/Admin/Pages/TestTab.php:775
+#: src/Admin/Pages/TestTab.php:779
 msgid "Typically this error is returned when you are sending too many e-mails or e-mails that have been identified as spam."
 msgstr "Tato chyba se obvykle vrátí, když odesíláte příliš mnoho e-mailů nebo e-mailů, které byly identifikovány jako spam."
 
-#: src/Admin/Pages/TestTab.php:849 src/Admin/Pages/TestTab.php:1311
+#: src/Admin/Pages/TestTab.php:853 src/Admin/Pages/TestTab.php:1317
 msgid "Your web server is blocking the connection."
 msgstr "Váš webový server blokuje připojení."
 
-#: src/Admin/Pages/TestTab.php:1160
+#: src/Admin/Pages/TestTab.php:1166
 msgid "You may have added a new API to a project"
 msgstr "Možná jste do projektu přidali nové API"
 
-#: assets/languages/wp-mail-smtp-vue.php:718
+#: assets/languages/wp-mail-smtp-vue.php:627
 msgid "You have successfully linked the current site with your Zoho Mail API project. Now you can start sending emails through Zoho Mail."
 msgstr "Úspěšně jste propojili aktuální web s vaším projektem Zoho Mail API. Nyní můžete začít odesílat e-maily prostřednictvím Zoho Mail."
+
+#. translators: 1 - correct email address example. 2 - incorrect email address
+#. example.
+#: src/Admin/Pages/TestTab.php:1029
+msgid "It should be something like this: %1$s. These are incorrect values: %2$s."
+msgstr "Mělo by to být něco takového: %1$s. Toto jsou nesprávné hodnoty: %2$s."
+
+#: src/Admin/Pages/TestTab.php:257
+msgid "Test plain text email was sent successfully! Please check your inbox to make sure it was delivered."
+msgstr "Testovací e-mail ve formátu prostého textu byl úspěšně odeslán! Zkontrolujte prosím svou doručenou poštu, abyste se ujistili, že byla doručena."
+
+#: src/Admin/Pages/TestTab.php:1088
+msgid "There are various reasons for that, please review the steps below."
+msgstr "Důvody jsou různé, přečtěte si prosím kroky uvedené níže."
+
+#: src/Admin/Pages/TestTab.php:1044
+msgid "Unfortunately, this error can be due to many different reasons."
+msgstr "Bohužel tato chyba může být způsobena mnoha různými důvody."
+
+#. translators: %s - API key link.
+#: src/Providers/Mailgun/Options.php:74
+msgid "Follow this link to get a Private API Key from Mailgun: %s."
+msgstr "Kliknutím na tento odkaz získáte soukromý klíč API od Mailgun: %s."
 
 #: src/Admin/DashboardWidget.php:452
 msgid "Save Changes"
 msgstr "Uložit změny"
 
-#: src/Admin/Area.php:252 src/Admin/Area.php:253 src/Admin/Area.php:1187
+#: src/Admin/Area.php:252 src/Admin/Area.php:253 src/Admin/Area.php:1191
 msgid "Settings"
 msgstr "Nastavení"
 
-#: assets/languages/wp-mail-smtp-vue.php:491
+#: assets/languages/wp-mail-smtp-vue.php:408
 #: src/Providers/OptionsAbstract.php:288
 msgid "Authentication"
 msgstr "Ověření"
 
-#: assets/languages/wp-mail-smtp-vue.php:476
+#: assets/languages/wp-mail-smtp-vue.php:393
 #: src/Providers/OptionsAbstract.php:212
 msgid "Encryption"
 msgstr "Šifrování"
 
-#: assets/languages/wp-mail-smtp-vue.php:479
+#: assets/languages/wp-mail-smtp-vue.php:396
 #: src/Providers/OptionsAbstract.php:252
 msgid "SMTP Port"
 msgstr "SMTP Port"
 
-#: assets/languages/wp-mail-smtp-vue.php:295 src/Admin/Pages/ExportTab.php:121
+#: assets/languages/wp-mail-smtp-vue.php:210 src/Admin/Pages/ExportTab.php:121
 #: src/Admin/Pages/SettingsTab.php:191
 msgid "From Name"
 msgstr "Jméno odesílatele"
 
-#: assets/languages/wp-mail-smtp-vue.php:157 src/Admin/Pages/ExportTab.php:135
+#: assets/languages/wp-mail-smtp-vue.php:501 src/Admin/Pages/ExportTab.php:135
 #: src/Admin/Pages/SettingsTab.php:258
 msgid "Mailer"
 msgstr "Mailer"
 
-#: assets/languages/wp-mail-smtp-vue.php:473
+#: assets/languages/wp-mail-smtp-vue.php:390
 #: src/Providers/OptionsAbstract.php:198
 msgid "SMTP Host"
 msgstr "SMTP Host"
@@ -2191,12 +2260,16 @@ msgstr "Nastavte zpáteční cestu (return-path) aby odpovídala E-mailu odesíl
 msgid "WP Mail SMTP"
 msgstr "WP Mail SMTP"
 
-#: assets/languages/wp-mail-smtp-vue.php:301
+#: assets/languages/wp-mail-smtp-vue.php:216
 #: src/Admin/Pages/SettingsTab.php:121
 msgid "From Email"
 msgstr "E-mail odesílatele"
 
-#: assets/languages/wp-mail-smtp-vue.php:457 src/Admin/Pages/TestTab.php:230
-#: src/SiteHealth.php:327
+#: assets/languages/wp-mail-smtp-vue.php:177 src/Admin/Pages/TestTab.php:230
+#: src/SiteHealth.php:352
 msgid "Send a Test Email"
 msgstr "Odeslat testovací e-mail"
+
+#: src/Admin/Pages/AlertsTab.php:107
+msgid "Email"
+msgstr "E-mail"

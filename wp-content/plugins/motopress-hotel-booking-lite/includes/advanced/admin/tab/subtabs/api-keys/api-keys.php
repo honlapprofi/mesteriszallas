@@ -22,12 +22,6 @@ class ApiKeys {
 		new ApiKeysAjax();
 		new ApiKeysScreenOption();
 		add_action( 'current_screen', array( $this, 'actions' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'registerScripts' ) );
-	}
-
-	public function registerScripts(){
-		wp_enqueue_script( 'jquery-blockui', MPHB()->getPluginUrl( 'includes/advanced/admin/tab/subtabs/api-keys/js/lib/jquery.blockUI.js' ), array( 'jquery' ), '2.70', true );
-		wp_enqueue_script( 'qrcode', MPHB()->getPluginUrl( 'includes/advanced/admin/tab/subtabs/api-keys/js/lib/jquery.qrcode.js' ), array( 'jquery' ), false, true );
 	}
 
 	private function isCurrentPage(){

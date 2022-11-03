@@ -214,7 +214,7 @@ class PublicScriptManager extends ScriptManager {
 				),
 				'today'				 => mphb_current_time( $jsDateFormat ),
 				'ajaxUrl'			 => MPHB()->getAjaxUrl(),
-				'nonces'			 => array_merge($customNonces, MPHB()->getAjax()->getFrontNonces()),
+				'nonces'			 => array_merge( $customNonces, MPHB()->getAjax()->getFrontNonces(), \MPHB\AjaxApi\AjaxApiHandler::getAjaxActionWPNonceForGuestUser()),
 				'roomTypesData'	 => array(),
 				'translations'		 => array(
 					'errorHasOccured'					 => __( 'An error has occurred, please try again later.', 'motopress-hotel-booking' ),

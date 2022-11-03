@@ -185,39 +185,50 @@ class TaxesAndFees {
     }
 
     private function calcFees() {
-        if( !empty( $this->fees ) ) {
-            foreach( $this->fees as $tax ) {
-                $taxPrice = 0;
 
-                switch ( $tax['type'] ) {
+        if ( !empty( $this->fees ) ) {
+            foreach( $this->fees as $fee ) {
+
+                $feePrice = 0;
+
+                switch ( $fee['type'] ) {
+
                     case 'per_guest_per_day':
-                    $taxPrice = $this->atts['adults_amount'] * $tax['amount']['adults'] + $this->atts['children_amount'] * $tax['amount']['children'];
-                    if ( $tax['limit'] == 0 ) {
-                        $taxPrice *= $this->atts['period_nights'];
-                    } else {
-                        $taxPrice *= min( $tax['limit'], $this->atts['period_nights'] );
-                    }
-                    break;
+
+                        $feePrice = $this->atts['adults_amount'] * $fee['amount']['adults'] + $this->atts['children_amount'] * $fee['amount']['children'];
+
+                        if ( $fee['limit'] == 0 ) {
+                            $feePrice *= $this->atts['period_nights'];
+                        } else {
+                            $feePrice *= min( $fee['limit'], $this->atts['period_nights'] );
+                        }
+                        break;
 
                     case 'per_room_per_day':
-                    $taxPrice = $this->atts['accommodations_amount'] * $tax['amount'];
-                    if ( $tax['limit'] == 0 ) {
-                        $taxPrice *= $this->atts['period_nights'];
-                    } else {
-                        $taxPrice *= min( $tax['limit'], $this->atts['period_nights'] );
-                    }
 
-                    break;
+                        $feePrice = $this->atts['accommodations_amount'] * $fee['amount'];
+
+                        if ( $fee['limit'] == 0 ) {
+                            $feePrice *= $this->atts['period_nights'];
+                        } else {
+                            $feePrice *= min( $fee['limit'], $this->atts['period_nights'] );
+                        }
+                        break;
+
+                    case 'per_room_percentage':
+
+                        $feePrice = $this->roomPrice / 100 * $fee['amount'];
+                        break;
                 }
                 if( !empty( $this->feeTaxes ) ) {
                     foreach( $this->feeTaxes as $feeTax ) {
-                        $taxPrice += $taxPrice / 100 * $feeTax['amount'];
+                        $feePrice += $feePrice / 100 * $feeTax['amount'];
                     }
                 }
-                if( $tax['included'] ) {
-                    $this->taxIncludedTotal += $taxPrice;
+                if( $fee['included'] ) {
+                    $this->taxIncludedTotal += $feePrice;
                 } else {
-                    $this->taxExcludedTotal += $taxPrice;
+                    $this->taxExcludedTotal += $feePrice;
                 }
             }
         }

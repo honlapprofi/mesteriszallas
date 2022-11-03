@@ -48,7 +48,10 @@ class CheckoutView {
 					<?php esc_html_e( 'Returning customer?', 'motopress-hotel-booking' ); ?>
 					<a id="mphb-render-checkout-login" href="#"><?php esc_html_e( 'Click here to log in', 'motopress-hotel-booking' ); ?></a>
 				</p>
-				<div class="mphb-login-form mphb-hide"><?php wp_login_form( array( 'redirect' => get_permalink() ) ); ?></div>
+				<div class="mphb-login-form mphb-hide">
+					<?php wp_login_form( array( 'redirect' => get_permalink() ) ); ?>
+					<a href="<?php echo esc_url( wp_lostpassword_url( get_permalink() ) ); ?>"><?php esc_html_e( 'Lost your password?', 'motopress-hotel-booking' ); ?></a>
+				</div>
 			</div>
 			<?php
 		} else if( get_current_user_id() ) {
@@ -477,17 +480,28 @@ class CheckoutView {
 		}
 	}
 
-	public static function renderTermsAndConditions(){
+	public static function renderTermsAndConditions() {
 
 		$termsPageId = MPHB()->settings()->pages()->getTermsAndConditionsPageId();
-		$isOpenTermsInNewWindiw = MPHB()->settings()->pages()->getOpenTermsAndConditionsInNewWindow();
-		$termsHtml   = MPHB()->settings()->main()->getTermsAndConditionsText();
 
-		if ( !empty( $termsHtml ) ) {
+		if ( ! $termsPageId ) {
+			return;
+		}
+
+		$isOpenTermsInNewWindow = MPHB()->settings()->pages()->getOpenTermsAndConditionsInNewWindow();
+
+		$termsHtml = '';
+
+		if ( ! $isOpenTermsInNewWindow ) {
+
+			$termsHtml = MPHB()->settings()->main()->getTermsAndConditionsText();
+		}
+
+		if ( $isOpenTermsInNewWindow || ! empty( $termsHtml ) ) {
 			?>
 			<section class="mphb-checkout-terms-wrapper mphb-checkout-section">
 
-				<?php if ( !$isOpenTermsInNewWindiw ) { ?>
+				<?php if ( ! $isOpenTermsInNewWindow ) { ?>
 
 					<div class="mphb-terms-and-conditions">
 						<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -904,7 +918,7 @@ class CheckoutView {
 		$checkoutId = mphb_generate_uuid4();
 		$nonceAction = \MPHB\Shortcodes\CheckoutShortcode::NONCE_ACTION_BOOKING . '-' . $checkoutId;
 		?>
-		<form class="mphb_sc_checkout-form" method="POST" action="<?php echo esc_url( $actionUrl ); ?>">
+		<form class="mphb_sc_checkout-form" enctype="<?php echo esc_attr( apply_filters('mphb_checkout_form_enctype_data', '') ); ?>" method="POST" action="<?php echo esc_url( $actionUrl ); ?>">
 
 			<?php wp_nonce_field( $nonceAction, \MPHB\Shortcodes\CheckoutShortcode::NONCE_NAME ); ?>
 

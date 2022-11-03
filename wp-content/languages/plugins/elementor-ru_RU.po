@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-08 08:54:17+0000\n"
+"PO-Revision-Date: 2022-07-02 13:45:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,12 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: ru\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
+
+#: core/editor/notice-bar.php:29
+#: includes/editor-templates/panel-elements.php:23
+#: includes/editor-templates/panel-elements.php:63
+msgid "Upgrade Now"
+msgstr "Обновить сейчас"
 
 #: modules/container-converter/module.php:88
 #: modules/container-converter/module.php:121
@@ -6018,7 +6024,7 @@ msgstr "Цветовая палитра"
 #: modules/history/views/revisions-panel-template.php:18
 #: assets/js/editor.js:11004
 msgid "Apply"
-msgstr "Готово"
+msgstr "Применить"
 
 #: core/schemes/base-ui.php:115
 #: modules/history/views/revisions-panel-template.php:13

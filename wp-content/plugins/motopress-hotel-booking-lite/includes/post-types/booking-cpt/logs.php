@@ -11,12 +11,18 @@ class Logs {
 
 	public function __construct( $postType ){
 
-		$this->postType		 = $postType;
-		$this->commentType	 = $postType . '_log';
+		$this->postType		= $postType;
+		$this->commentType	= $postType . '_log';
+
 		// Hide Logs
 		add_action( 'mphb_booking_before_get_logs', array( $this, 'removeHideFromCommentsActions' ) );
 		add_action( 'mphb_booking_after_get_logs', array( $this, 'addHideFromCommentsActions' ) );
+
 		add_filter( 'comment_feed_where', array( $this, 'hideFromFeed' ), 10, 2 );
+
+		// Don't change the priority or method name. Appointment Booking removes
+		// this filter. See class MotoPress\Appointment\PostTypes\Logs\CustomCommentsFix
+		// for details.
 		add_filter( 'wp_count_comments', array( $this, 'fixCommentsCount' ), 11, 2 );
 
 		$this->addHideFromCommentsActions();
@@ -41,10 +47,12 @@ class Logs {
 		global $wp_version;
 
 		if ( MPHB()->isWPVersion( '4.1', '>=' ) ) {
-			$types = isset( $query->query_vars['type__not_in'] ) ? $query->query_vars['type__not_in'] : array();
-			if ( !is_array( $types ) ) {
-				$types = array( $types );
+			$types = array();
+
+			if ( !empty( $query->query_vars['type__not_in'] ) ) {
+				$types = (array)$query->query_vars['type__not_in'];
 			}
+
 			$types[] = $this->commentType;
 
 			$query->query_vars['type__not_in'] = $types;
@@ -69,14 +77,14 @@ class Logs {
 	/**
 	 * Exclude logs from comment feeds
 	 *
-	 * @param array $where
+	 * @param string $where
 	 * @param \WP_Comment_Query $wp_comment_query
-	 * @return array $where
+	 * @return string $where
 	 */
 	function hideFromFeed( $where, $wp_comment_query ){
 		global $wpdb;
 
-		$where .= $wpdb->prepare( " AND comment_type != %s", $this->postType );
+		$where .= $wpdb->prepare( " AND comment_type != %s", $this->commentType );
 		return $where;
 	}
 

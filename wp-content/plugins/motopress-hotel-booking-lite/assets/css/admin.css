@@ -195,6 +195,10 @@ table.wp-list-table.posts tbody td.column-handle {
 .mphb-ctrl-image img {
   cursor: pointer;
 }
+.mphb-ctrl .regular-text {
+  width: 100%;
+  max-width: 25em;
+}
 .mphb-price-text {
   width: 80px;
 }
@@ -208,7 +212,7 @@ table.wp-list-table.posts tbody td.column-handle {
   width: 90%;
 }
 .mphb-preloader {
-  background-image: url("../../images/loading.gif?ver=4.2.5");
+  background-image: url("../../images/loading.gif?ver=4.4.4");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -239,13 +243,13 @@ div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table td {
   width: 67.5%;
 }
 div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table th:first-of-type {
-  width: 7.5%;
+  width: 30px;
 }
 div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table th:nth-of-type(2) {
-  width: 12.5%;
+  width: 150px;
 }
 div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table th:last-of-type {
-  width: 12.5%;
+  width: 10%;
 }
 div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   overflow: auto;
@@ -257,12 +261,6 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   vertical-align: middle;
 }
 @media screen and (max-width: 1440px) {
-  div[data-group="mphb_season_prices"] > table th:first-of-type {
-    width: 15%;
-  }
-  div[data-group="mphb_season_prices"] > table th:last-of-type {
-    width: 10%;
-  }
   .button.mphb-complex-delete-item {
     overflow: hidden;
     text-indent: -9999px;
@@ -277,6 +275,7 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
     float: left;
     font-family: dashicons;
     font-size: 16px;
+    line-height: 1.7;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -286,6 +285,9 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   }
   #rate_cpt .inside > table > tbody > tr > th {
     display: none;
+  }
+  div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table th:first-of-type {
+    width: 20px;
   }
 }
 .mphb-bookings-calendar-wrapper {

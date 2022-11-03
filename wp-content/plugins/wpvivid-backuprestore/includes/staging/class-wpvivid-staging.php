@@ -256,7 +256,7 @@ class WPvivid_Staging_Free
         $menu['tab']= 'admin.php?page='.apply_filters('wpvivid_white_label_plugin_name', 'wpvivid-staging');
         $menu['href']=$admin_url . 'admin.php?page='.apply_filters('wpvivid_white_label_plugin_name', 'wpvivid-staging');
         $menu['capability']='administrator';
-        $menu['index']=2;
+        $menu['index']=3;
         $toolbar_menus[$menu['parent']]['child'][$menu['id']]=$menu;
         return $toolbar_menus;
     }
@@ -268,7 +268,7 @@ class WPvivid_Staging_Free
         $submenu['menu_title']=__('Staging', 'wpvivid-backuprestore');
         $submenu['capability']='administrator';
         $submenu['menu_slug']=strtolower(sprintf('%s-staging', apply_filters('wpvivid_white_label_slug', 'wpvivid')));
-        $submenu['index']=2;
+        $submenu['index']=3;
         $submenu['function']=array($this, 'display_plugin_setup_page');
         $submenus[$submenu['menu_slug']]=$submenu;
         return $submenus;
@@ -1760,6 +1760,7 @@ class WPvivid_Staging_Free
             }
 
             $path = sanitize_text_field($_POST['path']);
+            $path = sanitize_file_name($path);
 
             if(!isset($_POST['table_prefix']) || empty($_POST['table_prefix']) || !is_string($_POST['table_prefix']))
             {
@@ -1778,6 +1779,13 @@ class WPvivid_Staging_Free
             else if(isset($_POST['root_dir']) && $_POST['root_dir'] == 1)
             {
                 $path = WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $path;
+            }
+            else
+            {
+                $ret['result'] = 'failed';
+                $ret['error'] = 'We are not able to authenticate the staging directory, please contact us.';
+                echo json_encode($ret);
+                die();
             }
 
             if (file_exists($path))
@@ -2374,8 +2382,8 @@ class WPvivid_Staging_Free
 
 
                     $task = new WPvivid_Staging_Task();
-                    $task->set_memory_limit();
                     $task->setup_task($option);
+                    $task->set_memory_limit();
                     $task->update_action_time('create_time');
                     $this->log->CreateLogFile($task->get_log_file_name(), 'no_folder', 'staging');
                     $this->log->WriteLog('Start creating staging site.', 'notice');
@@ -2762,7 +2770,7 @@ class WPvivid_Staging_Free
 
                     $uploads['error'] = sprintf(
                     /* translators: %s: directory path */
-                        __( 'Unable to create directory %s. Is its parent directory writable by the server?' ),
+                        __( 'Unable to create directory %s. Is its parent directory writable by the server?', 'wpvivid-backuprestore' ),
                         esc_html( $error_path )
                     );
                 }

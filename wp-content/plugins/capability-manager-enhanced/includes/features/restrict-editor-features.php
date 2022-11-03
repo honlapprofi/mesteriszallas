@@ -90,7 +90,7 @@ class PP_Capabilities_Post_Features {
         $elements[esc_html__('Taxonomy Boxes', 'capsman-enhanced')] = [
             '#category' => [
                 'label'        => esc_html__('Categories', 'capsman-enhanced'),
-                'elements'     => '#categories, #categorydiv, #categorydivsb, th.column-categories, td.categories',
+                'elements'     => '#categories, #categorydiv, #categorydivsb, th.column-categories, td.categories, #screen-options-wrap label[for=categorydiv-hide]',
                 'support_key'  => 'category',
                 'support_type' => 'taxonomy'
             ],
@@ -102,7 +102,7 @@ class PP_Capabilities_Post_Features {
             ],
             '#post_tag' => [
                 'label'       => esc_html__('Tags', 'capsman-enhanced'), 
-                'elements'    => '#tags, #tagsdiv,#tagsdivsb,#tagsdiv-post_tag, th.column-tags, td.tags',
+                'elements'    => '#tags, #tagsdiv,#tagsdivsb,#tagsdiv-post_tag, th.column-tags, td.tags, #screen-options-wrap label[for=tagsdiv-post_tag-hide]',
                 'support_key' => 'post_tag',
                 'support_type' => 'taxonomy'
             ],
@@ -115,7 +115,7 @@ class PP_Capabilities_Post_Features {
             if (!in_array($taxonomy, ['category', 'post_tag', 'link_category'])) {
                 $elements[$k]["#{$tx_obj->name}div"] = [
                     'label'        => $tx_obj->label,
-                    'elements'     => "#{$tx_obj->name}, #{$tx_obj->name}div,#{$tx_obj->name}divsb,#tagsdiv-{$tx_obj->name}, th.column-{$tx_obj->name}, td.{$tx_obj->name}",
+                    'elements'     => "#{$tx_obj->name}, #{$tx_obj->name}div,#{$tx_obj->name}divsb,#tagsdiv-{$tx_obj->name}, th.column-{$tx_obj->name}, td.{$tx_obj->name}, #screen-options-wrap label[for=tagsdiv-{$tx_obj->name}-hide], #screen-options-wrap label[for={$tx_obj->name}div-hide]",
                     'support_key'  => $tx_obj->name,
                     'support_type' => 'taxonomy'
                 ];
@@ -147,17 +147,23 @@ class PP_Capabilities_Post_Features {
         $elements[esc_html__('Other Boxes', 'capsman-enhanced')] = [
             '#postimagediv' => [
                 'label'       => esc_html__('Featured Image', 'capsman-enhanced'),
-                'elements'    => '#postimagediv',
+                'elements'    => '#postimagediv, #screen-options-wrap label[for=postimagediv-hide]',
                 'support_key' => 'thumbnail'
             ],
             '#slug' => [
                 'label' => esc_html__('Post Slug', 'capsman-enhanced'),
-                'elements' => '#slugdiv,#edit-slug-box'
+                'elements' => '#slugdiv,#edit-slug-box, #screen-options-wrap label[for=slugdiv-hide]'
             ],
             '#commentstatusdiv' => [
                 'label' => esc_html__('Discussion', 'capsman-enhanced'),
-                'elements'    => '#commentstatusdiv',
+                'elements'    => '#commentstatusdiv, #screen-options-wrap label[for=commentstatusdiv-hide]',
                 'support_key' => 'comments'
+            ],
+            '#woocommerce-coupon-description' => [
+                'label'        => esc_html__('Coupon Description', 'capsman-enhanced'),
+                'elements'     => '#woocommerce-coupon-description',
+                'support_type' => 'metabox',
+                'support_key'  => ['shop_coupon']
             ],
         ];
 
@@ -206,6 +212,8 @@ class PP_Capabilities_Post_Features {
                 'elements' => '#' . $id
                 . ', #' . $id . 'div'
                 . ', th.column-' . $id
+                . ', #screen-options-wrap label[for='.$id.'-hide]'
+                . ', #screen-options-wrap label[for='.$id.'div-hide]'
                 . ', td.' . $id,
                 'support_key' => $feature
             ]; //th and td for raw in edit screen
@@ -223,6 +231,10 @@ class PP_Capabilities_Post_Features {
         $restrict_elements = [];
 
         if (!$post_type = pp_capabilities_get_post_type()) {
+            return;
+        }
+
+        if (!is_array(get_option("capsman_feature_restrict_classic_{$post_type}", []))) {
             return;
         }
 
@@ -292,6 +304,11 @@ class PP_Capabilities_Post_Features {
     public static function applyRestrictions($post_type)
     {
         $restrict_elements = [];
+
+
+        if (!is_array(get_option("capsman_feature_restrict_{$post_type}", []))) {
+            return;
+        }
 
         // Only restrictions associated with this user's role(s) will be applied
         $role_restrictions = array_intersect_key(
@@ -400,8 +417,7 @@ class PP_Capabilities_Post_Features {
                 'status_visibility' => ['label' => esc_html__('Status & visibility', 'capsman-enhanced'),   'elements' => 'post-status'],
                 'template'          => [
                     'label'       => esc_html__('Template', 'capsman-enhanced'),
-                    'elements'    => 'template',
-                    'support_key' => 'page-attributes'
+                    'elements'    => 'template'
                 ],
                 'revisions'         => ['label' => esc_html__('Revisions', 'capsman-enhanced'),             'elements' => '.editor-post-last-revision__title'],
                 'permalink' =>         ['label' => esc_html__('Permalink', 'capsman-enhanced'),             'elements' => 'post-link'],

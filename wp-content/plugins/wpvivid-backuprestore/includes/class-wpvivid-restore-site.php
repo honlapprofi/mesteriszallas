@@ -203,6 +203,10 @@ class WPvivid_RestoreSite
                                 if (!empty($line))
                                     file_put_contents(get_home_path() . '.htaccess', $line, FILE_APPEND);
                             }
+                            else
+                            {
+                                save_mod_rewrite_rules();
+                            }
                             if(file_exists(get_home_path() . '.user.ini'))
                             {
                                 @rename(get_home_path() . '.user.ini', get_home_path() . '.user.ini_old');
@@ -269,7 +273,7 @@ class WPvivid_RestoreSite
 
                     $uploads['error'] = sprintf(
                     /* translators: %s: directory path */
-                        __( 'Unable to create directory %s. Is its parent directory writable by the server?' ),
+                        __( 'Unable to create directory %s. Is its parent directory writable by the server?', 'wpvivid-backuprestore' ),
                         esc_html( $error_path )
                     );
                 }

@@ -150,6 +150,65 @@ class ReservationRules implements RuleVerifyInterface {
 	}
 
 	/**
+	 * @param $ruleType one of constant in this class
+	 */
+	private function verifyRule( string $ruleType, \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+
+		$actualRule = null;
+
+		if ( $roomTypeId ) {
+			$actualRule = $this->rules[ $ruleType ]->findActualRule( $checkInDate, $roomTypeId );
+		} else {
+			$actualRule = $this->rules[ $ruleType ]->findActualCombinedRule( $checkInDate );
+		}
+
+		return null != $actualRule ? $actualRule->verify( $checkInDate, $checkOutDate ) : true;
+	}
+	
+	public function verifyMinStayLengthReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_MIN_STAY, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+
+	public function getMinStayLengthReservationDaysCount( \DateTime $checkInDate, $roomTypeId = 0 ) {
+
+		$actualRule = null;
+
+		if ( $roomTypeId ) {
+			$actualRule = $this->rules[ self::RULE_MIN_STAY ]->findActualRule( $checkInDate, $roomTypeId );
+		} else {
+			$actualRule = $this->rules[ self::RULE_MIN_STAY ]->findActualCombinedRule( $checkInDate );
+		}
+
+		$minStayDaysCount = 1;
+
+		if ( null != $actualRule ) {
+			$minStayDaysCount = $actualRule->getMinDays();
+		}
+
+		return $minStayDaysCount;
+	}
+
+	public function verifyMaxStayLengthReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_MAX_STAY, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+	
+	public function verifyCheckInDaysReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_CHECK_IN, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+	
+	public function verifyCheckOutDaysReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_CHECK_OUT, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+
+	public function verifyMinAdvanceReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_MIN_ADVANCE, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+
+	public function verifyMaxAdvanceReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
+		return $this->verifyRule( self::RULE_MAX_ADVANCE, $checkInDate, $checkOutDate, $roomTypeId );
+	}
+
+	/**
 	 *
 	 * @return array
 	 */

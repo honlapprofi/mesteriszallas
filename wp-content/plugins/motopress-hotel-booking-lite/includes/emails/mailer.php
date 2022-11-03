@@ -16,7 +16,7 @@ class Mailer {
      * @since 3.7.1 added actions "mphb_before_send_mail" and "mphb_after_send_mail".
      * @since 3.8.6 actions "mphb_before_send_mail" and "mphb_after_send_mail" moved to AbstractEmail::send().
 	 */
-	public function send( $to, $subject, $message, $headers = null, $attachments = null ){
+	public function send( $to, $subject, $message, $headers = '', $attachments = array() ){
 		add_filter( 'wp_mail_from', array( $this, 'filterFromEmail' ) );
 		add_filter( 'wp_mail_from_name', array( $this, 'filterFromName' ) );
 		add_filter( 'wp_mail_content_type', array( $this, 'filterContentType' ) );

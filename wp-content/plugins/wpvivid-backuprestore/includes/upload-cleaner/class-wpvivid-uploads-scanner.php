@@ -909,6 +909,22 @@ class WPvivid_Uploads_Scanner
                 }
 
             }
+
+            if(isset($custom_fields['picture']))
+            {
+                if ( is_string( $custom_fields['picture'] ) && ! empty( $custom_fields['picture'] ) )
+                {
+                    $id=$custom_fields['picture'];
+                    $files=array_merge($files,$this->get_img_from_id($id));
+                }
+                else if(is_array( $custom_fields['picture'] )&& ! empty( $custom_fields['picture'] ))
+                {
+                    foreach ($custom_fields['picture'] as $id)
+                    {
+                        $files=array_merge($files,$this->get_img_from_id($id));
+                    }
+                }
+            }
         }
 
         return $files;
@@ -969,6 +985,18 @@ class WPvivid_Uploads_Scanner
                     {
                         $element_image[]=$settings['background_image']['id'];
                         $attachment_added_ids[]=$settings['background_image']['id'];
+                    }
+                }
+            }
+
+            if(isset($settings['background_a_image']))
+            {
+                if(isset($settings['background_a_image']['id']))
+                {
+                    if(!in_array($settings['background_a_image']['id'],$attachment_added_ids))
+                    {
+                        $element_image[]=$settings['background_a_image']['id'];
+                        $attachment_added_ids[]=$settings['background_a_image']['id'];
                     }
                 }
             }

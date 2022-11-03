@@ -18,7 +18,7 @@ class SettingsGroup extends InputGroup {
 	 * @param string $page
 	 * @param string $description Optional.
 	 */
-	public function __construct( $name, $label = '', $page, $description = '' ){
+	public function __construct( $name, $label, $page, $description = '' ){
 		parent::__construct( $name, $label );
 		$this->description	 = $description;
 		$this->page			 = $page;

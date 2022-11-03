@@ -33,6 +33,7 @@ class TaxesAndFeesController extends AbstractRestOptionsController {
 				'oneOf' => array(
 					$this->getPerGuestPerDayProperty(),
 					$this->getPerAccommodationPerDayProperty(),
+					$this->getPerAccommodationPercentageProperty(),
 				),
 			)
 		);

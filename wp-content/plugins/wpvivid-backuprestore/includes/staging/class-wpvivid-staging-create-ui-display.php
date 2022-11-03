@@ -379,7 +379,7 @@ class WPvivid_Staging_Create_UI_Display_Free
             }
 
             jQuery('#wpvivid_create_staging').click(function() {
-                var descript = 'Click OK to start creating the staging site.';
+                var descript = '<?php esc_html_e('Click OK to start creating the staging site.', 'wpvivid-backuprestore'); ?>';
                 var ret = confirm(descript);
                 if(ret === true){
                     jQuery('#wpvivid_staging_notice').hide();
@@ -388,7 +388,7 @@ class WPvivid_Staging_Create_UI_Display_Free
             });
 
             jQuery('#wpvivid_mu_create_staging').click(function() {
-                var descript = 'Click OK to start creating the staging site.';
+                var descript = '<?php esc_html_e('Click OK to start creating the staging site.', 'wpvivid-backuprestore'); ?>';
                 var ret = confirm(descript);
                 if(ret === true){
                     jQuery('#wpvivid_staging_notice').hide();
@@ -397,7 +397,7 @@ class WPvivid_Staging_Create_UI_Display_Free
             });
 
             jQuery('#wpvivid_mu_single_create_staging').click(function() {
-                var descript = 'Click OK to start creating the staging site.';
+                var descript = '<?php esc_html_e('Click OK to start creating the staging site.', 'wpvivid-backuprestore'); ?>';
                 var ret = confirm(descript);
                 if(ret === true){
                     jQuery('#wpvivid_staging_notice').hide();

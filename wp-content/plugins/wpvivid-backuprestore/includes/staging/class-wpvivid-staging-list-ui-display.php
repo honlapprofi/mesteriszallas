@@ -1117,7 +1117,7 @@ class WPvivid_Staging_List_UI_Display_Free
                 });
 
                 jQuery('#wpvivid_staging_list').on("click", '.wpvivid-delete-staging-site', function(){
-                    var descript = 'Are you sure to delete this staging site?';
+                    var descript = '<?php esc_html_e('Are you sure to delete this staging site?', 'wpvivid-backuprestore'); ?>';
                     var ret = confirm(descript);
                     if (ret === true) {
                         var id = jQuery(this).parent().attr('name');
@@ -1144,7 +1144,7 @@ class WPvivid_Staging_List_UI_Display_Free
                 });
 
                 jQuery('#wpvivid_staging_list').on("click", '.wpvivid-restart-staging-site', function(){
-                    var descript = 'Are you sure to restart this staging site?';
+                    var descript = '<?php esc_html_e('Are you sure to restart this staging site?', 'wpvivid-backuprestore'); ?>';
                     var ret = confirm(descript);
                     if (ret === true) {
                         var id = jQuery(this).parent().attr('name');

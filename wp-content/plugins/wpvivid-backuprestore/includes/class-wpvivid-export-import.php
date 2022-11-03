@@ -66,7 +66,7 @@ class WPvivid_Export_Import
         $menu['tab']= 'admin.php?page=wpvivid-export-import';
         $menu['href']=$admin_url . 'admin.php?page=wpvivid-export-import';
         $menu['capability']='administrator';
-        $menu['index']=3;
+        $menu['index']=4;
         $toolbar_menus[$menu['parent']]['child'][$menu['id']]=$menu;
         return $toolbar_menus;
     }
@@ -78,7 +78,7 @@ class WPvivid_Export_Import
         $submenu['menu_title']=__('Export & Import', 'wpvivid-backuprestore');
         $submenu['capability']='administrator';
         $submenu['menu_slug']='wpvivid-export-import';
-        $submenu['index']=3;
+        $submenu['index']=4;
         $submenu['function']=array($this, 'init_page');
         $submenus[$submenu['menu_slug']]=$submenu;
         return $submenus;
@@ -318,7 +318,7 @@ class WPvivid_Export_Import
                     if (post_comment.match(reg)) {
                         jQuery('#wpvivid_set_post_comment').val('');
                         jQuery('#wpvivid_post_comment').html('*');
-                        alert('You can not use word \'wpvivid\' to comment the post.');
+                        alert('<?php esc_html_e('You can not use word \'wpvivid\' to comment the post.', 'wpvivid-backuprestore'); ?>');
                     }
                     else{
                         jQuery('#wpvivid_post_comment').html(post_comment);
@@ -392,7 +392,7 @@ class WPvivid_Export_Import
                 });
 
                 if(select_type === 'list' && !has_item){
-                    alert('Please select at least one item.');
+                    alert('<?php esc_html_e('Please select at least one item.', 'wpvivid-backuprestore'); ?>');
                 }
                 else{
                     var post_ids_json = {
@@ -616,7 +616,7 @@ class WPvivid_Export_Import
             global $wpdb;
             $post_type = sanitize_text_field($_POST['post_type']);
             $descript_type = $post_type === 'post' ? 'posts' : 'pages';
-            $btn_text = $post_type === 'post' ? 'Show Posts' : 'Show Pages';
+            $btn_text = $post_type === 'post' ? __('Show Posts', 'wpvivid-backuprestore') : __('Show Pages', 'wpvivid-backuprestore');
 
             ob_start();
             ?>
@@ -1439,8 +1439,10 @@ class WPvivid_Export_Import
         try{
             if(isset($_REQUEST['file_name']) && !empty($_REQUEST['file_name']) && is_string($_REQUEST['file_name']) &&
                 isset($_REQUEST['file_size']) && !empty($_REQUEST['file_size']) && is_string($_REQUEST['file_size'])){
-                $file_name = $_REQUEST['file_name'];
+                $file_name = sanitize_text_field($_REQUEST['file_name']);
                 $file_size = intval($_REQUEST['file_size']);
+
+                $file_name = basename($file_name);
 
                 $path=WP_CONTENT_DIR.DIRECTORY_SEPARATOR.WPvivid_Setting::get_backupdir().DIRECTORY_SEPARATOR.WPVIVID_IMPORT_EXPORT_DIR.DIRECTORY_SEPARATOR.$file_name;
                 if (file_exists($path)) {
@@ -1768,7 +1770,7 @@ class WPvivid_Export_Import
 
             function wpvivid_clean_import_folder()
             {
-                var descript = 'Are you sure you want to delete all the exported files in the /ImportandExport folder? All the export files in the folder will be permanently deleted.';
+                var descript = '<?php esc_html_e('Are you sure you want to delete all the exported files in the /ImportandExport folder? All the export files in the folder will be permanently deleted.', 'wpvivid-backuprestore'); ?>';
                 var ret = confirm(descript);
                 if(ret === true){
                     var ajax_data = {
@@ -1780,7 +1782,7 @@ class WPvivid_Export_Import
                             var jsonarray = jQuery.parseJSON(data);
                             if(jsonarray.html !== false) {
                                 jQuery('#wpvivid_import_list').html(jsonarray.html);
-                                jQuery('#wpvivid_empty_import_folder').val('Delete Exported Files In Folder ('+jsonarray.size+')');
+                                jQuery('#wpvivid_empty_import_folder').val('<?php esc_attr_e('Delete Exported Files In Folder', 'wpvivid-backuprestore'); ?> ('+jsonarray.size+')');
                             }
                         }
                         catch(err) {
@@ -1869,13 +1871,13 @@ class WPvivid_Export_Import
                                     var div = jQuery('#wpvivid_import_log');
                                     div[0].scrollTop = div[0].scrollHeight;
                                     setTimeout(function () {
-                                        alert("Import completed successfully.");
+                                        alert("<?php esc_html_e('Import completed successfully.', 'wpvivid-backuprestore'); ?>");
                                     }, 1000);
                                     wpvivid_import_lock_unlock('unlock');
                                 }
                                 else if (jsonarray.status === 'error')
                                 {
-                                    alert("Import failed.");
+                                    alert("<?php esc_html_e('Import failed.', 'wpvivid-backuprestore'); ?>");
                                     wpvivid_import_lock_unlock('unlock');
                                 }
                                 else
@@ -1920,7 +1922,7 @@ class WPvivid_Export_Import
                         wpvivid_start_import(import_file_name, user);
                     }
                     else{
-                        alert('Please select an existing author to start importing.');
+                        alert('<?php esc_html_e('Please select an existing author to start importing.', 'wpvivid-backuprestore'); ?>');
                     }
                 }
             });
@@ -2078,7 +2080,7 @@ class WPvivid_Export_Import
                     var jsonarray = jQuery.parseJSON(data);
                     if (jsonarray.result === 'success')
                     {
-                        jQuery('#wpvivid_empty_import_folder').val('Delete Exported Files In Folder ('+jsonarray.size+')');
+                        jQuery('#wpvivid_empty_import_folder').val('<?php esc_attr_e('Delete Exported Files In Folder', 'wpvivid-backuprestore'); ?> ('+jsonarray.size+')');
                     }
                 }, function(XMLHttpRequest, textStatus, errorThrown)
                 {

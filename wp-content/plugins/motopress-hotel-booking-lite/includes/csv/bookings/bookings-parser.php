@@ -189,7 +189,7 @@ class BookingsParser
         foreach ($reservedServices as $reservedService) {
             $reservedService = MPHB()->translation()->translateReservedService($reservedService);
 
-            $service = $reservedService->getTitle();
+            $service = html_entity_decode( $reservedService->getTitle() );
 
             if ($reservedService->isPayPerAdult()) {
                 $service .= ' ' . sprintf(_n('x %d guest', 'x %d guests', $reservedService->getAdults(), 'motopress-hotel-booking'), $reservedService->getAdults());
@@ -330,6 +330,21 @@ class BookingsParser
      * @param \MPHB\Entities\ReservedRoom $room
      * @return string
      */
+    protected function parseDiscount( $booking, $room )
+    {
+        $roomPriceBreakdown = $this->getRoomPriceBreakdown( $booking, $room );
+
+        $discount = $roomPriceBreakdown['total'] - $roomPriceBreakdown['discount_total'];
+        
+        $price = mphb_format_price( $discount, array('as_html' => false) );
+        return html_entity_decode( $price ); // Decode #&36; into $
+    }
+
+    /**
+     * @param \MPHB\Entities\Booking $booking
+     * @param \MPHB\Entities\ReservedRoom $room
+     * @return string
+     */
     protected function parseSubtotal($booking, $room)
     {
         $priceBreakdown = $booking->getLastPriceBreakdown();
@@ -356,7 +371,7 @@ class BookingsParser
     {
         $roomPriceBreakdown = $this->getRoomPriceBreakdown( $booking, $room );
         
-        $price = mphb_format_price( $roomPriceBreakdown['total'], array('as_html' => false) );
+        $price = mphb_format_price( $roomPriceBreakdown['discount_total'], array('as_html' => false) );
         return html_entity_decode( $price ); // Decode #&36; into $
     }
 
@@ -594,7 +609,7 @@ class BookingsParser
         $roomPriceBreakdown = $this->getRoomPriceBreakdown( $booking, $room );
         $bookingPriceBreakdown = $booking->getLastPriceBreakdown();
 
-        $roomPaid = $roomPriceBreakdown['total'] / $bookingPriceBreakdown['total'] * $bookingPaid;
+        $roomPaid = $roomPriceBreakdown['discount_total'] / $bookingPriceBreakdown['total'] * $bookingPaid;
 
         return html_entity_decode( mphb_format_price( $roomPaid, array('as_html' => false) ) );
     }

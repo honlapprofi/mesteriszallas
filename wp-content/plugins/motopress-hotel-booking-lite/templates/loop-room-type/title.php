@@ -17,9 +17,14 @@ if ( !defined( 'ABSPATH' ) ) {
 do_action( 'mphb_render_loop_room_type_before_title' );
 ?>
 
-<?php $linkClass = apply_filters( 'mphb_loop_room_type_title_link_class', 'mphb-room-type-title' ); ?>
+<?php 
 
-<a class="<?php echo esc_attr( $linkClass ); ?>" href="<?php esc_url( the_permalink() ); ?>"><?php esc_html( the_title() ); ?></a>
+$linkClass = apply_filters( 'mphb_loop_room_type_title_link_class', 'mphb-room-type-title' ); 
+$linkUrl = get_permalink();
+
+?>
+
+<a class="<?php echo esc_attr( $linkClass ); ?>" href="<?php echo null == $linkUrl ? '' : esc_url( $linkUrl ); ?>"><?php esc_html( the_title() ); ?></a>
 
 <?php
 /**

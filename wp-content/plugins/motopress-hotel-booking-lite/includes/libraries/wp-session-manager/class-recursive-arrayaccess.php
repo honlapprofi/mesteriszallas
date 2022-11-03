@@ -85,6 +85,7 @@ class Recursive_ArrayAccess implements \ArrayAccess {
 	 *
 	 * @return boolean true on success or false on failure.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists( $offset ){
 		return isset( $this->container[$offset] );
 	}
@@ -98,6 +99,7 @@ class Recursive_ArrayAccess implements \ArrayAccess {
 	 *
 	 * @return mixed Can return all value types.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet( $offset ){
 		return isset( $this->container[$offset] ) ? $this->container[$offset] : null;
 	}
@@ -112,6 +114,7 @@ class Recursive_ArrayAccess implements \ArrayAccess {
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet( $offset, $data ){
 		if ( is_array( $data ) ) {
 			$data = new self( $data );
@@ -134,6 +137,7 @@ class Recursive_ArrayAccess implements \ArrayAccess {
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetUnset( $offset ){
 		unset( $this->container[$offset] );
 

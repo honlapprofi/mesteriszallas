@@ -3,9 +3,9 @@ Contributors: daveshine, p4fbradjohnson, deckerweb, wpautobahn, pacotole, creapu
 Donate link: https://www.paypal.me/pacotole
 Tags: elementor, polylang, multilingual, language switcher, languages, templates, widget, finder, dynamic tags
 Requires at least: 5.4
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 2.0.8
+Stable tag: 2.3.2
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -20,7 +20,9 @@ Connect Polylang multilingual plugin with Elementor Page Builder: **Translate yo
 ### What the Plugin Does
 
 #### 📍 Template translation and show in the correct language
-Create translations for your Elementor templates especially for header, footer or archive templates with [**Elementor Pro Theme Builder**](https://trk.elementor.com/5l8mc0eyt38p-theme-builder) *(affiliated link)*.
+Create translations for your Elementor templates especially for header, footer or archive templates with [**Elementor Pro Theme Builder**](https://be.elementor.com/visit/?bta=61741&nci=5383&utm_campaign=wporg) *(affiliated link)*.
+
+It also works and selects the correct translation when using the `[elementor-template]` shortcode.
 
 #### 🔄 Language Switcher
 A native Elementor Widget to easily build a nice and fully customizable language switcher:
@@ -96,6 +98,7 @@ You can collaborate with your language translations in [Translating WordPress](h
 The following code/classes are licensed under the GPL.
 
 * v2. refactor and upgrade by [Pacotole](https://profiles.wordpress.org/pacotole/) at [Creame](https://crea.me)
+* v2.1 Cross domain fixes based on work of [Jory Hogeveen](https://profiles.wordpress.org/keraweb/) and [nicmare](https://github.com/nicmare)
 * Support [Brad Johnson](https://profiles.wordpress.org/p4fbradjohnson/)
 * v1. released by [David Decker](https://profiles.wordpress.org/daveshine/)
 * v1. Polylang Switcher class (Elementor Widget) and its CSS based on widget from plugin "Language Switcher for Elementor" by Solitweb (GPLv2 or later)
@@ -111,7 +114,7 @@ Please, send your suggestions and feedback - Thank you for using or trying out t
 
 * WordPress version 4.7 or higher
 * [Elementor](https://wordpress.org/plugins/elementor/) and [Polylang](https://wordpress.org/plugins/polylang/) plugins - free versions from WordPress.org Plugin Directory
-* **Recommended:** [**Elementor Pro**](https://trk.elementor.com/5l8mc0eyt38p) *(affiliate link)* which is needed for Theme Building possibilities (header, footer, 404, archive templates, etc.) and Dynamic Tags.
+* **Recommended:** [**Elementor Pro**](https://be.elementor.com/visit/?bta=61741&nci=5383&utm_campaign=wporg) *(affiliate link)* which is needed for Theme Building possibilities (header, footer, 404, archive templates, etc.) and Dynamic Tags.
 
 = Installation =
 
@@ -146,7 +149,7 @@ This plugin has NO settings page, as it does not need one. All it does works jus
 = Is Elementor Pro required? =
 Technically, Elementor Pro is not required **but highly recommended**.
 
-[**Elementor Pro**](https://trk.elementor.com/5l8mc0eyt38p-pro) *(affiliate link)* is required for these features of the plugin:
+[**Elementor Pro**](https://be.elementor.com/visit/?bta=61741&nci=5383&utm_campaign=wporg) *(affiliate link)* is required for these features of the plugin:
 
 * Translate Elementor Theme Builder Templates (header, footer, 404, page, archives).
 * Translate Elementor Popups.
@@ -177,6 +180,7 @@ There are quite a few:
 
 * [**Polylang Pro** (Premium)](https://polylang.pro/downloads/polylang-pro/) - The official premium version with more features, plus premium support
 * [**Polylang for WooCommerce** (Premium)](https://polylang.pro/downloads/polylang-for-woocommerce/) - Makes WooCommerce multilingual - official Polylang Add-On
+* [**Polylang Slug**](https://github.com/grappler/polylang-slug) - Allows same slug for multiple languages in Polylang
 * [**Lingotek Translation**](https://wordpress.org/plugins/lingotek-translation/) - Native Polylang integration - Lingotek brings convenient cloud-based localization and translation for WordPress
 * [**Elementor Datepicker Localization**](https://github.com/creame/elementor-datepicker-localization) - Allow form datetime fields in your site language
 * [**Country Flags for Elementor**](https://wordpress.org/plugins/country-flags-for-elementor/) - Native Elementor widget
@@ -193,6 +197,29 @@ There are quite a few:
 
 
 == Changelog ==
+
+= 2.3.2 =
+* Fix dynamic tag image language flag don't return svg scalable file.
+* Fix Language Switcher dropdown styles with many languages.
+* Fix PHP error undefined array key "HTTP_REFERER" (thanks to @nicomollet).
+
+= 2.3.1 =
+* Fix Widget initialization on Elementor 3.7
+
+= 2.3.0 =
+* Added dropdown controls to show on mouse hover and drop to up.
+* Added Elementor Kit translation support.
+
+= 2.2.0 =
+* Added Elementor Pro template shortcode translation.
+
+= 2.1.1 =
+* Enable Elementor cross domain url fixes only for multidomain configurations.
+* Added Elementor tested headers.
+
+= 2.1.0 =
+* Fixed cross domain issues with Polylang setup with multiple domains.
+* Fix flag SVG inline with some themes.
 
 = 2.0.8 =
 * Don't load integrations if Polylang languages are not defined.

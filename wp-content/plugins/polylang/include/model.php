@@ -243,12 +243,14 @@ class PLL_Model {
 		if ( false === $post_types = $this->cache->get( 'post_types' ) ) {
 			$post_types = array( 'post' => 'post', 'page' => 'page', 'wp_block' => 'wp_block' );
 
-			if ( ! empty( $this->options['media_support'] ) ) {
-				$post_types['attachment'] = 'attachment';
-			}
-
 			if ( ! empty( $this->options['post_types'] ) && is_array( $this->options['post_types'] ) ) {
 				$post_types = array_merge( $post_types, array_combine( $this->options['post_types'], $this->options['post_types'] ) );
+			}
+
+			if ( empty( $this->options['media_support'] ) ) {
+				unset( $post_types['attachment'] ); // In case the post type attachment is stored in the option.
+			} else {
+				$post_types['attachment'] = 'attachment';
 			}
 
 			/**
@@ -385,13 +387,13 @@ class PLL_Model {
 	 *
 	 * @since 1.7
 	 *
-	 * @return array
+	 * @return string[]
 	 */
 	public function get_filtered_taxonomies_query_vars() {
 		$query_vars = array();
 		foreach ( $this->get_filtered_taxonomies() as $filtered_tax ) {
 			$tax = get_taxonomy( $filtered_tax );
-			if ( ! empty( $tax ) ) {
+			if ( ! empty( $tax ) && is_string( $tax->query_var ) ) {
 				$query_vars[] = $tax->query_var;
 			}
 		}
@@ -648,6 +650,11 @@ class PLL_Model {
 	 * @return int[]
 	 */
 	public function get_posts_with_no_lang( $post_types, $limit ) {
+		$languages = $this->get_languages_list( array( 'fields' => 'term_id' ) );
+		if ( empty( $languages ) ) {
+			return array(); // Don't report if no languages have been defined yet.
+		}
+
 		return get_posts(
 			array(
 				'numberposts' => $limit,
@@ -658,7 +665,7 @@ class PLL_Model {
 				'tax_query'   => array(
 					array(
 						'taxonomy' => 'language',
-						'terms'    => $this->get_languages_list( array( 'fields' => 'term_id' ) ),
+						'terms'    => $languages,
 						'operator' => 'NOT IN',
 					),
 				),
@@ -678,6 +685,11 @@ class PLL_Model {
 	public function get_terms_with_no_lang( $taxonomies, $limit ) {
 		global $wpdb;
 
+		$languages = $this->get_languages_list( array( 'fields' => 'tl_term_taxonomy_id' ) );
+		if ( empty( $languages ) ) {
+			return array(); // Don't report if no languages have been defined yet.
+		}
+
 		$taxonomies = (array) $taxonomies;
 
 		$sql = sprintf(
@@ -688,7 +700,7 @@ class PLL_Model {
 			)
 			%s",
 			implode( "','", array_map( 'esc_sql', $taxonomies ) ),
-			implode( ',', array_map( 'intval', $this->get_languages_list( array( 'fields' => 'tl_term_taxonomy_id' ) ) ) ),
+			implode( ',', array_map( 'intval', $languages ) ),
 			$limit > 0 ? sprintf( 'LIMIT %d', intval( $limit ) ) : ''
 		);
 

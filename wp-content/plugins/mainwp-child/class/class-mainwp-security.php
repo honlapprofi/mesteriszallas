@@ -336,11 +336,12 @@ class MainWP_Security {
 		 */
 		global $wp_filesystem;
 
+		$abs_path = $wp_filesystem->abspath();
 		if ( $force || self::get_security_option( 'readme' ) ) {
-			if ( $wp_filesystem->exists( ABSPATH . 'readme.html' ) ) {
+			if ( $wp_filesystem->exists( $abs_path . 'readme.html' ) ) {
 				if ( ! unlink( ABSPATH . 'readme.html' ) ) {
-					$wp_filesystem->delete( ABSPATH . 'readme.html' );
-					if ( $wp_filesystem->exists( ABSPATH . 'readme.html' ) ) {
+					$wp_filesystem->delete( $abs_path . 'readme.html' );
+					if ( $wp_filesystem->exists( $abs_path . 'readme.html' ) ) {
 						// prevent repeat delete.
 						self::update_security_option( 'readme', false );
 					}
@@ -450,7 +451,18 @@ class MainWP_Security {
 	 * @return bool true|false If the PHP error reporting has been disabled, return true, if not, return false.
 	 */
 	public static function remove_php_reporting_ok() {
-		return ! ( ( ( 0 != ini_get( 'display_errors' ) ) && ( 'off' != ini_get( 'display_errors' ) ) ) || ( ( 0 != ini_get( 'display_startup_errors' ) ) && ( 'off' != ini_get( 'display_startup_errors' ) ) ) );
+		$is_ok       = true;
+		$display_off = ini_get( 'display_errors' );
+		if ( ! empty( $display_off ) ) {
+			$display_off = strtolower( $display_off );
+			$is_ok       = ( $is_ok || 'off' === $display_off );
+		}
+		$display_startup_off = ini_get( 'display_startup_errors' );
+		if ( ! empty( $display_startup_off ) ) {
+			$display_startup_off = strtolower( $display_startup_off );
+			$is_ok               = ( $is_ok || 'off' === $display_startup_off );
+		}
+		return $is_ok;
 	}
 
 	/**

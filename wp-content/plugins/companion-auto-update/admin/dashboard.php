@@ -26,10 +26,10 @@ if( isset( $_POST['submit'] ) ) {
 	$table_name = $wpdb->prefix . "auto_updates"; 
 
 	// Auto updater
-	$plugins 		= isset( $_POST['plugins'] ) ? sanitize_text_field( $_POST['plugins'] ) : '';
-	$themes 		= isset( $_POST['themes'] ) ? sanitize_text_field( $_POST['themes'] ) : '';
-	$minor 			= isset( $_POST['minor'] ) ? sanitize_text_field( $_POST['minor'] ) : '';
-	$major 			= isset( $_POST['major'] ) ? sanitize_text_field( $_POST['major'] ) : '';
+	$plugins 			= isset( $_POST['plugins'] ) ? sanitize_text_field( $_POST['plugins'] ) : '';
+	$themes 			= isset( $_POST['themes'] ) ? sanitize_text_field( $_POST['themes'] ) : '';
+	$minor 				= isset( $_POST['minor'] ) ? sanitize_text_field( $_POST['minor'] ) : '';
+	$major 				= isset( $_POST['major'] ) ? sanitize_text_field( $_POST['major'] ) : '';
 	$translations 		= isset( $_POST['translations'] ) ? sanitize_text_field( $_POST['translations'] ) : '';
 
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'plugins'", $plugins ) );
@@ -39,11 +39,11 @@ if( isset( $_POST['submit'] ) ) {
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'translations'", $translations ) );
 
 	// Emails
-	$send 			= isset( $_POST['cau_send'] ) ? sanitize_text_field( $_POST['cau_send'] ) : '';
+	$send 				= isset( $_POST['cau_send'] ) ? sanitize_text_field( $_POST['cau_send'] ) : '';
 	$sendupdate 		= isset( $_POST['cau_send_update'] ) ? sanitize_text_field( $_POST['cau_send_update'] ) : '';
 	$sendoutdated 		= isset( $_POST['cau_send_outdated'] ) ? sanitize_text_field( $_POST['cau_send_outdated'] ) : '';
-	$wpemails 		= isset( $_POST['wpemails'] ) ? sanitize_text_field( $_POST['wpemails'] ) : '';
-	$email 			= isset( $_POST['cau_email'] ) ? sanitize_text_field( $_POST['cau_email'] ) : '';
+	$wpemails 			= isset( $_POST['wpemails'] ) ? sanitize_text_field( $_POST['wpemails'] ) : '';
+	$email 				= isset( $_POST['cau_email'] ) ? sanitize_text_field( $_POST['cau_email'] ) : '';
 	$html_or_text 		= isset( $_POST['html_or_text'] ) ? sanitize_text_field( $_POST['html_or_text'] ) : 'html';
 	$dbupdateemails 	= isset( $_POST['dbupdateemails'] ) ? sanitize_text_field( $_POST['dbupdateemails'] ) : '';
 
@@ -56,8 +56,8 @@ if( isset( $_POST['submit'] ) ) {
 	$wpdb->query( $wpdb->prepare( "UPDATE $table_name SET onoroff = %s WHERE name = 'dbupdateemails'", $dbupdateemails ) );
 
 	// Advanced
-	$allow_editor 		= isset( $_POST['allow_editor'] ) ? sanitize_text_field( $_POST['allow_editor'] ) : '';
-	$allow_author 		= isset( $_POST['allow_author'] ) ? sanitize_text_field( $_POST['allow_author'] ) : '';
+	$allow_editor 			= isset( $_POST['allow_editor'] ) ? sanitize_text_field( $_POST['allow_editor'] ) : '';
+	$allow_author 			= isset( $_POST['allow_author'] ) ? sanitize_text_field( $_POST['allow_author'] ) : '';
 	$advanced_info_emails 	= isset( $_POST['advanced_info_emails'] ) ? sanitize_text_field( $_POST['advanced_info_emails'] ) : '';
 	$plugin_links_emails 	= isset( $_POST['plugin_links_emails'] ) ? sanitize_text_field( $_POST['plugin_links_emails'] ) : '';
 
@@ -76,21 +76,21 @@ if( isset( $_POST['submit'] ) ) {
 	// Intervals
 
 	// Set variables
-	$plugin_sc 		= sanitize_text_field( $_POST['plugin_schedule'] );
-	$theme_sc 		= sanitize_text_field( $_POST['theme_schedule'] );
-	$core_sc 		= sanitize_text_field( $_POST['core_schedule'] );
+	$plugin_sc 			= sanitize_text_field( $_POST['plugin_schedule'] );
+	$theme_sc 			= sanitize_text_field( $_POST['theme_schedule'] );
+	$core_sc 			= sanitize_text_field( $_POST['core_schedule'] );
 	$schedule_mail 		= sanitize_text_field( $_POST['update_notifications'] );
 	$outdated_notifier 	= sanitize_text_field( $_POST['outdated_notifier'] );
 
 	// First clear schedules
-	wp_clear_scheduled_hook('wp_update_plugins');
-	wp_clear_scheduled_hook('wp_update_themes');
-	wp_clear_scheduled_hook('wp_version_check');
-	wp_clear_scheduled_hook('cau_set_schedule_mail');
-	wp_clear_scheduled_hook('cau_custom_hooks_plugins');
-	wp_clear_scheduled_hook('cau_custom_hooks_themes');
-	wp_clear_scheduled_hook('cau_log_updater');
-	wp_clear_scheduled_hook('cau_outdated_notifier');
+	wp_clear_scheduled_hook( 'wp_update_plugins' );
+	wp_clear_scheduled_hook( 'wp_update_themes' );
+	wp_clear_scheduled_hook( 'wp_version_check' );
+	wp_clear_scheduled_hook( 'cau_set_schedule_mail' );
+	wp_clear_scheduled_hook( 'cau_custom_hooks_plugins' );
+	wp_clear_scheduled_hook( 'cau_custom_hooks_themes' );
+	wp_clear_scheduled_hook( 'cau_log_updater' );
+	wp_clear_scheduled_hook( 'cau_outdated_notifier' );
 
 	// Then set the new times
 
@@ -109,11 +109,9 @@ if( isset( $_POST['submit'] ) ) {
 		wp_schedule_event( ( $pluginSetTime - 1800 ), $plugin_sc, 'cau_log_updater' );
 
 	} else {
-
 		wp_schedule_event( time(), $plugin_sc, 'wp_update_plugins' );
 		wp_schedule_event( time(), $plugin_sc, 'cau_custom_hooks_plugins' );
 		wp_schedule_event( ( time() - 1800 ), $plugin_sc, 'cau_log_updater' );
-
 	}
 
 	// Themes
@@ -130,10 +128,8 @@ if( isset( $_POST['submit'] ) ) {
 		wp_schedule_event( $themeSetTime, $theme_sc, 'cau_custom_hooks_themes' );
 
 	} else {
-
 		wp_schedule_event( time(), $theme_sc, 'wp_update_themes' );
 		wp_schedule_event( time(), $theme_sc, 'cau_custom_hooks_themes' );
-
 	}
 
 	// Core
@@ -149,9 +145,7 @@ if( isset( $_POST['submit'] ) ) {
 		wp_schedule_event( $coreSetTime, $core_sc, 'wp_version_check' );
 
 	} else {
-
 		wp_schedule_event( time(), $core_sc, 'wp_version_check' );
-
 	}
 
 	// Update notifications
@@ -167,9 +161,7 @@ if( isset( $_POST['submit'] ) ) {
 		wp_schedule_event( $emailSetTime, $schedule_mail, 'cau_set_schedule_mail' );
 
 	} else {
-
 		wp_schedule_event( time(), $schedule_mail, 'cau_set_schedule_mail' );
-
 	}
 
 	// Outdated notifications
@@ -185,9 +177,7 @@ if( isset( $_POST['submit'] ) ) {
 		wp_schedule_event( $emailSetTime, $outdated_notifier, 'cau_outdated_notifier' );
 
 	} else {
-
 		wp_schedule_event( time(), $outdated_notifier, 'cau_outdated_notifier' );
-
 	}
 
 
@@ -195,26 +185,26 @@ if( isset( $_POST['submit'] ) ) {
 
 }
 
+// Welcome screen for first time viewers
 if( isset( $_GET['welcome'] ) ) {
-
 	echo '<div class="welcome-to-cau welcome-bg" style="margin-bottom: 0px;">
 		<div class="welcome-image">
 		</div><div class="welcome-content">
 
-			<h3>'.__( 'Welcome to Companion Auto Update', 'companion-auto-update' ).'</h3>
-			<br />
-			<p><strong>'.__( 'You\'re set and ready to go', 'companion-auto-update' ).'</strong></p>
-			<p>'.__( 'The plugin is all set and ready to go with the recommended settings, but if you\'d like you can change them below.' ).'</p>
-			<br />
-			<p><strong>'.__( 'Get Started' ).': </strong> <a href="'.cau_url( 'pluginlist' ).'">'.__( 'Update filter', 'companion-auto-update' ).'</a> &nbsp; | &nbsp;
-			<strong>'.__( 'More Actions' ).': </strong> <a href="http://codeermeneer.nl/cau_poll/" target="_blank">'.__('Give feedback', 'companion-auto-update').'</a> - <a href="https://translate.wordpress.org/projects/wp-plugins/companion-auto-update/" target="_blank">'.__( 'Help us translate', 'companion-auto-update' ).'</a></p>
+		<h3>'.__( 'Welcome to Companion Auto Update', 'companion-auto-update' ).'</h3>
+		<br />
+		<p><strong>'.__( 'You\'re set and ready to go', 'companion-auto-update' ).'</strong></p>
+		<p>'.__( 'The plugin is all set and ready to go with the recommended settings, but if you\'d like you can change them below.' ).'</p>
+		<br />
+		<p><strong>'.__( 'Get Started' ).': </strong> <a href="'.cau_url( 'pluginlist' ).'">'.__( 'Update filter', 'companion-auto-update' ).'</a> &nbsp; | &nbsp;
+		<strong>'.__( 'More Actions' ).': </strong> <a href="http://codeermeneer.nl/cau_poll/" target="_blank">'.__('Give feedback', 'companion-auto-update').'</a> - <a href="https://translate.wordpress.org/projects/wp-plugins/companion-auto-update/" target="_blank">'.__( 'Help us translate', 'companion-auto-update' ).'</a></p>
 
 		</div>
 	</div>';
 }
 
-$cs_hooks_p 				= wp_get_schedule( 'cau_custom_hooks_plugins' );
-$cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
+$cs_hooks_p = wp_get_schedule( 'cau_custom_hooks_plugins' );
+$cs_hooks_t = wp_get_schedule( 'cau_custom_hooks_themes' );
 
 ?>
 
@@ -233,25 +223,17 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 
 							<?php
 
-							echo '<p><input id="plugins" name="plugins" type="checkbox"';
-							if( cau_get_db_value( 'plugins' ) == 'on' ) echo 'checked';
-							echo '/> <label for="plugins">'.__('Auto update plugins?', 'companion-auto-update').'</label></p>';
+							$plugins_on 		= ( cau_get_db_value( 'plugins' ) == 'on' ) ? "CHECKED" : "";
+							$themes_on 			= ( cau_get_db_value( 'themes' ) == 'on' ) ? "CHECKED" : "";
+							$minor_on 			= ( cau_get_db_value( 'minor' ) == 'on' ) ? "CHECKED" : "";
+							$major_on 			= ( cau_get_db_value( 'major' ) == 'on' ) ? "CHECKED" : "";
+							$translations_on 	= ( cau_get_db_value( 'translations' ) == 'on' ) ? "CHECKED" : "";
 
-							echo '<p><input id="themes" name="themes" type="checkbox"';
-							if( cau_get_db_value( 'themes' ) == 'on' ) echo 'checked';
-							echo '/> <label for="themes">'.__('Auto update themes?', 'companion-auto-update').'</label></p>';
-
-							echo '<p><input id="minor" name="minor" type="checkbox"';
-							if( cau_get_db_value( 'minor' ) == 'on' ) echo 'checked';
-							echo '/> <label for="minor">'.__('Auto update minor core updates?', 'companion-auto-update').' <code class="majorMinorExplain">5.3.0 > 5.3.1</code></label></p>';
-
-							echo '<p><input id="major" name="major" type="checkbox"';
-							if( cau_get_db_value( 'major' ) == 'on' ) echo 'checked';
-							echo '/> <label for="major">'.__('Auto update major core updates?', 'companion-auto-update').' <code class="majorMinorExplain">5.3.0 > 5.4.0</code></label></p>';
-
-							echo '<p><input id="translations" name="translations" type="checkbox"';
-							if( cau_get_db_value( 'translations' ) == 'on' ) echo 'checked';
-							echo '/> <label for="translations">'.__('Auto update translation files?', 'companion-auto-update').'</label></p>';
+							echo "<p><input id='plugins' name='plugins' type='checkbox' {$plugins_on}/><label for='plugins'>".__( 'Auto update plugins?', 'companion-auto-update' )."</label></p>";
+							echo "<p><input id='themes' name='themes' type='checkbox' {$themes_on}/><label for='themes'>".__( 'Auto update themes?', 'companion-auto-update' )."</label></p>";
+							echo "<p><input id='minor' name='minor' type='checkbox' {$minor_on}/><label for='minor'>".__( 'Auto update minor core updates?', 'companion-auto-update' )."  <code class='majorMinorExplain'>6.0.0 > 6.0.1</code></label></p>";
+							echo "<p><input id='major' name='major' type='checkbox' {$major_on}/><label for='major'>".__( 'Auto update major core updates?', 'companion-auto-update' )."  <code class='majorMinorExplain'>6.0.0 > 6.1.0</code></label></p>";
+							echo "<p><input id='translations' name='translations' type='checkbox' {$translations_on}/><label for='translations'>".__( 'Auto update translation files?', 'companion-auto-update' )."</label></p>";
 
 							?>
 
@@ -267,8 +249,12 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 			<h2 class="title"><?php _e( 'Email Notifications', 'companion-auto-update' );?></h2>
 
 			<?php
-			if( cau_get_db_value( 'email' ) == '' ) $toemail = get_option('admin_email'); 
-			else $toemail = cau_get_db_value( 'email' );
+
+			$db_email 	= cau_get_db_value( 'email' );
+			$toemail 	= ( $db_email == '' ) ? get_option( 'admin_email' ) : $db_email;
+
+			$hot 		= cau_get_db_value( 'html_or_text' );
+
 			?>
 
 			<table class="form-table">
@@ -281,7 +267,7 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 						</p>
 						<p>
 							<input id="cau_send" name="cau_send" type="checkbox" <?php if( cau_get_db_value( 'send' ) == 'on' ) { echo 'checked'; } ?> />
-							<label for="cau_send"><?php _e('Send me emails when an update is available.', 'companion-auto-update');?></label>
+							<label for="cau_send"><?php _e( 'Send me emails when an update is available.', 'companion-auto-update' );?></label>
 						</p>
 					</td>
 				</tr>
@@ -299,7 +285,7 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 					<td>
 						<p>
 							<label for="cau_email"><?php _e( 'To', 'companion-auto-update' ); ?>:</label>
-							<input type="text" name="cau_email" id="cau_email" class="regular-text" placeholder="<?php echo get_option('admin_email'); ?>" value="<?php echo esc_html( $toemail ); ?>" />
+							<input type="text" name="cau_email" id="cau_email" class="regular-text" placeholder="<?php echo get_option( 'admin_email' ); ?>" value="<?php echo esc_html( $toemail ); ?>" />
 						</p>
 
 						<p class="description"><?php _e('Seperate email addresses using commas.', 'companion-auto-update');?></p>
@@ -310,8 +296,8 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 					<td>
 						<p>
 							<select id='html_or_text' name='html_or_text'>
-								<option value='html' <?php if( cau_get_db_value( 'html_or_text' ) == 'html' ) { echo "SELECTED"; } ?>><?php _e( 'Use HTML', 'companion-auto-update' ); ?></option>
-								<option value='text' <?php if( cau_get_db_value( 'html_or_text' ) == 'text' ) { echo "SELECTED"; } ?>><?php _e( 'Use plain text', 'companion-auto-update' ); ?></option>
+								<option value='html' <?php if( $hot == 'html' ) { echo "SELECTED"; } ?>><?php _e( 'Use HTML', 'companion-auto-update' ); ?></option>
+								<option value='text' <?php if( $hot == 'text' ) { echo "SELECTED"; } ?>><?php _e( 'Use plain text', 'companion-auto-update' ); ?></option>
 							</select>
 						</p>
 					</td>
@@ -443,23 +429,35 @@ $cs_hooks_t 				= wp_get_schedule( 'cau_custom_hooks_themes' );
 
 			<h2 class="title"><?php _e( 'Advanced settings', 'companion-auto-update' ); ?></h2>
 
+			<?php
+
+			// Access
+			$accessallowed 		= cau_allowed_user_rights_array();
+			$has_editor 		= in_array( 'editor', $accessallowed ) ? true : false;
+			$has_author 		= in_array( 'author', $accessallowed ) ? true : false;
+
+			// Update delays
+			$has_updatedelay 	= ( cau_get_db_value( 'update_delay' ) == 'on' ) ? true : false;
+
+			?>
+
 			<table class="form-table">
 				<tbody>
 					<tr>
 						<th scope="row"><label><?php _e( 'Allow access to:', 'companion-auto-update' ); ?></label></th>
 						<td>
 							<p><label for="allow_administrator"><input name="allow_administrator" type="checkbox" id="allow_administrator" disabled="" checked=""><?php _e( 'Administrator', 'companion-auto-update' ); ?></label></p>
-							<p><label for="allow_editor"><input name="allow_editor" type="checkbox" id="allow_editor" <?php if( cau_get_db_value( 'allow_editor' ) == 'on' ) { echo "CHECKED"; } ?>><?php _e( 'Editor', 'companion-auto-update' ); ?></label></p>
-							<p><label for="allow_author"><input name="allow_author" type="checkbox" id="allow_author" <?php if( cau_get_db_value( 'allow_author' ) == 'on' ) { echo "CHECKED"; } ?>><?php _e( 'Author', 'companion-auto-update' ); ?></label></p>
+							<p><label for="allow_editor"><input name="allow_editor" type="checkbox" id="allow_editor" <?php if( $has_editor ) { echo "CHECKED"; } ?>><?php _e( 'Editor', 'companion-auto-update' ); ?></label></p>
+							<p><label for="allow_author"><input name="allow_author" type="checkbox" id="allow_author" <?php if( $has_author ) { echo "CHECKED"; } ?>><?php _e( 'Author', 'companion-auto-update' ); ?></label></p>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row"><label><?php _e( 'Delay updates', 'companion-auto-update' ); ?></label></th>
 						<td>
-							<p><label for="update_delay"><input name="update_delay" type="checkbox" id="update_delay" <?php if( cau_get_db_value( 'update_delay' ) == 'on' ) { echo "CHECKED"; } ?>><?php _e( 'Delay updates', 'companion-auto-update' ); ?></label></p>
+							<p><label for="update_delay"><input name="update_delay" type="checkbox" id="update_delay" <?php echo $has_updatedelay ? "CHECKED" : ""; ?> ><?php _e( 'Delay updates', 'companion-auto-update' ); ?></label></p>
 						</td>
 					</tr>
-					<tr id='update_delay_days_block' <?php if( cau_get_db_value( 'update_delay' ) != 'on' ) { echo "class='disabled_option'"; } ?>>
+					<tr id='update_delay_days_block' <?php echo !$has_updatedelay ? "class='disabled_option'" : ""; ?>>
 						<th scope="row"><label><?php _e( 'Number of days', 'companion-auto-update' ); ?></label></th>
 						<td>
 							<input type="number" min="0" max="31" name="update_delay_days" id="update_delay_days" class="regular-text" value="<?php echo cau_get_db_value( 'update_delay_days' ); ?>" />

@@ -24,7 +24,7 @@ class RoomRatesShortcode extends AbstractShortcode {
 	 * @param string $shortcodeName
 	 * @return string
 	 */
-	public function render( $atts, $content = null, $shortcodeName ){
+	public function render( $atts, $content, $shortcodeName ){
 
 		$defaultAtts = array(
 			'id'	 => get_the_ID(),

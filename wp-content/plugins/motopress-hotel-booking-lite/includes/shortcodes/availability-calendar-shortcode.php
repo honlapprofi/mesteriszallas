@@ -7,23 +7,27 @@ class AvailabilityCalendarShortcode extends AbstractShortcode {
 	protected $name = 'mphb_availability_calendar';
 
 	/**
-	 * @param array $atts
-	 * @param null $content
+	 * @param array  $atts
+	 * @param null   $content
 	 * @param string $name
 	 *
 	 * @return string
 	 */
-	public function render( $atts, $content = '', $name ){
+	public function render( $atts, $content, $shortcodeName ) {
+
 		$defaultAtts = array(
-			'id'			 => get_the_ID(),
-			'monthstoshow'	 => '',
-			'class'			 => ''
+			'id'               => get_the_ID(),
+			'monthstoshow'     => '',
+			'display_price'    => MPHB()->settings()->main()->isRoomTypeCalendarShowPrices(),
+			'truncate_price'   => MPHB()->settings()->main()->isRoomTypeCalendarTruncatePrices(),
+			'display_currency' => MPHB()->settings()->main()->isRoomTypeCalendarShowPricesCurrency(),
+			'class'            => '',
 		);
 
-		$atts = shortcode_atts( $defaultAtts, $atts, $name );
+		$atts = shortcode_atts( $defaultAtts, $atts, $shortcodeName );
 
 		$roomType = MPHB()->getRoomTypeRepository()->findById( $atts['id'] );
-		if ( !$roomType ) {
+		if ( ! $roomType ) {
 			return '';
 		}
 
@@ -33,11 +37,16 @@ class AvailabilityCalendarShortcode extends AbstractShortcode {
 
 		// It's not IDs, but also must be > 0
 		$monthsToShow = \MPHB\Utils\ValidateUtils::validateCommaSeparatedIds( $atts['monthstoshow'] );
-		if ( !empty( $monthsToShow ) ) {
+
+		if ( ! empty( $monthsToShow ) ) {
 			// Must be only 1 or 2 numbers
-			$monthsToShow = array_slice( $monthsToShow, 0, 2 );
+			$monthsToShow  = array_slice( $monthsToShow, 0, 2 );
 			$calendarAtts .= ' data-monthstoshow="' . esc_attr( join( ',', $monthsToShow ) ) . '"';
 		}
+
+		$calendarAtts .= ' data-is_show_prices="' . ( rest_sanitize_boolean( $atts['display_price'] ) ? 1 : 0 ) . '"';
+		$calendarAtts .= ' data-is_truncate_prices="' . ( rest_sanitize_boolean( $atts['truncate_price'] ) ? 1 : 0 ) . '"';
+		$calendarAtts .= ' data-is_show_prices_currency="' . ( rest_sanitize_boolean( $atts['display_currency'] ) ? 1 : 0 ) . '"';
 
 		ob_start();
 

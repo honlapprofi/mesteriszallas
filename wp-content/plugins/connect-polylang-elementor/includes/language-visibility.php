@@ -75,7 +75,7 @@ class LanguageVisibility {
 			'cpel_lv_enabled',
 			array(
 				'type'           => Controls_Manager::SWITCHER,
-				'label'          => __( 'Enable', 'elementor' ),
+				'label'          => __( 'Enable', 'elementor' ), // phpcs:ignore WordPress.WP.I18n
 				'render_type'    => 'template',
 				'prefix_class'   => 'cpel-lv--',
 				'style_transfer' => false,
@@ -85,15 +85,15 @@ class LanguageVisibility {
 		$element->add_control(
 			'cpel_lv_action',
 			array(
-				'label'     => __( 'Visibility', 'elementor' ),
+				'label'     => __( 'Visibility', 'elementor' ), // phpcs:ignore WordPress.WP.I18n
 				'type'      => Controls_Manager::CHOOSE,
 				'options'   => array(
 					'show' => array(
-						'title' => __( 'Show', 'elementor' ),
+						'title' => __( 'Show', 'elementor' ), // phpcs:ignore WordPress.WP.I18n
 						'icon'  => 'eicon-preview-medium',
 					),
 					'hide' => array(
-						'title' => __( 'Hide', 'elementor' ),
+						'title' => __( 'Hide', 'elementor' ), // phpcs:ignore WordPress.WP.I18n
 						'icon'  => 'eicon-ban',
 					),
 				),
@@ -142,7 +142,7 @@ class LanguageVisibility {
 			return $should_render;
 		}
 
-		return in_array( pll_current_language(), $languages ) ? $show : ! $show;
+		return in_array( pll_current_language(), $languages, true ) ? $show : ! $show;
 
 	}
 
