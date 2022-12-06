@@ -243,7 +243,7 @@ class PLL_Admin_Model extends PLL_Model {
 		 * @since 1.9
 		 * @since 3.2 Added $lang parameter.
 		 *
-		 * @param array<mixed> $args {
+		 * @param array $args {
 		 *   Arguments used to modify the language. @see PLL_Admin_Model::update_language().
 		 *
 		 *   @type string $name           Language name (used only for display).
@@ -416,7 +416,7 @@ class PLL_Admin_Model extends PLL_Model {
 		}
 
 		// Get all terms with term_taxonomy_id
-		$terms = get_terms( $taxonomy, array( 'hide_empty' => false ) );
+		$terms = get_terms( array( 'taxonomy' => $taxonomy, 'hide_empty' => false ) );
 		$trs   = array();
 
 		// Prepare objects relationships.
@@ -456,7 +456,7 @@ class PLL_Admin_Model extends PLL_Model {
 	public function update_translations( $old_slug, $new_slug = '' ) {
 		global $wpdb;
 
-		$terms    = get_terms( array( 'post_translations', 'term_translations' ) );
+		$terms    = get_terms( array( 'taxonomy' => array( 'post_translations', 'term_translations' ) ) );
 		$term_ids = array();
 		$dr       = array();
 		$dt       = array();
@@ -473,15 +473,15 @@ class PLL_Admin_Model extends PLL_Model {
 				 *
 				 * @since 3.2
 				 *
-				 * @param array<int|array<string>> $tr {
+				 * @param (int|string[])[] $tr {
 				 *     List of translations with lang codes as array keys and IDs as array values.
 				 *     Also in this array:
 				 *
-				 *     @type array<string> $sync List of synchronized translations with lang codes as array keys and array values.
+				 *     @type string[] $sync List of synchronized translations with lang codes as array keys and array values.
 				 * }
-				 * @param string                   $old_slug The old language slug.
-				 * @param string                   $new_slug The new language slug.
-				 * @param WP_Term                  $term     The term containing the post or term translation group.
+				 * @param string           $old_slug The old language slug.
+				 * @param string           $new_slug The new language slug.
+				 * @param WP_Term          $term     The term containing the post or term translation group.
 				 */
 				$tr = apply_filters( 'update_translation_group', $tr, $old_slug, $new_slug, $term );
 

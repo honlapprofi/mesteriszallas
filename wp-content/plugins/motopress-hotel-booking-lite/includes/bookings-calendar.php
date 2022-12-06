@@ -909,8 +909,20 @@ class BookingsCalendar {
 			}
 		}
 
-		if ( $dateDetails['is_blocked'] ) {
+		$dateBefore = clone $date;
+		$dateBefore->modify( '-1 day' );
+		$dateBeforeFormatted = $dateBefore->format( 'Y-m-d' );
+
+		if ( isset( $this->data[$roomId] ) && 
+			isset( $this->data[$roomId][$dateBeforeFormatted] ) &&
+			isset( $this->data[$roomId][$dateBeforeFormatted]['is_blocked'] ) &&
+			$this->data[$roomId][$dateBeforeFormatted]['is_blocked'] ) {
+
 			$firstPartClass .= ' mphb-date-room-locked mphb-date-blocked';
+		}
+
+		if ( $dateDetails['is_blocked'] ) {
+			
 			$secondPartClass .= ' mphb-date-room-locked mphb-date-blocked';
 		}
 

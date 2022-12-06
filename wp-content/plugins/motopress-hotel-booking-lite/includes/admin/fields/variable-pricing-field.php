@@ -64,7 +64,7 @@ class VariablePricingField extends InputField {
 								$result .= $this->renderPeriod( '[periods][]', 1, 'disabled="disabled"', 'mphb-keep-disabled' );
 							} else {
 								$result .= $this->renderPeriod( '[periods][]', $periods[$i] );
-								$result .= '<br /><span class="dashicons dashicons-trash mphb-pricing-action mphb-pricing-remove-period" title="' . esc_attr__( 'Remove', 'motopress-hotel-booking' ) . '"></span>';
+								$result .= '<span class="mphb-pricing-period-description">' . esc_html__( 'and more', 'motopress-hotel-booking' ) . '</span><span class="dashicons dashicons-trash mphb-pricing-action mphb-pricing-remove-period" title="' . esc_attr__( 'Remove', 'motopress-hotel-booking' ) . '"></span>';
 							}
 						$result .= '</td>';
 					}

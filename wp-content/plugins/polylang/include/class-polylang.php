@@ -193,9 +193,8 @@ class Polylang {
 		 */
 		$class = apply_filters( 'pll_model', PLL_SETTINGS || self::is_wizard() ? 'PLL_Admin_Model' : 'PLL_Model' );
 		$model = new $class( $options );
-		$links_model = $model->get_links_model();
 
-		if ( ! $model->get_languages_list() ) {
+		if ( ! $model->has_languages() ) {
 			/**
 			 * Fires when no language has been defined yet
 			 * Used to load overridden textdomains
@@ -213,7 +212,7 @@ class Polylang {
 			$class = 'PLL_Admin';
 		} elseif ( self::is_rest_request() ) {
 			$class = 'PLL_REST_Request';
-		} elseif ( $model->get_languages_list() ) {
+		} elseif ( $model->has_languages() ) {
 			$class = 'PLL_Frontend';
 		}
 
@@ -227,7 +226,8 @@ class Polylang {
 		$class = apply_filters( 'pll_context', $class );
 
 		if ( ! empty( $class ) ) {
-			$polylang = new $class( $links_model );
+			$links_model = $model->get_links_model();
+			$polylang    = new $class( $links_model );
 
 			/**
 			 * Fires after the $polylang object is created and before the API is loaded

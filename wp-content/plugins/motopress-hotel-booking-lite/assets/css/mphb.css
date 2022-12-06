@@ -5,7 +5,7 @@
   clear: both;
 }
 .mphb-preloader {
-  background-image: url("../../images/loading.gif?ver=4.4.4");
+  background-image: url("../../images/loading.gif?ver=4.5.0");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -16,10 +16,14 @@
 }
 /* Calendar */
 .mphb-calendar {
-  /*  Extra day before or after the main month */
-  /* Booked date */
-  /* Available date */
-  /* Date that earlier than today */
+  --mphb-available-date-bg: #cef093;
+  --mphb-available-date-color: #000000;
+  --mphb-not-available-date-bg: #dddddd;
+  --mphb-not-available-date-color: #777777;
+  --mphb-booked-date-bg: #dddddd;
+  --mphb-booked-date-color: #777777;
+  --mphb-out-of-season-date-bg: #dddddd;
+  --mphb-out-of-season-date-color: #777777;
 }
 .mphb-calendar.mphb-loading .datepick {
   position: relative;
@@ -32,10 +36,11 @@
   bottom: 0;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
-  background-image: url("../../images/loading.gif?ver=4.4.4");
+  background-image: url("../../images/loading.gif?ver=4.5.0");
   background-size: 30px;
   background-position: center center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 .mphb-calendar .datepick-month-header select {
   display: inline-block !important;
@@ -52,33 +57,6 @@
 .mphb-calendar .datepick-month td > span {
   height: 100%;
 }
-.mphb-calendar .datepick-month td .mphb-booked-date {
-  /*background-color: #fed24d;*/
-  background-color: #ee8767;
-  color: #000;
-}
-.mphb-calendar .datepick-month td .mphb-booked-date.mphb-date-check-in {
-  background: linear-gradient(to bottom right, #cef093 0%, #cef093 50%, #ee8767 50%, #ee8767 100%);
-}
-.mphb-calendar .datepick-month td .mphb-booked-date.mphb-date-check-in.mphb-date-check-out {
-  background: #ee8767;
-}
-.mphb-calendar .datepick-month td .mphb-available-date {
-  background-color: #cef093;
-  color: #000;
-}
-.mphb-calendar .datepick-month td .mphb-available-date.mphb-date-check-out {
-  background: linear-gradient(to bottom right, #ee8767 0%, #ee8767 50%, #cef093 50%, #cef093 100%);
-}
-.mphb-calendar .datepick-month td .mphb-past-date {
-  opacity: 0.15;
-  background-color: #eee;
-  color: #888;
-}
-.mphb-calendar .datepick-month td .mphb-not-stay-in-date {
-  background-color: #ee8767;
-  color: #000;
-}
 .mphb-calendar .datepick-month td span .mphb-date-cell__price {
   white-space: nowrap;
   overflow: hidden;
@@ -94,6 +72,85 @@
   padding: 0;
   display: inline;
   color: inherit;
+}
+.mphb-calendar td .mphb-date-cell {
+  color: var(--mphb-available-date-color, #000000);
+}
+.mphb-calendar td .mphb-available-date {
+  background-color: var(--mphb-available-date-bg, #cef093);
+}
+.mphb-calendar td .mphb-past-date {
+  opacity: 0.15;
+  background-color: #eee;
+  color: #888;
+}
+.mphb-calendar td .mphb-out-of-season-date--check-in {
+  background: linear-gradient(to bottom right, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-out-of-season-date--check-out {
+  background: linear-gradient(to top left, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-out-of-season-date--check-in.mphb-mark-as-unavailable--check-out {
+  background: linear-gradient(to bottom right, var(--mphb-not-available-date-bg, #dddddd) 0%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable,
+.mphb-calendar td .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in {
+  background: linear-gradient(to top left, var(--mphb-not-available-date-bg, #dddddd) 0%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-out-of-season-date,
+.mphb-calendar td .mphb-out-of-season-date--check-in.mphb-out-of-season-date--check-out {
+  background: var(--mphb-out-of-season-date-bg, #dddddd);
+  color: var(--mphb-out-of-season-date-color, #777777);
+}
+.mphb-calendar td .mphb-mark-as-unavailable--check-in {
+  background: linear-gradient(to bottom right, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-not-available-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-mark-as-unavailable--check-in.mphb-out-of-season-date,
+.mphb-calendar td .mphb-mark-as-unavailable--check-in.mphb-out-of-season-date--check-in.mphb-out-of-season-date--check-out {
+  color: var(--mphb-not-available-date-color, #777777);
+  background: linear-gradient(to bottom right, var(--mphb-not-available-date-bg, #dddddd) 0%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-mark-as-unavailable--check-out {
+  background: linear-gradient(to top left, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-not-available-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-mark-as-unavailable--check-out.mphb-out-of-season-date,
+.mphb-calendar td .mphb-mark-as-unavailable--check-out.mphb-out-of-season-date--check-in.mphb-out-of-season-date--check-out {
+  color: var(--mphb-not-available-date-color, #777777);
+  background: linear-gradient(to bottom right, var(--mphb-not-available-date-bg, #dddddd) 0%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-mark-as-unavailable,
+.mphb-calendar td .mphb-mark-as-unavailable--check-in.mphb-mark-as-unavailable--check-out {
+  background: var(--mphb-not-available-date-bg, #dddddd);
+  color: var(--mphb-not-available-date-color, #777777);
+}
+.mphb-calendar td .mphb-booked-date {
+  background: var(--mphb-booked-date-bg, #dddddd);
+  color: var(--mphb-booked-date-color, #777777);
+}
+.mphb-calendar td .mphb-date-check-in {
+  color: var(--mphb-available-date-color, #000000);
+  background: linear-gradient(to bottom right, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-booked-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-date-check-in.mphb-mark-as-unavailable,
+.mphb-calendar td .mphb-date-check-in.mphb-mark-as-unavailable--check-out {
+  color: var(--mphb-booked-date-color, #777777);
+  background: linear-gradient(to bottom right, var(--mphb-not-available-date-bg, #dddddd) 0%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-booked-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-date-check-in.mphb-out-of-season-date--check-out {
+  color: var(--mphb-booked-date-color, #777777);
+  background: linear-gradient(to top left, var(--mphb-booked-date-bg, #dddddd) 0%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-date-check-out {
+  background: linear-gradient(to top left, var(--mphb-available-date-bg, #cef093) 0%, var(--mphb-available-date-bg, #cef093) 50%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-booked-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-date-check-out.mphb-mark-as-unavailable,
+.mphb-calendar td .mphb-date-check-out.mphb-mark-as-unavailable--check-in {
+  color: var(--mphb-booked-date-color, #777777);
+  background: linear-gradient(to bottom right, var(--mphb-booked-date-bg, #dddddd) 0%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-not-available-date-bg, #dddddd) 50%, var(--mphb-not-available-date-bg, #dddddd) 100%);
+}
+.mphb-calendar td .mphb-date-check-out.mphb-out-of-season-date--check-in {
+  color: var(--mphb-booked-date-color, #777777);
+  background: linear-gradient(to bottom right, var(--mphb-booked-date-bg, #dddddd) 0%, var(--mphb-booked-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 50%, var(--mphb-out-of-season-date-bg, #dddddd) 100%);
 }
 /*.mphb-room-type-gallery{
 	margin-left: 0;

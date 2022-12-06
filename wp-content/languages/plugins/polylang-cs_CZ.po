@@ -2,25 +2,60 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-12 08:49:25+0000\n"
+"PO-Revision-Date: 2022-11-30 11:15:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
-"X-Generator: GlotPress/3.0.0-rc.4\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
+#. translators: 1 is a post type or taxonomy label, 2 is a post type or
+#. taxonomy key.
+#: settings/settings-cpt.php:115 settings/settings-cpt.php:146
+msgctxt "content type setting choice"
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: modules/site-health/admin-site-health.php:176
+msgid "Synchronization disabled"
+msgstr "Synchronizace zakázána"
+
+#: modules/site-health/admin-site-health.php:171
+msgid "The media are translated"
+msgstr "Média jsou přeložena"
+
+#: modules/site-health/admin-site-health.php:168
+msgid "The media are not translated"
+msgstr "Média nejsou přeložena"
+
+#: modules/site-health/admin-site-health.php:163
+msgid "The front page URL contains the page name or page id instead of the language code"
+msgstr "URL adresa titulní stránky obsahuje místo kódu jazyka název stránky nebo ID stránky"
+
+#: modules/site-health/admin-site-health.php:140
+msgid "Display URL language information for default language"
+msgstr "Zobrazit informace o jazyku URL adresy pro výchozí jazyk"
+
+#: modules/site-health/admin-site-health.php:126
+msgid "Detect browser language activated"
+msgstr "Aktivace detekce jazyka prohlížeče"
+
+#: modules/site-health/admin-site-health.php:123
+msgid "Detect browser language deactivated"
+msgstr "Deaktivace deaktivace jazyka prohlížeče"
+
 #. translators: placeholder is the plugin name
-#: modules/site-health/admin-site-health.php:331
+#: modules/site-health/admin-site-health.php:407
 msgid "%s information"
 msgstr "%s informace"
 
-#: modules/site-health/admin-site-health.php:323
+#: modules/site-health/admin-site-health.php:399
 msgid "Not loaded. Contact your host provider."
 msgstr "Nenačteno. Kontaktujte svého poskytovatele hostitele."
 
-#: modules/site-health/admin-site-health.php:322
+#: modules/site-health/admin-site-health.php:398
 msgid "PHP SimpleXML extension"
 msgstr "PHP SimpleXML rozšíření"
 
@@ -49,7 +84,7 @@ msgstr "Požádejte správce sítě o instalaci aktualizace."
 msgid "There is a new version of %1$s available."
 msgstr "K dispozici je nová verze aplikace %1$s."
 
-#: settings/settings-url.php:56
+#: settings/settings-url.php:55
 msgid "Some themes or plugins may not be fully compatible with the language defined by the content or by domains."
 msgstr "Některá šablony nebo pluginy nemusí být plně kompatibilní s jazykem definovaným obsahem nebo doménami."
 
@@ -57,50 +92,50 @@ msgstr "Některá šablony nebo pluginy nemusí být plně kompatibilní s jazyk
 msgid "Activate languages and translations for media only if you need to translate the text attached to the media: the title, the alternative text, the caption, the description... Note that the file is not duplicated."
 msgstr "Jazyky a překlady pro média aktivujte pouze v případě, že potřebujete přeložit text připojený k médiu: název, alternativní text, titulek, popis... Upozorňujeme, že soubor není duplikován."
 
-#: settings/settings-browser.php:33
+#: settings/settings-browser.php:35
 msgid "When the front page is visited, redirects to itself in the browser preferred language. As this doesn't work if it is cached, Polylang will attempt to disable the front page cache for known cache plugins."
 msgstr "Při návštěvě úvodní stránky dojde k přesměrování na preferovaný jazyk prohlížeče. Protože to nefunguje, pokud je uložen do mezipaměti, Polylang se pokusí deaktivovat mezipaměť úvodní stránky pro známé pluginy mezipaměti."
 
-#: modules/site-health/admin-site-health.php:311
+#: modules/site-health/admin-site-health.php:387
 msgid "Terms without language"
 msgstr "Položky bez jazyka"
 
-#: modules/site-health/admin-site-health.php:304
+#: modules/site-health/admin-site-health.php:380
 msgid "Posts without language"
 msgstr "Příspěvky bez jazyka"
 
-#: modules/site-health/admin-site-health.php:283
+#: modules/site-health/admin-site-health.php:359
 msgid "The homepage is not translated in all languages"
 msgstr "Úvodní stránka není přeložena do všech jazyků"
 
-#: modules/site-health/admin-site-health.php:273
+#: modules/site-health/admin-site-health.php:349
 msgid "It is mandatory to translate the static front page in all languages."
 msgstr "Je povinné přeložit statickou úvodní stránku do všech jazyků."
 
-#: modules/site-health/admin-site-health.php:265
+#: modules/site-health/admin-site-health.php:341
 msgid "All languages have a translated homepage"
 msgstr "Všechny jazyky mají přeloženou úvodní stránku"
 
-#: modules/site-health/admin-site-health.php:249
+#: modules/site-health/admin-site-health.php:325
 msgid "Homepage translated"
 msgstr "Úvodní stránka přeložena"
 
-#: modules/site-health/admin-site-health.php:234
+#: modules/site-health/admin-site-health.php:310
 msgid "Undefined"
 msgstr "Nedefinováno"
 
 #. translators: placeholder is the flag image
-#: modules/site-health/admin-site-health.php:216
+#: modules/site-health/admin-site-health.php:292
 msgid "Flag used in the language switcher: %s"
 msgstr "Vlajka používaná v přepínači jazyků: %s"
 
 #. translators: placeholder is the language name
-#: modules/site-health/admin-site-health.php:214
+#: modules/site-health/admin-site-health.php:290
 msgid "Language: %s"
 msgstr "Jazyk: %s"
 
 #. translators: placeholder is the plugin name
-#: modules/site-health/admin-site-health.php:176
+#: modules/site-health/admin-site-health.php:252
 msgid "%s options"
 msgstr "%s možnosti"
 
@@ -454,7 +489,7 @@ msgid "Some taxonomies or metadata may be synchronized with existing translation
 msgstr "Některá metadata nebo taxonomie mohou být synchronizovány s existujícími překlady které nemůžete upravovat."
 
 #. translators: %s is a comma separated list of native language names
-#: admin/admin-static-pages.php:190
+#: admin/admin-static-pages.php:144
 msgid "You must translate your static front page in %s."
 msgstr "Musíte přeložit Vaši statickou úvodní stránku do %s."
 
@@ -609,7 +644,7 @@ msgid "Choose a flag for the language."
 msgstr "Vybrat vlajku jazyka."
 
 #. translators: accessibility text
-#: settings/table-string.php:345
+#: settings/table-string.php:349
 msgid "Filter by group"
 msgstr "Filtrovat dle skupiny"
 
@@ -1696,11 +1731,11 @@ msgstr "Andorra"
 msgid "Translation"
 msgstr "Překlad"
 
-#: admin/admin-static-pages.php:102
+#: admin/admin-static-pages.php:56
 msgid "Posts Page"
 msgstr "Stránka s příspěvky"
 
-#: admin/admin-static-pages.php:98
+#: admin/admin-static-pages.php:52
 msgid "Front Page"
 msgstr "Úvodní stránka"
 
@@ -1861,7 +1896,7 @@ msgstr "Právě jste provedli aktualizaci na poslední verze Polylang! Chtěli b
 msgid "Polylang has been deactivated because you upgraded from a too old version."
 msgstr "Polylang byl deaktivován, protože jste upgradovali z příliš staré verze."
 
-#: include/widget-languages.php:118
+#: include/widget-languages.php:121
 msgid "Title:"
 msgstr "Název:"
 
@@ -1907,8 +1942,8 @@ msgstr "Importovat <strong>příspěvky, stránky, komentáře, vlastní pole, k
 msgid "Uncategorized"
 msgstr "Nezařazené"
 
-#: frontend/frontend-filters-search.php:102
-#: frontend/frontend-filters-search.php:103
+#: frontend/frontend-filters-search.php:114
+#: frontend/frontend-filters-search.php:115
 msgid "Search"
 msgstr "Vyhledat"
 
@@ -1932,15 +1967,15 @@ msgstr "Sychronizační nastavení umožňuje udržovat stejné hodnoty (nebo p�
 msgid "Synchronization"
 msgstr "Synchronizace"
 
-#: settings/settings-cpt.php:142
+#: settings/settings-cpt.php:156
 msgid "Activate languages and translations for custom taxonomies."
 msgstr "Zapnout jazyky a překlady u vlastních taxonomií"
 
-#: settings/settings-cpt.php:124
+#: settings/settings-cpt.php:131
 msgid "Custom taxonomies"
 msgstr "Vlastní taxonomie"
 
-#: settings/settings-cpt.php:118
+#: settings/settings-cpt.php:125
 msgid "Activate languages and translations for custom post types."
 msgstr "Zapnout jazyky a překlady u vlastních typů obsahu"
 
@@ -1953,58 +1988,58 @@ msgstr "Vlastní typy obsahu"
 msgid "Media"
 msgstr "Média"
 
-#: settings/settings-browser.php:32
+#: settings/settings-browser.php:34
 msgid "Detect browser language"
 msgstr "Detekovat jazyk prohlížeče"
 
 #. translators: %1$s example url when the option is active. %2$s example url
 #. when the option is not active
-#: settings/settings-url.php:195
+#: settings/settings-url.php:194
 msgid "Example: %1$s instead of %2$s"
 msgstr "Příklad: %1$s namísto %2$s"
 
-#: settings/settings-url.php:184
+#: modules/site-health/admin-site-health.php:160 settings/settings-url.php:183
 msgid "The front page URL contains the language code instead of the page name or page id"
 msgstr "Úvodní stránka bude mít v URL jen kód jazyka a ne název stránky či její ID"
 
-#: settings/settings-url.php:162
+#: modules/site-health/admin-site-health.php:133 settings/settings-url.php:161
 msgid "Keep /language/ in pretty permalinks"
 msgstr "Ponechat /language/ v pěkných URL"
 
-#: settings/settings-url.php:151
+#: modules/site-health/admin-site-health.php:130 settings/settings-url.php:150
 msgid "Remove /language/ in pretty permalinks"
 msgstr "Odstranit /language/ v pěkných URL"
 
-#: settings/settings-url.php:129
+#: modules/site-health/admin-site-health.php:137 settings/settings-url.php:128
 msgid "Hide URL language information for default language"
 msgstr "U výchozího jazyka v URL skrýt jeho kód"
 
-#: settings/settings-url.php:94
+#: modules/site-health/admin-site-health.php:154 settings/settings-url.php:93
 msgid "The language is set from different domains"
 msgstr "Jazyk bude nastaven podle odlišných domén"
 
-#: settings/settings-url.php:83
+#: modules/site-health/admin-site-health.php:151 settings/settings-url.php:82
 msgid "The language is set from the subdomain name in pretty permalinks"
 msgstr "Jazyk je nastaven podle subdomény v pěkných URL"
 
-#: settings/settings-url.php:76 settings/settings-url.php:87
-#: settings/settings-url.php:155 settings/settings-url.php:166
+#: settings/settings-url.php:75 settings/settings-url.php:86
+#: settings/settings-url.php:154 settings/settings-url.php:165
 msgid "Example:"
 msgstr "Příklad:"
 
-#: settings/settings-url.php:72
+#: settings/settings-url.php:71
 msgid "The language is set from the code in the URL"
 msgstr "Jazyk je nastaven dle kódu v URL"
 
-#: settings/settings-url.php:72
+#: modules/site-health/admin-site-health.php:148 settings/settings-url.php:71
 msgid "The language is set from the directory name in pretty permalinks"
 msgstr "Jazyk bude nastaven podle adresáře v pěkných URL"
 
-#: settings/settings-url.php:66
+#: settings/settings-url.php:65
 msgid "Posts, pages, categories and tags URLs will not be modified."
 msgstr "URL příspěvků, stránek, rubrik a štítků nebudou pozměněny."
 
-#: settings/settings-url.php:62
+#: modules/site-health/admin-site-health.php:145 settings/settings-url.php:61
 msgid "The language is set from content"
 msgstr "Jazyk nastavit podle obsahu"
 
@@ -2066,7 +2101,7 @@ msgstr "Název jazyka, jak bude zobrazen na vašem webu (např. Čeština, Engli
 msgid "You can choose a language in the list or directly edit it below."
 msgstr "Jazyk můžete vybrat ze seznamu nebo jej zde dole přímo zadat."
 
-#: include/widget-languages.php:57 settings/view-tab-lang.php:53
+#: include/widget-languages.php:60 settings/view-tab-lang.php:53
 msgid "Choose a language"
 msgstr "Zvolte jazyk"
 
@@ -2085,29 +2120,29 @@ msgstr "Upravit jazyk"
 msgid "Polylang is provided with an extensive %1$sdocumentation%2$s (in English). It includes information on how to set up your multilingual site and use it on a daily basis; FAQs, and documentation for developers to adapt their plugins and themes."
 msgstr "Polylang disponuje rozsáhlou %1$sdokumentací%2$s (pouze v angličtině), která obsahuje informace o nastavení vašeho vícejazyčného webu a o tom, jak jej každodenně používat. Obsahuje i FAQ a dokumentaci pro vývojáře, kteří by Polylangu chtěli přizpůsobit své pluginy a šablony."
 
-#: settings/table-string.php:364
+#: settings/table-string.php:368
 msgid "Filter"
 msgstr "Filtr"
 
-#: settings/table-string.php:351
+#: settings/table-string.php:355
 msgid "View all groups"
 msgstr "Zobrazit všechny skupiny"
 
-#: admin/view-translations-media.php:13 admin/view-translations-post.php:12
-#: admin/view-translations-term.php:14 admin/view-translations-term.php:21
-#: settings/table-string.php:160
+#: admin/admin-base.php:126 admin/view-translations-media.php:13
+#: admin/view-translations-post.php:12 admin/view-translations-term.php:14
+#: admin/view-translations-term.php:21 settings/table-string.php:164
 msgid "Translations"
 msgstr "Překlady"
 
-#: settings/table-string.php:159
+#: settings/table-string.php:163
 msgid "Group"
 msgstr "Skupina"
 
-#: settings/table-string.php:158
+#: settings/table-string.php:162
 msgid "Name"
 msgstr "Název"
 
-#: settings/table-string.php:157
+#: settings/table-string.php:161
 msgid "String"
 msgstr "Řetězec"
 
@@ -2135,7 +2170,7 @@ msgstr "Locale"
 msgid "Full name"
 msgstr "Celý název"
 
-#: settings/table-languages.php:214 settings/table-string.php:313
+#: settings/table-languages.php:214 settings/table-string.php:317
 msgid "Delete"
 msgstr "Smazat"
 
@@ -2191,11 +2226,11 @@ msgstr "Taxonomie"
 msgid "Settings saved."
 msgstr "Nastavení uloženo"
 
-#: settings/table-string.php:418
+#: settings/table-string.php:422
 msgid "Translations updated."
 msgstr "Překlad aktualizován"
 
-#: admin/admin-base.php:126 include/mo.php:21 settings/settings.php:146
+#: include/mo.php:21 settings/settings.php:146
 msgid "Strings translations"
 msgstr "Překlady textů"
 
@@ -2207,11 +2242,11 @@ msgstr "O Polylangu"
 msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
 msgstr "Jazyk byl vytvořen, ale WordPress jazykový soubor nebyl stažen. Prosím, nainstalujte jej manuálně."
 
-#: admin/admin-base.php:467 admin/admin-base.php:485
+#: admin/admin-base.php:495 admin/admin-base.php:513
 msgid "Filters content by language"
 msgstr "Filtruje obsah podle jazyka"
 
-#: admin/admin-base.php:458
+#: admin/admin-base.php:486
 msgid "Show all languages"
 msgstr "Zobrazit všechny jazyky"
 
@@ -2273,11 +2308,11 @@ msgstr "Všechny jazyky"
 msgid "The widget is displayed for:"
 msgstr "Widget zobrazí pro:"
 
-#: admin/admin-filters-term.php:514
+#: admin/admin-filters-term.php:455
 msgid "None"
 msgstr "Nic"
 
-#: admin/admin-filters-term.php:153 admin/admin-filters-term.php:226
+#: admin/admin-filters-term.php:146 admin/admin-filters-term.php:219
 msgid "Sets the language"
 msgstr "Tímto nastavte jazyk."
 
@@ -2300,8 +2335,8 @@ msgid "Languages"
 msgstr "Jazyky"
 
 #: admin/admin-classic-editor.php:127 admin/admin-filters-columns.php:234
-#: admin/admin-filters-media.php:62 admin/admin-filters-term.php:151
-#: admin/admin-filters-term.php:224 include/translated-post.php:135
+#: admin/admin-filters-media.php:62 admin/admin-filters-term.php:144
+#: admin/admin-filters-term.php:217 include/translated-post.php:135
 #: modules/wizard/view-wizard-step-languages.php:67
 msgid "Language"
 msgstr "Jazyk"

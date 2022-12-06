@@ -28,60 +28,65 @@ class CoreAPI {
 
 	private function addClearObjectCacheHooks() {
 
-		add_action(
+		$hookNamesForClearAllCache = array(
 			'mphb_booking_status_changed',
-			function( $booking ) {
-				$roomTypeIds = array();
-				foreach ( $booking->getReservedRooms() as $room ) {
-
-					$roomTypeId = $room->getRoomTypeId();
-
-					if ( ! in_array( $roomTypeId, $roomTypeIds ) ) {
-						$roomTypeIds[] = $roomTypeId;
-						wp_cache_delete( 'getBookedDaysForRoomType' . $roomTypeId, static::WP_CACHE_GROUP );
-					}
-				}
-			},
-			10,
-			1
-		);
-
-		add_action(
 			'save_post_' . MPHB()->postTypes()->room()->getPostType(),
-			function( $wpPostId, $wpPost, bool $isUpdated ) {
-				$room = MPHB()->getRoomRepository()->findById( $wpPostId );
-				if ( $room ) {
-					wp_cache_delete( 'getBookedDaysForRoomType' . $room->getRoomTypeId(), static::WP_CACHE_GROUP );
-					wp_cache_delete( 'getActiveRoomsCountForRoomType' . $room->getRoomTypeId(), static::WP_CACHE_GROUP );
-					wp_cache_delete( 'getBlockedRoomsCountsForRoomType' . $room->getRoomTypeId(), static::WP_CACHE_GROUP );
-				}
-			},
-			10,
-			3
-		);
-
-		add_action(
+			'save_post_' . MPHB()->postTypes()->roomType()->getPostType(),
 			'save_post_' . MPHB()->postTypes()->rate()->getPostType(),
-			function( $wpPostId, $wpPost, bool $isUpdated ) {
-				$rate = MPHB()->getRateRepository()->findById( $wpPostId );
-				if ( $rate ) {
-					wp_cache_delete( 'getDatesRatesForRoomType' . $rate->getRoomTypeId(), static::WP_CACHE_GROUP );
-				}
-			},
-			10,
-			3
+			'update_option_mphb_check_in_days',
+			'update_option_mphb_check_out_days',
+			'update_option_mphb_min_stay_length',
+			'update_option_mphb_max_stay_length',
+			'update_option_mphb_booking_rules_custom',
+			'update_option_mphb_min_advance_reservation',
+			'update_option_mphb_max_advance_reservation',
+			'update_option_mphb_buffer_days',
 		);
 
-		add_action(
-			'update_option_mphb_booking_rules_custom',
-			function() {
-				$allRoomTypes = MPHB()->getRoomTypeRepository()->findAll();
-				foreach ( $allRoomTypes as $roomType ) {
-					wp_cache_delete( 'getBlockedRoomsCountsForRoomType' . $roomType->getId(), static::WP_CACHE_GROUP );
+		foreach ( $hookNamesForClearAllCache as $hookName ) {
+			add_action(
+				$hookName,
+				function() {
+					$this->deleteCachedData();
 				}
-			}
+			);
+		}
+	}
+
+	private function getCacheKeysPrefix() {
+
+		$prefix = wp_cache_get( 'cache_keys_prefix', static::WP_CACHE_GROUP );
+
+		if ( ! $prefix ) {
+
+			$prefix = time();
+			wp_cache_set( 'cache_keys_prefix', $prefix, static::WP_CACHE_GROUP );
+		}
+
+		return $prefix;
+	}
+
+	private function deleteCachedData() {
+
+		$prefix = time();
+		wp_cache_set( 'cache_keys_prefix', $prefix, static::WP_CACHE_GROUP );
+	}
+
+	private function getCachedData( string $cacheDataId, &$isCachedDataWasFound = null ) {
+
+		return wp_cache_get(
+			$this->getCacheKeysPrefix() . '_' . $cacheDataId,
+			static::WP_CACHE_GROUP,
+			false,
+			$isCachedDataWasFound
 		);
 	}
+
+	private function setCachedData( string $cacheDataId, $data ) {
+
+		wp_cache_set( $this->getCacheKeysPrefix() . '_' . $cacheDataId, $data, static::WP_CACHE_GROUP );
+	}
+
 
 	/**
 	 * @return Entities\RoomType or null if nothing is found
@@ -100,74 +105,166 @@ class CoreAPI {
 	 */
 	public function getBookedDaysForRoomType( int $roomTypeOriginalId ) {
 
-		$result = wp_cache_get( 'getBookedDaysForRoomType' . $roomTypeOriginalId, static::WP_CACHE_GROUP );
+		$result = $this->getCachedData( 'getBookedDaysForRoomType' . $roomTypeOriginalId );
 
 		if ( ! $result ) {
 			$result = MPHB()->getRoomRepository()->getBookedDays( $roomTypeOriginalId );
-			wp_cache_set( 'getBookedDaysForRoomType' . $roomTypeOriginalId, $result, static::WP_CACHE_GROUP );
+			$this->setCachedData( 'getBookedDaysForRoomType' . $roomTypeOriginalId, $result );
 		}
 		return $result;
 	}
 
 	public function getActiveRoomsCountForRoomType( int $roomTypeOriginalId ) {
 
-		$result = wp_cache_get( 'getActiveRoomsCountForRoomType' . $roomTypeOriginalId, static::WP_CACHE_GROUP );
+		$result = $this->getCachedData( 'getActiveRoomsCountForRoomType' . $roomTypeOriginalId );
 
 		if ( ! $result ) {
 			$result = RoomAvailabilityHelper::getActiveRoomsCountForRoomType( $roomTypeOriginalId );
-			wp_cache_set( 'getActiveRoomsCountForRoomType' . $roomTypeOriginalId, $result, static::WP_CACHE_GROUP );
-		}
-		return $result;
-	}
-
-	public function getDatesRatesForRoomType( int $roomTypeOriginalId ) {
-
-		$result = wp_cache_get( 'getDatesRatesForRoomType' . $roomTypeOriginalId, static::WP_CACHE_GROUP );
-
-		if ( ! $result ) {
-			$roomType = $this->getRoomTypeById( $roomTypeOriginalId );
-			$result   = null != $roomType ? $roomType->getDatesHavePrice() : array();
-			wp_cache_set( 'getDatesRatesForRoomType' . $roomTypeOriginalId, $result, static::WP_CACHE_GROUP );
+			$this->setCachedData( 'getActiveRoomsCountForRoomType' . $roomTypeOriginalId, $result );
 		}
 		return $result;
 	}
 
 	public function getBlockedRoomsCountsForRoomType( int $roomTypeOriginalId ) {
 
-		$result = wp_cache_get( 'getBlockedRoomsCountsForRoomType' . $roomTypeOriginalId, static::WP_CACHE_GROUP );
+		$result = $this->getCachedData( 'getBlockedRoomsCountsForRoomType' . $roomTypeOriginalId );
 
 		if ( ! $result ) {
 			$result = MPHB()->getRulesChecker()->customRules()->getBlockedRoomsCounts( $roomTypeOriginalId );
-			wp_cache_set( 'getBlockedRoomsCountsForRoomType' . $roomTypeOriginalId, $result, static::WP_CACHE_GROUP );
+			$this->setCachedData( 'getBlockedRoomsCountsForRoomType' . $roomTypeOriginalId, $result );
 		}
 		return $result;
 	}
 
-	const ROOM_TYPE_AVAILABILITY_STATUS_AVAILABLE           = 'available';
-	const ROOM_TYPE_AVAILABILITY_STATUS_NOT_AVAILABLE       = 'not-available';
-	const ROOM_TYPE_AVAILABILITY_STATUS_BOOKED              = 'booked';
-	const ROOM_TYPE_AVAILABILITY_STATUS_PAST                = 'past';
-	const ROOM_TYPE_AVAILABILITY_STATUS_EARLIER_MIN_ADVANCE = 'earlier-min-advance';
-	const ROOM_TYPE_AVAILABILITY_STATUS_LATER_MAX_ADVANCE   = 'later-max-advance';
-	const ROOM_TYPE_AVAILABILITY_STATUS_BOOKING_BUFFER      = 'booking-buffer';
+	/**
+	 * @return \MPHB\Core\RoomTypeAvailabilityStatus constant
+	 */
+	public function getRoomTypeAvailabilityStatus( int $roomTypeOriginalId, \DateTime $date ) {
+
+		$cacheDataId = 'getRoomTypeAvailabilityStatus' . $roomTypeOriginalId . '_' .
+			$date->format( 'Y-m-d' );
+
+		$result = $this->getCachedData( $cacheDataId );
+
+		if ( ! $result ) {
+			$result = RoomAvailabilityHelper::getRoomTypeAvailabilityStatus( $roomTypeOriginalId, $date );
+			$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
 
 	/**
-	 * @return array with: [
-	 * 		'roomTypeStatus' => string - one of constant ROOM_TYPE_AVAILABILITY_STATUS_* above,
-	 * 		'availableRoomsCount' => int,
-	 * 		'isCheckInDate' => bool,
-	 * 		'isCheckOutDate' => bool,
-	 * 		'isStayInNotAllowed' => bool,
-	 * 		'isCheckInNotAllowed' => bool,
-	 * 		'isCheckOutNotAllowed' => bool,
-	 * 		'isEarlierThanMinAdvanceDate' => bool,
-	 * 		'isLaterThanMaxAdvanceDate' => bool
-	 * ]
+	 * @param $considerCheckIn - if true then check-in date considered as booked if there is no any available room
+	 * @param $considerCheckOut - if true then check-out date considered as booked if there is no any available room
+	 * @return true if given date is booked (there is no any available room)
+	 */
+	public function isBookedDate( int $roomTypeOriginalId, \DateTime $date, $considerCheckIn = true, $considerCheckOut = false ) {
+
+		$cacheDataId = 'isBookedDate' . $roomTypeOriginalId . '_' . $date->format( 'Y-m-d' ) . '_' .
+			( $considerCheckIn ? '1' : '0' ) . '_' . ( $considerCheckOut ? '1' : '0' );
+
+		$isFoundInCache = false;
+		$result = $this->getCachedData( $cacheDataId, $isFoundInCache );
+
+		if ( ! $isFoundInCache ) {
+			$result = RoomAvailabilityHelper::isBookedDate( $roomTypeOriginalId, $date, $considerCheckIn, $considerCheckOut );
+			$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
+
+	/**
+	 * @return bool - true if stay-in is not allowed in the given dates period
+	 */
+	public function isStayInNotAllowed( int $roomTypeOriginalId, \DateTime $checkInDate, \DateTime $checkOutDate ) {
+
+		$cacheDataId = 'isStayInNotAllowed' . $roomTypeOriginalId . '_' . $checkInDate->format( 'Y-m-d' ) . '_' .
+			$checkOutDate->format( 'Y-m-d' );
+
+		$isFoundInCache = false;
+		$result = $this->getCachedData( $cacheDataId, $isFoundInCache );
+
+		if ( ! $isFoundInCache ) {
+			$result = ! MPHB()->getRulesChecker()->customRules()->
+				verifyNotStayInRestriction( $checkInDate, $checkOutDate, $roomTypeOriginalId );
+				$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
+
+	/**
+	 * @return bool - true if check-in is not allowed in the given date
+	 */
+	public function isCheckInNotAllowed( int $roomTypeOriginalId, \DateTime $date ) {
+
+		$cacheDataId = 'isCheckInNotAllowed' . $roomTypeOriginalId . '_' . $date->format( 'Y-m-d' );
+
+		$isFoundInCache = false;
+		$result = $this->getCachedData( $cacheDataId, $isFoundInCache );
+
+		if ( ! $isFoundInCache ) {
+			$result = RoomAvailabilityHelper::isCheckInNotAllowed( $roomTypeOriginalId, $date );
+			$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
+
+	/**
+	 * @return bool - true if check-out is not allowed in the given date
+	 */
+	public function isCheckOutNotAllowed( int $roomTypeOriginalId, \DateTime $date ) {
+
+		$cacheDataId = 'isCheckOutNotAllowed' . $roomTypeOriginalId . '_' . $date->format( 'Y-m-d' );
+
+		$isFoundInCache = false;
+		$result = $this->getCachedData( $cacheDataId, $isFoundInCache );
+
+		if ( ! $isFoundInCache ) {
+			$result = RoomAvailabilityHelper::isCheckOutNotAllowed( $roomTypeOriginalId, $date );
+			$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
+
+	/**
+	 * @return \MPHB\Core\RoomTypeAvailabilityData
 	 */
 	public function getRoomTypeAvailabilityData( int $roomTypeOriginalId, \DateTime $date ) {
 
 		return RoomAvailabilityHelper::getRoomTypeAvailabilityData( $roomTypeOriginalId, $date );
 	}
+
+	/**
+	 * @return array with dates (string in format Y-m-d) which have rate
+	 */
+	public function getDatesRatesForRoomType( int $roomTypeOriginalId ) {
+
+		$result = $this->getCachedData( 'getDatesRatesForRoomType' . $roomTypeOriginalId );
+
+		if ( ! $result ) {
+			$roomType = $this->getRoomTypeById( $roomTypeOriginalId );
+			$result   = null != $roomType ? $roomType->getDatesHavePrice() : array();
+			$this->setCachedData( 'getDatesRatesForRoomType' . $roomTypeOriginalId, $result );
+		}
+		return $result;
+	}
+
+	/**
+	 * @return array with \MPHB\Entities\Rate
+	 */
+	public function getRoomTypeActiveRates( int $roomTypeOriginalId ) {
+
+		$cacheDataId = 'getRoomTypeActiveRates' . $roomTypeOriginalId;
+
+		$result = $this->getCachedData( $cacheDataId );
+
+		if ( ! $result ) {
+			$result = MPHB()->getRateRepository()->findAllActiveByRoomType( $roomTypeOriginalId );
+			$this->setCachedData( $cacheDataId, $result );
+		}
+		return $result;
+	}
+
 
 	/**
 	 * @return float room type minimal price for min days stay with taxes and fees

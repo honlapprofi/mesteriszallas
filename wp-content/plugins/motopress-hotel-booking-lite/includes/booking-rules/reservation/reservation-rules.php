@@ -179,13 +179,32 @@ class ReservationRules implements RuleVerifyInterface {
 			$actualRule = $this->rules[ self::RULE_MIN_STAY ]->findActualCombinedRule( $checkInDate );
 		}
 
-		$minStayDaysCount = 1;
+		$minStayDaysCount = null;
 
 		if ( null != $actualRule ) {
 			$minStayDaysCount = $actualRule->getMinDays();
 		}
 
 		return $minStayDaysCount;
+	}
+
+	public function getMaxStayLengthReservationDaysCount( \DateTime $checkInDate, $roomTypeId = 0 ) {
+
+		$actualRule = null;
+
+		if ( $roomTypeId ) {
+			$actualRule = $this->rules[ self::RULE_MAX_STAY ]->findActualRule( $checkInDate, $roomTypeId );
+		} else {
+			$actualRule = $this->rules[ self::RULE_MAX_STAY ]->findActualCombinedRule( $checkInDate );
+		}
+
+		$maxStayDaysCount = null;
+
+		if ( null != $actualRule ) {
+			$maxStayDaysCount = $actualRule->getMaxDays();
+		}
+
+		return $maxStayDaysCount;
 	}
 
 	public function verifyMaxStayLengthReservationRule( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {

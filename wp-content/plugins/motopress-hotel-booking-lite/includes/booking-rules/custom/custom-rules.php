@@ -146,10 +146,17 @@ class CustomRules implements RuleVerifyInterface {
 
 	public function verifyNotStayInRestriction( \DateTime $checkInDate, \DateTime $checkOutDate, $roomTypeId = 0 ) {
 
+		$checkOutDateForCheckingRules = clone $checkOutDate;
+
+		if ( $checkInDate->format('Y-m-d') == $checkOutDateForCheckingRules->format('Y-m-d') ) {
+		
+			$checkOutDateForCheckingRules = $checkOutDateForCheckingRules->modify( '+1 day' );
+		}
+
 		$rules = $this->getGlobalRulesForRoomTypeId( $roomTypeId );
 
 		foreach ( $rules as $rule ) {
-			if ( $rule->noStayIn( $checkInDate, $checkOutDate ) ) {
+			if ( $rule->noStayIn( $checkInDate, $checkOutDateForCheckingRules ) ) {
 				return false;
 			}
 		}

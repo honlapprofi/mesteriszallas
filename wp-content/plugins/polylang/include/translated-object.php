@@ -171,8 +171,8 @@ abstract class PLL_Translated_Object {
 	 *
 	 * @since 3.2
 	 *
-	 * @param  int $term_id Term ID.
-	 * @return array<int>   An associative array of translations with language code as key and translation id as value.
+	 * @param int $term_id Term ID.
+	 * @return int[] An associative array of translations with language code as key and translation id as value.
 	 */
 	public function get_translations_from_term_id( $term_id ) {
 		$term_id = $this->sanitize_int_id( $term_id );
@@ -216,7 +216,7 @@ abstract class PLL_Translated_Object {
 	 *
 	 * @param int   $id           Object id ( typically a post_id or term_id ).
 	 * @param int[] $translations An associative array of translations with language code as key and translation id as value.
-	 * @return int[]              An associative array with language codes as key and post ids as values.
+	 * @return int[] An associative array with language codes as key and post ids as values.
 	 */
 	public function save_translations( $id, $translations ) {
 		$id = $this->sanitize_int_id( $id );
@@ -410,7 +410,7 @@ abstract class PLL_Translated_Object {
 	 *
 	 * @since 1.2
 	 *
-	 * @param PLL_Language|string|string[] $lang PLL_Language object or a comma separated list of language slug or an array of language slugs.
+	 * @param PLL_Language|PLL_Language[]|string|string[] $lang PLL_Language object or a comma separated list of language slug or an array of language slugs or objects.
 	 * @return string Where clause.
 	 */
 	public function where_clause( $lang ) {
@@ -425,16 +425,24 @@ abstract class PLL_Translated_Object {
 		}
 
 		/*
-		 * $lang is a comma separated list of slugs ( or an array of slugs ).
-		 * This is generally the case is the query is coming from outside with a 'lang' parameter.
+		 * $lang is an array of objects, an array of slugs, or a comma separated list of slugs.
+		 * The comma separated list of slugs can happen if the query is coming from outside with a 'lang' parameter.
 		 */
-		$slugs     = is_array( $lang ) ? $lang : explode( ',', $lang );
-		$languages = array();
-		foreach ( $slugs as $slug ) {
-			$languages[] = absint( $this->model->get_language( $slug )->$tt_id );
+		$languages        = is_array( $lang ) ? $lang : explode( ',', $lang );
+		$languages_tt_ids = array();
+		foreach ( $languages as $language ) {
+			$language = $this->model->get_language( $language );
+
+			if ( ! empty( $language ) ) {
+				$languages_tt_ids[] = absint( $language->$tt_id );
+			}
 		}
 
-		return ' AND pll_tr.term_taxonomy_id IN ( ' . implode( ',', $languages ) . ' )';
+		if ( empty( $languages_tt_ids ) ) {
+			return '';
+		}
+
+		return ' AND pll_tr.term_taxonomy_id IN ( ' . implode( ',', $languages_tt_ids ) . ' )';
 	}
 
 	/**
@@ -488,11 +496,13 @@ abstract class PLL_Translated_Object {
 	 *
 	 * @since 3.2
 	 *
-	 * @param  mixed $id A supposedly numeric ID.
-	 * @return int       A positive integer. `0` for non numeric values and negative integers.
+	 * @param mixed $id A supposedly numeric ID.
+	 * @return int A positive integer. `0` for non numeric values and negative integers.
+	 *
+	 * @phpstan-return int<0,max>
 	 */
 	public function sanitize_int_id( $id ) {
-		return is_numeric( $id ) && $id >= 1 ? (int) $id : 0;
+		return is_numeric( $id ) && $id >= 1 ? abs( (int) $id ) : 0;
 	}
 
 	/**
@@ -501,8 +511,8 @@ abstract class PLL_Translated_Object {
 	 *
 	 * @since 3.2
 	 *
-	 * @param  mixed $ids An associative array of translations with language code as key and translation ID as value.
-	 * @return array<int> An associative array of translations with language code as key and translation ID as value.
+	 * @param mixed $ids An associative array of translations with language code as key and translation ID as value.
+	 * @return int[] An associative array of translations with language code as key and translation ID as value.
 	 */
 	public function sanitize_int_ids_list( $ids ) {
 		if ( empty( $ids ) || ! is_array( $ids ) ) {
@@ -526,13 +536,13 @@ abstract class PLL_Translated_Object {
 	 * @since 3.2 Doesn't return `0` ID values.
 	 * @since 3.2 Added parameters `$id` and `$context`.
 	 *
-	 * @param  int[]  $translations An associative array of translations with language code as key and translation ID as
-	 *                              value.
-	 * @param  int    $id           Optional. The object ID for which the translations are validated. When provided, the
-	 *                              process makes sure it is added to the list. Default 0.
-	 * @param  string $context      Optional. The operation for which the translations are validated. When set to
-	 *                              'save', a check is done to verify that the IDs and langs correspond.
-	 *                              'display' should be used otherwise. Default 'save'.
+	 * @param int[]  $translations An associative array of translations with language code as key and translation ID as
+	 *                             value.
+	 * @param int    $id           Optional. The object ID for which the translations are validated. When provided, the
+	 *                             process makes sure it is added to the list. Default 0.
+	 * @param string $context      Optional. The operation for which the translations are validated. When set to
+	 *                             'save', a check is done to verify that the IDs and langs correspond.
+	 *                             'display' should be used otherwise. Default 'save'.
 	 * @return int[]
 	 */
 	protected function validate_translations( $translations, $id = 0, $context = 'save' ) {

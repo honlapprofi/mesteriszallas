@@ -25,7 +25,7 @@ class PLL_Admin_Site_Health {
 	 *
 	 * @since 2.8
 	 *
-	 * @var PLL_Admin_Static_Pages
+	 * @var PLL_Admin_Static_Pages|null
 	 */
 	protected $static_pages;
 
@@ -104,8 +104,81 @@ class PLL_Admin_Site_Health {
 				}
 			}
 		);
-
 		return implode( ' | ', $array );
+	}
+
+	/**
+	 * Transforms the option value to readable human sentence.
+	 *
+	 * @since 3.3
+	 *
+	 * @param string $key   Option name.
+	 * @param mixed  $value Option value.
+	 * @return mixed Option value.
+	 */
+	public function format_value( $key, $value ) {
+		switch ( $key ) {
+			case 'browser':
+				if ( ! $value ) {
+					$value = '0: ' . esc_html__( 'Detect browser language deactivated', 'polylang' );
+					break;
+				}
+				$value = '1: ' . esc_html__( 'Detect browser language activated', 'polylang' );
+				break;
+			case 'rewrite':
+				if ( $value ) {
+					$value = '1: ' . esc_html__( 'Remove /language/ in pretty permalinks', 'polylang' );
+					break;
+				}
+				$value = '0: ' . esc_html__( 'Keep /language/ in pretty permalinks', 'polylang' );
+				break;
+			case 'hide_default':
+				if ( $value ) {
+					$value = '1: ' . esc_html__( 'Hide URL language information for default language', 'polylang' );
+					break;
+				}
+				$value = '0: ' . esc_html__( 'Display URL language information for default language', 'polylang' );
+				break;
+			case 'force_lang':
+				switch ( $value ) {
+					case '0':
+						$value = '0: ' . esc_html__( 'The language is set from content', 'polylang' );
+						break;
+					case '1':
+						$value = '1: ' . esc_html__( 'The language is set from the directory name in pretty permalinks', 'polylang' );
+						break;
+					case '2':
+						$value = '2: ' . esc_html__( 'The language is set from the subdomain name in pretty permalinks', 'polylang' );
+						break;
+					case '3':
+						$value = '3: ' . esc_html__( 'The language is set from different domains', 'polylang' );
+						break;
+				}
+				break;
+			case 'redirect_lang':
+				if ( $value ) {
+					$value = '1: ' . esc_html__( 'The front page URL contains the language code instead of the page name or page id', 'polylang' );
+					break;
+				}
+				$value = '0: ' . esc_html__( 'The front page URL contains the page name or page id instead of the language code', 'polylang' );
+
+				break;
+			case 'media_support':
+				if ( ! $value ) {
+					$value = '0: ' . esc_html__( 'The media are not translated', 'polylang' );
+					break;
+				}
+				$value = '1: ' . esc_html__( 'The media are translated', 'polylang' );
+				break;
+
+			case 'sync':
+				if ( empty( $value ) ) {
+					$value = '0: ' . esc_html__( 'Synchronization disabled', 'polylang' );
+				}
+				break;
+		}
+
+		return $value;
 	}
 
 	/**
@@ -118,56 +191,59 @@ class PLL_Admin_Site_Health {
 	 */
 	public function info_options( $debug_info ) {
 		$fields = array();
+
 		foreach ( $this->model->options as $key => $value ) {
 			if ( in_array( $key, $this->exclude_options_keys() ) ) {
 				continue;
 			}
 
-			if ( ! is_array( $value ) ) {
-				if ( empty( $value ) ) {
-					$value = '0';
-				}
+			$value = $this->format_value( $key, $value );
 
-				$fields[ $key ]['label'] = $key;
-				$fields[ $key ]['value'] = $value;
-			} elseif ( empty( $value ) ) {
-				$fields[ $key ]['label'] = $key;
-				$fields[ $key ]['value'] = '0';
-			} else {
-				switch ( $key ) {
-					case 'post_types':
+			switch ( $key ) {
+				case 'domains':
+					if ( 3 === $this->model->options['force_lang'] ) {
+						$value = is_array( $value ) ? $value : array();
+						$value = $this->format_array( $value );
+
 						$fields[ $key ]['label'] = $key;
-						$fields[ $key ]['value'] = implode( ', ', $this->model->get_translated_post_types() );
-						break;
-					case 'taxonomies':
-						$fields[ $key ]['label'] = $key;
-						$fields[ $key ]['value'] = implode( ', ', $this->model->get_translated_taxonomies() );
-						break;
-					case 'domains':
-						$fields[ $key ]['label'] = $key;
-						$fields[ $key ]['value'] = $this->format_array( $value );
-						break;
-					case 'nav_menus':
-						$current_theme = get_stylesheet();
-						if ( isset( $value[ $current_theme ] ) ) {
-							foreach ( $value[ $current_theme ] as $location => $lang ) {
-								/* translators: placeholder is the menu location name */
-								$fields[ $location ]['label'] = sprintf( 'menu: %s', $location );
-								$fields[ $location ]['value'] = $this->format_array( $lang );
-							}
+						$fields[ $key ]['value'] = $value;
+					}
+					break;
+
+				case 'nav_menus':
+					$current_theme = get_stylesheet();
+					if ( is_array( $value ) && isset( $value[ $current_theme ] ) ) {
+						foreach ( $value[ $current_theme ] as $location => $lang ) {
+							$lang = is_array( $lang ) ? $lang : array();
+
+							$fields[ $location ]['label'] = sprintf( 'menu: %s', $location );
+							$fields[ $location ]['value'] = $this->format_array( $lang );
 						}
-						break;
-					case 'media':
-						foreach ( $value as $sub_key => $sub_value ) {
-							$fields[ "$key-$sub_key" ]['label'] = "$key $sub_key";
-							$fields[ "$key-$sub_key" ]['value'] = $sub_value;
-						}
-						break;
-					default:
-						$fields[ $key ]['label'] = $key;
-						$fields[ $key ]['value'] = implode( ', ', $value );
-						break;
-				}
+					}
+					break;
+
+				case 'media':
+					$value = is_array( $value ) ? $value : array();
+					foreach ( $value as $sub_key => $sub_value ) {
+						$fields[ "$key-$sub_key" ]['label'] = "$key $sub_key";
+						$fields[ "$key-$sub_key" ]['value'] = $sub_value;
+					}
+					break;
+
+				case 'post_types':
+					$fields[ $key ]['label'] = $key;
+					$fields[ $key ]['value'] = implode( ', ', $this->model->get_translated_post_types() );
+					break;
+
+				case 'taxonomies':
+					$fields[ $key ]['label'] = $key;
+					$fields[ $key ]['value'] = implode( ', ', $this->model->get_translated_taxonomies() );
+					break;
+
+				default:
+					$fields[ $key ]['label'] = $key;
+					$fields[ $key ]['value'] = empty( $value ) ? '0' : $value;
+					break;
 			}
 		}
 
@@ -192,7 +268,7 @@ class PLL_Admin_Site_Health {
 		foreach ( $this->model->get_languages_list() as $language ) {
 			$fields = array();
 
-			foreach ( $language as $key => $value ) {
+			foreach ( get_object_vars( $language ) as $key => $value ) {
 				if ( in_array( $key, $this->exclude_language_keys(), true ) ) {
 					continue;
 				}

@@ -18,7 +18,7 @@ class PLL_Frontend_Auto_Translate {
 	/**
 	 * Current language.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $curlang;
 
@@ -275,10 +275,13 @@ class PLL_Frontend_Auto_Translate {
 				return $tr_id;
 			}
 		} else {
-			$terms = get_terms( $taxonomy, array( $field => $term, 'lang' => '' ) );
+			$terms = get_terms( array( 'taxonomy' => $taxonomy, $field => $term, 'lang' => '' ) );
 
-			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+			if ( ! empty( $terms ) && is_array( $terms ) ) {
 				$t = reset( $terms );
+				if ( ! $t instanceof WP_Term ) {
+					return $term;
+				}
 				$tr_id = $this->get_term( $t->term_id );
 
 				if ( ! is_wp_error( $tr = get_term( $tr_id, $taxonomy ) ) ) {

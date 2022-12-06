@@ -3,9 +3,9 @@ Contributors: daveshine, p4fbradjohnson, deckerweb, wpautobahn, pacotole, creapu
 Donate link: https://www.paypal.me/pacotole
 Tags: elementor, polylang, multilingual, language switcher, languages, templates, widget, finder, dynamic tags
 Requires at least: 5.4
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -197,6 +197,10 @@ There are quite a few:
 
 
 == Changelog ==
+
+= 2.3.3 =
+* Fix PHP warning on multidomain image undefined srcset.
+* Bump tested versions WordPress 6.1 & Elementor 3.8.
 
 = 2.3.2 =
 * Fix dynamic tag image language flag don't return svg scalable file.

@@ -115,11 +115,9 @@ class HotelBookingPlugin {
 	 */
 	private $editBookingMenuPage;
 
-	// #lite
-	// private $attributesMenuPage;
+private $attributesMenuPage;
 
-	// #lite
-	// private $upgradeToPremiumMenuPage;
+private $upgradeToPremiumMenuPage;
 
 	/**
 	 * @var \MPHB\Admin\MenuPages\ReportsMenuPage
@@ -305,8 +303,7 @@ class HotelBookingPlugin {
 
 		$this->pluginDir    = self::$_pluginDirPath;
 		$this->pluginDirUrl = self::$_pluginDirUrl;
-		// #lite
-		// $this->pluginSlug        = 'motopress-hotel-booking-lite';
+		$this->pluginSlug = 'motopress-hotel-booking-lite';
 		$this->productSlug = 'motopress-hotel-booking';
 		$this->productDir  = basename( dirname( MPHB_PLUGIN_FILE ) );
 		$this->prefix      = 'mphb';
@@ -555,17 +552,13 @@ class HotelBookingPlugin {
 			)
 		);
 
-		// #lite
-		// $attributesSettings = array('order' => 9, 'parent_menu' => $this->postTypes()->roomType()->getMenuSlug());
+		$attributesSettings = array('order' => 9, 'parent_menu' => $this->postTypes()->roomType()->getMenuSlug());
 
-		// #lite
-		// $this->attributesMenuPage = new \MPHB\Admin\MenuPages\AttributesMenuPage('mphb_room_attribute', $attributesSettings);
+		$this->attributesMenuPage = new \MPHB\Admin\MenuPages\AttributesMenuPage('mphb_room_attribute', $attributesSettings);
 
-		// #lite
-		// $upgradeToPremiumSettings = array( 'order' => 200 );
+		$upgradeToPremiumSettings = array( 'order' => 200 );
 
-		// #lite
-		// $this->upgradeToPremiumMenuPage = new \MPHB\Admin\MenuPages\UpgradeToPremiumMenuPage( 'mphb_premium', $upgradeToPremiumSettings );
+		$this->upgradeToPremiumMenuPage = new \MPHB\Admin\MenuPages\UpgradeToPremiumMenuPage( 'mphb_premium', $upgradeToPremiumSettings );
 
 		$reportsPageSettings = array(
 			'capability' => \MPHB\UsersAndRoles\CapabilitiesAndRoles::VIEW_REPORTS,

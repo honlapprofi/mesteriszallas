@@ -212,7 +212,7 @@ table.wp-list-table.posts tbody td.column-handle {
   width: 90%;
 }
 .mphb-preloader {
-  background-image: url("../../images/loading.gif?ver=4.4.4");
+  background-image: url("../../images/loading.gif?ver=4.5.0");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -253,6 +253,12 @@ div[data-group="mphb_season_prices"] > table.mphb-separate-sortable-table th:las
 }
 div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   overflow: auto;
+  padding-bottom: 16px;
+}
+div[data-group="mphb_season_prices"] > table .mphb-pricing-period-description {
+  display: block;
+  font-size: 10px;
+  font-style: italic;
 }
 #mphb-display-import-control > label {
   line-height: 22px;
@@ -401,53 +407,81 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
 .mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-first-part {
   overflow: hidden;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-booked {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  bottom: 1px;
+  left: 0;
+}
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-booked:after {
   background: #cef093;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-pending {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-pending:after {
   background: #fed24d;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-blocked {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-blocked:after {
   background: #ffd0d0;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-buffer {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-buffer:after {
   background: #ffd0d0;
   background: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cline x1='-10.3536' y1='17.9307' x2='17.9307' y2='-10.3536' stroke='%23CBCBCB'/%3E%3Cline x1='-4.35355' y1='21.9307' x2='23.9307' y2='-6.35355' stroke='%23CBCBCB'/%3E%3Cline x1='2.64645' y1='24.9307' x2='30.9307' y2='-3.35355' stroke='%23CBCBCB'/%3E%3Cline x1='8.64645' y1='28.9307' x2='36.9307' y2='0.646447' stroke='%23CBCBCB'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-imported-booking {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-imported-booking:after {
   background: #b0c4de;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-imported-booking + .mphb-date-check-out-booked.mphb-date-imported-booking {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-room-locked.mphb-date-imported-booking + .mphb-date-check-out-booked.mphb-date-imported-booking:after {
   background: #b0c4de;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out-booked {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-in {
+  border-left: 1px solid #e5e5e5;
+}
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out {
+  border-right: 1px solid #e5e5e5;
+}
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-in:after {
+  left: 1px;
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  bottom: 1px;
+}
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out:after {
+  right: 1px;
+  content: '';
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 0;
+}
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out-booked:after {
   background: #cef093;
 }
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out-pending {
+.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out-pending:after {
   background: #fed24d;
-}
-.mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td.mphb-date-check-out-blocked {
-  background: #ffd0d0;
 }
 .mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td .mphb-link-to-booking {
   cursor: pointer;
   position: absolute;
-  z-index: 100;
-  top: 0;
+  z-index: 2;
   left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .mphb-bookings-calendar-wrapper table.mphb-bookings-date-table > tbody > tr > td .mphb-silent-link-to-booking {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 1px;
   cursor: pointer;
   text-decoration: none;
+  z-index: 1;
+  right: -1px;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-date {
-  padding: 15px 15px 15px 0;
-  margin-right: 15px;
+  margin: 15px 15px 15px 0;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-date * {
   vertical-align: middle;
@@ -457,7 +491,7 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   margin-right: 15px;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-search {
-  padding: 15px 15px 15px 0;
+  margin: 15px 15px 15px 0;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-search * {
   vertical-align: middle;
@@ -466,7 +500,7 @@ div[data-group="mphb_season_prices"] > table .mphb-ctrl-variable-pricing {
   max-width: 120px;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-legend {
-  padding: 10px 0px 10px 20px;
+  margin: 10px 0;
   display: flex;
 }
 .mphb-bookings-calendar-wrapper .mphb-bookings-calendar-filters-wrapper .mphb-bookings-calendar-legend .legend-item {
@@ -985,6 +1019,10 @@ body.wp-admin .mphb-checkout-section + .mphb-checkout-section {
 .mphb-dates-range-custom.mphb-invisible {
   display: none;
 }
+#mphb-graphs-filter .mphb-ctrl-datepicker,
+.mphb-dates-range-custom .mphb-ctrl-datepicker {
+  margin-right: 6px;
+}
 #mphb-earnings-report-chart > div {
   width: 100%;
 }
@@ -1127,22 +1165,35 @@ body.wp-admin .mphb-checkout-section + .mphb-checkout-section {
   border-left-color: #333;
 }
 #tiptip_content,
-.chart-tooltip,
-.wc_error_tip {
+.chart-tooltip {
   color: #fff;
-  font-size: 0.923em;
-  max-width: 150px;
+  font-size: 12px;
+  max-width: 200px;
   background: #333;
   text-align: center;
   border-radius: 3px;
   padding: 0.618em 1em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  hyphens: auto;
 }
 #tiptip_content code,
-.chart-tooltip code,
-.wc_error_tip code {
+.chart-tooltip code {
   padding: 1px;
   background: #888;
+}
+#tiptip_content p,
+.chart-tooltip p {
+  font-size: inherit;
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+}
+#tiptip_content p:first-child,
+.chart-tooltip p:first-child {
+  margin-top: 0;
+}
+#tiptip_content p:last-child,
+.chart-tooltip p:last-child {
+  margin-bottom: 0;
 }
 #tiptip_arrow,
 #tiptip_arrow_inner {

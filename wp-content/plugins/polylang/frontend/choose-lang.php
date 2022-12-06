@@ -31,17 +31,9 @@ abstract class PLL_Choose_Lang {
 	/**
 	 * Current language.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $curlang;
-	/**
-	 * @var PLL_Accept_Language
-	 */
-	private $lang_parse;
-	/**
-	 * @var PLL_Accept_Languages_Collection
-	 */
-	private $accept_langs;
 
 	/**
 	 * Constructor
@@ -306,13 +298,28 @@ abstract class PLL_Choose_Lang {
 			$this->set_language( $lang );
 			$this->set_curlang_in_query( $query );
 		} elseif ( ( count( $query->query ) == 1 || ( is_paged() && count( $query->query ) == 2 ) ) && $lang = get_query_var( 'lang' ) ) {
-			// Set is_home on translated home page when it displays posts. It must be true on page 2, 3... too.
 			$lang = $this->model->get_language( $lang );
 			$this->set_language( $lang ); // Set the language now otherwise it will be too late to filter sticky posts!
-			$query->is_home = true;
-			$query->is_tax = false;
+
+			// Set is_home on translated home page when it displays posts. It must be true on page 2, 3... too.
+			$query->is_home    = true;
+			$query->is_tax     = false;
 			$query->is_archive = false;
+
+			// Filters is_front_page() in case a static front page is not translated in this language.
+			add_filter( 'option_show_on_front', array( $this, 'filter_option_show_on_front' ) );
 		}
+	}
+
+	/**
+	 * Filters the option show_on_front when the current front page displays posts.
+	 *
+	 * This is useful when a static front page is not translated in all languages.
+	 *
+	 * @return string
+	 */
+	public function filter_option_show_on_front() {
+		return 'posts';
 	}
 
 	/**
@@ -324,7 +331,9 @@ abstract class PLL_Choose_Lang {
 	 * @return void
 	 */
 	protected function set_curlang_in_query( &$query ) {
-		$pll_query = new PLL_Query( $query, $this->model );
-		$pll_query->set_language( $this->curlang );
+		if ( ! empty( $this->curlang ) ) {
+			$pll_query = new PLL_Query( $query, $this->model );
+			$pll_query->set_language( $this->curlang );
+		}
 	}
 }

@@ -2936,6 +2936,7 @@ MPHBAdmin.VariablePricingCtrl = MPHBAdmin.Ctrl.extend( {}, {
 	periodsCount: 0,
 
 	removePeriodText: '',
+	periodDescription: '',
 	upgradeToPremiumMessageHtml: '',
 
 	init: function( element, args ) {
@@ -2944,6 +2945,7 @@ MPHBAdmin.VariablePricingCtrl = MPHBAdmin.Ctrl.extend( {}, {
 		this.name = element.children( '.mphb-pricing-name-holder' ).attr( 'name' );
 
 		this.removePeriodText = MPHBAdmin.Plugin.myThis.data.translations.removePeriod;
+		this.periodDescription = MPHBAdmin.Plugin.myThis.data.translations.periodDescription;
 		this.upgradeToPremiumMessageHtml = MPHBAdmin.Plugin.myThis.data.settings.upgradeToPremiumMsgHtml;
 
 		this.periodsTable = element.children( '.mphb-pricing-periods-table' );
@@ -3007,7 +3009,7 @@ MPHBAdmin.VariablePricingCtrl = MPHBAdmin.Ctrl.extend( {}, {
 		var index = this.nextPeriodIndex();
 
 		var periodInput = '<input type="number" name="' + this.name + '[periods][]" class="small-text" value="' + this.MIN_PERIOD + '" min="' + this.MIN_PERIOD + '" step="1" />';
-		periodInput += '<br /><span class="dashicons dashicons-trash mphb-pricing-action mphb-pricing-remove-period" title="' + this.removePeriodText + '"></span>';
+		periodInput += '<span class="mphb-pricing-period-description">' + this.periodDescription + '</span><span class="dashicons dashicons-trash mphb-pricing-action mphb-pricing-remove-period" title="' + this.removePeriodText + '"></span>';
 		periodInput = '<td data-period-index="' + index + '">' + periodInput + '</td>';
 
 		var pricesAtts = ' disabled="disabled"';

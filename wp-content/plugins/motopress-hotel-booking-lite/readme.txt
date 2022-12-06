@@ -3,8 +3,8 @@ Contributors: MotoPress
 Donate link: https://motopress.com/
 Requires at least: 4.7
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
-Tested up to: 6.0
-Stable tag: 4.4.4
+Tested up to: 6.1
+Stable tag: 4.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -157,6 +157,12 @@ Hotel Booking Lite plugin, Copyright (C) 2016, MotoPress https://motopress.com/
 Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+
+= 4.5.0, Nov 14 2022 =
+* Improved the color-coding for dates in the availability calendar to better show days unavailable for check-in or check-out. Note for developers: This update might affect styles of the availability calendar in your themes or projects. Please update your code.
+* Improved the color-coding for dates in the admin calendar to better show booked and blocked days.
+* Fixed an issue with selecting a check-out day on a day that is not allowed to stay.
+* Fixed an issue with the session data security.
 
 = 4.4.4, Oct 21 2022 =
 * Fixed an error in previous version.

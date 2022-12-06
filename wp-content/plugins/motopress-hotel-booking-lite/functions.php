@@ -1481,7 +1481,7 @@ function mphb_get_room_type_base_price( $roomType = null, $startDate = null, $en
 	}
 
 	$price = 0.0;
-	$rates = MPHB()->getRateRepository()->findAllActiveByRoomType( $roomType->getOriginalId() );
+	$rates = MPHB()->getCoreAPI()->getRoomTypeActiveRates( $roomType->getOriginalId() );
 
 	if ( ! empty( $rates ) ) {
 
@@ -1777,7 +1777,22 @@ function mphb_filter_checkin_checkout_dates( $datesArray, $roomsTotal ) {
  */
 function mphb_help_tip( $tip, $allow_html = false ) {
 	if ( $allow_html ) {
-		$tip = wp_kses( $tip, wp_kses_allowed_html( 'post' ) );
+		$tip = htmlspecialchars(
+			wp_kses(
+				html_entity_decode( $tip ),
+				array(
+					'br'     => array(),
+					'em'     => array(),
+					'strong' => array(),
+					'small'  => array(),
+					'span'   => array(),
+					'ul'     => array(),
+					'li'     => array(),
+					'ol'     => array(),
+					'p'      => array(),
+				)
+			)
+		);
 	} else {
 		$tip = esc_attr( $tip );
 	}
