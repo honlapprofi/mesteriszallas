@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 15:14:00+0000\n"
+"PO-Revision-Date: 2022-11-22 15:53:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,19 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: hu\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
+
+#: includes/controls/groups/typography.php:145
+msgctxt "Typography Control"
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: core/experiments/manager.php:602
+msgid "Requires"
+msgstr "Kötelező"
+
+#: includes/elements/container.php:508
+msgid "(link)"
+msgstr "(hivatkozás)"
 
 #: includes/settings/tools.php:126
 msgid "Not allowed to rollback versions"
@@ -60,13 +73,13 @@ msgstr "Kérlek, vedd figyelembe! Nem tudtuk deaktiválni az összes bővítmén
 
 #: includes/managers/elements.php:309
 #: app/modules/kit-library/assets/js/pages/index/index.js:73
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:3952
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:3984
 msgid "Favorites"
 msgstr "Kedvencek"
 
 #: includes/template-library/sources/admin-menu-items/templates-categories-menu-item.php:23
 #: app/modules/kit-library/assets/js/models/taxonomy.js:6
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:3493
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:3525
 msgid "Categories"
 msgstr "Kategóriák"
 
@@ -269,7 +282,7 @@ msgstr "Szereted használni az Elementort?"
 #: app/modules/import-export/assets/js/pages/import/import-complete/components/failed-plugins-notice/failed-plugins-notice.js:9
 #: app/modules/kit-library/assets/js/pages/index/index-header.js:98
 #: assets/js/app.js:9216
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:3745
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:3777
 msgid "Learn more"
 msgstr "Tudj meg többet"
 
@@ -714,6 +727,11 @@ msgstr "Optimalizált DOM kimenet"
 #: modules/compatibility-tag/compatibility-tag-report.php:173
 msgid "Error"
 msgstr "Hiba"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: core/admin/admin.php:675
+msgid "The latest update includes some substantial changes across different areas of the plugin. We highly recommend you %1$sbackup your site before upgrading%2$s, and make sure you first update in a staging environment"
+msgstr "A legújabb frissítés néhány jelentős változtatást tartalmaz a bővítmény különböző területein. Erősen javasoljuk, hogy %1$sfrissítés előtt készítsen biztonsági másolatot a webhelyről%2$s, és győződjék meg arról, hogy először egy átmeneti környezetben frissít"
 
 #: core/common/modules/connect/apps/base-app.php:105
 msgid "Reset Data"
@@ -1522,7 +1540,7 @@ msgstr "Biztonságos üzemmód engedélyezése"
 #: app/modules/import-export/assets/js/shared/kit-content-data/kit-content-data.js:18
 #: app/modules/kit-library/assets/js/hooks/use-content-types.js:51
 #: assets/js/app.js:12316
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:2373
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:2405
 msgid "Popups"
 msgstr "Popupok"
 
@@ -2001,11 +2019,11 @@ msgstr "Átlátszóság"
 #: includes/plugin.php:598
 #: app/assets/js/organisms/unfiltered-files-dialog.js:62
 #: app/modules/import-export/assets/js/shared/process-failed-dialog/process-failed-dialog.js:26
-#: app/modules/kit-library/assets/js/components/item-header.js:129
+#: app/modules/kit-library/assets/js/components/item-header.js:115
 #: app/modules/kit-library/assets/js/pages/index/index.js:266
 #: assets/js/app-packages.js:2803 assets/js/app.js:4233 assets/js/app.js:13245
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:1230
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4141
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:1217
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4173
 msgid "Something went wrong."
 msgstr "Valami hiba történt."
 
@@ -2080,7 +2098,7 @@ msgstr "Sablonok keresése:"
 #: core/document-types/page.php:41 modules/library/documents/page.php:61
 #: app/modules/kit-library/assets/js/hooks/use-content-types.js:23
 #: assets/js/editor.js:10419
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:2361
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:2393
 msgid "Pages"
 msgstr "Oldalak"
 
@@ -2308,13 +2326,13 @@ msgstr "Kattints ide"
 
 #: includes/editor-templates/templates.php:66
 #: app/modules/kit-library/assets/js/pages/index/index.js:238
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4109
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4141
 msgid "New"
 msgstr "Új"
 
 #: includes/editor-templates/templates.php:70
 #: app/modules/kit-library/assets/js/pages/index/index.js:243
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4113
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4145
 msgid "Popular"
 msgstr "Népszerű"
 
@@ -2326,7 +2344,7 @@ msgstr "Létrehozás dátuma"
 #: includes/controls/media.php:214 includes/controls/media.php:260
 #: includes/editor-templates/repeater.php:27
 #: app/modules/kit-library/assets/js/components/filter-indication-text.js:37
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:1008
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:1008
 msgid "Remove"
 msgstr "Eltávolítás"
 
@@ -2426,7 +2444,7 @@ msgstr "Húzd be a .JSON vagy a .zip sablonfájlaidat"
 #: core/common/modules/finder/template.php:19
 #: app/modules/kit-library/assets/js/components/taxonomies-filter-list.js:69
 #: assets/js/editor.js:11539
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:2023
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:2014
 msgid "No Results Found"
 msgstr "Nincs találat"
 
@@ -3260,7 +3278,7 @@ msgstr "Add meg a szülő elemválasztót, amelybe az elnyújtott szakaszok ille
 #: core/breakpoints/manager.php:314
 #: core/settings/editor-preferences/model.php:133
 #: app/modules/kit-library/assets/js/pages/preview/preview.js:36
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4847
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4879
 msgid "Mobile"
 msgstr "Mobil"
 
@@ -3393,7 +3411,7 @@ msgstr "Távoli"
 
 #: includes/editor-templates/templates.php:37
 #: app/modules/kit-library/assets/js/components/layout/header-back-button.js:27
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:1546
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:1537
 msgid "Back to Library"
 msgstr "Vissza a könyvtárba"
 
@@ -3480,7 +3498,7 @@ msgstr "Ha módosítani szeretnéd a téma forráskódját, akkor javasoljuk a <
 #: app/modules/import-export/assets/js/shared/info-modal/export-info-modal.js:24
 #: app/modules/import-export/assets/js/shared/info-modal/import-info-modal.js:43
 #: app/modules/import-export/assets/js/shared/process-failed-dialog/process-failed-dialog.js:90
-#: app/modules/kit-library/assets/js/components/item-header.js:161
+#: app/modules/kit-library/assets/js/components/item-header.js:147
 #: app/modules/kit-library/assets/js/pages/index/index.js:269
 #: app/modules/site-editor/assets/js/organisms/site-parts.js:23
 #: app/modules/site-editor/assets/js/pages/not-found.js:13
@@ -3490,8 +3508,8 @@ msgstr "Ha módosítani szeretnéd a téma forráskódját, akkor javasoljuk a <
 #: assets/js/app.js:12050 assets/js/app.js:13318 assets/js/editor.js:14960
 #: assets/js/editor.js:30523 assets/js/editor.js:30555
 #: assets/js/editor.js:43596
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:1258
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4144
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:1245
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4176
 msgid "Learn More"
 msgstr "Tudj meg többet"
 
@@ -4588,7 +4606,7 @@ msgstr "Segítség"
 #: core/settings/editor-preferences/model.php:135
 #: includes/base/element-base.php:737 includes/editor-templates/panel.php:255
 #: app/modules/kit-library/assets/js/pages/preview/preview.js:18
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4831
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4863
 msgid "Desktop"
 msgstr "Asztali gép"
 
@@ -4613,7 +4631,7 @@ msgstr "Menü"
 #: app/assets/js/molecules/elementor-loading.js:24
 #: app/modules/site-editor/assets/js/context/template-types.js:58
 #: assets/js/app-packages.js:5731
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:240
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:240
 #: assets/js/onboarding.07504ab8f3b6a8e61982.bundle.js:50
 msgid "Loading"
 msgstr "Betöltés"
@@ -5204,7 +5222,7 @@ msgstr "Aktív szín"
 #: core/breakpoints/manager.php:324
 #: core/settings/editor-preferences/model.php:134
 #: app/modules/kit-library/assets/js/pages/preview/preview.js:26
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:4838
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:4870
 msgid "Tablet"
 msgstr "Tablet"
 
@@ -5468,7 +5486,7 @@ msgstr "Siker"
 #: app/modules/kit-library/assets/js/pages/index/index-header.js:33
 #: app/modules/site-editor/assets/js/organisms/site-parts.js:11
 #: assets/js/app-packages.js:6154
-#: assets/js/kit-library.b64c64cb74630835c1e3.bundle.js:3685
+#: assets/js/kit-library.5f449c6c414ea8220544.bundle.js:3717
 msgid "Info"
 msgstr "Információ"
 

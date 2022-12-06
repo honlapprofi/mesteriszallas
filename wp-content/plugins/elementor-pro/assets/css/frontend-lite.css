@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.8.0 - 30-10-2022 */
+/*! elementor-pro - v3.8.2 - 21-11-2022 */
 .elementor-bg-transform .elementor-bg {
   will-change: transform;
 }
@@ -253,6 +253,10 @@
   z-index: 99;
 }
 
+.e-container.elementor-sticky--active,
+.e-con.elementor-sticky--active {
+  z-index: var(--z-index, 99);
+}
 .e-container .e-container.elementor-sticky,
 .e-container .e-con.elementor-sticky,
 .e-con .e-container.elementor-sticky,

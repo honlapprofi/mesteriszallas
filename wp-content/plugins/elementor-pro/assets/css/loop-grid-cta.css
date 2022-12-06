@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.8.0 - 30-10-2022 */
+/*! elementor-pro - v3.8.2 - 21-11-2022 */
 .e-loop-empty-view__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +59,7 @@
   background-color: #a4afb7;
   padding: 6px 8px;
   border-radius: 3px;
+  text-decoration: none;
   -webkit-transition-property: background, color, opacity, -webkit-box-shadow;
   transition-property: background, color, opacity, -webkit-box-shadow;
   -o-transition-property: background, color, box-shadow, opacity;

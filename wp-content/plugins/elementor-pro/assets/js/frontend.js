@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.8.0 - 30-10-2022 */
+/*! elementor-pro - v3.8.2 - 21-11-2022 */
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["frontend"],{
 
 /***/ "../assets/dev/js/frontend/frontend.js":
@@ -1287,22 +1287,14 @@ var _default = elementorModules.frontend.handlers.Base.extend({
       handleScrollbarWidth: elementorFrontend.isEditMode()
     },
           $wpAdminBar = elementorFrontend.elements.$wpAdminBar,
-          hasParentContainer = this.isContainerElement(this.$element[0].parentElement),
-          isNestedContainer = this.isContainerElement(this.$element[0]) && hasParentContainer,
-          isWidget = this.$element[0].classList.contains('elementor-widget');
+          isParentContainer = this.isContainerElement(this.$element[0]) && !this.isContainerElement(this.$element[0].parentElement);
 
     if ($wpAdminBar.length && 'top' === elementSettings.sticky && 'fixed' === $wpAdminBar.css('position')) {
       stickyOptions.offset += $wpAdminBar.height();
-    }
-
-    if (hasParentContainer) {
-      stickyOptions.relativeTarget = 'document';
-    } else {
-      stickyOptions.relativeTarget = 'parent';
     } // The `stickyOptions.parent` value should only be applied to inner elements, and not to top level containers.
 
 
-    if (elementSettings.sticky_parent && (isNestedContainer || isWidget)) {
+    if (elementSettings.sticky_parent && !isParentContainer) {
       // TODO: The e-container classes should be removed in the next update.
       stickyOptions.parent = '.e-container, .e-container__inner, .e-con, .e-con-inner, .elementor-widget-wrap';
     }
