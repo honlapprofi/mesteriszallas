@@ -1,5 +1,15 @@
 # Elementor Pro - by Elementor.com
 
+#### 3.8.2 - 2022-11-20
+* Fix: Z-index issues when applying sticky to Container
+* Fix: Error message appears on front with Editor and Shop Manager roles when using the Loop Builder widget
+
+#### 3.8.1 - 2022-11-06
+* Fix: Sticky inner section is not staying in the column when applying sticky option in Sections ([#20203](https://github.com/elementor/elementor/issues/20203))
+* Fix: Post Title widget located in a loop item template disappears when enabling the hide title option inside page settings ([#20207](https://github.com/elementor/elementor/issues/20207), [#20255](https://github.com/elementor/elementor/issues/20255))
+* Fix: ACF Dynamic data not rendering correctly in various scenarios ([#20235](https://github.com/elementor/elementor/issues/20235), [#20258](https://github.com/elementor/elementor/issues/20258), [#20277](https://github.com/elementor/elementor/issues/20277))
+* Fix: Z-index issues when applying sticky to Container ([#20227](https://github.com/elementor/elementor/issues/20227))
+
 #### 3.8.0 - 2022-10-30
 * New: Introducing Loop Builder as a beta status experiment - Create powerful & repeating loop templates and populate each one with dynamic content and design flexibility ([#4440](https://github.com/elementor/elementor/issues/4440))
 * Tweak: Add `wp_body_open()` to header in Header template ([#11562](https://github.com/elementor/elementor/issues/11562), [#15828](https://github.com/elementor/elementor/issues/15828), [#13089](https://github.com/elementor/elementor/issues/13089))

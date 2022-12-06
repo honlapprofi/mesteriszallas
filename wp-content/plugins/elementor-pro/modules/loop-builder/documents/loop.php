@@ -3,7 +3,6 @@ namespace ElementorPro\Modules\LoopBuilder\Documents;
 
 use Elementor\Controls_Manager;
 use Elementor\Core\Base\Document;
-use ElementorPro\Base\MarkerInterfaces\Template_With_Post_Content_interface;
 use ElementorPro\Modules\LoopBuilder\Files\Css\Loop as Loop_CSS;
 use ElementorPro\Modules\LoopBuilder\Files\Css\Loop_Preview;
 use ElementorPro\Modules\ThemeBuilder\Documents\Theme_Document;
@@ -14,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-class Loop extends Theme_Document implements Template_With_Post_Content_interface {
+class Loop extends Theme_Document {
 
 	const DOCUMENT_TYPE = 'loop-item';
 
@@ -225,7 +224,7 @@ class Loop extends Theme_Document implements Template_With_Post_Content_interfac
 	 * @since 3.8.0
 	 */
 	public function get_content( $with_css = false ) {
-		$edit_mode = Plugin::elementor()->editor->is_edit_mode( $this->post->ID );
+		$preview_mode = Plugin::elementor()->preview->is_preview_mode( $this->post->ID );
 
 		add_filter( 'elementor/frontend/builder_content/before_print_css', [ $this, 'prevent_inline_css_printing' ] );
 
@@ -237,7 +236,7 @@ class Loop extends Theme_Document implements Template_With_Post_Content_interfac
 
 		remove_filter( 'elementor/frontend/builder_content/before_print_css', [ $this, 'prevent_inline_css_printing' ] );
 
-		Plugin::elementor()->editor->set_edit_mode( $edit_mode );
+		Plugin::elementor()->editor->set_edit_mode( $preview_mode );
 
 		return $content;
 	}
