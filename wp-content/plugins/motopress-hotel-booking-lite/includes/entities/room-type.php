@@ -371,13 +371,14 @@ class RoomType {
 	}
 
 	/**
-	 *
-	 * @return array
+	 * @return array with dates (string in format Y-m-d) which have rate
 	 */
-	public function getDatesHavePrice(){
-		$rates = MPHB()->getRateRepository()->findAllActiveByRoomType( $this->originalId );
+	public function getDatesHavePrice() {
+
+		$rates = MPHB()->getCoreAPI()->getRoomTypeActiveRates( $this->originalId );
 
 		$dates = array();
+
 		foreach ( $rates as $rate ) {
 			$dates = array_merge( $dates, array_keys( $rate->getDatePrices() ) );
 		}

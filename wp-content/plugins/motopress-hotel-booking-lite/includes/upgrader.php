@@ -110,7 +110,10 @@ class Upgrader {
 		),
 		'4.4.0' => array(
 			'fixForV4_4_0',
-		)
+		),
+		'4.5.0' => array(
+			'fixForV4_5_0',
+		),
 	);
 
 	public function __construct(){
@@ -946,6 +949,15 @@ class Upgrader {
 		delete_option( 'mphb_upgrade_queue_size' );
 
         MPHB()->notices()->hideNotice('force_upgrade');
+	}
+
+	public function fixForV4_5_0() {
+
+		global $wpdb;
+
+		$tableName = $wpdb->options;
+
+		$wpdb->query( "DELETE FROM $tableName WHERE $tableName.option_name LIKE '_mphb_wp_session%'" );
 	}
 
 }

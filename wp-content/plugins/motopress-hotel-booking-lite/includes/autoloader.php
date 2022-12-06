@@ -47,8 +47,10 @@ class Autoloader {
 		$this->customPathList['Libraries\\EDD_Plugin_Updater\\EDD_Plugin_Updater']   = 'includes/libraries/edd-plugin-updater/edd-plugin-updater.php';
 
 		$this->customPathList['Core\\CoreAPI'] = 'includes/core/core-api.php';
+		$this->customPathList['Core\\RoomTypeAvailabilityStatus'] = 'includes/core/data/room-type-availability-status.php';
+		$this->customPathList['Core\\AbstractDataTransferObject'] = 'includes/core/data/abstract-data-transfer-object.php';
+		$this->customPathList['Core\\RoomTypeAvailabilityData'] = 'includes/core/data/room-type-availability-data.php';
 		$this->customPathList['Core\\RoomAvailabilityHelper'] = 'includes/core/helpers/room-availability-helper.php';
-		
 
 		$this->customPathList['AjaxApi\\AbstractAjaxApiAction']   = 'includes/ajax-api/ajax-actions/abstract-ajax-api-action.php';
 		$this->customPathList['AjaxApi\\GetRoomTypeCalendarData'] = 'includes/ajax-api/ajax-actions/get-room-type-calendar-data.php';

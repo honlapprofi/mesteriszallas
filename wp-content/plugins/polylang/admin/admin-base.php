@@ -12,46 +12,46 @@ abstract class PLL_Admin_Base extends PLL_Base {
 	/**
 	 * Current language (used to filter the content).
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $curlang;
 
 	/**
 	 * Language selected in the admin language filter.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $filter_lang;
 
 	/**
 	 * Preferred language to assign to new contents.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $pref_lang;
 
 	/**
-	 * @var PLL_Filters_Links
+	 * @var PLL_Filters_Links|null
 	 */
 	public $filters_links;
 
 	/**
-	 * @var PLL_Admin_Links
+	 * @var PLL_Admin_Links|null
 	 */
 	public $links;
 
 	/**
-	 * @var PLL_Admin_Notices
+	 * @var PLL_Admin_Notices|null
 	 */
 	public $notices;
 
 	/**
-	 * @var PLL_Admin_Static_Pages
+	 * @var PLL_Admin_Static_Pages|null
 	 */
 	public $static_pages;
 
 	/**
-	 * @var PLL_Admin_Default_Term
+	 * @var PLL_Admin_Default_Term|null
 	 */
 	public $default_term;
 
@@ -123,7 +123,7 @@ abstract class PLL_Admin_Base extends PLL_Base {
 
 		// Only if at least one language has been created
 		if ( $this->model->get_languages_list() ) {
-			$tabs['strings'] = __( 'Strings translations', 'polylang' );
+			$tabs['strings'] = __( 'Translations', 'polylang' );
 		}
 
 		$tabs['settings'] = __( 'Settings', 'polylang' );
@@ -178,6 +178,8 @@ abstract class PLL_Admin_Base extends PLL_Base {
 			'widgets' => array( array( 'widgets' ), array( 'jquery' ), 0, 0 ),
 		);
 
+		$block_screens = array( 'widgets', 'site-editor' );
+
 		if ( ! empty( $screen->post_type ) && $this->model->is_translated_post_type( $screen->post_type ) ) {
 			$scripts['post'] = array( array( 'edit', 'upload' ), array( 'jquery', 'wp-ajax-response' ), 0, 1 );
 
@@ -187,9 +189,11 @@ abstract class PLL_Admin_Base extends PLL_Base {
 			}
 
 			// Block editor with legacy metabox in WP 5.0+.
-			if ( method_exists( $screen, 'is_block_editor' ) && $screen->is_block_editor() && ! pll_use_block_editor_plugin() ) {
-				$scripts['block-editor'] = array( array( 'post' ), array( 'jquery', 'wp-ajax-response', 'wp-api-fetch', 'jquery-ui-dialog', 'wp-i18n' ), 0, 1 );
-			}
+			$block_screens[] = 'post';
+		}
+
+		if ( $this->is_block_editor( $screen ) ) {
+			$scripts['block-editor'] = array( $block_screens, array( 'jquery', 'wp-ajax-response', 'wp-api-fetch', 'jquery-ui-dialog', 'wp-i18n' ), 0, 1 );
 		}
 
 		if ( ! empty( $screen->taxonomy ) && $this->model->is_translated_taxonomy( $screen->taxonomy ) ) {
@@ -208,7 +212,20 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		wp_register_style( 'polylang_admin', plugins_url( '/css/build/admin' . $suffix . '.css', POLYLANG_ROOT_FILE ), array( 'wp-jquery-ui-dialog' ), POLYLANG_VERSION );
 		wp_enqueue_style( 'polylang_dialog', plugins_url( '/css/build/dialog' . $suffix . '.css', POLYLANG_ROOT_FILE ), array( 'polylang_admin' ), POLYLANG_VERSION );
 
-		$this->localize_scripts();
+		$this->add_inline_scripts();
+	}
+
+	/**
+	 * Tells whether or not the given screen is block editor kind.
+	 * e.g. widget, site or post editor.
+	 *
+	 * @since 3.3
+	 *
+	 * @param WP_Screen $screen Screen object.
+	 * @return bool True if the screen is a block editor, false otherwise.
+	 */
+	protected function is_block_editor( $screen ) {
+		return method_exists( $screen, 'is_block_editor' ) && $screen->is_block_editor() && ! pll_use_block_editor_plugin();
 	}
 
 	/**
@@ -222,18 +239,27 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		if ( $this->model->get_languages_list() ) {
 			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 			wp_enqueue_script( 'pll_widgets', plugins_url( '/js/build/widgets' . $suffix . '.js', POLYLANG_ROOT_FILE ), array( 'jquery' ), POLYLANG_VERSION, true );
-			$this->localize_scripts();
+			$this->add_inline_scripts();
 		}
 	}
 
 	/**
-	 * Localize scripts.
+	 * Adds inline scripts to set the default language in JS
+	 * and localizes scripts.
 	 *
-	 * @since 2.4.0
+	 * @since 3.3
 	 *
 	 * @return void
 	 */
-	public function localize_scripts() {
+	private function add_inline_scripts() {
+		if ( wp_script_is( 'pll_block-editor', 'enqueued' ) ) {
+			$default_lang_script = 'const pllDefaultLanguage = "' . $this->options['default_lang'] . '";';
+			wp_add_inline_script(
+				'pll_block-editor',
+				$default_lang_script,
+				'before'
+			);
+		}
 		if ( wp_script_is( 'pll_widgets', 'enqueued' ) ) {
 			wp_localize_script(
 				'pll_widgets',
@@ -345,7 +371,9 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		// Edit Post
 		if ( isset( $_REQUEST['pll_post_id'] ) && $lang = $this->model->post->get_language( (int) $_REQUEST['pll_post_id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			$this->curlang = $lang;
-		} elseif ( 'post.php' === $GLOBALS['pagenow'] && isset( $_GET['post'] ) && $this->model->is_translated_post_type( get_post_type( (int) $_GET['post'] ) ) && $lang = $this->model->post->get_language( (int) $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		} elseif ( 'post.php' === $GLOBALS['pagenow'] && isset( $_GET['post'] ) && false !== get_post_type( (int) $_GET['post'] ) && $this->model->is_translated_post_type( get_post_type( (int) $_GET['post'] ) ) && $lang = $this->model->post->get_language( (int) $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+			$this->curlang = $lang;
+		} elseif ( 'post.php' === $GLOBALS['pagenow'] && isset( $_POST['post_ID'] ) && false !== get_post_type( (int) $_POST['post_ID'] ) && $this->model->is_translated_post_type( get_post_type( (int) $_POST['post_ID'] ) ) && $lang = $this->model->post->get_language( (int) $_POST['post_ID'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			$this->curlang = $lang;
 		} elseif ( 'post-new.php' === $GLOBALS['pagenow'] && ( empty( $_GET['post_type'] ) || $this->model->is_translated_post_type( sanitize_key( $_GET['post_type'] ) ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			$this->curlang = empty( $_GET['new_lang'] ) ? $this->pref_lang : $this->model->get_language( sanitize_key( $_GET['new_lang'] ) ); // phpcs:ignore WordPress.Security.NonceVerification
@@ -354,8 +382,8 @@ abstract class PLL_Admin_Base extends PLL_Base {
 		// Edit Term
 		elseif ( isset( $_REQUEST['pll_term_id'] ) && $lang = $this->model->term->get_language( (int) $_REQUEST['pll_term_id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			$this->curlang = $lang;
-		} elseif ( in_array( $GLOBALS['pagenow'], array( 'edit-tags.php', 'term.php' ) ) && isset( $_GET['taxonomy'] ) && $this->model->is_translated_taxonomy( sanitize_key( $_GET['taxonomy'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification
-			if ( isset( $_GET['tag_ID'] ) && $lang = $this->model->term->get_language( (int) $_GET['tag_ID'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		} elseif ( in_array( $GLOBALS['pagenow'], array( 'edit-tags.php', 'term.php' ) ) && isset( $_REQUEST['taxonomy'] ) && $this->model->is_translated_taxonomy( sanitize_key( $_REQUEST['taxonomy'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+			if ( isset( $_REQUEST['tag_ID'] ) && $lang = $this->model->term->get_language( (int) $_REQUEST['tag_ID'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 				$this->curlang = $lang;
 			} elseif ( ! empty( $_GET['new_lang'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 				$this->curlang = $this->model->get_language( sanitize_key( $_GET['new_lang'] ) ); // phpcs:ignore WordPress.Security.NonceVerification

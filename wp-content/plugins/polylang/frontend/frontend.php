@@ -12,54 +12,54 @@ class PLL_Frontend extends PLL_Base {
 	/**
 	 * Current language.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $curlang;
 
 	/**
-	 * @var PLL_Frontend_Auto_Translate
+	 * @var PLL_Frontend_Auto_Translate|null
 	 */
 	public $auto_translate;
 
 	/**
 	 * The class selecting the current language.
 	 *
-	 * @var PLL_Choose_Lang
+	 * @var PLL_Choose_Lang|null
 	 */
 	public $choose_lang;
 
 	/**
-	 * @var PLL_Frontend_Filters
+	 * @var PLL_Frontend_Filters|null
 	 */
 	public $filters;
 
 	/**
-	 * @var PLL_Frontend_Filters_Links
+	 * @var PLL_Frontend_Filters_Links|null
 	 */
 	public $filters_links;
 
 	/**
-	 * @var PLL_Frontend_Filters_Search
+	 * @var PLL_Frontend_Filters_Search|null
 	 */
 	public $filters_search;
 
 	/**
-	 * @var PLL_Frontend_Links
+	 * @var PLL_Frontend_Links|null
 	 */
 	public $links;
 
 	/**
-	 * @var PLL_Frontend_Nav_Menu
+	 * @var PLL_Frontend_Nav_Menu|null
 	 */
 	public $nav_menu;
 
 	/**
-	 * @var PLL_Frontend_Static_Pages
+	 * @var PLL_Frontend_Static_Pages|null
 	 */
 	public $static_pages;
 
 	/**
-	 * @var PLL_Frontend_Filters_Widgets
+	 * @var PLL_Frontend_Filters_Widgets|null
 	 */
 	public $filters_widgets;
 
@@ -127,6 +127,14 @@ class PLL_Frontend extends PLL_Base {
 		$this->filters = new PLL_Frontend_Filters( $this );
 		$this->filters_search = new PLL_Frontend_Filters_Search( $this );
 		$this->filters_widgets = new PLL_Frontend_Filters_Widgets( $this );
+
+		/*
+		 * Redirects to canonical url before WordPress redirect_canonical
+		 * but after Nextgen Gallery which hacks $_SERVER['REQUEST_URI'] !!!
+		 * and restores it in 'template_redirect' with priority 1.
+		 */
+		$this->canonical = new PLL_Canonical( $this );
+		add_action( 'template_redirect', array( $this->canonical, 'check_canonical_url' ), 4 );
 
 		// Auto translate for Ajax
 		if ( ( ! defined( 'PLL_AUTO_TRANSLATE' ) || PLL_AUTO_TRANSLATE ) && wp_doing_ajax() ) {

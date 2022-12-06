@@ -328,7 +328,14 @@ class BookingRulesMenuPage extends AbstractMenuPage {
 				) ),
 				FieldFactory::create( 'restrictions', array(
 					'type'				 => 'multiple-checkbox',
-					'label'				 => __( 'Restriction', 'motopress-hotel-booking' ),
+					'label'				 => __( 'Restriction', 'motopress-hotel-booking' ) .
+						mphb_help_tip(
+								'<p>' . __( 'Not check-in rule marks the date as unavailable for check-in.', 'motopress-hotel-booking' ) . '</p>' .
+								'<p>' . __( 'Not check-out rule marks the date as unavailable for check-out.', 'motopress-hotel-booking' ) . '</p>' .
+								'<p>' . __( 'Not stay-in rule displays the date as blocked. This date is unavailable for check-out and check-in on the next date.', 'motopress-hotel-booking' ) . '</p>' .
+								'<p>' . __( 'Not stay-in with Not check-out rules completely block the selected date, additionally displaying the previous date as unavailable for check-in.', 'motopress-hotel-booking' ) . '</p>',
+							true
+						),
 					'default'			 => array(),
 					'list'				 => array(
 						'check-in'  => __( 'Not check-in', 'motopress-hotel-booking' ),

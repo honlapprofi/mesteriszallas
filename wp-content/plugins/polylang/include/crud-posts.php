@@ -18,14 +18,14 @@ class PLL_CRUD_Posts {
 	/**
 	 * Preferred language to assign to a new post.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	protected $pref_lang;
 
 	/**
 	 * Current language.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	protected $curlang;
 
@@ -123,10 +123,10 @@ class PLL_CRUD_Posts {
 	 *
 	 * @since 2.3
 	 *
-	 * @param int       $object_id Object ID.
-	 * @param WP_Term[] $terms     An array of object terms.
-	 * @param int[]     $tt_ids    An array of term taxonomy IDs.
-	 * @param string    $taxonomy  Taxonomy slug.
+	 * @param int            $object_id Object ID.
+	 * @param int[]|string[] $terms     An array of object term IDs or slugs.
+	 * @param int[]          $tt_ids    An array of term taxonomy IDs.
+	 * @param string         $taxonomy  Taxonomy slug.
 	 * @return void
 	 */
 	public function set_object_terms( $object_id, $terms, $tt_ids, $taxonomy ) {
@@ -139,7 +139,7 @@ class PLL_CRUD_Posts {
 				// Convert to term ids if we got tag names
 				$strings = array_filter( $terms, 'is_string' );
 				if ( ! empty( $strings ) ) {
-					$_terms = get_terms( $taxonomy, array( 'name' => $strings, 'object_ids' => $object_id, 'fields' => 'ids' ) );
+					$_terms = get_terms( array( 'taxonomy' => $taxonomy, 'name' => $strings, 'object_ids' => $object_id, 'fields' => 'ids' ) );
 					$terms = array_merge( array_diff( $terms, $strings ), $_terms );
 				}
 
@@ -283,7 +283,9 @@ class PLL_CRUD_Posts {
 		// Create a new attachment ( translate attachment parent if exists ).
 		add_filter( 'pll_enable_duplicate_media', '__return_false', 99 ); // Avoid a conflict with automatic duplicate at upload.
 		unset( $post['ID'] ); // Will force the creation.
-		$post['post_parent'] = ( $post['post_parent'] && $tr_parent = $this->model->post->get_translation( $post['post_parent'], $lang->slug ) ) ? $tr_parent : 0;
+		if ( ! empty( $post['post_parent'] ) ) {
+			$post['post_parent'] = (int) $this->model->post->get_translation( $post['post_parent'], $lang->slug );
+		}
 		$post['tax_input'] = array( 'language' => array( $lang->slug ) ); // Assigns the language.
 		$tr_id = wp_insert_attachment( wp_slash( $post ) );
 		remove_filter( 'pll_enable_duplicate_media', '__return_false', 99 ); // Restore automatic duplicate at upload.

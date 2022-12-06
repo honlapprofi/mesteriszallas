@@ -19,7 +19,7 @@ class PLL_Frontend_Filters_Search {
 	/**
 	 * Current language.
 	 *
-	 * @var PLL_Language
+	 * @var PLL_Language|null
 	 */
 	public $curlang;
 
@@ -38,8 +38,12 @@ class PLL_Frontend_Filters_Search {
 		// Low priority in case the search form is created using the same filter as described in http://codex.wordpress.org/Function_Reference/get_search_form
 		add_filter( 'get_search_form', array( $this, 'get_search_form' ), 99 );
 
+		// Adds the language information in the search block.
+		add_filter( 'render_block_core/search', array( $this, 'get_search_form' ) );
+
 		// Adds the language information in admin bar search form
 		add_action( 'add_admin_bar_menus', array( $this, 'add_admin_bar_menus' ) );
+
 
 		// Adds javascript at the end of the document
 		// Was used for WP < 3.6. kept just in case
@@ -59,17 +63,25 @@ class PLL_Frontend_Filters_Search {
 	 * @return string Modified search form.
 	 */
 	public function get_search_form( $form ) {
-		if ( $form ) {
-			if ( $this->links_model->using_permalinks ) {
-				// Take care to modify only the url in the <form> tag.
-				preg_match( '#<form.+?>#', $form, $matches );
-				$old = reset( $matches );
-				// Replace action attribute (a text with no space and no closing tag within double quotes or simple quotes or without quotes).
-				$new = preg_replace( '#\saction=("[^"\r\n]+"|\'[^\'\r\n]+\'|[^\'"][^>\s]+)#', ' action="' . esc_url( $this->curlang->search_url ) . '"', $old );
-				$form = str_replace( $old, $new, $form );
-			} else {
-				$form = str_replace( '</form>', '<input type="hidden" name="lang" value="' . esc_attr( $this->curlang->slug ) . '" /></form>', $form );
+		if ( empty( $form ) ) {
+			return $form;
+		}
+
+		if ( $this->links_model->using_permalinks ) {
+			// Take care to modify only the url in the <form> tag.
+			preg_match( '#<form.+?>#', $form, $matches );
+			$old = reset( $matches );
+			if ( empty( $old ) ) {
+				return $form;
 			}
+			// Replace action attribute (a text with no space and no closing tag within double quotes or simple quotes or without quotes).
+			$new = preg_replace( '#\saction=("[^"\r\n]+"|\'[^\'\r\n]+\'|[^\'"][^>\s]+)#', ' action="' . esc_url( $this->curlang->search_url ) . '"', $old );
+			if ( empty( $new ) ) {
+				return $form;
+			}
+			$form = str_replace( $old, $new, $form );
+		} else {
+			$form = str_replace( '</form>', '<input type="hidden" name="lang" value="' . esc_attr( $this->curlang->slug ) . '" /></form>', $form );
 		}
 
 		return $form;

@@ -38,6 +38,7 @@ class ComposerStaticInit57e007bdf76a1fe336cb43b59389545b
         'PLL_CRUD_Terms' => __DIR__ . '/../..' . '/include/crud-terms.php',
         'PLL_Cache' => __DIR__ . '/../..' . '/include/cache.php',
         'PLL_Cache_Compat' => __DIR__ . '/../..' . '/integrations/cache/cache-compat.php',
+        'PLL_Canonical' => __DIR__ . '/../..' . '/frontend/canonical.php',
         'PLL_Cft' => __DIR__ . '/../..' . '/integrations/custom-field-template/cft.php',
         'PLL_Choose_Lang' => __DIR__ . '/../..' . '/frontend/choose-lang.php',
         'PLL_Choose_Lang_Content' => __DIR__ . '/../..' . '/frontend/choose-lang-content.php',

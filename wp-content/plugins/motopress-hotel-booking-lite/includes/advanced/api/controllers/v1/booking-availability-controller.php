@@ -200,7 +200,6 @@ class BookingAvailabilityController extends AbstractRestController {
 		$adults              = $request['adults'];
 		$children            = $request['children'];
 
-		// todo: перепроверить условие с оригинальным
 		if ( $accommodationTypeId && is_null( MPHB()->getRoomTypePersistence()->getPost( $accommodationTypeId ) ) ) {
 			return new WP_Error( "mphb_rest_invalid_accommodation_type",
 				'Invalid ID.', array( 'status' => 400 ) );

@@ -17,7 +17,7 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 	protected $links_model;
 
 	/**
-	 * @var PLL_Frontend_Links
+	 * @var PLL_Frontend_Links|null
 	 */
 	protected $links;
 
@@ -34,7 +34,6 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 		$this->links_model = &$polylang->links_model;
 		$this->links = &$polylang->links;
 
-		add_action( 'pll_language_defined', array( $this, 'pll_language_defined' ) );
 		add_action( 'pll_home_requested', array( $this, 'pll_home_requested' ) );
 
 		// Manages the redirection of the homepage
@@ -55,12 +54,7 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 	 * @return void
 	 */
 	public function pll_language_defined() {
-		// Translates our page on front and page for posts properties
-		$this->init();
-
-		// Translates page for posts and page on front
-		add_filter( 'option_page_on_front', array( $this, 'translate_page_on_front' ) );
-		add_filter( 'option_page_for_posts', array( $this, 'translate_page_for_posts' ) );
+		parent::pll_language_defined();
 
 		// Support theme customizer
 		if ( isset( $_POST['wp_customize'], $_POST['customized'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
@@ -78,19 +72,6 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 	 */
 	public function pll_home_requested() {
 		set_query_var( 'page_id', $this->curlang->page_on_front );
-	}
-
-	/**
-	 * Translates page on front
-	 *
-	 * @since 1.8
-	 *
-	 * @param int $v page on front page id
-	 * @return int
-	 */
-	public function translate_page_on_front( $v ) {
-		// Don't attempt to translate in a 'switch_blog' action as there is a risk to call this function while initializing the languages cache
-		return isset( $this->curlang->page_on_front ) && ( $this->curlang->page_on_front ) && ! doing_action( 'switch_blog' ) ? $this->curlang->page_on_front : $v;
 	}
 
 	/**
@@ -184,13 +165,8 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 			return $lang;
 		}
 
-		// The home page is requested
-		if ( did_action( 'home_requested' ) ) {
-			$query->set( 'page_id', $lang->page_on_front );
-		}
-
 		// Redirect the language page to the homepage when using a static front page
-		elseif ( ( $this->options['redirect_lang'] || $this->options['hide_default'] ) && $this->is_front_page( $query ) && $lang = $this->model->get_language( get_query_var( 'lang' ) ) ) {
+		if ( ( $this->options['redirect_lang'] || $this->options['hide_default'] ) && $this->is_front_page( $query ) && $lang = $this->model->get_language( get_query_var( 'lang' ) ) ) {
 			$query->is_archive = $query->is_tax = false;
 			if ( ! empty( $lang->page_on_front ) ) {
 				$query->set( 'page_id', $lang->page_on_front );
@@ -205,6 +181,9 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 		// Fix paged static front page in plain permalinks when Settings > Reading doesn't match the default language
 		elseif ( ! $this->links_model->using_permalinks && count( $query->query ) === 1 && ! empty( $query->query['page'] ) ) {
 			$lang = $this->model->get_language( $this->options['default_lang'] );
+			if ( empty( $lang ) ) {
+				return $lang;
+			}
 			$query->set( 'page_id', $lang->page_on_front );
 			$query->is_singular = $query->is_page = true;
 			$query->is_archive = $query->is_tax = false;
@@ -249,7 +228,7 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 			if ( ! empty( $page_id ) && in_array( $page_id, $pages = $this->model->get_languages_list( array( 'fields' => 'page_for_posts' ) ) ) ) {
 				// Fill the cache with all pages for posts to avoid one query per page later
 				// The posts_per_page limit is a trick to avoid splitting the query
-				get_posts( array( 'posts_per_page' => 999, 'post_type' => 'page', 'post__in' => $pages, 'lang' => '' ) );
+				get_posts( array( 'posts_per_page' => 99, 'post_type' => 'page', 'post__in' => $pages, 'lang' => '' ) );
 
 				$lang = $this->model->post->get_language( $page_id );
 				$query->is_singular = $query->is_page = false;

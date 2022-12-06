@@ -314,7 +314,7 @@ class RoomPersistence extends RoomTypeDependencedPersistence {
 		$allRoomIds = $this->getPosts(
 			array(
 				'room_type_id'	 => $typeId,
-				'post_status'	 => 'all',
+				'post_status'	 => 'publish',
 				'fields'		 => 'ids',
 				'posts_per_page' => -1
 			)

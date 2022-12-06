@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Rank Math SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-06 08:33:29+0000\n"
+"PO-Revision-Date: 2022-11-22 20:18:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,11 +11,60 @@ msgstr ""
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Rank Math SEO - Stable (latest release)\n"
 
-#: includes/replace-variables/class-post-variables.php:223
+#: includes/admin/class-options.php:300
+msgid "Ctrl/Cmd + Enter"
+msgstr "Ctrl/Cmd + Enter"
+
+#: includes/admin/class-admin.php:395
+msgid "Exclusive Offer!"
+msgstr "Exkluzivní nabídka!"
+
+#: includes/admin/wizard/class-your-site.php:96
+#: includes/modules/local-seo/views/titles-options.php:55
+#: includes/settings/titles/local.php:49
+msgid "Your name or company name intended to feature in Google's Knowledge Panel."
+msgstr "Vaše jméno nebo název společnosti, které se mají objevit ve znalostním panelu Google."
+
+#: includes/admin/wizard/class-your-site.php:95
+#: includes/modules/local-seo/views/titles-options.php:54
+#: includes/settings/titles/local.php:48
+msgid "Person/Organization Name"
+msgstr "Jméno osoby/společnosti"
+
+#: includes/admin/wizard/class-your-site.php:87
+#: includes/modules/local-seo/views/titles-options.php:46
+#: includes/settings/titles/local.php:40
+msgid "An alternate version of your site name (for example, an acronym or shorter name)."
+msgstr "Alternativní verze názvu Vašeho webu (například zkratka nebo kratší název)."
+
+#: includes/admin/wizard/class-your-site.php:86
+#: includes/modules/local-seo/views/titles-options.php:45
+#: includes/settings/titles/local.php:39
+msgid "Website Alternate Name"
+msgstr "Alternativní název webových stránek"
+
+#: includes/admin/wizard/class-your-site.php:77
+#: includes/modules/local-seo/views/titles-options.php:36
+#: includes/settings/titles/local.php:30
+msgid "Enter the name of your site to appear in search results."
+msgstr "Zadejte název webu, který se má zobrazit ve výsledcích vyhledávání."
+
+#: includes/admin/wizard/class-your-site.php:75
+#: includes/modules/local-seo/views/titles-options.php:35
+#: includes/settings/titles/local.php:29
+msgid "Website Name"
+msgstr "Název webu"
+
+#. translators: %1$s: general reading settings URL.
+#: includes/admin/watcher/class-watcher.php:276
+msgid "<strong>SEO Notice</strong>: Your site is set to No Index and will not appear in search engines. You can change the Search engine visibility <a href=\"%1$s\">from here</a>."
+msgstr "<strong>SEO upozornění</strong>: Váš web je nastaven na No Index a nebude se zobrazovat ve vyhledávačích. Viditelnost pro vyhledávače můžete změnit <a href=\"%1$s\">zde</a>."
+
+#: includes/replace-variables/class-post-variables.php:225
 msgid "Output list of terms from the primary taxonomy associated to the current post."
 msgstr "Výstupní seznam výrazů z primární taxonomie přiřazené k aktuálnímu příspěvku."
 
-#: includes/replace-variables/class-post-variables.php:221
+#: includes/replace-variables/class-post-variables.php:223
 msgid "Primary Terms"
 msgstr "Primární výrazy"
 
@@ -60,8 +109,8 @@ msgstr "Přepočítat skóre"
 msgid "This tool will calculate the SEO score for the posts/pages that have a Focus Keyword set. Note: This process may take some time and the browser tab must be kept open while it is running."
 msgstr "Tento nástroj vypočítá skóre SEO pro příspěvky/stránky, které mají nastavené klíčové slovo. Poznámka: Tento proces může nějakou dobu trvat a během jeho provádění musí zůstat karta prohlížeče otevřena."
 
-#: includes/modules/local-seo/views/titles-options.php:46
-#: includes/settings/titles/local.php:40
+#: includes/modules/local-seo/views/titles-options.php:65
+#: includes/settings/titles/local.php:59
 msgid "<strong>Min Size: 112Χ112px</strong>.<br /> A squared image is preferred by the search engines."
 msgstr "<strong>Minimální velikost: 112Χ112px</strong>.<br /> Vyhledávače upřednostňují čtvercový obrázek."
 
@@ -102,7 +151,7 @@ msgstr "Vytvořte mapu stránek Zpráv pro svůj obsah související se zprávam
 msgid "News Sitemap"
 msgstr "Mapa stránek Zpráv"
 
-#: includes/admin/wizard/class-your-site.php:87
+#: includes/admin/wizard/class-your-site.php:107
 msgid "<strong>Min Size: 112Χ112px</strong>.<br />A squared image is preferred by the search engines."
 msgstr "<strong>Minimální velikost: 112Χ112px</strong>.<br />Vyhledávače upřednostňují čtvercový obrázek."
 
@@ -953,7 +1002,7 @@ msgstr "Jejda"
 msgid "If you are new to Rank Math, %s to learn more."
 msgstr "Pokud jste Rank Math nováčkem, %s se dozvíte více."
 
-#: includes/admin/wizard/class-your-site.php:97
+#: includes/admin/wizard/class-your-site.php:117
 msgid "When a featured image or an OpenGraph Image is not set for individual posts/pages/CPTs, this image will be used as a fallback thumbnail when your post is shared on Facebook. <strong>The recommended image size is 1200 x 630 pixels.</strong>"
 msgstr "Pokud není pro jednotlivé příspěvky/stránky/CPT nastaven doporučený obrázek nebo obrázek OpenGraph, bude tento obrázek použit jako náhradní miniatura při sdílení příspěvku na Facebooku. <strong>Doporučená velikost obrázku je 1200 x 630 pixelů.</strong>"
 
@@ -1541,7 +1590,7 @@ msgid "Days"
 msgstr "Dnů"
 
 #. Translators: placeholder is a link to the Pro version
-#: includes/modules/local-seo/views/titles-options.php:272
+#: includes/modules/local-seo/views/titles-options.php:291
 msgid "Multiple Locations are available in the %s."
 msgstr "Více míst je k dispozici v %s."
 
@@ -2150,19 +2199,19 @@ msgstr "Název organizace přidán v místní nastavení SEO."
 msgid "Organization Name"
 msgstr "Název společnosti"
 
-#: includes/replace-variables/class-post-variables.php:117
+#: includes/replace-variables/class-post-variables.php:119
 msgid "Current Post Thumbnail"
 msgstr "Miniatura aktuálního příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:116
+#: includes/replace-variables/class-post-variables.php:118
 msgid "Post Thumbnail"
 msgstr "Miniatura příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:106
+#: includes/replace-variables/class-post-variables.php:108
 msgid "URL of the current post/page"
 msgstr "URL aktuálního příspěvku/stránky"
 
-#: includes/replace-variables/class-post-variables.php:105
+#: includes/replace-variables/class-post-variables.php:107
 msgid "Post URL"
 msgstr "URL příspěvku"
 
@@ -2595,17 +2644,17 @@ msgstr "Upravit stránku: "
 msgid "Static page is set as the front page (WP Dashboard > Settings > Reading). To add SEO title, description, and meta for the homepage, please click here: %s"
 msgstr "Statická stránka je nastavena jako titulní strana (WP Dashboard > Nastavení > čtení). Chcete-li přidat SEO název, popis a meta pro domovskou stránku, klikněte prosím zde: %s"
 
-#: includes/admin/watcher/class-watcher.php:152
-#: includes/admin/watcher/class-watcher.php:159
+#: includes/admin/watcher/class-watcher.php:153
+#: includes/admin/watcher/class-watcher.php:160
 msgid "Click here to Deactivate"
 msgstr "Klikněte zde pro deaktivaci"
 
 #. translators: plugin name
-#: includes/admin/watcher/class-watcher.php:124
+#: includes/admin/watcher/class-watcher.php:125
 msgid "You are not allowed to deactivate this plugin: %s."
 msgstr "Tento plugin nesmíte deaktivovat: %s."
 
-#: includes/admin/watcher/class-watcher.php:48
+#: includes/admin/watcher/class-watcher.php:49
 msgid "Sorry, you are not allowed to deactivate plugins for this site."
 msgstr "Je nám líto, ale není dovoleno deaktivovat pluginy pro tuto stránku."
 
@@ -2701,7 +2750,7 @@ msgstr "Importovat a převést všechny kompatibilní bloky v post obsahu."
 msgid "Import Blocks"
 msgstr "Importovat bloky"
 
-#: includes/admin/importers/class-yoast.php:1193
+#: includes/admin/importers/class-yoast.php:1195
 msgid "No post found."
 msgstr "Příspěveky nenalezeny."
 
@@ -2978,16 +3027,16 @@ msgstr "Tato karta obsahuje MOŽNOSTI SEO pro stránky BuddyPress Group."
 msgid "No meta rows found to update."
 msgstr "Nebyly nalezeny žádné meta řádky, které by bylo možné aktualizovat."
 
-#: includes/replace-variables/class-post-variables.php:94
+#: includes/replace-variables/class-post-variables.php:96
 msgid "Custom or Generated SEO Description of the current post/page"
 msgstr "Vlastní nebo generované SEO Popis aktuálního příspěvku / stránky"
 
-#: includes/replace-variables/class-post-variables.php:93
+#: includes/replace-variables/class-post-variables.php:95
 #: includes/modules/content-ai/assets/js/content-ai.js:1
 msgid "SEO Description"
 msgstr "SEO popis (Description)"
 
-#: includes/replace-variables/class-post-variables.php:82
+#: includes/replace-variables/class-post-variables.php:84
 msgid "Custom or Generated SEO Title of the current post/page"
 msgstr "Vlastní nebo generované SEO Název aktuálního příspěvku / stránky"
 
@@ -3155,7 +3204,7 @@ msgstr "Autoři pokročilé nastavení pro roboty"
 msgid "Homepage Advanced Robots"
 msgstr "Domovská stránka Pokročilé roboty"
 
-#: includes/admin/class-assets.php:201
+#: includes/admin/class-assets.php:199
 msgid "Add <code>rel=\"sponsored\"</code>"
 msgstr "Přidat<code>rel=\"sponsored\"</code>"
 
@@ -3191,7 +3240,7 @@ msgstr "Toto $%1$s je požadováno pro proměnnou %2$s."
 msgid "The $id variable is required."
 msgstr "Tato $id proměnná je povinná."
 
-#: includes/replace-variables/class-post-variables.php:73
+#: includes/replace-variables/class-post-variables.php:74
 msgid "Post Excerpt Only"
 msgstr "Pouze výpis příspěvku"
 
@@ -3526,17 +3575,17 @@ msgid "bbPress"
 msgstr "bbPress"
 
 #: includes/3rdparty/divi/class-divi.php:151
-#: includes/admin/class-assets.php:132
+#: includes/admin/class-assets.php:130
 msgid "Please enter a valid URL."
 msgstr "Zadejte, prosím, platnou URL adresu."
 
 #: includes/3rdparty/divi/class-divi.php:150
-#: includes/admin/class-assets.php:131
+#: includes/admin/class-assets.php:129
 msgid "Please enter a valid email address."
 msgstr "Prosím, vložte platnou emailovou adresu."
 
 #: includes/3rdparty/divi/class-divi.php:148
-#: includes/admin/class-assets.php:129
+#: includes/admin/class-assets.php:127
 msgid "Please use the correct format."
 msgstr "Použijte správný formát."
 
@@ -5132,7 +5181,7 @@ msgstr "Aktualizovat možnosti"
 msgid "Control which user has access to which options of Rank Math. %s"
 msgstr "Řízení, který uživatel má přístup ke kterým možnostem Rank Math. %s"
 
-#: includes/admin/class-admin.php:327
+#: includes/admin/class-admin.php:328
 #: includes/modules/role-manager/class-role-manager.php:131
 #: includes/traits/class-ajax.php:59
 msgid "You are not authorized to perform this action."
@@ -5641,7 +5690,7 @@ msgid "Redirection successfully deleted."
 msgstr "Přesměrování bylo úspěšně odstraněno."
 
 #. translators: source pattern
-#: includes/modules/redirections/class-redirection.php:364
+#: includes/modules/redirections/class-redirection.php:365
 msgid "Invalid regex pattern: %s"
 msgstr "Neplatný vzor regulárního výrazu: %s"
 
@@ -5735,61 +5784,61 @@ msgstr "Toto pole nesmí být prázdné."
 msgid "Maintenance Code"
 msgstr "Kód údržby"
 
-#: includes/modules/local-seo/views/titles-options.php:269
+#: includes/modules/local-seo/views/titles-options.php:288
 msgid "Latitude and longitude values separated by comma."
 msgstr "Hodnoty zeměpisné šířky a délky oddělené čárkou."
 
-#: includes/modules/local-seo/views/titles-options.php:268
+#: includes/modules/local-seo/views/titles-options.php:287
 #: includes/modules/schema/shortcode/restaurant.php:27
 msgid "Geo Coordinates"
 msgstr "Geo souřadnice"
 
 #. translators: %s expands to "Google Maps Embed API"
 #. https://developers.google.com/maps/documentation/embed
-#: includes/modules/local-seo/views/titles-options.php:258
+#: includes/modules/local-seo/views/titles-options.php:277
 msgid "Google Maps Embed API"
 msgstr "Rozhraní API pro vložení Map Google"
 
 #. translators: %s expands to "Google Maps Embed API"
 #. https://developers.google.com/maps/documentation/embed
-#: includes/modules/local-seo/views/titles-options.php:258
+#: includes/modules/local-seo/views/titles-options.php:277
 msgid "An API Key is required to display embedded Google Maps on your site. Get it here: %s"
 msgstr "K zobrazení vložených Map Google na vašem webu je nutný klíč rozhraní API. Získejte ji zde: %s"
 
-#: includes/modules/local-seo/views/titles-options.php:256
+#: includes/modules/local-seo/views/titles-options.php:275
 msgid "Google Maps API Key"
 msgstr "API klíč pro Google Mapy"
 
-#: includes/modules/local-seo/views/titles-options.php:246
+#: includes/modules/local-seo/views/titles-options.php:265
 msgid "Contact Page"
 msgstr "Kontaktní stránka"
 
-#: includes/modules/local-seo/views/titles-options.php:229
-#: includes/modules/local-seo/views/titles-options.php:247
+#: includes/modules/local-seo/views/titles-options.php:248
+#: includes/modules/local-seo/views/titles-options.php:266
 msgid "Select a page on your site where you want to show the LocalBusiness meta data."
 msgstr "Vyberte stránku na webu, kde chcete zobrazit meta data LocalBusiness."
 
-#: includes/modules/local-seo/views/titles-options.php:228
+#: includes/modules/local-seo/views/titles-options.php:247
 msgid "About Page"
 msgstr "O stránce"
 
-#: includes/modules/local-seo/views/titles-options.php:217
-#: includes/modules/local-seo/views/titles-options.php:235
+#: includes/modules/local-seo/views/titles-options.php:236
+#: includes/modules/local-seo/views/titles-options.php:254
 msgid "Select Page"
 msgstr "Vybrat stránku"
 
-#: includes/modules/local-seo/views/titles-options.php:211
+#: includes/modules/local-seo/views/titles-options.php:230
 msgid "The price range of the business, for example $$$."
 msgstr "Cenové rozpětí firmy, například $$$."
 
-#: includes/modules/local-seo/views/titles-options.php:210
+#: includes/modules/local-seo/views/titles-options.php:229
 #: includes/modules/schema/shortcode/restaurant.php:41
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Price Range"
 msgstr "Cenové rozpětí"
 
-#: includes/modules/local-seo/views/titles-options.php:202
+#: includes/modules/local-seo/views/titles-options.php:221
 msgid "Format: +1-401-555-1212"
 msgstr "Formát: +1-401-555-1212"
 
@@ -5837,79 +5886,79 @@ msgstr "Technická podpora"
 msgid "Customer Service"
 msgstr "Zákaznický servis"
 
-#: includes/modules/local-seo/views/titles-options.php:179
+#: includes/modules/local-seo/views/titles-options.php:198
 msgid "Add number"
 msgstr "Přidat číslo"
 
-#: includes/modules/local-seo/views/titles-options.php:176
+#: includes/modules/local-seo/views/titles-options.php:195
 #: includes/modules/schema/shortcode/restaurant.php:34
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Phone Number"
 msgstr "Telefonní číslo"
 
-#: includes/modules/local-seo/views/titles-options.php:124
+#: includes/modules/local-seo/views/titles-options.php:143
 msgid "Time format used in the contact shortcode."
 msgstr "Formát času použitý v kontaktním zkrácení."
 
-#: includes/modules/local-seo/views/titles-options.php:119
+#: includes/modules/local-seo/views/titles-options.php:138
 msgid "Opening Hours Format"
 msgstr "Formát otevírací doby"
 
-#: includes/modules/local-seo/views/titles-options.php:167
+#: includes/modules/local-seo/views/titles-options.php:186
 msgid "e.g. 09:00-17:00"
 msgstr "09:00-17:00"
 
-#: includes/modules/local-seo/views/titles-options.php:157
+#: includes/modules/local-seo/views/titles-options.php:176
 msgid "Sunday"
 msgstr "Neděle"
 
-#: includes/modules/local-seo/views/titles-options.php:156
+#: includes/modules/local-seo/views/titles-options.php:175
 msgid "Saturday"
 msgstr "Sobota"
 
-#: includes/modules/local-seo/views/titles-options.php:155
+#: includes/modules/local-seo/views/titles-options.php:174
 msgid "Friday"
 msgstr "Pátek"
 
-#: includes/modules/local-seo/views/titles-options.php:154
+#: includes/modules/local-seo/views/titles-options.php:173
 msgid "Thursday"
 msgstr "Čtvrtek"
 
-#: includes/modules/local-seo/views/titles-options.php:153
+#: includes/modules/local-seo/views/titles-options.php:172
 msgid "Wednesday"
 msgstr "Středa"
 
-#: includes/modules/local-seo/views/titles-options.php:152
+#: includes/modules/local-seo/views/titles-options.php:171
 msgid "Tuesday"
 msgstr "Úterý"
 
-#: includes/modules/local-seo/views/titles-options.php:151
+#: includes/modules/local-seo/views/titles-options.php:170
 msgid "Monday"
 msgstr "Pondělí"
 
-#: includes/modules/local-seo/views/titles-options.php:137
+#: includes/modules/local-seo/views/titles-options.php:156
 msgid "Add time"
 msgstr "Přidat čas"
 
-#: includes/modules/local-seo/views/titles-options.php:135
+#: includes/modules/local-seo/views/titles-options.php:154
 msgid "Select opening hours. You can add multiple sets if you have different opening or closing hours on some days or if you have a mid-day break. Times are specified using 24:00 time."
 msgstr "Vyberte otevírací dobu. Můžete přidat více sad, pokud máte různé otevírací nebo zavírací hodiny v některých dnech nebo pokud máte přestávku v polovině dne. Časy jsou určeny pomocí času 24:00."
 
-#: includes/modules/local-seo/views/titles-options.php:134
+#: includes/modules/local-seo/views/titles-options.php:153
 #: includes/modules/schema/class-snippet-shortcode.php:230
 msgid "Opening Hours"
 msgstr "Otevírací hodiny"
 
-#: includes/modules/local-seo/views/titles-options.php:93
+#: includes/modules/local-seo/views/titles-options.php:112
 msgid "Format used when the address is displayed using the <code>[rank_math_contact_info]</code> shortcode.<br><strong>Available Tags: {address}, {locality}, {region}, {postalcode}, {country}, {gps}</strong>"
 msgstr "Formát použitý při zobrazení adresy pomocí <code>[rank_math_contact_info]</code> zkráceného kódu.<br><strong>Dostupné značky: {address} , , , , , {locality} {region} {postalcode} {country} , {gps}</strong>"
 
-#: includes/modules/local-seo/views/titles-options.php:92
+#: includes/modules/local-seo/views/titles-options.php:111
 msgid "Address Format"
 msgstr "Formát adresy"
 
-#: includes/modules/local-seo/views/titles-options.php:84
+#: includes/modules/local-seo/views/titles-options.php:103
 #: includes/modules/schema/shortcode/event.php:62
 #: includes/modules/schema/shortcode/person.php:27
 #: includes/modules/schema/shortcode/restaurant.php:20
@@ -5919,56 +5968,50 @@ msgstr "Formát adresy"
 msgid "Address"
 msgstr "Adresa"
 
-#: includes/modules/local-seo/views/titles-options.php:75
-#: includes/modules/local-seo/views/titles-options.php:177
+#: includes/modules/local-seo/views/titles-options.php:94
+#: includes/modules/local-seo/views/titles-options.php:196
 msgid "Search engines may prominently display your contact phone number for mobile users."
 msgstr "Vyhledávače mohou výrazně zobrazit vaše kontaktní telefonní číslo pro mobilní uživatele."
 
-#: includes/modules/local-seo/views/titles-options.php:74
+#: includes/modules/local-seo/views/titles-options.php:93
 msgid "Phone"
 msgstr "Telefon"
 
-#: includes/modules/local-seo/views/titles-options.php:66
+#: includes/modules/local-seo/views/titles-options.php:85
 msgid "Search engines display your email address."
 msgstr "Vyhledávače zobrazují vaši e-mailovou adresu."
 
-#: includes/modules/local-seo/views/titles-options.php:65
+#: includes/modules/local-seo/views/titles-options.php:84
 #: includes/modules/schema/shortcode/person.php:20
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Email"
 msgstr "E-mail"
 
-#: includes/modules/local-seo/views/titles-options.php:56
-#: includes/settings/titles/local.php:50
+#: includes/modules/local-seo/views/titles-options.php:75
+#: includes/settings/titles/local.php:69
 msgid "URL of the item."
 msgstr "Adresa URL položky."
 
 #: includes/modules/instant-indexing/views/history.php:15
-#: includes/modules/local-seo/views/titles-options.php:55
+#: includes/modules/local-seo/views/titles-options.php:74
 #: includes/modules/schema/shortcode/book.php:20
 #: includes/modules/schema/shortcode/music.php:20
 #: includes/modules/sitemap/sitemap-xsl.php:306
-#: includes/settings/titles/local.php:49
+#: includes/settings/titles/local.php:68
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "URL"
 msgstr "URL"
 
-#: includes/modules/local-seo/views/titles-options.php:45
-#: includes/settings/titles/local.php:39
+#: includes/modules/local-seo/views/titles-options.php:64
+#: includes/settings/titles/local.php:58
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/modules/local-seo/views/titles-options.php:36
-#: includes/settings/titles/local.php:30
-msgid "Your name or company name"
-msgstr "Vaše jméno nebo název společnosti"
-
-#: includes/modules/local-seo/views/titles-options.php:35
 #: includes/modules/schema/shortcode/book.php:36
 #: includes/modules/sitemap/sitemap-xsl.php:168
-#: includes/opengraph/class-slack.php:357 includes/settings/titles/local.php:29
+#: includes/opengraph/class-slack.php:357
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Name"
@@ -6017,8 +6060,8 @@ msgid "Ignore Query Parameters"
 msgstr "Ignorovat parametry dotazu"
 
 #: includes/modules/404-monitor/views/options.php:58
-#: includes/modules/local-seo/views/titles-options.php:138
-#: includes/modules/local-seo/views/titles-options.php:180
+#: includes/modules/local-seo/views/titles-options.php:157
+#: includes/modules/local-seo/views/titles-options.php:199
 #: includes/modules/redirections/class-form.php:89
 msgid "Remove"
 msgstr "Odstranit"
@@ -6532,23 +6575,23 @@ msgstr "Začíná na 1 a přírůstky o 1."
 msgid "Counter"
 msgstr "Počítadlo"
 
-#: includes/replace-variables/class-post-variables.php:266
+#: includes/replace-variables/class-post-variables.php:268
 msgid "Example Tag 1 | Example Tag 2"
 msgstr "Příklad značky 1 | Příklad značky 2"
 
-#: includes/replace-variables/class-post-variables.php:264
+#: includes/replace-variables/class-post-variables.php:266
 msgid "Output list of tags associated to the current post, with customization options."
 msgstr "Výstupní seznam značek přidružených k aktuálnímu příspěvku s možnostmi přizpůsobení."
 
-#: includes/replace-variables/class-post-variables.php:263
+#: includes/replace-variables/class-post-variables.php:265
 msgid "Tags (advanced)"
 msgstr "Značky (pokročilé)"
 
-#: includes/replace-variables/class-post-variables.php:211
+#: includes/replace-variables/class-post-variables.php:213
 msgid "Output list of categories associated to the current post, with customization options."
 msgstr "Výstupní seznam kategorií přidružených k aktuálnímu příspěvku s možnostmi vlastního nastavení."
 
-#: includes/replace-variables/class-post-variables.php:210
+#: includes/replace-variables/class-post-variables.php:212
 msgid "Categories (advanced)"
 msgstr "Kategorie (pokročilé)"
 
@@ -6560,19 +6603,19 @@ msgstr "Aktuální čas serveru s vlastním vzorem formátování."
 msgid "Current Time (advanced)"
 msgstr "Aktuální čas (pokročilý)"
 
-#: includes/replace-variables/class-post-variables.php:171
+#: includes/replace-variables/class-post-variables.php:173
 msgid "Modified date with custom formatting pattern."
 msgstr "Datum změny s vlastním vzorem formátování."
 
-#: includes/replace-variables/class-post-variables.php:170
+#: includes/replace-variables/class-post-variables.php:172
 msgid "Date Modified (advanced)"
 msgstr "Datum změny (rozšířené)"
 
-#: includes/replace-variables/class-post-variables.php:160
+#: includes/replace-variables/class-post-variables.php:162
 msgid "Publish date with custom formatting pattern."
 msgstr "Datum publikování s vlastním vzorem formátování."
 
-#: includes/replace-variables/class-post-variables.php:159
+#: includes/replace-variables/class-post-variables.php:161
 msgid "Date Published (advanced)"
 msgstr "Datum publikování (rozšířené)"
 
@@ -6762,56 +6805,56 @@ msgstr "Název aktuálního termínu"
 msgid "Current Term"
 msgstr "Aktuální období"
 
-#: includes/replace-variables/class-post-variables.php:202
-#: includes/replace-variables/class-post-variables.php:213
+#: includes/replace-variables/class-post-variables.php:204
+#: includes/replace-variables/class-post-variables.php:215
 msgid "Example Category 1, Example Category 2"
 msgstr "Příklad kategorie 1, příklad kategorie 2"
 
-#: includes/replace-variables/class-post-variables.php:200
+#: includes/replace-variables/class-post-variables.php:202
 msgid "Comma-separated list of categories associated to the current post"
 msgstr "Seznam kategorií přidružených k aktuálnímu příspěvku oddělený čárkou"
 
-#: includes/replace-variables/class-post-variables.php:199
+#: includes/replace-variables/class-post-variables.php:201
 msgid "Post Categories"
 msgstr "Kategorie příspěvků"
 
-#: includes/replace-variables/class-post-variables.php:191
+#: includes/replace-variables/class-post-variables.php:193
 msgid "Example Category"
 msgstr "Příklad kategorie"
 
-#: includes/replace-variables/class-post-variables.php:189
+#: includes/replace-variables/class-post-variables.php:191
 msgid "First category (alphabetically) associated to the current post <strong>OR</strong> current category on category archives"
 msgstr "První kategorie (abecedně) spojená s aktuální poštovní <strong>nebo</strong> aktuální kategorií v archivu kategorií"
 
-#: includes/replace-variables/class-post-variables.php:188
+#: includes/replace-variables/class-post-variables.php:190
 msgid "Post Category"
 msgstr "Kategorie příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:254
+#: includes/replace-variables/class-post-variables.php:256
 msgid "Example Tag 1, Example Tag 2"
 msgstr "Příklad značky 1, ukázková značka 2"
 
-#: includes/replace-variables/class-post-variables.php:252
+#: includes/replace-variables/class-post-variables.php:254
 msgid "Comma-separated list of tags associated to the current post"
 msgstr "Seznam značek přidružených k aktuálnímu příspěvku oddělený čárkami"
 
-#: includes/replace-variables/class-post-variables.php:251
+#: includes/replace-variables/class-post-variables.php:253
 msgid "Post Tags"
 msgstr "Štítky příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:242
+#: includes/replace-variables/class-post-variables.php:244
 msgid "Example Tag"
 msgstr "Ukázková značka"
 
-#: includes/replace-variables/class-post-variables.php:240
+#: includes/replace-variables/class-post-variables.php:242
 msgid "First tag (alphabetically) associated to the current post <strong>OR</strong> current tag on tag archives"
 msgstr "První značka (abecedně) spojená s aktuálním příspěvkem <strong>NEBO</strong> aktuální značkou v archivech značek"
 
-#: includes/replace-variables/class-post-variables.php:239
+#: includes/replace-variables/class-post-variables.php:241
 msgid "Post Tag"
 msgstr "Značka příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:71
+#: includes/replace-variables/class-post-variables.php:72
 msgid "Excerpt of the current post (without auto-generation)"
 msgstr "Výňatek z aktuálního příspěvku (bez auto-generace)"
 
@@ -6820,24 +6863,24 @@ msgid "Excerpt of the current post (or auto-generated if it does not exist)"
 msgstr "Výňatek z aktuálního příspěvku (nebo automaticky generované, pokud neexistuje)"
 
 #: includes/replace-variables/class-post-variables.php:59
-#: includes/replace-variables/class-post-variables.php:70
+#: includes/replace-variables/class-post-variables.php:71
 msgid "Post Excerpt"
 msgstr "Zkrácený text příspěvku"
 
-#: includes/replace-variables/class-post-variables.php:149
+#: includes/replace-variables/class-post-variables.php:151
 msgid "Last modification date of the current post/page"
 msgstr "Datum poslední změny aktuálního příspěvku/stránky"
 
-#: includes/replace-variables/class-post-variables.php:148
+#: includes/replace-variables/class-post-variables.php:150
 msgid "Date Modified"
 msgstr "Datum změny"
 
-#: includes/replace-variables/class-post-variables.php:138
+#: includes/replace-variables/class-post-variables.php:140
 msgid "Publication date of the current post/page <strong>OR</strong> specified date on date archives"
 msgstr "Datum zveřejnění aktuálního příspěvku/stránky <strong>NEBO</strong> zadaného data archivů"
 
 #: includes/modules/schema/shortcode/book.php:40
-#: includes/replace-variables/class-post-variables.php:137
+#: includes/replace-variables/class-post-variables.php:139
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Date Published"
@@ -7038,7 +7081,7 @@ msgstr "Jako neindexovat"
 
 #: includes/admin/class-admin-bar-menu.php:333
 msgid "As Pillar Content"
-msgstr "Jako obsah pilíře"
+msgstr "Jako pilířový obsah"
 
 #: includes/admin/class-admin-bar-menu.php:316
 msgid "Mark this page"
@@ -7090,12 +7133,12 @@ msgid "Products tagged &ldquo;%s&rdquo;"
 msgstr "Knihy se štítkem &ldquo;%s&rdquo;"
 
 #. translators: deactivation link
-#: includes/admin/watcher/class-watcher.php:158
+#: includes/admin/watcher/class-watcher.php:159
 msgid "Please keep only one Sitemap plugin active, otherwise, you might lose your rankings and traffic. %s."
 msgstr "Prosím, mějte pouze jeden Plugin Sitemap aktivní, jinak byste mohli přijít o své hodnocení a provoz. %s."
 
 #. translators: deactivation link
-#: includes/admin/watcher/class-watcher.php:151
+#: includes/admin/watcher/class-watcher.php:152
 msgid "Please keep only one SEO plugin active, otherwise, you might lose your rankings and traffic. %s."
 msgstr "Prosím, mějte pouze jeden SEO plugin aktivní, jinak byste mohli přijít o své hodnocení a provoz. %s."
 
@@ -7879,52 +7922,48 @@ msgstr "Mapy stránek"
 msgid "Search Console"
 msgstr "Search Console"
 
-#: includes/admin/wizard/class-your-site.php:96
+#: includes/admin/wizard/class-your-site.php:116
 msgid "Default Social Share Image"
 msgstr "Výchozí obrázek sdílení na sociálních sítích"
 
-#: includes/admin/wizard/class-your-site.php:85
+#: includes/admin/wizard/class-your-site.php:105
 msgid "Logo for Google"
 msgstr "Logo pro Google"
-
-#: includes/admin/wizard/class-your-site.php:75
-msgid "Company Name"
-msgstr "Název společnosti"
 
 #: includes/admin/wizard/class-your-site.php:60
 msgid "Select the type that best describes your business. If you can't find one that applies exactly, use the generic \"Organization\" or \"Local Business\" types."
 msgstr "Vyberte typ, který nejlépe vystihuje vaši firmu. Pokud nemůžete najít ten, který platí přesně, použijte obecné typy \"Organizace\" nebo \"Místní firma\"."
 
 #: includes/admin/wizard/class-your-site.php:59
-#: includes/modules/local-seo/views/titles-options.php:108
+#: includes/modules/local-seo/views/titles-options.php:127
 msgid "Business Type"
 msgstr "Typ firmy"
 
-#: includes/admin/wizard/class-your-site.php:320
+#: includes/admin/wizard/class-your-site.php:348
 msgid "Other Business Website"
 msgstr "Další obchodní webové stránky"
 
-#: includes/admin/wizard/class-your-site.php:319
+#: includes/admin/wizard/class-your-site.php:347
 msgid "Other Personal Website"
 msgstr "Jiné osobní webové stránky"
 
-#: includes/admin/wizard/class-your-site.php:318
+#: includes/admin/wizard/class-your-site.php:346
 msgid "Webshop"
 msgstr "Internetový obchod"
 
-#: includes/admin/wizard/class-your-site.php:317
+#: includes/admin/wizard/class-your-site.php:345
 msgid "Small Business Site"
 msgstr "Web pro malé firmy"
 
-#: includes/admin/wizard/class-your-site.php:316
+#: includes/admin/wizard/class-your-site.php:344
 msgid "Personal Portfolio"
 msgstr "Osobní portfolio"
 
-#: includes/admin/wizard/class-your-site.php:315
+#: includes/admin/wizard/class-your-site.php:343
 msgid "Community Blog/News Site"
 msgstr "Komunitní blog / zpravodajský web"
 
-#: includes/admin/wizard/class-your-site.php:314
+#: includes/admin/wizard/class-your-site.php:342
 msgid "Personal Blog"
 msgstr "Osobní blog"
 
@@ -8059,7 +8098,7 @@ msgid "Rank Math Product Registration"
 msgstr "Registrace produktu Rank Math"
 
 #: includes/3rdparty/divi/class-divi.php:149
-#: includes/admin/class-assets.php:130
+#: includes/admin/class-assets.php:128
 msgid "This field is required."
 msgstr "Toto pole je povinné."
 
@@ -8117,7 +8156,7 @@ msgid "SEO Desc"
 msgstr "SEO popis"
 
 #: includes/admin/class-post-columns.php:142
-#: includes/replace-variables/class-post-variables.php:81
+#: includes/replace-variables/class-post-variables.php:83
 #: includes/modules/content-ai/assets/js/content-ai.js:1
 msgid "SEO Title"
 msgstr "SEO titulek"
@@ -8200,22 +8239,22 @@ msgstr "Obecné"
 msgid "Description"
 msgstr "Popis"
 
-#: includes/admin/metabox/class-metabox.php:278
+#: includes/admin/metabox/class-metabox.php:277
 msgid "We can't show any link suggestions for this post. Try selecting categories and tags for this post, and mark other posts as Pillar Content to make them show up here."
 msgstr "U tohoto příspěvku nemůžeme zobrazit žádné návrhy odkazů. Zkuste vybrat kategorie a štítky pro tento příspěvek a označit další příspěvky jako Důležitý obsah, aby se zde návrhy zobrazily."
 
-#: includes/admin/metabox/class-metabox.php:269
+#: includes/admin/metabox/class-metabox.php:268
 msgid "Click on the button to copy URL or insert link in content. You can also drag and drop links in the post content."
 msgstr "Kliknutím na tlačítko zkopírujete adresu URL nebo vložíte odkaz do obsahu. Můžete také přetahovat odkazy v obsahu příspěvku."
 
-#: includes/admin/metabox/class-metabox.php:258
+#: includes/admin/metabox/class-metabox.php:257
 #: includes/settings/titles/post-types.php:273
 msgid "Link Suggestions"
 msgstr "Návrhy odkazů"
 
 #. Plugin Name of the plugin
 #: includes/admin/class-admin-bar-menu.php:173
-#: includes/admin/metabox/class-metabox.php:342
+#: includes/admin/metabox/class-metabox.php:341
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -8318,20 +8357,20 @@ msgstr "Zapnuto"
 msgid "Off"
 msgstr "Vypnout"
 
-#: includes/admin/class-admin.php:297
+#: includes/admin/class-admin.php:298
 msgid "Insert Link in Content"
 msgstr "Vložit odkaz do obsahu"
 
-#: includes/admin/class-admin.php:296
+#: includes/admin/class-admin.php:297
 msgid "Copy Link URL to Clipboard"
 msgstr "Kopírovat adresu URL odkazu do schránky"
 
-#: includes/admin/class-admin.php:112
+#: includes/admin/class-admin.php:113
 msgid "The canonical URL you entered does not seem to be a valid URL. Please double check it in the SEO meta box &raquo; Advanced tab."
 msgstr "Zadaná kanonická adresa URL se nezdá být platnou adresou URL. Prosím, zkontrolujte ji v SEO meta boxu &raquo; záložka Pokročilé."
 
 #. translators: plugin url
-#: includes/admin/class-assets.php:177
+#: includes/admin/class-assets.php:175
 msgid "Thank you for using <a href=\"%s\" target=\"_blank\">Rank Math</a>"
 msgstr "Děkujeme, že používáte <a href=\"%s\" target=\"_blank\">Rank Math</a>"
 
@@ -8357,24 +8396,24 @@ msgstr "Pomoc"
 msgid "Modules"
 msgstr "Moduly"
 
-#: includes/admin/class-admin.php:69
+#: includes/admin/class-admin.php:70
 msgid "Facebook profile URL"
 msgstr "Facebook URL profilu"
 
-#: includes/admin/class-admin.php:68
+#: includes/admin/class-admin.php:69
 msgid "Twitter username (without @)"
 msgstr "Twitter uživatelské jméno (bez @)"
 
 #: includes/admin/class-admin-bar-menu.php:183
 #: includes/admin/class-admin-bar-menu.php:185
 #: includes/admin/class-admin-breadcrumbs.php:32
-#: includes/admin/class-admin-menu.php:90
+#: includes/admin/class-admin-menu.php:89
 #: includes/modules/version-control/class-version-control.php:220
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Dashboard"
 msgstr "Nástěnka"
 
-#: includes/admin/class-admin-menu.php:100
+#: includes/admin/class-admin-menu.php:99
 msgid "Help &amp; Support"
 msgstr "Pomoc &amp; podpora"
 
@@ -8393,39 +8432,39 @@ msgstr "Pomoc &amp; podpora"
 msgid "Rank Math"
 msgstr "Rank Math"
 
-#: includes/admin/class-assets.php:202
+#: includes/admin/class-assets.php:200
 msgid "Link Title"
 msgstr "Název odkazu"
 
-#: includes/admin/class-assets.php:200
+#: includes/admin/class-assets.php:198
 msgid "Add <code>rel=\"nofollow\"</code>"
 msgstr "Přidat <code>rel=\"nofollow\"</code>"
 
-#: includes/admin/class-assets.php:199 assets/admin/js/gutenberg-formats.js:1
+#: includes/admin/class-assets.php:197 assets/admin/js/gutenberg-formats.js:1
 msgid "Link inserted."
 msgstr "Odkaz vložen."
 
-#: includes/admin/class-assets.php:198
+#: includes/admin/class-assets.php:196
 msgid "Link selected."
 msgstr "Odkaz vybrán."
 
-#: includes/admin/class-assets.php:197
+#: includes/admin/class-assets.php:195
 msgid "No matches found."
 msgstr "Nenalezeny žádné shody."
 
-#: includes/admin/class-assets.php:196
+#: includes/admin/class-assets.php:194
 msgid "(no title)"
 msgstr "(bez názvu)"
 
-#: includes/admin/class-assets.php:195
+#: includes/admin/class-assets.php:193
 msgid "Add Link"
 msgstr "Přidat odkaz"
 
-#: includes/admin/class-assets.php:194
+#: includes/admin/class-assets.php:192
 #: includes/modules/redirections/class-form.php:41
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: includes/admin/class-assets.php:193
+#: includes/admin/class-assets.php:191
 msgid "Insert/edit link"
 msgstr "Vložit/upravit odkaz"

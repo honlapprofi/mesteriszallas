@@ -9,6 +9,7 @@
  *
  * @since 1.2
  */
+#[AllowDynamicProperties]
 class PLL_Language {
 	/**
 	 * Id of the term in 'language' taxonomy.
@@ -90,35 +91,35 @@ class PLL_Language {
 	/**
 	 * W3C locale.
 	 *
-	 * @var string.
+	 * @var string
 	 */
 	public $w3c;
 
 	/**
 	 * Facebook locale.
 	 *
-	 * @var string.
+	 * @var string|null
 	 */
 	public $facebook;
 
 	/**
 	 * Home url in this language.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $home_url;
 
 	/**
 	 * Home url to use in search forms.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $search_url;
 
 	/**
 	 * Host corresponding to this language.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $host;
 
@@ -132,14 +133,14 @@ class PLL_Language {
 	/**
 	 * Id of the page on front in this language ( set from pll_languages_list filter ).
 	 *
-	 * @var int
+	 * @var int|null
 	 */
 	public $page_on_front;
 
 	/**
 	 * Id of the page for posts in this language ( set from pll_languages_list filter ).
 	 *
-	 * @var int
+	 * @var int|null
 	 */
 	public $page_for_posts;
 
@@ -153,28 +154,28 @@ class PLL_Language {
 	/**
 	 * Url of the flag.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $flag_url;
 
 	/**
 	 * Html markup of the flag.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $flag;
 
 	/**
 	 * Url of the custom flag if it exists.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $custom_flag_url;
 
 	/**
 	 * Html markup of the custom flag if it exists.
 	 *
-	 * @var string
+	 * @var string|null
 	 */
 	public $custom_flag;
 
@@ -459,11 +460,19 @@ class PLL_Language {
 	 * @return void
 	 */
 	public function set_url_scheme() {
-		$this->home_url = set_url_scheme( $this->home_url );
-		$this->search_url = set_url_scheme( $this->search_url );
+		if ( ! empty( $this->home_url ) ) {
+			$this->home_url = set_url_scheme( $this->home_url );
+		}
+
+		if ( ! empty( $this->search_url ) ) {
+			$this->search_url = set_url_scheme( $this->search_url );
+		}
 
 		// Set url scheme, also for the flags.
-		$this->flag_url = set_url_scheme( $this->flag_url );
+		if ( ! empty( $this->flag_url ) ) {
+			$this->flag_url = set_url_scheme( $this->flag_url );
+		}
+
 		if ( ! empty( $this->custom_flag_url ) ) {
 			$this->custom_flag_url = set_url_scheme( $this->custom_flag_url );
 		}

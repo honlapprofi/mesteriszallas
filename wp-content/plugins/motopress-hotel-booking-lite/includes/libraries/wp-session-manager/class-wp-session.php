@@ -72,20 +72,30 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 * @param $session_id
 	 * @uses apply_filters Calls `mphb_wp_session_expiration` to determine how long until sessions expire.
 	 */
-	protected function __construct(){
-		if ( isset( $_COOKIE[WP_SESSION_COOKIE] ) ) {
-			$cookie			 = sanitize_text_field( wp_unslash( $_COOKIE[WP_SESSION_COOKIE] ) );
+	protected function __construct() {
+
+		if ( isset( $_COOKIE['WP_SESSION_COOKIE'] ) ) {
+
+			$cookie			 = sanitize_text_field( wp_unslash( $_COOKIE['WP_SESSION_COOKIE'] ) );
 			$cookie_crumbs	 = explode( '||', $cookie );
 
-			$this->session_id	 = $cookie_crumbs[0];
-			$this->expires		 = $cookie_crumbs[1];
-			$this->exp_variant	 = $cookie_crumbs[2];
+			if ( 32 < strlen($cookie_crumbs[0]) || ! ctype_xdigit($cookie_crumbs[0]) ) {
 
-			// Update the session expiration if we're past the variant time
-			if ( time() > $this->exp_variant ) {
+				$this->session_id = $this->generate_id();
 				$this->set_expiration();
-				delete_option( "_mphb_wp_session_expires_{$this->session_id}" );
-				add_option( "_mphb_wp_session_expires_{$this->session_id}", $this->expires, '', 'no' );
+
+			} else {
+
+				$this->session_id	 = $cookie_crumbs[0];
+				$this->expires		 = absint( $cookie_crumbs[1] );
+				$this->exp_variant	 = absint( $cookie_crumbs[2] );
+
+				// Update the session expiration if we're past the variant time
+				if ( time() > $this->exp_variant ) {
+					$this->set_expiration();
+					delete_option( "_mphb_wp_session_expires_{$this->session_id}" );
+					add_option( "_mphb_wp_session_expires_{$this->session_id}", $this->expires, '', 'no' );
+				}
 			}
 		} else {
 			$this->session_id = $this->generate_id();
@@ -124,7 +134,7 @@ final class WP_Session extends Recursive_ArrayAccess implements \Iterator, \Coun
 	 * Set the session cookie
 	 */
 	protected function set_cookie(){
-		setcookie( WP_SESSION_COOKIE, $this->session_id . '||' . $this->expires . '||' . $this->exp_variant, $this->expires, COOKIEPATH, COOKIE_DOMAIN );
+		setcookie( 'WP_SESSION_COOKIE', $this->session_id . '||' . $this->expires . '||' . $this->exp_variant, $this->expires, COOKIEPATH, COOKIE_DOMAIN );
 	}
 
 	/**

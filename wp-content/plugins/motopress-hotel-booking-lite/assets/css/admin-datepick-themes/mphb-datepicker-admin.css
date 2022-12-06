@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 768px) {
   .datepick .datepick-month {
-    width: 300px;
+    width: 240px;
   }
 }
 
@@ -88,7 +88,7 @@
 .mphb-calendar .mphb-datepicker-admin .datepick-nav,
 .datepick-popup .mphb-datepicker-admin .datepick-nav {
   background-color: #23282d;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 16px;
   line-height: 2.4;
 }
@@ -147,8 +147,10 @@
 .mphb-calendar .mphb-datepicker-admin .datepick-ctrl,
 .datepick-popup .mphb-datepicker-admin .datepick-ctrl {
   border-left: 0;
-  background-color: #fff;
-  padding: 0 13px 10px;
+  background-color: #e5e5e5;
+  padding: 0;
+  margin-top: 5px;
+  border-top: 1px solid #ddd;
 }
 
 .mphb-calendar .mphb-datepicker-admin .datepick-ctrl a,
@@ -158,7 +160,7 @@
 
 .mphb-calendar .mphb-datepicker-admin .datepick-ctrl .datepick-cmd,
 .datepick-popup .mphb-datepicker-admin .datepick-ctrl .datepick-cmd {
-  padding: 0;
+  padding: 0 2%;
 }
 
 .mphb-calendar .mphb-datepicker-admin .datepick-ctrl .datepick-cmd:hover,
@@ -210,7 +212,7 @@
 
 .mphb-calendar .mphb-datepicker-admin .datepick-month tbody,
 .datepick-popup .mphb-datepicker-admin .datepick-month tbody {
-  line-height: 1.9em;
+  line-height: 1.4em;
 }
 
 .mphb-calendar .mphb-datepicker-admin .datepick-month thead,
@@ -225,6 +227,7 @@
   padding: 0.5em 0;
   background: transparent;
   color: #444;
+  font-size: 12px;
 }
 
 .mphb-calendar .mphb-datepicker-admin .datepick-month th span,

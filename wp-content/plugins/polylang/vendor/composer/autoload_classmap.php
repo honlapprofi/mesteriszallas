@@ -37,6 +37,7 @@ return array(
     'PLL_CRUD_Terms' => $baseDir . '/include/crud-terms.php',
     'PLL_Cache' => $baseDir . '/include/cache.php',
     'PLL_Cache_Compat' => $baseDir . '/integrations/cache/cache-compat.php',
+    'PLL_Canonical' => $baseDir . '/frontend/canonical.php',
     'PLL_Cft' => $baseDir . '/integrations/custom-field-template/cft.php',
     'PLL_Choose_Lang' => $baseDir . '/frontend/choose-lang.php',
     'PLL_Choose_Lang_Content' => $baseDir . '/frontend/choose-lang-content.php',
