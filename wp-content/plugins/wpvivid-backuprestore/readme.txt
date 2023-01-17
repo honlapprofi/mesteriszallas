@@ -2,9 +2,9 @@
 Contributors: wpvivid
 Tags: move, clone, migrate, staging, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
-Tested up to: 6.0.3
+Tested up to: 6.1.1
 Requires PHP: 5.3
-Stable tag: 0.9.79
+Stable tag: 0.9.81
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -20,10 +20,8 @@ Clone and migrate a copy of WP site to a new host (a new domain), schedule backu
 Create a snapshot for a WordPress database quickly before testing database related changes.
 
 == WPvivid Backup for MainWP ==
-[WPvivid Backup for MainWP](https://wpvivid.com/wpvivid-backup-for-mainwp) is now available to download.
+[WPvivid Backup for MainWP](https://wordpress.org/plugins/wpvivid-backup-mainwp/) is now available to download.
 This extension allows you to set up and control WPvivid Backup Free and Pro for all child sites directly from your MainWP dashboard.
-
-Click to download **[WPvivid Backup for MainWP](https://wordpress.org/plugins/wpvivid-backup-mainwp/)**
 
 == WPvivid Backup Pro is Now Available ==
 * Customize everything to backup
@@ -48,7 +46,7 @@ See a review video on WPvivid Backup Pro:
 
 https://www.youtube.com/watch?v=D1aYbayFpfU&t=7s
 
-[Click to Start A 14-Day Free Trial of WPvivid Backup Pro](https://wpvivid.com/pricing)
+[Get WPvivid Backup Pro](https://wpvivid.com/pricing)
 
 == Supported Page Builders ==
 WPvivid Backup Plugin has been tested by our users to migrate well on websites built with:
@@ -201,10 +199,21 @@ Thank you so much for translating WPvivid Backup Plugin to your languages!
 * [Yordan Soares](https://profiles.wordpress.org/yordansoares/) (Spanish(all locales))
 * [Chun-Chih Cheng](https://www.facebook.com/groups/wordpresstwhant) (Chinese (Taiwan))
 == Changelog ==
+= 0.9.81 =
+- Fixed the compatibility issue with servers that have phpinfo() function disabled.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
+= 0.9.80 =
+- Optimized backup process on Litespeed web server.
+- Staging error logs were not included in the Debug zip.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin code.
+- Successfully tested with WordPress 6.1.1.
 = 0.9.79 =
 - Fixed: All target pages except for home page showed 404 error in some cases after migration.
 - Fixed some bugs in the plugin code.
 - Optimized the plugin code.
+- Successfully tested with WordPress 6.1.
 = 0.9.78 =
 - Added an option to create quick database snapshots.
 - Added a check for siteurl and home in a restore process.

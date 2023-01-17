@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-30 11:16:03+0000\n"
+"PO-Revision-Date: 2023-01-12 19:26:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -507,18 +507,6 @@ msgstr "Wir haben festgestellt, dass du Polylang mit WooCommerce nutzt. Um Kompa
 msgid "Before upgrading to %2$s, please upgrade to %1$s."
 msgstr "Bitte aktualisiere zuerst auf %1$s bevor du ein Upgrade auf %2$s durchführst."
 
-#: modules/lingotek/lingotek.php:135
-msgid "When you activate your account, Lingotek will be able to get an accurate count of the number of words in your site. Then tell them which languages you wish to have them translated into."
-msgstr "Wenn du dein Konto aktivierst, kann Lingotek eine präzise Anzahl der Wörter auf deiner Website ermitteln. Teile Ihnen dann mit, in welche Sprachen du diese übersetzt haben möchtest."
-
-#: modules/lingotek/lingotek.php:132
-msgid "Do you need professional translations for your site?"
-msgstr "Benötigst du professionelle Übersetzungen deiner Website?"
-
-#: modules/lingotek/lingotek.php:111
-msgid "If you're on a tight budget, looking for near-instant results, and are okay with less-than-perfect quality, machine translation is an excellent option."
-msgstr "Maschinelle Übersetzungen sind eine ausgezeichnete Option, wenn du ein knappes Budget hast oder nach nahezu sofortigen Ergebnissen suchst und mit einer nicht ganz perfekten Übersetzung einverstanden bist."
-
 #. Author of the plugin
 msgid "WP SYNTEX"
 msgstr "WP SYNTEX"
@@ -811,7 +799,7 @@ msgstr "Uruguay"
 
 #: settings/flags.php:248
 msgid "United States"
-msgstr "Vereinigte Staaten (USA)"
+msgstr "Vereinigte Staaten von Amerika"
 
 #: settings/flags.php:247
 msgid "Uganda"
@@ -1235,7 +1223,7 @@ msgstr "Kasachstan"
 
 #: settings/flags.php:140
 msgid "Cayman Islands"
-msgstr "Caymaninseln"
+msgstr "Kaimaninseln"
 
 #: settings/flags.php:139
 msgid "Kuwait"
@@ -1775,121 +1763,17 @@ msgstr "Ergänzt WordPress um Mehrsprachigkeit"
 msgid "Polylang"
 msgstr "Polylang"
 
-#: modules/lingotek/lingotek.php:273
-msgid "Learn more..."
-msgstr "Erfahre mehr …"
-
-#: modules/lingotek/lingotek.php:150
-msgid "Do you need help creating glossaries and terminologies?"
-msgstr "Brauchst du Hilfe beim Erstellen von Glossaren und Terminologien?"
-
-#: modules/lingotek/lingotek.php:149
-msgid "Do you have existing Translation Memories you would like to use?"
-msgstr "Hast du vorhandene Übersetzungsspeicher, die du verwenden möchtest?"
-
-#: modules/lingotek/lingotek.php:148
-msgid "Do you need customized workflows?"
-msgstr "Brauchst du angepasste Arbeitsabläufe?"
-
-#: modules/lingotek/lingotek.php:147
-msgid "Do you need someone to run your localization project?"
-msgstr "Brauchst du jemand, um dein Lokalisierungsprojekt durchzuführen?"
-
-#: modules/lingotek/lingotek.php:146
-msgid "Start the process of getting extra services."
-msgstr "Beginne den Vorgang, zusätzliche Dienste zu erhalten."
-
-#: modules/lingotek/lingotek.php:144
-msgid "Do you need help translating your site?"
-msgstr "Brauchst du Hilfe, deine Website zu übersetzen?"
-
-#: modules/lingotek/lingotek.php:143
-msgid "Need extra services?"
-msgstr "Benötigst du zusätzliche Dienste?"
-
-#: modules/lingotek/lingotek.php:136
-msgid "Once activated, click on the \"request translation bid\" and a certified translation project manager will contact you for a no-obligations translation bid."
-msgstr "Einmal aktiviert, klicke auf die Anfrage für ein Übersetzungsangebot und ein zertifizierter Übersetzungs-Projektmanager wird dich kontaktieren, um dir ein unverbindliches Übersetzungsangebot zu machen."
-
-#: modules/lingotek/lingotek.php:134
-msgid "Start the process of getting a professional translation bid."
-msgstr "Beginne den Vorgang ein professionelles Übersetzungsangebot zu erhalten."
-
-#: modules/lingotek/lingotek.php:131
-msgid "Professionally translate my site"
-msgstr "Meine Website professionell übersetzen"
-
-#: modules/lingotek/lingotek.php:124
-msgid "Save and re-use previously translated material (leverage translation memory (TM))."
-msgstr "Sichere und verwende erneut zuvor übersetztes Material (Hebelwirkung des Übersetzungsspeichers (TM))."
-
-#: modules/lingotek/lingotek.php:123
-msgid "Have linguists compare side-by-side versions of original and translated text."
-msgstr "Lass Linguisten eine Gegenüberstellung von Original und übersetztem Text vergleichen."
-
-#: modules/lingotek/lingotek.php:122
-msgid "Access an online translator workbench."
-msgstr "Zugriff auf eine Online-Übersetzungswerkbank."
-
-#: modules/lingotek/lingotek.php:119
-msgid "Do you need to connect to a professional translation management system?"
-msgstr "Möchtest du Verbindung zu einem professionellem Übersetzungs-Verwaltungssystem?"
-
-#: modules/lingotek/lingotek.php:118
-msgid "Translation Management System"
-msgstr "Übersetzungs-Verwaltungssystem"
-
-#: modules/lingotek/lingotek.php:110 modules/lingotek/lingotek.php:121
-msgid "Access free machine translation for your site for up to 100,000 characters."
-msgstr "Erhalte für deine Website kostenlose automatische Übersetzungen für bis zu 100.000 Zeichen."
-
-#: modules/lingotek/lingotek.php:108
-msgid "Polylang is now fully integrated with Lingotek!"
-msgstr "Polylang ist nun vollständig mit Lingotek verbunden!"
-
-#: modules/lingotek/lingotek.php:107
-msgid "Automatically translate my site"
-msgstr "Meine Website automatisch übersetzen"
-
-#: modules/lingotek/lingotek.php:104
-msgid "Polylang is now fully integrated with Lingotek, a professional translation management system!"
-msgstr "Polylang ist jetzt vollständig mit Lingotek, einem professionellen Übersetzungs-Verwaltungssystem, verbunden."
-
-#: modules/lingotek/lingotek.php:97
-msgid "Request Services"
-msgstr "Service anfordern"
-
-#: modules/lingotek/lingotek.php:91
-msgid "Request Translation"
-msgstr "Übersetzung anfordern"
-
-#: modules/lingotek/lingotek.php:86 settings/settings-module.php:132
+#: settings/settings-module.php:132
 msgid "Activate"
 msgstr "Aktivieren"
 
-#: modules/lingotek/lingotek.php:86 settings/settings-module.php:134
+#: settings/settings-module.php:134
 msgid "Activated"
 msgstr "Aktiviert"
-
-#: modules/lingotek/lingotek.php:47
-msgid "Activate Lingotek"
-msgstr "Lingotek aktivieren"
-
-#: modules/lingotek/lingotek.php:42
-msgid "Click on Activate Lingotek to start translating."
-msgstr "Klicke auf Lingotek aktivieren um mit der Übersetzung zu beginnen."
-
-#: modules/lingotek/lingotek.php:38
-msgid "Learn more"
-msgstr "Erfahre mehr"
 
 #: settings/settings-licenses.php:43
 msgid "Close"
 msgstr "Schließen"
-
-#: modules/lingotek/lingotek.php:33
-msgid "You’ve just upgraded to the latest version of Polylang! Would you like to automatically translate your website for free?"
-msgstr "Du hast gerade auf die neueste Version von Polylang aktualisiert! Möchtest du automatisch deine Website kostenlos übersetzen lassen?"
 
 #: install/upgrade.php:88
 msgid "Polylang has been deactivated because you upgraded from a too old version."
@@ -2241,11 +2125,11 @@ msgstr "Über Polylang"
 msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
 msgstr "Die Sprache wurde erstellt, aber die WordPress Sprachdatei wurde nicht heruntergeladen. Bitte  händisch installieren."
 
-#: admin/admin-base.php:495 admin/admin-base.php:513
+#: admin/admin-base.php:493 admin/admin-base.php:511
 msgid "Filters content by language"
 msgstr "Filtert Inhalte nach der Sprache"
 
-#: admin/admin-base.php:486
+#: admin/admin-base.php:484
 msgid "Show all languages"
 msgstr "Alle Sprachen anzeigen"
 

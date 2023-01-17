@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-20 19:53:29+0000\n"
+"PO-Revision-Date: 2023-01-04 03:24:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #. Translators: Shown when a PO file's Plural-Forms header has a different
 #. formula from the Unicode CLDR rules
-#: src/Locale.php:527
+#: src/Locale.php:528
 msgid "Plural forms differ from Loco Translate's built in rules for this language"
 msgstr "Die Pluralformen unterscheiden sich zu stark von den in Loco Translate integrierten Regel für diese Sprache"
 
@@ -66,7 +66,7 @@ msgid_plural "%s strings"
 msgstr[0] "%s Zeichenfolge"
 msgstr[1] "%s Zeichenfolgen"
 
-#: src/admin/file/MoveController.php:85
+#: src/admin/file/MoveController.php:86
 msgid "%s file moved"
 msgid_plural "%s files moved"
 msgstr[0] "Die Datei %s wurde verschoben"
@@ -78,11 +78,11 @@ msgid_plural "%s words"
 msgstr[0] "%s Wort"
 msgstr[1] "%s Wörter"
 
-#: src/gettext/Compiler.php:232
+#: src/gettext/Compiler.php:251
 msgid "PO file saved and MO/JSON files compiled"
 msgstr "Die PO-Datei wurde gespeichert und die MO/JSON-Dateien wurden kompiliert"
 
-#: src/gettext/Compiler.php:136 src/gettext/Compiler.php:194
+#: src/gettext/Compiler.php:132 src/gettext/Compiler.php:191
 msgid "JSON compilation failed for %s"
 msgstr "JSON-Kompilierung fehlgeschlagen für %s"
 
@@ -99,7 +99,7 @@ msgstr "WordPress %s"
 #. "5.6"
 #: tpl/admin/config/version.php:53 tpl/admin/config/version.php:71
 msgid "Your version of %1$s is out of date. We recommend you upgrade to at least v%2$s, but preferably to the latest stable version."
-msgstr "Deine Version von %1$s ist ziemlich alt. Wir empfehlen dir dringend, mindestens auf die Version v%2$s, jedoch möglichst auf die aktuellste stabile Version zu aktualisieren."
+msgstr "Deine Version von %1$s ist ziemlich alt. Wir empfehlen dringend, mindestens auf die Version v%2$s, jedoch möglichst auf die aktuellste stabile Version zu aktualisieren."
 
 #. translators: Where %s is the full version number of PHP
 #: tpl/admin/config/version.php:49
@@ -364,11 +364,11 @@ msgstr "Dieser Vorgang benötigt eine entsprechende Berechtigung"
 msgid "This directory is managed by WordPress. Removed files may be restored during updates"
 msgstr "Dieses Verzeichnis wird von WordPress verwaltet. Möglicherweise werden gelöschte Dateien bei einem Update wiederhergestellt"
 
-#: src/admin/file/MoveController.php:106 src/admin/file/MoveController.php:133
+#: src/admin/file/MoveController.php:108 src/admin/file/MoveController.php:136
 msgid "Move %s"
 msgstr "%s verschieben"
 
-#: src/admin/file/MoveController.php:89
+#: src/admin/file/MoveController.php:90
 msgid "%s file could not be moved"
 msgid_plural "%s files could not be moved"
 msgstr[0] "%s Datei konnte nicht verschoben werden"
@@ -616,7 +616,7 @@ msgid "Creating this file requires permission"
 msgstr "Das Erstellen dieser Datei benötigt entsprechende Berechtigungen"
 
 #. Translators: Plural category for zero quantity
-#: src/Locale.php:412
+#: src/Locale.php:410
 msgctxt "Plural category"
 msgid "Zero"
 msgstr "Null/Keine"
@@ -651,31 +651,31 @@ msgid "Child theme declares the same Text Domain as the parent theme"
 msgstr "Das Child-Theme benutzt die gleiche Text-Domain wie das übergeordnete Parent-Theme"
 
 #. Translators: General plural category not covered by other forms
-#: src/Locale.php:422
+#: src/Locale.php:420
 msgctxt "Plural category"
 msgid "Other"
 msgstr "Alle anderen bzw. nicht definierten Pluralformen"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:420
+#: src/Locale.php:418
 msgctxt "Plural category"
 msgid "Many"
 msgstr "Viele"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:418
+#: src/Locale.php:416
 msgctxt "Plural category"
 msgid "Few"
 msgstr "Wenige"
 
 #. Translators: Plural category used in some multi-plural languages
-#: src/Locale.php:416
+#: src/Locale.php:414
 msgctxt "Plural category"
 msgid "Two"
 msgstr "Zwei"
 
 #. Translators: Plural category for singular quantity
-#: src/Locale.php:414
+#: src/Locale.php:412
 msgctxt "Plural category"
 msgid "One"
 msgstr "Eins - Singular - Einzahl"
@@ -1310,7 +1310,7 @@ msgstr "Ordner innerhalb des Paketes, die vom Paket-Autor zur Verfügung gestell
 
 #: tpl/admin/bundle/conf.php:89 tpl/admin/bundle/conf.php:108
 msgid "Exclude"
-msgstr "Ausschließen/Ignorieren"
+msgstr "Ausschließen"
 
 #: tpl/admin/bundle/conf.php:85 tpl/admin/bundle/conf.php:104
 msgid "Include"
@@ -1377,7 +1377,7 @@ msgstr "Offizielle Website besuchen"
 msgid "\"%s\" %s by %s"
 msgstr "„%s“ %s von %s"
 
-#: src/package/Debugger.php:205
+#: src/package/Debugger.php:195
 msgid "Configured domain has no extractable strings"
 msgid_plural "%u configured domains have no extractable strings"
 msgstr[0] "Die konfigurierte Domain besitzt keine extrahierbaren Strings"
@@ -1385,7 +1385,7 @@ msgstr[1] "Diese %u konfigurierten Domains besitzen keine extrahierbaren Strings
 
 #. translators: 1: Number of strings; 2: Text Domain; e.g. 100 strings
 #. extracted from source code for "loco-translate"
-#: src/package/Debugger.php:187
+#: src/package/Debugger.php:177
 msgid "%1$s string extracted from source code for \"%2$s\""
 msgid_plural "%1$s strings extracted from source code for \"%2$s\""
 msgstr[0] "%1$s String wurde aus dem Quellcode von \"%2$s\" extrahiert"
@@ -1499,12 +1499,12 @@ msgctxt "Editor"
 msgid "Source text not loaded"
 msgstr "Text in der Ursprungssprache wird nicht angezeigt, da kein String ausgewählt ist"
 
-#: src/js/Strings.php:143 src/Locale.php:404
+#: src/js/Strings.php:143 src/Locale.php:402
 msgctxt "Editor"
 msgid "Plural"
 msgstr "Plural/Mehrzahl"
 
-#: src/js/Strings.php:140 src/Locale.php:403
+#: src/js/Strings.php:140 src/Locale.php:401
 msgctxt "Editor"
 msgid "Single"
 msgstr "Singular/Einzahl"
@@ -1551,7 +1551,7 @@ msgstr "Übersetzen"
 
 #. translators: Error thrown when attempting to parse a file that is not PO,
 #. POT or MO
-#: src/gettext/Data.php:23
+#: src/gettext/Data.php:22
 msgid "%s is not a Gettext file"
 msgstr "%s ist keine Gettext-Datei"
 
@@ -1644,7 +1644,7 @@ msgstr "OK"
 msgid "Notice"
 msgstr "Hinweis"
 
-#: src/error/Exception.php:164 src/js/Strings.php:102
+#: src/error/Exception.php:163 src/js/Strings.php:102
 msgid "Error"
 msgstr "Fehler"
 
@@ -1653,11 +1653,11 @@ msgctxt "User role"
 msgid "Translator"
 msgstr "Übersetzer"
 
-#: src/config/XMLModel.php:42
+#: src/config/XMLModel.php:54
 msgid "XML supplied is empty"
 msgstr "Die vorhandene XML-Datei ist leer"
 
-#: src/config/FormModel.php:146
+#: src/config/FormModel.php:147
 msgid "Text Domain cannot be empty"
 msgstr "Die Text-Domain darf nicht leer sein"
 
@@ -1674,11 +1674,11 @@ msgstr "%s existiert bereits in diesem Ordner"
 msgid "Template file created"
 msgstr "Eine Template-Datei (.POT) wurde erstellt"
 
-#: src/gettext/Compiler.php:107
+#: src/gettext/Compiler.php:103
 msgid "PO file saved, but MO file compilation failed"
 msgstr "Die PO-Datei wurde erfolgreich gespeichert aber die Kompilierung der MO-Datei ist fehlgeschlagen"
 
-#: src/gettext/Compiler.php:235
+#: src/gettext/Compiler.php:254
 msgid "PO file saved and MO file compiled"
 msgstr "Die PO-Datei wurde erfolgreich gespeichert und die MO-Datei wurde kompiliert"
 
@@ -1820,18 +1820,18 @@ msgstr "Die Übersetzungen passen nicht zur Template-Datei (.POT). Du solltest e
 msgid "Editing %1$s in %2$s"
 msgstr "Datei %1$s im Paket %2$s bearbeiten"
 
-#: src/admin/file/DeleteController.php:99
+#: src/admin/file/DeleteController.php:100
 msgid "%s dependent file will also be deleted"
 msgid_plural "%s dependent files will also be deleted"
 msgstr[0] "%s zusätzliche Datei wird ebenfalls gelöscht"
 msgstr[1] "%s zusätzliche Dateien werden ebenfalls gelöscht"
 
-#: src/admin/file/DeleteController.php:76
-#: src/admin/file/DeleteController.php:94
+#: src/admin/file/DeleteController.php:77
+#: src/admin/file/DeleteController.php:95
 msgid "Delete %s"
 msgstr "%s löschen"
 
-#: src/admin/file/DeleteController.php:57 src/admin/file/DiffController.php:45
+#: src/admin/file/DeleteController.php:58 src/admin/file/DiffController.php:45
 msgid "File deleted"
 msgid_plural "%u files deleted"
 msgstr[0] "Die Datei wurde erfolgreich gelöscht"
@@ -1937,26 +1937,26 @@ msgstr "Erweitert-Registerkarte"
 msgid "Configure %s"
 msgstr "%s konfigurieren"
 
-#: src/admin/bundle/BaseController.php:113
+#: src/admin/bundle/BaseController.php:126
 #: src/admin/config/BaseController.php:24
 #: src/admin/config/DebugController.php:12 src/error/Debug.php:19
 msgid "Debug"
 msgstr "Fehlersuche"
 
-#: src/admin/bundle/BaseController.php:110 tpl/admin/file/conf.php:58
+#: src/admin/bundle/BaseController.php:123 tpl/admin/file/conf.php:58
 #: tpl/admin/file/move.php:26
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: src/admin/bundle/BaseController.php:109
+#: src/admin/bundle/BaseController.php:122
 msgid "Setup"
 msgstr "Setup"
 
-#: src/admin/bundle/BaseController.php:53
+#: src/admin/bundle/BaseController.php:66
 msgid "Configuration reset"
 msgstr "Zurücksetzen der Konfiguration"
 
-#: src/admin/bundle/BaseController.php:38
+#: src/admin/bundle/BaseController.php:51
 msgid "Configuration saved"
 msgstr "Die Konfiguration wurde gespeichert"
 
@@ -1965,7 +1965,7 @@ msgstr "Die Konfiguration wurde gespeichert"
 msgid "Loco Translate %s"
 msgstr "Loco Translate %s"
 
-#: src/admin/bundle/BaseController.php:108
+#: src/admin/bundle/BaseController.php:121
 #: src/admin/bundle/LocaleController.php:34
 #: src/admin/bundle/ViewController.php:25
 #: src/admin/config/BaseController.php:41 src/admin/file/EditController.php:27
@@ -1986,11 +1986,11 @@ msgstr "Plugins"
 msgid "Themes"
 msgstr "Themes"
 
-#: src/Locale.php:330
+#: src/Locale.php:329
 msgid "Invalid locale"
 msgstr "ungültige Sprache (Locale)"
 
-#: loco.php:141
+#: loco.php:137
 msgid "Loco Translate requires the \"%s\" PHP extension. Ask your hosting provider to install it"
 msgstr "Loco Translate benötigt die PHP-Erweiterung „%s“. Bitte deinen Hosting-Anbieter, diese zu installieren"
 
@@ -2073,7 +2073,7 @@ msgid "Merged from %s"
 msgstr "Zusammengeführt aus %s"
 
 #. translators: Where %s is either PO or POT
-#: src/admin/file/HeadController.php:80 src/gettext/Compiler.php:239
+#: src/admin/file/HeadController.php:80 src/gettext/Compiler.php:258
 msgid "%s file saved"
 msgstr "%s-Datei wurde gespeichert"
 

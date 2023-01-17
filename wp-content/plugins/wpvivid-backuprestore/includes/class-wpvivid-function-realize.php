@@ -54,6 +54,7 @@ class WPvivid_Function_Realize
                         $wpvivid_plugin->add_monitor_event($task_id, 10);
                     }
                 }
+                $wpvivid_plugin->wpvivid_check_clear_litespeed_rule($task_id);
             }
 
             /*if (WPvivid_taskmanager::get_task($task_id) !== false) {

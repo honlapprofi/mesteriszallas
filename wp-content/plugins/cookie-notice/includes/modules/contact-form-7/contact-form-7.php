@@ -39,7 +39,7 @@ class Cookie_Notice_Modules_ContactForm7 {
 			COOKIE_NOTICE_URL . '/includes/modules/contact-form-7/recaptcha.js',
 			[
 				'google-recaptcha',
-				'wp-polyfill',
+				'wp-polyfill'
 			],
 			WPCF7_VERSION,
 			true

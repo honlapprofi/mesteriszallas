@@ -5,7 +5,7 @@
     position:relative
 }
 .cookie-notice-sidebar .inner {
-    padding:1.33em
+    padding:2em
 }
 .cookie-notice-sidebar>div:not(:last-child) {
     margin-bottom:3em
@@ -35,9 +35,24 @@
 .button.cn-button:focus {
     box-shadow:0 0 0 1px #fff,0 0 0 3px #20c19e
 }
+.button.button-secondary.cn-button {
+    background-color:#ffc107;
+    border-color:#ffc107;
+    color:#3c434a
+}
+.button.button-secondary.cn-button:active,
+.button.button-secondary.cn-button:focus,
+.button.button-secondary.cn-button:hover {
+    background-color:#ffca2c;
+    border-color:#ffca2c
+}
+.button.button-secondary.cn-button:focus {
+    box-shadow:0 0 0 1px #fff,0 0 0 3px #ffc107
+}
 .cookie-notice-settings .cookie-notice-credits h2 {
     border:none;
-    padding-bottom:0
+    padding-bottom:0;
+    margin-top: 0;
 }
 .cookie-notice-credits h3 {
     font-size:14px;
@@ -109,47 +124,24 @@ form.cn-options-submit-disabled .submit {
     margin-top:10px
 }
 .cn_compliance_status {
-    margin-right:15px
-}
-#cn_app_status .cn_compliance_status label {
-    margin-left:5px!important
+    margin-right:20px;
+    font-weight:700;
+    display:inline-block;
 }
 #cn_app_status {
     margin-bottom:30px
 }
-#cn_app_status label {
+#cn_app_status .cn-status {
     text-transform:uppercase;
     font-weight:700;
     position:relative;
-    color:#999
+    color:#999;
 }
-#cn_app_status label.cn-active {
+#cn_app_status .cn-status.cn-active {
     color:#1ca98a
 }
-#cn_app_status label.cn-active:before {
-    background-color:#1ca98a;
-    box-shadow:0 0 0 2px #1ca98a
-}
-#cn_app_status label.cn-inactive {
+#cn_app_status .cn-status.cn-inactive {
     color:red
-}
-#cn_app_status label.cn-inactive:before {
-    background-color:red;
-    box-shadow:0 0 0 2px red
-}
-#cn_app_status label:before {
-    background-color:#999;
-    width:10px;
-    height:10px;
-    border-radius:10px;
-    content:'';
-    display:inline-block;
-    vertical-align:middle;
-    margin-right:10px;
-    box-shadow:0 0 0 2px #999;
-    border:2px solid #fff;
-    position:relative;
-    top:-2px
 }
 #cn_colors_bar_opacity_range {
     vertical-align:middle;
@@ -216,4 +208,113 @@ form.cn-options-submit-disabled .submit {
     .cookie-notice-settings {
         margin-right:0
     }
+}
+
+.cn-pricing-info .cn-pricing-head h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin: 1em 0;
+}
+
+.cn-pricing-info .cn-pricing-body {
+    padding-bottom: 0;
+    font-size: 14px;
+    text-align: left;
+    margin: 2em 0;
+}
+
+.cn-pricing-info .cn-pricing-footer {
+    margin: 1em 0;
+}
+
+.cn-pricing-info div.cn-pricing-body p {
+    padding-left: 30px;
+    margin: 0.75em 0;
+}
+
+.cn-pricing-info div.cn-pricing-body .cn-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cn-active,
+.cn-inactive,
+.cn-pending {
+    position: relative;
+}
+
+.cn-active .cn-icon,
+.cn-inactive .cn-icon,
+.cn-pending .cn-icon {
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    top: 5px;
+    display: inline-block;
+    transform: scale(1);
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 44px;
+}
+
+.cn-active .cn-icon {
+    color: #20C19E;
+}
+
+.cn-active .cn-icon::after {
+    border-color: #20C19E;
+}
+
+.cn-pending .cn-icon::after {
+    border-color: #999;
+}
+
+.cn-active .cn-icon::after,
+.cn-pending .cn-icon::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    width: 6px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+
+.cn-inactive .cn-icon {
+    color: #FF0000;
+}
+
+.cn-inactive .cn-icon::after,
+.cn-inactive .cn-icon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #FF0000;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 3px;
+}
+
+.cn-inactive .cn-icon::after {
+    transform: rotate(-45deg);
+}
+
+.cn-option-disabled label {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cn-warning {
+    color: #ffc107;
 }

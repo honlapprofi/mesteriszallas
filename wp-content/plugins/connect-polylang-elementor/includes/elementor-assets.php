@@ -177,7 +177,7 @@ class ElementorAssets {
 		$server_host = wp_parse_url( "//{$_SERVER['HTTP_HOST']}", PHP_URL_HOST );
 		$post_host   = wp_parse_url( \pll_get_post_language( intval( $_GET['post'] ), 'home_url' ), PHP_URL_HOST );
 
-		if ( $server_host !== $post_host ) {
+		if ( null !== $post_host && $server_host !== $post_host ) {
 			\wp_redirect( \str_replace( $server_host, $post_host, $current_url ) );
 			exit;
 		}

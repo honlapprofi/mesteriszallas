@@ -5,7 +5,7 @@ Tags: multilingual, bilingual, translate, translation, language, multilanguage, 
 Requires at least: 5.7
 Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 3.3
+Stable tag: 3.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,7 +38,7 @@ Helps optimizing the time spent translating your site with some very useful extr
 * Better integration in the new Block Editor.
 * Language switcher available as a block.
 * Language options available in the widget block editor.
-* Template parts translatable in the Full Site Editing (FSE).
+* Template parts translatable in the site editor (FSE).
 * Duplicate and/or synchronize content across post translations.
 * Improved compatibilities with other plugins such as [ACF Pro](https://polylang.pro/doc/working-with-acf-pro/).
 * Share the same URL slug for posts or terms across languages.
@@ -57,9 +57,13 @@ Helps optimizing the time spent translating your site with some very useful extr
 * Ability to use the WooCommerce REST API (available with Polylang Pro).
 * **Access to a Premium Support for personalized assistance**
 
-Neither of them will allow to do automated translation. Nevertheless, can be isntalled alongside Polylang Pro or Polylang, a third party plugin such as [Lingotek Translation](https://wordpress.org/plugins/lingotek-translation/) which offers a complete translation management system and provides services such as a translation memory or semi-automated translation processes (e.g., machine translation => human translation => legal review).
+Neither of them will allow to do automated translation.
 
-Migrating from WPML is possible using the plugin [WPML to Polylang](https://wordpress.org/plugins/wpml-to-polylang/).
+= Our other free plugins =
+
+* [WPML to Polylang](https://wordpress.org/plugins/wpml-to-polylang/) allows migrating from WPML to Polylang.
+* [DynaMo](https://wordpress.org/plugins/dynamo/) speeds up the translation of WordPress for all non-English sites.
+* [Site Editor Classic Features](https://wordpress.org/plugins/fse-classic/) allows to use legacy widgets (including the Polylang language switcher) and menus in the site editor (FSE).
 
 = Credits =
 
@@ -90,10 +94,6 @@ Wherever third party code has been used, credit has been given in the code’s c
 
 * You need [Polylang for WooCommerce](https://polylang.pro/downloads/polylang-for-woocommerce/), premium addon described above, which will make both plugins work together.
 
-= Do you need translation services? =
-
-* If you want to use professional or automatic translation services, install and activate the [Lingotek Translation](https://wordpress.org/plugins/lingotek-translation/) plugin.
-
 == Screenshots ==
 
 1. The Polylang languages admin panel
@@ -102,6 +102,16 @@ Wherever third party code has been used, credit has been given in the code’s c
 4. The Edit Post screen with the Languages metabox
 
 == Changelog ==
+
+= 3.3.1 (2023-01-09) =
+
+* Pro: Allow to translate Oembed, URL and Email ACF fields
+* Pro: Fix ACF REST API mixing fields
+* Pro: Fix ACF compatibility loaded when no language exist
+* Pro: Fix headers of exported PO files.
+* Pro: Fix spacing in language switcher navigation block preview
+* Work around a bug in Sendinblue for WooCommerce causing a fatal error. #1156
+* Fix a regression with WooCommerce Product Add-Ons Ultimate. #1186
 
 = 3.3 (2022-11-28) =
 

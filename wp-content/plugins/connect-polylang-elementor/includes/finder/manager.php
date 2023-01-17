@@ -15,7 +15,9 @@ class Manager {
 	 */
 	private function __construct() {
 
-		add_action( 'elementor/finder/categories/init', array( $this, 'elementor_finder_add_items' ) );
+		$hook = version_compare( ELEMENTOR_VERSION, '3.5.0', '>=' ) ? 'elementor/finder/register' : 'elementor/finder/categories/init';
+
+		add_action( $hook, array( $this, 'elementor_finder_add_items' ) );
 
 	}
 

@@ -289,7 +289,7 @@ class Cookie_Notice_Welcome {
 									<div class="cn-pricing-info">
 										<div class="cn-pricing-head">
 											<h4>' . __( 'Professional', 'cookie-notice' ) . '</h4>
-											<span class="cn-plan-pricing"><span class="cn-plan-price"><sup>$</sup><span class="cn-plan-amount">14.95</span></span> / <span class="cn-plan-period">' . __( 'monthly', 'cookie-notice' ) . '</span></span>
+											<span class="cn-plan-pricing"><span class="cn-plan-price"><sup>$ </sup><span class="cn-plan-amount">14.95</span><sub> / <span class="cn-plan-period">' . __( 'monthly', 'cookie-notice' ) . '</span></sub></span></span>
 											<span class="cn-plan-promo">' . __( 'Recommended', 'cookie-notice' ) . '</span>
 											<div class="cn-select-wrapper">
 												<select name="cn_pricing_plan" class="form-select" aria-label="' . __( 'Pricing options', 'df' ) . '" id="cn-pricing-plans">
@@ -310,7 +310,7 @@ class Cookie_Notice_Welcome {
 											<p class="cn-included"><span class="cn-icon"></span>' . __( '<b>Priority</b> Support', 'cookie-notice' ) . '</p>
 										</div>
 										<div class="cn-pricing-footer">
-											<button type="button" class="cn-btn cn-btn-outline">' . __( 'Start Premium', 'cookie-notice' ) . '</button>
+											<button type="button" class="cn-btn cn-btn-secondary">' . __( 'Start Professional', 'cookie-notice' ) . '</button>
 										</div>
 									</div>
 								</label>
@@ -325,18 +325,23 @@ class Cookie_Notice_Welcome {
 				</div>';
 			} elseif ( $screen == 4 ) {
 				$html .= $this->welcome_screen( 'success', false );
+				
+				// get main instance
+				$cn = Cookie_Notice();
+				$subscription = $cn->get_subscription();
+				$link = esc_url( $cn->get_url( 'host', '?utm_campaign=configure&utm_source=wordpress&utm_medium=button#/en/cc/login' ) );
 
 				$html .= '
 				<div class="cn-content cn-sidebar-visible">
 					<div class="cn-inner">
 						<div class="cn-content-full">
 							<h1><b>' . __( 'Congratulations', 'cookie-notice' ) . '</b></h1>
-							<h2>' . __( 'You are now promoting privacy with Hu-manity.co', 'cookie-notice' ) . '</h2>
+							<h2>' . ( $subscription === 'pro' ? __( 'You have successfully signed up to a Professional plan.', 'cookie-notice' ) : __( 'You have successfully signed up to a limited, Basic plan.', 'cookie-notice' ) ) . '</h2>
 							<div class="cn-lead">
-								<p>' . __( 'Log in to your Cookie Compliance&trade; account and continue configuring your Privacy Experience.', 'cookie-notice' ) . '</p>
+								<p>' . __( 'Log in to your Cookie Compliance account and continue configuring your Privacy Experience.', 'cookie-notice' ) . '</p>
 							</div>
 							<div class="cn-buttons">
-								<a href="' . Cookie_Notice()->get_url( 'login' ) . '" class="cn-btn cn-btn-lg" target="_blank">' . __( 'Go to Application', 'cookie-notice' ) . '</a>
+								<a href="' . $link . '" class="cn-btn cn-btn-lg" target="_blank">' . __( 'Go to Application', 'cookie-notice' ) . '</a>
 							</div>
 						</div>
 					</div>
@@ -509,7 +514,7 @@ class Cookie_Notice_Welcome {
 											</div>
 											<div class="cn-field cn-field-checkbox">
 												<div class="cn-checkbox-wrapper">
-													<label for="cn_terms"><input id="cn_terms" type="checkbox" name="terms" value="1"><span>' . sprintf( __( 'I have read and agree to the <a href="%s" target="_blank">Terms of Service', 'cookie-notice' ), 'https://hu-manity.co/cookiecompliance-terms/' ) . '</a></span></label>
+													<label for="cn_terms"><input id="cn_terms" type="checkbox" name="terms" value="1"><span>' . sprintf( __( 'I have read and agree to the <a href="%s" target="_blank">Terms of Service', 'cookie-notice' ), 'https://cookie-compliance.co/terms-of-service/?utm_campaign=accept-terms&utm_source=wordpress&utm_medium=link' ) . '</a></span></label>
 													</div>
 											</div>
 											<div class="cn-field cn-field-submit cn-nav">
@@ -709,7 +714,7 @@ class Cookie_Notice_Welcome {
 						</div>
 						<div class="cn-body">
 							<h2>' . __( 'Success!', 'cookie-notice' ) . '</h2>
-							<div class="cn-lead"><p><b>' . __( 'You have successfully upgraded your website to Cookie Compliance&trade;', 'cookie-notice' ) . '</b></p><p>' . sprintf( __( 'Go to Cookie Compliance&trade; application now. Or access it anytime from your <a href="%s">Cookie Notice settings page</a>.', 'cookie-notice' ), esc_url( Cookie_Notice()->is_network_admin() ? network_admin_url( 'admin.php?page=cookie-notice' ) : admin_url( 'admin.php?page=cookie-notice' ) ) ) . '</p></div>
+							<div class="cn-lead"><p><b>' . __( 'You have successfully integrated your website to Cookie Compliance;', 'cookie-notice' ) . '</b></p><p>' . sprintf( __( 'Go to Cookie Compliance application now. Or access it anytime from your <a href="%s">Cookie Notice settings page</a>.', 'cookie-notice' ), esc_url( Cookie_Notice()->is_network_admin() ? network_admin_url( 'admin.php?page=cookie-notice' ) : admin_url( 'admin.php?page=cookie-notice' ) ) ) . '</p></div>
 						</div>';
 			}
 

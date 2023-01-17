@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-04 18:29:50+0000\n"
+"PO-Revision-Date: 2022-12-07 13:32:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,6 +284,11 @@ msgstr "január"
 #, gp-priority: high
 msgid "Uncategorized"
 msgstr "Egyéb kategória"
+
+#. translators: %s: plugins_loaded
+#: wp-includes/class-wp-user-query.php:784
+msgid "User queries should not be run before the %s hook."
+msgstr "A felhasználói lekérdezések nem futtathatók a %s horog előtt."
 
 #. translators: %s: The '$value' argument.
 #: wp-includes/class-wp-block-type.php:364
@@ -3963,7 +3968,7 @@ msgstr "Ez a sablon nem működik a jelenleg használt WordPress verzióval."
 #: wp-admin/includes/class-wp-plugins-list-table.php:1310
 #: wp-admin/includes/plugin.php:1136 wp-admin/includes/theme.php:901
 #: wp-admin/includes/theme.php:932 wp-admin/includes/theme.php:978
-#: wp-admin/includes/theme.php:1001 wp-admin/includes/update-core.php:1059
+#: wp-admin/includes/theme.php:1001 wp-admin/includes/update-core.php:1057
 #: wp-admin/includes/update.php:757 wp-admin/includes/update.php:784
 #: wp-admin/install.php:245 wp-admin/theme-install.php:336
 #: wp-admin/theme-install.php:359 wp-admin/theme-install.php:526

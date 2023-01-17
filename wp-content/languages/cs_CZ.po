@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-22 21:18:20+0000\n"
+"PO-Revision-Date: 2022-12-25 20:56:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -643,7 +643,7 @@ msgstr "Zobrazuje odkaz na příspěvek, stránku nebo jakýkoli jiný typ obsah
 #: wp-includes/blocks/read-more/block.json
 msgctxt "block title"
 msgid "Read More"
-msgstr "Číst více"
+msgstr "Pokračovat ve čtení"
 
 #: wp-includes/blocks/query-no-results/block.json
 msgctxt "block description"
@@ -4522,7 +4522,7 @@ msgstr "Tato šablona nepodporuje tuto verzi WordPressu."
 #: wp-admin/includes/class-wp-plugins-list-table.php:1310
 #: wp-admin/includes/plugin.php:1136 wp-admin/includes/theme.php:901
 #: wp-admin/includes/theme.php:932 wp-admin/includes/theme.php:978
-#: wp-admin/includes/theme.php:1001 wp-admin/includes/update-core.php:1059
+#: wp-admin/includes/theme.php:1001 wp-admin/includes/update-core.php:1057
 #: wp-admin/includes/update.php:757 wp-admin/includes/update.php:784
 #: wp-admin/install.php:245 wp-admin/theme-install.php:336
 #: wp-admin/theme-install.php:359 wp-admin/theme-install.php:526

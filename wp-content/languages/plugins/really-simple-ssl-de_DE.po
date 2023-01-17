@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-06 07:33:29+0000\n"
+"PO-Revision-Date: 2023-01-01 17:52:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,19 +11,19 @@ msgstr ""
 "Language: de\n"
 "Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
 
-#: upgrade/upgrade-to-pro.php:436
+#: upgrade/upgrade-to-pro.php:444
 msgid "Could not rename folder!"
 msgstr "Ordner konnte nicht umbenannt werden!"
 
-#: settings/config/config.php:579
+#: settings/config/config.php:577
 msgid "Make sure you have a backup before you do this."
 msgstr "Stelle sicher, dass du ein Backup hast, bevor du das tust."
 
-#: settings/config/config.php:525
+#: settings/config/config.php:523
 msgid "Choose new username to replace 'admin'"
 msgstr "Wähle einen neuen Benutzernamen um \"admin\" zu ersetzen"
 
-#: settings/config/config.php:511
+#: settings/config/config.php:509
 msgid "Rename current 'admin' username"
 msgstr "Den aktuellen \"admin\" Benutzernamen umbenennen"
 
@@ -39,455 +39,423 @@ msgstr "Empfohlene Sicherheits-Header"
 msgid "Terms & Conditions."
 msgstr "Bedingungen und Konditionen."
 
-#: onboarding/config.php:76 settings/settings.php:325
+#: onboarding/config.php:76 settings/settings.php:345
 msgid "Complianz - Cookie Consent Management as it should be"
 msgstr "Complianz Privacy Suite - Zustimmungsmanagement, wie es sein sollte"
 
-#: settings/config/config.php:1176
+#: settings/config/config.php:1180
 msgid "Other Plugins"
 msgstr "Andere Plugins"
 
-#: settings/config/config.php:1149
+#: settings/config/config.php:1153
 msgid "Status"
 msgstr "Status"
 
-#: settings/config/config.php:1147
+#: settings/config/config.php:1151
 msgid "Powered by Qualys"
 msgstr "Unterstützt von Qualys"
 
-#: settings/config/config.php:1134
+#: settings/config/config.php:1138
 msgid "Progress"
 msgstr "Fortschritt"
 
-#: settings/config/config.php:1087
+#: settings/config/config.php:1091
 msgid "Source"
 msgstr "Quelle"
 
-#: settings/config/config.php:1082
+#: settings/config/config.php:1086
 msgid "Directive"
 msgstr "Richtlinie"
 
-#: settings/config/config.php:1043
+#: settings/config/config.php:1047
 msgid "Add additional domains which can embed your website, if needed. Comma seperated."
 msgstr "Füge bei Bedarf weitere Domains hinzu, die deine Website einbetten können. Durch Komma getrennt."
 
-#: settings/config/config.php:1034
+#: settings/config/config.php:1038
 msgid "Allow your domain to be embedded"
 msgstr "Erlaube, dass deine Domain eingebettet wird"
 
-#: settings/config/config.php:1030
+#: settings/config/config.php:1034
 msgid "Disable (Default)"
 msgstr "Deaktivieren (Standard)"
 
-#: settings/config/config.php:1015
+#: settings/config/config.php:1019
 msgid "The content security policy has many options, so we always recommend starting in ‘learning mode’ to see what files and scripts are loaded."
 msgstr "Die Sicherheitsrichtlinie für Inhalte hat viele Optionen, daher empfehlen wir immer, im \"Lernmodus\" zu beginnen, um zu sehen, welche Dateien und Skripte geladen werden."
 
-#: settings/config/config.php:1014
+#: settings/config/config.php:1018
 msgid "About the Content Security Policy"
 msgstr "Über die Sicherheitsrichtlinie für Inhalte"
 
-#: settings/config/config.php:1008
+#: settings/config/config.php:1012
 msgid "Serve encrypted and authenticated responses"
 msgstr "Verschlüsselte und authentifizierte Antworten übermitteln"
 
-#: settings/config/config.php:999
+#: settings/config/config.php:1003
 msgid "Enable Permissions Policy"
 msgstr "Aktivieren der Berechtigungsrichtlinie"
 
-#: settings/config/config.php:926
+#: settings/config/config.php:930
 msgid "Options"
 msgstr "Optionen"
 
-#: settings/config/config.php:921
+#: settings/config/config.php:925
 msgid "Feature"
 msgstr "Merkmal"
 
-#: settings/config/config.php:917
+#: settings/config/config.php:921
 msgid "They might be misused if you don’t actively tell the browser to disable these features."
 msgstr "Diese können missbraucht werden, wenn du dem Browser nicht aktiv mitteilst, dass er diese Funktionen deaktivieren soll."
 
-#: settings/config/config.php:917
+#: settings/config/config.php:921
 msgid "Browser features are plentiful, but most are not needed on your website."
 msgstr "Browser-Funktionen gibt es viele, aber die meisten werden auf deiner Website nicht benötigt."
 
-#: settings/config/config.php:916
+#: settings/config/config.php:920
 msgid "About the Permission Policy"
 msgstr "Über die Genehmigungspolitik"
 
-#: settings/config/config.php:910
+#: settings/config/config.php:914
 msgid "Self (Default)"
 msgstr "Selbst (Standard)"
 
-#: settings/config/config.php:910 settings/build/index.js:382
-#: settings/src/Settings/LearningMode.js:254
-#: settings/src/Settings/PermissionsPolicy.js:148 settings/build/index.js:6143
-#: settings/build/index.js:6890
+#: settings/config/config.php:914 settings/build/index.js:382
+#: settings/src/Settings/LearningMode.js:260
+#: settings/src/Settings/PermissionsPolicy.js:149
 msgid "Disable"
 msgstr "Deaktiveren"
 
-#: settings/config/config.php:910 settings/build/index.js:382
-#: settings/src/Settings/ChangeStatus.js:11 settings/build/index.js:5447
+#: settings/config/config.php:914 settings/build/index.js:382
+#: settings/src/Settings/ChangeStatus.js:11
 msgid "Allow"
 msgstr "Erlauben"
 
-#: settings/config/config.php:895 settings/build/index.js:382
-#: settings/src/Dashboard/TaskElement.js:30
-#: settings/src/Dashboard/TaskElement.js:31 settings/src/Modal/Modal.js:80
-#: settings/src/Settings/MixedContentScan.js:233 settings/build/index.js:3599
-#: settings/build/index.js:3600 settings/build/index.js:4600
-#: settings/build/index.js:6571
+#: settings/config/config.php:899 settings/build/index.js:382
+#: settings/src/Dashboard/TaskElement.js:56
+#: settings/src/Dashboard/TaskElement.js:57 settings/src/Modal/Modal.js:80
+#: settings/src/Settings/MixedContentScan.js:233
 msgid "Fix"
 msgstr "Reparatur"
 
-#: settings/config/config.php:882 settings/config/config.php:1077
+#: settings/config/config.php:886 settings/config/config.php:1081
 msgid "Location"
 msgstr "Standort"
 
-#: settings/config/config.php:876
+#: settings/config/config.php:880
 msgid "Description"
 msgstr "Beschreibung"
 
-#: settings/config/config.php:870
+#: settings/config/config.php:874
 msgid "Type"
 msgstr "Typ"
 
-#: settings/config/config.php:866
+#: settings/config/config.php:870
 msgid "The extensive mixed content scan will list all current and future issues and provide a fix, or instructions to fix manually."
 msgstr "Die umfassende Überprüfung gemischter Inhalte listet alle aktuellen und zukünftigen Probleme auf und bietet eine Lösung oder Anweisungen zur manuellen Behebung."
 
-#: settings/config/config.php:865
+#: settings/config/config.php:869
 msgid "About the Mixed Content Scan"
 msgstr "Über den Mixed Content Scan"
 
-#: settings/config/config.php:860
+#: settings/config/config.php:864
 msgid "Mixed content scan"
 msgstr "Scannen von mixed content"
 
-#: settings/config/config.php:851
+#: settings/config/config.php:855
 msgid "Cross Origin Embedder Policy"
 msgstr "Cross Origin Embedder Policy"
 
-#: settings/config/config.php:837
+#: settings/config/config.php:840
 msgid "Cross Origin Resource Policy"
 msgstr "Cross Origin Resource Policy"
 
-#: settings/config/config.php:822
+#: settings/config/config.php:825
 msgid "Cross Origin Opener Policy"
 msgstr "Cross Origin Opener Policy"
 
-#: settings/config/config.php:819
+#: settings/config/config.php:822
 msgid "One of the most powerful features, and therefore the most complex are the Cross-Origin headers that can isolate your website so any data leaks are minimized."
 msgstr "Eine der leistungsstärksten und damit komplexesten Funktionen sind die Cross-Origin-Header, die deine Website isolieren können, so dass Datenlecks minimiert werden."
 
-#: settings/config/config.php:818
+#: settings/config/config.php:821
 msgid "About Cross Origin Policies"
 msgstr "Über herkunftsübergreifende Politiken"
 
-#: settings/config/config.php:794
+#: settings/config/config.php:797
 msgid "Choose the max-age for HSTS"
 msgstr "Wähle das Höchstalter für HSTS"
 
-#: settings/config/config.php:792
+#: settings/config/config.php:795
 msgid "Two years (required for preload)"
 msgstr "2 Jahre (für Preload erforderlich)"
 
-#: settings/config/config.php:791
+#: settings/config/config.php:794
 msgid "One year"
 msgstr "1 Jahr"
 
-#: settings/config/config.php:790
+#: settings/config/config.php:793
 msgid "One day (for testing only)"
 msgstr "1 Tag (nur für Tests)"
 
-#: settings/config/config.php:774
+#: settings/config/config.php:777
 msgid "Include subdomains"
 msgstr "Subdomains einbeziehen"
 
-#: settings/config/config.php:752
+#: settings/config/config.php:755
 msgid "After enabling this feature, you can submit your site to %shstspreload.org%s"
 msgstr "Nachdem du diese Funktion aktivierst, kannst du deine Website bei %shstspreload.org%s anmelden"
 
-#: settings/config/config.php:751
+#: settings/config/config.php:754
 msgid "Include preload"
 msgstr "Vorspannung einbeziehen"
 
-#: settings/config/config.php:736
+#: settings/config/config.php:739
 msgid "Leveraging your SSL certificate with HSTS is a staple for every website. Force your website over SSL, mitigating risks of malicious counterfeit websites in your name."
 msgstr "Die Nutzung deines SSL-Zertifikats mit HSTS ist eine Grundvoraussetzung für jede Website. Erzwinge deine Website über SSL, um das Risiko bösartiger gefälschter Websites in deinem Namen zu mindern."
 
-#: settings/config/config.php:735
+#: settings/config/config.php:738
 msgid "About HTTP Strict Transport Security"
 msgstr "Über HTTP-Strict Transport Security"
 
-#: settings/config/config.php:720
+#: settings/config/config.php:723
 msgid "Referrer Policy"
 msgstr "Referrer Policy"
 
-#: settings/config/config.php:711
+#: settings/config/config.php:714
 msgid "recommended"
 msgstr "empfohlen"
 
-#: settings/config/config.php:700
+#: settings/config/config.php:703
 msgid "X-Frame options"
 msgstr "X-Frame options"
 
-#: settings/config/config.php:696 settings/config/config.php:710
-#: settings/config/config.php:810 settings/config/config.php:832
-#: settings/config/config.php:847
+#: settings/config/config.php:699 settings/config/config.php:713
+#: settings/config/config.php:813 settings/config/config.php:835
+#: settings/config/config.php:850
 msgid "Off"
 msgstr "Aus"
 
-#: settings/config/config.php:686
+#: settings/config/config.php:689
 msgid "X-Content-Type options"
 msgstr "X-Content-Type options"
 
-#: settings/config/config.php:678
+#: settings/config/config.php:681
 msgid "These security headers are the fundamental security measures to protect your website visitors while visiting your website."
 msgstr "Diese Sicherheits-Header sind die grundlegenden Sicherheitsmaßnahmen zum Schutz deiner Website-Besucher beim Besuch der Website."
 
-#: settings/config/config.php:677
+#: settings/config/config.php:680
 msgid "About Recommended Security Headers"
 msgstr "Über empfohlene Sicherheits-Header"
 
-#: settings/config/config.php:671
+#: settings/config/config.php:669
 msgid "X-XSS-Protection"
 msgstr "X-XSS-Protection"
 
-#: settings/config/config.php:660
+#: settings/config/config.php:658
 msgid "Delete"
 msgstr "Löschen"
 
-#: settings/config/config.php:655 settings/config/config.php:1092
+#: settings/config/config.php:653 settings/config/config.php:1096
 msgid "Action"
 msgstr "Aktion"
 
-#: settings/config/config.php:650
+#: settings/config/config.php:648
 msgid "Count"
 msgstr "Zählung"
 
-#: settings/config/config.php:645
+#: settings/config/config.php:643
 msgid "Login status"
 msgstr "Login-Status"
 
-#: settings/config/config.php:640
+#: settings/config/config.php:638
 msgid "Method"
 msgstr "Methode"
 
-#: settings/config/config.php:600
+#: settings/config/config.php:598
 msgid "Disable application passwords"
 msgstr "Anwendungskennwörter deaktivieren"
 
-#: settings/config/config.php:591
+#: settings/config/config.php:589
 msgid "Debug log is now public"
 msgstr "Debug-Protokoll ist jetzt öffentlich"
 
-#: settings/config/config.php:590
+#: settings/config/config.php:588
 msgid "Debug log not publicly accessible"
 msgstr "Debug-Protokoll nicht öffentlich zugänglich"
 
-#: settings/config/config.php:586
+#: settings/config/config.php:584
 msgid "Change debug.log file location"
 msgstr "Speicherort der Datei debug.log ändern"
 
-#: settings/config/config.php:576
+#: settings/config/config.php:574
 msgid "Rename and randomize your database prefix"
 msgstr "Umbenennen und Zufallsgenerierung des Datenbankpräfixes"
 
-#: settings/config/config.php:567
+#: settings/config/config.php:565
 msgid "Disable HTTP methods"
 msgstr "HTTP-Methoden deaktivieren"
 
-#: settings/config/config.php:558
+#: settings/config/config.php:556
 msgid "Block user registrations when login and display name are the same"
 msgstr "Benutzerregistrierungen blockieren, wenn Login und Anzeigename gleich sind"
 
-#: settings/config/config.php:549
+#: settings/config/config.php:547
 msgid "Disable XML-RPC"
 msgstr "XML-RPC deaktivieren"
 
-#: settings/config/config.php:516
+#: settings/config/config.php:514
 msgid "Username 'Admin' is allowed"
 msgstr "Der Benutzername \"admin\" ist erlaubt"
 
-#: settings/config/config.php:515
+#: settings/config/config.php:513
 msgid "Username 'Admin' is not allowed"
 msgstr "Der Benutzername \"admin\" ist nicht erlaubt"
 
-#: settings/config/config.php:502
+#: settings/config/config.php:500
 msgid "User enumeration is possible"
 msgstr "Benutzeraufzählung ist möglich"
 
-#: settings/config/config.php:501
+#: settings/config/config.php:499
 msgid "User enumeration is restricted"
 msgstr "Die Benutzeraufzählung ist eingeschränkt"
 
-#: settings/config/config.php:497
+#: settings/config/config.php:495
 msgid "Disable user enumeration"
 msgstr "Benutzeraufzählung deaktivieren"
 
-#: settings/config/config.php:488
+#: settings/config/config.php:486
 msgid "Browsing directories is possible"
 msgstr "Das Durchsuchen von Verzeichnissen ist möglich"
 
-#: settings/config/config.php:487
+#: settings/config/config.php:485
 msgid "Browsing directories is blocked"
 msgstr "Das Durchsuchen von Verzeichnissen ist blockiert"
 
-#: settings/config/config.php:483
+#: settings/config/config.php:481
 msgid "Disable directory browsing"
 msgstr "Verzeichnisdurchsuchung deaktivieren"
 
-#: settings/config/config.php:474
+#: settings/config/config.php:472
 msgid "Prevent exposed login feedback"
 msgstr "Offene Rückmeldungen zur Anmeldung verhindern"
 
-#: settings/config/config.php:465
+#: settings/config/config.php:463
 msgid "Hide your WordPress version"
 msgstr "Verberge deine WordPress-Version"
 
-#: settings/config/config.php:456
+#: settings/config/config.php:454
 msgid "Code execution is not restricted"
 msgstr "Die Codeausführung ist nicht eingeschränkt"
 
-#: settings/config/config.php:455
+#: settings/config/config.php:453
 msgid "Code execution is restricted"
 msgstr "Die Codeausführung ist eingeschränkt"
 
-#: settings/config/config.php:451
+#: settings/config/config.php:449
 msgid "Prevent code execution in the public 'Uploads' folder"
 msgstr "Verhinder die Ausführung von Code im öffentlichen Ordner \"Uploads\"."
 
-#: settings/config/config.php:442
+#: settings/config/config.php:440
 msgid "File editing is enabled"
 msgstr "Dateibearbeitung ist aktiviert"
 
-#: settings/config/config.php:441
+#: settings/config/config.php:439
 msgid "File editing is disabled"
 msgstr "Dateibearbeitung ist deaktiviert"
 
-#: settings/config/config.php:437
+#: settings/config/config.php:435
 msgid "Disable the built-in file editors"
 msgstr "Deaktiviere die eingebauten Datei-Editoren"
 
-#: settings/config/config.php:428
+#: settings/config/config.php:426
 msgid "User registration is not restricted"
 msgstr "Die Benutzeraufzählung ist nicht eingeschränkt"
 
-#: settings/config/config.php:427
+#: settings/config/config.php:425
 msgid "User registration is restricted"
 msgstr "Die Benutzerregistrierung ist eingeschränkt"
 
-#: settings/config/config.php:424
+#: settings/config/config.php:422
 msgid "Hardening features limit the possibility of potential weaknesses and vulnerabilities which can be misused."
 msgstr "Härtungsfunktionen schränken die Möglichkeit potenzieller Schwachstellen und Anfälligkeiten ein, die missbraucht werden können."
 
-#: settings/config/config.php:423
+#: settings/config/config.php:421
 msgid "About Hardening"
 msgstr "Über das Härten (Computer)"
 
-#: settings/config/config.php:417
+#: settings/config/config.php:415
 msgid "Disable \"anyone can register\""
 msgstr "Deaktiviere \"Jeder kann sich registrieren\"."
 
-#: settings/config/config.php:404
+#: settings/config/config.php:402
 msgid "Premium support"
 msgstr "Premium-Support"
 
-#: settings/config/config.php:379
+#: settings/config/config.php:377
 msgid "Delete all data on plugin deletion"
 msgstr "Löschen aller Daten beim Löschen des Plugins"
 
-#: settings/config/config.php:370
+#: settings/config/config.php:368
 msgid "System status"
 msgstr "Systemstatus"
 
-#: settings/config/config.php:359
+#: settings/config/config.php:357
 msgid "Dismiss all notices"
 msgstr "Alle Bekanntmachungen zurückweisen"
 
-#: settings/config/config.php:350
+#: settings/config/config.php:348
 msgid "Mixed content fixer - back-end"
 msgstr "Fixer für gemischte Inhalte - Back-End"
 
-#: settings/config/config.php:328 settings/config/config.php:331
+#: settings/config/config.php:326 settings/config/config.php:329
 msgid "Mixed content fixer - init hook"
 msgstr "Mixed content fixer - Init-Hook"
 
-#: settings/config/config.php:293
+#: settings/config/config.php:291
 msgid "301 .htaccess redirect"
 msgstr "301 .htaccess-Umleitung"
 
-#: settings/config/config.php:292
+#: settings/config/config.php:290
 msgid "301 PHP redirect"
 msgstr "301 PHP-Weiterleitung"
 
-#: settings/config/config.php:291
+#: settings/config/config.php:289
 msgid "No redirect"
 msgstr "Keine Umleitung"
 
-#: settings/config/config.php:289 settings/config/config.php:297
+#: settings/config/config.php:287 settings/config/config.php:295
 msgid "Redirect method"
 msgstr "Umleitungsmethode"
 
-#: settings/config/config.php:227
+#: settings/config/config.php:225
 msgid "DNS verification"
 msgstr "DNS-Überprüfung"
 
-#: settings/config/config.php:212
+#: settings/config/config.php:210
 msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
-#: settings/config/config.php:194
-msgid "Let's Encrypt"
-msgstr "Let's Encrypt"
-
-#: settings/config/config.php:185
-msgid "Cross Origin Policy"
-msgstr "Ursprungsübergreifende Politik"
-
-#: settings/config/config.php:183
+#: settings/config/config.php:181
 msgid "Get Cross Origin Policy Headers with %sReally Simple SSL Pro%s"
 msgstr "Abrufen von Cross-Origin-Policy-Headern mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:175
-msgid "Source Directives"
-msgstr "Quellrichtlinien"
-
-#: settings/config/config.php:173
+#: settings/config/config.php:171
 msgid "Get Source Directives with %sReally Simple SSL Pro%s"
 msgstr "Abrufen von Quellrichtlinien mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:166
-msgid "Frame Ancestors"
-msgstr "Frame Ancestors"
-
-#: settings/config/config.php:163
+#: settings/config/config.php:161
 msgid "Get Frame Ancestors with %sReally Simple SSL Pro%s"
 msgstr "Hole dir Frame Ancestors %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:157
-msgid "Upgrade Insecure Requests"
-msgstr "Upgrade von unsicheren Anträgen"
-
-#: settings/config/config.php:154
+#: settings/config/config.php:152
 msgid "Get Upgrade Insecure Requests with %sReally Simple SSL Pro%s"
 msgstr "Upgrade unsicherer Anfragen mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:147
-msgid "Content Security Policy intro"
-msgstr "Content Security Policy-Intro"
-
-#: settings/config/config.php:146
-msgid "Content Security Policy"
-msgstr "Content Security Policy"
-
-#: settings/config/config.php:135
+#: settings/config/config.php:134
 msgid "Get the Permissions Policy with %sReally Simple SSL Pro%s"
 msgstr "Abrufen der Berechtigungsrichtlinie mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:129 settings/config/config.php:130
-#: settings/config/config.php:140 settings/config/config.php:911
+#: settings/config/config.php:915
 msgid "Permissions Policy"
 msgstr "Genehmigungspolitik"
 
@@ -495,8 +463,7 @@ msgstr "Genehmigungspolitik"
 msgid "Get HTTP Strict Transport Security with %sReally Simple SSL Pro%s"
 msgstr "Erhalte HTTP Strict Transport Security mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:113 settings/config/config.php:122
-#: settings/config/config.php:729
+#: settings/config/config.php:122 settings/config/config.php:732
 msgid "HTTP Strict Transport Security"
 msgstr "HTTP-Strict Transport Security"
 
@@ -516,7 +483,7 @@ msgstr "Scan für gemischte Inhalte"
 msgid "Get XML-RPC with %sReally Simple SSL Pro%s"
 msgstr "Erhalte XML-RPC mit %sReally Simple SSL Pro%s"
 
-#: settings/config/config.php:63 settings/config/config.php:628
+#: settings/config/config.php:63 settings/config/config.php:626
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
@@ -529,7 +496,7 @@ msgid "Advanced Hardening"
 msgstr "Erweiterte Härtung"
 
 #: settings/config/config.php:44 settings/config/config.php:50
-#: settings/config/config.php:1157
+#: settings/config/config.php:1161
 msgid "Hardening"
 msgstr "Härten (Computer)"
 
@@ -553,7 +520,7 @@ msgstr "Dashboard"
 msgid "forbidden - number in author name not allowed = "
 msgstr "verboten - Nummer im Autorennamen nicht erlaubt ="
 
-#: security/wordpress/rename-admin-user.php:13
+#: security/wordpress/rename-admin-user.php:15
 msgid "Username 'admin' has been changed to %s"
 msgstr "Der Benutzername \"admin\" wurde in %s geändert"
 
@@ -772,9 +739,8 @@ msgstr "Gemischter Inhalt in %s"
 #: placeholders/class-placeholder.php:142
 #: placeholders/class-placeholder.php:159
 #: placeholders/class-placeholder.php:185
-#: placeholders/class-placeholder.php:210 settings/config/config.php:889
+#: placeholders/class-placeholder.php:210 settings/config/config.php:893
 #: settings/build/index.js:382 settings/src/Settings/MixedContentScan.js:227
-#: settings/build/index.js:6565
 msgid "Details"
 msgstr "Details"
 
@@ -782,10 +748,9 @@ msgstr "Details"
 msgid "Mixed content in PHP file in %s"
 msgstr "Gemischter Inhalt in PHP-Datei in %s"
 
-#: onboarding/config.php:137 settings/config/config.php:242
+#: onboarding/config.php:137 settings/config/config.php:240
 #: settings/build/index.js:382 settings/src/Dashboard/OtherPlugins.js:68
-#: settings/src/Settings/License.js:134 settings/build/index.js:2709
-#: settings/build/index.js:6326
+#: settings/src/Settings/License.js:134
 msgid "Activate"
 msgstr "Aktivieren"
 
@@ -829,8 +794,8 @@ msgstr "Gratulation!"
 msgid "Thanks for updating!"
 msgstr "Danke für das Update!"
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:105
-#: lets-encrypt/integrations/cpanel/cpanel.php:165
+#: lets-encrypt/integrations/cpanel/cpanel.php:106
+#: lets-encrypt/integrations/cpanel/cpanel.php:190
 msgid "Your website's ip address is blocked. Please add your domain's ip address to the security policy in CPanel"
 msgstr "Die IP-Adresse deiner Website ist blockiert. Bitte füge die IP-Adresse deiner Domain zu den Sicherheitsrichtlinien in CPanel hinzu"
 
@@ -931,26 +896,25 @@ msgstr "SSL-Aktivierung im Gange"
 msgid "SSL is not enabled on your network"
 msgstr "SSL ist in deinem Netzwerk nicht aktiviert"
 
-#: class-admin.php:2661 class-multisite.php:223
+#: class-admin.php:2679 class-multisite.php:223
 msgid "Improve security - Upgrade"
 msgstr "Verbesserung der Sicherheit - Upgrade"
 
-#: class-admin.php:2240
+#: class-admin.php:2258
 msgid "Thanks for updating to Really Simple SSL 6.0! Check out our new features on the settings page."
 msgstr "Vielen Dank für das Update auf Really Simple SSL 6.0! Schau dir unsere neuen Funktionen auf der Einstellungsseite an."
 
-#: class-admin.php:2154
+#: class-admin.php:2171
 msgid "See which recommended security headers are not present on your website."
 msgstr "Stelle fest, welche empfohlenen Sicherheitsheader auf deiner Website nicht vorhanden sind."
 
-#: class-admin.php:1824
+#: class-admin.php:1841
 msgid "To safely enable SSL on your server configuration, you should add the following line of code to your wp-config.php."
 msgstr "Um SSL in deiner Serverkonfiguration sicher zu aktivieren, solltest du folgende Codezeile in deine wp-config.php einfügen."
 
-#: class-admin.php:1761 settings/build/index.js:382
+#: class-admin.php:1778 settings/build/index.js:382
 #: settings/src/Dashboard/OtherPlugins.js:85
-#: settings/src/Settings/SettingsGroup.js:133 settings/build/index.js:2726
-#: settings/build/index.js:7213
+#: settings/src/Settings/SettingsGroup.js:133
 msgid "Upgrade"
 msgstr "Upgrade"
 
@@ -958,171 +922,171 @@ msgstr "Upgrade"
 msgid "Lightweight SSL & Hardening Plugin"
 msgstr "Leichtgewichtiges SSL & Härtungs-Plugin"
 
-#: settings/settings.php:317
+#: settings/settings.php:337
 msgid "Self-hosted, Privacy-friendly analytics tool"
 msgstr "Selbst gehostetes und datenschutzfreundliches Analysetool"
 
-#: upgrade/upgrade-to-pro.php:565
+#: upgrade/upgrade-to-pro.php:573
 msgid "Your license key has reached its activation limit."
 msgstr "Ihr Lizenzschlüssel hat seine maximalen Aktivierungen erreicht."
 
-#: upgrade/upgrade-to-pro.php:562
+#: upgrade/upgrade-to-pro.php:570
 msgid "This appears to be an invalid license key for this plugin."
 msgstr "Dies scheint ein ungültiger Lizenzschlüssel für dieses Plugin zu sein."
 
-#: upgrade/upgrade-to-pro.php:559
+#: upgrade/upgrade-to-pro.php:567
 msgid "Your license is not active for this URL."
 msgstr "Ihre Lizenz ist für diese URL nicht aktiv."
 
-#: upgrade/upgrade-to-pro.php:556
+#: upgrade/upgrade-to-pro.php:564
 msgid "Invalid license."
 msgstr "Ungültige Lizenz."
 
-#: upgrade/upgrade-to-pro.php:553
+#: upgrade/upgrade-to-pro.php:561
 msgid "Missing license."
 msgstr "Fehlende Lizenz."
 
-#: upgrade/upgrade-to-pro.php:550
+#: upgrade/upgrade-to-pro.php:558
 msgid "Your license key has been disabled."
 msgstr "Ihr Lizenzschlüssel wurde deaktiviert."
 
-#: upgrade/upgrade-to-pro.php:544
+#: upgrade/upgrade-to-pro.php:552
 msgid "Your license key expired on %s."
 msgstr "Ihr Lizenzschlüssel ist am %s abgelaufen."
 
-#: upgrade/upgrade-to-pro.php:536 upgrade/upgrade-to-pro.php:568
+#: upgrade/upgrade-to-pro.php:544 upgrade/upgrade-to-pro.php:576
 msgid "An error occurred, please try again."
 msgstr "Es ist ein Fehler aufgetreten, bitte versuche es erneut."
 
-#: upgrade/upgrade-to-pro.php:365
+#: upgrade/upgrade-to-pro.php:373
 msgid "Check your %slicense%s."
 msgstr "Überprüfe deine %sLizenz%s."
 
-#: upgrade/upgrade-to-pro.php:364
+#: upgrade/upgrade-to-pro.php:372
 msgid "Install %sManually%s."
 msgstr "%sManuell%s installieren."
 
-#: upgrade/upgrade-to-pro.php:364 upgrade/upgrade-to-pro.php:365
+#: upgrade/upgrade-to-pro.php:372 upgrade/upgrade-to-pro.php:373
 msgid "An Error Occurred:"
 msgstr "Ein Fehler ist aufgetreten:"
 
-#: upgrade/upgrade-to-pro.php:359
+#: upgrade/upgrade-to-pro.php:367
 msgid "Visit Dashboard"
 msgstr "Besuche das Dashboard"
 
-#: upgrade/upgrade-to-pro.php:348
+#: upgrade/upgrade-to-pro.php:356
 msgid "Installing"
 msgstr "Installiere"
 
-#: upgrade/upgrade-to-pro.php:323
+#: upgrade/upgrade-to-pro.php:331
 msgid "Recommended by Really Simple Plugins"
 msgstr "Empfohlen von Really Simple Plugins"
 
-#: upgrade/upgrade-to-pro.php:225
+#: upgrade/upgrade-to-pro.php:233
 msgid "Installation finished"
 msgstr "Installation beendet"
 
-#: upgrade/upgrade-to-pro.php:170
+#: upgrade/upgrade-to-pro.php:178
 msgid "Really Simple SSL automatically detects your settings and configures your website to run over HTTPS. To keep it lightweight, we kept the options to a minimum. Your website will move to SSL with one click."
 msgstr "Really Simple SSL erkennt automatisch deine Einstellungen und konfiguriert deine Website für den Betrieb über HTTPS. Wir haben die Optionen auf ein Minimum beschränkt, um das Programm so einfach wie möglich zu halten. Deine Website wird mit einem Klick auf SSL umgestellt."
 
-#: upgrade/upgrade-to-pro.php:166
+#: upgrade/upgrade-to-pro.php:174
 msgid "One click SSL optimization"
 msgstr "SSL-Optimierung mit einem Klick"
 
-#: upgrade/upgrade-to-pro.php:153
+#: upgrade/upgrade-to-pro.php:161
 msgid "Configure your Cookie Notice, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA and PIPEDA."
 msgstr "Konfiguriere deinen Cookie-Hinweis, Ihre Cookie-Zustimmung und deine Cookie-Richtlinie mit unserem Assistenten und Cookie-Scan. Unterstützt GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA und PIPEDA."
 
-#: upgrade/upgrade-to-pro.php:149
+#: upgrade/upgrade-to-pro.php:157
 msgid "GDPR/CCPA Privacy Suite"
 msgstr "GDPR/CCPA-Datenschutz-Suite"
 
-#: upgrade/upgrade-to-pro.php:140
+#: upgrade/upgrade-to-pro.php:148
 msgid "Get detailed insights into visitors' behaviour with Burst Statistics, the privacy-friendly analytics dashboard from Really Simple Plugins."
 msgstr "Erhalte detaillierte Einblicke in das Besucherverhalten mit Burst-Statistik, dem datenschutzfreundlichen Analyse-Dashboard von Really Simple Plugins."
 
-#: upgrade/upgrade-to-pro.php:136
+#: upgrade/upgrade-to-pro.php:144
 msgid "Self-hosted and privacy-friendly analytics tool."
 msgstr "Selbstgehostetes und datenschutzfreundliches Analysetool."
 
-#: upgrade/upgrade-to-pro.php:103
+#: upgrade/upgrade-to-pro.php:111
 msgid "Failed to activate plugin"
 msgstr "Plugin konnte nicht aktiviert werden"
 
-#: upgrade/upgrade-to-pro.php:102
+#: upgrade/upgrade-to-pro.php:110
 msgid "Plugin activated"
 msgstr "Plugin aktiviert"
 
-#: upgrade/upgrade-to-pro.php:101
+#: upgrade/upgrade-to-pro.php:109
 msgid "Activating plugin..."
 msgstr "Plugin wird aktiviert..."
 
-#: upgrade/upgrade-to-pro.php:96
+#: upgrade/upgrade-to-pro.php:104
 msgid "Failed to install plugin"
 msgstr "Installation des Plugin fehlgeschlagen"
 
-#: upgrade/upgrade-to-pro.php:95
+#: upgrade/upgrade-to-pro.php:103
 msgid "Plugin installed"
 msgstr "Plugin installiert"
 
-#: upgrade/upgrade-to-pro.php:94
+#: upgrade/upgrade-to-pro.php:102
 msgid "Installing plugin..."
 msgstr "Plugin wird installiert..."
 
-#: upgrade/upgrade-to-pro.php:89
+#: upgrade/upgrade-to-pro.php:97
 msgid "Failed to gather package information"
 msgstr "Paketinformationen konnten nicht erfasst werden"
 
-#: upgrade/upgrade-to-pro.php:88
+#: upgrade/upgrade-to-pro.php:96
 msgid "Package information retrieved"
 msgstr "Abgerufene Paketinformationen"
 
-#: upgrade/upgrade-to-pro.php:87
+#: upgrade/upgrade-to-pro.php:95
 msgid "Retrieving package information..."
 msgstr "Abrufen von Paketinformationen..."
 
-#: upgrade/upgrade-to-pro.php:82
+#: upgrade/upgrade-to-pro.php:90
 msgid "License invalid"
 msgstr "Lizenz ungültig"
 
-#: upgrade/upgrade-to-pro.php:81
+#: upgrade/upgrade-to-pro.php:89
 msgid "License valid"
 msgstr "Lizenz gültig"
 
-#: upgrade/upgrade-to-pro.php:80
+#: upgrade/upgrade-to-pro.php:88
 msgid "Validating license..."
 msgstr "Überprüfung der Lizenz..."
 
-#: upgrade/upgrade-to-pro.php:75
+#: upgrade/upgrade-to-pro.php:83
 msgid "Destination folder already exists"
 msgstr "Zielordner existiert bereits"
 
-#: upgrade/upgrade-to-pro.php:74
+#: upgrade/upgrade-to-pro.php:82
 msgid "Able to create destination folder"
 msgstr "Zielordner erstellen können"
 
-#: upgrade/upgrade-to-pro.php:73
+#: upgrade/upgrade-to-pro.php:81
 msgid "Checking if plugin folder exists..."
 msgstr "Überprüfung, ob der Plugin-Ordner existiert..."
 
-#: class-admin.php:2171
+#: class-admin.php:2189
 msgid "Improve security with Really Simple SSL Pro."
 msgstr "Erhöhe deine Sicherheit mit Really Simple SSL Pro."
 
-#: class-admin.php:1969
+#: class-admin.php:1986
 msgid "Check manually"
 msgstr "Manuell prüfen"
 
-#: class-admin.php:1966
+#: class-admin.php:1983
 msgid "Could not test certificate"
 msgstr "Zertifikat konnte nicht getestet werden"
 
-#: class-admin.php:1919
+#: class-admin.php:1936
 msgid "Remember to change your URLs in external services like Google Analytics, Search Console and others. This should prevent any data loss resulting from the switch to https."
 msgstr "Denk daran, deine URLs in externen Diensten wie Google Analytics, Search Console und anderen zu ändern. Dies sollte vor Datenverlust durch den Wechsel auf https schützen."
 
-#: class-admin.php:1967 onboarding/config.php:175
+#: class-admin.php:1984 onboarding/config.php:175
 msgid "Automatic certificate detection is not possible on your server."
 msgstr "Eine automatische Zertifikatserkennung ist auf deinem Server nicht möglich."
 
@@ -1134,15 +1098,15 @@ msgstr "Das Zertifikat konnte nicht getestet werden."
 msgid "Checking host..."
 msgstr "Überprüfung des Hosts..."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1113
+#: lets-encrypt/class-letsencrypt-handler.php:1128
 msgid "After completing the installation, you can let Really Simple SSL automatically configure your site for SSL by using the 'Activate SSL' button."
 msgstr "Nach Abschluss der Installation kannst du deine Website mit Really Simple SSL automatisch für SSL konfigurieren lassen, indem du auf die Schaltfläche \"Activate SSL\" klickst."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1098
+#: lets-encrypt/class-letsencrypt-handler.php:1113
 msgid "We have not detected any known hosting limitations."
 msgstr "Wir haben keine bekannten Hosting-Einschränkungen festgestellt."
 
-#: class-admin.php:1954
+#: class-admin.php:1971
 msgid "The wp-config.php file is not writable, and needs to be edited. Please set this file to writable."
 msgstr "Die Datei wp-config.php ist nicht beschreibbar, muss aber bearbeitet werden. Bitte ändere die Schreibrechte."
 
@@ -1155,7 +1119,7 @@ msgstr "Deine Website sendet nicht alle empfohlenen Sicherheits-Header."
 msgid "Security"
 msgstr "Sicherheit"
 
-#: class-admin.php:2160
+#: class-admin.php:2177
 msgid "Recommended security headers enabled."
 msgstr "Empfohlene Sicherheitsheader aktiviert."
 
@@ -1171,7 +1135,7 @@ msgstr "OCSP-Stapling ist standardmäßig als aktiviert konfiguriert. Du kannst 
 msgid "For more information, please read this %sarticle%s"
 msgstr "Für weitere Informationen, bitte diesen %sArtikel%s lesen"
 
-#: class-admin.php:2224
+#: class-admin.php:2242
 msgid "Black Friday sale! Get 40% Off Really Simple SSL Pro"
 msgstr "Black Friday Sale! Erhalte 40% Rabatt auf Really Simple SSL Pro"
 
@@ -1179,23 +1143,23 @@ msgstr "Black Friday Sale! Erhalte 40% Rabatt auf Really Simple SSL Pro"
 msgid "Checking if Terms & Conditions are accepted..."
 msgstr "Es wird überprüft, ob die Allgemeinen Geschäftsbedingungen akzeptiert werden..."
 
-#: lets-encrypt/class-letsencrypt-handler.php:954
+#: lets-encrypt/class-letsencrypt-handler.php:969
 msgid "The Terms & Conditions were not accepted. Please accept in the general settings."
 msgstr "Die Allgemeinen Geschäftsbedingungen wurden nicht akzeptiert. Bitte akzeptiere diese in den allgemeinen Einstellungen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:950
+#: lets-encrypt/class-letsencrypt-handler.php:965
 msgid "Terms & Conditions are accepted."
 msgstr "Die Allgemeinen Geschäftsbedingungen werden akzeptiert."
 
-#: class-admin.php:2120
+#: class-admin.php:2137
 msgid "HttpOnly Secure cookies have been set automatically!"
 msgstr "HttpOnly Sichere-Cookies wurden automatisch gesetzt!"
 
-#: class-admin.php:2209
+#: class-admin.php:2227
 msgid "As Really Simple SSL handles all the functionality this plugin provides, we recommend to disable this plugin to prevent unexpected behavior."
 msgstr "Da Really Simple SSL die gesamte Funktionalität dieses Plugins übernimmt, empfehlen wir, dieses Plugin zu deaktivieren, um unerwartetes Verhalten zu vermeiden."
 
-#: class-admin.php:2209
+#: class-admin.php:2227
 msgid "We have detected the %s plugin on your website."
 msgstr "Wir haben das %s-Plugin auf deiner Website entdeckt."
 
@@ -1219,15 +1183,14 @@ msgstr "Wenn du deine DNS-Einträge bereits eingegeben hast, müssen diese geän
 msgid "Order ID mismatch, regenerate order."
 msgstr "Auftrags-ID stimmt nicht überein, Auftrag neu generieren."
 
-#: class-admin.php:1904
+#: class-admin.php:1921
 msgid "Really Simple SSL Pro is not up to date. Update Really Simple SSL Pro to ensure compatibility."
 msgstr "Really Simple SSL Pro ist nicht auf dem neuesten Stand. Aktualisiere Really Simple SSL Pro, um die Kompatibilität sicherzustellen."
 
-#: settings/config/config.php:369 settings/build/index.js:382
+#: settings/config/config.php:367 settings/build/index.js:382
 #: settings/src/LetsEncrypt/Installation.js:103
 #: settings/src/LetsEncrypt/Installation.js:108
-#: settings/src/LetsEncrypt/Installation.js:112 settings/build/index.js:4119
-#: settings/build/index.js:4124 settings/build/index.js:4128
+#: settings/src/LetsEncrypt/Installation.js:112
 msgid "Download"
 msgstr "Download"
 
@@ -1271,11 +1234,11 @@ msgstr "Die Nicht-www-Version deiner Website verweist nicht auf diese Website. D
 msgid "Searching for link to SSL installation page on your server..."
 msgstr "Suche nach Link zur SSL-Installationsseite auf deinem Server..."
 
-#: lets-encrypt/config/fields.php:29 settings/config/config.php:237
+#: lets-encrypt/config/fields.php:29 settings/config/config.php:235
 msgid "Installation"
 msgstr "Installation"
 
-#: lets-encrypt/config/fields.php:25 settings/config/config.php:232
+#: lets-encrypt/config/fields.php:25 settings/config/config.php:230
 msgid "Generation"
 msgstr "Generation"
 
@@ -1311,27 +1274,27 @@ msgstr "Schlüsselverzeichnis prüfen..."
 msgid "Checking challenge directory..."
 msgstr "Challenge-Verzeichnis wird überprüft..."
 
-#: lets-encrypt/config/fields.php:17 settings/config/config.php:222
+#: lets-encrypt/config/fields.php:17 settings/config/config.php:220
 msgid "Directories"
 msgstr "Verzeichnisse"
 
-#: settings/config/config.php:217
+#: settings/config/config.php:215
 msgid "Below you will find the instructions for different hosting environments and configurations. If you start the process with the necessary instructions and credentials the next view steps will be done in no time."
 msgstr "Nachfolgend findest du die Anleitungen für verschiedene Hosting-Umgebungen und Konfigurationen. Wenn du den Prozess mit den erforderlichen Anweisungen und Anmeldeinformationen beginnst, sind die nächsten Schritte im Handumdrehen erledigt."
 
-#: settings/config/config.php:216
+#: settings/config/config.php:214
 msgid "Hosting"
 msgstr "Hosting"
 
-#: settings/config/config.php:205
+#: settings/config/config.php:203
 msgid "Letʼs Encrypt is a free, automated and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG)."
 msgstr "Letʼs Encrypt ist eine kostenlose, automatisierte und offene Zertifizierungsstelle der gemeinnützigen Internet Security Research Group (ISRG)."
 
-#: settings/config/config.php:197
+#: settings/config/config.php:195
 msgid " Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance."
 msgstr "Bitte beachte, dass du jederzeit den Assistenten abspeichern und später beenden kannst, verwende unsere %sDokumentation%s für zusätzliche Informationen oder erstelle ein %sSupport-Ticket%s, falls du unsere Hilfe benötigst."
 
-#: settings/config/config.php:195
+#: settings/config/config.php:193
 msgid "We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!"
 msgstr "Wir haben versucht, unseren Assistenten so einfach und schnell wie möglich zu gestalten. Obwohl diese Fragen alle notwendig sind, lass es uns bitte %swissen%s, was du denkst, inwiefern wir das Plugin verbessern können!"
 
@@ -1363,7 +1326,7 @@ msgstr "SSL-Zertifikat wird geprüft..."
 msgid "Detected status of your setup."
 msgstr "Erkannter Status deines Setups."
 
-#: lets-encrypt/config/fields.php:8 settings/config/config.php:204
+#: lets-encrypt/config/fields.php:8 settings/config/config.php:202
 msgid "System Status"
 msgstr "Systemstatus"
 
@@ -1459,7 +1422,7 @@ msgstr "Dazu gehören sowohl die www. und nicht-www. Version deiner Domain."
 msgid "Domain"
 msgstr "Domain"
 
-#: settings/settings.php:332
+#: settings/settings.php:352
 msgid "Terms and Conditions"
 msgstr "Bedingungen und Konditionen"
 
@@ -1491,50 +1454,50 @@ msgstr "SSL erfolgreich installiert"
 msgid "Installing SSL certificate using PLESK API..."
 msgstr "SSL-Zertifikat mit PLESK API installieren..."
 
-#: lets-encrypt/integrations/cpanel/functions.php:105
+#: lets-encrypt/integrations/cpanel/functions.php:107
 #: lets-encrypt/integrations/directadmin/functions.php:35
 msgid "Attempting to install certificate..."
 msgstr "Es wird versucht, das Zertifikat zu installieren..."
 
-#: lets-encrypt/integrations/cpanel/functions.php:98
+#: lets-encrypt/integrations/cpanel/functions.php:100
 msgid "Attempting to set DNS txt record..."
 msgstr "Es wird versucht, einen DNS-txt-Eintrag festzulegen..."
 
-#: lets-encrypt/integrations/cpanel/functions.php:89
+#: lets-encrypt/integrations/cpanel/functions.php:91
 msgid "Attempting to install certificate using AutoSSL..."
 msgstr "Es wird versucht, das Zertifikat mit AutoSSL zu installieren..."
 
-#: lets-encrypt/integrations/cpanel/functions.php:61
+#: lets-encrypt/integrations/cpanel/functions.php:63
 msgid "The system is not ready for the DNS verification yet. Please run the wizard again."
 msgstr "Das System ist noch nicht bereit für die DNS-Verifizierung. Bitte führe den Assistenten erneut aus."
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:280
-#: lets-encrypt/integrations/cpanel/cpanel.php:299
+#: lets-encrypt/integrations/cpanel/cpanel.php:308
+#: lets-encrypt/integrations/cpanel/cpanel.php:327
 msgid "Could not automatically add TXT record. Please proceed manually, following the steps below."
 msgstr "TXT-Eintrag konnte nicht automatisch hinzugefügt werden. Bitte gehe manuell vor, indem du die folgenden Schritte befolgst."
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:276
-#: lets-encrypt/integrations/cpanel/cpanel.php:295
+#: lets-encrypt/integrations/cpanel/cpanel.php:304
+#: lets-encrypt/integrations/cpanel/cpanel.php:323
 msgid "Successfully added TXT record."
 msgstr "TXT-Eintrag erfolgreich hinzugefügt."
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:268
+#: lets-encrypt/integrations/cpanel/cpanel.php:296
 msgid "Login credentials incorrect"
 msgstr "Anmeldedaten falsch"
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:264
+#: lets-encrypt/integrations/cpanel/cpanel.php:292
 msgid "Unable to connect to cPanel"
 msgstr "Kann keine Verbindung zu cPanel herstellen"
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:180
+#: lets-encrypt/integrations/cpanel/cpanel.php:205
 msgid "Errors were reported during installation."
 msgstr "Während der Installation wurden Fehler gemeldet."
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:120
+#: lets-encrypt/integrations/cpanel/cpanel.php:126
 msgid "Errors were reported during installation"
 msgstr "Während der Installation wurden Fehler gemeldet "
 
-#: lets-encrypt/integrations/cpanel/cpanel.php:115
+#: lets-encrypt/integrations/cpanel/cpanel.php:121
 #: lets-encrypt/integrations/directadmin/directadmin.php:122
 msgid "SSL successfully installed on %s"
 msgstr "SSL erfolgreich auf %s installiert"
@@ -1586,7 +1549,7 @@ msgstr "Du kannst diesen %sAnweisungen%s folgen."
 msgid "Your hosting environment does not allow automatic SSL installation."
 msgstr "Deine Hosting-Umgebung lässt keine automatische SSL-Installation zu."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1105
+#: lets-encrypt/class-letsencrypt-handler.php:1120
 #: lets-encrypt/functions.php:375
 msgid "According to our information, your hosting provider does not allow any kind of SSL installation, other then their own paid certificate. For an alternative hosting provider with SSL, see this %sarticle%s."
 msgstr "Nach unseren Informationen erlaubt dein Hosting-Provider keine SSL-Installation, außer einem eigenen kostenpflichtigen Zertifikat. Einen alternativen Hosting-Provider mit SSL findest du in diesem %sArtikel%s."
@@ -1600,7 +1563,7 @@ msgstr "Du hast bereits kostenloses SSL in deiner Hosting-Umgebung."
 msgid "After completing the installation, you can continue to the next step to complete your configuration."
 msgstr "Nach Abschluss der Installation kannst du mit dem nächsten Schritt fortfahren, um die Konfiguration abzuschließen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1112
+#: lets-encrypt/class-letsencrypt-handler.php:1127
 #: lets-encrypt/functions.php:365
 msgid "According to our information, your hosting provider supplies your account with an SSL certificate by default. Please contact your %shosting support%s if this is not the case."
 msgstr "Nach unseren Informationen versorgt dein Hosting-Provider deinen Account standardmäßig mit einem SSL-Zertifikat. Bitte kontaktiere deinen %sHosting-Support%s, wenn dies nicht der Fall ist."
@@ -1637,148 +1600,148 @@ msgstr "Datei fehlt. Bitte wiederhole die vorherigen Schritte."
 msgid "Once every 5 minutes"
 msgstr "Einmal alle 5 Minuten"
 
-#: lets-encrypt/cron.php:80 security/cron.php:40
+#: lets-encrypt/cron.php:80 security/cron.php:48
 msgid "Once every day"
 msgstr "Einmal am Tag"
 
-#: lets-encrypt/cron.php:76
+#: lets-encrypt/cron.php:76 security/cron.php:52
 msgid "Once every week"
 msgstr "Einmal in der Woche"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1724
+#: lets-encrypt/class-letsencrypt-handler.php:1739
 #: lets-encrypt/integrations/cloudways/functions.php:22
-#: lets-encrypt/integrations/cpanel/functions.php:16
-#: lets-encrypt/integrations/cpanel/functions.php:33
+#: lets-encrypt/integrations/cpanel/functions.php:17
+#: lets-encrypt/integrations/cpanel/functions.php:35
 #: lets-encrypt/integrations/directadmin/functions.php:16
 #: lets-encrypt/integrations/plesk/functions.php:16
 msgid "The system is not ready for the installation yet. Please run the wizard again."
 msgstr "Das System ist noch nicht bereit für die Installation. Bitte führe den Assistenten erneut aus."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1719
+#: lets-encrypt/class-letsencrypt-handler.php:1734
 msgid "Installation failed."
 msgstr "Installation fehlgeschlagen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1714
+#: lets-encrypt/class-letsencrypt-handler.php:1729
 msgid "Not recognized server."
 msgstr "Nicht erkannter Server."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1688
+#: lets-encrypt/class-letsencrypt-handler.php:1703
 msgid "The certificate installation was rate limited. Please try again later."
 msgstr "Die Zertifikatsinstallation war ratenbegrenzt. Bitte versuche es später erneut."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1609
+#: lets-encrypt/class-letsencrypt-handler.php:1624
 msgid "Error code %s"
 msgstr "Fehlercode %s"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1592
+#: lets-encrypt/class-letsencrypt-handler.php:1607
 msgid "Please create a folder 'rsssl' in the uploads directory, with 644 permissions."
 msgstr "Bitte erstelle im Upload-Verzeichnis einen Ordner 'rsssl' mit 644 Berechtigungen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1591
+#: lets-encrypt/class-letsencrypt-handler.php:1606
 msgid "Could not create test folder and file."
 msgstr "Testordner und Datei konnten nicht erstellt werden."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1562
+#: lets-encrypt/class-letsencrypt-handler.php:1577
 msgid "If this is not the case, don't add this alias to your certificate."
 msgstr "Wenn dies nicht der Fall ist, füge diese Variante nicht zu deinem Zertifikat hinzu."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1562
+#: lets-encrypt/class-letsencrypt-handler.php:1577
 msgid "Could not verify alias domain."
 msgstr "Alias-Domain konnte nicht bestätigt werden."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1560
+#: lets-encrypt/class-letsencrypt-handler.php:1575
 msgid "Please check if the www version of your site also points to this website."
 msgstr "Bitte prüfe, ob die www-Version deiner Site auch auf diese Site verweist."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1558
+#: lets-encrypt/class-letsencrypt-handler.php:1573
 msgid "Please check if the non www version of your site also points to this website."
 msgstr "Bitte prüfe, ob die Nicht-www-Version deiner Site auch auf diese Site verweist."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1539
+#: lets-encrypt/class-letsencrypt-handler.php:1554
 msgid "Alias domain check is not relevant for a subdomain"
 msgstr "Alias-Domain-Check ist für eine Subdomain nicht relevant"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1509
+#: lets-encrypt/class-letsencrypt-handler.php:1524
 msgid "No subdomain setup detected."
 msgstr "Keine Subdomain-Einrichtung erkannt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1504
+#: lets-encrypt/class-letsencrypt-handler.php:1519
 msgid "This is a multisite configuration with subdomains, which requires a wildcard certificate. Wildcard certificates are part of the %spremium%s plan."
 msgstr "Dies ist eine Multisite-Konfiguration mit Subdomains, die ein Wildcard-Zertifikat erfordert. Wildcard-Zertifikate sind Teil des %sPremium%s-Plans."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1271
-#: lets-encrypt/class-letsencrypt-handler.php:1569
-#: lets-encrypt/class-letsencrypt-handler.php:1620
+#: lets-encrypt/class-letsencrypt-handler.php:1286
+#: lets-encrypt/class-letsencrypt-handler.php:1584
+#: lets-encrypt/class-letsencrypt-handler.php:1635
 msgid "Successfully verified alias domain."
 msgstr "Alias-Domain erfolgreich bestätigt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1260
-#: lets-encrypt/class-letsencrypt-handler.php:1264
+#: lets-encrypt/class-letsencrypt-handler.php:1275
+#: lets-encrypt/class-letsencrypt-handler.php:1279
 msgid "Error code %s."
 msgstr "Fehlercode %s."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1246
+#: lets-encrypt/class-letsencrypt-handler.php:1261
 msgid "Challenge directory not writable."
 msgstr "Challenge-Verzeichnis nicht beschreibbar."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1240
+#: lets-encrypt/class-letsencrypt-handler.php:1255
 msgid "Could not reach challenge directory over %s."
 msgstr "Das Challenge-Verzeichnis konnte über %s nicht erreicht werden."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1236
-#: lets-encrypt/class-letsencrypt-handler.php:1546
+#: lets-encrypt/class-letsencrypt-handler.php:1251
+#: lets-encrypt/class-letsencrypt-handler.php:1561
 msgid "no response"
 msgstr "keine Rückmeldung"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1177
+#: lets-encrypt/class-letsencrypt-handler.php:1192
 msgid "The certs directory was successfully created."
 msgstr "Das Verzeichnis \"certs\" wurde erfolgreich erstellt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1173
+#: lets-encrypt/class-letsencrypt-handler.php:1188
 msgid "The certs directory is not created yet."
 msgstr "Das Verzeichnis \"certs\" ist noch nicht erstellt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1158
+#: lets-encrypt/class-letsencrypt-handler.php:1173
 msgid "The key directory was successfully created."
 msgstr "Das Schlüsselverzeichnis wurde erfolgreich erstellt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1150
+#: lets-encrypt/class-letsencrypt-handler.php:1165
 msgid "Trying to create directory in root of website."
 msgstr "Versuche ein Verzeichnis im Stammverzeichnis der Website zu erstellen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1146
+#: lets-encrypt/class-letsencrypt-handler.php:1161
 msgid "The key directory is not created yet."
 msgstr "Das Schlüsselverzeichnis ist noch nicht angelegt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1133
+#: lets-encrypt/class-letsencrypt-handler.php:1148
 msgid "The challenge directory was successfully created."
 msgstr "Das Challenge-Verzeichnis wurde erfolgreich erstellt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1129
+#: lets-encrypt/class-letsencrypt-handler.php:1144
 msgid "The challenge directory is not created yet."
 msgstr "Das Challenge-Verzeichnis ist noch nicht erstellt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1086
+#: lets-encrypt/class-letsencrypt-handler.php:1101
 msgid "The required directories have the necessary writing permissions."
 msgstr "Die erforderlichen Verzeichnisse verfügen über die erforderlichen Schreibrechte."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1079
+#: lets-encrypt/class-letsencrypt-handler.php:1094
 msgid "Set permissions to 644 to enable SSL generation."
 msgstr "Lege die Berechtigungen auf 644 fest, um die SSL-Generierung zu aktivieren."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1079
+#: lets-encrypt/class-letsencrypt-handler.php:1094
 msgid "The following directories do not have the necessary writing permissions."
 msgstr "Die folgenden Verzeichnisse verfügen nicht über die erforderlichen Schreibrechte."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1063
+#: lets-encrypt/class-letsencrypt-handler.php:1078
 msgid "Please complete the following step(s) first: %s"
 msgstr "Bitte stelle zuerst den/die folgenden Schritt(e) fertig: %s"
 
-#: lets-encrypt/class-letsencrypt-handler.php:798
+#: lets-encrypt/class-letsencrypt-handler.php:813
 msgid "Order successfully retrieved."
 msgstr "Auftrag erfolgreich abgerufen."
 
-#: lets-encrypt/class-letsencrypt-handler.php:782
+#: lets-encrypt/class-letsencrypt-handler.php:797
 msgid "Order successfully created."
 msgstr "Auftrag erfolgreich erstellt."
 
@@ -1840,7 +1803,7 @@ msgid "Successfully verified DNS records"
 msgstr "Erfolgreich verifizierte DNS-Einträge"
 
 #: lets-encrypt/class-letsencrypt-handler.php:518
-#: lets-encrypt/integrations/cpanel/functions.php:45
+#: lets-encrypt/integrations/cpanel/functions.php:47
 msgid "Token not generated. Please complete the previous step."
 msgstr "Token nicht generiert. Bitte führe den vorherigen Schritt aus."
 
@@ -1933,43 +1896,44 @@ msgstr "Es ist nicht möglich, Let's Encrypt in einer Unterordnerkonfiguration z
 msgid "It is not possible to install Let's Encrypt on a subsite. Please go to the main site of your website."
 msgstr "Es ist nicht möglich, Let's Encrypt auf einer Unterwebsite zu installieren. Bitte gehe auf die Hauptseite deiner Website."
 
-#: class-admin.php:2198
+#: class-admin.php:2216
 msgid "You have the Really Simple SSL Let's Encrypt beta add-on activated. This functionality has now been integrated in core, so you can deactivate the add-on."
 msgstr "Du hast das Beta-Add-on Really Simple SSL Let's Encrypt aktiviert. Diese Funktionalität wurde nun in Core integriert, sodass du das Add-On deaktivieren kannst."
 
-#: class-admin.php:1983
+#: class-admin.php:2000 settings/build/index.js:382
+#: settings/src/Dashboard/TaskElement.js:55
 msgid "Re-check"
 msgstr "Erneut überprüfen"
 
-#: class-admin.php:1981
+#: class-admin.php:1998
 msgid "Depending on your hosting provider, %smanual installation%s may be required."
 msgstr "Abhängig von deinem Hosting-Provider kann eine %smanuelle Installation%s erforderlich sein."
 
-#: class-admin.php:1980
+#: class-admin.php:1997
 msgid "If your hosting provider auto-renews your certificate, no action is required. Alternatively, you have the option to generate an SSL certificate with Really Simple SSL."
 msgstr "Wenn dein Hosting-Provider dein Zertifikat automatisch verlängert, ist keine Aktion erforderlich. Alternativ hast du die Möglichkeit, mit Really Simple SSL ein SSL-Zertifikat zu generieren."
 
-#: class-admin.php:1980
+#: class-admin.php:1997
 msgid "SSL certificate will expire on %s."
 msgstr "Das SSL-Zertifikat läuft am %s ab."
 
-#: class-admin.php:1979
+#: class-admin.php:1996
 msgid "Your SSL certificate will expire soon."
 msgstr "Dein SSL-Zertifikat läuft bald ab."
 
-#: class-admin.php:1959
+#: class-admin.php:1976
 msgid "No SSL detected. Use the retry button to check again."
 msgstr "Kein SSL erkannt. Verwende die Schaltfläche „Wiederholen“, um dieses erneut zu prüfen."
 
-#: class-admin.php:1813
+#: class-admin.php:1830
 msgid "(Unknown)"
 msgstr "(Unbekannt)"
 
-#: class-admin.php:1960 class-admin.php:1968 class-admin.php:1982
+#: class-admin.php:1977 class-admin.php:1985 class-admin.php:1999
 msgid "Install SSL certificate"
 msgstr "SSL-Zertifikat installieren"
 
-#: class-admin.php:1961
+#: class-admin.php:1978
 msgid "Retry"
 msgstr "Wiederholen"
 
@@ -1977,27 +1941,27 @@ msgstr "Wiederholen"
 msgid "An SSL certificate has been detected"
 msgstr "Ein SSL-Zertifikat wurde erkannt"
 
-#: class-admin.php:2140
+#: class-admin.php:2157
 msgid "Or set your wp-config.php to writable and reload this page."
 msgstr "Oder setze deine wp-config.php auf beschreibbar und lade diese Seite neu."
 
-#: class-admin.php:2132
+#: class-admin.php:2149
 msgid "Add the following lines of code to your wp-config.php."
 msgstr "Füge die folgenden Zeilen Code in deine wp-config.php-Datei ein."
 
-#: class-admin.php:2132
+#: class-admin.php:2149
 msgid "To set the httponly secure cookie settings, your wp-config.php has to be edited, but the file is not writable."
 msgstr "Um die sicheren httponly Cookie-Einstellungen festzulegen, muss dein wp-config.php bearbeitet werden, aber die Datei ist nicht beschreibbar."
 
-#: class-admin.php:2125
+#: class-admin.php:2142
 msgid "HttpOnly Secure cookies not set."
 msgstr "HttpOnly-Sichere Cookies nicht gesetzt."
 
-#: class-admin.php:2185
+#: class-admin.php:2203
 msgid "Due to a recent update by WP Engine, we have changed your settings automatically to adapt."
 msgstr "Aufgrund eines kürzlichen Updates von WP Engine haben wir deine Einstellungen automatisch angepasst, um sie anzupassen."
 
-#: class-admin.php:1874
+#: class-admin.php:1891
 msgid "The Really Simple SSL plugin folder in the /wp-content/plugins/ directory has been renamed to %s. This might cause issues when deactivating, or with premium add-ons. To fix this you can rename the Really Simple SSL folder back to the default %s."
 msgstr "Der Really Simple SSL-Plugin-Ordner im Verzeichnis /wp-content/plugins/ wurde in %s umbenannt. Dies kann beim Deaktivieren oder bei Premium-Add-Ons zu Problemen führen. Um dies zu beheben, kannst du den Really Simple SSL-Ordner wieder in den Standard %s umbenennen."
 
@@ -2025,7 +1989,7 @@ msgstr "Sicherheits-Header-Test"
 msgid "SSL Status Test"
 msgstr "SSL-Status-Test"
 
-#: class-admin.php:1958
+#: class-admin.php:1975
 msgid "No SSL detected"
 msgstr "Kein SSL erkannt"
 
@@ -2057,100 +2021,99 @@ msgstr "Really Simple SSL hat ein SSL-Zertifikat erkannt, das aber nicht zur Ums
 msgid "SSL is not enabled."
 msgstr "SSL ist nicht eingeschaltet."
 
-#: class-admin.php:2622
+#: class-admin.php:2640
 msgid "Deactivate, revert to http"
 msgstr "Deaktivieren, zu „http“ zurückkehren"
 
-#: class-admin.php:2621
+#: class-admin.php:2639
 msgid "Deactivate, keep https"
 msgstr "Deaktivieren, „https“ beibehalten"
 
-#: class-admin.php:2609
+#: class-admin.php:2627
 msgid "The WordPress 301 redirect will stop working"
 msgstr "Die WordPress 301-Weiterleitung funktioniert nicht mehr"
 
-#: class-admin.php:2604
+#: class-admin.php:2622
 msgid "Deactivate, and revert to http. This will remove all changes by the plugin."
 msgstr "Deaktiviere die Funktion und kehre zu http zurück. Dies wird alle Änderungen durch das Plugin entfernen."
 
-#: class-admin.php:2603
+#: class-admin.php:2621
 msgid "Deactivate, but stay on SSL."
 msgstr "Deaktivieren, aber bei SSL bleiben."
 
-#: class-admin.php:2601
+#: class-admin.php:2619
 msgid "To deactivate the plugin correctly, please select if you want to:"
 msgstr "Um das Plugin korrekt zu deaktivieren, wähle aus, ob du das Plugin deaktivieren möchtest:"
 
-#: settings/config/config.php:298
+#: settings/config/config.php:296
 msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
 msgstr "Leitet alle Anfragen über HTTP an HTTPS um, indem eine PHP 301-Weiterleitung verwendet wird. Aktivieren, wenn die .htaccess-Weiterleitung nicht verwendet werden kann, beispielsweise auf NGINX-Servern."
 
-#: class-admin.php:1760
+#: class-admin.php:1777
 msgid "Open"
 msgstr "Offen"
 
-#: class-admin.php:1759 settings/build/index.js:382
-#: settings/src/Settings/MixedContentScan.js:198 settings/build/index.js:6536
+#: class-admin.php:1776 settings/build/index.js:382
+#: settings/src/Settings/MixedContentScan.js:198
 msgid "Warning"
 msgstr "Warnung"
 
-#: class-admin.php:1758
+#: class-admin.php:1775
 msgid "Completed"
 msgstr "Abgeschlossen"
 
-#: upgrade/upgrade-to-pro.php:182 settings/build/index.js:382
-#: settings/src/Dashboard/OtherPlugins.js:88 settings/build/index.js:2729
+#: upgrade/upgrade-to-pro.php:190 settings/build/index.js:382
+#: settings/src/Dashboard/OtherPlugins.js:88
 msgid "Installed"
 msgstr "Installiert"
 
-#: onboarding/config.php:128 upgrade/upgrade-to-pro.php:138
-#: upgrade/upgrade-to-pro.php:151 upgrade/upgrade-to-pro.php:168
+#: onboarding/config.php:128 upgrade/upgrade-to-pro.php:146
+#: upgrade/upgrade-to-pro.php:159 upgrade/upgrade-to-pro.php:176
 #: settings/build/index.js:382 settings/src/Dashboard/OtherPlugins.js:67
-#: settings/build/index.js:2708
 msgid "Install"
 msgstr "Installieren"
 
-#: settings/config/config.php:1165
+#: settings/config/config.php:1169
 msgid "Tips & Tricks"
 msgstr "Tipps & Tricks"
 
-#: class-admin.php:2104
+#: class-admin.php:2121
 msgid "Your site uses Divi. This can require some additional steps before getting the secure lock."
 msgstr "Deine Website verwendet Divi. Dies kann einige zusätzliche Schritte erfordern, bevor du das sichere Schloss erhältst."
 
-#: class-admin.php:2090
+#: class-admin.php:2107
 msgid "Your site uses Elementor. This can require some additional steps before getting the secure lock."
 msgstr "Deine Website verwendet Elementor. Dies kann einige zusätzliche Schritte erfordern, bevor du das sichere Schloss erhältst."
 
-#: class-admin.php:2075
+#: class-admin.php:2092
 msgid "The .htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on PHP redirect."
 msgstr "Die von diesem Plugin ausgewählten .htaccess-Redirect-Regeln sind im Test fehlgeschlagen. Manuell einstellen oder auf PHP-Weiterleitung verzichten."
 
-#: class-admin.php:2061
+#: class-admin.php:2078
 msgid "WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess redirect."
 msgstr "WordPress 301-Weiterleitung aktiviert. Wir empfehlen, eine 301 .htaccess-Umleitung zu aktivieren."
 
-#: class-admin.php:2018
+#: class-admin.php:2035
 msgid "Mixed content fixer not enabled. Enable the option to fix mixed content on your site."
 msgstr "Korrekturprogramm für gemischten Inhalt nicht aktiviert. Aktiviere die Option zur Korrektur von gemischtem Inhalt auf deiner Website."
 
-#: class-admin.php:2007
+#: class-admin.php:2024
 msgid "The mixed content fixer is active, but was not detected on the frontpage."
 msgstr "Der Mixed-Content-Fixer ist aktiv, wurde aber auf der Frontseite nicht erkannt."
 
-#: class-admin.php:2000
+#: class-admin.php:2017
 msgid "Really Simple SSL has received no response from the webpage."
 msgstr "Really Simple SSL hat keine Antwort von der Webseite erhalten."
 
-#: class-admin.php:1937
+#: class-admin.php:1954
 msgid "SSL is not enabled yet."
 msgstr "SSL ist noch nicht aktiviert."
 
-#: class-admin.php:1889
+#: class-admin.php:1906
 msgid "SSL is now activated. Check if your website is secure by following this article."
 msgstr "SSL ist jetzt aktiviert. Prüfe, ob deine Website sicher ist, indem du diesem Artikel folgst."
 
-#: class-admin.php:1798
+#: class-admin.php:1815
 msgid "No recommended redirect rules detected."
 msgstr "Es wurden keine empfohlenen Umleitungsregeln gefunden."
 
@@ -2170,8 +2133,8 @@ msgstr "Really Simple SSL kann nicht aktiviert werden. Das Plugin erfordert Word
 msgid "Really Simple SSL cannot be activated. The plugin requires PHP 7.2 or higher"
 msgstr "Really Simple SSL kann nicht aktiviert werden. Das Plugin erfordert PHP 7.2 oder höher"
 
-#: class-admin.php:2656 class-multisite.php:219 settings/build/index.js:382
-#: settings/src/Header.js:43 settings/build/index.js:3657
+#: class-admin.php:2674 class-multisite.php:219 settings/build/index.js:382
+#: settings/src/Header.js:46
 msgid "Support"
 msgstr "Unterstützung"
 
@@ -2181,8 +2144,7 @@ msgstr "SSL ist im gesamten Netzwerk aktiviert."
 
 #: class-site-health.php:201 settings/build/index.js:382
 #: settings/src/Dashboard/ProgressFooter.js:42
-#: settings/src/Onboarding/Onboarding.js:242 settings/build/index.js:2997
-#: settings/build/index.js:4871
+#: settings/src/Onboarding/Onboarding.js:242
 msgid "Activate SSL"
 msgstr "SSL aktivieren"
 
@@ -2212,7 +2174,7 @@ msgstr "SSL ist auf deiner Seite aktiviert."
 msgid "Really Simple Plugins"
 msgstr "Really Simple Plugins"
 
-#: class-admin.php:1594
+#: class-admin.php:1598
 msgid "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 msgstr "Hallo, Really Simple SSL schützt deine Website schon seit einiger Zeit. Großartig! Wenn du einen Moment Zeit hast, hinterlasse bitte eine Rezension auf WordPress.org, um diese zu verbreiten. Wir schätzen es sehr! Wenn du Fragen oder Rückmeldungen hast, hinterlasse uns eine %sNachricht%s."
 
@@ -2220,15 +2182,15 @@ msgstr "Hallo, Really Simple SSL schützt deine Website schon seit einiger Zeit.
 msgid "Check out Really Simple SSL Pro"
 msgstr "Teste Really Simple SSL Pro"
 
-#: class-admin.php:1604
+#: class-admin.php:1608
 msgid "Don't show again"
 msgstr "Nicht wieder anzeigen"
 
-#: class-admin.php:2024
+#: class-admin.php:2041
 msgid "The mixed content fixer could not be detected due to a cURL error: %s. cURL errors are often caused by an outdated version of PHP or cURL and don't affect the front-end of your site. Contact your hosting provider for a fix."
 msgstr "Der Mixed Content Fixer konnte aufgrund eines cURL-Fehlers nicht festgestellt werden: %s. cURL-Fehler werden oft durch eine veraltete Version von PHP oder cURL verursacht und betreffen nicht das Frontend deiner Website. Kontaktiere deinen Hosting-Anbieter für eine Lösung."
 
-#: class-admin.php:2012
+#: class-admin.php:2029
 msgid "Error occurred when retrieving the webpage."
 msgstr "Beim Abrufen der Webseite ist ein Fehler aufgetreten."
 
@@ -2248,36 +2210,36 @@ msgstr "Du hast eine 301 Umleitung auf SSL eingestellt. Dies ist für SEO-Zwecke
 msgid "301 SSL redirect enabled"
 msgstr "301 SSL-Umleitung aktiviert"
 
-#: class-admin.php:465 settings/build/index.js:382
-#: settings/src/Onboarding/Onboarding.js:269 settings/build/index.js:4898
+#: class-admin.php:467 settings/build/index.js:382
+#: settings/src/Onboarding/Onboarding.js:269
 msgid "Dismiss"
-msgstr "Ablehnen"
+msgstr "Verwerfen"
 
 #: onboarding/config.php:97
 msgid "Enable"
 msgstr "Aktivieren"
 
-#: class-admin.php:2056
+#: class-admin.php:2073
 msgid "301 redirect to https set: .htaccess redirect."
 msgstr "301 Umleitung auf https gesetzt: .htaccess Umleitung."
 
-#: class-admin.php:1859
+#: class-admin.php:1876
 msgid "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise your ssl can be deactivated by anyone on the internet."
 msgstr "Die Datei „force-deactivate.php\" muss in .txt umbenannt werden. Ansonsten kann dein ssl von jedem im Internet deaktiviert werden."
 
-#: security/cron.php:36
+#: security/cron.php:44
 msgid "Once every minute"
 msgstr "Einmal pro Minute"
 
-#: class-admin.php:1603
+#: class-admin.php:1607
 msgid "Maybe later"
 msgstr "Vielleicht später"
 
-#: class-admin.php:1602
+#: class-admin.php:1606
 msgid "Leave a review"
 msgstr "Eine Bewertung schreiben"
 
-#: class-admin.php:1596
+#: class-admin.php:1600
 msgid "Hi, Really Simple SSL has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 msgstr "Hallo, Really Simple SSL hat jetzt seit einem Monat deine Website gesichert, großartig! Wenn du einen Moment Zeit hast, denke bitte daran, eine Rezension auf WordPress.org zu hinterlassen, um deine Erfahrung zu teilen. Wir freuen uns sehr darüber! Wenn du irgendwelche Fragen oder eine Rückmeldung hast, hinterlasse uns eine %sNachricht%s."
 
@@ -2293,37 +2255,36 @@ msgstr "Dies führt zu Problemen, wenn SSL im gesamten Netzwerk aktiviert wird, 
 msgid "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
 msgstr "Du betreibst eine Multisite-Installation mit Subdomains, aber deine Website enthält kein Wildcard-Zertifikat."
 
-#: class-admin.php:2620 upgrade/upgrade-to-pro.php:362
+#: class-admin.php:2638 upgrade/upgrade-to-pro.php:370
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: class-admin.php:2611
+#: class-admin.php:2629
 msgid "The .htaccess redirect will remain active"
 msgstr "Die .htaccess-Weiterleitung bleibt aktiv"
 
-#: class-admin.php:2610
+#: class-admin.php:2628
 msgid "Your site address will remain https://"
 msgstr "Die Adresse deiner Website bleibt bei https://"
 
-#: class-admin.php:2608
+#: class-admin.php:2626
 msgid "The mixed content fixer will stop working"
 msgstr "Der Mixed Content Fixer wird nicht mehr funktionieren"
 
-#: class-admin.php:2606
+#: class-admin.php:2624
 msgid "Deactivating the plugin while keeping SSL will do the following:"
 msgstr "Deaktivierung des Plugin unter Beibehaltung von SSL wird folgendes tun:"
 
-#: class-admin.php:2590
+#: class-admin.php:2608
 msgid "Are you sure?"
 msgstr "Bist du sicher?"
 
-#: class-admin.php:467 settings/build/index.js:382
-#: settings/src/Dashboard/TaskElement.js:29 settings/src/Settings/Help.js:26
-#: settings/build/index.js:3598 settings/build/index.js:5812
+#: class-admin.php:469 settings/build/index.js:382
+#: settings/src/Dashboard/TaskElement.js:54 settings/src/Settings/Help.js:26
 msgid "More info"
 msgstr "Weitere Informationen"
 
-#: class-admin.php:104
+#: class-admin.php:105
 msgid "Really Simple SSL and Really Simple SSL add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" target=\"_blank\">here</a>."
 msgstr "Really Simple SSL und Really Simple SSL Add-ons verarbeiten keine personenbezogenen Daten, so dass die DSGVO bei diesen Plugins oder die Benutzung dieser Plugins auf deiner Website keine Anwendung findet. Du findest unsere Datenschutzerklärung <a href=\"%s\" target=\"_blank\">hier</a>."
 
@@ -2331,7 +2292,7 @@ msgstr "Really Simple SSL und Really Simple SSL Add-ons verarbeiten keine person
 msgid "https://really-simple-plugins.com"
 msgstr "https://really-simple-plugins.com"
 
-#: settings/config/config.php:332
+#: settings/config/config.php:330
 msgid "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer."
 msgstr "Wenn diese Option auf true gesetzt ist, wird der Mixed-Content-Fixer beim init-Hook anstelle des template_redirect-Hooks ausgelöst. Verwende diese Option nur, wenn du Probleme mit dem Fixer für gemischte Inhalte hast."
 
@@ -2349,19 +2310,19 @@ msgstr "Du musst Dich neu anmelden"
 msgid "Enable 301 .htaccess redirect"
 msgstr "Schalte einen 301 .htaccess redirect ein."
 
-#: class-admin.php:2041
+#: class-admin.php:2058
 msgid "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
 msgstr "Es ist kein 301 redirect eingeschaltet. Schalte einen Wordpress 301 redirect in den Einstellungen ein, um permanent einen 301 redirect zu erhalten"
 
-#: class-admin.php:2068
+#: class-admin.php:2085
 msgid "Enable a .htaccess redirect or PHP redirect in the settings to create a 301 redirect."
 msgstr "Aktiviere eine .htaccess-Umleitung oder eine PHP-Umleitung in den Einstellungen, um eine 301-Umleitung zu erstellen."
 
-#: class-admin.php:2073
+#: class-admin.php:2090
 msgid ".htaccess redirect."
 msgstr ".htaccess-Umleitung."
 
-#: class-admin.php:2037
+#: class-admin.php:2054
 msgid "301 redirect to https set."
 msgstr "301 umleiten zu HTTPS gesetzt."
 
@@ -2375,24 +2336,23 @@ msgstr "Premium Support"
 
 #: lets-encrypt/functions.php:350 lets-encrypt/functions.php:351
 #: settings/build/index.js:382 settings/src/Dashboard/GridBlock.js:93
-#: settings/src/Settings/SettingsGroup.js:93 settings/build/index.js:2626
-#: settings/build/index.js:7173
+#: settings/src/Settings/SettingsGroup.js:93
 msgid "Instructions"
 msgstr "Anleitungen"
 
-#: class-admin.php:1933
+#: class-admin.php:1950
 msgid "SSL is enabled on your site."
 msgstr "SSL ist derzeit auf der Website aktiv."
 
-#: class-admin.php:1822
+#: class-admin.php:1839
 msgid "Your wp-config.php has to be edited, but is not writable."
 msgstr "Deine wp-config.php muss bearbeitet werden. Sie ist jedoch nicht beschreibbar."
 
-#: class-admin.php:1823 class-admin.php:1844
+#: class-admin.php:1840 class-admin.php:1861
 msgid "Set your wp-config.php to writable and reload this page."
 msgstr "Setze deine wp-config.php auf beschreibbar und lade diese Seite neu."
 
-#: class-admin.php:1844
+#: class-admin.php:1861
 msgid "A definition of a site url or home url was detected in your wp-config.php, but the file is not writable."
 msgstr "In deiner wp-config.php wurde eine Definition einer Site-Url oder Home-Url gefunden, aber die Datei ist nicht beschreibbar."
 
@@ -2415,12 +2375,12 @@ msgstr "Vorbereitung für SSL-Migration fast abgeschlossen!"
 msgid "%s is a singleton class and you cannot create a second instance."
 msgstr "%s ist eine Singleton-Klasse und man kann keine zweite Instanz erschaffen."
 
-#: class-admin.php:1995
+#: class-admin.php:2012
 msgid "Mixed content fixer was successfully detected on the front-end."
 msgstr "Gemischte Inhalte Fixierer wurde erfolgreich auf dem Front-End-erkannt."
 
 #: settings/templates/tips-tricks-footer.php:3 settings/build/index.js:382
-#: settings/src/Header.js:39 settings/build/index.js:3653
+#: settings/src/Header.js:42
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -2432,11 +2392,11 @@ msgstr "https://really-simple-ssl.com"
 msgid "Really Simple SSL"
 msgstr "Really Simple SSL"
 
-#: settings/config/config.php:387
+#: settings/config/config.php:385
 msgid "Stop editing the .htaccess file"
 msgstr "Nicht in .htaccess-Datei eingreifen"
 
-#: class-admin.php:1974
+#: class-admin.php:1991
 msgid "An SSL certificate was detected on your site."
 msgstr "Es wurde ein SSL-Zertifikat auf deiner Website erkannt."
 
@@ -2444,15 +2404,14 @@ msgstr "Es wurde ein SSL-Zertifikat auf deiner Website erkannt."
 msgid "No SSL detected."
 msgstr "Kein SSL erkannt."
 
-#: class-admin.php:1707 class-admin.php:2648 class-admin.php:2651
+#: class-admin.php:1715 class-admin.php:2666 class-admin.php:2669
 #: class-multisite.php:87 class-multisite.php:216 settings/config/config.php:17
 #: settings/build/index.js:382
 #: settings/src/Dashboard/SecurityFeaturesBlock/SecurityFeaturesFooter.js:14
-#: settings/build/index.js:3112
 msgid "Settings"
 msgstr "Einstellung"
 
-#: settings/config/config.php:314
+#: settings/config/config.php:312
 msgid "Mixed content fixer"
 msgstr "Mixed Content Fixer"
 
@@ -2476,6 +2435,6 @@ msgstr "Da die Variable $_SERVER [\"HTTPS\"] nicht festgelegt ist, können auf D
 msgid "You run a Multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
 msgstr "Du hast eine Multisite-Installation mit Unterordnern, die verhindert, dass dieses Plugin fehlende Servervariablen in der wp-config.php setzt"
 
-#: class-admin.php:1860
+#: class-admin.php:1877
 msgid "Check again"
 msgstr "Noch einmal überprüfen"

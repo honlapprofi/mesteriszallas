@@ -12,6 +12,7 @@ class Cookie_Notice_Frontend {
 
 	private $is_bot = false;
 	private $hide_banner = false;
+	private $preview_mode = false;
 
 	/**
 	 * Class constructor.
@@ -20,8 +21,16 @@ class Cookie_Notice_Frontend {
 	 */
 	public function __construct() {
 		// actions
-		// add_action( 'plugins_loaded', [ $this, 'init_modules' ] );
 		add_action( 'init', [ $this, 'init' ] );
+	}
+
+	/**
+	 * Whether preview mode is active.
+	 *
+	 * @return bool
+	 */
+	public function is_preview_mode() {
+		return isset( $_GET['cn_preview_mode'] ) || is_preview() || is_customize_preview() || defined( 'IFRAME_REQUEST' ) || wp_is_json_request() || apply_filters( 'cn_is_preview_mode', false );
 	}
 
 	/**
@@ -40,7 +49,7 @@ class Cookie_Notice_Frontend {
 		$cn = Cookie_Notice();
 
 		// is it preview mode?
-		$this->preview_mode = isset( $_GET['cn_preview_mode'] );
+		$this->preview_mode = $this->is_preview_mode();
 
 		// is it a bot?
 		$this->is_bot = $cn->bot_detect->is_crawler();
@@ -57,6 +66,10 @@ class Cookie_Notice_Frontend {
 				add_action( 'send_headers', [ $this, 'add_compliance_http_header' ] );
 				add_action( 'wp_head', [ $this, 'add_cookie_compliance' ], 0 );
 
+				// elementor
+				if ( did_action( 'elementor/loaded' ) )
+					include_once( COOKIE_NOTICE_PATH . 'includes/modules/elementor/elementor.php' );
+
 				// autoptimize
 				if ( function_exists( 'autoptimize' ) )
 					include_once( COOKIE_NOTICE_PATH . 'includes/modules/autoptimize/autoptimize.php' );
@@ -71,12 +84,12 @@ class Cookie_Notice_Frontend {
 			} else {
 				// actions
 				add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_notice_scripts' ] );
-				add_filter( 'script_loader_tag', [ $this, 'wp_enqueue_script_async' ], 10, 3 );
 				add_action( 'wp_head', [ $this, 'wp_print_header_scripts' ] );
 				add_action( 'wp_print_footer_scripts', [ $this, 'wp_print_footer_scripts' ] );
 				add_action( 'wp_footer', [ $this, 'add_cookie_notice' ], 1000 );
 
 				// filters
+				add_filter( 'script_loader_tag', [ $this, 'wp_enqueue_script_async' ], 10, 3 );
 				add_filter( 'body_class', [ $this, 'change_body_class' ] );
 			}
 		}
@@ -88,6 +101,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function add_compliance_http_header() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		header( 'Access-Control-Allow-Origin: ' . Cookie_Notice()->get_url( 'host' ) );
 		header( 'Access-Control-Allow-Methods: GET' );
 	}
@@ -98,6 +114,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function add_cookie_compliance() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		// get main instance
 		$cn = Cookie_Notice();
 
@@ -155,6 +174,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function add_cookie_notice() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		// get main instance
 		$cn = Cookie_Notice();
 
@@ -268,6 +290,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function wp_enqueue_notice_scripts() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		// get main instance
 		$cn = Cookie_Notice();
 
@@ -321,6 +346,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function wp_print_footer_scripts() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		if ( Cookie_Notice()->cookies_accepted() ) {
 			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code'], Cookie_Notice()->get_allowed_html() ) ) ), 'body' );
 
@@ -335,6 +363,9 @@ class Cookie_Notice_Frontend {
 	 * @return void
 	 */
 	public function wp_print_header_scripts() {
+		if ( $this->is_preview_mode() )
+			return;
+
 		if ( Cookie_Notice()->cookies_accepted() ) {
 			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code_head'], Cookie_Notice()->get_allowed_html() ) ) ), 'head' );
 

@@ -1205,6 +1205,7 @@ class WPvivid {
         //start backup
         try
         {
+            $this->wpvivid_check_add_litespeed_server($task_id);
             $backup=new WPvivid_Backup();
 
             //$backup->clearcache();
@@ -1403,6 +1404,7 @@ class WPvivid {
         {
             WPvivid_mail_report::send_report_mail($task);
         }
+        $this->wpvivid_check_clear_litespeed_rule($task['id']);
     }
 
     function wpvivid_mark_task($task)
@@ -1472,6 +1474,7 @@ class WPvivid {
         WPvivid_Schedule::clear_monitor_schedule($task['id']);
         $this->add_clean_backing_up_data_event($task['id']);
         WPvivid_mail_report::send_report_mail($task);
+        $this->wpvivid_check_clear_litespeed_rule($task['id']);
     }
 
     public function deal_shutdown_error($task_id)
@@ -5569,6 +5572,7 @@ class WPvivid {
         $this->ajax_check_security();
         try {
             $files = WPvivid_error_log::get_error_log();
+            $staging_files = WPvivid_error_log::get_staging_error_log();
 
             if (!class_exists('PclZip'))
                 include_once(ABSPATH . '/wp-admin/includes/class-pclzip.php');
@@ -5583,6 +5587,13 @@ class WPvivid {
 
             if (!empty($files)) {
                 if (!$archive->add($files, PCLZIP_OPT_REMOVE_ALL_PATH)) {
+                    echo $archive->errorInfo(true) . ' <a href="' . admin_url() . 'admin.php?page=WPvivid">retry</a>.';
+                    exit;
+                }
+            }
+
+            if (!empty($staging_files)) {
+                if (!$archive->add($staging_files, PCLZIP_OPT_REMOVE_ALL_PATH)) {
                     echo $archive->errorInfo(true) . ' <a href="' . admin_url() . 'admin.php?page=WPvivid">retry</a>.';
                     exit;
                 }
@@ -6754,5 +6765,125 @@ class WPvivid {
             }
         }
         return $url;
+    }
+
+    public function wpvivid_check_add_litespeed_server($task_id)
+    {
+        $litespeed=false;
+        if ( isset( $_SERVER['HTTP_X_LSCACHE'] ) && $_SERVER['HTTP_X_LSCACHE'] )
+        {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['LSWS_EDITION'] ) && strpos( $_SERVER['LSWS_EDITION'], 'Openlitespeed' ) === 0 ) {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['SERVER_SOFTWARE'] ) && $_SERVER['SERVER_SOFTWARE'] == 'LiteSpeed' ) {
+            $litespeed=true;
+        }
+
+        if($litespeed)
+        {
+            if($this->wpvivid_log->log_file_handle==false)
+            {
+                $this->wpvivid_log->OpenLogFile(WPvivid_taskmanager::get_task_options($task_id,'log_file_name'));
+            }
+            $this->wpvivid_log->WriteLog('LiteSpeed Server.','notice');
+
+            if ( ! function_exists( 'got_mod_rewrite' ) )
+            {
+                require_once ABSPATH . 'wp-admin/includes/misc.php';
+            }
+
+            if(function_exists('insert_with_markers'))
+            {
+                if(!function_exists('get_home_path'))
+                    require_once(ABSPATH . 'wp-admin/includes/file.php');
+                $home_path     = get_home_path();
+                $htaccess_file = $home_path . '.htaccess';
+
+                if ( ( ! file_exists( $htaccess_file ) && is_writable( $home_path ) ) || is_writable( $htaccess_file ) )
+                {
+                    if ( got_mod_rewrite() )
+                    {
+                        $line[]='<IfModule Litespeed>';
+                        $line[]='RewriteEngine On';
+                        $line[]='RewriteRule .* - [E=noabort:1, E=noconntimeout:1]';
+                        $line[]='</IfModule>';
+                        insert_with_markers($htaccess_file,'WPvivid Rewrite Rule for LiteSpeed',$line);
+                        $this->wpvivid_log->WriteLog('Add LiteSpeed Rule','notice');
+                    }
+                    else
+                    {
+                        $this->wpvivid_log->WriteLog('mod_rewrite not found.','notice');
+                    }
+                }
+                else
+                {
+                    $this->wpvivid_log->WriteLog('.htaccess file not exists or not writable.','notice');
+                }
+            }
+            else
+            {
+                $this->wpvivid_log->WriteLog('insert_with_markers function not exists.','notice');
+            }
+        }
+    }
+
+    public function wpvivid_check_clear_litespeed_rule($task_id)
+    {
+        $litespeed=false;
+        if ( isset( $_SERVER['HTTP_X_LSCACHE'] ) && $_SERVER['HTTP_X_LSCACHE'] )
+        {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['LSWS_EDITION'] ) && strpos( $_SERVER['LSWS_EDITION'], 'Openlitespeed' ) === 0 ) {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['SERVER_SOFTWARE'] ) && $_SERVER['SERVER_SOFTWARE'] == 'LiteSpeed' ) {
+            $litespeed=true;
+        }
+
+        if($litespeed)
+        {
+            if($this->wpvivid_log->log_file_handle==false)
+            {
+                $this->wpvivid_log->OpenLogFile(WPvivid_taskmanager::get_task_options($task_id,'log_file_name'));
+            }
+            $this->wpvivid_log->WriteLog('LiteSpeed Server.','notice');
+
+            if ( ! function_exists( 'got_mod_rewrite' ) )
+            {
+                require_once ABSPATH . 'wp-admin/includes/misc.php';
+            }
+
+            if(function_exists('insert_with_markers'))
+            {
+                if(!function_exists('get_home_path'))
+                    require_once(ABSPATH . 'wp-admin/includes/file.php');
+                $home_path     = get_home_path();
+                $htaccess_file = $home_path . '.htaccess';
+
+                if ( ( ! file_exists( $htaccess_file ) && is_writable( $home_path ) ) || is_writable( $htaccess_file ) )
+                {
+                    if ( got_mod_rewrite() )
+                    {
+                        insert_with_markers($htaccess_file,'WPvivid Rewrite Rule for LiteSpeed','');
+                        $this->wpvivid_log->WriteLog('Clear LiteSpeed Rule','notice');
+                    }
+                    else
+                    {
+                        $this->wpvivid_log->WriteLog('mod_rewrite not found.','notice');
+                    }
+                }
+                else
+                {
+                    $this->wpvivid_log->WriteLog('.htaccess file not exists or not writable.','notice');
+                }
+            }
+            else
+            {
+                $this->wpvivid_log->WriteLog('insert_with_markers function not exists.','notice');
+            }
+        }
     }
 }

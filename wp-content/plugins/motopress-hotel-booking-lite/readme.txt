@@ -2,9 +2,9 @@
 Contributors: MotoPress
 Donate link: https://motopress.com/
 Requires at least: 4.7
-Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com, homeaway
+Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, airbnb, booking.com, homeaway, vrbo, tripadvisor, booking form, availability calendar, channel manager, property management system, vacation, travel
 Tested up to: 6.1
-Stable tag: 4.5.0
+Stable tag: 4.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,6 +158,9 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
 
+= 4.5.1, Dec 7 2022 =
+* Fixed an issue with calculating prices in the availability calendars for overlapping seasons.
+
 = 4.5.0, Nov 14 2022 =
 * Improved the color-coding for dates in the availability calendar to better show days unavailable for check-in or check-out. Note for developers: This update might affect styles of the availability calendar in your themes or projects. Please update your code.
 * Improved the color-coding for dates in the admin calendar to better show booked and blocked days.
@@ -178,28 +181,6 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 * Fixed an error with the availability search when one of the accommodations was blocked. Applies for REST API and the mobile app.
 * Improved compatibility with PHP 8.
 * Updated the minimum required version of PHP to 7.0.
-
-= 4.4.1, Aug 22 2022 =
-* Minor bugfixes and improvements.
-
-= 4.4.0, Aug 12 2022 =
-* Fixed a confusing message on the customer booking confirmation page, when a customer visits the latter from the confirmation email.
-* Fixed overlapping colors on pending, reserved, and imported bookings in the backend calendar.
-* Fixed an issue with the message about not filling the number of guests field on the checkout page when the children option is disabled.
-* Added a lost password link to the login form on checkout and account pages.
-* Fixed an error on the customer update in the old WordPress versions less than 5.6.8.
-* Fixed the visibility of the admin bar for the Booking Customer user role.
-* Fixed a PHP notice about undefined HTTP_REFERER in the account shortcode.
-* Fixed a PHP notice about undefined HTTP_REFERER in the checkout shortcode.
-* Fixed a fatal error on getting booking customer information when WordPress multisite installation has more than two databases.
-* Fixed switching to the default language of the booking cancelation page when a customer goes to it by link in the booking registration email.
-* Fixed a javascript error on the checkout page with the disabled Elementor and enabled "Open the Terms & Conditions page in a new window" option.
-* Fixed Total and Paid values in the booking export for bookings with an applied discount coupon.
-* Fixed a PHP notice in the earnings report.
-* Changed column order and added the Discount column to the booking export report.
-
-= 4.3.0, Jul 18 2022 =
-* Improved code for uploading files and checkout customer data processing in the extensions.
 
 --------
 

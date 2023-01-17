@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-30 11:15:07+0000\n"
+"PO-Revision-Date: 2023-01-09 09:46:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -507,18 +507,6 @@ msgstr "Všimli jsme si, že používáte Polylang společně s WooCommerce. Pro
 #: install/upgrade.php:91
 msgid "Before upgrading to %2$s, please upgrade to %1$s."
 msgstr "Než provedete aktualizaci na verzi %2$s, prosím aktualizujte na %1$s."
-
-#: modules/lingotek/lingotek.php:135
-msgid "When you activate your account, Lingotek will be able to get an accurate count of the number of words in your site. Then tell them which languages you wish to have them translated into."
-msgstr "Když aktivujete Váš účet, Lingotek bude moci získat přesný počet slov na Vaši webové stránce. Následně jim sdělte do kterého jazyka chcete překládat. "
-
-#: modules/lingotek/lingotek.php:132
-msgid "Do you need professional translations for your site?"
-msgstr "Potřebujete profesionální překlad pro Vaši webovou stránku?"
-
-#: modules/lingotek/lingotek.php:111
-msgid "If you're on a tight budget, looking for near-instant results, and are okay with less-than-perfect quality, machine translation is an excellent option."
-msgstr "Pokud máte nízký rozpočet, hledáte téměř okamžitý výsledek a nevadí Vám nedokonalá kvalita, strojový překlad je perfektní možnost."
 
 #. Author of the plugin
 msgid "WP SYNTEX"
@@ -1776,121 +1764,17 @@ msgstr "Přidá možnosti vícejazyčnosti do WordPressu"
 msgid "Polylang"
 msgstr "Polylang"
 
-#: modules/lingotek/lingotek.php:273
-msgid "Learn more..."
-msgstr "Zjistit více..."
-
-#: modules/lingotek/lingotek.php:150
-msgid "Do you need help creating glossaries and terminologies?"
-msgstr "Potřebujete pomoc s vytvářením slovníků a terminologií?"
-
-#: modules/lingotek/lingotek.php:149
-msgid "Do you have existing Translation Memories you would like to use?"
-msgstr "Již máte existující výrazy (Translation Memories) pro překlady které byste rádi použily?"
-
-#: modules/lingotek/lingotek.php:148
-msgid "Do you need customized workflows?"
-msgstr "Potřebujete speciální pracovní postupy?"
-
-#: modules/lingotek/lingotek.php:147
-msgid "Do you need someone to run your localization project?"
-msgstr "Potřebujete někoho pro správu překladu Vašeho projektu?"
-
-#: modules/lingotek/lingotek.php:146
-msgid "Start the process of getting extra services."
-msgstr "Zahájit proces pro získání extra služeb."
-
-#: modules/lingotek/lingotek.php:144
-msgid "Do you need help translating your site?"
-msgstr "Potřebujete pomoc při překladu Vaší stránky?"
-
-#: modules/lingotek/lingotek.php:143
-msgid "Need extra services?"
-msgstr "Potřebujete extra služby?"
-
-#: modules/lingotek/lingotek.php:136
-msgid "Once activated, click on the \"request translation bid\" and a certified translation project manager will contact you for a no-obligations translation bid."
-msgstr "Po aktivaci si budete moci zažádat o nezávaznou nabídku za překlad od certifikovaného překladatele, který Vás kontaktuje."
-
-#: modules/lingotek/lingotek.php:134
-msgid "Start the process of getting a professional translation bid."
-msgstr "Začněte dostávat nabídky za profesionální překlad."
-
-#: modules/lingotek/lingotek.php:131
-msgid "Professionally translate my site"
-msgstr "Profesionálně přeložit mojí stránku"
-
-#: modules/lingotek/lingotek.php:124
-msgid "Save and re-use previously translated material (leverage translation memory (TM))."
-msgstr "Uložit a znovu použít dříve přeložené materiály (využít Translation Memories (TM))."
-
-#: modules/lingotek/lingotek.php:123
-msgid "Have linguists compare side-by-side versions of original and translated text."
-msgstr "Zažádejte si o porovnání originálního a přeloženého textu lingvistou."
-
-#: modules/lingotek/lingotek.php:122
-msgid "Access an online translator workbench."
-msgstr "Přístup k online překladatelskému nástroji."
-
-#: modules/lingotek/lingotek.php:119
-msgid "Do you need to connect to a professional translation management system?"
-msgstr "Potřebujete spojit s profesionálním systémem pro správu překladů?"
-
-#: modules/lingotek/lingotek.php:118
-msgid "Translation Management System"
-msgstr "Systém pro správu překladů"
-
-#: modules/lingotek/lingotek.php:110 modules/lingotek/lingotek.php:121
-msgid "Access free machine translation for your site for up to 100,000 characters."
-msgstr "Přístup k bezplatném strojovému překladu pro Váši webovou stránku do 100 000 znaků."
-
-#: modules/lingotek/lingotek.php:108
-msgid "Polylang is now fully integrated with Lingotek!"
-msgstr "Polylang je nyní plně integrován s Lingotek!"
-
-#: modules/lingotek/lingotek.php:107
-msgid "Automatically translate my site"
-msgstr "Automaticky přeložit moji stránku"
-
-#: modules/lingotek/lingotek.php:104
-msgid "Polylang is now fully integrated with Lingotek, a professional translation management system!"
-msgstr "Polylang je nyní plně integrován s Lingotek, profesionálním systémem pro správu překladů!"
-
-#: modules/lingotek/lingotek.php:97
-msgid "Request Services"
-msgstr "Zažádat o služby"
-
-#: modules/lingotek/lingotek.php:91
-msgid "Request Translation"
-msgstr "Požádat o překlad"
-
-#: modules/lingotek/lingotek.php:86 settings/settings-module.php:132
+#: settings/settings-module.php:132
 msgid "Activate"
 msgstr "Aktivovat"
 
-#: modules/lingotek/lingotek.php:86 settings/settings-module.php:134
+#: settings/settings-module.php:134
 msgid "Activated"
 msgstr "Aktivováno"
-
-#: modules/lingotek/lingotek.php:47
-msgid "Activate Lingotek"
-msgstr "Aktivovat Lingotek"
-
-#: modules/lingotek/lingotek.php:42
-msgid "Click on Activate Lingotek to start translating."
-msgstr "Pro spuštění překladu, klikněte na Aktivovat Lingotek."
-
-#: modules/lingotek/lingotek.php:38
-msgid "Learn more"
-msgstr "Více informací"
 
 #: settings/settings-licenses.php:43
 msgid "Close"
 msgstr "Zavřít"
-
-#: modules/lingotek/lingotek.php:33
-msgid "You’ve just upgraded to the latest version of Polylang! Would you like to automatically translate your website for free?"
-msgstr "Právě jste provedli aktualizaci na poslední verze Polylang! Chtěli byste automaticky a zdarma přeložit Vaši webovou stránku?"
 
 #: install/upgrade.php:88
 msgid "Polylang has been deactivated because you upgraded from a too old version."
@@ -2242,11 +2126,11 @@ msgstr "O Polylangu"
 msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
 msgstr "Jazyk byl vytvořen, ale WordPress jazykový soubor nebyl stažen. Prosím, nainstalujte jej manuálně."
 
-#: admin/admin-base.php:495 admin/admin-base.php:513
+#: admin/admin-base.php:493 admin/admin-base.php:511
 msgid "Filters content by language"
 msgstr "Filtruje obsah podle jazyka"
 
-#: admin/admin-base.php:486
+#: admin/admin-base.php:484
 msgid "Show all languages"
 msgstr "Zobrazit všechny jazyky"
 

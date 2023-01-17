@@ -109,9 +109,9 @@ class Cookie_Notice_Dashboard {
 		$date_format = get_option( 'date_format' );
 
 		if ( is_multisite() && $cn->is_network_admin() && $cn->is_plugin_network_active() && $cn->network_options['global_override'] )
-			$analytics = get_site_option( 'cookie_notice_app_analytics' );
+			$analytics = get_site_option( 'cookie_notice_app_analytics', [] );
 		else
-			$analytics = get_option( 'cookie_notice_app_analytics' );
+			$analytics = get_option( 'cookie_notice_app_analytics', [] );
 
 		// styles
 		wp_enqueue_style( 'cn-admin-dashboard', COOKIE_NOTICE_URL . '/css/admin-dashboard.css', [], $cn->defaults['version'] );
@@ -373,9 +373,9 @@ class Cookie_Notice_Dashboard {
 
 				// get analytics data options
 				if ( is_multisite() && $cn->is_network_admin() && $cn->is_plugin_network_active() && $cn->network_options['global_override'] )
-					$analytics = get_site_option( 'cookie_notice_app_analytics' );
+					$analytics = get_site_option( 'cookie_notice_app_analytics', [] );
 				else
-					$analytics = get_option( 'cookie_notice_app_analytics' );
+					$analytics = get_option( 'cookie_notice_app_analytics', [] );
 
 				// thirty days data
 				$thirty_days_usage = [

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Rank Math SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-22 20:18:05+0000\n"
+"PO-Revision-Date: 2022-12-30 16:16:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,184 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: cs_CZ\n"
 "Project-Id-Version: Plugins - Rank Math SEO - Stable (latest release)\n"
+
+#: includes/modules/schema/blocks/toc/block.json
+msgctxt "block description"
+msgid "Automatically generate the Table of Contents from the Headings added to this page."
+msgstr "Automatické generování Obsahu z nadpisů přidaných na tuto stránku."
+
+#: includes/modules/schema/blocks/toc/block.json
+msgctxt "block title"
+msgid "Table of Contents by Rank Math"
+msgstr "Obsah podle pořadí Matematika"
+
+#: includes/modules/schema/blocks/views/options-general.php:51
+msgid "Heading H6"
+msgstr "Nadpis H6"
+
+#: includes/modules/schema/blocks/views/options-general.php:50
+msgid "Heading H5"
+msgstr "Nadpis H5"
+
+#: includes/modules/schema/blocks/views/options-general.php:49
+msgid "Heading H4"
+msgstr "Nadpis H4"
+
+#: includes/modules/schema/blocks/views/options-general.php:48
+msgid "Heading H3"
+msgstr "Nadpis H3"
+
+#: includes/modules/schema/blocks/views/options-general.php:47
+msgid "Heading H2"
+msgstr "Nadpis H2"
+
+#: includes/modules/schema/blocks/views/options-general.php:46
+msgid "Heading H1"
+msgstr "Nadpis H1"
+
+#: includes/modules/schema/blocks/views/options-general.php:43
+msgid "Choose the headings to exclude from the Table of Contents block."
+msgstr "Vyberte nadpisy, které chcete z bloku Obsah vyloučit."
+
+#: includes/modules/schema/blocks/views/options-general.php:42
+msgid "Table of Contents Exclude Headings"
+msgstr "Vyloučené nadpisy Obsahu"
+
+#: includes/modules/schema/blocks/views/options-general.php:29
+msgid "Select the default list style for the Table of Contents block."
+msgstr "Vyberte výchozí styl seznamů pro blok Obsahu."
+
+#: includes/modules/schema/blocks/views/options-general.php:28
+msgid "Table of Contents List style"
+msgstr "Styly seznamů Obsahu"
+
+#: includes/modules/schema/blocks/views/options-general.php:20
+#: includes/modules/schema/blocks/toc/assets/js/index.js:1
+#: includes/modules/schema/blocks/toc/assets/src/edit.js:104
+msgid "Table of Contents"
+msgstr "Obsah"
+
+#: includes/modules/schema/blocks/views/options-general.php:18
+msgid "Enter the default title to use for the Table of Contents block."
+msgstr "Zadejte výchozí název, který se má použít pro blok Obsah."
+
+#: includes/modules/schema/blocks/views/options-general.php:17
+msgid "Table of Contents Title"
+msgstr "Název Obsahu"
+
+#: includes/modules/schema/blocks/class-admin.php:47
+msgid "Take control over the default settings available for Rank Math Blocks."
+msgstr "Převezměte kontrolu nad výchozími nastaveními dostupnými pro bloky Rank Math Blocks."
+
+#: includes/modules/schema/blocks/class-admin.php:46
+msgid "Blocks"
+msgstr "Bloky"
+
+#: includes/modules/database-tools/class-database-tools.php:406
+msgid "Are you sure you want to convert AIOSEO blocks into Rank Math blocks? This action is irreversible."
+msgstr "Jste si jisti, že chcete převést bloky AIOSEO na bloky Rank Math? Tato akce je nevratná."
+
+#: includes/modules/database-tools/class-database-tools.php:404
+msgid "AIOSEO Block Converter"
+msgstr "Převodník bloků AIOSEO"
+
+#: includes/modules/sitemap/settings/taxonomies.php:32
+msgid "Include archive pages for terms of this taxonomy in the HTML sitemap."
+msgstr "Zahrňte archivní stránky pro termíny této taxonomie do mapy stránek HTML."
+
+#: includes/modules/sitemap/settings/post-types.php:46
+msgid "Include this post type in the HTML sitemap if it's enabled."
+msgstr "Zahrňte tento typ příspěvku do mapy stránek HTML, pokud je povolen."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:129
+msgid "SEO Titles"
+msgstr "SEO Názvy"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:126
+msgid "Show the post/term titles, or the SEO titles in the HTML sitemap."
+msgstr "Zobrazit názvy příspěvků/termínů nebo názvy SEO v mapě stránek HTML."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:125
+#: includes/modules/sitemap/settings/html-sitemap.php:128
+msgid "Item Titles"
+msgstr "Názvy položek"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:115
+msgid "Show published dates for each post & page."
+msgstr "Zobrazit data zveřejnění pro každý příspěvek a stránku."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:114
+msgid "Show Dates"
+msgstr "Zobrazit datumy"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:102
+msgid "Alphabetical"
+msgstr "Abecedně"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:97
+msgid "Choose how you want to sort the items in the HTML sitemap."
+msgstr "Zvolte, jak chcete položky v mapě webu HTML seřadit."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:96
+msgid "Sort By"
+msgstr "Seřadit podle"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:86
+msgid "Select a page"
+msgstr "Vyberte stránku"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:77
+msgid "Select the page to display the HTML sitemap. Once the settings are saved, the sitemap will be displayed below the content of the selected page."
+msgstr "Vyberte stránku, na které se zobrazí mapa stránek HTML. Po uložení nastavení se mapa stránek zobrazí pod obsahem vybrané stránky."
+
+#. translators: link to the selected page
+#: includes/modules/sitemap/settings/html-sitemap.php:66
+msgid "Selected page: <a href=\"%s\" target=\"_blank\" class=\"rank-math-selected-page\">%s</a>"
+msgstr "Vybraná stránka <a href=\"%s\" target=\"_blank\" class=\"rank-math-selected-page\">%s</a>"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:59
+msgid "Selected page: "
+msgstr "Vybraná stránka: "
+
+#: includes/modules/sitemap/settings/html-sitemap.php:43
+msgid "Use this shortcode to display the HTML sitemap."
+msgstr "Pomocí tohoto zkratkového kódu zobrazíte mapu webu ve formátu HTML."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:28
+msgid "Choose how you want to display the HTML sitemap."
+msgstr "Zvolte, jak chcete zobrazit mapu webu HTML."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:27
+msgid "Display Format"
+msgstr "Zobrazený formát"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:18
+msgid "Enable the HTML sitemap."
+msgstr "Povolte mapu stránek HTML."
+
+#: includes/modules/sitemap/settings/authors.php:39
+msgid "Include author archives in the HTML sitemap if it's enabled."
+msgstr "Zahrnout archivy autorů do mapy stránek HTML, pokud je povolena."
+
+#: includes/modules/sitemap/settings/authors.php:38
+#: includes/modules/sitemap/settings/post-types.php:45
+#: includes/modules/sitemap/settings/taxonomies.php:31
+msgid "Include in HTML Sitemap"
+msgstr "Zahrnout do mapy stránek HTML"
+
+#: includes/modules/sitemap/settings/authors.php:29
+msgid "Include author archives in the XML sitemap."
+msgstr "Zahrnout archivy autorů do mapy stránek XML."
+
+#: includes/modules/sitemap/class-admin.php:81
+msgid "This tab contains settings related to the HTML sitemap."
+msgstr "Tato karta obsahuje nastavení týkající se mapy webu HTML."
+
+#: includes/admin/importers/class-aioseo.php:469
+#: includes/modules/sitemap/class-admin.php:79
+#: includes/modules/sitemap/settings/html-sitemap.php:17
+msgid "HTML Sitemap"
+msgstr "Mapa stránek HTML"
 
 #: includes/admin/class-options.php:300
 msgid "Ctrl/Cmd + Enter"
@@ -68,7 +246,7 @@ msgstr "Výstupní seznam výrazů z primární taxonomie přiřazené k aktuál
 msgid "Primary Terms"
 msgstr "Primární výrazy"
 
-#: includes/modules/database-tools/class-database-tools.php:404
+#: includes/modules/database-tools/class-database-tools.php:440
 msgid "Update SEO Scores"
 msgstr "Aktualizovat skóre SEO"
 
@@ -85,27 +263,27 @@ msgstr "Vypočtěte skóre SEO"
 msgid "Recalculating scores for posts %1$s - %2$s... "
 msgstr "Přepočítání skóre u příspěvků %1$s - %2$s… "
 
-#: includes/modules/database-tools/class-update-score.php:277
+#: includes/modules/database-tools/class-update-score.php:282
 msgid "The SEO Scores have been recalculated successfully!"
 msgstr "Skóre SEO bylo úspěšně přepočítáno!"
 
-#: includes/modules/database-tools/class-update-score.php:269
+#: includes/modules/database-tools/class-update-score.php:274
 msgid "Calculated:"
 msgstr "Vypočítáno:"
 
-#: includes/modules/database-tools/class-update-score.php:265
+#: includes/modules/database-tools/class-update-score.php:270
 msgid "This process may take a while. Please keep this window open until the process is complete."
 msgstr "Tento proces může chvíli trvat. Nechte toto okno otevřené, dokud nebude proces dokončen."
 
-#: includes/modules/database-tools/class-update-score.php:264
+#: includes/modules/database-tools/class-update-score.php:269
 msgid "Recalculating SEO Scores"
 msgstr "Přepočítává se SEO skóre"
 
-#: includes/modules/database-tools/class-database-tools.php:406
+#: includes/modules/database-tools/class-database-tools.php:442
 msgid "Recalculate Scores"
 msgstr "Přepočítat skóre"
 
-#: includes/modules/database-tools/class-database-tools.php:405
+#: includes/modules/database-tools/class-database-tools.php:441
 msgid "This tool will calculate the SEO score for the posts/pages that have a Focus Keyword set. Note: This process may take some time and the browser tab must be kept open while it is running."
 msgstr "Tento nástroj vypočítá skóre SEO pro příspěvky/stránky, které mají nastavené klíčové slovo. Poznámka: Tento proces může nějakou dobu trvat a během jeho provádění musí zůstat karta prohlížeče otevřena."
 
@@ -114,11 +292,11 @@ msgstr "Tento nástroj vypočítá skóre SEO pro příspěvky/stránky, které 
 msgid "<strong>Min Size: 112Χ112px</strong>.<br /> A squared image is preferred by the search engines."
 msgstr "<strong>Minimální velikost: 112Χ112px</strong>.<br /> Vyhledávače upřednostňují čtvercový obrázek."
 
-#: includes/module/class-manager.php:426
+#: includes/module/class-manager.php:427
 msgid "PRO options are enabled."
 msgstr "Možnosti PRO povoleny."
 
-#: includes/module/class-manager.php:421
+#: includes/module/class-manager.php:422
 msgid "More powerful options are available in the PRO version."
 msgstr "Výkonnější možnosti jsou k dispozici ve verzi PRO."
 
@@ -156,7 +334,7 @@ msgid "<strong>Min Size: 112Χ112px</strong>.<br />A squared image is preferred 
 msgstr "<strong>Minimální velikost: 112Χ112px</strong>.<br />Vyhledávače upřednostňují čtvercový obrázek."
 
 #. translators: Link to kb article
-#: includes/modules/content-ai/class-content-ai.php:105
+#: includes/modules/content-ai/class-content-ai.php:106
 msgid "Get sophisticated AI suggestions for related Keywords, Questions & Links to include in the SEO meta & Content Area. %s."
 msgstr "Získejte sofistikované návrhy umělé inteligence na související klíčová slova, otázky a odkazy, které můžete zahrnout do obsahu a metadat SEO. %s."
 
@@ -249,17 +427,9 @@ msgid "To configure meta tags for your media attachment pages, you need to first
 msgstr "Chcete-li nakonfigurovat meta značky pro stránky s přílohami médií, musíte nejprve %s nastavit jako rodiče."
 
 #. translators: %1$s: opening tag of the link, %2$s: the closing tag
-#: includes/modules/seo-analysis/seo-analysis-tests.php:490
+#: includes/modules/seo-analysis/seo-analysis-tests.php:506
 msgid "Navigate to %1$sSettings > Reading%2$s and turn off this option: \"Discourage search engines from indexing this site\"."
 msgstr "Přejděte do %1$sNastavení > Zobrazování%2$s a tuto možnost vypněte: “Zakázat prohledávání a indexování obsahu webu”."
-
-#: includes/modules/seo-analysis/class-seo-analyzer.php:278
-msgid "Click here to learn more"
-msgstr "Pro více informací klikněte zde"
-
-#: includes/modules/seo-analysis/class-seo-analyzer.php:278
-msgid "The Site-Wide Analysis is unavailable on localhost."
-msgstr "Analýza celého webu není na místním spuštění k dispozici."
 
 #: includes/admin/wizard/views/compatibility.php:116
 msgid "Base64 encode &amp; decode functions missing"
@@ -286,15 +456,15 @@ msgstr "Zkuste se znovu připojit."
 msgid "Unable to validate Rank Math SEO registration data."
 msgstr "Nelze ověřit registrační údaje Rank Math SEO."
 
-#: includes/modules/database-tools/class-database-tools.php:361
+#: includes/modules/database-tools/class-database-tools.php:387
 msgid "Fix Collations"
 msgstr "Opravit porovnávání"
 
-#: includes/modules/database-tools/class-database-tools.php:360
+#: includes/modules/database-tools/class-database-tools.php:386
 msgid "In some cases, the Analytics database tables or columns don't match with each other, which can cause database errors. This tool can fix that issue."
 msgstr "V některých případech se tabulky nebo sloupce databáze Analytik navzájem neshodují, což může způsobit chyby v databázi. Tento nástroj může tento problém odstranit."
 
-#: includes/modules/database-tools/class-database-tools.php:359
+#: includes/modules/database-tools/class-database-tools.php:385
 msgid "Fix Analytics table collations"
 msgstr "Oprava srovnávání tabulek Analytik"
 
@@ -351,7 +521,7 @@ msgstr "Panel statistik na popředí"
 msgid "Database Table: Inspections"
 msgstr "Databázová tabulka: Inspekce"
 
-#: includes/modules/analytics/google/class-request.php:269
+#: includes/modules/analytics/google/class-request.php:327
 msgid "Unknown error, call get_response() to find out what happened."
 msgstr "Neznámá chyba, zavolejte get_response() a zjistěte, co se stalo."
 
@@ -510,7 +680,7 @@ msgstr "Automaticky"
 
 #: includes/modules/instant-indexing/views/history.php:13
 msgid "Manual"
-msgstr "Manuálně"
+msgstr "Manuální"
 
 #: includes/modules/instant-indexing/views/history.php:12
 msgid "Clear History"
@@ -632,33 +802,33 @@ msgstr "Rozhraní API služby IndexNow"
 msgid "Directly notify search engines like Bing & Yandex using the %s when pages are added, updated and removed, or submit URLs manually."
 msgstr "Přímo informujte vyhledávače, jako je Bing & Yandex, pomocí %s, když jsou stránky přidány, aktualizovány a odstraněny, nebo odešlete adresy URL ručně."
 
-#: includes/module/class-manager.php:534
+#: includes/module/class-manager.php:535
 msgid "Buy"
 msgstr "Koupit"
 
-#: includes/module/class-manager.php:530
+#: includes/module/class-manager.php:531
 msgid "24/7 Support"
 msgstr "Podpora 24/7"
 
 #: includes/admin/class-pro-notice.php:218
 #: includes/admin/class-pro-notice.php:237
-#: includes/module/class-manager.php:529
+#: includes/module/class-manager.php:530
 msgid "Powerful Schema Generator"
 msgstr "Výkonný generátor schémat"
 
-#: includes/module/class-manager.php:528
+#: includes/module/class-manager.php:529
 msgid "Track 500 Keywords"
 msgstr "Sledujte 500 klíčových slov"
 
-#: includes/module/class-manager.php:527
+#: includes/module/class-manager.php:528
 msgid "Free 15 Content AI Credits"
 msgstr "15 kreditů zdarma pro Obsahovou AI"
 
-#: includes/module/class-manager.php:526
+#: includes/module/class-manager.php:527
 msgid "Unlimited personal websites"
 msgstr "Neomezený počet osobních webů"
 
-#: includes/module/class-manager.php:524
+#: includes/module/class-manager.php:525
 msgid "Take SEO to the Next Level!"
 msgstr "Pozvedněte SEO na vyšší úroveň!"
 
@@ -718,7 +888,7 @@ msgstr "Doba čtení"
 msgid "Written by"
 msgstr "Napsal/a:"
 
-#: includes/modules/sitemap/class-admin.php:219
+#: includes/modules/sitemap/class-admin.php:228
 msgid "Exclude this attachment from sitemap"
 msgstr "Vyloučit tuto přílohu/obrázek z mapy stránek"
 
@@ -739,6 +909,11 @@ msgstr "URL pro získání značek HTML."
 #: includes/modules/content-ai/assets/js/content-ai.js:1
 msgid "Click to refresh the available credits."
 msgstr "Klikněte pro obnovu dostupných kreditů."
+
+#: includes/modules/seo-analysis/class-admin.php:54
+#: includes/modules/content-ai/assets/js/content-ai.js:1
+msgid "New!"
+msgstr "Nové!"
 
 #. translators: 1. Credits left 2. Buy more credits link
 #: includes/modules/content-ai/views/options.php:52
@@ -777,15 +952,15 @@ msgstr "U tohoto typu příspěvku není povolena Obsahová AI."
 msgid "Sorry, only authenticated users can research the keyword."
 msgstr "Je nám líto, ale klíčové slovo mohou vyhledávat pouze ověření uživatelé."
 
-#: includes/modules/content-ai/class-content-ai.php:127
+#: includes/modules/content-ai/class-content-ai.php:128
 msgid "Rank Math Content AI"
 msgstr "Rank Math Obsahová AI"
 
-#: includes/module/class-manager.php:412
+#: includes/module/class-manager.php:413
 msgid "NEW!"
 msgstr "NOVÉ!"
 
-#: includes/module/class-manager.php:378
+#: includes/module/class-manager.php:379
 msgid "You cant access this page."
 msgstr "Na tuto stránku nemáte přístup."
 
@@ -794,7 +969,7 @@ msgid "Get sophisticated AI suggestions for related Keywords, Questions & Links 
 msgstr "Získejte sofistikované návrhy umělé inteligence na související klíčová slova, otázky a odkazy, které můžete zahrnout do oblasti SEO meta a obsahu. Podporuje více než 80 zemí."
 
 #: includes/module/class-manager.php:176
-#: includes/modules/content-ai/class-content-ai.php:103
+#: includes/modules/content-ai/class-content-ai.php:104
 #: includes/modules/role-manager/class-capability-manager.php:70
 #: includes/modules/content-ai/assets/js/content-ai.js:1
 msgid "Content AI"
@@ -972,7 +1147,7 @@ msgstr "Alžírsko"
 msgid "Automatically capitalize the first character of each word in the titles."
 msgstr "Automaticky psát velké první písmeno každého slova v názvech."
 
-#: includes/modules/sitemap/class-admin.php:313
+#: includes/modules/sitemap/class-admin.php:322
 msgid "I already added"
 msgstr "Již jsem přidal"
 
@@ -1010,7 +1185,7 @@ msgstr "Pokud není pro jednotlivé příspěvky/stránky/CPT nastaven doporuče
 msgid "Uploaded file could not be read."
 msgstr "Nahraný soubor nelze přečíst."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:295
+#: includes/modules/seo-analysis/seo-analysis-tests.php:311
 msgid "Could not check Focus Keywords in posts - the post meta table exceeds the size limit."
 msgstr "Nelze zkontrolovat Klíčová slova v příspěvcích - meta tabulka příspěvku přesahuje limit velikosti."
 
@@ -1019,7 +1194,8 @@ msgid "Toggle All"
 msgstr "Přepnout vše"
 
 #. Translators: placeholder is the number of modified posts.
-#: includes/modules/database-tools/class-yoast-blocks.php:85
+#: includes/modules/database-tools/class-aioseo-blocks.php:78
+#: includes/modules/database-tools/class-yoast-blocks.php:92
 msgid "Blocks successfully converted in %d post."
 msgid_plural "Blocks successfully converted in %d posts."
 msgstr[0] "Blok úspěšně převeden v %d příspěvek."
@@ -1089,23 +1265,23 @@ msgstr "Tato akce je NEVRATNÁ."
 msgid "CAUTION:"
 msgstr "POZOR:"
 
-#: includes/modules/database-tools/class-database-tools.php:397
+#: includes/modules/database-tools/class-database-tools.php:433
 msgid "Are you sure you want to delete the old schema data? This action is irreversible."
 msgstr "Jste si jisti, že chcete odstranit stará data schématu? Tato akce je nevratná."
 
-#: includes/modules/database-tools/class-database-tools.php:396
+#: includes/modules/database-tools/class-database-tools.php:432
 msgid "Delete the schema data from the old format (<1.0.48). Note: This process is irreversible and will delete all the metadata prefixed with rank_math_snippet."
 msgstr "Odstranění dat schématu ze starého formátu (<1.0.48). Poznámka: Tento proces je nevratný a odstraní všechna metadata s předponou rank_math_snippet."
 
-#: includes/modules/database-tools/class-database-tools.php:395
+#: includes/modules/database-tools/class-database-tools.php:431
 msgid "Delete Old Schema Data"
 msgstr "Odstranění starých dat Schema"
 
-#: includes/modules/database-tools/class-database-tools.php:299
+#: includes/modules/database-tools/class-database-tools.php:325
 msgid "Deletion started. A success message will be shown here once the process completes. You can close this page."
 msgstr "Zahájení mazání. Po dokončení procesu se zde zobrazí zpráva o úspěchu. Tuto stránku můžete zavřít."
 
-#: includes/modules/database-tools/class-database-tools.php:293
+#: includes/modules/database-tools/class-database-tools.php:319
 msgid "No data found to delete."
 msgstr "Nebyla nalezena žádná data, která by bylo možné odstranit."
 
@@ -1184,7 +1360,7 @@ msgid "Receive periodic SEO Performance reports via email. Once enabled and opti
 msgstr "Dostávejte pravidelné zprávy o výkonnosti SEO e-mailem. Po aktivaci a uložení možností si můžete prohlédnout náhled %1$s zde%2$s."
 
 #. Translators: placeholder is the post type name.
-#: includes/modules/sitemap/class-sitemap.php:130
+#: includes/modules/sitemap/class-sitemap.php:132
 msgid "Rank Math has detected a new post type: %1$s. You may want to check the settings of the <a href=\"%2$s\">Titles &amp; Meta page</a> and <a href=\"%3$s\">the Sitemap</a>."
 msgstr "Nástroj Rank Math zjistil nový typ příspěvku: %1$s. Měli byste zkontrolovat nastavení stránky <a href=\"%2$s\">Tituly &amp; Meta</a> a <a href=\"%3$s\">Mapu stránek</a>."
 
@@ -1226,12 +1402,12 @@ msgstr "Nástroj Rank Math zjistil nový typ příspěvku: %1$s. Možná budete 
 msgid "Import all the redirections you have already set up in Yoast Premium."
 msgstr "Importujte všechna přesměrování, která jste již nastavili v aplikaci Yoast Premium."
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:312
-msgid "Rank Math SEO Analysis error: "
+#: includes/modules/seo-analysis/class-seo-analyzer.php:435
+msgid "Rank Math SEO Analyzer error: "
 msgstr "Chyba analýzy Rank Math SEO: "
 
 #. Translators: the placeholder is for the sitemap base url.
-#: includes/modules/sitemap/class-admin.php:306
+#: includes/modules/sitemap/class-admin.php:315
 msgid "Since you are using an NGINX server, you may need to add the following code to your %s <strong>if your Sitemap pages are not loading</strong>. If you are unsure how to do it, please contact your hosting provider."
 msgstr "Vzhledem k tomu, že používáte server NGINX, může být nutné přidat následující kód do %s <strong>pokud se Mapy stránek nenačítají</strong>. Pokud si nejste jisti, jak to udělat, obraťte se na svého poskytovatele hostingu."
 
@@ -1276,23 +1452,23 @@ msgstr "Chystáte se odstranit všechna dříve importovaná data."
 msgid "Are you sure you want to do this?"
 msgstr "Opravdu to chcete udělat?"
 
-#: includes/modules/database-tools/class-database-tools.php:181
+#: includes/modules/database-tools/class-database-tools.php:188
 msgid "No Redirections found."
 msgstr "Nebylo nalezeno žádné přesměrování."
 
-#: includes/modules/database-tools/class-database-tools.php:162
+#: includes/modules/database-tools/class-database-tools.php:169
 msgid "No 404 log data found."
 msgstr "Nebyla nalezena žádná data protokolu 404."
 
-#: includes/modules/database-tools/class-database-tools.php:142
+#: includes/modules/database-tools/class-database-tools.php:149
 msgid "No Internal Links data found."
 msgstr "Nebyla nalezena žádná data interních odkazů."
 
-#: includes/modules/database-tools/class-database-tools.php:123
-msgid "SEO Analysis data has already been cleared."
+#: includes/modules/database-tools/class-database-tools.php:124
+msgid "SEO Analyzer data has already been cleared."
 msgstr "Data analýzy SEO již byla vymazána."
 
-#: includes/modules/database-tools/class-database-tools.php:101
+#: includes/modules/database-tools/class-database-tools.php:102
 msgid "No Rank Math transients found."
 msgstr "Žádné Rank Math transienty nenalezeny."
 
@@ -1450,7 +1626,7 @@ msgstr "Načítání dat zrušeno."
 msgid "Cancel Fetching"
 msgstr "Zrušit načtení"
 
-#: includes/modules/database-tools/class-database-tools.php:212
+#: includes/modules/database-tools/class-database-tools.php:219
 msgid "Table re-creation started. It might take a couple of minutes."
 msgstr "Bylo zahájeno opětovné vytvoření tabulky. Může to trvat pár minut."
 
@@ -1482,11 +1658,11 @@ msgstr "Přidání adresy URL organizace v nastavení místního SEO."
 msgid "Reset"
 msgstr "Resetovat"
 
-#: includes/modules/database-tools/class-database-tools.php:353
+#: includes/modules/database-tools/class-database-tools.php:379
 msgid "Check if required tables exist and create them if not."
 msgstr "Zkontrolujte, zda existují požadované tabulky, pokud ne, vytvořte je."
 
-#: includes/modules/database-tools/class-database-tools.php:352
+#: includes/modules/database-tools/class-database-tools.php:378
 msgid "Re-create Missing Database Tables"
 msgstr "Znovu vytvořit chybějící databázové tabulky"
 
@@ -1500,11 +1676,11 @@ msgid "Import meta information of your terms like the titles, descriptions, robo
 msgstr "Importujte meta informace jako jsou názvy, popisy, robots meta, OpenGraph informace atd."
 
 #. translators: reconnect link
-#: includes/modules/analytics/google/class-request.php:155
+#: includes/modules/analytics/google/class-request.php:168
 msgid "There is a problem with the Google auth token. Please <a href=\"%1$s\" class=\"button button-link rank-math-reconnect-google\">reconnect your app</a>"
 msgstr "Neexistuje žádný obnovovací token. Připojte <a href=\"%1$s\" class=\"button button-link rank-math-reconnect-google\">znovu svou aplikaci</a>"
 
-#: includes/modules/database-tools/class-database-tools.php:354
+#: includes/modules/database-tools/class-database-tools.php:380
 msgid "Re-create Tables"
 msgstr "Znovu vytvořit tabulky"
 
@@ -1702,6 +1878,7 @@ msgid "Top 3 Positions"
 msgstr "3 nejlepší pozice"
 
 #: includes/admin/metabox/class-screen.php:169
+#: includes/modules/seo-analysis/views/competitor-analysis.php:217
 #: includes/modules/analytics/assets/js/admin-bar.js:1
 #: includes/modules/analytics/assets/js/stats.js:1
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
@@ -1764,7 +1941,7 @@ msgstr "Vyloučit přihlášené uživatele"
 #: includes/admin/wizard/views/search-console-ui.php:222
 #: includes/admin/wizard/views/search-console-ui.php:247
 #: includes/admin/wizard/views/search-console-ui.php:314
-#: includes/module/class-manager.php:414
+#: includes/module/class-manager.php:415
 #: includes/modules/analytics/views/options.php:149
 msgid "PRO"
 msgstr "PRO"
@@ -2187,6 +2364,18 @@ msgstr "EDD produkt"
 msgid "WooCommerce Product"
 msgstr "WooCommerce produkt"
 
+#: includes/modules/sitemap/settings/html-sitemap.php:101
+#: includes/modules/schema/assets/js/schema-gutenberg.js:1
+#: includes/modules/schema/assets/js/schema-template.js:1
+msgid "Modified Date"
+msgstr "Datum úpravy"
+
+#: includes/modules/sitemap/settings/html-sitemap.php:100
+#: includes/modules/schema/assets/js/schema-gutenberg.js:1
+#: includes/modules/schema/assets/js/schema-template.js:1
+msgid "Published Date"
+msgstr "Data publikace"
+
 #: includes/replace-variables/class-basic-variables.php:208
 msgid "Organization Logo added in Local SEO Settings."
 msgstr "Logo organizace přidáno v místním nastavení SEO."
@@ -2240,7 +2429,7 @@ msgstr "E-mail:"
 msgid "Telephone"
 msgstr "Telefon"
 
-#: includes/rest/class-shared.php:250
+#: includes/rest/class-shared.php:274
 msgid "schemas to add or update data."
 msgstr "schémata pro přidání nebo aktualizaci dat."
 
@@ -2304,17 +2493,17 @@ msgstr "Import nebo export nastavení Rank Math, tato možnost je užitečná pr
 msgid "Plugin Settings"
 msgstr "Nastavení pluginu"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:434
+#: includes/modules/seo-analysis/class-seo-analyzer.php:557
 msgid "Unexpected API response."
 msgstr "Neočekávaná odpověď rozhraní API."
 
 #. Translators: placeholder is a HTTP error code.
-#: includes/modules/seo-analysis/class-seo-analyzer.php:427
+#: includes/modules/seo-analysis/class-seo-analyzer.php:550
 msgid "HTTP %d error."
 msgstr "Chyba %d HTTP."
 
 #. Translators: placeholders are opening and closing tag for link.
-#: includes/modules/seo-analysis/views/main.php:56
+#: includes/modules/seo-analysis/views/seo-analyzer.php:45
 msgid "Analyze your site by %1$s linking your Rank Math account %2$s"
 msgstr "Analyzujte své stránky %1$s propojením účtu Rank Math %2$s"
 
@@ -2330,15 +2519,15 @@ msgstr "Php OpenSSL Rozšíření nainstalováno"
 msgid "SEO Score: Ok"
 msgstr "SEO skóre: Ok"
 
-#: includes/module/class-manager.php:355
+#: includes/module/class-manager.php:356
 msgid "Please activate Web Stories plugin to use this module."
 msgstr "Chcete-li použít tento modul, aktivujte modul webových příběhů."
 
-#: includes/module/class-manager.php:351
+#: includes/module/class-manager.php:352
 msgid "Make any Story created with the Web Stories WordPress plugin SEO-Ready with automatic support for Schema and Meta tags."
 msgstr "Make jakýkoliv příběh vytvořený s Web Stories WordPress plugin SEO-Ready s automatickou podporou pro schema a Meta tagy."
 
-#: includes/module/class-manager.php:350
+#: includes/module/class-manager.php:351
 msgid "Google Web Stories"
 msgstr "Webové příběhy Google"
 
@@ -2523,12 +2712,12 @@ msgstr "Pokročilý mód"
 msgid "Easy Mode"
 msgstr "Snadný režim"
 
-#: includes/module/class-manager.php:332
+#: includes/module/class-manager.php:333
 msgid "Optimize WooCommerce Pages for Search Engines by adding required metadata and Product Schema which will make your site stand out in the SERPs."
 msgstr "Optimalizujte stránky WooCommerce pro vyhledávače přidáním požadovaných metadat a schématu produktů, které učiní vaše stránky vyniknou v SERPs."
 
 #. translators: Link to AMP plugin
-#: includes/module/class-manager.php:304
+#: includes/module/class-manager.php:305
 msgid "Install %s to make Rank Math work with Accelerated Mobile Pages. Rank Math automatically adds required meta tags in all the AMP pages."
 msgstr "Nainstalujte %s, aby Rank Math fungovalo se zrychlenými mobilními stránkami. Rank Math automaticky přidá požadované meta tagy na všech stránkách AMP."
 
@@ -2572,8 +2761,8 @@ msgid "Rank Math generates the default Sitemaps only and WPML takes care of the 
 msgstr "Rank Math generuje pouze výchozí mapa stránek a WPML se postará o zbytek. Když vyhledávač bot navštíví jakýkoli příspěvek / stránku, zobrazí se značka hreflang, která mu pomáhá procházet přeložené stránky. To je jedna z doporučených metod společnosti Google. Prosím, %s"
 
 #. translators: %1$s: thing, %2$s: Learn more link.
-#: includes/modules/sitemap/class-admin.php:139
-#: includes/modules/sitemap/class-admin.php:197
+#: includes/modules/sitemap/class-admin.php:148
+#: includes/modules/sitemap/class-admin.php:206
 msgid "Change Sitemap settings of %1$s. %2$s."
 msgstr "Změňte nastavení mapy stránek pro %1$s. %2$s."
 
@@ -2587,7 +2776,8 @@ msgstr "Snadno vytvářejte přesměrování bez hraní s nudným kódem. %s."
 msgid "Monitor broken pages that ruin user-experience and affect SEO. %s."
 msgstr "Monitorujte nefunkční stránky, které ničí uživatelské prostředí a ovlivňují SEO. %s."
 
-#: includes/modules/database-tools/class-database-tools.php:280
+#: includes/modules/database-tools/class-database-tools.php:287
+#: includes/modules/database-tools/class-database-tools.php:306
 msgid "Conversion started. A success message will be shown here once the process completes. You can close this page."
 msgstr "Převod byl spuštěn. Po dokončení procesu se zde zobrazí zpráva o úspěchu. Tuto stránku můžete zavřít."
 
@@ -2601,13 +2791,9 @@ msgid "Choose how you want Rank Math to handle your WooCommerce SEO. %s."
 msgstr "Vyberte si, jak chcete Rank Math zvládnout vaše WooCommerce SEO. %s."
 
 #. Translators: placeholder is an activate button.
-#: includes/modules/seo-analysis/seo-analysis-tests.php:172
+#: includes/modules/seo-analysis/seo-analysis-tests.php:188
 msgid "Automatic updates are not enabled on your site. %s"
 msgstr "Automatické aktualizace nejsou na vašem webu povoleny. %s"
-
-#: includes/modules/seo-analysis/views/main.php:35
-msgid "Start Analysis Again"
-msgstr "Znovu spustit analýzu"
 
 #: includes/modules/status/class-error-log.php:156
 msgid "The error log cannot be retrieved: Error log file is too large."
@@ -2675,26 +2861,26 @@ msgstr "Pokud zobrazujete skóre SEO na přední straně, tato možnost vloží 
 msgid "Remove prefix like %1$s from product URL chosen at %2$s"
 msgstr "Odebrání předpony jako %1$s z adresy URL produktu vybrané na %2$s"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:510
+#: includes/modules/seo-analysis/class-seo-analyzer.php:636
 msgid "Priority"
 msgstr "Priorita"
 
 #. Translators: placeholder is an activate button.
-#: includes/modules/seo-analysis/seo-analysis-tests.php:173
+#: includes/modules/seo-analysis/seo-analysis-tests.php:189
 msgid "Enable Auto Updates"
 msgstr "Povolit automatické aktualizace"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:362
-#: includes/modules/seo-analysis/seo-analysis-tests.php:164
-#: includes/modules/seo-analysis/seo-analysis-tests.php:176
+#: includes/modules/seo-analysis/class-seo-analyzer.php:485
+#: includes/modules/seo-analysis/seo-analysis-tests.php:180
+#: includes/modules/seo-analysis/seo-analysis-tests.php:192
 msgid "Rank Math auto-update option is enabled on your site."
 msgstr "Rank Math auto-update možnost je povolena na vašem webu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:144
+#: includes/modules/seo-analysis/seo-analysis-tests.php:158
 msgid "Enable automatic updates to ensure you are always using the latest version of Rank Math."
 msgstr "Povolte automatické aktualizace, abyste měli zajištěno, že vždy používáte nejnovější verzi Rank Math."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:143
+#: includes/modules/seo-analysis/seo-analysis-tests.php:157
 msgid "Automatic Updates"
 msgstr "Automatické aktualizace"
 
@@ -2714,11 +2900,11 @@ msgstr "Je nám líto, není dovoleno upravovat tento typ příspěvku."
 msgid "Sorry, you are not allowed to create/update redirection."
 msgstr "Je nám líto, ale není povoleno vytvářet/aktualizovat přesměrování."
 
-#: includes/modules/sitemap/class-admin.php:312
+#: includes/modules/sitemap/class-admin.php:321
 msgid "Click here to see the code."
 msgstr "Klikněte zde pro zobrazení kódu."
 
-#: includes/modules/sitemap/class-admin.php:307
+#: includes/modules/sitemap/class-admin.php:316
 msgid "configuration file"
 msgstr "konfigurační soubor"
 
@@ -2805,27 +2991,39 @@ msgstr[1] "%d dny"
 msgstr[2] "%d dní"
 
 #. translators: sitemap url
-#: includes/modules/sitemap/class-admin.php:72
+#: includes/modules/sitemap/class-admin.php:73
 msgid "Your sitemap index can be found here: %s"
 msgstr "Index mapy stránek naleznete zde: %s"
 
-#: includes/modules/database-tools/class-database-tools.php:274
+#: includes/modules/schema/blocks/views/options-general.php:33
+#: assets/admin/js/blocks.js:1
+msgid "Unordered"
+msgstr "Neuspořádané"
+
+#: includes/modules/schema/blocks/views/options-general.php:32
+#: assets/admin/js/blocks.js:1
+msgid "Numbered"
+msgstr "Číslované stránky"
+
+#: includes/modules/database-tools/class-database-tools.php:281
+#: includes/modules/database-tools/class-database-tools.php:300
 msgid "No posts found to convert."
 msgstr "Nebyly nalezeny žádné příspěvky, které by bylo možné převést."
 
-#: includes/modules/database-tools/class-database-tools.php:371
+#: includes/modules/database-tools/class-database-tools.php:397
+#: includes/modules/database-tools/class-database-tools.php:407
 msgid "Convert Blocks"
 msgstr "Převést bloky"
 
-#: includes/modules/database-tools/class-database-tools.php:370
+#: includes/modules/database-tools/class-database-tools.php:396
 msgid "Are you sure you want to convert Yoast blocks into Rank Math blocks? This action is irreversible."
 msgstr "Opravdu chcete převést yoast bloky do bloků Rank Math? Tato akce je nevratná."
 
-#: includes/modules/database-tools/class-database-tools.php:369
-msgid "Convert FAQ & HowTo Blocks created using Yoast. Use this option to easily move your previous blocks into Rank Math."
-msgstr "Převést nejčastější dotazy a bloky HowTo vytvořené pomocí yoastu. Pomocí této možnosti můžete snadno přesunout své předchozí bloky do Rank Math."
+#: includes/modules/database-tools/class-database-tools.php:405
+msgid "Convert TOC block created using AIOSEO. Use this option to easily move your previous blocks into Rank Math."
+msgstr "Převést blok TOC vytvořený pomocí AIOSEO. Pomocí této možnosti můžete snadno přesunout dříve vytvořené bloky do Rank Math."
 
-#: includes/modules/database-tools/class-database-tools.php:368
+#: includes/modules/database-tools/class-database-tools.php:394
 msgid "Yoast Block Converter"
 msgstr "Yoast blok konvertor"
 
@@ -2938,7 +3136,7 @@ msgstr "Modul plug-in automatické aktualizace"
 msgid "Turn on auto-updates to automatically update to stable versions of Rank Math as soon as they are released. The beta versions will never install automatically."
 msgstr "Zapněte automatické aktualizace a automaticky se aktualizujte na stabilní verze Rank Math, jakmile jsou vydány. Beta verze se nikdy nenainstalují automaticky."
 
-#: includes/module/class-manager.php:271
+#: includes/module/class-manager.php:272
 #: includes/modules/version-control/class-version-control.php:230
 #: includes/modules/version-control/class-version-control.php:246
 msgid "Version Control"
@@ -2966,8 +3164,8 @@ msgstr "Modul plug-in vrácení zpět"
 msgid "This update will install a beta version of Rank Math."
 msgstr "Tato aktualizace nainstaluje beta verzi Rank Math."
 
-#: includes/module/class-manager.php:277
-#: includes/modules/database-tools/class-database-tools.php:313
+#: includes/module/class-manager.php:278
+#: includes/modules/database-tools/class-database-tools.php:339
 msgid "Database Tools"
 msgstr "Databázové nástroje"
 
@@ -2991,7 +3189,7 @@ msgid "Redirect Orphan Attachments"
 msgstr "Přesměrovat osamocené přílohy"
 
 #: includes/admin/class-option-center.php:238
-#: includes/modules/sitemap/class-admin.php:136
+#: includes/modules/sitemap/class-admin.php:145
 msgid "Attachments"
 msgstr "Přílohy"
 
@@ -3049,7 +3247,7 @@ msgstr "%1$s Je přítomen filtr pro odstranění dat Rank Math z databáze. Dea
 msgid "Review (Unsupported)"
 msgstr "Recenze (nepodporovaná)"
 
-#: includes/modules/database-tools/class-update-score.php:279
+#: includes/modules/database-tools/class-update-score.php:284
 #: assets/admin/js/rank-math-app.js:1
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
@@ -3057,19 +3255,20 @@ msgid "Close"
 msgstr "Zavřít"
 
 #. Translators: placeholder is a link to "Read more".
+#: includes/modules/seo-analysis/class-result.php:98
 #: includes/settings/general/others.php:20 assets/admin/js/rank-math-app.js:1
 msgid "Read more"
 msgstr "Číst více"
 
-#: includes/rest/class-shared.php:188
+#: includes/rest/class-shared.php:199
 msgid "Meta to add or update data."
 msgstr "Meta pro přidání nebo aktualizaci dat."
 
-#: includes/rest/class-shared.php:183 includes/rest/class-shared.php:245
+#: includes/rest/class-shared.php:194 includes/rest/class-shared.php:269
 msgid "Object unique id"
 msgstr "Jedinečné id objektu"
 
-#: includes/rest/class-shared.php:177 includes/rest/class-shared.php:239
+#: includes/rest/class-shared.php:188 includes/rest/class-shared.php:263
 msgid "Object Type i.e. post, term, user"
 msgstr "Typ objektu př. příspěvěk, výraz, uživatel"
 
@@ -3101,44 +3300,44 @@ msgstr "Přesměrování bylo úspěšně aktualizováno."
 msgid "Can't update redirection."
 msgstr "Přesměrování nelze aktualizovat."
 
-#: includes/module/class-manager.php:323
+#: includes/module/class-manager.php:324
 msgid "Enable the BuddyPress module for Rank Math SEO to make your BuddyPress forum SEO friendly by adding proper meta tags to all forum pages."
 msgstr "Povolte modul BuddyPress pro Rank Math SEO, aby vaše fórum BuddyPress SEO bylo přátelské přidáním správných meta tagů na všechny stránky fóra."
 
-#: includes/modules/database-tools/class-database-tools.php:345
+#: includes/modules/database-tools/class-database-tools.php:371
 msgid "Is the 404 error log getting out of hand? Use this option to clear ALL 404 logs generated by your website in the Rank Math 404 Monitor."
 msgstr "Je tento 404 chybový log vymknutý z rukou? Použijte tuto možnost k vymazání VŠECH 404 logů generovaných vaším webem v Rank Math 404 Monitoru."
 
-#: includes/modules/database-tools/class-database-tools.php:344
-#: includes/modules/database-tools/class-database-tools.php:347
+#: includes/modules/database-tools/class-database-tools.php:370
+#: includes/modules/database-tools/class-database-tools.php:373
 msgid "Clear 404 Log"
 msgstr "Vymazat 404 logy"
 
-#: includes/modules/database-tools/class-database-tools.php:387
+#: includes/modules/database-tools/class-database-tools.php:423
 msgid "Getting a redirection loop or need a fresh start? Delete all the redirections using this tool. Note: This process is irreversible and will delete ALL your redirection rules."
 msgstr "Dostáváte přesměrovací smyčku nebo potřebujete nový začátek? Vymazat všechna přesměrování pomocí tohoto nástroje. Poznámka: Tento proces je nevratný a odstraní VŠECHNA vaše pravidla přesměrování."
 
-#: includes/modules/database-tools/class-database-tools.php:378
+#: includes/modules/database-tools/class-database-tools.php:414
 msgid "In some instances, the internal links data might show an inflated number or no number at all. Deleting the internal links data might fix the issue."
 msgstr "V některých případech mohou data interních odkazů vykazovat nafouknuté číslo nebo vůbec žádné číslo. Odstranění dat interních odkazů může problém vyřešit."
 
-#: includes/modules/database-tools/class-database-tools.php:331
-msgid "Need a clean slate or not able to run the SEO Analysis tool? Flushing the analysis data might fix the issue. Flushing SEO Analysis data is entirely safe and doesn't remove any critical data from your website."
+#: includes/modules/database-tools/class-database-tools.php:357
+msgid "Need a clean slate or not able to run the SEO Analyzer tool? Flushing the analysis data might fix the issue. Flushing SEO Analyzer data is entirely safe and doesn't remove any critical data from your website."
 msgstr "Potřebujete čistý štít, nebo není schopen spustit SEO analytický nástroj? Vyprázdnění dat analýzy může problém vyřešit. Flushing SEO Analysis data jsou zcela bezpečná a neodstraňují žádná důležitá data z vašich webových stránek."
 
-#: includes/modules/database-tools/class-database-tools.php:330
-msgid "Flush SEO Analysis Data"
+#: includes/modules/database-tools/class-database-tools.php:356
+msgid "Flush SEO Analyzer Data"
 msgstr "Vyprázdnit SEO analytické údaje"
 
-#: includes/modules/database-tools/class-database-tools.php:339
+#: includes/modules/database-tools/class-database-tools.php:365
 msgid "Remove transients"
 msgstr "Odstraňte přechodné stavy"
 
-#: includes/modules/database-tools/class-database-tools.php:338
+#: includes/modules/database-tools/class-database-tools.php:364
 msgid "If you see any issue while using Rank Math or one of its options - clearing the Rank Math transients fixes the problem in most cases. Deleting transients does not delete ANY data added using Rank Math."
 msgstr "Pokud se při používání nástroje Rank Math nebo některé z jeho možností vyskytne nějaký problém, vymazání přechodných stavů nástroje Rank Math jej ve většině případů odstraní. Vymazáním přechodných možností se nevymažou ŽÁDNÁ data přidaná pomocí nástroje Rank Math."
 
-#: includes/modules/database-tools/class-database-tools.php:337
+#: includes/modules/database-tools/class-database-tools.php:363
 msgid "Remove Rank Math Transients"
 msgstr "Odebrat Rank Math dočasné soubory"
 
@@ -3218,7 +3417,7 @@ msgstr "Velký"
 
 #. translators: %1$s link to the customize settings, %2$s closing tag for the
 #. link
-#: includes/modules/seo-analysis/seo-analysis-tests.php:194
+#: includes/modules/seo-analysis/seo-analysis-tests.php:210
 msgid "You have not entered a tagline yet. It is a good idea to choose one. %1$sYou can fix this in the customizer%2$s."
 msgstr "Dosud jste nezadali slogan. Je to dobrý nápad vybrat si jeden. %1$s Můžete to opravit v úpravci%2$s."
 
@@ -3252,71 +3451,71 @@ msgstr "Stav systému"
 msgid "Status & Tools"
 msgstr "Stav a nástroje"
 
-#: includes/modules/database-tools/class-database-tools.php:188
+#: includes/modules/database-tools/class-database-tools.php:195
 msgid "Redirection rules successfully deleted."
 msgstr "Pravidla přesměrování byla úspěšně odstraněna."
 
-#: includes/modules/database-tools/class-database-tools.php:168
+#: includes/modules/database-tools/class-database-tools.php:175
 msgid "404 Log successfully deleted."
 msgstr "404 Log úspěšně smazán."
 
-#: includes/modules/database-tools/class-database-tools.php:149
+#: includes/modules/database-tools/class-database-tools.php:156
 msgid "Internal Links successfully deleted."
 msgstr "Interní odkazy byly úspěšně smazány."
 
-#: includes/modules/database-tools/class-database-tools.php:129
-msgid "SEO Analysis data successfully deleted."
+#: includes/modules/database-tools/class-database-tools.php:136
+msgid "SEO Analyzer data successfully deleted."
 msgstr "Data SEO analýzy byla úspěšně smazána."
 
 #. Translators: placeholder is the number of transients deleted.
-#: includes/modules/database-tools/class-database-tools.php:112
+#: includes/modules/database-tools/class-database-tools.php:113
 msgid "%d Rank Math transient cleared."
 msgid_plural "%d Rank Math transients cleared."
 msgstr[0] "%d Rank Math dočasný soubor vymazán."
 msgstr[1] "%d Rank Math dočasné souboYr vymazány."
 msgstr[2] "%d Rank Math dočasných souborů vymazáno."
 
-#: includes/modules/database-tools/class-database-tools.php:346
+#: includes/modules/database-tools/class-database-tools.php:372
 msgid "Are you sure you want to delete the 404 log? This action is irreversible."
 msgstr "Opravdu chcete smazat tento 404 log? Tato akce je nevratná."
 
-#: includes/modules/database-tools/class-database-tools.php:389
+#: includes/modules/database-tools/class-database-tools.php:425
 msgid "Delete Redirections"
 msgstr "Odstranit přesměrování"
 
-#: includes/modules/database-tools/class-database-tools.php:388
+#: includes/modules/database-tools/class-database-tools.php:424
 msgid "Are you sure you want to delete all the Redirection Rules? This action is irreversible."
 msgstr "Opravdu chcete smazat všechna pravidla přesměrování? Tato akce je nevratná."
 
-#: includes/modules/database-tools/class-database-tools.php:386
+#: includes/modules/database-tools/class-database-tools.php:422
 msgid "Delete Redirections Rules"
 msgstr "Odstranit pravidla přesměrování"
 
-#: includes/modules/database-tools/class-database-tools.php:380
+#: includes/modules/database-tools/class-database-tools.php:416
 msgid "Delete Internal Links"
 msgstr "Odstranit interní odkazy"
 
-#: includes/modules/database-tools/class-database-tools.php:379
+#: includes/modules/database-tools/class-database-tools.php:415
 msgid "Are you sure you want to delete Internal Links Data? This action is irreversible."
 msgstr "Opravdu chcete smazat data interních odkazů? Tato akce je nevratná."
 
-#: includes/modules/database-tools/class-database-tools.php:377
+#: includes/modules/database-tools/class-database-tools.php:413
 msgid "Delete Internal Links Data"
 msgstr "Odstranění dat interních odkazů"
 
-#: includes/modules/database-tools/class-database-tools.php:332
-msgid "Clear SEO Analysis"
+#: includes/modules/database-tools/class-database-tools.php:358
+msgid "Clear SEO Analyzer"
 msgstr "Vymazat SEO analýzu"
 
-#: includes/module/class-manager.php:346
+#: includes/module/class-manager.php:347
 msgid "Please activate ACF plugin to use this module."
 msgstr "Chcete-li použít tento modul, aktivujte modul PLUG."
 
-#: includes/module/class-manager.php:342
+#: includes/module/class-manager.php:343
 msgid "ACF support helps Rank Math SEO read and analyze content written in the Advanced Custom Fields. If your theme uses ACF, you should enable this option."
 msgstr "Podpora ACF pomáhá Rank Math SEO číst a analyzovat obsah napsaný v pokročilých vlastních polích. Pokud váš motiv používá ACF, měli byste tuto možnost povolit."
 
-#: includes/module/class-manager.php:341
+#: includes/module/class-manager.php:342
 msgid "ACF"
 msgstr "ACF"
 
@@ -3394,15 +3593,15 @@ msgstr "Skupiny"
 msgid "BuddyPress:"
 msgstr "BuddyPress:"
 
-#: includes/module/class-manager.php:327
+#: includes/module/class-manager.php:328
 msgid "Please activate BuddyPress plugin to use this module."
 msgstr "Chcete-li použít tento modul, aktivujte plugin BuddyPress."
 
-#: includes/module/class-manager.php:322
+#: includes/module/class-manager.php:323
 msgid "BuddyPress"
 msgstr "BuddyPress"
 
-#: includes/module/class-manager.php:265
+#: includes/module/class-manager.php:266
 msgid "Robots Txt"
 msgstr "Robots Txt"
 
@@ -3562,15 +3761,15 @@ msgstr "Vyberte vlastní roboty meta pro autora stránky, jako je <code>nofollow
 msgid "Author Robots Meta"
 msgstr "Autoři nastavení pro roboty"
 
-#: includes/module/class-manager.php:317
+#: includes/module/class-manager.php:318
 msgid "Please activate bbPress plugin to use this module."
 msgstr "Prosím, aktivujte bbPress plugin používat tento modul."
 
-#: includes/module/class-manager.php:313
+#: includes/module/class-manager.php:314
 msgid "Add proper Meta tags to your bbPress forum posts, categories, profiles, etc. Get more options to take control of what search engines see and how they see it."
 msgstr "Přidejte správné Meta tagy do svého bbPress forum příspěvky, kategorie, profily, atd. Získejte další možnosti, jak převzít kontrolu nad tím, co vyhledávače vidí a jak to vidí."
 
-#: includes/module/class-manager.php:312
+#: includes/module/class-manager.php:313
 msgid "bbPress"
 msgstr "bbPress"
 
@@ -3592,6 +3791,13 @@ msgstr "Použijte správný formát."
 #: includes/admin/class-import-export.php:398
 msgid "Settings could not be imported: Upload failed."
 msgstr "Nastavení nelze importovat: Nahrávání se nezdařilo."
+
+#: includes/modules/sitemap/settings/html-sitemap.php:30
+#: includes/modules/sitemap/settings/html-sitemap.php:42
+#: includes/modules/schema/assets/js/schema-gutenberg.js:1
+#: includes/modules/schema/assets/js/schema-template.js:1
+msgid "Shortcode"
+msgstr "Shortcode"
 
 #: includes/modules/schema/shortcode/person.php:41
 msgid "Job Title"
@@ -3791,7 +3997,7 @@ msgid "Module slug"
 msgstr "Popis modulu"
 
 #. translators: API error
-#: includes/modules/seo-analysis/class-seo-analyzer.php:285
+#: includes/modules/seo-analysis/class-seo-analyzer.php:402
 msgid "<strong>API Error:</strong> %s"
 msgstr "<strong>API chyba:</strong> %s"
 
@@ -3831,26 +4037,26 @@ msgstr "Nad obsahem"
 msgid "Below Content"
 msgstr "Pod obsahem"
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:498
+#: includes/modules/seo-analysis/seo-analysis-tests.php:514
 msgid "Your site is accessible by search engine."
 msgstr "Vaše stránky jsou přístupné pomocí vyhledávače."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:487
+#: includes/modules/seo-analysis/seo-analysis-tests.php:503
 msgid "Attention: Search Engines can't see your website."
 msgstr "Pozor: Vyhledávače nevidí vaše webové stránky."
 
 #. translators: %1$s link to the reading settings, %2$s closing tag for the
 #. link
-#: includes/modules/seo-analysis/seo-analysis-tests.php:48
+#: includes/modules/seo-analysis/seo-analysis-tests.php:50
 msgid "You must %1$sgo to your Reading Settings%2$s and uncheck the box for Search Engine Visibility."
 msgstr "Musíte %1$sjít do nastavení čtení%2$s a z být zškrtřátek políčka pro viditelnost vyhledávače."
 
 #. translators: link to general setting screen
-#: includes/modules/seo-analysis/seo-analysis-tests.php:44
+#: includes/modules/seo-analysis/seo-analysis-tests.php:46
 msgid "Your site may not be visible to search engine."
 msgstr "Váš web nemusí být pro vyhledávač viditelný."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:42
+#: includes/modules/seo-analysis/seo-analysis-tests.php:44
 msgid "Blog Public"
 msgstr "Blog veřejné"
 
@@ -4655,23 +4861,23 @@ msgstr "Cena produktu aktuálního produktu"
 msgid "Product's price."
 msgstr "Cena produktu."
 
-#: includes/modules/sitemap/settings/taxonomies.php:30
+#: includes/modules/sitemap/settings/taxonomies.php:46
 msgid "Include archive pages of terms that have no posts associated."
 msgstr "Zahrnout archivní stránky termínů, které nemají žádné příspěvky spojené."
 
-#: includes/modules/sitemap/settings/taxonomies.php:29
+#: includes/modules/sitemap/settings/taxonomies.php:45
 msgid "Include Empty Terms"
 msgstr "Zahrnout prázdné termíny"
 
-#: includes/modules/sitemap/settings/taxonomies.php:20
+#: includes/modules/sitemap/settings/taxonomies.php:22
 msgid "Include archive pages for terms of this taxonomy in the XML sitemap."
 msgstr "Zahrnout stránky archivu pro termíny této taxonomie do mapy webu XML."
 
-#: includes/modules/sitemap/settings/post-types.php:47
+#: includes/modules/sitemap/settings/post-types.php:62
 msgid "Insert custom field (post meta) names which contain image URLs to include them in the sitemaps. Add one per line."
 msgstr "Vložte názvy vlastních polí (post meta), které obsahují adresy URL obrázků, a zahrňte je do souboru Sitemap. Přidejte jeden na řádek."
 
-#: includes/modules/sitemap/settings/post-types.php:46
+#: includes/modules/sitemap/settings/post-types.php:61
 msgid "Image Custom Fields"
 msgstr "Vlastní pole obrázku"
 
@@ -4679,8 +4885,9 @@ msgstr "Vlastní pole obrázku"
 msgid "Include this post type in the XML sitemap."
 msgstr "Zahrnout tento typ příspěvku do XML mapy stránek."
 
+#: includes/modules/sitemap/settings/authors.php:28
 #: includes/modules/sitemap/settings/post-types.php:34
-#: includes/modules/sitemap/settings/taxonomies.php:19
+#: includes/modules/sitemap/settings/taxonomies.php:21
 msgid "Include in Sitemap"
 msgstr "Zahrnout do mapy stránek"
 
@@ -4732,19 +4939,19 @@ msgstr "Maximální počet odkazů na každé stránce mapy stránek."
 msgid "Links Per Sitemap"
 msgstr "Počet odkazů na mapu stránek"
 
-#: includes/modules/sitemap/settings/authors.php:34
+#: includes/modules/sitemap/settings/authors.php:66
 msgid "Add user IDs, separated by commas, to exclude them from the sitemap."
 msgstr "Přidejte ID uživatele oddělené čárkami, abyste je vyloučili z mapy stránek."
 
-#: includes/modules/sitemap/settings/authors.php:33
+#: includes/modules/sitemap/settings/authors.php:65
 msgid "Exclude Users"
 msgstr "Vyloučit uživatele"
 
-#: includes/modules/sitemap/settings/authors.php:22
+#: includes/modules/sitemap/settings/authors.php:53
 msgid "Selected roles will be excluded in the sitemap."
 msgstr "Zvolené role budou vyloučeny v mapě stránek."
 
-#: includes/modules/sitemap/settings/authors.php:21
+#: includes/modules/sitemap/settings/authors.php:52
 msgid "Exclude User Roles"
 msgstr "Vyloučit role uživatelů"
 
@@ -4754,54 +4961,54 @@ msgid "XML Sitemap %1$s %2$s"
 msgstr "%1$s %2$s mapy webu XML"
 
 #. Translators: placeholder is the post type names separated with commas.
-#: includes/modules/sitemap/class-sitemap.php:134
+#: includes/modules/sitemap/class-sitemap.php:136
 msgid "Rank Math has detected new post types: %1$s. You may want to check the settings of the <a href=\"%2$s\">Titles &amp; Meta page</a> and <a href=\"%3$s\">the Sitemap</a>."
 msgstr "Rank Math zjistil nové typy příspěvků: %1$s. Možná budete chtít zkontrolovat nastavení stránky <a href=\"%2$s\">Tituly &; Meta</a> a <a href=\"%3$s\">Stránky mapy</a>."
 
 #. translators: Taxonomy singular label
-#: includes/modules/sitemap/class-admin.php:188
+#: includes/modules/sitemap/class-admin.php:197
 msgid "%s archives"
 msgstr "archivy %s"
 
 #. translators: Taxonomy singular label
-#: includes/modules/sitemap/class-admin.php:182
+#: includes/modules/sitemap/class-admin.php:191
 msgid "your product %s pages"
 msgstr "stránky %s produktu"
 
-#: includes/modules/sitemap/class-admin.php:167
+#: includes/modules/sitemap/class-admin.php:176
 msgid "Taxonomies:"
 msgstr "Taxonomie:"
 
-#: includes/modules/sitemap/class-admin.php:147
+#: includes/modules/sitemap/class-admin.php:156
 msgid "Please note that this will add the attachment page URLs to the sitemap, not direct image URLs."
 msgstr "Vezměte prosím na vědomí, že toto přidá URL stránky s přílohami do mapy stránek, ne přímo URL obrázků."
 
 #. translators: Post Type Sitemap Url
 #. translators: Taxonomy Sitemap Url
-#: includes/modules/sitemap/class-admin.php:143
-#: includes/modules/sitemap/class-admin.php:201
+#: includes/modules/sitemap/class-admin.php:152
+#: includes/modules/sitemap/class-admin.php:210
 msgid "Sitemap URL: %s"
 msgstr "Adresa URL mapy stránek: %s"
 
 #. translators: Post Type label
-#: includes/modules/sitemap/class-admin.php:132
+#: includes/modules/sitemap/class-admin.php:141
 msgid "single %s"
 msgstr "jednotlivé %s"
 
-#: includes/modules/sitemap/class-admin.php:112
+#: includes/modules/sitemap/class-admin.php:121
 msgid "your product pages"
 msgstr "stránky produktů"
 
-#: includes/modules/sitemap/class-admin.php:111
+#: includes/modules/sitemap/class-admin.php:120
 msgid "attachments"
 msgstr "přílohy"
 
 #. translators: Learn more link.
-#: includes/modules/sitemap/class-admin.php:81
+#: includes/modules/sitemap/class-admin.php:90
 msgid "Set the sitemap options for author archive pages. %s."
 msgstr "Nastavte možnosti mapy webu pro stránky archivu autorů. %s."
 
-#: includes/modules/sitemap/class-admin.php:70
+#: includes/modules/sitemap/class-admin.php:71
 msgid "This tab contains General settings related to the XML sitemaps."
 msgstr "Tato karta obsahuje obecná nastavení související s mapami webu XML."
 
@@ -4829,166 +5036,162 @@ msgstr "Změnit adresu URL"
 msgid "Selected page: %s"
 msgstr "Vybraná stránka: %s"
 
-#: includes/modules/seo-analysis/views/main.php:31
-msgid "What is this?"
-msgstr "Co je toto?"
-
-#: includes/modules/seo-analysis/seo-analysis-tests.php:478
+#: includes/modules/seo-analysis/seo-analysis-tests.php:494
 msgid "No sitemaps found."
 msgstr "Nebyly nalezeny žádné mapy webu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:478
+#: includes/modules/seo-analysis/seo-analysis-tests.php:494
 msgid "Your site has one or more sitemaps."
 msgstr "Vaše stránka má jednu nebo více map stránek."
 
 #. translators: post ID count
-#: includes/modules/seo-analysis/seo-analysis-tests.php:374
+#: includes/modules/seo-analysis/seo-analysis-tests.php:390
 msgid "+%d More..."
 msgstr "+%d více…"
 
 #. translators: post type links
-#: includes/modules/seo-analysis/seo-analysis-tests.php:380
+#: includes/modules/seo-analysis/seo-analysis-tests.php:396
 msgid "There are %s published posts where the primary focus keyword does not appear in the post title."
 msgstr "Existuje %s publikovaných příspěvků, kde se klíčové slovo primárního zájmu neobjevuje v názvu příspěvku."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:359
+#: includes/modules/seo-analysis/seo-analysis-tests.php:375
 msgid "Focus keywords appear in the titles of published posts where it is set."
 msgstr "Klíčová slova se zobrazují v názvech publikovaných příspěvků, kde jsou nastavena."
 
 #. translators: post type links
-#: includes/modules/seo-analysis/seo-analysis-tests.php:342
+#: includes/modules/seo-analysis/seo-analysis-tests.php:358
 msgid "There are %s with no focus keyword set."
 msgstr "Existuje %s s žádným nastaveným klíčovým slovem."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:332
+#: includes/modules/seo-analysis/seo-analysis-tests.php:348
 msgid "All published posts have focus keywords set."
 msgstr "Všechny publikované příspěvky mají nastavená klíčová slova."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:279
+#: includes/modules/seo-analysis/seo-analysis-tests.php:295
 msgid "You have not linked Google Search Console yet."
 msgstr "Dosud jste nepropojili službu Google Search Console."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:279
+#: includes/modules/seo-analysis/seo-analysis-tests.php:295
 msgid "Google Search Console has been linked."
 msgstr "Služba Google Search Console byla propojena."
 
 #. translators: permalink structure
-#: includes/modules/seo-analysis/seo-analysis-tests.php:256
+#: includes/modules/seo-analysis/seo-analysis-tests.php:272
 msgid "Post permalink structure is set to %s."
 msgstr "Struktura post permalink je nastavena na %s."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:249
+#: includes/modules/seo-analysis/seo-analysis-tests.php:265
 msgid "Permalinks are set to a custom structure but the post titles do not appear in the permalinks."
 msgstr "Permalinks jsou nastaveny na vlastní strukturu, ale názvy příspěvku se nezobrazují v permalinks."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:242
+#: includes/modules/seo-analysis/seo-analysis-tests.php:258
 msgid "Permalinks are set to the default value. <em>Pretty permalinks</em> are disabled. "
 msgstr "Permalinky jsou nastaveny na výchozí hodnotu. <em>”Hezké” permalinky.</em> jsou zakázány. "
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:210
+#: includes/modules/seo-analysis/seo-analysis-tests.php:226
 msgid "Your Site Tagline is set to a custom value."
 msgstr "Tagline webu je nastaven na vlastní hodnotu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:204
+#: includes/modules/seo-analysis/seo-analysis-tests.php:220
 msgid "Your Site Tagline is set to the default value <em>Just another WordPress site</em>."
 msgstr "Tagline webu je nastavena na výchozí hodnotu <em>Pouze jiný web WordPress</em>."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:123
+#: includes/modules/seo-analysis/seo-analysis-tests.php:135
 msgid "If you don't have an XML sitemap, the best option is to install a plugin that creates sitemaps for you. That way you'll know the sitemap will always be up-to-date. Plugins can also automatically ping the search engines when the XML file is updated. The Rank Math WordPress plugin gives you complete control over your site's XML sitemaps. You can control the settings for each page as you write or edit it, and Rank Math will ping Google as soon as you submit your edits. This results in fast crawls and indexing."
 msgstr "Pokud nemáte XML mapu, nejlepší možností je nainstalovat plugin, který pro vás vytváří mapu stránek. Takto budete vědět, že mapa stránek bude vždy aktuální. Pluginy mohou také automaticky ping vyhledávačů po aktualizaci XML. Rank Math WordPress plugin vám dává plnou kontrolu nad XML stránek. Nastavení každé stránky můžete nastavit tak, jak ji píšete nebo upravujete. Rank Math bude upozorňovat Google, jakmile odešlete své úpravy. To má za následek rychlé prostudování a indexování."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:122
+#: includes/modules/seo-analysis/seo-analysis-tests.php:134
 msgid "XML sitemaps are a special type of text file that tells search engines about the structure of your site. They're a list of all the resources (pages and files) you would like the search engine to index. You can assign different priorities, so certain pages will be crawled first. Before XML sitemaps, search engines were limited to indexing the content they could find by following links. That's still an important feature for search engine spiders, but XML sitemaps have made it easier for content creators and search engines to collaborate."
 msgstr "Soubor SITEMAP XML je zvláštní typ textového souboru, který informuje vyhledávače o struktuře vašeho webu. Jsou to seznam všech zdrojů (stránky a soubory), které chcete vyhledávač indexovat. Můžete přiřadit různé priority, takže určité stránky budou nejprve procházené. Před souborem SITEMAP XML byly vyhledávače omezeny na indexování obsahu, který mohly najít pomocí následujících odkazů. To je stále důležitá funkce pro pavouky vyhledávačů, ale soubory SITEMAP XML usnadnily tvůrcům obsahu a vyhledávačům spolupráci."
 
 #. translators: Link to Search Console KB article
-#: includes/modules/seo-analysis/seo-analysis-tests.php:115
+#: includes/modules/seo-analysis/seo-analysis-tests.php:125
 msgid "Read <a href=\"%1$s\" target=\"_blank\">this article</a> for detailed instructions on setting up your Google Webmaster account and getting Rank Math to work with the Google Search Console."
 msgstr "Přečtěte si <a href=\"%1$s\" target=\"_blank\">tento článek,</a> kde najdete podrobné pokyny k nastavení účtu pro webmastery Google a získání funkce Rank Math pro práci s Google Search Console."
 
 #. translators: link to plugin search console setting screen
-#: includes/modules/seo-analysis/seo-analysis-tests.php:113
+#: includes/modules/seo-analysis/seo-analysis-tests.php:123
 msgid "You can integrate the Google Search Console with Rank math in the <a href=\"%1$s\" target=\"_blank\">Search Console tab</a>. of Rank Math's General Settings menu."
 msgstr "Na <a href=\"%1$s\" target=\"_blank\">kartě Search Console</a> v základním nastavení Rank Math můžete integrovat službu Google Search Console."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:111
+#: includes/modules/seo-analysis/seo-analysis-tests.php:121
 msgid "Google's Search Console is a vital source of information concerning your rankings and click-through rates.  Rank Math can import this data, so you don't have to log into your Google account to get the data you need."
 msgstr "Služba Search Console společnosti Google je důležitým zdrojem informací o vašem hodnocení a míře prokliku.  Rank Math může importovat tato data, takže se nemusíte přihlašovat ke svému účtu Google, abyste získali data, která potřebujete."
 
 #. translators: link to plugin setting screen
-#: includes/modules/seo-analysis/seo-analysis-tests.php:107
+#: includes/modules/seo-analysis/seo-analysis-tests.php:117
 msgid "Register at Google Search Console and verificate your site by adding the code to <a href=\"%1$s\">Settings &gt; Verificate Tools</a>, then navigate to <a href=\"%2$s\">Settings &gt; Search Console</a> to authenticate and link your site."
 msgstr "Zaregistrujte se ve službě Google Search Console a ověřte svůj web přidáním kódu do <a href=\"%1$s\">nastavení &gt; Nástroje ověření</a>a potom přejděte do nastavení <a href=\"%2$s\">&gt; Vyhledávací služba,</a> kde můžete svůj web ověřit a propojit."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:80
+#: includes/modules/seo-analysis/seo-analysis-tests.php:88
 msgid "Fixing the issue is simple - just edit the post/page and add the focus keyword(s) to the title."
 msgstr "Řešení problému je jednoduché - stačí upravit příspěvek / stránku a přidat klíčové slovo(a) do názvu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:79
+#: includes/modules/seo-analysis/seo-analysis-tests.php:87
 msgid "HTML Page Titles play a large role in Google's ranking algorithm.  When you add a Focus Keyword to a post or page, Rank Math will check to see that you used the keyword in the title.  If it finds any posts or pages that are missing the keyword in the title, it will tell you here."
 msgstr "Názvy stránek HTML hrají velkou roli v algoritmu hodnocení Google. Když přidáte klíčové slovo k příspěvku nebo stránce, matiku hodnocení zkontroluje, zda jste klíčové slovo použili v názvu.  Pokud najde nějaké příspěvky nebo stránky, které chybí klíčové slovo v názvu, řekne vám to zde."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:78
+#: includes/modules/seo-analysis/seo-analysis-tests.php:86
 msgid "Make sure the focus keywords you set for the posts appear in their titles."
 msgstr "Ujistěte se, že klíčová slova, které jste nastavili pro příspěvky, se zobrazují v jejich názvech."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:77
+#: includes/modules/seo-analysis/seo-analysis-tests.php:85
 msgid "Post Titles Missing Focus Keywords"
 msgstr "Názvy příspěvků bez klíčového slova"
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:73
+#: includes/modules/seo-analysis/seo-analysis-tests.php:79
 msgid "Fixing this issue is easy - just edit the post, and set a Focus Keyword.  Then follow Rank Math's analysis to improve your rankings."
 msgstr "Řešení tohoto problému je snadné - stačí upravit příspěvek a nastavit klíčové slovo.  Pak postupujte podle analýzy Rank Math, abyste zlepšili své hodnocení."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:72
+#: includes/modules/seo-analysis/seo-analysis-tests.php:78
 msgid "Of course, if you don't give Rank Math a focus keyword to work with, it can't give you any useful feedback."
 msgstr "Pokud ovšem nezadáte nástroji Rank Math klíčové slovo, na které se má zaměřit, nemůže vám poskytnout žádnou užitečnou zpětnou vazbu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:71
+#: includes/modules/seo-analysis/seo-analysis-tests.php:77
 msgid "Rank Math uses these focus keywords to analyze your on-page content.  It can tell if you've done a good job of optimizing your text to rank for these keywords."
 msgstr "Rank Math používá tato klíčová slova k zaostření k analýze obsahu na stránce.  To může říct, jestli jste udělali dobrou práci optimalizace textu na hodnost pro tato klíčová slova."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:70
+#: includes/modules/seo-analysis/seo-analysis-tests.php:76
 msgid "Rank Math allows you to set a focus keyword for every post and page you write - the option is in the \"Meta Box\", which appears under the text editor in the screen where you write and edit content."
 msgstr "Rank Math umožňuje nastavit klíčové slovo pro každý příspěvek a stránku, kterou napíšete - možnost je v \"Meta Box\", který se objeví pod textovým editorem na obrazovce, kde píšete a upravujete obsah."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:69
+#: includes/modules/seo-analysis/seo-analysis-tests.php:75
 msgid "Setting focus keywords for your posts allows Rank Math to analyse the content."
 msgstr "Nastavení klíčových slov pro vaše příspěvky umožňí Rank Math analýzu obsahu."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:68
+#: includes/modules/seo-analysis/seo-analysis-tests.php:74
 #: includes/replace-variables/class-advanced-variables.php:55
 #: includes/settings/titles/post-types.php:288
 msgid "Focus Keywords"
 msgstr "Klíčová slova"
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:64
+#: includes/modules/seo-analysis/seo-analysis-tests.php:68
 msgid "This looks nice for readers - and it gets your keywords into the URL (keywords in the URL is a ranking factor)."
 msgstr "To vypadá hezky pro čtenáře - a to dostane vaše klíčová slova do URL (klíčová slova v URL je faktor hodnocení)."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:63
+#: includes/modules/seo-analysis/seo-analysis-tests.php:67
 msgid "This option will replace the \"?p=99\" part of the URL with the post's title, like this: http://www.yoursite.com/my-amazing-post-title/"
 msgstr "Tato možnost nahradí část URL \"?p=99\" názvem příspěvku, například takto: http://www.yoursite.com/my-amazing-post-title/"
 
 #. translators: link to permalink setting screen
-#: includes/modules/seo-analysis/seo-analysis-tests.php:62
+#: includes/modules/seo-analysis/seo-analysis-tests.php:66
 msgid "Fortunately, it's very easy to fix.  Just hop on over to <a target=\"_blank\" href=\"%1$s\">Settings - Permalinks</a>.  Then chose the \"Post Name\" option."
 msgstr "Naštěstí je velmi snadné opravit.  Stačí naskočit do <a target=\"_blank\" href=\"%1$s\">nastavení - Permalinks</a>.  Pak zvolte možnost \"Název příspěvku\"."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:60
+#: includes/modules/seo-analysis/seo-analysis-tests.php:64
 msgid "It's not very kind on the eyes, and it does nothing for your site's SEO.  In fact, it can hurt it - Google's bot is quite cautious about crawling pages that look auto-generated."
 msgstr "Není to moc laskavý na oči, a to nedělá nic pro vaše stránky SEO.  Ve skutečnosti to může ublížit - Bot společnosti Google je poměrně opatrný při procházení stránek, které vypadají automaticky generované."
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:59
+#: includes/modules/seo-analysis/seo-analysis-tests.php:63
 msgid "The standard permalink structure is pretty ugly - WordPress generates offputting URLs like: http://www.yoursite.com/?p=99"
 msgstr "Standardní permalink struktura je docela ošklivá - WordPress generuje offputting URL jako: http://www.yoursite.com/?p=99"
 
 #. translators: link to permalink setting screen
-#: includes/modules/seo-analysis/seo-analysis-tests.php:58
+#: includes/modules/seo-analysis/seo-analysis-tests.php:62
 msgid "For the best SEO results, use a custom permalink structure, preferably one that includes the post title (<code>%%postname%%</code>). You can change it by navigating to <a href=\"%s\">Settings &gt; Permalinks</a>"
 msgstr "Pro nejlepší výsledky SEO použijte vlastní strukturu permalink, nejlépe ten, který obsahuje název příspěvku ( <code>%%postname%%</code> ). Můžete ji změnit tak, že přejdete na <a href=\"%s\">Nastavení &gt; Permalinks</a>"
 
-#: includes/modules/seo-analysis/seo-analysis-tests.php:56
+#: includes/modules/seo-analysis/seo-analysis-tests.php:60
 msgid "Permalink Structure"
 msgstr "Struktura Trvalých odkazů"
 
@@ -5018,72 +5221,66 @@ msgstr "Vaše šablona může zobrazit štítek stránky a může být také pou
 msgid "Site Tagline"
 msgstr "Popis webu"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:514
+#: includes/modules/seo-analysis/class-seo-analyzer.php:640
 msgid "Security"
 msgstr "Zabezpečení"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:513
+#: includes/modules/seo-analysis/class-seo-analyzer.php:639
 msgid "Performance"
 msgstr "Výkon"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:511
+#: includes/modules/seo-analysis/class-seo-analyzer.php:637
 msgid "Advanced SEO"
 msgstr "Pokročilé SEO"
 
-#: includes/modules/seo-analysis/class-result.php:168
+#: includes/modules/seo-analysis/class-result.php:179
 msgid "Info"
 msgstr "Informace"
 
-#: includes/modules/seo-analysis/class-result.php:167
+#: includes/modules/seo-analysis/class-result.php:178
 msgid "Warning"
 msgstr "Varování"
 
-#: includes/modules/seo-analysis/class-result.php:166
+#: includes/modules/seo-analysis/class-result.php:177
 msgid "Failed"
 msgstr "Selhalo"
 
 #: includes/modules/instant-indexing/views/history.php:32
-#: includes/modules/seo-analysis/class-result.php:165
+#: includes/modules/seo-analysis/class-result.php:176
 #: includes/modules/seo-analysis/views/form.php:24
 msgid "OK"
 msgstr "OK"
 
-#: includes/modules/seo-analysis/class-result.php:82
+#: includes/modules/seo-analysis/class-result.php:88
 msgid "How to fix"
 msgstr "Jak to opravit"
 
-#: includes/modules/seo-analysis/views/form.php:32
-msgid "Start Site-Wide Analysis"
-msgstr "Spustit analýzu pro celý web"
-
-#: includes/modules/seo-analysis/views/graphs.php:47
+#: includes/modules/seo-analysis/class-seo-analyzer.php:156
+#: includes/modules/seo-analysis/views/graphs.php:58
 msgid "Failed Tests"
 msgstr "Neúspěšné testy"
 
-#: includes/modules/seo-analysis/views/graphs.php:33
+#: includes/modules/seo-analysis/class-seo-analyzer.php:148
+#: includes/modules/seo-analysis/views/graphs.php:40
 msgid "Passed Tests"
 msgstr "Úspěšné testy"
 
 #: includes/class-frontend-seo-score.php:171
-#: includes/modules/seo-analysis/views/graphs.php:23
+#: includes/modules/seo-analysis/views/graphs.php:31
 #: includes/modules/analytics/assets/js/admin-bar.js:1
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "SEO Score"
 msgstr "SEO skóre"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:278
-msgid "API Error:"
-msgstr "API chyba:"
-
-#: includes/modules/seo-analysis/class-seo-analysis.php:68
+#: includes/modules/seo-analysis/class-seo-analysis.php:70
 msgid "SEO Analysis for this page"
 msgstr "SEO analýza pro tuto stránku"
 
-#: includes/modules/seo-analysis/class-seo-analysis.php:66
+#: includes/modules/seo-analysis/class-seo-analysis.php:68
 msgid "Analyze this Page"
 msgstr "Analyzovat tuto stránku"
 
-#: includes/modules/seo-analysis/class-seo-analysis.php:55
+#: includes/modules/seo-analysis/class-seo-analysis.php:57
 msgid "Site-wide analysis"
 msgstr "Analýza pro celý web"
 
@@ -5109,7 +5306,8 @@ msgstr "Ruční aktualizace dat"
 msgid "Items"
 msgstr "Položky"
 
-#: includes/modules/seo-analysis/views/graphs.php:40
+#: includes/modules/seo-analysis/class-seo-analyzer.php:152
+#: includes/modules/seo-analysis/views/graphs.php:49
 msgid "Warnings"
 msgstr "Upozornění"
 
@@ -5152,6 +5350,7 @@ msgid "Response Code"
 msgstr "Kód odpovědi"
 
 #: includes/modules/analytics/google/class-request.php:265
+#: includes/modules/analytics/google/class-request.php:323
 msgid "Bad request. Please check the code."
 msgstr "Špatná žádost. Zkontrolujte kód."
 
@@ -5592,6 +5791,7 @@ msgstr "Vysypat koš"
 
 #: includes/modules/instant-indexing/views/history.php:13
 #: includes/modules/redirections/class-table.php:327
+#: includes/modules/seo-analysis/class-seo-analyzer.php:144
 #: assets/admin/js/rank-math-app.js:1
 msgid "All"
 msgstr "Vše"
@@ -5637,7 +5837,9 @@ msgid "Delete Permanently"
 msgstr "Trvale smazat"
 
 #: includes/modules/redirections/class-table.php:167
-#: includes/modules/sitemap/class-admin.php:312
+#: includes/modules/sitemap/class-admin.php:321
+#: includes/modules/schema/blocks/toc/assets/js/index.js:1
+#: includes/modules/schema/blocks/toc/assets/src/list.js:81
 msgid "Hide"
 msgstr "Skrýt"
 
@@ -5710,7 +5912,7 @@ msgstr "Deaktivovat"
 msgid "Activate"
 msgstr "Aktivovat"
 
-#: includes/module/class-manager.php:283
+#: includes/module/class-manager.php:284
 #: includes/modules/redirections/class-form.php:135
 #: includes/modules/analytics/assets/js/stats.js:1
 msgid "Status"
@@ -5824,6 +6026,7 @@ msgstr "O stránce"
 
 #: includes/modules/local-seo/views/titles-options.php:236
 #: includes/modules/local-seo/views/titles-options.php:254
+#: includes/modules/sitemap/settings/html-sitemap.php:58
 msgid "Select Page"
 msgstr "Vybrat stránku"
 
@@ -6534,7 +6737,7 @@ msgid "Post Formats"
 msgstr "Formáty pošty"
 
 #: includes/admin/class-option-center.php:228
-#: includes/modules/sitemap/class-admin.php:121
+#: includes/modules/sitemap/class-admin.php:130
 msgid "Post Types:"
 msgstr "Typy příspěvků:"
 
@@ -6551,7 +6754,8 @@ msgid "Misc Pages"
 msgstr "Ostatní stránky"
 
 #: includes/admin/class-option-center.php:168
-#: includes/modules/sitemap/class-admin.php:79
+#: includes/modules/sitemap/class-admin.php:88
+#: includes/modules/sitemap/html-sitemap/class-authors.php:115
 msgid "Authors"
 msgstr "Autoři"
 
@@ -6711,6 +6915,8 @@ msgstr "Max stránek"
 msgid "Page number with context (i.e. page 2 of 4). Only displayed on page 2 and above."
 msgstr "Číslo stránky s kontextem (tj. strana 2 ze 4). Zobrazí se pouze na straně 2 a vyšší."
 
+#: includes/modules/sitemap/settings/html-sitemap.php:31
+#: includes/modules/sitemap/settings/html-sitemap.php:76
 #: includes/replace-variables/class-advanced-variables.php:85
 msgid "Page"
 msgstr "Stránka"
@@ -6730,6 +6936,7 @@ msgstr "Klíčové slovo"
 msgid "ID of the current post/page"
 msgstr "ID aktuálního příspěvku/stránky"
 
+#: includes/modules/sitemap/settings/html-sitemap.php:103
 #: includes/replace-variables/class-advanced-variables.php:32
 #: includes/replace-variables/class-advanced-variables.php:35
 msgid "Post ID"
@@ -6958,6 +7165,8 @@ msgstr "Aktivní"
 #: includes/modules/instant-indexing/class-instant-indexing.php:202
 #: includes/modules/redirections/class-admin.php:304 rank-math.php:426
 #: assets/admin/js/rank-math-app.js:1
+#: includes/modules/schema/blocks/toc/assets/js/index.js:1
+#: includes/modules/schema/blocks/toc/assets/src/inspectControls.js:20
 msgid "Settings"
 msgstr "Nastavení"
 
@@ -6965,29 +7174,22 @@ msgstr "Nastavení"
 msgid "Link Counter"
 msgstr "Počítač odkazů"
 
-#: includes/module/class-manager.php:337
+#: includes/module/class-manager.php:338
 msgid "Please activate WooCommerce plugin to use this module."
 msgstr "Prosím, aktivujte WooCommerce plugin používat tento modul."
 
-#: includes/module/class-manager.php:331
+#: includes/module/class-manager.php:332
 #: includes/modules/woocommerce/class-admin.php:74
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/module/class-manager.php:305
+#: includes/module/class-manager.php:306
 msgid "AMP plugin"
 msgstr "AMP plugin"
 
 #: includes/module/class-manager.php:245
-msgid "Let Rank Math analyze your website and your website's content using 70+ different tests to provide tailor-made SEO Analysis to you."
-msgstr "Nechte Rank Math analyzovat vaše webové stránky a obsah vašich webových stránek pomocí 70 + různých testů, které vám poskytnou na míru šitou analýzu SEO."
-
-#: includes/module/class-manager.php:244
-#: includes/modules/seo-analysis/class-admin.php:51
-#: includes/modules/seo-analysis/class-seo-analysis.php:53
-#: includes/modules/seo-analysis/class-seo-analysis.php:66
-msgid "SEO Analysis"
-msgstr "SEO analýza"
+msgid "Let Rank Math analyze your website and your website's content using 28+ different tests to provide tailor-made SEO Analysis to you."
+msgstr "Nechte Rank Math analyzovat vaše webové stránky a obsah vašich webových stránek pomocí 28+ různých testů, které vám poskytnou na míru šitou analýzu SEO."
 
 #: includes/module/class-manager.php:235
 msgid "Connect Rank Math with Google Search Console to see the most important information from Google directly in your WordPress dashboard."
@@ -7001,26 +7203,26 @@ msgstr "Povolte podporu pro strukturovaná data, která přidává kód schémat
 msgid "Records the URLs on which visitors & search engines run into 404 Errors. You can also turn on Redirections to redirect the error causing URLs to other URLs."
 msgstr "Zaznamenává adresy URL, na kterých návštěvníci & vyhledávače narazí na chyby 404. Můžete také zapnout přesměrování a přesměrovat chybu způsobující adresy URL na jiné adresy URL."
 
-#: includes/class-installer.php:349
+#: includes/class-installer.php:344
 #: includes/settings/general/breadcrumbs.php:121
 msgid "404 Error: page not found"
 msgstr "Chyba 404: Stránka nebyla nalezena"
 
 #. translators: Search query term
 #. translators: placeholder
-#: includes/class-installer.php:348
+#: includes/class-installer.php:343
 #: includes/settings/general/breadcrumbs.php:110
 msgid "Results for %s"
 msgstr "Výsledky pro %s"
 
 #. translators: Archive title
 #. translators: placeholder
-#: includes/class-installer.php:346
+#: includes/class-installer.php:341
 #: includes/settings/general/breadcrumbs.php:98
 msgid "Archives for %s"
 msgstr "Archivy pro %s"
 
-#: includes/class-installer.php:344
+#: includes/class-installer.php:339
 #: includes/settings/general/breadcrumbs.php:65
 msgid "Home"
 msgstr "Domů"
@@ -7259,17 +7461,18 @@ msgstr "Přidejte se na FREE Facebook Group"
 #: includes/admin/wizard/views/ready.php:45
 #: includes/modules/404-monitor/class-admin.php:173
 #: includes/modules/analytics/class-analytics.php:470
-#: includes/modules/content-ai/class-content-ai.php:105
+#: includes/modules/content-ai/class-content-ai.php:106
 #: includes/modules/image-seo/class-admin.php:47
 #: includes/modules/instant-indexing/class-instant-indexing.php:196
 #: includes/modules/instant-indexing/class-instant-indexing.php:204
 #: includes/modules/redirections/class-admin.php:174
 #: includes/modules/robots-txt/class-robots-txt.php:69
 #: includes/modules/role-manager/views/main.php:28
-#: includes/modules/sitemap/class-admin.php:70
+#: includes/modules/sitemap/class-admin.php:71
 #: includes/modules/sitemap/class-admin.php:81
-#: includes/modules/sitemap/class-admin.php:139
-#: includes/modules/sitemap/class-admin.php:197
+#: includes/modules/sitemap/class-admin.php:90
+#: includes/modules/sitemap/class-admin.php:148
+#: includes/modules/sitemap/class-admin.php:206
 #: includes/modules/woocommerce/class-admin.php:76
 msgid "Learn more"
 msgstr "Zjistit více"
@@ -7495,7 +7698,7 @@ msgstr "Není tu žádná záloha."
 #: includes/admin/views/import-export/backup-panel.php:43
 #: includes/modules/404-monitor/class-table.php:150
 #: includes/modules/404-monitor/class-table.php:270
-#: includes/modules/database-tools/class-database-tools.php:398
+#: includes/modules/database-tools/class-database-tools.php:434
 #: includes/modules/schema/assets/js/schema-gutenberg.js:1
 #: includes/modules/schema/assets/js/schema-template.js:1
 msgid "Delete"
@@ -7517,7 +7720,7 @@ msgstr "Vytvořit zálohu"
 msgid "Local SEO"
 msgstr "Místní SEO"
 
-#: includes/module/class-manager.php:301
+#: includes/module/class-manager.php:302
 msgid "AMP"
 msgstr "AMP"
 
@@ -7912,13 +8115,13 @@ msgstr "Xml Sitemaps pomáhají vyhledávačům efektivněji indexovat obsah va�
 
 #: includes/admin/class-setup-wizard.php:117
 #: includes/admin/wizard/class-sitemap.php:63
-#: includes/modules/seo-analysis/seo-analysis-tests.php:121
+#: includes/modules/seo-analysis/seo-analysis-tests.php:133
 msgid "Sitemaps"
 msgstr "Mapy stránek"
 
 #: includes/admin/wizard/views/search-console-ui.php:80
 #: includes/modules/analytics/google/class-permissions.php:107
-#: includes/modules/seo-analysis/seo-analysis-tests.php:104
+#: includes/modules/seo-analysis/seo-analysis-tests.php:114
 msgid "Search Console"
 msgstr "Search Console"
 
@@ -8082,7 +8285,7 @@ msgstr "Náhled plochy"
 msgid "Preview"
 msgstr "Náhled"
 
-#: includes/modules/seo-analysis/class-seo-analyzer.php:512
+#: includes/modules/seo-analysis/class-seo-analyzer.php:638
 #: assets/admin/js/rank-math-app.js:1
 msgid "Basic SEO"
 msgstr "Základní SEO"
@@ -8201,8 +8404,8 @@ msgstr "Hromadně upravit toto pole"
 
 #: includes/admin/views/import-export/import-export-panel.php:59
 #: includes/modules/role-manager/class-capability-manager.php:58
-#: includes/modules/sitemap/class-admin.php:91
-#: includes/modules/sitemap/class-admin.php:92
+#: includes/modules/sitemap/class-admin.php:100
+#: includes/modules/sitemap/class-admin.php:101
 msgid "Sitemap Settings"
 msgstr "Nastavení mapy stránek"
 
@@ -8225,7 +8428,7 @@ msgstr "Ovládací panel"
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: includes/modules/sitemap/class-admin.php:68
+#: includes/modules/sitemap/class-admin.php:69
 #: assets/admin/js/rank-math-app.js:1
 msgid "General"
 msgstr "Obecné"
@@ -8341,10 +8544,13 @@ msgstr "Opravdu chcete importovat nastavení do Rank Math? Nebojte se, vaše akt
 #: includes/admin/class-cmb2-fields.php:281
 #: includes/admin/wizard/class-schema-markup.php:161
 #: includes/helpers/class-taxonomy.php:152
+#: includes/modules/schema/blocks/views/options-general.php:31
 #: includes/settings/titles/post-types.php:135
 #: includes/settings/titles/post-types.php:166 assets/admin/js/blocks.js:1
 #: assets/admin/js/rank-math-app.js:1
 #: includes/modules/analytics/assets/js/stats.js:1
+#: includes/modules/schema/blocks/toc/assets/js/index.js:1
+#: includes/modules/schema/blocks/toc/assets/src/toolbar.js:28
 msgid "None"
 msgstr "Žádné"
 
@@ -8425,7 +8631,7 @@ msgstr "Pomoc &amp; podpora"
 #: includes/modules/analytics/views/email-reports/header.php:38
 #: includes/modules/role-manager/class-members.php:47
 #: includes/modules/role-manager/class-user-role-editor.php:58
-#: includes/modules/schema/class-blocks.php:68
+#: includes/modules/schema/class-blocks.php:70
 #: includes/modules/status/class-system-status.php:122
 #: assets/admin/js/blocks.js:1 assets/admin/js/gutenberg.js:1
 #: assets/admin/js/rank-math-app.js:1
