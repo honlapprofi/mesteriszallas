@@ -272,10 +272,7 @@ class CoreAPI {
 	 */
 	public function getMinRoomTypeBasePriceForDate( int $roomTypeOriginalId, \DateTime $startDate ) {
 
-		$endDate = clone $startDate;
-		$endDate = $endDate->modify( '+1 days' );
-
-		return mphb_get_room_type_base_price( $roomTypeOriginalId, $startDate, $endDate );
+		return mphb_get_room_type_base_price( $roomTypeOriginalId, $startDate, $startDate );
 	}
 
 	/**

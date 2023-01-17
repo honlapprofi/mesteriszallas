@@ -67,7 +67,6 @@ return array(
     'PLL_Jetpack' => $baseDir . '/integrations/jetpack/jetpack.php',
     'PLL_Language' => $baseDir . '/include/language.php',
     'PLL_License' => $baseDir . '/include/license.php',
-    'PLL_Lingotek' => $baseDir . '/modules/lingotek/lingotek.php',
     'PLL_Links' => $baseDir . '/include/links.php',
     'PLL_Links_Abstract_Domain' => $baseDir . '/include/links-abstract-domain.php',
     'PLL_Links_Default' => $baseDir . '/include/links-default.php',

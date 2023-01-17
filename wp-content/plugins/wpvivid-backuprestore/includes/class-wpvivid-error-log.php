@@ -150,4 +150,36 @@ class WPvivid_error_log
             @closedir($handler);
         return $files;
     }
+
+    public static function get_staging_error_log()
+    {
+        $log=new WPvivid_Staging_Log_Free();
+        $dir=$log->GetSaveLogFolder();
+        $dir=$dir.'error';
+        $files=array();
+        $handler=opendir($dir);
+        if($handler === false){
+            return $files;
+        }
+        $regex='#^wpvivid.*_log.txt#';
+        while(($filename=readdir($handler))!==false)
+        {
+            if($filename != "." && $filename != "..")
+            {
+                if(is_dir($dir.$filename))
+                {
+                    continue;
+                }
+                else{
+                    if(preg_match($regex,$filename))
+                    {
+                        $files[] = $dir.DIRECTORY_SEPARATOR.$filename;
+                    }
+                }
+            }
+        }
+        if($handler)
+            @closedir($handler);
+        return $files;
+    }
 }

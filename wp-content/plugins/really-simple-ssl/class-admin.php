@@ -26,6 +26,7 @@ class rsssl_admin
         register_deactivation_hook( __DIR__ . "/" . $this->plugin_filename, array($this, 'deactivate'));
 	    add_action( 'admin_init', array($this, 'add_privacy_info') );
 	    add_action( 'admin_init', array($this, 'maybe_dismiss_review_notice') );
+	    add_action( 'rsssl_weekly_cron', array($this, 'clear_admin_notices_cache') );
 
 
 	    //add the settings page for the plugin
@@ -328,7 +329,7 @@ class rsssl_admin
 
     public function activate_ssl($request)
     {
-	    if ( !rsssl_user_can_manage() ) {
+	    if ( !rsssl_user_can_manage()  ) {
 		    return [
 			    'success' => false,
 			    'site_url_changed' => false,
@@ -365,7 +366,7 @@ class rsssl_admin
 	        }
 	        rsssl_update_option('ssl_enabled', true);
 	        $site_url_changed = $this->set_siteurl_to_ssl();
-		    delete_transient('rsssl_admin_notices');
+		    delete_option('rsssl_admin_notices');
         } else {
 	        $error = true;
         }
@@ -381,6 +382,7 @@ class rsssl_admin
                 'site_url_changed' => $site_url_changed,
             ];
         }
+	    return !$error;
     }
 
 	/**
@@ -693,7 +695,7 @@ class rsssl_admin
 
     public function wpconfig_loadbalancer_fix()
     {
-        if (!rsssl_user_can_manage()) {
+        if ( !rsssl_user_can_manage() ) {
             return;
         }
 
@@ -1192,6 +1194,7 @@ class rsssl_admin
 
 	public function get_recommended_security_headers()
 	{
+
 		$used_headers = array();
 		$not_used_headers = array();
 		$check_headers = apply_filters( 'rsssl_recommended_security_headers', array(
@@ -1313,6 +1316,7 @@ class rsssl_admin
 	 */
 
 	public function recommended_headers_enabled() {
+
 		$unused_headers = $this->get_recommended_security_headers();
 		if ( empty( $unused_headers ) ) {
 			return true;
@@ -1660,17 +1664,21 @@ class rsssl_admin
         }
 	    //prevent showing the review on edit screen, as gutenberg removes the class which makes it editable.
 	    $screen = get_current_screen();
-	    if ( $screen && $screen->base === 'post' ) return;
+	    if ( $screen && $screen->base === 'post' ) {
+		    return;
+	    }
 
         //don't show admin notices on our own settings page: we have the warnings there
         if ( $this->is_settings_page() ) return;
 	    $notices = $this->get_notices_list( array('admin_notices'=>true) );
-        foreach ( $notices as $id => $notice ){
-            $notice = $notice['output'];
-            $class = ( $notice['status'] !== 'completed' ) ? 'error' : 'updated';
-	        $more_info = isset($notice['url']) ? $notice['url'] : false;
-	        $dismiss_id = isset($notice['dismissible']) && $notice['dismissible'] ? $id : false;
-	        echo $this->notice_html( $class.' '.$id, $notice['msg'], $more_info, $dismiss_id);
+        if ( is_array($notices) ) {
+	        foreach ( $notices as $id => $notice ){
+		        $notice = $notice['output'];
+		        $class = ( $notice['status'] !== 'completed' ) ? 'error' : 'updated';
+		        $more_info = $notice['url'] ?? false;
+		        $dismiss_id = isset($notice['dismissible']) && $notice['dismissible'] ? $id : false;
+		        echo $this->notice_html( $class.' '.$id, $notice['msg'], $more_info, $dismiss_id);
+	        }
         }
     }
 
@@ -1741,6 +1749,15 @@ class rsssl_admin
         return $this->do_wpconfig_loadbalancer_fix;
     }
 
+	/**
+     * Clear the cached admin notices list
+	 * @return void
+	 */
+    public function clear_admin_notices_cache(){
+	    delete_option('rsssl_admin_notices');
+	    delete_option('rsssl_plusone_count');
+    }
+
     /**
      * Get array of notices
      * - condition: function returning boolean, if notice should be shown or not
@@ -1765,28 +1782,28 @@ class rsssl_admin
             'admin_notices' => false,
             'premium_only' => false,
             'dismiss_on_upgrade' => false,
-            'status' => 'open', //status can be "all" (all tasks, regardless of dismissed or open), "open" (not success/completed) or "completed"
+            'status' => ['open', 'warning'], //status can be "all" (all tasks, regardless of dismissed or open), "open" (not success/completed) or "completed"
         );
         $args = wp_parse_args($args, $defaults);
-	    $cache_admin_notices = !$this->is_settings_page() && $args['admin_notices'];
+	    $cache_admin_notices = !$this->is_settings_page();
 
 	    //if we're on the settings page, we need to clear the admin notices transient, because this list won't get refreshed otherwise
-	    if ( $this->is_settings_page() ) {
-            if ( !get_option('rsssl_6_notice_dismissed') ) {
-	            update_option('rsssl_6_notice_dismissed', true, false );
-            }
-		    delete_transient('rsssl_admin_notices');
+	    if ( $this->is_settings_page() && !get_option('rsssl_6_notice_dismissed')) {
+            update_option('rsssl_6_notice_dismissed', true, false );
 	    }
 
-	    if ( $cache_admin_notices) {
-		    $cached_notices = get_transient('rsssl_admin_notices');
+	    if ( $cache_admin_notices ) {
+		    $cached_notices = get_option('rsssl_admin_notices');
             if ( $cached_notices === 'empty') {
                 return [];
             }
-		    if ( $cached_notices ) {
+		    if ( $cached_notices !== false ) {
                 return $cached_notices;
 		    }
 	    }
+
+        //not cached, set a default here
+	    update_option('rsssl_admin_notices', 'empty');
 
 	    $rules            = $this->get_redirect_rules( true );
         if ( $this->ssl_type !== "NA" ) {
@@ -1878,22 +1895,6 @@ class rsssl_admin
                 ),
             ),
 
-            'mixed_content_scan' => array(
-                'dismiss_on_upgrade' => true,
-	            'condition' => array('rsssl_ssl_enabled'),
-	            'callback' => '_true_',
-	            'score' => 5,
-	            'output' => array(
-		            'true' => array(
-                        'url' => 'https://really-simple-ssl.com/knowledge-base/how-to-track-down-mixed-content-or-insecure-content/',
-			            'msg' => __("SSL is now activated. Check if your website is secure by following this article.", "really-simple-ssl"),
-			            'icon' => 'open',
-			            'dismissible' => true,
-			            'plusone' => true,
-		            ),
-	            ),
-            ),
-
             'compatiblity_check' => array(
 	            'condition' => array('rsssl_incompatible_premium_version'),
 	            'callback' => '_true_',
@@ -1909,21 +1910,21 @@ class rsssl_admin
 	            ),
             ),
 
-            'google_analytics' => array(
-	            'dismiss_on_upgrade' => true,
-	            'callback' => '_true_',
-                'condition' => array('rsssl_ssl_enabled', 'rsssl_ssl_activation_time_no_longer_then_3_days_ago'),
-                'score' => 5,
-                'output' => array(
-                    'true' => array(
-                        'msg' => __("Remember to change your URLs in external services like Google Analytics, Search Console and others. This should prevent any data loss resulting from the switch to https.", "really-simple-ssl"),
-                        'url' => 'https://really-simple-ssl.com/knowledge-base/how-to-setup-google-analytics-and-google-search-consolewebmaster-tools/',
-                        'icon' => 'open',
-                        'dismissible' => true,
-                        'plusone' => true,
-                    ),
-                ),
-            ),
+	        'mixed_content_scan' => array(
+		        'dismiss_on_upgrade' => true,
+		        'condition' => array('rsssl_ssl_enabled'),
+		        'callback' => '_true_',
+		        'score' => 5,
+		        'output' => array(
+			        'true' => array(
+				        'url' => 'https://really-simple-ssl.com/steps-after-activating-ssl',
+				        'msg' => __("SSL is now activated. Follow the three steps in this article to check if your website is secure.", "really-simple-ssl"),
+				        'icon' => 'open',
+				        'dismissible' => true,
+				        'plusone' => true,
+			        ),
+		        ),
+	        ),
 
             'ssl_enabled' => array(
                 'callback' => 'rsssl_ssl_enabled',
@@ -2152,7 +2153,7 @@ class rsssl_admin
 		        'output' => array(
 			        'false' => array(
 				        'msg' => __("See which recommended security headers are not present on your website.", "really-simple-ssl"),
-                'icon' => 'premium',
+                        'icon' => 'premium',
 				        'dismissible' => false,
 				        'url' => 'https://scan.really-simple-ssl.com/',
 			        ),
@@ -2161,6 +2162,7 @@ class rsssl_admin
 				        'icon' => 'success',
 			        ),
 		        ),
+
 	        ),
 
             'pro_upsell' => array(
@@ -2276,7 +2278,7 @@ class rsssl_admin
 	    /**
 	     * Filter out notice that do not apply, or are dismissed
 	     */
-
+	    $statuses = $args['status'];
 	    foreach ( $notices as $id => $notice ) {
 		    $func   = $notice['callback'];
 		    $output = $this->validate_function($func);
@@ -2293,12 +2295,12 @@ class rsssl_admin
             if ( !isset($notice['output'][ $output ]) ) {
 	            unset($notices[$id]);
 	            continue;
-            } else {
-                $notices[$id]['output'] = $notice['output'][ $output ];
             }
 
-		    $notices[$id]['output']['status'] = ( $notices[$id]['output']['icon'] !== 'success') ? 'open' : 'completed';
-		    if ( $args['status'] === 'open' && ($notices[$id]['output']['status'] === 'completed' ) ){
+		    $notices[$id]['output'] = $notice['output'][ $output ];
+
+		    $notices[$id]['output']['status'] = ( $notices[$id]['output']['icon'] === 'success') ? 'completed' : $notices[$id]['output']['icon'];
+		    if ( !in_array( $notices[$id]['output']['status'], $statuses ) ){
 			    unset($notices[$id]);
 			    continue;
             }
@@ -2329,7 +2331,7 @@ class rsssl_admin
             }
             //ensure an empty list is also cached
 		    $cache_notices = empty($notices) ? 'empty' : $notices;
-		    set_transient('rsssl_admin_notices', $cache_notices, WEEK_IN_SECONDS );
+		    update_option('rsssl_admin_notices', $cache_notices );
         }
 
 	    //sort so warnings are on top
@@ -2429,7 +2431,7 @@ class rsssl_admin
 		}
 
 		$cache = $this->is_settings_page() ? false : true;
-		$count = get_transient( 'rsssl_plusone_count' );
+		$count = get_option( 'rsssl_plusone_count' );
 		if ( !$cache || ($count === false) ) {
 			$count = 0;
 			$notices = $this->get_notices_list();
@@ -2445,7 +2447,7 @@ class rsssl_admin
             if ( $count==0) {
                 $count = 'empty';
             }
-			set_transient( 'rsssl_plusone_count', $count, WEEK_IN_SECONDS );
+			update_option( 'rsssl_plusone_count', $count );
 		}
 
 		if ( $count==='empty' ) {

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-22 21:19:30+0000\n"
+"PO-Revision-Date: 2022-12-23 16:07:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,33 +47,277 @@ msgstr "Pokračovat"
 msgid "Site Editor"
 msgstr "Úprava webu"
 
+#. translators: 1: Learn WordPress link.
+#: wp-admin/about.php:549
+msgid "Explore <a href=\"%s\">learn.wordpress.org</a> for tutorial videos, online workshops, courses, and lesson plans for Meetup organizers, including new features in WordPress."
+msgstr "Prozkoumejte <a href=\"%s\">learn.wordpress.org</a>, kde najdete výuková videa, online workshopy, kurzy a plány lekcí pro organizátory Meetup, včetně nových funkcí ve WordPressu."
+
 #: wp-admin/about.php:487
 msgid "https://wordpress.org/plugins/performance-lab/"
 msgstr "https://wordpress.org/plugins/performance-lab/"
+
+#. translators: %s: Link to fluid typography demo.
+#: wp-admin/about.php:216
+msgid "<a href=\"%s\">Fluid typography</a> lets you define font sizes that adapt for easy reading in any screen size."
+msgstr "<a href=\"%s\">Proměnlivá typografie</a> vám umožňuje definovat velikosti písma, které se přizpůsobí pro snadné čtení na jakékoli velikosti obrazovky."
+
+#: wp-admin/about.php:211
+msgid "More responsive text with fluid typography"
+msgstr "Responsivnější text s proměnlivou typografií"
+
+#: wp-admin/about.php:509
+msgid "Combine it with block locking options for even more advanced control over your blocks."
+msgstr "Zkombinovat s možnostmi zamykání bloků pro ještě pokročilejší kontrolu nad svými bloky."
+
+#. translators: %s: Link to content locking dev note.
+#: wp-admin/about.php:504
+msgid "Thanks to <a href=\"%s\">content-only editing settings</a>, layouts can be locked within container blocks. In a content-only block, its children are invisible to the List View and entirely uneditable. So you control the layout while your writers can focus on the content."
+msgstr "Díky <a href=\"%s\">nastavení možnosti upravovat jen obsah</a> lze rozvržení uzamknout v blocích kontejneru. V bloku pouze s obsahem jsou jeho potomci pro zobrazení seznamu neviditelní a zcela neupravitelní. Vy tedy ovládáte rozvržení, zatímco vaši autoři se mohou soustředit na obsah."
+
+#: wp-admin/about.php:499
+msgid "Content-only editing support for container blocks"
+msgstr "Podpora úprav pouze obsahu pro kontejnerové bloky"
+
+#. translators: %s: Link to install Performance Lab plugin if permitted,
+#. otherwise link to plugin on WordPress.org.
+#: wp-admin/about.php:486
+msgid "Be among the first to get the latest improvements by adding the <a href=\"%s\">Performance Lab plugin</a> to your WordPress test site or sandbox."
+msgstr "Buďte mezi prvními, kteří získají nejnovější vylepšení přidáním <a href=\"%s\">pluginu Performance Lab</a> na svůj testovací web WordPress nebo do sandboxu."
+
+#. translators: 1: REST API performance dev note, 2: Multisite performance dev
+#. note, 3: code-formatted "WP_Query" linked to dev note, 4: Block registration
+#. performance dev note, 5: Site health checks dev note; 6: code-formatted
+#. "async", 7: Performance field guide.
+#: wp-admin/about.php:471
+msgid "WordPress 6.1 resolved more than 25 tickets dedicated to enhancing performance. From the  <a href=\"%1$s\">REST API</a> to <a href=\"%2$s\">multisite</a>, %3$s to <a href=\"%4$s\">core block registration</a>, and <a href=\"%5$s\">new Site Health checks</a> to the addition of the %6$s attribute to images, there are performance improvements for every type of site. A full breakdown can be found in the <a href=\"%7$s\">Performance Field Guide</a>."
+msgstr "WordPress 6.1 vyřešil více než 25 tiketů věnovaných zvýšení výkonu. Z <a href=\"%1$s\">REST API</a> na <a href=\"%2$s\">multisite</a>, %3$s na <a href=\"%4$s\">registrací základního bloku</a> a <a href=\"%5$s\">novými kontrolami stavu webu</a> k přidání atributu %6$s k obrázkům došlo ke zlepšení výkonu pro každý typ webu. Úplný rozpis naleznete v <a href=\"%7$s\">Průvodce výkonem pole</a>."
+
+#: wp-admin/about.php:466
+msgid "Performance highlights"
+msgstr "Zlepšení výkonu"
+
+#. translators: %s: Link to spacing presets dev note.
+#: wp-admin/about.php:450
+msgid "Save time and help avoid hard-coding a values into a theme with <a href=\"%s\">preset margin and padding values for multiple blocks</a>."
+msgstr "Ušetřete čas a vyhněte se pevnému programování hodnot do šablony pomocí <a href=\"%s\">přednastavených hodnot okrajů a odsazení pro více bloků</a>."
+
+#: wp-admin/about.php:445
+msgid "Spacing presets for faster, consistent design"
+msgstr "Přednastavené rozestupy pro rychlejší a konzistentní návrh"
+
+#. translators: %s: Link to theme.json filters dev note.
+#: wp-admin/about.php:432
+msgid "<a href=\"%s\">Leverage filters</a> in the Styles sidebar to control settings at all four levels of your site—core, theme, user, or block, from less to more specific."
+msgstr "<a href=\"%s\">Využijte filtry</a> na postranním panelu Styly k ovládání nastavení na všech čtyřech úrovních vašeho webu – základní, šablona, uživatel nebo blok, od obecnějších po konkrétnější."
 
 #: wp-admin/about.php:427
 msgid "Filters for all your styles"
 msgstr "Filtry pro všechny styly"
 
+#. translators: %s: Link to query loop dev note.
+#: wp-admin/about.php:410
+msgid "<a href=\"%s\">New filters</a> let Query Block variations support custom queries for more powerful variations and advanced hierarchical post types filtering options."
+msgstr "<a href=\"%s\">Nové filtry</a> podporují vyhledávání variant bloků pro vlastní dotazy a pro výkonnější variace a pokročilé možnosti filtrování hierarchických typů příspěvků."
+
+#: wp-admin/about.php:405
+msgid "Expanded support for Query Loop blocks"
+msgstr "Rozšířená podpora pro bloky dotazů ve smyčce"
+
+#. translators: 1: Link to block-based template parts in classic themes dev
+#. note, 2: Folder name.
+#: wp-admin/about.php:391
+msgid "<a href=\"%1$s\">Block template parts can now be defined in classic themes</a> by adding the appropriate HTML files to the %2$s directory at the root of the theme."
+msgstr "<a href=\"%1$s\">Části šablony bloků lze nyní definovat v klasických šablonách</a> přidáním příslušných souborů HTML do adresáře %2$s v kořenovém adresáři šablony."
+
+#: wp-admin/about.php:386
+msgid "Block template parts in classic themes"
+msgstr "Blokové části šablony v klasických šablonách"
+
+#. translators: %s: Link to layout support refactor dev note.
+#: wp-admin/about.php:369
+msgid "The default content dimensions provided by themes can now be overridden in the Styles Sidebar, giving site builders better control over full-width content. Developers have <a href=\"%s\">fine-grained control over these controls</a>."
+msgstr "Výchozí rozměry obsahu poskytované šablonou lze nyní přepsat na postranním panelu stylů, což dává tvůrcům webu lepší kontrolu nad obsahem v plné šířce. Vývojáři mají nad těmito ovládacími prvky <a href=\"%s\">jemnou kontrolu</a>."
+
+#: wp-admin/about.php:364
+msgid "Continued evolution of layout options"
+msgstr "Pokračující vývoj možností rozvržení"
+
+#. translators: %s: Link to styling elements dev note.
+#: wp-admin/about.php:351
+msgid "Updates include <a href=\"%s\">styling elements</a> like buttons, citations, and links globally; controlling hover, active, and focus states for links using theme.json (not available to control in the interface yet); and customizing outline support for blocks and elements, among other features."
+msgstr "Aktualizace zahrnují <a href=\"%s\">stylové prvky</a>, jako jsou tlačítka, citace a odkazy obecně; ovládání stavu přechodu, aktivního a fokusu pro odkazy pomocí theme.json (zatím není k dispozici k ovládání v rozhraní); a přizpůsobení podpory obrysů pro bloky a prvky, kromě jiného."
+
+#: wp-admin/about.php:346
+msgid "Updated interface options and features"
+msgstr "Aktualizované rozhraní nastavení a funkcí"
+
+#: wp-admin/about.php:333
+msgid "A new modal design offers a background blur effect, making it easier to focus on the task at hand."
+msgstr "Nový modální design nabízí efekt rozostření pozadí, což usnadňuje soustředění na daný úkol."
+
+#. translators: %s: "General Settings" admin page title, linked to the page if
+#. the user can edit options.
+#: wp-admin/about.php:328
+msgid "The site tagline is empty by default in new sites but can be modified in %s."
+msgstr "Slogan webu je na nových webech ve výchozím nastavení prázdný, ale lze jej upravit v %s."
+
+#: wp-admin/about.php:323
+msgid "6.1 includes a new time-to-read feature showing content authors the approximate time-to-read values for pages, posts, and custom post types."
+msgstr "6.1 obsahuje novou funkci time-to-read, která tvůrcům obsahu ukazuje přibližné hodnoty času pro čtení stránek, příspěvků a vlastních typů příspěvků."
+
 #: wp-admin/about.php:322
 msgid "Other notes of interest"
 msgstr "Další zajímavosti"
+
+#. translators: %s: Link to accessibility improvements dev note.
+#: wp-admin/about.php:309
+msgid "More than 40 improvements in accessibility include resolving focus loss problems in the editor, improving form labels and audible messages, making alternative text easier to edit, and fixing the sub-menu overlap in the expanded admin side navigation at smaller screen sizes and higher zoom levels. Learn more about <a href=\"%s\">accessibility in WordPress</a>."
+msgstr "Více než 40 vylepšení v přístupnosti zahrnuje vyřešení problémů se ztrátou zaostření v editoru, vylepšení štítků formulářů a zvukových zpráv, usnadnění úpravy alternativního textu a oprava překrývání podnabídky v rozšířené navigaci na straně správce při menších velikostech obrazovky a vyšších úrovních přiblížení. Přečtěte si další informace o <a href=\"%s\">přístupnosti ve WordPressu</a>."
 
 #: wp-admin/about.php:304
 msgid "Improved admin and editor accessibility"
 msgstr "Vylepšena přístupnost pro administrátory a editory"
 
+#. translators: %s: Link style engine dev note.
+#: wp-admin/about.php:288
+msgid "The CSS rules for margin, padding, typography, colors, and borders within the <a href=\"%s\">styles engine</a> are now all in one place, reducing time spent on layout-specific tasks and helps to generate semantic class names."
+msgstr "Pravidla CSS pro okraje, odsazení, typografii, barvy a ohraničení v rámci <a href=\"%s\">enginu stylů</a> jsou nyní všechna na jednom místě, což zkracuje čas strávený úkoly souvisejícími s rozvržením a pomáhá vytvářet sémantické názvy tříd."
+
+#: wp-admin/about.php:283
+msgid "A streamlined style system"
+msgstr "Efektivní systém stylů"
+
+#. translators: %s: Link to block editor preferences dev note.
+#: wp-admin/about.php:270
+msgid "Site Editor settings are now <a href=\"%s\">persistent for each user</a>. This means your settings will now be consistent across browsers and devices."
+msgstr "Nastavení Editoru webu jsou nyní <a href=\"%s\">trvalá pro každého uživatele</a>. To znamená, že vaše nastavení bude nyní konzistentní ve všech prohlížečích a zařízeních."
+
+#: wp-admin/about.php:265
+msgid "Keep your Site Editor settings for later"
+msgstr "Ponechte si nastavení Editoru stránek na později"
+
 #: wp-admin/about.php:250
 msgid "https://wordpress.org/themes/tags/full-site-editing/"
 msgstr "https://wordpress.org/themes/tags/full-site-editing/"
+
+#. translators: %s: Link to Block Themes on WordPress.org.
+#: wp-admin/about.php:249
+msgid "The Themes Directory has <a href=\"%s\">a filter for block themes</a>, and a pattern preview gives a better sense of what the theme might look like while exploring different themes and patterns."
+msgstr "Adresář šablon má <a href=\"%s\">filtr pro blokové šablony</a> a náhled vzoru poskytuje lepší představu o tom, jak by šablona mohla vypadat, při prozkoumávání různých šablon a vzorů."
+
+#: wp-admin/about.php:244
+msgid "Find block themes faster"
+msgstr "Najděte témata bloků rychleji"
+
+#: wp-admin/about.php:235
+msgid "In WordPress 6.0, when you created a new page, you would see suggested patterns so you did not have to start with a blank page. In 6.1, you will also see the starter patterns modal when you create a new instance of any post type."
+msgstr "Ve WordPress 6.0, když jste vytvořili novou stránku, uvidíte navrhované vzory, takže nemusíte začínat prázdnou stránkou. Ve verzi 6.1 uvidíte také modální počáteční vzory, když vytvoříte novou instanci jakéhokoli typu příspěvku."
+
+#: wp-admin/about.php:234
+msgid "Add starter patterns to any post type"
+msgstr "Přidejte počáteční vzory do jakéhokoli typu příspěvku"
+
+#: wp-admin/about.php:205
+msgid "The List and Quote blocks now support inner blocks, allowing for more flexible and rich compositions like adding headings inside your Quote blocks."
+msgstr "Bloky Seznam a Citace nyní podporují vnitřní bloky, což umožňuje flexibilnější a bohatší kompozice, jako je přidávání nadpisů do bloků citací."
+
+#: wp-admin/about.php:204
+msgid "Compose richer lists and quotes with inner blocks"
+msgstr "Vytvářejte bohatší seznamy a citace s vnitřními bloky"
+
+#: wp-admin/about.php:198
+msgid "Various blocks have improved placeholders that reflect customization options to help you design your site and its content. For example, the Image block placeholder displays custom borders and duotone filters even before selecting an image."
+msgstr "Různé bloky mají vylepšené zástupné symboly, které odrážejí možnosti přizpůsobení, které vám pomohou navrhnout váš web a jeho obsah. Zástupný symbol bloku obrázku například zobrazí vlastní okraje a dvoutónové filtry ještě před výběrem obrázku."
+
+#: wp-admin/about.php:197
+msgid "Improved block placeholders"
+msgstr "Vylepšené zástupné symboly bloků"
+
+#: wp-admin/about.php:188
+msgid "When locking blocks, a new toggle lets you apply your lock settings to all the blocks in a containing block like the group, cover, and column blocks."
+msgstr "Při zamykání bloků vám nový přepínač umožňuje použít nastavení zámku na všechny bloky obsažené v bloku, jako je skupina, kryt a bloky sloupců."
+
+#: wp-admin/about.php:187
+msgid "One-click lock settings for all inner blocks"
+msgstr "Nastavení zámku jedním kliknutím pro všechny vnitřní bloky"
+
+#: wp-admin/about.php:181
+msgid "A cleaner, better-organized display helps you easily view and manage important post and page settings, especially the template picker and scheduler."
+msgstr "Čistší a lépe uspořádaný displej vám pomůže snadno prohlížet a spravovat důležitá nastavení příspěvků a stránek, zejména výběr šablon a plánovač."
+
+#: wp-admin/about.php:180
+msgid "Improved layout and visualization of document settings"
+msgstr "Vylepšené rozvržení a zobrazení nastavení dokumentu"
+
+#. translators: %s: Link to navigation block fallback dev note.
+#: wp-admin/about.php:162
+msgid "<a href=\"%s\">New fallback options</a> in the navigation block mean you can edit the menu that’s open; no searching needed. Plus, the controls for choosing and working on menus have their own place in the block settings. The mobile menu system also gets an upgrade with new features, including different icon options, to make the menu yours."
+msgstr "<a href=\"%s\">Nové záložní možnosti</a> v navigačním bloku znamenají, že můžete upravit nabídku, která je otevřená; není třeba hledat. Navíc ovládací prvky pro výběr a práci v menu mají své místo v nastavení bloku. Mobilní systém menu také dostane upgrade s novými funkcemi, včetně různých možností ikon, aby bylo menu podle vás."
 
 #: wp-admin/about.php:157
 msgid "Menus just got easier to create and manage"
 msgstr "Menu se nyní jednodušeji spravují a vytváří"
 
+#. translators: %s: Link to layout support refactor dev note.
+#: wp-admin/about.php:147
+msgid "Upgrades to the <a href=\"%s\">controls for design elements and blocks</a> make the layout and site-building process more consistent, complete, and intuitive."
+msgstr "Díky upgradům <a href=\"%s\">ovládacích prvků pro desig a bloky</a> je rozvržení a proces vytváření webu konzistentnější, úplnější a intuitivnější."
+
+#: wp-admin/about.php:142
+msgid "More consistency and control across design tools"
+msgstr "Více konzistence a kontroly napříč návrhovými nástroji"
+
+#. translators: 1: Link to template options dev note, 2: Link to template
+#. creation dev note.
+#: wp-admin/about.php:121
+msgid "<a href=\"%1$s\">New templates</a> include a custom template for posts and pages in the Site Editor. Search-and-replace tools speed up the design of <a href=\"%2$s\">template parts</a>."
+msgstr "<a href=\"%1$s\">Nové šablony</a> zahrnují vlastní šablonu pro příspěvky a stránky v Editoru webu. Nástroje pro vyhledávání a nahrazování urychlují návrh <a href=\"%2$s\">částí šablon</a>."
+
+#: wp-admin/about.php:116
+msgid "A better creator experience with refined and additional templates"
+msgstr "Lepší prostředí pro tvůrce díky vylepšeným a dalším šablonám"
+
+#. translators: 1: Variation announcement post URL, 2: Accessibility-ready
+#. handbook page.
+#: wp-admin/about.php:105
+msgid "Building on the foundational elements in the 5.9 and 6.0 releases for block themes and style variations, the new default theme, Twenty Twenty-Three, includes <a href=\"%1$s\">10 different styles</a> and is &#147;<a href=\"%2$s\">Accessibility Ready</a>&#148;."
+msgstr "Nové výchozí téma, Twenty Twenty-Three, staví na základních prvcích verzí 5.9 a 6.0 pro bloková šablona a variace stylů a obsahuje <a href=\"%1$s\">10 různých stylů</a> a je & #147;<a href=\"%2$s\">Připraveno ke zpřístupnění</a>&#148;."
+
+#: wp-admin/about.php:100
+msgid "A new default theme powered by 10 distinct style variations"
+msgstr "Nová výchozí šablona založená na 10 různých variantách stylu"
+
+#: wp-admin/about.php:88
+msgid "This page highlights some of the most significant changes to the product since the May 2022 release of WordPress 6.0. You will also find resources for developers and anyone seeking a deeper understanding of WordPress."
+msgstr "Tato stránka vyzdvihuje některé z nejvýznamnějších změn produktu od vydání WordPress 6.0 z května 2022. Najdete zde také zdroje pro vývojáře a každého, kdo hledá hlubší porozumění WordPressu."
+
+#: wp-admin/users.php:64
+msgid "<strong>Send password reset</strong> sends the user an email with a link to set a new password."
+msgstr "<strong>Odeslat resetování hesla</strong> odešle uživateli e-mail s odkazem na nastavení nového hesla."
+
 #: wp-admin/user-edit.php:819
 msgid "https://developer.wordpress.org/apis/wp-config-php/#wp-environment-type"
 msgstr "https://developer.wordpress.org/apis/wp-config-php/#wp-environment-type"
+
+#: wp-admin/upload.php:247
+msgid "<strong>Copy URL to clipboard</strong> copies the URL for the media file to your clipboard."
+msgstr "<strong>Kopírovat adresu URL do schránky</strong> zkopíruje adresu URL mediálního souboru do schránky."
+
+#: wp-admin/upload.php:246
+msgid "<strong>View</strong> will take you to a public display page for that file."
+msgstr "<strong>Zobrazení</strong> vás přesměruje na zobrazení veřejné stránky daného souboru."
+
+#: wp-admin/upload.php:245
+msgid "<strong>Delete Permanently</strong> will delete the file from the media library (as well as from any posts to which it is currently attached)."
+msgstr "<strong>Smazat trvale</strong> smaže soubor z knihovny médií (stejně jako ze všech příspěvků, ke kterým je aktuálně připojen)."
+
+#: wp-admin/upload.php:244
+msgid "<strong>Edit</strong> takes you to a simple screen to edit that individual file&#8217;s metadata. You can also reach that screen by clicking on the media file name or thumbnail."
+msgstr "<strong>Upravit</strong> vás přenese na jednoduchou obrazovku, kde můžete upravit metadata jednotlivých souborů. Na tuto obrazovku se také dostanete kliknutím na název mediálního souboru nebo miniaturu."
+
+#: wp-admin/upload.php:242
+msgid "Hovering over a row reveals action links that allow you to manage media items. You can perform the following actions:"
+msgstr "Umístěním kurzoru na řádek se zobrazí odkazy na akce, které vám umožňují spravovat mediální položky. Můžete provádět následující akce:"
 
 #: wp-admin/theme-install.php:204
 msgctxt "themes"
@@ -88,33 +332,203 @@ msgstr "<a href=\"https://wordpress.org/support/article/block-themes/\">Dokument
 msgid "Block themes"
 msgstr "Blokové šablony"
 
+#: wp-admin/theme-install.php:144
+msgid "With a block theme, you can place and edit blocks without affecting your content by customizing or creating new templates."
+msgstr "Pomocí blokové šablony můžete umisťovat a upravovat bloky bez ovlivnění obsahu přizpůsobením nebo vytvářením nových šablon."
+
+#: wp-admin/theme-install.php:143
+msgid "A block theme is a theme that uses blocks for all parts of a site including navigation menus, header, content, and site footer. These themes are built for the features that allow you to edit and customize all parts of your site."
+msgstr "Šablona bloku je šablona, který používá bloky pro všechny části webu včetně navigačních nabídek, záhlaví, obsahu a zápatí webu. Tyto šablony jsou vytvořeny pro funkce, které vám umožňují upravovat a přizpůsobovat všechny části vašeho webu."
+
+#: wp-admin/site-health.php:259
+msgid "Recommended items are considered beneficial to your site, although not as important to prioritize as a critical issue, they may include improvements to things such as; Performance, user experience, and more."
+msgstr "Doporučené položky jsou považovány za přínosné pro váš web, ačkoli nejsou tak důležité pro stanovení priorit jako kritický problém, mohou zahrnovat vylepšení, jako jsou: výkon, uživatelská zkušenost a další."
+
+#: wp-admin/site-health.php:246
+msgid "Critical issues are items that may have a high impact on your sites performance or security, and resolving these issues should be prioritized."
+msgstr "Kritické problémy jsou položky, které mohou mít velký dopad na výkon nebo zabezpečení vašich stránek, a řešení těchto problémů by mělo být prioritou."
+
+#: wp-admin/site-editor.php:23 wp-admin/site-editor.php:28
+msgid "The theme you are currently using is not compatible with the Site Editor."
+msgstr "Šablona, který aktuálně používáte, není kompatibilní s editorem webu."
+
 #. translators: %s: wp-config.php
 #: wp-admin/setup-config.php:418
 msgid "Configuration rules for %s:"
 msgstr "Konfigurační pravidla pro %s:"
+
+#: wp-admin/options-permalink.php:359
+msgid "Customize permalink structure by selecting available tags"
+msgstr "Přizpůsobte strukturu stálých odkazů výběrem dostupných štítků"
+
+#. translators: %s: %postname%
+#: wp-admin/options-permalink.php:322
+msgid "Select the permalink structure for your website. Including the %s tag makes links easy to understand, and can help your posts rank higher in search engines."
+msgstr "Vyberte strukturu trvalých odkazů pro svůj web. Zahrnutí štítků %s usnadňuje srozumitelnost odkazů a může pomoci vašim příspěvkům dosáhnout vyšší pozice ve vyhledávačích."
+
+#. translators: %s: Permalink structure tag.
+#: wp-admin/options-permalink.php:313
+msgid "%s removed from permalink structure"
+msgstr "%s odstraněno ze struktury trvalého odkazu"
 
 #. translators: %s: Number of critical Site Health checks.
 #: wp-admin/menu.php:383
 msgid "Site Health %s"
 msgstr "Zdraví webu %s"
 
+#: wp-admin/includes/file.php:24
+msgid "Theme Styles & Block Settings"
+msgstr "Nastavení stylů šablon a bloků"
+
 #. translators: %s: The minimum recommended PHP version.
 #: wp-admin/includes/dashboard.php:1872
 msgid "The minimum recommended version of PHP is %s."
 msgstr "Minimální doporučená verze PHP je %s."
 
+#: wp-admin/includes/dashboard.php:1867
+msgid "PHP is one of the programming languages used to build WordPress. Newer versions of PHP receive regular security updates and may increase your site&#8217;s performance."
+msgstr "PHP je jedním z programovacích jazyků používaných k sestavení WordPressu. Novější verze PHP dostávají pravidelné bezpečnostní aktualizace a mohou zvýšit výkon vašeho webu."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/dashboard.php:1852
+msgid "Your site is running on an outdated version of PHP (%s), which soon will not be supported by WordPress. Ensure that PHP is updated on your server as soon as possible. Otherwise you will not be able to upgrade WordPress."
+msgstr "Vaše stránky běží na zastaralé verzi PHP (%s), kterou WordPress brzy nebude podporovat. Ujistěte se, že PHP na vašem serveru bude co nejdříve aktualizováno. Jinak nebudete moci upgradovat WordPress."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/dashboard.php:1839
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates and soon will not be supported by WordPress. Ensure that PHP is updated on your server as soon as possible. Otherwise you will not be able to upgrade WordPress."
+msgstr "Váš web běží na zastaralé verzi PHP (%s), která nedostává bezpečnostní aktualizace a brzy nebude podporována WordPressem. Ujistěte se, že PHP na vašem serveru bude co nejdříve aktualizováno. Jinak nebudete moci upgradovat WordPress."
+
+#: wp-admin/includes/class-wp-site-health.php:2642
+msgid "Persistent object cache"
+msgstr "Trvalá mezipaměť objektů"
+
 #: wp-admin/includes/class-wp-site-health.php:2635
 msgid "Page cache"
 msgstr "Mezipaměť stránky"
+
+#: wp-admin/includes/class-wp-site-health.php:2495
+msgid "You should use a persistent object cache"
+msgstr "Měli byste použít trvalou mezipaměť objektů"
+
+#. translators: Available object caching services.
+#: wp-admin/includes/class-wp-site-health.php:2474
+msgid "Your host appears to support the following object caching services: %s."
+msgstr "Zdá se, že hosting podporuje následující služby ukládání objektů do mezipaměti: %s."
+
+#: wp-admin/includes/class-wp-site-health.php:2469
+msgid "Your hosting provider can tell you if a persistent object cache can be enabled on your site."
+msgstr "Poskytovatel hostingu vám může sdělit, zda lze na webu povolit trvalou mezipaměť objektů."
+
+#: wp-admin/includes/class-wp-site-health.php:2462
+msgid "A persistent object cache is not required"
+msgstr "Trvalá mezipaměť objektů není vyžadována"
+
+#: wp-admin/includes/class-wp-site-health.php:2451
+msgid "Learn more about persistent object caching."
+msgstr "Další informace o trvalém ukládání objektů do mezipaměti."
+
+#: wp-admin/includes/class-wp-site-health.php:2446
+msgid "A persistent object cache makes your site&#8217;s database more efficient, resulting in faster load times because WordPress can retrieve your site&#8217;s content and settings much more quickly."
+msgstr "Díky trvalé mezipaměti objektů je databáze webu efektivnější, což vede k rychlejšímu načítání, protože WordPress může mnohem rychleji načíst obsah a nastavení webu."
+
+#: wp-admin/includes/class-wp-site-health.php:2443
+msgid "A persistent object cache is being used"
+msgstr "Používá se trvalá mezipaměť objektů"
 
 #. translators: Localized Support reference.
 #: wp-admin/includes/class-wp-site-health.php:2433
 msgid "https://wordpress.org/support/article/optimization/#persistent-object-cache"
 msgstr "https://wordpress.org/support/article/optimization/#persistent-object-cache"
 
+#: wp-admin/includes/class-wp-site-health.php:2408
+msgid "A page cache plugin was not detected."
+msgstr "Nebyl zjištěn plugin mezipaměti stránky."
+
+#: wp-admin/includes/class-wp-site-health.php:2405
+msgid "A page cache plugin was detected."
+msgstr "Byl zjištěn plugin mezipaměti stránky."
+
+#. translators: %d: Number of caching headers.
+#: wp-admin/includes/class-wp-site-health.php:2392
+msgid "There was %d client caching response header detected:"
+msgid_plural "There were %d client caching response headers detected:"
+msgstr[0] "Byla zjištěna %d hlavička odpovědi klienta pro ukládání do mezipaměti:"
+msgstr[1] "Byly zjištěny %d hlavičky odpovědi klienta pro ukládání do mezipaměti:"
+msgstr[2] "Bylo zjištěno %d hlaviček odpovědi klienta pro ukládání do mezipaměti:"
+
+#: wp-admin/includes/class-wp-site-health.php:2387
+msgid "No client caching response headers were detected."
+msgstr "Nebyly zjištěny žádné hlavičky odpovědí klientské mezipaměti."
+
+#. translators: 1: The response time in milliseconds, 2: The recommended
+#. threshold in milliseconds.
+#: wp-admin/includes/class-wp-site-health.php:2380
+msgid "Median server response time was %1$s milliseconds. It should be less than the recommended %2$s milliseconds threshold."
+msgstr "Střední doba odezvy serveru byla %1$s milisekund. Měla by být menší než doporučený práh %2$s milisekund."
+
+#. translators: 1: The response time in milliseconds, 2: The recommended
+#. threshold in milliseconds.
+#: wp-admin/includes/class-wp-site-health.php:2373
+msgid "Median server response time was %1$s milliseconds. This is less than the recommended %2$s milliseconds threshold."
+msgstr "Střední doba odezvy serveru byla %1$s milisekund. To je méně než doporučený práh %2$s milisekund."
+
+#: wp-admin/includes/class-wp-site-health.php:2366
+msgid "Server response time could not be determined. Verify that loopback requests are working."
+msgstr "Dobu odezvy serveru nelze určit. Ověřte, že požadavky zpětné smyčky fungují."
+
+#: wp-admin/includes/class-wp-site-health.php:2359
+msgid "Page cache is detected but the server response time is still slow"
+msgstr "Mezipaměť stránek byla zjištěna, ale doba odezvy serveru je stále pomalá"
+
+#: wp-admin/includes/class-wp-site-health.php:2357
+msgid "Page cache is not detected and the server response time is slow"
+msgstr "Mezipaměť stránek nebyla zjištěna a doba odezvy serveru je pomalá"
+
+#: wp-admin/includes/class-wp-site-health.php:2353
+msgid "Page cache is detected and the server response time is good"
+msgstr "Mezipaměť stránek je detekována a doba odezvy serveru je dobrá"
+
+#: wp-admin/includes/class-wp-site-health.php:2350
+msgid "Page cache is not detected but the server response time is OK"
+msgstr "Mezipaměť stránek nebyla zjištěna, ale doba odezvy serveru je v pořádku"
+
+#. translators: 1: Error message, 2: Error code.
+#: wp-admin/includes/class-wp-site-health.php:2338
+msgid "Unable to detect page cache due to possible loopback request problem. Please verify that the loopback request test is passing. Error: %1$s (Code: %2$s)"
+msgstr "Nelze detekovat mezipaměť stránky kvůli možnému problému se zpětnou smyčkou. Ověřte prosím, že test požadavku zpětné smyčky prošel. Chyba: %1$s (kód: %2$s)"
+
+#: wp-admin/includes/class-wp-site-health.php:2334
+msgid "Unable to detect the presence of page cache"
+msgstr "Nelze zjistit přítomnost mezipaměti stránky"
+
+#: wp-admin/includes/class-wp-site-health.php:2325
+msgid "Learn more about page cache"
+msgstr "Další informace o mezipaměti stránky"
+
 #: wp-admin/includes/class-wp-site-health.php:2324
 msgid "https://wordpress.org/support/article/optimization/#Caching"
 msgstr "https://wordpress.org/support/article/optimization/#Caching"
+
+#: wp-admin/includes/class-wp-site-health.php:2310
+msgid "Page cache is detected by looking for an active page cache plugin as well as making three requests to the homepage and looking for one or more of the following HTTP client caching response headers:"
+msgstr "Mezipaměť stránek je detekována vyhledáním aktivního pluginu mezipaměti stránek a provedením tří požadavků na domovskou stránku a hledáním jednoho nebo více z následujících hlaviček odpovědí mezipaměti klienta HTTP:"
+
+#: wp-admin/includes/class-wp-site-health.php:2309
+msgid "Page cache enhances the speed and performance of your site by saving and serving static pages instead of calling for a page every time a user visits."
+msgstr "Mezipaměť stránek zvyšuje rychlost a výkon vašeho webu tím, že ukládá a zobrazuje statické stránky namísto volání na stránku pokaždé, když ji uživatel navštíví."
+
+#: wp-admin/includes/class-wp-site-health.php:2275
+msgid "If you are still seeing this warning after having tried the actions below, you may need to contact your hosting provider for further assistance."
+msgstr "Pokud se vám toto varování zobrazuje i po vyzkoušení níže uvedených akcí, možná budete muset požádat o další pomoc svého poskytovatele hostingu."
+
+#: wp-admin/includes/class-wp-site-health.php:2258
+msgid "The Authorization header is used by third-party applications you have approved for this site. Without this header, those apps cannot connect to your site."
+msgstr "Autorizační hlavička je používána aplikacemi třetích stran, které jste pro tento web schválili. Bez této hlavičky se tyto aplikace nemohou připojit k vašemu webu."
+
+#: wp-admin/includes/class-wp-site-health.php:2114
+msgid "When testing the REST API, an unexpected result was returned:"
+msgstr "Při testování REST API byl vrácen neočekávaný výsledek:"
 
 #. translators: 1: The WordPress error code. 2: The WordPress error message.
 #. translators: 1: The WordPress error code. 2: The HTTP status code error
@@ -130,9 +544,34 @@ msgstr "REST API odezva: (%1$s) %2$s"
 msgid "REST API Endpoint: %s"
 msgstr "REST API Koncový bod: %s"
 
+#: wp-admin/includes/class-wp-site-health.php:2094
+msgid "When testing the REST API, an error was encountered:"
+msgstr "Při testování REST API došlo k chybě:"
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/class-wp-site-health.php:815
+#: wp-admin/includes/dashboard.php:1845
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates. It should be updated."
+msgstr "Váš web běží na zastaralé verzi PHP (%s), která nedostává aktualizace zabezpečení. Mělo by být aktualizováno."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/class-wp-site-health.php:808
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates and soon will not be supported by WordPress."
+msgstr "Váš web běží na zastaralé verzi PHP (%s), která nedostává bezpečnostní aktualizace a brzy nebude podporována WordPressem."
+
 #: wp-admin/includes/class-wp-site-health.php:787
 msgid "Requirements"
 msgstr "Požadavky"
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/class-wp-site-health.php:782
+msgid "Your site is running on an outdated version of PHP (%s), which soon will not be supported by WordPress."
+msgstr "Vaše stránky běží na zastaralé verzi PHP (%s), kterou WordPress již brzy nebude podporovat."
+
+#. translators: %s: The minimum recommended PHP version.
+#: wp-admin/includes/class-wp-site-health.php:744
+msgid "PHP is one of the programming languages used to build WordPress. Newer versions of PHP receive regular security updates and may increase your site&#8217;s performance. The minimum recommended version of PHP is %s."
+msgstr "PHP je jedním z programovacích jazyků používaných k sestavení WordPressu. Novější verze PHP dostávají pravidelné bezpečnostní aktualizace a mohou zvýšit výkon vašeho webu. Minimální doporučená verze PHP je %s."
 
 #: wp-admin/includes/class-wp-site-health.php:609
 msgid "Your site does not have any installed themes."
@@ -141,6 +580,26 @@ msgstr "Na webu nejsou nainstalovány žádné šablony."
 #: wp-admin/includes/class-wp-site-health.php:441
 msgid "Your site does not have any active plugins."
 msgstr "Na webu nejsou nainstalovány žádné pluginy."
+
+#: wp-admin/includes/class-wp-site-health-auto-updates.php:188
+msgid "Another attempt will be made with the next release."
+msgstr "Další pokus bude proveden s dalším vydáním."
+
+#. translators: 1: Name of the constant used. 2: Value of the constant used.
+#: wp-admin/includes/class-wp-site-health-auto-updates.php:78
+msgid "The %1$s constant is defined as %2$s"
+msgstr "Konstanta %1$s je definována jako %2$s"
+
+#. translators: %1$s: The argument name. %2$s: The view name.
+#: wp-admin/includes/class-wp-list-table.php:415
+#: wp-admin/includes/class-wp-list-table.php:430
+msgid "The %1$s argument must be a non-empty string for %2$s."
+msgstr "Argument %1$s musí být pro %2$s neprázdný řetězec."
+
+#. translators: %s: The $link_data argument.
+#: wp-admin/includes/class-wp-list-table.php:398
+msgid "The %s argument must be an array."
+msgstr "Argument %s musí být pole."
 
 #. translators: 1: Plugin name, 2: Version number, 3: Plugin URL.
 #: wp-admin/includes/class-wp-automatic-updater.php:1123
@@ -154,6 +613,20 @@ msgstr "- %1$s verze %2$s%3$s"
 #: wp-admin/includes/class-wp-automatic-updater.php:1186
 msgid "- %1$s (from version %2$s to %3$s)%4$s"
 msgstr "- %1$s (ze současné verze %2$s na verzi %3$s)%4$s"
+
+#: wp-admin/includes/class-wp-automatic-updater.php:833
+msgid "Reach out to WordPress Core developers to ensure you'll never have this problem again."
+msgstr "Obraťte se na vývojáře WordPress Core, abyste se ujistili, že už nikdy nebudete mít tento problém."
+
+#. translators: 1: WordPress version number, 2: Link to update WordPress
+#: wp-admin/about.php:642
+msgid "Important! Your version of WordPress (%1$s) will stop receiving security updates in the near future. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
+msgstr "Důležité! Vaše WordPress verze (%1$s) přestane v blízké budoucnosti dostávat aktualizace zabezpečení. Aby byl váš web bezpečný, <a href=\"%2$s\">aktualizujte na nejnovější verzi WordPressu</a>."
+
+#. translators: 1: WordPress version number, 2: Link to update WordPress
+#: wp-admin/about.php:639
+msgid "Important! Your version of WordPress (%1$s) is no longer supported, you will not receive any security updates for your website. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
+msgstr "Důležité! Vaše WordPress verze (%1$s) již není podporována, nebudete dostávat žádné aktualizace zabezpečení pro váš web. Aby byl váš web bezpečný, <a href=\"%2$s\">aktualizujte na nejnovější verzi WordPressu</a>."
 
 #: wp-admin/about.php:561
 msgid "https://make.wordpress.org/core/2022/10/12/wordpress-6-1-field-guide/"
@@ -313,7 +786,7 @@ msgstr "Aktivní"
 
 #: wp-admin/includes/class-core-upgrader.php:160
 #: wp-admin/includes/class-wp-upgrader.php:166
-#: wp-admin/includes/update-core.php:1020
+#: wp-admin/includes/update-core.php:1018
 msgid "The update cannot be installed because some files could not be copied. This is usually due to inconsistent file permissions."
 msgstr "Aktualizaci nelze nainstalovat, protože některé soubory nelze zkopírovat. To je obvykle způsobeno nekonzistentními oprávněními k souborům."
 
@@ -2429,7 +2902,7 @@ msgid "The seventh parameter passed to %s should be numeric representing menu po
 msgstr "Sedmý parametr předaný %s by měl být celé číslo představující pozici menu."
 
 #. translators: 1: WordPress version number, 2: The PHP extension name needed.
-#: wp-admin/includes/update-core.php:1115
+#: wp-admin/includes/update-core.php:1113
 msgid "The update cannot be installed because WordPress %1$s requires the %2$s PHP extension."
 msgstr "Aktualizaci nelze nainstalovat, protože WordPress %1$s vyžaduje PHP modul %2$s."
 
@@ -8590,8 +9063,8 @@ msgstr "Na vašem webu, na adrese %1$s, bylo zjištěno kritické selhání při
 msgid "WordPress %s is also now available."
 msgstr "V současné době už je dostupný také WordPress %s."
 
-#: wp-admin/includes/update-core.php:1192
-#: wp-admin/includes/update-core.php:1228
+#: wp-admin/includes/update-core.php:1190
+#: wp-admin/includes/update-core.php:1226
 msgid "The update cannot be installed because your site is unable to copy some files. This is usually due to inconsistent file permissions."
 msgstr "Aktualizaci nelze nainstalovat, protože by nebylo možné zkopírovat některé soubory. Běžně je tato chyba způsobena nedostatečnými právy k souborům."
 
@@ -8706,7 +9179,7 @@ msgstr "Aktualizovat překlady"
 msgid "Background updates"
 msgstr "Aktualizace na pozadí"
 
-#: wp-admin/includes/update-core.php:1288
+#: wp-admin/includes/update-core.php:1286
 msgid "There is not enough free disk space to complete the update."
 msgstr "Pro dokončení aktualizace není k dispozici dostatek volného místa na disku."
 
@@ -8784,11 +9257,11 @@ msgstr "Zadané uživatelské jméno obsahuje neplatné znaky."
 msgid "Please provide a valid username."
 msgstr "Zadejte prosím platné uživatelské jméno."
 
-#: wp-admin/includes/update-core.php:1209
+#: wp-admin/includes/update-core.php:1207
 msgid "Copying the required files&#8230;"
 msgstr "Kopírování potřebných souborů&#8230;"
 
-#: wp-admin/includes/update-core.php:1123
+#: wp-admin/includes/update-core.php:1121
 msgid "Preparing to install the latest version&#8230;"
 msgstr "Příprava k instalaci nejnovější verze&#8230;"
 
@@ -9490,7 +9963,7 @@ msgid "Search engine visibility"
 msgstr "Dostupnost pro vyhledávače"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1522 wp-admin/update-core.php:904
+#: wp-admin/includes/update-core.php:1520 wp-admin/update-core.php:904
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "Vítejte ve WordPressu %1$s. Během chvíle budete přesměrováni na stránku &#8222;O WordPressu&#8220;. Pokud se tak nestane, klikněte <a href=\"%2$s\">zde</a>."
 
@@ -10271,7 +10744,7 @@ msgid "This screen allows you to choose your permalink structure. You can choose
 msgstr "Tato stránka umožňuje výběr struktury trvalých odkazů. Můžete si vybrat z běžných nastavení, nebo si vytvořit vlastní strukturu URL adres."
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1530 wp-admin/update-core.php:912
+#: wp-admin/includes/update-core.php:1528 wp-admin/update-core.php:912
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "Vítejte ve WordPressu %1$s. <a href=\"%2$s\">Podrobnější informace</a>."
 
@@ -12286,7 +12759,7 @@ msgid "User already exists. Password inherited."
 msgstr "Uživatel již existuje, jeho heslo zůstalo nezměněno."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:428
-#: wp-admin/includes/update-core.php:1516 wp-admin/update-core.php:900
+#: wp-admin/includes/update-core.php:1514 wp-admin/update-core.php:900
 msgid "WordPress updated successfully."
 msgstr "WordPress byl úspěšně aktualizován"
 
@@ -13531,34 +14004,34 @@ msgstr "Aktualizovat na verzi %s"
 msgid "You are using a development version (%1$s). Cool! Please <a href=\"%2$s\">stay updated</a>."
 msgstr "Používáte vývojářskou verzi WordPressu (%1$s). Děkujeme! Pravidelně, prosím, aktualizujte na <a href=\"%2$s\">nejnovější verzi</a>."
 
-#: wp-admin/includes/update-core.php:1446
+#: wp-admin/includes/update-core.php:1444
 msgid "Upgrading database&#8230;"
 msgstr "Aktualizace databáze&#8230;"
 
-#: wp-admin/includes/update-core.php:1004
+#: wp-admin/includes/update-core.php:1002
 msgid "The update could not be unpacked"
 msgstr "Aktualizační balíček se nepodařilo rozbalit"
 
-#: wp-admin/includes/update-core.php:986
+#: wp-admin/includes/update-core.php:984
 msgid "Verifying the unpacked files&#8230;"
 msgstr "Ověřování rozbalených souborů&#8230;"
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number, 3: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1101
+#: wp-admin/includes/update-core.php:1099
 msgid "The update cannot be installed because WordPress %1$s requires MySQL version %2$s or higher. You are running version %3$s."
 msgstr "Automatická aktualizace nemůže být provedena, protože WordPress %1$s vyžaduje alespoň MySQL %2$s a na vašem serveru je používána starší verze MySQL %3$s."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Current PHP version number.
-#: wp-admin/includes/update-core.php:1090
+#: wp-admin/includes/update-core.php:1088
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher. You are running version %3$s."
 msgstr "Automatická aktualizace nemůže být provedena, protože WordPress %1$s vyžaduje alespoň PHP %2$s a na vašem serveru je používána starší verze PHP %3$s."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Minimum required MySQL version number, 4: Current PHP version
 #. number, 5: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1077
+#: wp-admin/includes/update-core.php:1075
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher and MySQL version %3$s or higher. You are running PHP version %4$s and MySQL version %5$s."
 msgstr "Automatická aktualizace nemůže být provedena, protože WordPress %1$s vyžaduje alespoň PHP %2$s a MySQL %3$s. Na vašem serveru jsou však používány starší verze PHP %4$s a MySQL %5$s."
 
@@ -14500,7 +14973,7 @@ msgid "Empty archive."
 msgstr "Archiv je prázdný."
 
 #: wp-admin/includes/file.php:1742 wp-admin/includes/file.php:1872
-#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1387
+#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1385
 msgid "Could not copy file."
 msgstr "Soubor se nepodařilo zkopírovat."
 
@@ -14818,12 +15291,12 @@ msgid "The plugin is at the latest version."
 msgstr "Používáte nejnovější verzi tohoto pluginu."
 
 #: wp-admin/includes/class-wp-upgrader.php:169
-#: wp-admin/includes/update-core.php:1336
+#: wp-admin/includes/update-core.php:1334
 msgid "Disabling Maintenance mode&#8230;"
 msgstr "Režim údržby webu byl vypnut&#8230;"
 
 #: wp-admin/includes/class-wp-upgrader.php:168
-#: wp-admin/includes/update-core.php:1200
+#: wp-admin/includes/update-core.php:1198
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "Režim údržby webu byl zapnut&#8230;"
 

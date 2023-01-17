@@ -19,7 +19,9 @@ class Manager {
 	 */
 	private function __construct() {
 
-		add_action( 'elementor/dynamic_tags/register_tags', array( $this, 'register_dynamic_tags' ) );
+		$hook = version_compare( ELEMENTOR_VERSION, '3.5.0', '>=' ) ? 'elementor/dynamic_tags/register' : 'elementor/dynamic_tags/register_tags';
+
+		add_action( $hook, array( $this, 'register_dynamic_tags' ) );
 
 	}
 
@@ -36,10 +38,17 @@ class Manager {
 		Plugin::instance()->dynamic_tags->register_group( self::TAG_GROUP, array( 'title' => __( 'Languages', 'polylang' ) ) );
 
 		// Register the tags.
-		$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageName' );
-		$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageCode' );
-		$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageFlag' );
-		$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageUrl' );
+		if ( version_compare( ELEMENTOR_VERSION, '3.5.0', '>=' ) ) {
+			$dynamic_tags->register( new LanguageName() );
+			$dynamic_tags->register( new LanguageCode() );
+			$dynamic_tags->register( new LanguageFlag() );
+			$dynamic_tags->register( new LanguageUrl() );
+		} else {
+			$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageName' );
+			$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageCode' );
+			$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageFlag' );
+			$dynamic_tags->register_tag( __NAMESPACE__ . '\\LanguageUrl' );
+		}
 
 	}
 

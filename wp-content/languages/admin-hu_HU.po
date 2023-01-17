@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-01 11:40:28+0000\n"
+"PO-Revision-Date: 2023-01-09 10:37:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,6 +112,20 @@ msgstr "Sablon stílusok & Blokk beállítások"
 msgid "The minimum recommended version of PHP is %s."
 msgstr "Legalább a PHP %s használata az ajánlott."
 
+#: wp-admin/includes/dashboard.php:1867
+msgid "PHP is one of the programming languages used to build WordPress. Newer versions of PHP receive regular security updates and may increase your site&#8217;s performance."
+msgstr "PHP az egyik programnyelv amellyel a WordPresst fejlesztették. Újabb PHP verzió rendszeres biztonsági frissítéseket kapnak és növelhetik az oldalunk teljesítményét."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/dashboard.php:1852
+msgid "Your site is running on an outdated version of PHP (%s), which soon will not be supported by WordPress. Ensure that PHP is updated on your server as soon as possible. Otherwise you will not be able to upgrade WordPress."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, amit hamarosan nem fog támogatni a WordPress. Biztosítsuk, hogy a PHP mihamarabb frissítésre kerül. Ellenkező esetben nem leszünk képesek a WordPress frissítésére."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/dashboard.php:1839
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates and soon will not be supported by WordPress. Ensure that PHP is updated on your server as soon as possible. Otherwise you will not be able to upgrade WordPress."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, ami nem kap biztonsági frissítéseket és amit hamarosan nem fog támogatni a WordPress. Biztosítsuk, hogy a PHP mihamarabb frissítésre kerül. Ellenkező esetben nem leszünk képesek a WordPress frissítésére."
+
 #: wp-admin/includes/class-wp-site-health.php:2642
 msgid "Persistent object cache"
 msgstr "Állandó objektum gyorsítótár"
@@ -127,7 +141,7 @@ msgstr "Használnunk kellene állandó objektum gyorsítótárat"
 #. translators: Available object caching services.
 #: wp-admin/includes/class-wp-site-health.php:2474
 msgid "Your host appears to support the following object caching services: %s."
-msgstr "Úgy tűnik, a kiszolgálónk nem támogatja a következő objektum gyorsítótárazási szolgáltatásokat: %s."
+msgstr "Úgy tűnik, a kiszolgálónk támogatja a következő objektum gyorsítótárazási szolgáltatásokat: %s."
 
 #: wp-admin/includes/class-wp-site-health.php:2469
 msgid "Your hosting provider can tell you if a persistent object cache can be enabled on your site."
@@ -230,6 +244,17 @@ msgstr "Oldal gyorsítótár meglétének ellenőrzése egy aktív oldal gyorsí
 msgid "Page cache enhances the speed and performance of your site by saving and serving static pages instead of calling for a page every time a user visits."
 msgstr "Az oldal gyorsítótár növeli az oldalunk sebességét és teljesítményét azzal, hogy statikus oldalakat ment el és szolgál ki ahelyett, hogy minden alkalommal újra lekéri az oldalt, amikor egy látogató érkezik."
 
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/class-wp-site-health.php:815
+#: wp-admin/includes/dashboard.php:1845
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates. It should be updated."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, ami nem kap biztonsági frissítéseket. Frissíteni kellene."
+
+#. translators: %s: The server PHP version.
+#: wp-admin/includes/class-wp-site-health.php:808
+msgid "Your site is running on an outdated version of PHP (%s), which does not receive security updates and soon will not be supported by WordPress."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, ami nem kap biztonsági frissítéseket és amit hamarosan nem fog támogatni a WordPress."
+
 #: wp-admin/includes/class-wp-site-health.php:787
 msgid "Requirements"
 msgstr "Követelmények"
@@ -237,7 +262,12 @@ msgstr "Követelmények"
 #. translators: %s: The server PHP version.
 #: wp-admin/includes/class-wp-site-health.php:782
 msgid "Your site is running on an outdated version of PHP (%s), which soon will not be supported by WordPress."
-msgstr "A webhelyen egy kifutó PHP (%s) verzió üzemel, amelyet a WordPress hamarosan nem fog támogatni."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, amit hamarosan nem fog támogatni a WordPress."
+
+#. translators: %s: The minimum recommended PHP version.
+#: wp-admin/includes/class-wp-site-health.php:744
+msgid "PHP is one of the programming languages used to build WordPress. Newer versions of PHP receive regular security updates and may increase your site&#8217;s performance. The minimum recommended version of PHP is %s."
+msgstr "PHP az egyik programnyelv amellyel a WordPresst fejlesztették. Újabb PHP verzió rendszeres biztonsági frissítéseket kapnak és növelhetik az oldalunk teljesítményét. Legalább a PHP %s használata az ajánlott."
 
 #: wp-admin/about.php:561
 msgid "https://make.wordpress.org/core/2022/10/12/wordpress-6-1-field-guide/"
@@ -329,7 +359,7 @@ msgstr "Aktív"
 
 #: wp-admin/includes/class-core-upgrader.php:160
 #: wp-admin/includes/class-wp-upgrader.php:166
-#: wp-admin/includes/update-core.php:1020
+#: wp-admin/includes/update-core.php:1018
 msgid "The update cannot be installed because some files could not be copied. This is usually due to inconsistent file permissions."
 msgstr "A frissítés nem került telepítésre, mivel néhány fájlt nem lehetett átmásolni. Ez általában akkor fordul elő, ha nem megfelelőek (nem következetesek) a fájl hozzáférési engedélyek."
 
@@ -858,7 +888,7 @@ msgstr "https://wordpress.org/support/article/update-services/"
 #. translators: %s: The server PHP version.
 #: wp-admin/includes/dashboard.php:1858
 msgid "Your site is running on an outdated version of PHP (%s), which should be updated."
-msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, amit frissíteni kell."
+msgstr "A weboldal a PHP elavult verzióját (%s) használó tárhelyen fut, amit frissíteni kellene."
 
 #: wp-admin/includes/dashboard.php:52
 msgid "PHP Update Recommended"
@@ -1856,7 +1886,7 @@ msgstr "Automatikus frissítés kikapcsolása"
 #: wp-admin/includes/class-wp-plugins-list-table.php:617
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:483
 msgid "Enable Auto-updates"
-msgstr "Automatikus frissítés engedélyezése"
+msgstr "Automatikus frissítés bekapcsolása"
 
 #. translators: %s: Number of plugins.
 #. translators: %s: Number of themes.
@@ -2003,7 +2033,7 @@ msgstr "Automatikus frissítés"
 #: wp-admin/themes.php:698 wp-admin/js/updates.js:2984
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:788
 msgid "Auto-updates disabled"
-msgstr "Az automatikus frissítések letiltva"
+msgstr "Automatikus frissítések kikapcsolva"
 
 #: wp-admin/includes/class-wp-debug-data.php:1038
 #: wp-admin/includes/class-wp-debug-data.php:1354
@@ -2011,7 +2041,7 @@ msgstr "Az automatikus frissítések letiltva"
 #: wp-admin/themes.php:700 wp-admin/js/updates.js:2973
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:786
 msgid "Auto-updates enabled"
-msgstr "Az automatikus frissítések engedélyezve"
+msgstr "Automatikus frissítések bekapcsolva"
 
 #: wp-admin/includes/class-wp-debug-data.php:810
 msgid "Are pretty permalinks supported?"
@@ -2226,7 +2256,7 @@ msgid "The seventh parameter passed to %s should be numeric representing menu po
 msgstr "A hetedik %s funkciónak átadott paraméternek számnak kell lennie, amely a menü pozíciót jelöli."
 
 #. translators: 1: WordPress version number, 2: The PHP extension name needed.
-#: wp-admin/includes/update-core.php:1115
+#: wp-admin/includes/update-core.php:1113
 msgid "The update cannot be installed because WordPress %1$s requires the %2$s PHP extension."
 msgstr "A frissítést nem lehet telepíteni, mert a WordPress %1$s használatához %2$s PHP kiterjesztés szükséges."
 
@@ -2862,7 +2892,7 @@ msgstr "A bővítménnyel történő művelet nem folytatható, mivel <strong>v�
 #: wp-admin/includes/class-wp-site-health.php:621
 #: wp-admin/includes/class-wp-site-health.php:667
 msgid "You should remove inactive themes"
-msgstr "A nem használt sablonokat el kellene távolítani."
+msgstr "A nem használt sablonokat el kellene távolítani"
 
 #: wp-admin/includes/class-wp-site-health.php:591
 msgid "Your site has 1 installed theme, and it is up to date."
@@ -5818,7 +5848,7 @@ msgstr "%s frissítés sikertelen."
 
 #: wp-admin/includes/class-wp-plugins-list-table.php:446
 msgid "Search installed plugins..."
-msgstr "Telepített bővítmények keresése folyamatban…"
+msgstr "Keresés a telepített bővítményekben…"
 
 #: wp-admin/plugin-install.php:103
 msgid "You can find new plugins to install by searching or browsing the directory right here in your own Plugins section."
@@ -8349,8 +8379,8 @@ msgstr "A honlap %1$s verziója kritikus hibát észlelt a WordPress %2$s verzi�
 msgid "WordPress %s is also now available."
 msgstr "Már elérhető a WordPress %s verziója."
 
-#: wp-admin/includes/update-core.php:1192
-#: wp-admin/includes/update-core.php:1228
+#: wp-admin/includes/update-core.php:1190
+#: wp-admin/includes/update-core.php:1226
 msgid "The update cannot be installed because your site is unable to copy some files. This is usually due to inconsistent file permissions."
 msgstr "A frissítés nem került telepítésre, mivel néhány fájlt nem lehetett átmásolni. Ez általában akkor fordul elő, ha nem megfelelőek (nem következetesek) a fájl hozzáférési engedélyek."
 
@@ -8465,7 +8495,7 @@ msgstr "Fordítás frissítése"
 msgid "Background updates"
 msgstr "Háttérfrissítések"
 
-#: wp-admin/includes/update-core.php:1288
+#: wp-admin/includes/update-core.php:1286
 msgid "There is not enough free disk space to complete the update."
 msgstr "Nincs elegendő szabad tárhely a frissítés elvégzéséhez."
 
@@ -8545,11 +8575,11 @@ msgstr "A felhasználónév meg nem engedett karaktereket tartalmaz."
 msgid "Please provide a valid username."
 msgstr "Érvényes felhasználónevet kell megadni."
 
-#: wp-admin/includes/update-core.php:1209
+#: wp-admin/includes/update-core.php:1207
 msgid "Copying the required files&#8230;"
 msgstr "A kívánt fájlok másolása&#8230;"
 
-#: wp-admin/includes/update-core.php:1123
+#: wp-admin/includes/update-core.php:1121
 msgid "Preparing to install the latest version&#8230;"
 msgstr "A legutóbbi verzió előkészítése a telepítéshez&#8230;"
 
@@ -9244,7 +9274,7 @@ msgid "Search engine visibility"
 msgstr "Keresőmotor láthatóság"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1522 wp-admin/update-core.php:904
+#: wp-admin/includes/update-core.php:1520 wp-admin/update-core.php:904
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "Üdvözöl a WordPress %1$s verzió! Most átirányításra kerülünk az 'Amit a WordPress-ről tudni kell' képernyőre. Ha ez mégsem történne meg, kattintsunk <a href=\"%2$s\">ide</a>."
 
@@ -10021,7 +10051,7 @@ msgid "This screen allows you to choose your permalink structure. You can choose
 msgstr "Ezen a képernyőn lehetőségünk van az oldal alapértelmezett hivatkozás szerkezetét kiválasztani. Lehetséges általánosan elterjedt szerkezetet közül választani, vagy teljesen sajátot létrehozni."
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1530 wp-admin/update-core.php:912
+#: wp-admin/includes/update-core.php:1528 wp-admin/update-core.php:912
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "Üdvözlet a WordPress %1$s verziójától! <a href=\"%2$s\" target=\"_blank\">További tudnivalók</a>."
 
@@ -12037,7 +12067,7 @@ msgid "User already exists. Password inherited."
 msgstr "A felhasználó már létezik. A jelszó öröklődött."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:428
-#: wp-admin/includes/update-core.php:1516 wp-admin/update-core.php:900
+#: wp-admin/includes/update-core.php:1514 wp-admin/update-core.php:900
 msgid "WordPress updated successfully."
 msgstr "WordPress sikeresen frissítve!"
 
@@ -13252,12 +13282,12 @@ msgstr "<strong><em>Jól meg kell jegyezni ezt a jelszót (vagy felírni)</em></
 
 #: wp-admin/includes/update.php:857
 msgid "An automated WordPress update has failed to complete! Please notify the site administrator."
-msgstr "Az automatikus WordPress frissítést nem sikerült befejezni! Értesíteni kellene a honlap adminisztrátorát!"
+msgstr "Egy automatikus WordPress frissítést nem sikerült befejezni! Értesítsük a honlap adminisztrátorát!"
 
 #. translators: %s: URL to WordPress Updates screen.
 #: wp-admin/includes/update.php:853
 msgid "An automated WordPress update has failed to complete - <a href=\"%s\">please attempt the update again now</a>."
-msgstr "Az automatikus WordPress frissítést nem sikerült befejezni - a <a href=\"%s\">frissítést újra el kell végezni</a>."
+msgstr "Egy automatikus WordPress frissítést nem sikerült befejezni - <a href=\"%s\">próbáljuk meg most a frissítést újra</a>!"
 
 #. translators: %s: WordPress version number, or 'Latest' string.
 #: wp-admin/includes/update.php:352
@@ -13275,34 +13305,34 @@ msgstr "Frissítés %s verzióra"
 msgid "You are using a development version (%1$s). Cool! Please <a href=\"%2$s\">stay updated</a>."
 msgstr "%1$s fejlesztői verzió. Remek! Nem ártana a <a href=\"%2$s\"> frissítés</a>! :)"
 
-#: wp-admin/includes/update-core.php:1446
+#: wp-admin/includes/update-core.php:1444
 msgid "Upgrading database&#8230;"
 msgstr "Adatbázis frissítése&#8230;"
 
-#: wp-admin/includes/update-core.php:1004
+#: wp-admin/includes/update-core.php:1002
 msgid "The update could not be unpacked"
 msgstr "A frissítést nem lehet kicsomagolni"
 
-#: wp-admin/includes/update-core.php:986
+#: wp-admin/includes/update-core.php:984
 msgid "Verifying the unpacked files&#8230;"
 msgstr "Kicsomagolt fájlok ellenőrzése&#8230;"
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number, 3: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1101
+#: wp-admin/includes/update-core.php:1099
 msgid "The update cannot be installed because WordPress %1$s requires MySQL version %2$s or higher. You are running version %3$s."
 msgstr "A frissítést nem lehet telepíteni, mivel a WordPresshez %1$s legalább MySQL %2$s verzió vagy újabb szükséges. A szerveren futó verzió, pedig %3$s."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Current PHP version number.
-#: wp-admin/includes/update-core.php:1090
+#: wp-admin/includes/update-core.php:1088
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher. You are running version %3$s."
 msgstr "A frissítést nem lehet telepíteni, mivel a WordPresshez %1$s legalább PHP %2$s verzió vagy újabb szükséges. A szerveren, pedig %3$s verzió található."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Minimum required MySQL version number, 4: Current PHP version
 #. number, 5: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1077
+#: wp-admin/includes/update-core.php:1075
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher and MySQL version %3$s or higher. You are running PHP version %4$s and MySQL version %5$s."
 msgstr "A frissítést nem lehet telepíteni, mivel a WordPresshez %1$s legalább PHP %2$s verzió vagy újabb és MySQL %3$s verzió vagy újabb szükséges. A szerveren, pedig PHP %4$s és MySQL %5$s található."
 
@@ -14243,7 +14273,7 @@ msgid "Empty archive."
 msgstr "Üres archívum."
 
 #: wp-admin/includes/file.php:1742 wp-admin/includes/file.php:1872
-#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1387
+#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1385
 msgid "Could not copy file."
 msgstr "A fájl másolása nem lehetséges."
 
@@ -14561,12 +14591,12 @@ msgid "The plugin is at the latest version."
 msgstr "A bővítmény a lehető legfrissebb."
 
 #: wp-admin/includes/class-wp-upgrader.php:169
-#: wp-admin/includes/update-core.php:1336
+#: wp-admin/includes/update-core.php:1334
 msgid "Disabling Maintenance mode&#8230;"
 msgstr "Karbantartás üzemmód kikapcsolása&#8230;"
 
 #: wp-admin/includes/class-wp-upgrader.php:168
-#: wp-admin/includes/update-core.php:1200
+#: wp-admin/includes/update-core.php:1198
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "Karbantartás üzemmód bekapcsolása&#8230;"
 

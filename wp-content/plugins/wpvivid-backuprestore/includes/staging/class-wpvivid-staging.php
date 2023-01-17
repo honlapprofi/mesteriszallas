@@ -836,7 +836,7 @@ class WPvivid_Staging_Free
     {
         if(is_multisite())
         {
-            switch_to_blog(get_main_network_id());
+            switch_to_blog(get_main_site_id());
             $staging=get_option('wpvivid_staging_data',false);
             restore_current_blog();
         }
@@ -1358,7 +1358,7 @@ class WPvivid_Staging_Free
         $redirect=false;
         if(is_multisite())
         {
-            switch_to_blog(get_main_network_id());
+            switch_to_blog(get_main_site_id());
             $staging_init=get_option('wpvivid_staging_init', false);
             $staging_finish=get_option('wpvivid_staging_finish', false);
             restore_current_blog();
@@ -1415,7 +1415,7 @@ class WPvivid_Staging_Free
             {
                 if(is_multisite())
                 {
-                    switch_to_blog(get_main_network_id());
+                    switch_to_blog(get_main_site_id());
                     $options=get_option('wpvivid_staging_options', false);
                     restore_current_blog();
                 }

@@ -106,68 +106,41 @@ class GetRoomTypeCalendarData extends AbstractAjaxApiAction {
 			);
 		}
 
-		$dayBefore = null;
-		$dataForDayBefore = null;
-
 		do {
 			$dateData = MPHB()->getCoreAPI()->getRoomTypeAvailabilityData(
 				$roomTypeOriginalId,
 				$processingDate
 			)->toArray();
 
-			if ( $requestData[ static::REQUEST_DATA_IS_SHOW_PRICES ] && null != $dayBefore ) {
 
-				if ( (\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_AVAILABLE == $dataForDayBefore['roomTypeStatus'] ||
-					\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_EARLIER_MIN_ADVANCE == $dataForDayBefore['roomTypeStatus'] ||
-					\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_LATER_MAX_ADVANCE == $dataForDayBefore['roomTypeStatus']) &&
-					! ($dataForDayBefore['isCheckInNotAllowed'] && ($dateData['isStayInNotAllowed'] || 
-						\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_NOT_AVAILABLE == $dateData['roomTypeStatus']) )
+			if ( $requestData[ static::REQUEST_DATA_IS_SHOW_PRICES ] ) {
+
+				if ( (\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_AVAILABLE == $dateData['roomTypeStatus'] ||
+					\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_EARLIER_MIN_ADVANCE == $dateData['roomTypeStatus'] ||
+					\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_LATER_MAX_ADVANCE == $dateData['roomTypeStatus']) &&
+					! $dateData['isCheckInNotAllowed']
 				) {
 
-					$result[ $dayBefore->format( 'Y-m-d' ) ]['price'] = MPHB()->getCoreAPI()->formatPrice(
+					$dateData['price'] = MPHB()->getCoreAPI()->formatPrice(
 						MPHB()->getCoreAPI()->getMinRoomTypeBasePriceForDate(
 							$roomTypeOriginalId,
-							$dayBefore
+							$processingDate
 						),
 						$priceFormatAtts
 					);
 
 				} else {
-					$result[ $dayBefore->format( 'Y-m-d' ) ]['price'] = '<span class="mphb-date-cell__price"><span class="mphb-price">&nbsp;</span></span>';
+					$dateData['price'] = '<span class="mphb-price">&nbsp;</span>';
 				}
 			}
 				
 
 			$result[ $processingDate->format( 'Y-m-d' ) ] = $dateData;
 
-			$dayBefore = clone $processingDate;
-			$dataForDayBefore = $dateData;
-
 			$processingDate->modify( '+1 day' );
 
 		} while ( $processingDate <= $requestData[ static::REQUEST_DATA_END_DATE ] );
 
-
-		// calculate price for the last date
-		if ( $requestData[ static::REQUEST_DATA_IS_SHOW_PRICES ] && null != $dayBefore ) {
-
-			if ( (\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_AVAILABLE == $dataForDayBefore['roomTypeStatus'] ||
-				\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_EARLIER_MIN_ADVANCE == $dataForDayBefore['roomTypeStatus'] ||
-				\MPHB\Core\RoomTypeAvailabilityStatus::ROOM_TYPE_AVAILABILITY_STATUS_LATER_MAX_ADVANCE == $dataForDayBefore['roomTypeStatus'])
-			) {
-
-				$result[ $dayBefore->format( 'Y-m-d' ) ]['price'] = MPHB()->getCoreAPI()->formatPrice(
-					MPHB()->getCoreAPI()->getMinRoomTypeBasePriceForDate(
-						$roomTypeOriginalId,
-						$dayBefore
-					),
-					$priceFormatAtts
-				);
-
-			} else {
-				$result[ $dayBefore->format( 'Y-m-d' ) ]['price'] = '<span class="mphb-date-cell__price"><span class="mphb-price">&nbsp;</span></span>';
-			}
-		}
 
 		wp_send_json_success( $result, 200 );
 	}

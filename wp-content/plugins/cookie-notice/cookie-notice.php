@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice & Compliance for GDPR / CCPA
 Description: Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.
-Version: 2.4.2
+Version: 2.4.5
 Author: Hu-manity.co
 Author URI: https://hu-manity.co/
 Plugin URI: https://cookie-compliance.co/
@@ -29,11 +29,15 @@ if ( ! defined( 'ABSPATH' ) )
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	2.4.2
+ * @version	2.4.5
  */
 class Cookie_Notice {
 
-	private $status = '';
+	private $status_data = [
+		'status'				=> '',
+		'subscription'			=> 'basic',
+		'threshold_exceeded'	=> false
+	];
 	private $x_api_key = 'hudft60djisdusdjwek';
 	private $app_host_url = 'https://app.hu-manity.co';
 	private $app_login_url = 'https://app.hu-manity.co/#/en/cc2/login';
@@ -99,13 +103,18 @@ class Cookie_Notice {
 			'script_placement'		=> 'header',
 			'translate'				=> true,
 			'deactivation_delete'	=> false,
-			'update_version'		=> 6,
+			'update_version'		=> 7,
 			'update_notice'			=> true,
 			'update_notice_diss'	=> false,
 			'update_delay_date'		=> 0,
 			'update_threshold_date'	=> 0
 		],
-		'version'	=> '2.4.2'
+		'data'	=> [
+			'status'				=> '',
+			'subscription'			=> 'basic',
+			'threshold_exceeded'	=> false
+		],
+		'version'	=> '2.4.5'
 	];
 
 	/**
@@ -200,7 +209,7 @@ class Cookie_Notice {
 			$this->options['general']['see_more_opt']['sync'] = $this->defaults['general']['see_more_opt']['sync'];
 
 		// actions
-		add_action( 'plugins_loaded', [ $this, 'set_status' ] );
+		add_action( 'plugins_loaded', [ $this, 'set_status_data' ] );
 		add_action( 'init', [ $this, 'register_shortcodes' ] );
 		add_action( 'init', [ $this, 'wpsc_add_cookie' ] );
 		add_action( 'init', [ $this, 'set_plugin_links' ] );
@@ -223,58 +232,108 @@ class Cookie_Notice {
 	}
 
 	/**
-	 * Set plugin status.
+	 * Set cookie compliance status data.
 	 *
 	 * @return void
 	 */
-	public function set_status() {
+	public function set_status_data() {
+		$default_data = $this->defaults['data'];
+
 		if ( is_multisite() ) {
 			if ( $this->is_plugin_network_active() ) {
 				// network
 				if ( $this->is_network_admin() ) {
 					if ( $this->network_options['global_override'] )
-						$status = get_site_option( 'cookie_notice_status', '' );
+						$status_data = get_site_option( 'cookie_notice_status', $default_data );
 					else
-						$status = '';
+						$status_data = $default_data;
 				// site
 				} else {
 					if ( $this->network_options['global_override'] )
-						$status = get_site_option( 'cookie_notice_status', '' );
+						$status_data = get_site_option( 'cookie_notice_status', $default_data );
 					else
-						$status = get_option( 'cookie_notice_status', '' );
+						$status_data = get_option( 'cookie_notice_status', $default_data );
 				}
 			} else {
 				// network
 				if ( $this->is_network_admin() )
-					$status = '';
+					$status_data = $default_data;
 				// site
 				else
-					$status = get_option( 'cookie_notice_status', '' );
+					$status_data = get_option( 'cookie_notice_status', $default_data );
 			}
 		} else
-			$status = get_option( 'cookie_notice_status', '' );
+			$status_data = get_option( 'cookie_notice_status', $default_data );
 
-		// set status
-		$this->status = $this->check_status( $status );
+		// old status format?
+		if ( ! is_array( $status_data ) ) {
+			// update config data
+			$status_data = $this->welcome_api->get_app_config( '', true );
+		} else {
+			// merge database data with default data
+			$status_data = array_merge( $default_data, $status_data );
+		}
+
+		if ( $status_data['threshold_exceeded'] )
+			$this->options['general']['app_blocking'] = false;
+
+		// set status data
+		$this->status_data = [
+			'status'				=> $this->check_status( $status_data['status'] ),
+			'subscription'			=> $this->check_subscription( $status_data['subscription'] ),
+			'threshold_exceeded'	=> (bool) $status_data['threshold_exceeded']
+		];
 	}
 
 	/**
-	 * Get plugin status.
+	 * Get cookie compliance status.
 	 *
 	 * @return string
 	 */
 	public function get_status() {
-		return $this->status;
+		return $this->status_data['status'];
 	}
 
 	/**
-	 * Check plugin status.
+	 * Check cookie compliance status.
 	 *
 	 * @param string $status
 	 * @return string
 	 */
 	public function check_status( $status ) {
-		return ! empty( $status ) && in_array( $status, [ 'active', 'pending' ], true ) ? $status : '';
+		$status = sanitize_key( $status );
+
+		return ! empty( $status ) && in_array( $status, [ 'active', 'pending' ], true ) ? $status : $this->defaults['data']['status'];
+	}
+
+	/**
+	 * Get cookie compliance subscription.
+	 *
+	 * @return string
+	 */
+	public function get_subscription() {
+		return $this->status_data['subscription'];
+	}
+
+	/**
+	 * Check cookie compliance subscription.
+	 *
+	 * @param string $subscription
+	 * @return string
+	 */
+	public function check_subscription( $subscription ) {
+		$subscription = sanitize_key( $subscription );
+
+		return ! empty( $subscription ) && in_array( $subscription, [ 'basic', 'pro' ], true ) ? $subscription : $this->defaults['data']['subscription'];
+	}
+
+	/**
+	 * Check whether the current threshold is exceeded.
+	 *
+	 * @return bool
+	 */
+	public function threshold_exceeded() {
+		return $this->status_data['threshold_exceeded'];
 	}
 
 	/**
@@ -385,7 +444,7 @@ class Cookie_Notice {
 		if ( $networkwide ) {
 			// add network options
 			add_site_option( 'cookie_notice_options', $this->defaults['general'] );
-			add_site_option( 'cookie_notice_status', '' );
+			add_site_option( 'cookie_notice_status', $this->defaults['data'] );
 			add_site_option( 'cookie_notice_version', $this->defaults['version'] );
 
 			global $wpdb;
@@ -418,7 +477,7 @@ class Cookie_Notice {
 	public function activate_site() {
 		// add default options
 		add_option( 'cookie_notice_options', $this->defaults['general'], '', false );
-		add_option( 'cookie_notice_status', '', '', false );
+		add_option( 'cookie_notice_status', $this->defaults['data'], '', false );
 		add_option( 'cookie_notice_version', $this->defaults['version'], '', false );
 	}
 
@@ -530,7 +589,7 @@ class Cookie_Notice {
 
 		$network = $this->is_network_admin();
 
-		$current_update = 7;
+		$current_update = 8;
 
 		// get current database version
 		if ( $network )
@@ -580,10 +639,10 @@ class Cookie_Notice {
 
 		// show notice, if no compliance only
 		if ( $this->options['general']['update_notice'] === true && empty( $status ) ) {
-			$this->add_notice( '<div class="cn-notice-text"><h2>' . __( 'German Court Fines Website Owner for Using Google-Hosted Fonts', 'cookie-notice' ) . '</h2><p>' . __( 'The German Court ruled that use of Google Fonts without prior consent is a violation of Europe’s GDPR (General Data Protection Regulation) because Google Fonts exposes the visitor’s IP address. Court’s ruling threatens a fine of €250,000 for each case of infringement if the site owner does not comply. If your website uses Google Fonts, click "Run Compliance Check" to make sure your website complies with the latest consent capture and cookie blocking requirements.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . ( $network ? network_admin_url( 'admin.php?page=cookie-notice&welcome=1' ) : admin_url( 'admin.php?page=cookie-notice&welcome=1' ) ) . '" class="button button-primary cn-button">' . __( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . __( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', 'error', 'div' );
+			$this->add_notice( '<div class="cn-notice-text"><h2>' . __( 'Two new privacy laws in the United States started January 1st 2023', 'cookie-notice' ) . '</h2><p>' . __( 'As of early 2023, two regulations in the United States went into effect: the California CPRA and the Virginia VCDPA. They expand requirements already in place in the US, such as having a Privacy Policy and allowing users to opt out of the data processing for certain purposes. If your business is located in the United States or your website has visitors from the US you may fall under these regulations. Click "Run Compliance Check" to check if your website has the functionality required by the US Privacy Laws.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . ( $network ? network_admin_url( 'admin.php?page=cookie-notice&welcome=1' ) : admin_url( 'admin.php?page=cookie-notice&welcome=1' ) ) . '" class="button button-primary cn-button">' . __( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . __( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', 'error', 'div' );
 		}
 
-		// show treshold limit warning, compliance only
+		// show threshold limit warning, compliance only
 		if ( $status === 'active' ) {
 			// get analytics data options
 			if ( $network )

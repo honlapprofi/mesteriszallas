@@ -1,0 +1,6 @@
+Jan 17 2023 11:54:34
+{"type":8192,"message":"Required parameter $page follows optional parameter $label","file":"\/Users\/voroslaszlo\/Local Sites\/mesteriszallas\/app\/public\/wp-content\/plugins\/motopress-hotel-booking\/includes\/admin\/groups\/settings-group.php","line":21}
+
+Jan 17 2023 11:54:34
+{"type":8192,"message":"Required parameter $postType follows optional parameter $label","file":"\/Users\/voroslaszlo\/Local Sites\/mesteriszallas\/app\/public\/wp-content\/plugins\/motopress-hotel-booking\/includes\/admin\/groups\/meta-box-group.php","line":25}
+

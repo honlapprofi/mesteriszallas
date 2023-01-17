@@ -3,8 +3,8 @@ Contributors: humanityco
 Tags: gdpr, ccpa, cookies, consent, compliance
 Requires at least: 4.7
 Requires PHP: 5.4
-Tested up to: 6.1
-Stable tag: 2.4.2
+Tested up to: 6.1.1
+Stable tag: 2.4.5
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -106,10 +106,10 @@ Yes! Cookie Notice is a free software.
 = Is Cookie Compliance free? =
 Yes, but with limits. Cookie Compliance includes both free and paid plans to choose from depending on your needs and your website traffic.
 
-= Does the Cookie Notice make my site fully compliant with GDPR? =
+= Does the Cookie Notice make my site fully compliant with GDPR or US Privacy Laws? =
 No. The plugin-only version DOES NOT include technical compliance features such as automatic script blocking, consent purpose categories, or consent record storage. These features are only available through the Cookie Compliance integration.
 
-= Does the Cookie Compiance integration make my site fully compliant with GDPR? =
+= Does the Cookie Compiance integration make my site fully compliant with GDPR and US Privacy Laws? =
 Yes! The plugin + web appliaction version includes technical compliance features to meet requirements for over 100 countries and legal jurisdictions.
 
 == Screenshots ==
@@ -120,6 +120,17 @@ Yes! The plugin + web appliaction version includes technical compliance features
 4. Cookie Compliance settings
 
 == Changelog ==
+
+= 2.4.5 =
+* Tweak: Remove the notice from the Elementor page builder
+* Tweak: Remove the notice from widgets screen
+* Fix: Improved Contact Form 7 reCaptcha compatibility
+
+= 2.4.4 =
+* Fix: Undefined index: status and subscription
+
+= 2.4.3 =
+* Fix: Deprecated preg_replace() notice in PHP 8.1
 
 = 2.4.2 =
 * New: Compatibility with Autoptimize plugin
@@ -438,6 +449,7 @@ Initial release
 
 == Upgrade Notice ==
 
-= 2.4.2 =
-* New: Compatibility with Autoptimize plugin
-* Fix: Improved Contact Form 7 reCaptcha support
+= 2.4.5 =
+* Tweak: Remove the notice from the Elementor page builder
+* Tweak: Remove the notice from widgets screen
+* Fix: Improved Contact Form 7 reCaptcha compatibility

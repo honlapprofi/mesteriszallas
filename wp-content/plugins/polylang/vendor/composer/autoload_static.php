@@ -68,7 +68,6 @@ class ComposerStaticInit57e007bdf76a1fe336cb43b59389545b
         'PLL_Jetpack' => __DIR__ . '/../..' . '/integrations/jetpack/jetpack.php',
         'PLL_Language' => __DIR__ . '/../..' . '/include/language.php',
         'PLL_License' => __DIR__ . '/../..' . '/include/license.php',
-        'PLL_Lingotek' => __DIR__ . '/../..' . '/modules/lingotek/lingotek.php',
         'PLL_Links' => __DIR__ . '/../..' . '/include/links.php',
         'PLL_Links_Abstract_Domain' => __DIR__ . '/../..' . '/include/links-abstract-domain.php',
         'PLL_Links_Default' => __DIR__ . '/../..' . '/include/links-default.php',

@@ -1906,6 +1906,7 @@ class WPvivid_WXR_Parser_SimpleXML
         if ( function_exists( 'libxml_disable_entity_loader' ) ) {
             $old_value = libxml_disable_entity_loader( true );
         }
+        //$success = $dom->loadXML( file_get_contents( $file ), LIBXML_PARSEHUGE );
         $success = $dom->loadXML( file_get_contents( $file ) );
         if ( ! is_null( $old_value ) )
         {
